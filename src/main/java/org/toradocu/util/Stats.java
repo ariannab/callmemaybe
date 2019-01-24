@@ -3,7 +3,7 @@ package org.toradocu.util;
 import java.util.ArrayList;
 import java.util.List;
 import org.toradocu.Toradocu;
-import org.toradocu.extractor.BlockTag;
+import org.toradocu.extractor.JavadocComment;
 import org.toradocu.output.util.JsonOutput;
 import org.toradocu.output.util.ReturnTagOutput;
 import org.toradocu.output.util.TagOutput;
@@ -61,7 +61,7 @@ public class Stats {
    * @param kind the kind of the tag
    * @return the precision for the given kind of tag
    */
-  public double getPrecision(BlockTag.Kind kind) {
+  public double getPrecision(JavadocComment.Kind kind) {
     int translated, wrong;
     switch (kind) {
       case THROWS:
@@ -77,7 +77,7 @@ public class Stats {
         translated = correctReturnTranslations + wrong;
         return translated == 0 ? 1 : correctReturnTranslations / (double) translated;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
@@ -85,9 +85,9 @@ public class Stats {
    * Returns the recall for the specified tag kind.
    *
    * @param kind the kind of the tag
-   * @return the recall for the specified {@code BlockTag.Kind}
+   * @return the recall for the specified {@code JavadocComment.Kind}
    */
-  public double getRecall(BlockTag.Kind kind) {
+  public double getRecall(JavadocComment.Kind kind) {
     final int conditions = numberOfConditions(kind);
     switch (kind) {
       case THROWS:
@@ -97,16 +97,16 @@ public class Stats {
       case RETURN:
         return conditions == 0 ? 1 : correctReturnTranslations / (double) conditions;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
   /**
    * Return the total number of conditions for a given tag kind.
    *
-   * @return the number of conditions for the given {@code BlockTag.Kind}
+   * @return the number of conditions for the given {@code JavadocComment.Kind}
    */
-  private int numberOfConditions(BlockTag.Kind kind) {
+  private int numberOfConditions(JavadocComment.Kind kind) {
     switch (kind) {
       case THROWS:
         return correctThrowsTranslations + wrongThrowsTranslations + missingThrowsTranslations;
@@ -115,7 +115,7 @@ public class Stats {
       case RETURN:
         return correctReturnTranslations + wrongReturnTranslations + missingReturnTranslations;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
@@ -175,7 +175,7 @@ public class Stats {
    *
    * @param kind the kind of tag for which increment the number of correct translations
    */
-  private void addCorrectTranslation(BlockTag.Kind kind) {
+  private void addCorrectTranslation(JavadocComment.Kind kind) {
     switch (kind) {
       case THROWS:
         ++correctThrowsTranslations;
@@ -187,7 +187,7 @@ public class Stats {
         ++correctReturnTranslations;
         break;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
@@ -196,7 +196,7 @@ public class Stats {
    *
    * @param kind the kind of tag for which increment the number of wrong translations
    */
-  private void addWrongTranslation(BlockTag.Kind kind) {
+  private void addWrongTranslation(JavadocComment.Kind kind) {
     switch (kind) {
       case THROWS:
         ++wrongThrowsTranslations;
@@ -208,7 +208,7 @@ public class Stats {
         ++wrongReturnTranslations;
         break;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
@@ -217,7 +217,7 @@ public class Stats {
    *
    * @param kind the kind of tag for which increment the number of missing translations
    */
-  private void addMissingTranslation(BlockTag.Kind kind) {
+  private void addMissingTranslation(JavadocComment.Kind kind) {
     switch (kind) {
       case THROWS:
         ++missingThrowsTranslations;
@@ -229,7 +229,7 @@ public class Stats {
         ++missingReturnTranslations;
         break;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
@@ -238,7 +238,7 @@ public class Stats {
    *
    * @param kind the kind of tag for which increment the number of missing translations
    */
-  private void addUnexpectedTranslation(BlockTag.Kind kind) {
+  private void addUnexpectedTranslation(JavadocComment.Kind kind) {
     switch (kind) {
       case THROWS:
         ++unexpectedThrowsTranslations;
@@ -250,7 +250,7 @@ public class Stats {
         ++unexpectedReturnTranslations;
         break;
       default:
-        throw new IllegalStateException("Unsupported BlockTag.Kind " + kind);
+        throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
   }
 
@@ -321,16 +321,19 @@ public class Stats {
       Stats methodStats =
           new Stats(actualMethod.containingClass.getQualifiedName() + "." + actualMethod.signature);
       collectStats(
-          methodStats, actualMethod.throwsTags, expectedMethod.throwsTags, BlockTag.Kind.THROWS);
+          methodStats,
+          actualMethod.throwsTags,
+          expectedMethod.throwsTags,
+          JavadocComment.Kind.THROWS);
       collectStats(
-          methodStats, actualMethod.paramTags, expectedMethod.paramTags, BlockTag.Kind.PARAM);
+          methodStats, actualMethod.paramTags, expectedMethod.paramTags, JavadocComment.Kind.PARAM);
 
       List<ReturnTagOutput> actualMethodReturnTag = new ArrayList<>();
       List<ReturnTagOutput> expectedMethodReturnTag = new ArrayList<>();
       actualMethodReturnTag.add(actualMethod.returnTag);
       expectedMethodReturnTag.add(expectedMethod.returnTag);
       collectStats(
-          methodStats, actualMethodReturnTag, expectedMethodReturnTag, BlockTag.Kind.RETURN);
+          methodStats, actualMethodReturnTag, expectedMethodReturnTag, JavadocComment.Kind.RETURN);
 
       stats.add(methodStats);
     }
@@ -375,13 +378,22 @@ public class Stats {
       output
           .append(
               collectStats(
-                  stats, actualMethod.throwsTags, expectedMethod.throwsTags, BlockTag.Kind.THROWS))
+                  stats,
+                  actualMethod.throwsTags,
+                  expectedMethod.throwsTags,
+                  JavadocComment.Kind.THROWS))
           .append(
               collectStats(
-                  stats, actualMethod.paramTags, expectedMethod.paramTags, BlockTag.Kind.PARAM))
+                  stats,
+                  actualMethod.paramTags,
+                  expectedMethod.paramTags,
+                  JavadocComment.Kind.PARAM))
           .append(
               collectStats(
-                  stats, actualMethodReturnTag, expectedMethodReturnTag, BlockTag.Kind.RETURN));
+                  stats,
+                  actualMethodReturnTag,
+                  expectedMethodReturnTag,
+                  JavadocComment.Kind.RETURN));
     }
     return stats;
   }
@@ -390,7 +402,7 @@ public class Stats {
       Stats stats,
       List<? extends TagOutput> actualTags,
       List<? extends TagOutput> expectedTags,
-      BlockTag.Kind kind) {
+      JavadocComment.Kind kind) {
 
     final StringBuilder outputMessage = new StringBuilder();
     final TagOutput[] actualTagsArray = actualTags.toArray(new TagOutput[actualTags.size()]);

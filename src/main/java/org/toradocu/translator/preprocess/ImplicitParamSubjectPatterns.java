@@ -8,9 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.toradocu.extractor.BlockTag;
 import org.toradocu.extractor.Comment;
 import org.toradocu.extractor.DocumentedExecutable;
+import org.toradocu.extractor.JavadocComment;
 import org.toradocu.extractor.ParamTag;
 import org.toradocu.translator.Parser;
 import org.toradocu.translator.PropositionSeries;
@@ -18,7 +18,7 @@ import org.toradocu.translator.PropositionSeries;
 public class ImplicitParamSubjectPatterns implements PreprocessingPhase {
 
   @Override
-  public String run(BlockTag tag, DocumentedExecutable excMember) {
+  public String run(JavadocComment tag, DocumentedExecutable excMember) {
     String originalComment = tag.getComment().getText();
     String parameterName = ((ParamTag) tag).getParameter().getName();
     String[] positivePatterns = {"must be", "Must be", "will be", "Will be"};

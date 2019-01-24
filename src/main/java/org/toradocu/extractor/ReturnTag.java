@@ -5,7 +5,7 @@ package org.toradocu.extractor;
  * specification (available after the translation of the comment). The specification specifies the
  * postconditions of the method documented by this @return block comment.
  */
-public final class ReturnTag extends BlockTag {
+public final class ReturnTag extends JavadocComment {
 
   /**
    * Constructs a {@code ReturnTag} with the given comment

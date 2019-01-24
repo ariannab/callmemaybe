@@ -11,7 +11,7 @@ import org.toradocu.util.Checks;
  * to {@code false} the precondition expressed by this tag is violated, and the behavior of the
  * method documented by this tag is unspecified.
  */
-public final class ParamTag extends BlockTag {
+public final class ParamTag extends JavadocComment {
 
   /** The parameter associated with the param tag */
   private final DocumentedParameter parameter;

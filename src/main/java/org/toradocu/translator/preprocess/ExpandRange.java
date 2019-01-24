@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringJoiner;
 import java.util.regex.Pattern;
-import org.toradocu.extractor.BlockTag;
 import org.toradocu.extractor.DocumentedExecutable;
+import org.toradocu.extractor.JavadocComment;
 
 /**
  * Preprocessing phase in which value ranges are replaced with standard inequalities using &lt; and
@@ -34,7 +34,7 @@ public class ExpandRange implements PreprocessingPhase {
           + " the ([\\w\\s]+)?(interval|range) (of )?\\[([0-9]+) ?,? ?([0-9]+)\\]";
 
   @Override
-  public String run(BlockTag tag, DocumentedExecutable excMember) {
+  public String run(JavadocComment tag, DocumentedExecutable excMember) {
     String comment = tag.getComment().getText();
     java.util.regex.Matcher squareBracketsRange =
         Pattern.compile(SQUARE_BRACKETS_RANGE).matcher(comment);

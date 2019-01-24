@@ -1,5 +1,7 @@
 package org.toradocu.extractor;
 
+import com.github.javaparser.ast.body.CallableDeclaration;
+import com.github.javaparser.ast.expr.SimpleName;
 import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Executable;
@@ -21,6 +23,9 @@ public final class DocumentedExecutable {
   /** Parameter list. */
   private final List<DocumentedParameter> parameters;
 
+  private final SimpleName name;
+  private final CallableDeclaration.Signature signature;
+
   /** Javadoc @param, @return, and @throws tags of this executable member. */
   private BlockTags tags;
 
@@ -33,17 +38,24 @@ public final class DocumentedExecutable {
     /** Javadoc @throws and @exception tags of this executable member. */
     private final List<ThrowsTag> throwsTags;
 
+    private final FreeText freeText;
     /**
      * Create a representation of the block tags of an executable member.
      *
      * @param paramTags Javadoc @param tags of this executable member
      * @param returnTag Javadoc @return tag of this executable member
      * @param throwsTags @throws and @exception tags of this executable member
+     * @param freeText
      */
-    BlockTags(List<ParamTag> paramTags, ReturnTag returnTag, List<ThrowsTag> throwsTags) {
+    BlockTags(
+        List<ParamTag> paramTags,
+        ReturnTag returnTag,
+        List<ThrowsTag> throwsTags,
+        FreeText freeText) {
       this.paramTags = paramTags;
       this.returnTag = returnTag;
       this.throwsTags = throwsTags;
+      this.freeText = freeText;
     }
 
     /**
@@ -71,6 +83,10 @@ public final class DocumentedExecutable {
      */
     public List<ThrowsTag> throwsTags() {
       return Collections.unmodifiableList(throwsTags);
+    }
+
+    public FreeText freeText() {
+      return freeText;
     }
 
     /**
@@ -109,13 +125,18 @@ public final class DocumentedExecutable {
    * Creates a new {@code DocumentedExecutable} wrapping the given executable, with the specified
    * parameters and Javadoc comments introduced by block tags.
    *
+   * @param signature
    * @param executable the executable this DocumentedExecutable wraps, must not be null
    * @param parameters the parameters of this DocumentedExecutable, must not be null
    * @param blockTags the Javadoc comments introduced by block tags (e.g., {@code @param},
    *     {@code @return}) associated with this executable member
    */
   DocumentedExecutable(
-      Executable executable, List<DocumentedParameter> parameters, BlockTags blockTags) {
+      SimpleName name,
+      CallableDeclaration.Signature signature,
+      Executable executable,
+      List<DocumentedParameter> parameters,
+      BlockTags blockTags) {
     Checks.nonNullParameter(executable, "executable");
     Checks.nonNullParameter(parameters, "parameters");
 
@@ -123,6 +144,8 @@ public final class DocumentedExecutable {
     checkParametersConsistency(executable.getParameters(), parameters);
     this.parameters = parameters;
     this.tags = blockTags;
+    this.name = name;
+    this.signature = signature;
   }
 
   /**
@@ -178,6 +201,10 @@ public final class DocumentedExecutable {
    */
   public List<ThrowsTag> throwsTags() {
     return tags.throwsTags();
+  }
+
+  public FreeText freeText() {
+    return tags.freeText();
   }
 
   /**

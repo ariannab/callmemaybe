@@ -1,24 +1,25 @@
 package org.toradocu.translator;
 
 import java.util.*;
-import org.toradocu.extractor.BlockTag;
 import org.toradocu.extractor.DocumentedExecutable;
+import org.toradocu.extractor.JavadocComment;
 
 /**
- * The {@code BasicTranslator} class holds the {@code translate()} methods for {@code BlockTag} of
- * kind Param and Throws, since the translation process needed for this two tags is the same.
+ * The {@code BasicTranslator} class holds the {@code translate()} methods for {@code
+ * JavadocComment} of kind Param and Throws, since the translation process needed for this two tags
+ * is the same.
  */
 public class BasicTranslator {
 
   /**
-   * Given a {@code BlockTag}, ask to {@code Parser} the list of {@code PropositionSeries}
+   * Given a {@code JavadocComment}, ask to {@code Parser} the list of {@code PropositionSeries}
    * associated to the tag comment, in order to compute a translation for each one.
    *
-   * @param tag the {@code BlockTag} for which produce a translation
+   * @param tag the {@code JavadocComment} for which produce a translation
    * @param excMember the {@code DocumentedExecutable} the tag belongs to
    * @return a String representing the translation
    */
-  public static String translate(BlockTag tag, DocumentedExecutable excMember) {
+  public static String translate(JavadocComment tag, DocumentedExecutable excMember) {
     // Identify propositions in the comment. Each sentence in the comment is parsed into a
     // PropositionSeries.
     List<PropositionSeries> propositions = Parser.parse(tag.getComment(), excMember);

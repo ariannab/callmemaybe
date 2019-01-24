@@ -1,7 +1,7 @@
 package org.toradocu.translator.preprocess;
 
-import org.toradocu.extractor.BlockTag;
 import org.toradocu.extractor.DocumentedExecutable;
+import org.toradocu.extractor.JavadocComment;
 
 public class NormalizeNonNullNonEmpty implements PreprocessingPhase {
 
@@ -35,7 +35,7 @@ public class NormalizeNonNullNonEmpty implements PreprocessingPhase {
   }
 
   @Override
-  public String run(BlockTag tag, DocumentedExecutable excMember) {
+  public String run(JavadocComment tag, DocumentedExecutable excMember) {
     return normalizeComment(tag.getComment().getText(), excMember);
   }
 }

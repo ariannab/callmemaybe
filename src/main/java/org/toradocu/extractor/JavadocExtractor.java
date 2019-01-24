@@ -13,6 +13,7 @@ import com.github.javaparser.ast.body.BodyDeclaration;
 import com.github.javaparser.ast.body.CallableDeclaration;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.ConstructorDeclaration;
+import com.github.javaparser.ast.comments.JavadocComment;
 import com.github.javaparser.ast.nodeTypes.NodeWithConstructors;
 import com.github.javaparser.ast.nodeTypes.modifiers.NodeWithPrivateModifier;
 import com.github.javaparser.javadoc.Javadoc;
@@ -99,7 +100,35 @@ public final class JavadocExtractor {
       final String qualifiedClassName = reflectionMember.getDeclaringClass().getName();
       BlockTags blockTags =
           createTags(classesInPackage, sourceCallable, parameters, qualifiedClassName);
-      documentedExecutables.add(new DocumentedExecutable(reflectionMember, parameters, blockTags));
+
+      final Optional<JavadocComment> javadocComment = sourceCallable.getJavadocComment();
+      final Optional<Javadoc> javadoc = sourceCallable.getJavadoc();
+      String freeText = "";
+      String parsedFreeText = "";
+      if (javadocComment.isPresent()) {
+        freeText = javadocComment.get().getContent();
+        String[] freeTextLines = freeText.split("\n");
+        for (String line : freeTextLines) {
+          String trimmedLine = line.trim();
+          if (trimmedLine.startsWith("* @since")
+              || trimmedLine.startsWith("* @param")
+              || trimmedLine.startsWith("* @return")
+              || trimmedLine.startsWith("* @throws")) {
+            break;
+          } else if (trimmedLine.startsWith("* ")) {
+            parsedFreeText =
+                parsedFreeText.concat(trimmedLine.substring(2, trimmedLine.length())) + " ";
+          }
+        }
+      }
+      documentedExecutables.add(
+          new DocumentedExecutable(
+              sourceCallable.getName(),
+              sourceCallable.getSignature(),
+              reflectionMember,
+              parameters,
+              blockTags,
+              parsedFreeText));
     }
 
     log.trace(
@@ -252,7 +281,7 @@ public final class JavadocExtractor {
         }
       }
     }
-    return new BlockTags(paramTags, returnTag, throwsTags);
+    return new BlockTags(paramTags, returnTag, throwsTags, freeText);
   }
 
   /**

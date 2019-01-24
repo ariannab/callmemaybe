@@ -5,15 +5,16 @@ import org.toradocu.util.Checks;
 
 /**
  * Represents a Javadoc block tag (e.g., {@code @param}, {@code @return}, {@code @thraws}) and its
- * associated text. Each {@code BlockTag} consists of a {@link BlockTag.Kind} ({@code @param},
- * {@code @return}, or {@code @throws}), a comment which is the text introduced by the tag, and a
- * specification (available after the translation of the comment). A specification is the
- * translation of the comment into a Java boolean condition.
+ * associated text. Each {@code JavadocComment} consists of a {@link JavadocComment.Kind}
+ * ({@code @param}, {@code @return}, or {@code @throws}), a comment which is the text introduced by
+ * the tag, and a specification (available after the translation of the comment). A specification is
+ * the translation of the comment into a Java boolean condition.
  */
-public abstract class BlockTag {
+public abstract class JavadocComment {
 
   /** The Javadoc block tags currently supported by Toradocu. */
   public enum Kind {
+    FREETEXT, // the main description that precedes tags
     PARAM, // @param
     RETURN, // @return
     THROWS; // @throws and @exception
@@ -41,12 +42,12 @@ public abstract class BlockTag {
   private Comment comment;
 
   /**
-   * Constructs a {@code BlockTag} of the specific kind, with the given comment.
+   * Constructs a {@code JavadocComment} of the specific kind, with the given comment.
    *
    * @param kind the comment kind, must not be null
    * @param comment the comment associated with the exception, must not be null
    */
-  public BlockTag(Kind kind, Comment comment) {
+  public JavadocComment(Kind kind, Comment comment) {
     Checks.nonNullParameter(kind, "kind");
     Checks.nonNullParameter(comment, "comment");
     this.kind = kind;
@@ -82,7 +83,7 @@ public abstract class BlockTag {
   }
 
   /**
-   * Returns true if this {@code BlockTag} and the specified object are equal.
+   * Returns true if this {@code JavadocComment} and the specified object are equal.
    *
    * @param obj the object to test for equality
    * @return true if this object and {@code obj} are equal
@@ -90,9 +91,9 @@ public abstract class BlockTag {
   @Override
   public boolean equals(Object obj) {
     if (this == obj) return true;
-    if (!(obj instanceof BlockTag)) return false;
+    if (!(obj instanceof JavadocComment)) return false;
 
-    BlockTag that = (BlockTag) obj;
+    JavadocComment that = (JavadocComment) obj;
     return kind.equals(that.kind) && comment.equals(that.comment);
   }
 

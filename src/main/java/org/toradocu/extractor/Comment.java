@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Text of a Javadoc block tag ({@link BlockTag}), such as {@code @param}, {@code @return}, or
+ * Text of a Javadoc block tag ({@link JavadocComment}), such as {@code @param}, {@code @return}, or
  * {@code @throws}. A {@link Comment} is composed of a text and a list of words that are tagged
  * as @code.
  */

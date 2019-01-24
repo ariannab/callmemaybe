@@ -17,9 +17,9 @@ import org.toradocu.extractor.DocumentedParameter;
 /**
  * Created by arianna on 18/05/17.
  *
- * <p>The Parser must extract the {@code PropositionSerie}s from a {@code BlockTag} comment. Thus,
- * it interacts with the Stanford Parser in order to produce the {@code SemanticGraph}. It holds a
- * {@code SemanticGraph}s cache which maps each comment to its {@code SemanticGraph}.
+ * <p>The Parser must extract the {@code PropositionSerie}s from a {@code JavadocComment} comment.
+ * Thus, it interacts with the Stanford Parser in order to produce the {@code SemanticGraph}. It
+ * holds a {@code SemanticGraph}s cache which maps each comment to its {@code SemanticGraph}.
  */
 public class Parser {
 
