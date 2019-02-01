@@ -21,7 +21,7 @@ public final class ThrowsTag extends JavadocComment {
    * @param exception the exception type, must not be null
    * @param comment the comment associated with the exception, must not be null
    */
-  ThrowsTag(Class<?> exception, Comment comment) {
+  ThrowsTag(Class<?> exception, CommentContent comment) {
     super(Kind.THROWS, comment);
     Checks.nonNullParameter(exception, "exception");
     this.exception = exception;

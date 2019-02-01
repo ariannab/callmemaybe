@@ -177,7 +177,7 @@ public class MethodChangerVisitor
 
       // Add comment to if condition. The comment is the original comment in the Java source
       // code that has been translated by Toradocu in the commented boolean condition.
-      // Comment has to be added here, cause otherwise is ignored by JavaParser.parseBlock.
+      // CommentContent has to be added here, cause otherwise is ignored by JavaParser.parseBlock.
       final Optional<Statement> ifCondition =
           nullCheckTryCatch
               .getTryBlock()

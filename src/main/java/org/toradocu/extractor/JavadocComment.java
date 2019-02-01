@@ -29,6 +29,8 @@ public abstract class JavadocComment {
           return "@return";
         case "THROWS":
           return "@throws";
+        case "FREETEXT":
+          return "FreeText";
         default:
           throw new IllegalStateException("The value " + label + " has no string representation.");
       }
@@ -39,7 +41,7 @@ public abstract class JavadocComment {
   private final Kind kind;
 
   /** The comment of this tag. */
-  private Comment comment;
+  private CommentContent comment;
 
   /**
    * Constructs a {@code JavadocComment} of the specific kind, with the given comment.
@@ -47,7 +49,7 @@ public abstract class JavadocComment {
    * @param kind the comment kind, must not be null
    * @param comment the comment associated with the exception, must not be null
    */
-  public JavadocComment(Kind kind, Comment comment) {
+  public JavadocComment(Kind kind, CommentContent comment) {
     Checks.nonNullParameter(kind, "kind");
     Checks.nonNullParameter(comment, "comment");
     this.kind = kind;
@@ -68,7 +70,7 @@ public abstract class JavadocComment {
    *
    * @return the comment associated with the exception in this tag
    */
-  public Comment getComment() {
+  public CommentContent getComment() {
     return comment;
   }
 
@@ -77,7 +79,7 @@ public abstract class JavadocComment {
    *
    * @param comment the comment for this tag, must not be null
    */
-  public void setComment(Comment comment) {
+  public void setComment(CommentContent comment) {
     Checks.nonNullParameter(comment, "comment");
     this.comment = comment;
   }

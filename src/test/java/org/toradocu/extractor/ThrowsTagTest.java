@@ -16,7 +16,7 @@ public class ThrowsTagTest {
 
   @Test
   public void testBasics() {
-    ThrowsTag tag = new ThrowsTag(NPE, new Comment("if x is null"));
+    ThrowsTag tag = new ThrowsTag(NPE, new CommentContent("if x is null"));
     assertThat(tag.getComment().getText(), is("if x is null"));
     assertThat(tag.getException(), is(NPE));
 
@@ -26,8 +26,8 @@ public class ThrowsTagTest {
 
   @Test
   public void testEquals() throws ClassNotFoundException {
-    ThrowsTag tag1 = new ThrowsTag(NPE, new Comment("if x is null"));
-    ThrowsTag tag2 = new ThrowsTag(NPE, new Comment("if x is null"));
+    ThrowsTag tag1 = new ThrowsTag(NPE, new CommentContent("if x is null"));
+    ThrowsTag tag2 = new ThrowsTag(NPE, new CommentContent("if x is null"));
     assertThat(tag1.equals(tag2), is(true));
     assertThat(tag1.hashCode(), is(equalTo(tag2.hashCode())));
     assertThat(tag1.equals(new Object()), is(false));
@@ -35,11 +35,11 @@ public class ThrowsTagTest {
     assertThat(tag1.equals(tag2), is(true));
     assertThat(tag1.hashCode(), is(equalTo(tag2.hashCode())));
 
-    ThrowsTag tag3 = new ThrowsTag(NPE, new Comment("if y is null"));
+    ThrowsTag tag3 = new ThrowsTag(NPE, new CommentContent("if y is null"));
     assertThat(tag1.equals(tag3), is(false));
 
     final Class<?> IAE = loadException("java.lang.IllegalArgumentException");
-    ThrowsTag tag4 = new ThrowsTag(IAE, new Comment("if x is null"));
+    ThrowsTag tag4 = new ThrowsTag(IAE, new CommentContent("if x is null"));
     assertThat(tag1.equals(tag4), is(false));
   }
 

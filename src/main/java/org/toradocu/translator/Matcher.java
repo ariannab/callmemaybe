@@ -215,9 +215,47 @@ class Matcher {
       CodeElement<?> subject,
       Proposition proposition,
       String comment) {
-    Set<CodeElement<?>> codeElements;
     String predicate = proposition.getPredicate();
+    Set<CodeElement<?>> codeElements = extractCodeElements(subject, method);
+    if (codeElements == null) {
+      return null;
+    }
+    List<CodeElement<?>> sortedMethodList = new ArrayList<CodeElement<?>>(codeElements);
 
+    // Try the classic syntactic match first of all
+    Match match = syntacticMatch(predicate, codeElements, method);
+    if (match == null && SemanticMatcher.isEnabled()) {
+      // When the syntactic match fails, try semantic if enabled
+      try {
+        SemanticMatcher semanticMatcher = new SemanticMatcher(true, (float) 0.2, (float) 3.11);
+
+        // it is important to provide a fixed order since this point, to prevent method with same
+        // score
+        // being put in map in a different order every execution
+        Collections.sort(sortedMethodList, new JavaExpressionComparator());
+        LinkedHashMap<CodeElement<?>, Double> semanticMethodMatches =
+            semanticMatcher.runSemanticMatch(
+                sortedMethodList, method, subject, proposition, comment);
+
+        if (semanticMethodMatches != null && !semanticMethodMatches.isEmpty()) {
+          List<CodeElement<?>> semanticMethodList =
+              new ArrayList<CodeElement<?>>(semanticMethodMatches.keySet());
+
+          if (semanticMethodList.size() > 5) {
+            semanticMethodList = semanticMethodList.subList(0, 4);
+          }
+          match = checkArgsAndPickBestMatch(method, predicate, semanticMethodList);
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+    return match;
+  }
+
+  private Set<CodeElement<?>> extractCodeElements(
+      CodeElement<?> subject, DocumentedExecutable method) {
+    Set<CodeElement<?>> codeElements;
     // TODO check the following calls to extractBooleanCodeElements(): are they necessary before
     // TODO calling JavaElementsCollector#collect()?
     if (subject instanceof ParameterCodeElement) {
@@ -245,6 +283,7 @@ class Matcher {
     } else {
       return null;
     }
+
     codeElements.addAll(JavaElementsCollector.collect(method));
 
     // Filter collected code elements that refer to the documented method under analysis.
@@ -277,36 +316,7 @@ class Matcher {
                 })
             .collect(Collectors.toSet());
 
-    List<CodeElement<?>> sortedMethodList = new ArrayList<CodeElement<?>>(codeElements);
-    // Try the classic syntactic match first of all
-    Match match = syntacticMatch(predicate, codeElements, method);
-    if (match == null && SemanticMatcher.isEnabled()) {
-      // When the syntactic match fails, try semantic if enabled
-      try {
-        SemanticMatcher semanticMatcher = new SemanticMatcher(true, (float) 0.2, (float) 3.11);
-
-        // it is important to provide a fixed order since this point, to prevent method with same
-        // score
-        // being put in map in a different order every execution
-        Collections.sort(sortedMethodList, new JavaExpressionComparator());
-        LinkedHashMap<CodeElement<?>, Double> semanticMethodMatches =
-            semanticMatcher.runSemanticMatch(
-                sortedMethodList, method, subject, proposition, comment);
-
-        if (semanticMethodMatches != null && !semanticMethodMatches.isEmpty()) {
-          List<CodeElement<?>> semanticMethodList =
-              new ArrayList<CodeElement<?>>(semanticMethodMatches.keySet());
-
-          if (semanticMethodList.size() > 5) {
-            semanticMethodList = semanticMethodList.subList(0, 4);
-          }
-          match = findBestMethodMatch(method, predicate, semanticMethodList);
-        }
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
-    }
-    return match;
+    return codeElements;
   }
 
   /**
@@ -326,7 +336,7 @@ class Matcher {
     if (sortedMethodList.isEmpty()) {
       return null;
     } else {
-      return findBestMethodMatch(method, predicate, sortedMethodList);
+      return checkArgsAndPickBestMatch(method, predicate, sortedMethodList);
     }
   }
 
@@ -340,13 +350,13 @@ class Matcher {
    * @param sortedCodeElements sorted list of matching method {@code CodeElement}s
    * @return object representation of the best match found
    */
-  private Match findBestMethodMatch(
+  public Match checkArgsAndPickBestMatch(
       DocumentedExecutable method, String predicate, List<CodeElement<?>> sortedCodeElements) {
     Match match = null;
     CodeElement<?> firstCodeMatch = null;
     boolean foundArgMatch = false;
     List<String> paramForMatch = new ArrayList<String>();
-    List<String> paramMatch = new ArrayList<String>();
+    List<String> paramMatch;
     String[] args = null;
     String receiver = "";
     java.lang.reflect.Parameter[] myParams = method.getExecutable().getParameters();
@@ -376,7 +386,6 @@ class Matcher {
         }
       }
       if (foundArgMatch) {
-        firstCodeMatch = currentMatch;
         break;
       }
     }
@@ -393,10 +402,10 @@ class Matcher {
       for (int j = 0; j < paramForMatch.size() - 1; j++)
         match.completeExpression(paramForMatch.get(j) + ",");
       match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
-    } else if (args
-        != null) { // the method is supposed to take params but we haven't find a match: does it
-      // have to take null?
-      // TODO check method match number of arguments!
+    } else if (args != null) {
+      // the method is supposed to take params but we haven't find a match: does it have to take
+      // null?
+      // TODO check method matches number of arguments!
       final java.util.regex.Matcher nullPattern =
           Pattern.compile("(has|have|contains?) null").matcher(predicate);
 

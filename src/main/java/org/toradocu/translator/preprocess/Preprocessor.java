@@ -1,7 +1,7 @@
 package org.toradocu.translator.preprocess;
 
 import java.util.List;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.JavadocComment;
 
@@ -16,7 +16,7 @@ public class Preprocessor {
   public JavadocComment preprocess(JavadocComment tag, DocumentedExecutable excMember) {
     for (PreprocessingPhase phase : phases) {
       String preprocessedText = phase.run(tag, excMember);
-      tag.setComment(new Comment(preprocessedText, tag.getComment().getWordsMarkedAsCode()));
+      tag.setComment(new CommentContent(preprocessedText, tag.getComment().getWordsMarkedAsCode()));
     }
     return tag;
   }

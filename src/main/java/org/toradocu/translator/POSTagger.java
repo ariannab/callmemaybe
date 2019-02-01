@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.toradocu.conf.Configuration;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 
 public class POSTagger {
 
@@ -18,7 +18,7 @@ public class POSTagger {
    * Stanford Parser will take in input a partially tagged sentence, and will adapt its tagging to
    * our previous one.
    *
-   * @param comment original {@code Comment}
+   * @param comment original {@code CommentContent}
    * @param placeholderSentence String holding the sentence to tag, with placeholders
    * @param inequalities List of inequalities corresponding to placeholders
    * @param sentence original sentence to tag, i.e. the comment
@@ -26,7 +26,7 @@ public class POSTagger {
    * @return the partially tagged sentence
    */
   static List<TaggedWord> tagWords(
-      Comment comment,
+      CommentContent comment,
       String placeholderSentence,
       List<String> inequalities,
       List<HasWord> sentence,

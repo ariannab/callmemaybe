@@ -23,7 +23,7 @@ public final class ParamTag extends JavadocComment {
    * @param comment the comment associated with the tag
    * @throws NullPointerException if parameter or comment is null
    */
-  public ParamTag(DocumentedParameter parameter, Comment comment) {
+  public ParamTag(DocumentedParameter parameter, CommentContent comment) {
     super(Kind.PARAM, comment);
     Checks.nonNullParameter(parameter, "parameter");
     this.parameter = parameter;
@@ -66,7 +66,7 @@ public final class ParamTag extends JavadocComment {
    * Returns a string representation of this param tag. The returned string is in the format "@param
    * PARAMNAME COMMENT" where PARAMNAME is the fully qualified name of the parameter in the param
    * tag and COMMENT is the text of the comment in the param tag (without inline tags, as they are
-   * removed during the instantiation of the Comment object).
+   * removed during the instantiation of the CommentContent object).
    *
    * @return a string representation of this param tag
    */

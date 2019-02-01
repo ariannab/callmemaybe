@@ -1,7 +1,7 @@
 package org.toradocu.output.util;
 
 import java.util.Objects;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 
 /** Created by arianna on 28/06/17. */
 public class ParamTagOutput extends TagOutput {
@@ -9,7 +9,7 @@ public class ParamTagOutput extends TagOutput {
   /** The parameter associated with the param tag */
   private final Parameter parameter;
 
-  ParamTagOutput(Parameter parameter, Comment comment, String kind, String condition) {
+  ParamTagOutput(Parameter parameter, CommentContent comment, String kind, String condition) {
     super(comment.getText(), kind, condition);
     this.parameter = parameter;
   }

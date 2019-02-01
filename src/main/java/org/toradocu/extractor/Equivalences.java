@@ -1,6 +1,7 @@
 package org.toradocu.extractor;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,7 +47,7 @@ public class Equivalences {
    */
   private static MethodMatch getSignatureInMatchingComment(
       String comment, KeywordsSet keywordsSet) {
-    String methodRegex = "\\w+(\\(.*?(?<!\\) )\\)|\\.\\w+|#\\w+)+";
+    String methodRegex = "\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+";
     for (String word : keywordsSet.getKw()) {
       Matcher matcher =
           Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE).matcher(comment);
@@ -63,6 +64,7 @@ public class Equivalences {
         }
 
         if (methodMatch.find() && !doRangesOverlap(matcher, methodMatch)) {
+          List<String> arguments = extractArguments(methodMatch);
           // TODO check if there is an "if" or "when" or "except" - more?
           if (keywordsSet.getCategory().equals(KeywordsSet.Category.SIMILARITY)
               || Pattern.compile("\\b" + "if" + "\\b", Pattern.CASE_INSENSITIVE)
@@ -74,12 +76,24 @@ public class Equivalences {
               || Pattern.compile("\\b" + "except" + "\\b", Pattern.CASE_INSENSITIVE)
                   .matcher(comment)
                   .find()) {
-            return new MethodMatch(methodMatch.group(group), false, true);
+            return new MethodMatch(methodMatch.group(group), false, true, arguments);
           } else {
-            return new MethodMatch(methodMatch.group(group), true, false);
+            return new MethodMatch(methodMatch.group(group), true, false, arguments);
           }
         }
       }
+    }
+    return null;
+  }
+
+  private static List<String> extractArguments(Matcher methodMatch) {
+    if (methodMatch.group(2) != null && !methodMatch.group(2).isEmpty()) {
+      // the method takes arguments
+      String[] args = methodMatch.group(2).split(",");
+      for (int i = 0; i < args.length; i++) {
+        args[i] = args[i].trim();
+      }
+      return Arrays.asList(args);
     }
     return null;
   }

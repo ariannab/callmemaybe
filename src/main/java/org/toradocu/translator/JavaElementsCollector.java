@@ -10,7 +10,7 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.Parameter;
 import java.util.*;
 import org.toradocu.conf.Configuration;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 import org.toradocu.extractor.ParamTag;
@@ -169,7 +169,7 @@ public class JavaElementsCollector {
 
       if (paramName.equals(param)) {
         List<SemanticGraph> sgs =
-            Parser.parse(new Comment(originalComment), method)
+            Parser.parse(new CommentContent(originalComment), method)
                 .stream()
                 .map(PropositionSeries::getSemanticGraph)
                 .collect(toList());

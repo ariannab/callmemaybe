@@ -8,7 +8,7 @@ import edu.stanford.nlp.ling.IndexedWord;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 
 public class PropositionSeriesTest {
@@ -51,7 +51,7 @@ public class PropositionSeriesTest {
   @Test
   public void testSingleProposition() {
     PropositionSeries propositions =
-        getPropositions(new Comment("if expectedKeys is negative"), null);
+        getPropositions(new CommentContent("if expectedKeys is negative"), null);
 
     assertThat(propositions.numberOfPropositions(), is(1));
     assertThat(propositions.getPropositions().get(0).toString(), is("(expectedKeys, is negative)"));
@@ -61,7 +61,7 @@ public class PropositionSeriesTest {
   @Test
   public void testSinglePropositionWithNegation() {
     PropositionSeries propositions =
-        getPropositions(new Comment("if expectedKeys is not negative"), null);
+        getPropositions(new CommentContent("if expectedKeys is not negative"), null);
 
     assertThat(propositions.numberOfPropositions(), is(1));
     assertThat(
@@ -72,7 +72,7 @@ public class PropositionSeriesTest {
   @Test
   public void testSinglePropositionPassive() {
     PropositionSeries propositions =
-        getPropositions(new Comment("if expectedKeys was not set"), null);
+        getPropositions(new CommentContent("if expectedKeys was not set"), null);
 
     assertThat(propositions.numberOfPropositions(), is(1));
     assertThat(
@@ -82,7 +82,8 @@ public class PropositionSeriesTest {
 
   @Test
   public void testSinglePropositionCompoundName() {
-    PropositionSeries propositions = getPropositions(new Comment("if the JNDI name is null"), null);
+    PropositionSeries propositions =
+        getPropositions(new CommentContent("if the JNDI name is null"), null);
 
     assertThat(propositions.numberOfPropositions(), is(1));
     assertThat(propositions.getPropositions().get(0).toString(), is("(JNDI name, is null)"));
@@ -92,7 +93,8 @@ public class PropositionSeriesTest {
   @Test
   public void testExplicitDisjunction() {
     PropositionSeries propositions =
-        getPropositions(new Comment("if expectedKeys or expectedValuesPerKey is negative"), null);
+        getPropositions(
+            new CommentContent("if expectedKeys or expectedValuesPerKey is negative"), null);
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(propositions.getPropositions().get(0).toString(), is("(expectedKeys, is negative)"));
     assertThat(
@@ -106,7 +108,7 @@ public class PropositionSeriesTest {
   @Test
   public void testExplicitDisjunctionWithOneSubject() throws Exception {
     PropositionSeries propositions =
-        getPropositions(new Comment("if expectedKeys is null or is negative"), null);
+        getPropositions(new CommentContent("if expectedKeys is null or is negative"), null);
 
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(propositions.getPropositions().get(0).toString(), is("(expectedKeys, is null)"));
@@ -118,7 +120,8 @@ public class PropositionSeriesTest {
 
   @Test
   public void testDisjunctionBetweenComplements() throws Exception {
-    PropositionSeries propositions = getPropositions(new Comment("name is empty or null"), null);
+    PropositionSeries propositions =
+        getPropositions(new CommentContent("name is empty or null"), null);
 
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(propositions.getPropositions().get(0).toString(), is("(name, is empty)"));
@@ -130,7 +133,8 @@ public class PropositionSeriesTest {
 
   @Test
   public void testDisjunctionBetweenVerbs() throws Exception {
-    PropositionSeries propositions = getPropositions(new Comment("name is or contains null"), null);
+    PropositionSeries propositions =
+        getPropositions(new CommentContent("name is or contains null"), null);
 
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(propositions.getPropositions().get(0).toString(), is("(name, is null)"));
@@ -143,7 +147,7 @@ public class PropositionSeriesTest {
   @Test
   public void testImplicitDisjunction() {
     PropositionSeries propositions =
-        getPropositions(new Comment("Joe eats apples, Bill eats oranges"), null);
+        getPropositions(new CommentContent("Joe eats apples, Bill eats oranges"), null);
 
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(propositions.getPropositions().get(0).toString(), is("(Joe, eats apples)"));
@@ -158,7 +162,8 @@ public class PropositionSeriesTest {
   @Test
   public void testExplicitConjunction() {
     PropositionSeries propositions =
-        getPropositions(new Comment("if expectedKeys and expectedValuesPerKey are negative"), null);
+        getPropositions(
+            new CommentContent("if expectedKeys and expectedValuesPerKey are negative"), null);
 
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(
@@ -174,7 +179,8 @@ public class PropositionSeriesTest {
   @Test
   public void testMultipleConjunction() {
     PropositionSeries propositions =
-        getPropositions(new Comment("bar is negative, and foo is null, and baz is empty"), null);
+        getPropositions(
+            new CommentContent("bar is negative, and foo is null, and baz is empty"), null);
 
     assertThat(propositions.numberOfPropositions(), is(3));
     assertThat(propositions.getPropositions().get(0).toString(), is("(bar, is negative)"));
@@ -190,7 +196,7 @@ public class PropositionSeriesTest {
   public void testMultiplePropositions() {
     PropositionSeries propositions =
         getPropositions(
-            new Comment(
+            new CommentContent(
                 "the outputCollection is null and both inputCollection and transformer are not null."),
             null);
 
@@ -210,7 +216,7 @@ public class PropositionSeriesTest {
   public void testIssue90() {
     // https://github.com/albertogoffi/toradocu/issues/90
     PropositionSeries propositions =
-        getPropositions(new Comment("Any of the specified vertices is null."), null);
+        getPropositions(new CommentContent("Any of the specified vertices is null."), null);
 
     assertThat(propositions.numberOfPropositions(), is(1));
     assertThat(
@@ -222,7 +228,7 @@ public class PropositionSeriesTest {
   public void testIssue97() {
     // https://github.com/albertogoffi/toradocu/issues/97
     PropositionSeries propositions =
-        getPropositions(new Comment("shape is <= 0 or scale is <= 0."), null);
+        getPropositions(new CommentContent("shape is <= 0 or scale is <= 0."), null);
     assertThat(propositions.numberOfPropositions(), is(2));
     assertThat(propositions.getPropositions().get(0).toString(), is("(shape, is <= 0)"));
     assertThat(propositions.getPropositions().get(1).toString(), is("(scale, is <= 0)"));
@@ -230,7 +236,7 @@ public class PropositionSeriesTest {
     assertThat(propositions.getConjunctions().get(0), is(Conjunction.OR));
   }
 
-  private PropositionSeries getPropositions(Comment sentence, DocumentedExecutable member) {
+  private PropositionSeries getPropositions(CommentContent sentence, DocumentedExecutable member) {
 
     List<PropositionSeries> propositions = Parser.parse(sentence, member);
     // assertThat(semanticGraphs.size(), is(1));

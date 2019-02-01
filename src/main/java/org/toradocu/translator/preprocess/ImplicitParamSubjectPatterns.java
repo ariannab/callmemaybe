@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.JavadocComment;
 import org.toradocu.extractor.ParamTag;
@@ -57,7 +57,7 @@ public class ImplicitParamSubjectPatterns implements PreprocessingPhase {
 
     if (originalComment.equals(preProcessedComment)) {
       final List<PropositionSeries> extractedPropositions =
-          Parser.parse(new Comment(originalComment), excMember);
+          Parser.parse(new CommentContent(originalComment), excMember);
       final List<SemanticGraph> semanticGraphs =
           extractedPropositions.stream().map(PropositionSeries::getSemanticGraph).collect(toList());
 
@@ -97,7 +97,7 @@ public class ImplicitParamSubjectPatterns implements PreprocessingPhase {
     String mayBeAdj = hasArticle ? tokens[1] : tokens[0];
 
     final List<PropositionSeries> extractedPropositions =
-        Parser.parse(new Comment(comment), excMember);
+        Parser.parse(new CommentContent(comment), excMember);
     final List<SemanticGraph> semanticGraphs =
         extractedPropositions.stream().map(PropositionSeries::getSemanticGraph).collect(toList());
     StringBuilder commentBuilder = new StringBuilder(comment);
@@ -154,7 +154,7 @@ public class ImplicitParamSubjectPatterns implements PreprocessingPhase {
    */
   private boolean adjectivesFound(DocumentedExecutable excMember, Matcher commaMatcher) {
     final List<PropositionSeries> extractedPropositions =
-        Parser.parse(new Comment(commaMatcher.group(2)), excMember);
+        Parser.parse(new CommentContent(commaMatcher.group(2)), excMember);
     final List<SemanticGraph> semanticGraphs =
         extractedPropositions.stream().map(PropositionSeries::getSemanticGraph).collect(toList());
 

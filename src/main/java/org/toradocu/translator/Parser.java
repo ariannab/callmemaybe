@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 
@@ -57,7 +57,7 @@ public class Parser {
    * @param comment the comment object
    * @param method the DocumentedExecutable
    */
-  private static List<SemanticGraph> parse_(Comment comment, DocumentedExecutable method) {
+  private static List<SemanticGraph> parse_(CommentContent comment, DocumentedExecutable method) {
     // Check if cache contains a valid answer.
     MethodComment key = new MethodComment(comment, method);
     if (graphsCache.containsKey(key)) {
@@ -65,7 +65,7 @@ public class Parser {
     }
 
     List<SemanticGraph> graphs = new ArrayList<>();
-    Comment commentWithPlaceholders = addPlaceholders(comment);
+    CommentContent commentWithPlaceholders = addPlaceholders(comment);
     List<String> arguments = new ArrayList<>();
     if (method != null) {
       // Collect method arguments
@@ -87,15 +87,15 @@ public class Parser {
   }
 
   /**
-   * Takes a Comment object and returns a list of {@code PropositionSeries} objects, one for each
-   * sentence in the comment.
+   * Takes a CommentContent object and returns a list of {@code PropositionSeries} objects, one for
+   * each sentence in the comment.
    *
    * @param comment object representing a Javadoc comment
    * @param method the DocumentedExecutable under analysis
    * @return a list of {@code PropositionSeries} objects, one for each sentence in the comment
    */
   // TODO Move this to a new class PropositionIdentifier that handles Proposition.
-  public static List<PropositionSeries> parse(Comment comment, DocumentedExecutable method) {
+  public static List<PropositionSeries> parse(CommentContent comment, DocumentedExecutable method) {
     List<PropositionSeries> result = new ArrayList<>();
     List<SemanticGraph> semanticGraphs = parse_(comment, method);
     for (SemanticGraph semanticGraph : semanticGraphs) {
@@ -131,7 +131,7 @@ public class Parser {
     return placeholderText;
   }
 
-  private static Comment addPlaceholders(Comment comment) {
+  private static CommentContent addPlaceholders(CommentContent comment) {
 
     ArrayList<String> contentToIgnore = new ArrayList<>();
 
@@ -230,7 +230,7 @@ public class Parser {
       placeholderText = placeholderText.replaceFirst("IGNORE_ME", ignoredString);
     }
 
-    return new Comment(placeholderText, comment.getWordsMarkedAsCode());
+    return new CommentContent(placeholderText, comment.getWordsMarkedAsCode());
   }
 
   /**
@@ -273,15 +273,15 @@ public class Parser {
 
 /** This class ties a String comment to its DocumentedMethod. */
 class MethodComment {
-  private Comment comment;
+  private CommentContent comment;
   private DocumentedExecutable method;
 
-  public MethodComment(Comment comment, DocumentedExecutable method) {
+  public MethodComment(CommentContent comment, DocumentedExecutable method) {
     this.comment = comment;
     this.method = method;
   }
 
-  public Comment getComment() {
+  public CommentContent getComment() {
     return comment;
   }
 

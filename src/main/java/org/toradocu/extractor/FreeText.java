@@ -7,7 +7,7 @@ public class FreeText extends JavadocComment {
    * @param kind the comment kind, must not be null
    * @param comment the comment associated with the exception, must not be null
    */
-  public FreeText(Kind kind, Comment comment) {
+  public FreeText(Kind kind, CommentContent comment) {
     super(Kind.FREETEXT, comment);
   }
 }

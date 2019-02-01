@@ -15,6 +15,7 @@ public class PreprocessorFactory {
     phases.add(new Trim());
 
     switch (tagKind) {
+        // TODO add phases for case FREETEXT (if any!)
       case PARAM:
         phases.add(new ImplicitParamSubjectPatterns());
         phases.add(new ExpandRange());

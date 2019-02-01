@@ -12,7 +12,7 @@ public final class ReturnTag extends JavadocComment {
    *
    * @param comment the comment associated to the return tag
    */
-  ReturnTag(Comment comment) {
+  ReturnTag(CommentContent comment) {
     super(Kind.RETURN, comment);
   }
 

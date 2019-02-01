@@ -103,11 +103,11 @@ public final class JavadocExtractor {
 
       final Optional<JavadocComment> javadocComment = sourceCallable.getJavadocComment();
       final Optional<Javadoc> javadoc = sourceCallable.getJavadoc();
-      String freeText = "";
+      String freeTextComment = "";
       String parsedFreeText = "";
       if (javadocComment.isPresent()) {
-        freeText = javadocComment.get().getContent();
-        String[] freeTextLines = freeText.split("\n");
+        freeTextComment = javadocComment.get().getContent();
+        String[] freeTextLines = freeTextComment.split("\n");
         for (String line : freeTextLines) {
           String trimmedLine = line.trim();
           if (trimmedLine.startsWith("* @since")
@@ -121,6 +121,12 @@ public final class JavadocExtractor {
           }
         }
       }
+
+      FreeText freeText =
+          new FreeText(
+              org.toradocu.extractor.JavadocComment.Kind.FREETEXT,
+              new CommentContent(parsedFreeText));
+
       documentedExecutables.add(
           new DocumentedExecutable(
               sourceCallable.getName(),
@@ -128,7 +134,7 @@ public final class JavadocExtractor {
               reflectionMember,
               parameters,
               blockTags,
-              parsedFreeText));
+              freeText));
     }
 
     log.trace(
@@ -281,7 +287,7 @@ public final class JavadocExtractor {
         }
       }
     }
-    return new BlockTags(paramTags, returnTag, throwsTags, freeText);
+    return new BlockTags(paramTags, returnTag, throwsTags);
   }
 
   /**
@@ -319,7 +325,7 @@ public final class JavadocExtractor {
         // A tag can report the exception type even without any description
         commentToken = tokens[1];
       }
-      Comment commentObject = new Comment(commentToken);
+      CommentContent commentObject = new CommentContent(commentToken);
       return new ThrowsTag(exceptionType, commentObject);
     } catch (ClassNotFoundException e) {
       log.info("[Javadoc warning] Wrong exception type name");
@@ -346,7 +352,7 @@ public final class JavadocExtractor {
       content = "{" + content;
     }
 
-    Comment commentObject = new Comment(content);
+    CommentContent commentObject = new CommentContent(content);
     return new ReturnTag(commentObject);
   }
 
@@ -383,7 +389,7 @@ public final class JavadocExtractor {
     } else if (matchingParams.size() > 1) {
       throw new AssertionError("Error: multiple formal parameters with the same name.");
     } else {
-      Comment commentObject = new Comment(blockTag.getContent().toText());
+      CommentContent commentObject = new CommentContent(blockTag.getContent().toText());
       return new ParamTag(matchingParams.get(0), commentObject);
     }
   }

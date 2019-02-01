@@ -436,7 +436,7 @@ public class Stats {
         }
         outputMessage
             .append(kind)
-            .append(" condition. Comment: ")
+            .append(" condition. CommentContent: ")
             .append(actualTag.getComment())
             .append("\n\tExpected condition: ")
             .append(expectedCondition)

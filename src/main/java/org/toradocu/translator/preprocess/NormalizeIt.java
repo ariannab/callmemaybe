@@ -5,7 +5,7 @@ import static java.util.stream.Collectors.toList;
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.semgraph.SemanticGraph;
 import java.util.List;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.JavadocComment;
 import org.toradocu.translator.Parser;
@@ -20,7 +20,7 @@ public class NormalizeIt implements PreprocessingPhase {
     // probably a previous mentioned noun.
     if (comment.contains(" it ")) {
       final List<PropositionSeries> extractedPropositions =
-          Parser.parse(new Comment(comment), method);
+          Parser.parse(new CommentContent(comment), method);
       final List<SemanticGraph> semanticGraphs =
           extractedPropositions.stream().map(PropositionSeries::getSemanticGraph).collect(toList());
       for (SemanticGraph sg : semanticGraphs) {

@@ -6,14 +6,15 @@ import java.util.regex.Pattern;
 
 /**
  * Text of a Javadoc block tag ({@link JavadocComment}), such as {@code @param}, {@code @return}, or
- * {@code @throws}. A {@link Comment} is composed of a text and a list of words that are tagged
- * as @code.
+ * {@code @throws}. A {@link CommentContent} is composed of a text and a list of words that are
+ * tagged as @code.
  */
-public final class Comment {
+public final class CommentContent {
 
   /**
-   * Comment text. Does not include the tag (e.g., @return) and any additional information like the
-   * commented parameter name in case of @param tags and the exception name in case of @throws tags.
+   * CommentContent text. Does not include the tag (e.g., @return) and any additional information
+   * like the commented parameter name in case of @param tags and the exception name in case
+   * of @throws tags.
    */
   private String text;
 
@@ -29,28 +30,39 @@ public final class Comment {
   private final Map<String, List<Integer>> wordsMarkedAsCode;
 
   /**
-   * Builds a new Comment with the given {@code text}. Words marked with {@literal @code} and
+   * Builds a new CommentContent with the given {@code text}. Words marked with {@literal @code} and
    * {@literal <code></code>} in {@code text} are added to the map of words marked as code. Than,
    * the text is cleaned from any tag.
    *
    * @param text text of the comment.
    */
-  public Comment(String text) {
+  public CommentContent(String text) {
     this.text = text.replaceAll("\\s+", " ");
     this.wordsMarkedAsCode = new HashMap<>();
 
     final String codePattern1 = "<code>([A-Za-z0-9_]+)</code>";
     identifyCodeWords(codePattern1);
-    removeTags(codePattern1);
+    removeTagsNotContent(codePattern1);
 
     final String codePattern2 = "\\{@code ([^}]+)\\}";
     identifyCodeWords(codePattern2);
-    removeTags(codePattern2);
-
-    removeTags("\\{@link #?([^}]+)\\}");
+    removeTagsNotContent(codePattern2);
+    String linkPattern = "\\{@link #?([^}^ ]+)( [^}]+)?\\}";
+    manageLinks(linkPattern);
     removeHTMLTags();
     decodeHTML();
     this.text = this.text.trim();
+  }
+
+  private void manageLinks(String linkPattern) {
+    Matcher matcher = Pattern.compile(linkPattern).matcher(text);
+    while (matcher.find()) {
+      if (matcher.group(2) != null) {
+        this.text = this.text.replace(matcher.group(1) + " ", "");
+        manageLinks(linkPattern);
+      }
+      this.text = this.text.replace(matcher.group(0), matcher.group(1));
+    }
   }
 
   /** Decodes HTML character entities found in comment text with corresponding characters. */
@@ -65,19 +77,19 @@ public final class Comment {
   }
 
   /**
-   * Builds a new Comment with the given {@code text} and code blocks.
+   * Builds a new CommentContent with the given {@code text} and code blocks.
    *
    * @param text text of the comment.
    * @param wordsMarkedAsCode blocks of text wrapped in {@literal @code} or {@literal <code></code>}
    */
-  public Comment(String text, Map<String, List<Integer>> wordsMarkedAsCode) {
+  public CommentContent(String text, Map<String, List<Integer>> wordsMarkedAsCode) {
     this(text);
     this.wordsMarkedAsCode.putAll(wordsMarkedAsCode);
   }
 
   /**
    * Returns the comment text as {@code String}. Notice that the text does not contain inline tags
-   * because they are removed in the constructor of {@code Comment}.
+   * because they are removed in the constructor of {@code CommentContent}.
    *
    * @return the {@code String} comment text
    */
@@ -179,7 +191,7 @@ public final class Comment {
    *
    * @param pattern a regular expression
    */
-  private void removeTags(String pattern) {
+  private void removeTagsNotContent(String pattern) {
     Matcher matcher = Pattern.compile(pattern).matcher(text);
     while (matcher.find()) {
       this.text = this.text.replace(matcher.group(0), matcher.group(1));
@@ -205,7 +217,7 @@ public final class Comment {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    Comment comment = (Comment) o;
+    CommentContent comment = (CommentContent) o;
 
     return text.equals(comment.text) && wordsMarkedAsCode.equals(comment.wordsMarkedAsCode);
   }

@@ -22,13 +22,13 @@ public class CommentTest {
     String selfClosingHTMLTags = "This comment contains a break <br/>";
     String mixedHTMLTags = "This comment contains <b>bold text</b> and a break <br/>";
 
-    Comment simpleComment = new Comment(simpleTag);
+    CommentContent simpleComment = new CommentContent(simpleTag);
     List<Integer> codeWordOccurrences = simpleComment.getWordsMarkedAsCode().get("codeElement");
     assertThat(codeWordOccurrences, not(is(nullValue())));
     assertThat(codeWordOccurrences.size(), is(1));
     assertThat(codeWordOccurrences.get(0), is(0));
 
-    Comment multiTagComment = new Comment(multipleTags);
+    CommentContent multiTagComment = new CommentContent(multipleTags);
     codeWordOccurrences = multiTagComment.getWordsMarkedAsCode().get("codeElement");
     // codeElement is tagged as code twice (both the first and second occurrence) in
     // multiTagComment.
@@ -43,7 +43,7 @@ public class CommentTest {
     assertThat(codeWordOccurrences.size(), is(1));
     assertThat(codeWordOccurrences.get(0), is(0));
 
-    Comment complexComment = new Comment(complexTag);
+    CommentContent complexComment = new CommentContent(complexTag);
     codeWordOccurrences = complexComment.getWordsMarkedAsCode().get("complex");
     assertThat(codeWordOccurrences, not(is(nullValue())));
     assertThat(codeWordOccurrences.size(), is(1));
@@ -54,25 +54,25 @@ public class CommentTest {
     assertThat(codeWordOccurrences.size(), is(1));
     assertThat(codeWordOccurrences.get(0), is(0));
 
-    Comment specialCharComment = new Comment(specialCharTag);
+    CommentContent specialCharComment = new CommentContent(specialCharTag);
     codeWordOccurrences = specialCharComment.getWordsMarkedAsCode().get("specialCharacters[]");
     assertThat(codeWordOccurrences, not(is(nullValue())));
     assertThat(codeWordOccurrences.size(), is(1));
     assertThat(codeWordOccurrences.get(0), is(0));
 
     // From expression such as i<0, we do not retain signs and numbers
-    Comment exprComment = new Comment(expressionTag);
+    CommentContent exprComment = new CommentContent(expressionTag);
     assertThat(exprComment.getWordsMarkedAsCode().size(), is(1));
     codeWordOccurrences = exprComment.getWordsMarkedAsCode().get("i");
     assertThat(codeWordOccurrences, not(is(nullValue())));
 
-    Comment regularHTMLComment = new Comment(regularHTMLTags);
+    CommentContent regularHTMLComment = new CommentContent(regularHTMLTags);
     assertThat(regularHTMLComment.getText(), is("This comment contains bold text"));
 
-    Comment scHTMLComment = new Comment(selfClosingHTMLTags);
+    CommentContent scHTMLComment = new CommentContent(selfClosingHTMLTags);
     assertThat(scHTMLComment.getText(), is("This comment contains a break"));
 
-    Comment mixedHTMLComment = new Comment(mixedHTMLTags);
+    CommentContent mixedHTMLComment = new CommentContent(mixedHTMLTags);
     assertThat(mixedHTMLComment.getText(), is("This comment contains bold text and a break"));
   }
 }

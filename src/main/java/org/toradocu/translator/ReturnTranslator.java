@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 import org.toradocu.conf.Configuration;
-import org.toradocu.extractor.Comment;
+import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.util.Reflection;
@@ -186,7 +186,7 @@ public class ReturnTranslator {
           }
 
           final List<PropositionSeries> extractedPropositions =
-              Parser.parse(new Comment(Configuration.RETURN_VALUE + " " + token), method);
+              Parser.parse(new CommentContent(Configuration.RETURN_VALUE + " " + token), method);
           final List<SemanticGraph> semanticGraphs =
               extractedPropositions
                   .stream()
@@ -241,13 +241,13 @@ public class ReturnTranslator {
    * @return the translation of the given {@code text}
    */
   private static String translateSecondPart(
-      String trueCase, DocumentedExecutable method, Comment comment) {
+      String trueCase, DocumentedExecutable method, CommentContent comment) {
     // Identify propositions in the comment. Each sentence in the comment is parsed into a
     // PropositionSeries.
 
     // text = removeInitial(text, "if");  already done in Preprocess part
     List<PropositionSeries> extractedPropositions =
-        Parser.parse(new Comment(trueCase, comment.getWordsMarkedAsCode()), method);
+        Parser.parse(new CommentContent(trueCase, comment.getWordsMarkedAsCode()), method);
     Set<String> conditions = new LinkedHashSet<>();
     for (PropositionSeries propositions : extractedPropositions) {
       BasicTranslator.translate(propositions, method, comment.getText());
@@ -282,7 +282,7 @@ public class ReturnTranslator {
           // No return of type boolean: it must be a more complex boolean condition, or a code
           // element.
           final List<PropositionSeries> extractedPropositions =
-              Parser.parse(new Comment(parsedComment), method);
+              Parser.parse(new CommentContent(parsedComment), method);
           final List<SemanticGraph> semanticGraphs =
               extractedPropositions
                   .stream()
@@ -313,14 +313,14 @@ public class ReturnTranslator {
    *
    * @param method the DocumentedExecutable
    * @param textToTranslate the String text to translate
-   * @param comment original {@code Comment}
+   * @param comment original {@code CommentContent}
    * @param predicateSplitPoint index of the "if"
    * @return the translation produced
    */
   private static List<PostSpecification> returnStandardPattern(
       DocumentedExecutable method,
       String textToTranslate,
-      Comment comment,
+      CommentContent comment,
       int predicateSplitPoint) {
     List<PostSpecification> specs = new ArrayList<>();
 
@@ -436,7 +436,7 @@ public class ReturnTranslator {
       }
       if (translation == null) {
         final List<PropositionSeries> extractedPropositions =
-            Parser.parse(new Comment(comment), method);
+            Parser.parse(new CommentContent(comment), method);
         final List<SemanticGraph> semanticGraphs =
             extractedPropositions
                 .stream()
@@ -546,7 +546,8 @@ public class ReturnTranslator {
    * @return a String translation if any, null otherwise
    */
   private static String tryCodeElementMatch(DocumentedExecutable method, String text) {
-    final List<PropositionSeries> extractedPropositions = Parser.parse(new Comment(text), method);
+    final List<PropositionSeries> extractedPropositions =
+        Parser.parse(new CommentContent(text), method);
     final List<SemanticGraph> semanticGraphs =
         extractedPropositions.stream().map(PropositionSeries::getSemanticGraph).collect(toList());
 
