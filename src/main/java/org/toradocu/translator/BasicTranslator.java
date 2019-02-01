@@ -203,7 +203,7 @@ public class BasicTranslator {
     if (container.isEmpty()) {
       // Subject match
       // FIXME but why?? We did the match in the calling method??
-      subjectMatches = matcher.subjectMatch(p.getSubject().getSubject(), method);
+      // subjectMatches = matcher.subjectMatch(p.getSubject().getSubject(), method);
       if (subjectMatches.isEmpty()) {
         //        ConditionTranslator.log.debug("Failed subject translation for: " + p);
         return LOOP_RETURN;

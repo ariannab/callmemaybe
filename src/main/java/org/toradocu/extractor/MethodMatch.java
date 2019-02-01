@@ -16,7 +16,11 @@ public class MethodMatch {
     this.equivalence = equivalence;
     this.similarity = similarity;
     this.arguments = arguments;
-    this.simpleName = method.substring(0, method.indexOf("("));
+    if (method.contains("(")) {
+      this.simpleName = method.substring(0, method.indexOf("("));
+    } else {
+      this.simpleName = method;
+    }
   }
 
   public String getMethodSignature() {
