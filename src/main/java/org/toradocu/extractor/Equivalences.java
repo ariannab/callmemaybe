@@ -1,5 +1,6 @@
 package org.toradocu.extractor;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -34,7 +35,7 @@ public class Equivalences {
         return methodMatch;
       }
     }
-    return null;
+    return new MethodMatch("", false, new ArrayList<>());
   }
 
   /**
@@ -76,9 +77,9 @@ public class Equivalences {
               || Pattern.compile("\\b" + "except" + "\\b", Pattern.CASE_INSENSITIVE)
                   .matcher(comment)
                   .find()) {
-            return new MethodMatch(methodMatch.group(group), false, true, arguments);
+            return new MethodMatch(methodMatch.group(group), true, arguments);
           } else {
-            return new MethodMatch(methodMatch.group(group), true, false, arguments);
+            return new MethodMatch(methodMatch.group(group), false, arguments);
           }
         }
       }
@@ -87,7 +88,7 @@ public class Equivalences {
   }
 
   private static List<String> extractArguments(Matcher methodMatch) {
-    if (methodMatch.group(2) != null && !methodMatch.group(2).isEmpty()) {
+    if (methodMatch.groupCount() > 1 && !methodMatch.group(2).isEmpty()) {
       // the method takes arguments
       String[] args = methodMatch.group(2).split(",");
       for (int i = 0; i < args.length; i++) {

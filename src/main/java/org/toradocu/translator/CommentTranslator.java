@@ -3,6 +3,7 @@ package org.toradocu.translator;
 import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,7 @@ import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 import org.toradocu.extractor.FreeText;
+import org.toradocu.extractor.MethodMatch;
 import org.toradocu.extractor.ParamTag;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.extractor.ThrowsTag;
@@ -37,7 +39,7 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code freeTextComment}
    * @return a specification
    */
-  public static String translate(FreeText freeTextComment, DocumentedExecutable excMember) {
+  public static MethodMatch translate(FreeText freeTextComment, DocumentedExecutable excMember) {
     PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new FreeTextTranslator().translate(freeTextComment, excMember);
@@ -101,8 +103,6 @@ public class CommentTranslator {
           new Identifiers(paramNames, Configuration.RECEIVER, Configuration.RETURN_VALUE);
       OperationSpecification spec = new OperationSpecification(operation, identifiers);
 
-      String equivalenceSpecifcation = CommentTranslator.translate(member.freeText(), member);
-
       List<PreSpecification> preSpecifications = new ArrayList<>();
       for (ParamTag paramTag : member.paramTags()) {
         preSpecifications.add(CommentTranslator.translate(paramTag, member));
@@ -144,5 +144,15 @@ public class CommentTranslator {
       condition = condition.replace("args[" + index + "]", paramName);
     }
     return condition;
+  }
+
+  public static Map<DocumentedExecutable, MethodMatch> createCrossOracles(
+      List<DocumentedExecutable> members) {
+    Map<DocumentedExecutable, MethodMatch> specs = new HashMap<>();
+    for (DocumentedExecutable member : members) {
+      specs.put(member, CommentTranslator.translate(member.freeText(), member));
+    }
+
+    return specs;
   }
 }

@@ -4,7 +4,9 @@ import java.io.File;
 import java.lang.reflect.Modifier;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.mdkt.compiler.CompilationException;
@@ -28,23 +30,23 @@ public class ComplianceChecks {
    * compilation was successful.
    *
    * @param method documented executable the guard belongs to
-   * @param guard the guard which condition must be checked for compliance
+   * @param condition the guard which condition must be checked for compliance
    * @return true if the condition was compilable, false otherwise
    */
-  public static boolean isSpecCompilable(DocumentedExecutable method, Guard guard) {
+  public static boolean isSpecCompilable(DocumentedExecutable method, String condition) {
     if (Modifier.isPrivate(method.getDeclaringClass().getModifiers())) {
       // if the target class is private we cannot apply compliance check.
       return true;
     }
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
-    addConditionCodeInformation(method, guard.getConditionText(), sourceCodeBuilder);
+    addConditionCodeInformation(method, condition, sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
     } catch (CompilationException e) {
       log.info(
           "The following specification was generated but discarded:\n"
-              + guard.getConditionText()
+              + condition
               + "\n"
               + e.getLocalizedMessage()
               + "\n");
@@ -73,10 +75,7 @@ public class ComplianceChecks {
       return true;
     }
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
-    String methodReturnType = method.getReturnType().getType().getTypeName();
-    if (!methodReturnType.equals("void")) {
-      sourceCodeBuilder.addArgument(methodReturnType, Configuration.RETURN_VALUE);
-    }
+    includeMethodResult(method, sourceCodeBuilder);
     addConditionCodeInformation(method, guard.getConditionText(), sourceCodeBuilder);
     addConditionCodeInformation(method, property.getConditionText(), sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
@@ -98,6 +97,73 @@ public class ComplianceChecks {
       e.printStackTrace();
     }
     return true;
+  }
+
+  /**
+   * Compilation check for equivalence specifications
+   *
+   * @param method the method the equivalence comment belongs to
+   * @param condition the condition to compile
+   * @return whether the condition compiles or not
+   */
+  public static boolean isEqSpecCompilable(DocumentedExecutable method, String condition) {
+    if (Modifier.isPrivate(method.getDeclaringClass().getModifiers())) {
+      // if the target class is private we cannot apply compliance check.
+      return true;
+    }
+    SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
+    includeMethodResult(method, sourceCodeBuilder);
+    addConditionCodeInformation(method, condition, sourceCodeBuilder);
+    String sourceCode = sourceCodeBuilder.buildSource();
+    try {
+      compileSource(sourceCode);
+    } catch (CompilationException e) {
+      log.info(
+          "The following specification was generated but discarded:\n"
+              + condition
+              + "\n"
+              + e.getLocalizedMessage()
+              + "\n"
+              + "Are you trying to compare different result types?"
+              + "\n");
+      return false;
+    } catch (ClassNotFoundException e) {
+      // ignore
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return true;
+  }
+
+  /**
+   * Includes in the source code builder information needed to compile a condition involving the
+   * method result.
+   *
+   * @param method the method the condition is about
+   * @param sourceCodeBuilder the source code builder to enrich with the information
+   */
+  private static void includeMethodResult(
+      DocumentedExecutable method, SourceCodeBuilder sourceCodeBuilder) {
+    String methodReturnType = method.getReturnType().getType().getTypeName();
+    if (!methodReturnType.equals("void")) {
+      sourceCodeBuilder.addArgument(methodReturnType, Configuration.RETURN_VALUE);
+      if (!primitiveTypes().contains(methodReturnType)) {
+        sourceCodeBuilder.addImport(methodReturnType);
+      }
+    }
+  }
+
+  public static Set primitiveTypes() {
+    Set<String> primitives = new HashSet<>();
+    primitives.add("int");
+    primitives.add("boolean");
+    primitives.add("char");
+    primitives.add("byte");
+    primitives.add("short");
+    primitives.add("long");
+    primitives.add("float");
+    primitives.add("double");
+    return primitives;
   }
 
   /**

@@ -13,6 +13,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedType;
 import org.toradocu.extractor.JavadocExtractor;
+import org.toradocu.extractor.MethodMatch;
 import org.toradocu.extractor.ParameterNotFoundException;
 import org.toradocu.generator.OracleGenerator;
 import org.toradocu.output.util.JsonOutput;
@@ -138,17 +140,40 @@ public class Toradocu {
     SemanticMatcher.setEnabled(configuration.isSemanticMatcherEnabled());
 
     if (configuration.isConditionTranslationEnabled()) {
-      Map<DocumentedExecutable, OperationSpecification> specifications;
+      Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
 
+      List<JsonOutput> jsonOutputs = new ArrayList<>();
       // Use @tComment or the standard condition translator to translate comments.
-      if (configuration.useTComment()) {
+      if (configuration.mustGenerateCrossOracles()) {
+        Map<DocumentedExecutable, MethodMatch> equivalenceSpecs =
+            CommentTranslator.createCrossOracles(members);
+        // TODO after in JsonOutput there is support for equivalences, create outputs as below and
+        // TODO compare them in tests (look at method compare() in PrecisionRecallTest)
+
+        try (BufferedWriter writer =
+            Files.newBufferedWriter(
+                configuration.getConditionTranslatorOutput().toPath(), StandardCharsets.UTF_8)) {
+
+          for (DocumentedExecutable executable : equivalenceSpecs.keySet()) {
+            jsonOutputs.add(new JsonOutput(executable, equivalenceSpecs.get(executable)));
+          }
+          String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
+          writer.write(jsonOutput);
+
+          System.out.println("Condition translator output:\n" + jsonOutput);
+        } catch (Exception e) {
+          log.error(
+              "Unable to write the output on file "
+                  + configuration.getConditionTranslatorOutput().getAbsolutePath(),
+              e);
+        }
+      } else if (configuration.useTComment()) {
         specifications = tcomment.TcommentKt.translate(members);
       } else {
         specifications = CommentTranslator.createSpecifications(members);
       }
 
       // Output the result on a file or on the standard output, if silent mode is disabled.
-      List<JsonOutput> jsonOutputs = new ArrayList<>();
       if (!configuration.isSilent() || !specifications.isEmpty()) {
         if (configuration.getConditionTranslatorOutput() != null) {
           try (BufferedWriter writer =

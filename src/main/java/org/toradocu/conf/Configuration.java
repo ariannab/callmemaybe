@@ -174,6 +174,12 @@ public enum Configuration {
   /** Aspect to instrument JUnit test cases. */
   private static final String JUNIT_TC_ASPECT = "TestCaseAspect.java";
 
+  @Parameter(
+      names = "--cross-oracles",
+      description = "Enable/disable the generation of cross-checking oracles",
+      arity = 1)
+  private boolean generateCrossOracles = false;
+
   /**
    * Initializes the configuration based on the given command-line options. This method must be
    * called before Javadoc options or the temporary Javadoc output directory are retrieved.
@@ -375,5 +381,9 @@ public enum Configuration {
    */
   public boolean isSilent() {
     return silent;
+  }
+
+  public boolean mustGenerateCrossOracles() {
+    return generateCrossOracles;
   }
 }

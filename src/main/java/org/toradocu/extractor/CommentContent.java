@@ -55,13 +55,13 @@ public final class CommentContent {
   }
 
   private void manageLinks(String linkPattern) {
-    Matcher matcher = Pattern.compile(linkPattern).matcher(text);
+    Matcher matcher = Pattern.compile(linkPattern).matcher(this.text);
     while (matcher.find()) {
       if (matcher.group(2) != null) {
-        this.text = this.text.replace(matcher.group(1) + " ", "");
-        manageLinks(linkPattern);
+        text = text.replace(matcher.group(0), matcher.group(2));
+      } else {
+        this.text = this.text.replace(matcher.group(0), matcher.group(1));
       }
-      this.text = this.text.replace(matcher.group(0), matcher.group(1));
     }
   }
 

@@ -11,19 +11,27 @@ import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.Equivalences;
 import org.toradocu.extractor.FreeText;
 import org.toradocu.extractor.MethodMatch;
+import org.toradocu.util.ComplianceChecks;
 
 public class FreeTextTranslator {
 
-  public String translate(FreeText freeTextComment, DocumentedExecutable excMember) {
+  /**
+   * Translates a free text comment. For now only supports equivalences.
+   *
+   * @param freeTextComment an object representing a free text comment
+   * @param excMember the executable member the comment belongs to
+   * @return the translation, null if failed
+   */
+  public MethodMatch translate(FreeText freeTextComment, DocumentedExecutable excMember) {
     String commentText = freeTextComment.getComment().getText();
     String[] sentences = commentText.split("\\. ");
     Set<String> conditions = new LinkedHashSet<>();
-    String oracle = "";
+    MethodMatch equivalenceMatch = null;
 
     for (String sentence : sentences) {
       // Verify comment contains equivalence declaration...
-      MethodMatch equivalenceMatch = Equivalences.getEquivalentOrSimilarMethod(sentence);
-      if (equivalenceMatch != null) {
+      equivalenceMatch = Equivalences.getEquivalentOrSimilarMethod(sentence);
+      if (!equivalenceMatch.getMethodSignature().isEmpty()) {
         if (equivalenceMatch.isSimilarity()) {
           String condition = extractCondition(sentence);
           if (condition != null) {
@@ -33,48 +41,57 @@ public class FreeTextTranslator {
               BasicTranslator.translate(propositions, excMember, sentence);
               conditions.add(propositions.getTranslation());
 
-              // TODO 1. substitute implicit subject with methodResultID
-              // TODO 2. substitute method signature with smart placeholder (is it necessary? Do we
-              // need
-              // to
-              // TODO produce a semantic graph? I'd say: YES IF we need to match a parameter. BUT
-              // YET...
-              // TODO    ...why not using the subject match directly...???)
-
               if (!conditions.isEmpty()) {
-                // For 1. pattern I found so far:
-                String pattern = "(This|this) (is|method)";
-                // If no pattern like this, the sentence starts directly as "Equivalent to..." and
-                // methodResultID goes as head
-                java.util.regex.Matcher isPattern = Pattern.compile(pattern).matcher(commentText);
-                if (isPattern.find()) {
-                  // TODO do we even care about substitution with Configuration.RETURN_VALUE here?
-                  //            String implicitSubject = isPattern.group(1);
-                  //            commentText = commentText.replace(implicitSubject,
-                  // Configuration.RETURN_VALUE);
-                  //          }
-                  Matcher matcher = new Matcher();
-                  Set<CodeElement<?>> matchingCodeEelem =
-                      matcher.subjectMatch(equivalenceMatch.getSimpleName(), excMember);
-                  if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
-                    List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
-                    // FIXME You have to match arguments!
-                    Match theOne = matcher.checkArgsAndPickBestMatch(excMember, "", sortedCodeElem);
-                    oracle =
-                        Configuration.RETURN_VALUE + ".equals(" + theOne.getBaseExpression() + ")";
-                  }
-                }
+                matchEquivalentMethod(excMember, equivalenceMatch);
               }
             }
           }
+        } else {
+          // Exact equivalence
+          matchEquivalentMethod(excMember, equivalenceMatch);
         }
       }
     }
 
-    // TODO probably we don't want to return a String here, this is just a stub
-    return oracle;
+    return equivalenceMatch;
   }
 
+  /**
+   * Finds the right code element match for the signature involved in the equivalence comment.
+   *
+   * @param excMember the executable member the comment belongs to
+   * @param equivalenceMatch the final match, null if nothing found
+   */
+  private void matchEquivalentMethod(DocumentedExecutable excMember, MethodMatch equivalenceMatch) {
+    String oracle;
+    Matcher matcher = new Matcher();
+    String methodName = equivalenceMatch.getSimpleName();
+    Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(methodName, excMember);
+
+    if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
+      List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
+
+      Match theOne = matcher.reverseBestArgsTypeMatch(equivalenceMatch, excMember, sortedCodeElem);
+      if (theOne != null) {
+        if (ComplianceChecks.primitiveTypes()
+            .contains(excMember.getReturnType().getType().getTypeName())) {
+          oracle = Configuration.RETURN_VALUE + "==" + theOne.getBaseExpression();
+        } else {
+          oracle = Configuration.RETURN_VALUE + ".equals(" + theOne.getBaseExpression() + ")";
+        }
+        if (ComplianceChecks.isEqSpecCompilable(excMember, oracle)) {
+          equivalenceMatch.setOracle(oracle);
+        }
+      }
+    }
+  }
+
+  /**
+   * Given a text, extracts a condition, if any
+   *
+   * @param text the text that may contain a condition
+   * @return the extracted condition, if any
+   */
   private String extractCondition(String text) {
     java.util.regex.Matcher matchIf =
         Pattern.compile("\\b" + "if" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
@@ -89,7 +106,7 @@ public class FreeTextTranslator {
       beginIndex = matchWhen.start();
     }
 
-    // TODO endIndex is the index of the SUBSEQUENT (to the if or when) comma or dot
+    // endIndex is the index of the SUBSEQUENT (to the if or when) comma or dot
     endIndex = text.indexOf(",");
     if (endIndex > beginIndex) {
       return text.substring(beginIndex, endIndex);

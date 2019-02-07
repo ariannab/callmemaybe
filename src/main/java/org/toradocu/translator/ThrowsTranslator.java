@@ -18,7 +18,7 @@ public class ThrowsTranslator {
     final Guard guard = new Guard(tag.getComment().getText(), commentTranslation);
     final String exceptionName = tag.getException().getName();
 
-    if (commentTranslation.isEmpty() || !isSpecCompilable(excMember, guard)) {
+    if (commentTranslation.isEmpty() || !isSpecCompilable(excMember, guard.getConditionText())) {
       return new ThrowsSpecification(
           tag.toString(), new Guard(tag.getComment().getText(), ""), exceptionName);
     }

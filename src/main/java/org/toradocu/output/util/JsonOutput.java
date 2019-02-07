@@ -22,6 +22,38 @@ public class JsonOutput {
   public List<ParamTagOutput> paramTags;
   public ReturnTagOutput returnTag;
   public List<ThrowsTagOutput> throwsTags;
+  public EquivalenceOutput equivalence;
+
+  // TODO add a constructor as this one but with eq specs instead of specification!
+
+  public JsonOutput(DocumentedExecutable member, MethodMatch specification) {
+    // TODO translate the executable member to a serializable format
+    this.signature = member.getSignature();
+    this.name = member.getName();
+    this.containingClass =
+        new org.toradocu.output.util.Type(
+            member.getDeclaringClass().getName(),
+            member.getDeclaringClass().getSimpleName(),
+            member.getDeclaringClass().isArray());
+    this.targetClass = member.getDeclaringClass().getName();
+    this.isVarArgs = member.isVarArgs();
+
+    String returnTypeName = member.getExecutable().getAnnotatedReturnType().getType().getTypeName();
+    this.returnType =
+        new org.toradocu.output.util.Type(
+            returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
+
+    createParameters(member);
+    createEquivalences(member, specification);
+  }
+
+  private void createEquivalences(DocumentedExecutable member, MethodMatch specification) {
+    this.equivalence =
+        new EquivalenceOutput(
+            member.getFreeText().getComment().getText(),
+            member.getFreeText().getKind().toString(),
+            specification.getOracle());
+  }
 
   public JsonOutput(DocumentedExecutable member, OperationSpecification specification) {
     // TODO translate the executable member to a serializable format

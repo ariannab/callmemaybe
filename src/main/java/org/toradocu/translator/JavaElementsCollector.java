@@ -59,7 +59,7 @@ public class JavaElementsCollector {
       methods.remove(method);
     }
     List<Class<?>> inScopeTypes = collectInScopeTypes(documentedExecutable);
-    methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
+    // methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
 
     List<CodeElement<?>> codeElements = new ArrayList<>();
     for (Method method : methods) {

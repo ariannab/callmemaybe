@@ -102,7 +102,6 @@ public final class JavadocExtractor {
           createTags(classesInPackage, sourceCallable, parameters, qualifiedClassName);
 
       final Optional<JavadocComment> javadocComment = sourceCallable.getJavadocComment();
-      final Optional<Javadoc> javadoc = sourceCallable.getJavadoc();
       String freeTextComment = "";
       String parsedFreeText = "";
       if (javadocComment.isPresent()) {

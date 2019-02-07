@@ -17,7 +17,7 @@ public class ParamTranslator {
 
     final Guard guard = new Guard(tag.getComment().getText(), commentTranslation);
 
-    if (commentTranslation.isEmpty() || !isSpecCompilable(excMember, guard)) {
+    if (commentTranslation.isEmpty() || !isSpecCompilable(excMember, guard.getConditionText())) {
       return new PreSpecification(tag.toString(), new Guard(tag.getComment().getText(), ""));
     }
 

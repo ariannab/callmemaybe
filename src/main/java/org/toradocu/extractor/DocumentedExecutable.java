@@ -211,6 +211,10 @@ public final class DocumentedExecutable {
     return tags;
   }
 
+  public FreeText getFreeText() {
+    return freeText;
+  }
+
   /**
    * Returns true if this method takes a variable number of arguments, false otherwise.
    *
