@@ -1,0 +1,570 @@
+[
+  {
+    "signature": "headSetImpl(C toElement, boolean inclusive)",
+    "name": "headSetImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "toElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intersection(com.google.common.collect.ContiguousSet<C> other)",
+    "name": "intersection",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.ContiguousSet",
+          "name": "ContiguousSet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the set of values that are contained in both this set and the other. <p>This method should always be used instead of Sets#intersection for ContiguousSet instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range(com.google.common.collect.BoundType lowerBoundType, com.google.common.collect.BoundType upperBoundType)",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Range<C>",
+      "name": "com.google.common.collect.Range<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.BoundType",
+          "name": "BoundType",
+          "isArray": false
+        },
+        "name": "lowerBoundType"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.BoundType",
+          "name": "BoundType",
+          "isArray": false
+        },
+        "name": "upperBoundType"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the minimal range with the given boundary types for which all values in this set are {@linkplain Range#contains(Comparable) contained} within the range. <p>Note that this method will return ranges with unbounded endpoints if BoundType#OPEN is requested for a domain minimum or maximum. For example, if set was created from the range [1..Integer.MAX_VALUE] then set.range(CLOSED, OPEN) must return [1..∞).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range()",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Range<C>",
+      "name": "com.google.common.collect.Range<C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a range, closed on both ends, whose endpoints are the minimum and maximum values contained in this set. This is equivalent to range(CLOSED, CLOSED).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.range(BoundType.CLOSED, BoundType.CLOSED))"
+    }
+  },
+  {
+    "signature": "subSet(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)",
+    "name": "subSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "fromElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fromInclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "toElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "toInclusive"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.collect.ContiguousSet(com.google.common.collect.DiscreteDomain<C> domain)",
+    "name": "com.google.common.collect.ContiguousSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.DiscreteDomain",
+          "name": "DiscreteDomain",
+          "isArray": false
+        },
+        "name": "domain"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subSet(C fromElement, C toElement)",
+    "name": "subSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "fromElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "toElement"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailSet(C fromElement)",
+    "name": "tailSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "fromElement"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailSetImpl(C fromElement, boolean inclusive)",
+    "name": "tailSetImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "fromElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "headSet(C toElement, boolean inclusive)",
+    "name": "headSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "toElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "builder()",
+    "name": "builder",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSortedSet$Builder<E>",
+      "name": "com.google.common.collect.ImmutableSortedSet$Builder<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Not supported. ContiguousSet instances are constructed with create. This method exists only to hide ImmutableSet#builder from consumers of ContiguousSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "create(com.google.common.collect.Range<C> range, com.google.common.collect.DiscreteDomain<C> domain)",
+    "name": "create",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "range"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.DiscreteDomain",
+          "name": "DiscreteDomain",
+          "isArray": false
+        },
+        "name": "domain"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a ContiguousSet containing the same values in the given domain {@linkplain Range#contains contained} by the range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailSet(C fromElement, boolean inclusive)",
+    "name": "tailSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "fromElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)",
+    "name": "subSetImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "fromElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fromInclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "toElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "toInclusive"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "headSet(C toElement)",
+    "name": "headSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet",
+      "name": "ContiguousSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ContiguousSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ContiguousSet<C>",
+      "name": "com.google.common.collect.ContiguousSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "toElement"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

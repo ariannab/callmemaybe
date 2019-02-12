@@ -1,0 +1,360 @@
+[
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a readable string representation of this range map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns asMapOfRanges().hashCode().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all associations from this range map (optional operation).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "span()",
+    "name": "span",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Range<K>",
+      "name": "com.google.common.collect.Range<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the minimal range {@linkplain Range#encloses(Range) enclosing} the ranges in this RangeMap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEntry(K key)",
+    "name": "getEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<com.google.common.collect.Range<K>, V>",
+      "name": "java.util.Map$Entry<com.google.common.collect.Range<K>, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the range containing this key and its associated value, if such a range is present in the range map, or null otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asDescendingMapOfRanges()",
+    "name": "asDescendingMapOfRanges",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<com.google.common.collect.Range<K>, V>",
+      "name": "java.util.Map<com.google.common.collect.Range<K>, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view of this range map as an unmodifiable Map<Range<K>, V>. Modifications to this range map are guaranteed to read through to the returned Map. <p>The returned Map iterates over entries in descending order of the bounds of the Range entries. <p>It is guaranteed that no empty ranges will be in the returned Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(com.google.common.collect.RangeMap<K, V> rangeMap)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.RangeMap",
+          "name": "RangeMap",
+          "isArray": false
+        },
+        "name": "rangeMap"
+      }
+    ],
+    "equivalence": {
+      "comment": "Puts all the associations from rangeMap into this range map (optional operation).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(K key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the value associated with the specified key, or null if there is no such value. <p>Specifically, if any range in this range map contains the specified key, the value associated with that range is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asMapOfRanges()",
+    "name": "asMapOfRanges",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<com.google.common.collect.Range<K>, V>",
+      "name": "java.util.Map<com.google.common.collect.Range<K>, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view of this range map as an unmodifiable Map<Range<K>, V>. Modifications to this range map are guaranteed to read through to the returned Map. <p>The returned Map iterates over entries in ascending order of the bounds of the Range entries. <p>It is guaranteed that no empty ranges will be in the returned Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subRangeMap(com.google.common.collect.Range<K> range)",
+    "name": "subRangeMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.RangeMap<K, V>",
+      "name": "com.google.common.collect.RangeMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "range"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of the part of this range map that intersects with range. <p>For example, if rangeMap had the entries [1, 5] => \"foo\", (6, 8) => \"bar\", (10, \\u2025) => \"baz\" then rangeMap.subRangeMap(Range.open(3, 12)) would return a range map with the entries (3, 5) => \"foo\", (6, 8) => \"bar\", (10, 12) => \"baz\". <p>The returned range map supports all optional operations that this range map supports, except for asMapOfRanges().iterator().remove(). <p>The returned range map will throw an IllegalArgumentException on an attempt to insert a range not {@linkplain Range#encloses(Range) enclosed} by range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if obj is another RangeMap that has an equivalent asMapOfRanges().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(com.google.common.collect.Range<K> range)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "range"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes all associations from this range map in the specified range (optional operation). <p>If !range.contains(k), get(k) will return the same result before and after a call to remove(range). If range.contains(k), then after a call to remove(range), get(k) will return null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(com.google.common.collect.Range<K> range, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeMap",
+      "name": "RangeMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "range"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Maps a range to a specified value (optional operation). <p>Specifically, after a call to put(range, value), if range.contains(k), then get(k) will return value. <p>If range {@linkplain Range#isEmpty() is empty}, then this is a no-op.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

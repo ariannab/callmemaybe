@@ -1,0 +1,489 @@
+[
+  {
+    "signature": "asDescendingSetOfRanges()",
+    "name": "asDescendingSetOfRanges",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Range<C>>",
+      "name": "java.util.Set<com.google.common.collect.Range<C>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a descending view of the {@linkplain Range#isConnected disconnected} ranges that make up this range set. The returned set may be empty. The iterators returned by its Iterable#iterator method return the ranges in decreasing order of lower bound (equivalently, of upper bound).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "complement()",
+    "name": "complement",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.RangeSet<C>",
+      "name": "com.google.common.collect.RangeSet<C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view of the complement of this RangeSet. <p>The returned view supports the add operation if this RangeSet supports remove, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(com.google.common.collect.Range<C> range)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "range"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes the specified range from this RangeSet (optional operation). After this operation, if range.contains(c), this.contains(c) will return false. <p>If range is empty, this is a no-op.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if this range set contains no ranges.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enclosesAll(com.google.common.collect.RangeSet<C> other)",
+    "name": "enclosesAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.RangeSet",
+          "name": "RangeSet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if for each member range in other there exists a member range in this range set which {@linkplain Range#encloses encloses} it. It follows that this.contains(value) whenever other.contains(value). Returns true if other is empty. <p>This is equivalent to checking if this range set encloses each of the ranges in other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(com.google.common.collect.RangeSet<C> other)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.RangeSet",
+          "name": "RangeSet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes all of the ranges from the specified range set from this range set (optional operation). After this operation, if other.contains(c), this.contains(c) will return false. <p>This is equivalent to calling remove on each of the ranges in other in turn.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a readable string representation of this range set. For example, if this RangeSet consisted of Range.closed(1, 3) and Range.greaterThan(4), this might return \" [1‥3](4‥+∞)\"}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "span()",
+    "name": "span",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Range<C>",
+      "name": "com.google.common.collect.Range<C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the minimal range which {@linkplain Range#encloses(Range) encloses} all ranges in this range set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(C value)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Determines whether any of this range set's member ranges contains value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rangeContaining(C value)",
+    "name": "rangeContaining",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Range<C>",
+      "name": "com.google.common.collect.Range<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the unique range from this range set that {@linkplain Range#contains contains} value, or null if this range set does not contain value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(com.google.common.collect.RangeSet<C> other)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.RangeSet",
+          "name": "RangeSet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds all of the ranges from the specified range set to this range set (optional operation). After this operation, this range set is the minimal range set that {@linkplain #enclosesAll(RangeSet) encloses} both the original range set and other. <p>This is equivalent to calling add on each of the ranges in other in turn.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns asRanges().hashCode().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asRanges()",
+    "name": "asRanges",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Range<C>>",
+      "name": "java.util.Set<com.google.common.collect.Range<C>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view of the {@linkplain Range#isConnected disconnected} ranges that make up this range set. The returned set may be empty. The iterators returned by its Iterable#iterator method return the ranges in increasing order of lower bound (equivalently, of upper bound).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(com.google.common.collect.Range<C> range)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "range"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds the specified range to this RangeSet (optional operation). That is, for equal range sets a and b, the result of a.add(range) is that a will be the minimal range set for which both a.enclosesAll(b) and a.encloses(range). <p>Note that range will be {@linkplain Range#span(Range) coalesced} with any ranges in the range set that are {@linkplain Range#isConnected(Range) connected} with it. Moreover, if range is empty, this is a no-op.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encloses(com.google.common.collect.Range<C> otherRange)",
+    "name": "encloses",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "otherRange"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if there exists a member range in this range set which {@linkplain Range#encloses encloses} the specified range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if obj is another RangeSet that contains the same ranges according to Range#equals(Object).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all ranges from this RangeSet (optional operation). After this operation, this.contains(c) will return false for all c. <p>This is equivalent to remove(Range.all()).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subRangeSet(com.google.common.collect.Range<C> view)",
+    "name": "subRangeSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.RangeSet",
+      "name": "RangeSet",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.RangeSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.RangeSet<C>",
+      "name": "com.google.common.collect.RangeSet<C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Range",
+          "name": "Range",
+          "isArray": false
+        },
+        "name": "view"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of the intersection of this RangeSet with the specified range. <p>The returned view supports all optional operations supported by this RangeSet, with the caveat that an IllegalArgumentException is thrown on an attempt to {@linkplain #add(Range) add} any range not {@linkplain Range#encloses(Range) enclosed} by view.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,481 @@
+[
+  {
+    "signature": "putDouble(double d)",
+    "name": "putDouble",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to putLong(Double.doubleToRawLongBits(d)).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.putLong(Double.doubleToRawLongBits(args[0]))"
+    }
+  },
+  {
+    "signature": "putObject(T instance, com.google.common.hash.Funnel<? super T> funnel)",
+    "name": "putObject",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.hash.Funnel",
+          "name": "Funnel",
+          "isArray": false
+        },
+        "name": "funnel"
+      }
+    ],
+    "equivalence": {
+      "comment": "A simple convenience for funnel.funnel(object, this).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putFloat(float f)",
+    "name": "putFloat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "f"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to putInt(Float.floatToRawIntBits(f)).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.putInt(Float.floatToRawIntBits(args[0]))"
+    }
+  },
+  {
+    "signature": "putBytes(byte[] bytes)",
+    "name": "putBytes",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putShort(short s)",
+    "name": "putShort",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "short",
+          "name": "short",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putLong(long l)",
+    "name": "putLong",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} @deprecated This returns Object#hashCode(); you almost certainly mean to call hash().asInt().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putByte(byte b)",
+    "name": "putByte",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putBoolean(boolean b)",
+    "name": "putBoolean",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to putByte(b ? (byte) 1 : (byte) 0).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.putByte(args[0] ? (byte) 1 : (byte) 0)"
+    }
+  },
+  {
+    "signature": "putUnencodedChars(java.lang.CharSequence charSequence)",
+    "name": "putUnencodedChars",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "charSequence"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to processing each char value in the CharSequence, in order. The input must not be updated while this method is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putChar(char c)",
+    "name": "putChar",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putBytes(byte[] bytes, int off, int len)",
+    "name": "putBytes",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putInt(int i)",
+    "name": "putInt",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putString(java.lang.CharSequence charSequence, java.nio.charset.Charset charset)",
+    "name": "putString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "com.google.common.hash.Hasher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "charSequence"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.charset.Charset",
+          "name": "Charset",
+          "isArray": false
+        },
+        "name": "charset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to putBytes(charSequence.toString().getBytes(charset)).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.putBytes(charSequence.toString().getBytes(args[0]))"
+    }
+  },
+  {
+    "signature": "hash()",
+    "name": "hash",
+    "containingClass": {
+      "qualifiedName": "com.google.common.hash.Hasher",
+      "name": "Hasher",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.hash.Hasher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.hash.HashCode",
+      "name": "com.google.common.hash.HashCode",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Computes a hash code based on the data that have been provided to this hasher. The result is unspecified if this method is called more than once on the same instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

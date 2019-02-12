@@ -1,0 +1,257 @@
+[
+  {
+    "signature": "binarySearch(java.util.List<E> list, com.google.common.base.Function<? super E, K> keyFunction, K key, java.util.Comparator<? super K> keyComparator, com.google.common.collect.SortedLists$KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists$KeyAbsentBehavior absentBehavior)",
+    "name": "binarySearch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedLists",
+      "name": "SortedLists",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedLists",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "keyComparator"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyPresentBehavior",
+          "name": "KeyPresentBehavior",
+          "isArray": false
+        },
+        "name": "presentBehavior"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyAbsentBehavior",
+          "name": "KeyAbsentBehavior",
+          "isArray": false
+        },
+        "name": "absentBehavior"
+      }
+    ],
+    "equivalence": {
+      "comment": "Binary searches the list for the specified key, using the specified key function. <p>Equivalent to Object, Comparator, KeyPresentBehavior, KeyAbsentBehavior) using Function) Lists.transform(list, keyFunction).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "binarySearch(java.util.List<E> list, com.google.common.base.Function<? super E, K> keyFunction, K key, com.google.common.collect.SortedLists$KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists$KeyAbsentBehavior absentBehavior)",
+    "name": "binarySearch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedLists",
+      "name": "SortedLists",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedLists",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyPresentBehavior",
+          "name": "KeyPresentBehavior",
+          "isArray": false
+        },
+        "name": "presentBehavior"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyAbsentBehavior",
+          "name": "KeyAbsentBehavior",
+          "isArray": false
+        },
+        "name": "absentBehavior"
+      }
+    ],
+    "equivalence": {
+      "comment": "Binary searches the list for the specified key, using the specified key function. <p>Equivalent to Function, Object, Comparator, KeyPresentBehavior, KeyAbsentBehavior) using Ordering#natural.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "binarySearch(java.util.List<? extends E> list, E e, com.google.common.collect.SortedLists$KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists$KeyAbsentBehavior absentBehavior)",
+    "name": "binarySearch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedLists",
+      "name": "SortedLists",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedLists",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Comparable",
+          "name": "Comparable",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyPresentBehavior",
+          "name": "KeyPresentBehavior",
+          "isArray": false
+        },
+        "name": "presentBehavior"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyAbsentBehavior",
+          "name": "KeyAbsentBehavior",
+          "isArray": false
+        },
+        "name": "absentBehavior"
+      }
+    ],
+    "equivalence": {
+      "comment": "Searches the specified naturally ordered list for the specified object using the binary search algorithm. <p>Equivalent to Function, Object, Comparator, KeyPresentBehavior, KeyAbsentBehavior) using Ordering#natural.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "binarySearch(java.util.List<? extends E> list, E key, java.util.Comparator<? super E> comparator, com.google.common.collect.SortedLists$KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists$KeyAbsentBehavior absentBehavior)",
+    "name": "binarySearch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedLists",
+      "name": "SortedLists",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedLists",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyPresentBehavior",
+          "name": "KeyPresentBehavior",
+          "isArray": false
+        },
+        "name": "presentBehavior"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedLists$KeyAbsentBehavior",
+          "name": "KeyAbsentBehavior",
+          "isArray": false
+        },
+        "name": "absentBehavior"
+      }
+    ],
+    "equivalence": {
+      "comment": "Searches the specified list for the specified object using the binary search algorithm. The list must be sorted into ascending order according to the specified comparator (as by the Comparator) Collections.sort(List, Comparator) method), prior to making this call. If it is not sorted, the results are undefined. <p>If there are elements in the list which compare as equal to the key, the choice of KeyPresentBehavior decides which index is returned. If no elements compare as equal to the key, the choice of KeyAbsentBehavior decides which index is returned. <p>This method runs in log(n) time on random-access lists, which offer near-constant-time access to each list element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

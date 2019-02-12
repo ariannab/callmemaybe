@@ -1,0 +1,732 @@
+[
+  {
+    "signature": "indexOf(long[] array, long target)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the first appearance of the value target in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryParse(java.lang.String string)",
+    "name": "tryParse",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Long",
+      "name": "java.lang.Long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "string"
+      }
+    ],
+    "equivalence": {
+      "comment": "Parses the specified string as a signed decimal long value. The ASCII character '-' ('&#92;u002D') is recognized as the minus sign. <p>Unlike Long#parseLong(String), this method returns null instead of throwing an exception if parsing fails. Additionally, this method only accepts ASCII digits, and returns null if non-ASCII digits are present in the string. <p>Note that strings prefixed with ASCII '+' are rejected, even under JDK 7, despite the change to Long#parseLong(String) for that version.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asList(long... backingArray)",
+    "name": "asList",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.Long>",
+      "name": "java.util.List<java.lang.Long>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "backingArray"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fixed-size list backed by the specified array, similar to Arrays#asList(Object[]). The list supports Object), but any attempt to set a value to null will result in a NullPointerException. <p>The returned list maintains the values, but not the identities, of Long objects written to or read from it. For example, whether list.get(0) == list.get(0) is true for the returned list is unspecified.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Arrays.asList(args[0]))"
+    }
+  },
+  {
+    "signature": "tryParse(java.lang.String string, int radix)",
+    "name": "tryParse",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Long",
+      "name": "java.lang.Long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "string"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "radix"
+      }
+    ],
+    "equivalence": {
+      "comment": "Parses the specified string as a signed long value using the specified radix. The ASCII character '-' ('&#92;u002D') is recognized as the minus sign. <p>Unlike int), this method returns null instead of throwing an exception if parsing fails. Additionally, this method only accepts ASCII digits, and returns null if non-ASCII digits are present in the string. <p>Note that strings prefixed with ASCII '+' are rejected, even under JDK 7, despite the change to int) for that version.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(long[] array, long target)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the last appearance of the value target in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(long[] array, long[] target)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the start position of the first occurrence of the specified target within array, or -1 if there is no such occurrence. <p>More formally, returns the lowest index i such that java.util.Arrays.copyOfRange(array, i, i + target.length) contains exactly the same elements as target.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromByteArray(byte[] bytes)",
+    "name": "fromByteArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the long value whose big-endian representation is stored in the first 8 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getLong(). For example, the input byte array {0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19} would yield the long value 0x1213141516171819L. <p>Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much more flexibility at little cost in readability.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(ByteBuffer.wrap(args[0]).getLong())"
+    }
+  },
+  {
+    "signature": "max(long... array)",
+    "name": "max",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the greatest value present in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(long[]... arrays)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "long[]",
+      "name": "long[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[J",
+          "name": "long[][]",
+          "isArray": true
+        },
+        "name": "arrays"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the values from each provided array combined into a single array. For example, concat(new long[] {a, b, new long[] {}, new long[] {c}} returns the array {a, b, c}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureCapacity(long[] array, int minLength, int padding)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long[]",
+      "name": "long[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minLength"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "padding"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an array containing the same values as array, but guaranteed to be of a specified minimum length. If array already has a length of at least minLength, it is returned directly. Otherwise, a new array of size minLength + padding is returned, containing the values of array, and zeroes in the remaining places.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compare(long a, long b)",
+    "name": "compare",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "comment": "Compares the two specified long values. The sign of the value returned is the same as that of ((Long) a).compareTo(b). <p>Note for Java 7 and later: this method should be treated as deprecated; use the equivalent Long#compare method instead.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Longs.compare(args[0], args[1]))"
+    }
+  },
+  {
+    "signature": "min(long... array)",
+    "name": "min",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the least value present in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stringConverter()",
+    "name": "stringConverter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Converter<java.lang.String, java.lang.Long>",
+      "name": "com.google.common.base.Converter<java.lang.String, java.lang.Long>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a serializable converter object that converts between strings and longs using Long#decode and Long#toString().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(long[] array, long target)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if target is present as an element anywhere in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toByteArray(long value)",
+    "name": "toByteArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a big-endian representation of value in an 8-element byte array; equivalent to ByteBuffer.allocate(8).putLong(value).array(). For example, the input value 0x1213141516171819L would yield the byte array {0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19}. <p>If you need to convert and concatenate several values (possibly even of different types), use a shared java.nio.ByteBuffer instance, or use com.google.common.io.ByteStreams#newDataOutput() to get a growable buffer.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(ByteBuffer.allocate(8).putLong(args[0]).array())"
+    }
+  },
+  {
+    "signature": "fromBytes(byte b1, byte b2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8)",
+    "name": "fromBytes",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b1"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b2"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b3"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b4"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b5"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b6"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b7"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b8"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the long value whose byte representation is the given 8 bytes, in big-endian order; equivalent to Longs.fromByteArray(new byte[] {b1, b2, b3, b4, b5, b6, b7, b8)}.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Longs.fromByteArray(new byte[] {args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]))"
+    }
+  },
+  {
+    "signature": "hashCode(long value)",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a hash code for value; equal to the result of invoking ((Long) value).hashCode(). <p>This method always return the value specified by Long#hashCode() in java, which might be different from ((Long) value).hashCode() in GWT because Long#hashCode() in GWT does not obey the JRE contract.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lexicographicalComparator()",
+    "name": "lexicographicalComparator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<long[]>",
+      "name": "java.util.Comparator<long[]>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a comparator that compares two long arrays lexicographically. That is, it compares, using long)), the first pair of values that follow any common prefix, or when one array is a prefix of the other, treats the shorter array as the lesser. For example, [] < [1L] < [1L, 2L] < [2L]. <p>The returned comparator is inconsistent with Object#equals(Object) (since arrays support only identity equality), but it is consistent with long[]). @see Lexicographical order article at Wikipedia.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "join(java.lang.String separator, long... array)",
+    "name": "join",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "separator"
+      },
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string containing the supplied long values separated by separator. For example, join(\"-\", 1L, 2L, 3L) returns the string \"1-2-3\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(java.util.Collection<? extends java.lang.Number> collection)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Longs",
+      "name": "Longs",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Longs",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long[]",
+      "name": "long[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "collection"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an array containing each value of collection, converted to a long value in the manner of Number#longValue. <p>Elements are copied from the argument collection as if by collection.toArray(). Calling this method is as thread-safe as calling that method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

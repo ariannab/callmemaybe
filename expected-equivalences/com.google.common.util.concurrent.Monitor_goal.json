@@ -1,0 +1,935 @@
+[
+  {
+    "signature": "enterWhenUninterruptibly(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "enterWhenUninterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor when the guard is satisfied. Blocks indefinitely.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterInterruptibly(long time, java.util.concurrent.TimeUnit unit)",
+    "name": "enterInterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor. Blocks at most the given time, and may be interrupted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "waitFor(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "waitFor",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Waits for the guard to be satisfied. Waits indefinitely, but may be interrupted. May be called only by a thread currently occupying this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasQueuedThreads()",
+    "name": "hasQueuedThreads",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns whether any threads are waiting to enter this monitor. Note that because cancellations may occur at any time, a true return does not guarantee that any other thread will ever enter this monitor. This method is designed primarily for use in monitoring of the system state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasQueuedThread(java.lang.Thread thread)",
+    "name": "hasQueuedThread",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Thread",
+          "name": "Thread",
+          "isArray": false
+        },
+        "name": "thread"
+      }
+    ],
+    "equivalence": {
+      "comment": "Queries whether the given thread is waiting to enter this monitor. Note that because cancellations may occur at any time, a true return does not guarantee that this thread will ever enter this monitor. This method is designed primarily for use in monitoring of the system state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leave()",
+    "name": "leave",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Leaves this monitor. May be called only by a thread currently occupying this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.util.concurrent.Monitor(boolean fair)",
+    "name": "com.google.common.util.concurrent.Monitor",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fair"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a monitor with the given ordering policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterWhen(com.google.common.util.concurrent.Monitor$Guard guard, long time, java.util.concurrent.TimeUnit unit)",
+    "name": "enterWhen",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor when the guard is satisfied. Blocks at most the given time, including both the time to acquire the lock and the time to wait for the guard to be satisfied, and may be interrupted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isFair()",
+    "name": "isFair",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns whether this monitor is using a fair ordering policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWaitQueueLength(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "getWaitQueueLength",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an estimate of the number of threads waiting for the given guard to become satisfied. Note that because timeouts and interrupts may occur at any time, the estimate serves only as an upper bound on the actual number of waiters. This method is designed for use in monitoring of the system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryEnter()",
+    "name": "tryEnter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Enters this monitor if it is possible to do so immediately. Does not block. <p>Note: This method disregards the fairness setting of this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "waitFor(com.google.common.util.concurrent.Monitor$Guard guard, long time, java.util.concurrent.TimeUnit unit)",
+    "name": "waitFor",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Waits for the guard to be satisfied. Waits at most the given time, and may be interrupted. May be called only by a thread currently occupying this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryEnterIf(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "tryEnterIf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor if it is possible to do so immediately and the guard is satisfied. Does not block acquiring the lock and does not wait for the guard to be satisfied. <p>Note: This method disregards the fairness setting of this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterIf(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "enterIf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor if the guard is satisfied. Blocks indefinitely acquiring the lock, but does not wait for the guard to be satisfied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterIfInterruptibly(com.google.common.util.concurrent.Monitor$Guard guard, long time, java.util.concurrent.TimeUnit unit)",
+    "name": "enterIfInterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor if the guard is satisfied. Blocks at most the given time acquiring the lock, but does not wait for the guard to be satisfied, and may be interrupted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.util.concurrent.Monitor()",
+    "name": "com.google.common.util.concurrent.Monitor",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates a monitor with a non-fair (but fast) ordering policy. Equivalent to Monitor(false).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Monitor(false))"
+    }
+  },
+  {
+    "signature": "enterInterruptibly()",
+    "name": "enterInterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Enters this monitor. Blocks indefinitely, but may be interrupted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOccupiedDepth()",
+    "name": "getOccupiedDepth",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the number of times the current thread has entered this monitor in excess of the number of times it has left. Returns 0 if the current thread is not occupying this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "waitForUninterruptibly(com.google.common.util.concurrent.Monitor$Guard guard, long time, java.util.concurrent.TimeUnit unit)",
+    "name": "waitForUninterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Waits for the guard to be satisfied. Waits at most the given time. May be called only by a thread currently occupying this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterWhenUninterruptibly(com.google.common.util.concurrent.Monitor$Guard guard, long time, java.util.concurrent.TimeUnit unit)",
+    "name": "enterWhenUninterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor when the guard is satisfied. Blocks at most the given time, including both the time to acquire the lock and the time to wait for the guard to be satisfied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enter(long time, java.util.concurrent.TimeUnit unit)",
+    "name": "enter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor. Blocks at most the given time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "waitForUninterruptibly(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "waitForUninterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Waits for the guard to be satisfied. Waits indefinitely. May be called only by a thread currently occupying this monitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enter()",
+    "name": "enter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Enters this monitor. Blocks indefinitely.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterIfInterruptibly(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "enterIfInterruptibly",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor if the guard is satisfied. Blocks indefinitely acquiring the lock, but does not wait for the guard to be satisfied, and may be interrupted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasWaiters(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "hasWaiters",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Queries whether any threads are waiting for the given guard to become satisfied. Note that because timeouts and interrupts may occur at any time, a true return does not guarantee that the guard becoming satisfied in the future will awaken any threads. This method is designed primarily for use in monitoring of the system state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterIf(com.google.common.util.concurrent.Monitor$Guard guard, long time, java.util.concurrent.TimeUnit unit)",
+    "name": "enterIf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor if the guard is satisfied. Blocks at most the given time acquiring the lock, but does not wait for the guard to be satisfied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isOccupiedByCurrentThread()",
+    "name": "isOccupiedByCurrentThread",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns whether the current thread is occupying this monitor (has entered more times than it has left).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enterWhen(com.google.common.util.concurrent.Monitor$Guard guard)",
+    "name": "enterWhen",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.Monitor$Guard",
+          "name": "Guard",
+          "isArray": false
+        },
+        "name": "guard"
+      }
+    ],
+    "equivalence": {
+      "comment": "Enters this monitor when the guard is satisfied. Blocks indefinitely, but may be interrupted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQueueLength()",
+    "name": "getQueueLength",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an estimate of the number of threads waiting to enter this monitor. The value is only an estimate because the number of threads may change dynamically while this method traverses internal data structures. This method is designed for use in monitoring of the system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isOccupied()",
+    "name": "isOccupied",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.Monitor",
+      "name": "Monitor",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.Monitor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns whether this monitor is occupied by any thread. This method is designed for use in monitoring of the system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

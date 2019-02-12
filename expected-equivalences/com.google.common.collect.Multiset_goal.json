@@ -1,0 +1,530 @@
+[
+  {
+    "signature": "add(E element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds a single occurrence of the specified element to this multiset. <p>This method refines Collection#add, which only ensures the presence of the element, to further specify that a successful call must always increment the count of the element, and the overall size of the collection, by one. <p>To both add the element and obtain the previous count of that element, use int) add(element, 1) instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>Elements that occur multiple times in the multiset will appear multiple times in this iterator, though not necessarily sequentially.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "name": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view of the contents of this multiset, grouped into Multiset.Entry instances, each providing an element of the multiset and the count of that element. This set contains exactly one entry for each distinct element in the multiset (thus it always has the same size as the elementSet). The order of the elements in the element set is unspecified. <p>The entry set is backed by the same data as the multiset, so any change to either is immediately reflected in the other. However, multiset changes may or may not be reflected in any Entry instances already retrieved from the entry set (this is implementation-dependent). Furthermore, implementations are not required to support modifications to the entry set at all, and the Entry instances themselves don't even have methods for modification. See the specific implementation class for more details on how its entry set handles modifications.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCount(E element, int count)",
+    "name": "setCount",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds or removes the necessary occurrences of an element such that the element attains the desired count.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCount(E element, int oldCount, int newCount)",
+    "name": "setCount",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "oldCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newCount"
+      }
+    ],
+    "equivalence": {
+      "comment": "Conditionally sets the count of an element to a new value, as described in int), provided that the element has the expected current count. If the current count is not oldCount, no change is made.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object object)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Compares the specified object with this multiset for equality. Returns true if the given object is also a multiset and contains equal elements with equal counts, regardless of order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "count(java.lang.Object element)",
+    "name": "count",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the number of occurrences of an element in this multiset (the count of the element). Note that for an Object#equals-based multiset, this gives the same result as Collections#frequency (which would presumably perform more poorly). <p>Note: the utility method Iterables#frequency generalizes this operation; it correctly delegates to this method when dealing with a multiset, but it can also accept any other iterable type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object element)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Determines whether this multiset contains the specified element. <p>This method refines Collection#contains to further specify that it may not throw an exception in response to element being null or of the wrong type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(java.util.Collection<?> c)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>Note: This method ignores how often any element might appear in c, and only cares whether or not an element appears at all. If you wish to remove one occurrence in this multiset for every occurrence in c, see Multiset). <p>This method refines Collection#retainAll to further specify that it may not throw an exception in response to any of elements being null or of the wrong type. @see Multisets#retainOccurrences(Multiset, Multiset).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementSet()",
+    "name": "elementSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<E>",
+      "name": "java.util.Set<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the set of distinct elements contained in this multiset. The element set is backed by the same data as the multiset, so any change to either is immediately reflected in the other. The order of the elements in the element set is unspecified. <p>If the element set supports any removal operations, these necessarily cause all occurrences of the removed element(s) to be removed from the multiset. Implementations are not expected to support the add operations, although this is possible. <p>A common use for the element set is to find the number of distinct elements in the multiset: elementSet().size().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object element)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes a single occurrence of the specified element from this multiset, if present. <p>This method refines Collection#remove to further specify that it may not throw an exception in response to element being null or of the wrong type. <p>To both remove the element and obtain the previous count of that element, use int) remove(element, 1) instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>It is recommended, though not mandatory, that this method return the result of invoking toString on the entrySet, yielding a result such as [a x 3, c, d x 2, e].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.util.Collection<?> c)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>Note: This method ignores how often any element might appear in c, and only cares whether or not an element appears at all. If you wish to remove one occurrence in this multiset for every occurrence in c, see Multiset). <p>This method refines Collection#removeAll to further specify that it may not throw an exception in response to any of elements being null or of the wrong type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E element, int occurrences)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "occurrences"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds a number of occurrences of an element to this multiset. Note that if occurrences == 1, this method has the identical effect to add(Object). This method is functionally equivalent (except in the case of overflow) to the call addAll(Collections.nCopies(element, occurrences)), which would presumably perform much more poorly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the hash code for this multiset. This is defined as the sum of ((element == null) ? 0 : element.hashCode()) ^ count(element) <p>over all distinct elements in the multiset. It follows that a multiset and its entry set always have the same hash code.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object element, int occurrences)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "occurrences"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes a number of occurrences of the specified element from this multiset. If the multiset contains fewer than this number of occurrences to begin with, all occurrences will be removed. Note that if occurrences == 1, this is functionally equivalent to the call remove(element).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsAll(java.util.Collection<?> elements)",
+    "name": "containsAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multiset",
+      "name": "Multiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this multiset contains at least one occurrence of each element in the specified collection. <p>This method refines Collection#containsAll to further specify that it may not throw an exception in response to any of elements being null or of the wrong type. <p>Note: this method does not take into account the occurrence count of an element in the two collections; it may still return true even if elements contains several occurrences of an element and this multiset contains only one. This is no different than any other collection type like List, but it may be unexpected to the user of a multiset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

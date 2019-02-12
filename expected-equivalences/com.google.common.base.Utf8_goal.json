@@ -1,0 +1,111 @@
+[
+  {
+    "signature": "encodedLength(java.lang.CharSequence sequence)",
+    "name": "encodedLength",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Utf8",
+      "name": "Utf8",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Utf8",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "sequence"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the number of bytes in the UTF-8-encoded form of sequence. For a string, this method is equivalent to string.getBytes(UTF_8).length, but is more efficient in both time and space.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isWellFormed(byte[] bytes, int off, int len)",
+    "name": "isWellFormed",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Utf8",
+      "name": "Utf8",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Utf8",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns whether the given byte array slice is a well-formed UTF-8 byte sequence, as defined by isWellFormed(byte[]). Note that this can be false even when isWellFormed(bytes) is true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isWellFormed(byte[] bytes)",
+    "name": "isWellFormed",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Utf8",
+      "name": "Utf8",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Utf8",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if bytes is a well-formed UTF-8 byte sequence according to Unicode 6.0. Note that this is a stronger criterion than simply whether the bytes can be decoded. For example, some versions of the JDK decoder will accept \"non-shortest form\" byte sequences, but encoding never reproduces these. Such byte sequences are not considered well-formed. <p>This method returns true if and only if Arrays.equals(bytes, new String(bytes, UTF_8).getBytes(UTF_8)) does, but is more efficient in both time and space.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

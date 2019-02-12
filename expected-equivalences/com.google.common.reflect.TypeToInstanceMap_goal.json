@@ -1,0 +1,144 @@
+[
+  {
+    "signature": "putInstance(com.google.common.reflect.TypeToken<T> type, T value)",
+    "name": "putInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.common.reflect.TypeToInstanceMap",
+      "name": "TypeToInstanceMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.reflect.TypeToInstanceMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.reflect.TypeToken",
+          "name": "TypeToken",
+          "isArray": false
+        },
+        "name": "type"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Maps the specified type to the specified value. Does not associate this value with any of the type's supertypes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putInstance(java.lang.Class<T> type, T value)",
+    "name": "putInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.common.reflect.TypeToInstanceMap",
+      "name": "TypeToInstanceMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.reflect.TypeToInstanceMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Maps the specified class to the specified value. Does not associate this value with any of the class's supertypes. <p>putInstance(Foo.class, foo) is equivalent to putInstance(TypeToken.of(Foo.class), foo).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstance(java.lang.Class<T> type)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.common.reflect.TypeToInstanceMap",
+      "name": "TypeToInstanceMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.reflect.TypeToInstanceMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the value the specified class is mapped to, or null if no entry for this class is present. This will only return a value that was bound to this specific class, not a value that may have been bound to a subtype. <p>getInstance(Foo.class) is equivalent to getInstance(TypeToken.of(Foo.class)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstance(com.google.common.reflect.TypeToken<T> type)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.common.reflect.TypeToInstanceMap",
+      "name": "TypeToInstanceMap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.reflect.TypeToInstanceMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.reflect.TypeToken",
+          "name": "TypeToken",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the value the specified type is mapped to, or null if no entry for this type is present. This will only return a value that was bound to this specific type, not a value that may have been bound to a subtype.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

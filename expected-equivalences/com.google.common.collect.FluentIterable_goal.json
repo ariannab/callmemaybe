@@ -1,0 +1,988 @@
+[
+  {
+    "signature": "filter(java.lang.Class<T> type)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<T>",
+      "name": "com.google.common.collect.FluentIterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the elements from this fluent iterable that are instances of class type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int position)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "anyMatch(com.google.common.base.Predicate<? super E> predicate)",
+    "name": "anyMatch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if any element in this fluent iterable satisfies the predicate. <p>Stream equivalent: stream.anyMatch(predicate) (same).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSet()",
+    "name": "toSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSet<E>",
+      "name": "com.google.common.collect.ImmutableSet<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an ImmutableSet containing all of the elements from this fluent iterable with duplicates removed. <p>Stream equivalent: ImmutableSet.copyOf(stream.iterator()).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E[] elements)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fluent iterable containing elements in the specified order. <p>Stream equivalent: Stream.of(elements) or Arrays.stream(elements).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(java.lang.Class<E> type)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E[]",
+      "name": "E[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an array containing all of the elements from this fluent iterable in iteration order. <p>Stream equivalent: if an object array is acceptable, use stream.toArray(); if type is a class literal such as MyType.class, use stream.toArray(MyType[]::new). Otherwise use stream.toArray( len -> (E[]) Array.newInstance(type, len)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSortedList(java.util.Comparator<? super E> comparator)",
+    "name": "toSortedList",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableList<E>",
+      "name": "com.google.common.collect.ImmutableList<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an ImmutableList containing all of the elements from this FluentIterable in the order specified by comparator. To produce an ImmutableList sorted by its natural ordering, use toSortedList(Ordering.natural()). <p>Stream equivalent: ImmutableList.copyOf(stream.sorted(comparator).iterator()).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMap(com.google.common.base.Function<? super E, V> valueFunction)",
+    "name": "toMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<E, V>",
+      "name": "com.google.common.collect.ImmutableMap<E, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueFunction"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an immutable map whose keys are the distinct elements of this FluentIterable and whose value for each key was computed by valueFunction. The map's iteration order is the order of the first appearance of each key in this iterable. <p>When there are multiple instances of a key in this iterable, it is unspecified whether valueFunction will be applied to more than one instance of that key and, if it is, which result will be mapped to that key in the returned map. <p>Stream equivalent: ImmutableMap.copyOf(stream.collect(Collectors.toMap(k -> k, valueFunction))) (but note that this may not preserve the order of entries).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the number of elements in this fluent iterable. <p>Stream equivalent: stream.count().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "append(E... elements)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fluent iterable whose iterators traverse first the elements of this fluent iterable, followed by elements. <p>Stream equivalent: Stream.concat(thisStream, Stream.of(elements)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allMatch(com.google.common.base.Predicate<? super E> predicate)",
+    "name": "allMatch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if every element in this fluent iterable satisfies the predicate. If this fluent iterable is empty, true is returned. <p>Stream equivalent: stream.allMatch(predicate) (same).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cycle()",
+    "name": "cycle",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a fluent iterable whose Iterator cycles indefinitely over the elements of this fluent iterable. <p>That iterator supports remove() if iterable.iterator() does. After remove() is called, subsequent cycles omit the removed element, which is no longer in this fluent iterable. The iterator's hasNext() method returns true until this fluent iterable is empty. <p>Warning: Typical uses of the resulting iterator may produce an infinite loop. You should use an explicit break or be certain that you will eventually remove all the elements. <p>Stream equivalent: if the source iterable has only a single element element, use Stream.generate(() -> element). Otherwise, if the source iterable has a stream method (for example, if it is a Collection), use Stream.generate(iterable::stream).flatMap(s -> s).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.collect.FluentIterable(java.lang.Iterable<E> iterable)",
+    "name": "com.google.common.collect.FluentIterable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transformAndConcat(com.google.common.base.Function<? super E, ? extends java.lang.Iterable<? extends T>> function)",
+    "name": "transformAndConcat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<T>",
+      "name": "com.google.common.collect.FluentIterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "equivalence": {
+      "comment": "Applies function to each element of this fluent iterable and returns a fluent iterable with the concatenated combination of results. function returns an Iterable of results. <p>The returned fluent iterable's iterator supports remove() if this function-returned iterables' iterator does. After a successful remove() call, the returned fluent iterable no longer contains the corresponding element. <p>Stream equivalent: stream.flatMap(function) (using a function that produces streams, not iterables).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "first()",
+    "name": "first",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Optional<E>",
+      "name": "com.google.common.base.Optional<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an Optional containing the first element in this fluent iterable. If the iterable is empty, Optional.absent() is returned. <p>Stream equivalent: if the goal is to obtain any element, stream.findAny(); if it must specifically be the first element, stream.findFirst().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMultiset()",
+    "name": "toMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultiset<E>",
+      "name": "com.google.common.collect.ImmutableMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an ImmutableMultiset containing all of the elements from this fluent iterable. <p>Stream equivalent: ImmutableMultiset.copyOf(stream.iterator()).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Determines whether this fluent iterable is empty. <p>Stream equivalent: !stream.findAny().isPresent().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "uniqueIndex(com.google.common.base.Function<? super E, K> keyFunction)",
+    "name": "uniqueIndex",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<K, E>",
+      "name": "com.google.common.collect.ImmutableMap<K, E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyFunction"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a map with the contents of this FluentIterable as its values, indexed by keys derived from those values. In other words, each input value produces an entry in the map whose key is the result of applying keyFunction to that value. These entries appear in the same order as they appeared in this fluent iterable. Example usage: Color red = new Color(\"red\", 255, 0, 0); ... FluentIterable<Color> allColors = FluentIterable.from(ImmutableSet.of(red, green, blue)); Map<String, Color> colorForName = allColors.uniqueIndex(toStringFunction()); assertThat(colorForName).containsEntry(\"red\", red); <p>If your index may associate multiple values with each key, use index. <p>Stream equivalent: ImmutableMap.copyOf(stream.collect(Collectors.toMap(keyFunction, v -> v))) (but note that this may not preserve the order of entries).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skip(int numberToSkip)",
+    "name": "skip",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numberToSkip"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of this fluent iterable that skips its first numberToSkip elements. If this fluent iterable contains fewer than numberToSkip elements, the returned fluent iterable skips all of its elements. <p>Modifications to this fluent iterable before a call to iterator() are reflected in the returned fluent iterable. That is, the its iterator skips the first numberToSkip elements that exist when the iterator is created, not when skip() is called. <p>The returned fluent iterable's iterator supports remove() if the Iterator of this fluent iterable supports it. Note that it is not possible to delete the last skipped element by immediately calling remove() on the returned fluent iterable's iterator, as the Iterator contract states that a call to * remove() before a call to next() will throw an IllegalStateException. <p>Stream equivalent: stream.skip(numberToSkip) (same).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "last()",
+    "name": "last",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Optional<E>",
+      "name": "com.google.common.base.Optional<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an Optional containing the last element in this fluent iterable. If the iterable is empty, Optional.absent() is returned. <p>Stream equivalent: stream.reduce((a, b) -> b).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "append(java.lang.Iterable<? extends E> other)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fluent iterable whose iterators traverse first the elements of this fluent iterable, followed by those of other. The iterators are not polled until necessary. <p>The returned iterable's Iterator supports remove() when the corresponding Iterator supports it. <p>Stream equivalent: Stream.concat(thisStream, otherStream).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.collect.FluentIterable()",
+    "name": "com.google.common.collect.FluentIterable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transform(com.google.common.base.Function<? super E, T> function)",
+    "name": "transform",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<T>",
+      "name": "com.google.common.collect.FluentIterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fluent iterable that applies function to each element of this fluent iterable. <p>The returned fluent iterable's iterator supports remove() if this iterable's iterator does. After a successful remove() call, this fluent iterable no longer contains the corresponding element. <p>Stream equivalent: stream.map(function).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInto(C collection)",
+    "name": "copyInto",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "C",
+      "name": "C",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "collection"
+      }
+    ],
+    "equivalence": {
+      "comment": "Copies all the elements from this fluent iterable to collection. This is equivalent to calling Iterables.addAll(collection, this). <p>Stream equivalent: stream.forEachOrdered(collection::add) or stream.forEach(collection::add).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "index(com.google.common.base.Function<? super E, K> keyFunction)",
+    "name": "index",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableListMultimap<K, E>",
+      "name": "com.google.common.collect.ImmutableListMultimap<K, E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyFunction"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates an index ImmutableListMultimap that contains the results of applying a specified function to each item in this FluentIterable of values. Each element of this iterable will be stored as a value in the resulting multimap, yielding a multimap with the same size as this iterable. The key used to store that value in the multimap will be the result of calling the function on that value. The resulting multimap is created as an immutable snapshot. In the returned multimap, keys appear in the order they are first encountered, and the values corresponding to each key appear in the same order as they are encountered.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object target)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "target",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this fluent iterable contains any object for which equals(target) is true. <p>Stream equivalent: stream.anyMatch(Predicate.isEqual(target)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSortedSet(java.util.Comparator<? super E> comparator)",
+    "name": "toSortedSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSortedSet<E>",
+      "name": "com.google.common.collect.ImmutableSortedSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an ImmutableSortedSet containing all of the elements from this FluentIterable in the order specified by comparator, with duplicates (determined by comparator.compare(x, y) == 0) removed. To produce an ImmutableSortedSet sorted by its natural ordering, use toSortedSet(Ordering.natural()). <p>Stream equivalent: ImmutableSortedSet.copyOf(comparator, stream.iterator()).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstMatch(com.google.common.base.Predicate<? super E> predicate)",
+    "name": "firstMatch",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Optional<E>",
+      "name": "com.google.common.base.Optional<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an Optional containing the first element in this fluent iterable that satisfies the given predicate, if such an element exists. <p>Warning: avoid using a predicate that matches null. If null is matched in this fluent iterable, a NullPointerException will be thrown. <p>Stream equivalent: stream.filter(predicate).findFirst().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "join(com.google.common.base.Joiner joiner)",
+    "name": "join",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Joiner",
+          "name": "Joiner",
+          "isArray": false
+        },
+        "name": "joiner"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a String containing all of the elements of this fluent iterable joined with joiner. <p>Stream equivalent: joiner.join(stream.iterator()), or, if you are not using any optional Joiner features, stream.collect(Collectors.joining(delimiter).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "from(java.lang.Iterable<E> iterable)",
+    "name": "from",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fluent iterable that wraps iterable, or iterable itself if it is already a FluentIterable. <p>Stream equivalent: iterable.stream() if iterable is a Collection; StreamSupport.stream(iterable.spliterator(), false) otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "from(com.google.common.collect.FluentIterable<E> iterable)",
+    "name": "from",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.FluentIterable",
+          "name": "FluentIterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Construct a fluent iterable from another fluent iterable. This is obviously never necessary, but is intended to help call out cases where one migration from Iterable to FluentIterable has obviated the need to explicitly convert to a FluentIterable. @deprecated instances of FluentIterable don't need to be converted to FluentIterable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filter(com.google.common.base.Predicate<? super E> predicate)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the elements from this fluent iterable that satisfy a predicate. The resulting fluent iterable's iterator does not support remove(). <p>Stream equivalent: stream.filter(predicate) (same).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toList()",
+    "name": "toList",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableList<E>",
+      "name": "com.google.common.collect.ImmutableList<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an ImmutableList containing all of the elements from this fluent iterable in proper sequence. <p>Stream equivalent: ImmutableList.copyOf(stream.iterator()).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "limit(int maxSize)",
+    "name": "limit",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.FluentIterable<E>",
+      "name": "com.google.common.collect.FluentIterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxSize"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a fluent iterable with the first size elements of this fluent iterable. If this fluent iterable does not contain that many elements, the returned fluent iterable will have the same behavior as this fluent iterable. The returned fluent iterable's iterator supports remove() if this fluent iterable's iterator does. <p>Stream equivalent: stream.limit(maxSize) (same).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.FluentIterable",
+      "name": "FluentIterable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.FluentIterable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a string representation of this fluent iterable, with the format [e1, e2, ..., en]. <p>Stream equivalent: stream.collect(Collectors.joining(\", \", \"[\", \"]\")) or (less efficiently) collect(Collectors.toList()).toString().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

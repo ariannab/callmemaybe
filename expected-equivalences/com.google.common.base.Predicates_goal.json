@@ -1,0 +1,580 @@
+[
+  {
+    "signature": "or(java.lang.Iterable<? extends com.google.common.base.Predicate<? super T>> components)",
+    "name": "or",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "components"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if any one of its components evaluates to true. The components are evaluated in order, and evaluation will be \"short-circuited\" as soon as a true predicate is found. It defensively copies the iterable passed in, so future changes to it won't alter the behavior of this predicate. If components is empty, the returned predicate will always evaluate to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "or(com.google.common.base.Predicate<? super T>... components)",
+    "name": "or",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lcom.google.common.base.Predicate;",
+          "name": "Predicate[]",
+          "isArray": true
+        },
+        "name": "components"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if any one of its components evaluates to true. The components are evaluated in order, and evaluation will be \"short-circuited\" as soon as a true predicate is found. It defensively copies the array passed in, so future changes to it won't alter the behavior of this predicate. If components is empty, the returned predicate will always evaluate to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "and(java.lang.Iterable<? extends com.google.common.base.Predicate<? super T>> components)",
+    "name": "and",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "components"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if each of its components evaluates to true. The components are evaluated in order, and evaluation will be \"short-circuited\" as soon as a false predicate is found. It defensively copies the iterable passed in, so future changes to it won't alter the behavior of this predicate. If components is empty, the returned predicate will always evaluate to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "and(com.google.common.base.Predicate<? super T>... components)",
+    "name": "and",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lcom.google.common.base.Predicate;",
+          "name": "Predicate[]",
+          "isArray": true
+        },
+        "name": "components"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if each of its components evaluates to true. The components are evaluated in order, and evaluation will be \"short-circuited\" as soon as a false predicate is found. It defensively copies the array passed in, so future changes to it won't alter the behavior of this predicate. If components is empty, the returned predicate will always evaluate to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "or(com.google.common.base.Predicate<? super T> first, com.google.common.base.Predicate<? super T> second)",
+    "name": "or",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "second"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if either of its components evaluates to true. The components are evaluated in order, and evaluation will be \"short-circuited\" as soon as a true predicate is found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "in(java.util.Collection<? extends T> target)",
+    "name": "in",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the object reference being tested is a member of the given collection. It does not defensively copy the collection passed in, so future changes to it will alter the behavior of the predicate. <p>This method can technically accept any Collection<?>, but using a typed collection helps prevent bugs. This approach doesn't block any potential users since it is always possible to use Predicates.<Object>in().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "and(com.google.common.base.Predicate<? super T> first, com.google.common.base.Predicate<? super T> second)",
+    "name": "and",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "second"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if both of its components evaluate to true. The components are evaluated in order, and evaluation will be \"short-circuited\" as soon as a false predicate is found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defensiveCopy(java.lang.Iterable<T> iterable)",
+    "name": "defensiveCopy",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<T>",
+      "name": "java.util.List<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsPattern(java.lang.String pattern)",
+    "name": "containsPattern",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<java.lang.CharSequence>",
+      "name": "com.google.common.base.Predicate<java.lang.CharSequence>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "pattern"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the CharSequence being tested contains any match for the given regular expression pattern. The test used is equivalent to Pattern.compile(pattern).matcher(arg).find().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "instanceOf(java.lang.Class<?> clazz)",
+    "name": "instanceOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<java.lang.Object>",
+      "name": "com.google.common.base.Predicate<java.lang.Object>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "clazz"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the object being tested is an instance of the given class. If the object being tested is null this predicate evaluates to false. <p>If you want to filter an Iterable to narrow its type, consider using Class) in preference. <p>Warning: contrary to the typical assumptions about predicates (as documented at Predicate#apply), the returned predicate may not be consistent with equals. For example, instanceOf(ArrayList.class) will yield different results for the two equal instances Lists.newArrayList(1) and Arrays.asList(1).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "alwaysTrue()",
+    "name": "alwaysTrue",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a predicate that always evaluates to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "not(com.google.common.base.Predicate<T> predicate)",
+    "name": "not",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the given predicate evaluates to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.util.regex.Pattern pattern)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<java.lang.CharSequence>",
+      "name": "com.google.common.base.Predicate<java.lang.CharSequence>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.regex.Pattern",
+          "name": "Pattern",
+          "isArray": false
+        },
+        "name": "pattern"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the CharSequence being tested contains any match for the given regular expression pattern. The test used is equivalent to pattern.matcher(arg).find().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "notNull()",
+    "name": "notNull",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the object reference being tested is not null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalTo(T target)",
+    "name": "equalTo",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "target",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the object being tested equals() the given target or both are null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "alwaysFalse()",
+    "name": "alwaysFalse",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a predicate that always evaluates to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "assignableFrom(java.lang.Class<?> clazz)",
+    "name": "assignableFrom",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<java.lang.Class<?>>",
+      "name": "com.google.common.base.Predicate<java.lang.Class<?>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "clazz"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the class being tested is assignable from the given class. The returned predicate does not allow null inputs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compose(com.google.common.base.Predicate<B> predicate, com.google.common.base.Function<A, ? extends B> function)",
+    "name": "compose",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<A>",
+      "name": "com.google.common.base.Predicate<A>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the composition of a function and a predicate. For every x, the generated predicate returns predicate(function(x)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isNull()",
+    "name": "isNull",
+    "containingClass": {
+      "qualifiedName": "com.google.common.base.Predicates",
+      "name": "Predicates",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.base.Predicates",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Predicate<T>",
+      "name": "com.google.common.base.Predicate<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a predicate that evaluates to true if the object reference being tested is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

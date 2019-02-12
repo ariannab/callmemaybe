@@ -1,0 +1,395 @@
+[
+  {
+    "signature": "topPrivateDomain()",
+    "name": "topPrivateDomain",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "com.google.common.net.InternetDomainName",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the portion of this domain name that is one level beneath the public suffix. For example, for x.adwords.google.co.uk it returns google.co.uk, since co.uk is a public suffix. <p>If isTopPrivateDomain() is true, the current domain name instance is returned. <p>This method should not be used to determine the topmost parent domain which is addressable as a host, as many public suffixes are also addressable hosts. For example, the domain foo.bar.uk.com has a public suffix of uk.com, so it would return bar.uk.com from this method. But uk.com is itself an addressable host. <p>This method can be used to determine the probable highest level parent domain for which cookies may be set, though even that depends on individual browsers' implementations of cookie controls.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the domain name, normalized to all lower case.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasParent()",
+    "name": "hasParent",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Indicates whether this domain is composed of two or more parts.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "child(java.lang.String leftParts)",
+    "name": "child",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "com.google.common.net.InternetDomainName",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "leftParts"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates and returns a new InternetDomainName by prepending the argument and a dot to the current name. For example, InternetDomainName.from(\"foo.com\").child(\"www.bar\") returns a new InternetDomainName with the value www.bar.foo.com. Only lenient validation is performed, as described here.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isTopPrivateDomain()",
+    "name": "isTopPrivateDomain",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Indicates whether this domain name is composed of exactly one subdomain component followed by a {@linkplain #isPublicSuffix() public suffix}. For example, returns true for google.com and foo.co.uk, but not for www.google.com or co.uk. <p>Warning: A true result from this method does not imply that the domain is at the highest level which is addressable as a host, as many public suffixes are also addressable hosts. For example, the domain bar.uk.com has a public suffix of uk.com, so it would return true from this method. But uk.com is itself an addressable host. <p>This method can be used to determine whether a domain is probably the highest level for which cookies may be set, though even that depends on individual browsers' implementations of cookie controls. See RFC 2109 for details.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object object)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Equality testing is based on the text supplied by the caller, after normalization as described in the class documentation. For example, a non-ASCII Unicode domain name and the Punycode version of the same domain name would not be considered equal.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUnderPublicSuffix()",
+    "name": "isUnderPublicSuffix",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Indicates whether this domain name ends in a {@linkplain #isPublicSuffix() public suffix}, while not being a public suffix itself. For example, returns true for www.google.com, foo.co.uk and bar.ca.us, but not for google, com, or google.foo. <p>Warning: a false result from this method does not imply that the domain does not represent an addressable host, as many public suffixes are also addressable hosts. Use hasPublicSuffix() for that test. <p>This method can be used to determine whether it will probably be possible to set cookies on the domain, though even that depends on individual browsers' implementations of cookie controls. See RFC 2109 for details.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parent()",
+    "name": "parent",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "com.google.common.net.InternetDomainName",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an InternetDomainName that is the immediate ancestor of this one; that is, the current domain with the leftmost part removed. For example, the parent of www.google.com is google.com.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "publicSuffix()",
+    "name": "publicSuffix",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "com.google.common.net.InternetDomainName",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the {@linkplain #isPublicSuffix() public suffix} portion of the domain name, or null if no public suffix is present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isValid(java.lang.String name)",
+    "name": "isValid",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "comment": "Indicates whether the argument is a syntactically valid domain name using lenient validation. Specifically, validation against RFC 3490 (\"Internationalizing Domain Names in Applications\") is skipped. <p>The following two code snippets are equivalent: domainName = InternetDomainName.isValid(name) ? InternetDomainName.from(name) : DEFAULT_DOMAIN; try { domainName = InternetDomainName.from(name); catch (IllegalArgumentException e) { domainName = DEFAULT_DOMAIN; }}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parts()",
+    "name": "parts",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableList<java.lang.String>",
+      "name": "com.google.common.collect.ImmutableList<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the individual components of this domain name, normalized to all lower case. For example, for the domain name mail.google.com, this method returns the list [\"mail\", \"google\", \"com\"].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasPublicSuffix()",
+    "name": "hasPublicSuffix",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Indicates whether this domain name ends in a {@linkplain #isPublicSuffix() public suffix}, including if it is a public suffix itself. For example, returns true for www.google.com, foo.co.uk and com, but not for google or google.foo. This is the recommended method for determining whether a domain is potentially an addressable host.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "from(java.lang.String domain)",
+    "name": "from",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "com.google.common.net.InternetDomainName",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "domain"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an instance of InternetDomainName after lenient validation. Specifically, validation against RFC 3490 (\"Internationalizing Domain Names in Applications\") is skipped, while validation against RFC 1035 is relaxed in the following ways: <li>Any part containing non-ASCII characters is considered valid. <li>Underscores ('_') are permitted wherever dashes ('-') are permitted. <li>Parts other than the final part may start with a digit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPublicSuffix()",
+    "name": "isPublicSuffix",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Indicates whether this domain name represents a public suffix, as defined by the Mozilla Foundation's Public Suffix List (PSL). A public suffix is one under which Internet users can directly register names, such as com, co.uk or pvt.k12.wy.us. Examples of domain names that are not public suffixes include google, google.com and foo.co.uk.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.net.InternetDomainName(java.lang.String name)",
+    "name": "com.google.common.net.InternetDomainName",
+    "containingClass": {
+      "qualifiedName": "com.google.common.net.InternetDomainName",
+      "name": "InternetDomainName",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.net.InternetDomainName",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "comment": "Constructor used to implement from(String), and from subclasses.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

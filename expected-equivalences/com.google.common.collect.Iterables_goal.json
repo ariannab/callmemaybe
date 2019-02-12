@@ -1,0 +1,1700 @@
+[
+  {
+    "signature": "toArray(java.lang.Iterable<? extends T> iterable, java.lang.Class<T> type)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Copies an iterable's elements into an array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "frequency(java.lang.Iterable<?> iterable, java.lang.Object element)",
+    "name": "frequency",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the number of elements in the specified iterable that equal the specified object. This implementation avoids a full iteration when the iterable is a Multiset or Set. @see Collections#frequency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filter(java.lang.Iterable<?> unfiltered, java.lang.Class<T> type)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "unfiltered"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns all instances of class type in unfiltered. The returned iterable has elements whose class is type or a subclass of type. The returned iterable's iterator does not support remove().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Iterable<T> iterable, int position)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the element at the specified position in an iterable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "consumingIterable(java.lang.Iterable<T> iterable)",
+    "name": "consumingIterable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of the supplied iterable that wraps each generated Iterator through Iterators#consumingIterator(Iterator). <p>Note: If iterable is a Queue, the returned iterable will get entries from Queue#remove() since Queue's iteration order is undefined. Calling Iterator#hasNext() on a generated iterator from the returned iterable may cause an item to be immediately dequeued for return on a subsequent call to Iterator#next().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skip(java.lang.Iterable<T> iterable, int numberToSkip)",
+    "name": "skip",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numberToSkip"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of iterable that skips its first numberToSkip elements. If iterable contains fewer than numberToSkip elements, the returned iterable skips all of its elements. <p>Modifications to the underlying Iterable before a call to iterator() are reflected in the returned iterator. That is, the iterator skips the first numberToSkip elements that exist when the Iterator is created, not when skip() is called. <p>The returned iterable's iterator supports remove() if the iterator of the underlying iterable supports it. Note that it is not possible to delete the last skipped element by immediately calling remove() on that iterator, as the Iterator contract states that a call to remove() before a call to next() will throw an IllegalStateException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "limit(java.lang.Iterable<T> iterable, int limitSize)",
+    "name": "limit",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "limitSize"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates an iterable with the first limitSize elements of the given iterable. If the original iterable does not contain that many elements, the returned iterable will have the same behavior as the original iterable. The returned iterable's iterator supports remove() if the original iterator does.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Iterable<? extends T> iterable, int position, T defaultValue)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the element at the specified position in an iterable or a default value otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filter(java.lang.Iterable<T> unfiltered, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "unfiltered"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the elements of unfiltered that satisfy a predicate. The resulting iterable's iterator does not support remove().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "any(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "any",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if any element in iterable satisfies the predicate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transform(java.lang.Iterable<F> fromIterable, com.google.common.base.Function<? super F, ? extends T> function)",
+    "name": "transform",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "fromIterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an iterable that applies function to each element of fromIterable. <p>The returned iterable's iterator supports remove() if the provided iterator does. After a successful remove() call, fromIterable no longer contains the corresponding element. <p>If the input Iterable is known to be a List or other Collection, consider Lists#transform and Collections2#transform.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty(java.lang.Iterable<?> iterable)",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Determines if the given iterable contains no elements. <p>There is no precise Iterator equivalent to this method, since one can only ask an iterator whether it has any elements remaining (which one does using Iterator#hasNext).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeFirstMatching(java.lang.Iterable<T> removeFrom, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "removeFirstMatching",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "removeFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes and returns the first matching element, or returns null if there is none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index in iterable of the first element that satisfies the provided predicate, or -1 if the Iterable has no such elements. <p>More formally, returns the lowest index i such that predicate.apply(Iterables.get(iterable, i)) returns true, or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.lang.Iterable<? extends java.lang.Iterable<? extends T>> inputs)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "inputs"
+      }
+    ],
+    "equivalence": {
+      "comment": "Combines multiple iterables into a single iterable. The returned iterable has an iterator that traverses the elements of each iterable in inputs. The input iterators are not polled until necessary. <p>The returned iterable's iterator supports remove() when the corresponding input iterator supports it. The methods of the returned iterable may throw NullPointerException if any of the input iterators is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "comment": "Combines two iterables into a single iterable. The returned iterable has an iterator that traverses the elements in a, followed by the elements in b. The source iterators are not polled until necessary. <p>The returned iterable's iterator supports remove() when the corresponding input iterator supports it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "find(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "find",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the first element in iterable that satisfies the given predicate; use this method only when such an element is known to exist. If it is possible that no element will match, use tryFind or Predicate, Object) instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Iterable<?> iterable, java.lang.Object element)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if iterable contains any object for which equals(element) is true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLast(java.lang.Iterable<? extends T> iterable, T defaultValue)",
+    "name": "getLast",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the last element of iterable or defaultValue if the iterable is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cycle(T... elements)",
+    "name": "cycle",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an iterable whose iterators cycle indefinitely over the provided elements. <p>After remove is invoked on a generated iterator, the removed element will no longer appear in either that iterator or any other iterator created from the same source iterable. That is, this method behaves exactly as Iterables.cycle(Lists.newArrayList(elements)). The iterator's hasNext method returns true until all of the original elements have been removed. <p>Warning: Typical uses of the resulting iterator may produce an infinite loop. You should use an explicit break or be certain that you will eventually remove all the elements. <p>To cycle over the elements n times, use the following: Iterables.concat(Collections.nCopies(n, Arrays.asList(elements))).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Iterables.cycle(Lists.newArrayList(args[0])))"
+    }
+  },
+  {
+    "signature": "partition(java.lang.Iterable<T> iterable, int size)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<java.util.List<T>>",
+      "name": "java.lang.Iterable<java.util.List<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "equivalence": {
+      "comment": "Divides an iterable into unmodifiable sublists of the given size (the final iterable may be smaller). For example, partitioning an iterable containing [a, b, c, d, e] with a partition size of 3 yields [[a, b, c], [d, e]] -- an outer iterable containing two inner lists of three and two elements, all in the original order. <p>Iterators returned by the returned iterable do not support the Iterator#remove() method. The returned lists implement RandomAccess, whether or not the input list does. <p>Note: if iterable is a List, use int) instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cycle(java.lang.Iterable<T> iterable)",
+    "name": "cycle",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an iterable whose iterators cycle indefinitely over the elements of iterable. <p>That iterator supports remove() if iterable.iterator() does. After remove() is called, subsequent cycles omit the removed element, which is no longer in iterable. The iterator's hasNext() method returns true until iterable is empty. <p>Warning: Typical uses of the resulting iterator may produce an infinite loop. You should use an explicit break or be certain that you will eventually remove all the elements. <p>To cycle over the iterable n times, use the following: Iterables.concat(Collections.nCopies(n, iterable)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.lang.Iterable<?> removeFrom, java.util.Collection<?> elementsToRemove)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "removeFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToRemove"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes, from an iterable, every element that belongs to the provided collection. <p>This method calls Collection#removeAll if iterable is a collection, and Iterators#removeAll otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unmodifiableIterable(java.lang.Iterable<T> iterable)",
+    "name": "unmodifiableIterable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unmodifiableIterable(com.google.common.collect.ImmutableCollection<E> iterable)",
+    "name": "unmodifiableIterable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<E>",
+      "name": "java.lang.Iterable<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.ImmutableCollection",
+          "name": "ImmutableCollection",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Simply returns its argument. @deprecated no need to use this.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeIf(java.lang.Iterable<T> removeFrom, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "removeIf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "removeFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes, from an iterable, every element that satisfies the provided predicate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOnlyElement(java.lang.Iterable<T> iterable)",
+    "name": "getOnlyElement",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the single element contained in iterable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(java.lang.Iterable<? extends T> iterable, T[] array)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(java.util.Collection<T> addTo, java.lang.Iterable<? extends T> elementsToAdd)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "addTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "elementsToAdd"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds all elements in iterable to collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeSorted(java.lang.Iterable<? extends java.lang.Iterable<? extends T>> iterables, java.util.Comparator<? super T> comparator)",
+    "name": "mergeSorted",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterables"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an iterable over the merged contents of all given iterables. Equivalent entries will not be de-duplicated. <p>Callers must ensure that the source iterables are in non-descending order as this method does not sort its input. <p>For any equivalent elements across all iterables, it is undefined which element is returned first.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "all(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "all",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if every element in iterable satisfies the predicate. If iterable is empty, true is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(java.lang.Iterable<?> iterable)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Copies an iterable's elements into an array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paddedPartition(java.lang.Iterable<T> iterable, int size)",
+    "name": "paddedPartition",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<java.util.List<T>>",
+      "name": "java.lang.Iterable<java.util.List<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "equivalence": {
+      "comment": "Divides an iterable into unmodifiable sublists of the given size, padding the final iterable with null values if necessary. For example, partitioning an iterable containing [a, b, c, d, e] with a partition size of 3 yields [[a, b, c], [d, e, null]] -- an outer iterable containing two inner lists of three elements each, all in the original order. <p>Iterators returned by the returned iterable do not support the Iterator#remove() method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFirst(java.lang.Iterable<? extends T> iterable, T defaultValue)",
+    "name": "getFirst",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the first element in iterable or defaultValue if the iterable is empty. The Iterators analog to this method is Iterators#getNext. <p>If no default value is desired (and the caller instead wants a NoSuchElementException to be thrown), it is recommended that iterable.iterator().next() is used instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.lang.Iterable<? extends T>... inputs)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Iterable;",
+          "name": "Iterable[]",
+          "isArray": true
+        },
+        "name": "inputs"
+      }
+    ],
+    "equivalence": {
+      "comment": "Combines multiple iterables into a single iterable. The returned iterable has an iterator that traverses the elements of each iterable in inputs. The input iterators are not polled until necessary. <p>The returned iterable's iterator supports remove() when the corresponding input iterator supports it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementsEqual(java.lang.Iterable<?> iterable1, java.lang.Iterable<?> iterable2)",
+    "name": "elementsEqual",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Determines whether two iterables contain equal elements in the same order. More specifically, this method returns true if iterable1 and iterable2 contain the same number of elements and every element of iterable1 is equal to the corresponding element of iterable2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(java.lang.Iterable<?> iterable)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string representation of iterable, with the format [e1, e2, ..., en] (that is, identical to Arrays.toString(Iterables.toArray(iterable))). Note that for most implementations of Collection, collection.toString() also gives the same result, but that behavior is not generally guaranteed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b, java.lang.Iterable<? extends T> c, java.lang.Iterable<? extends T> d)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "comment": "Combines four iterables into a single iterable. The returned iterable has an iterator that traverses the elements in a, followed by the elements in b, followed by the elements in c, followed by the elements in d. The source iterators are not polled until necessary. <p>The returned iterable's iterator supports remove() when the corresponding input iterator supports it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "find(java.lang.Iterable<? extends T> iterable, com.google.common.base.Predicate<? super T> predicate, T defaultValue)",
+    "name": "find",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the first element in iterable that satisfies the given predicate, or defaultValue if none found. Note that this can usually be handled more naturally using tryFind(iterable, predicate).or(defaultValue).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLast(java.lang.Iterable<T> iterable)",
+    "name": "getLast",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the last element of iterable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b, java.lang.Iterable<? extends T> c)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Combines three iterables into a single iterable. The returned iterable has an iterator that traverses the elements in a, followed by the elements in b, followed by the elements in c. The source iterators are not polled until necessary. <p>The returned iterable's iterator supports remove() when the corresponding input iterator supports it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(java.lang.Iterable<?> removeFrom, java.util.Collection<?> elementsToRetain)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "removeFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToRetain"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes, from an iterable, every element that does not belong to the provided collection. <p>This method calls Collection#retainAll if iterable is a collection, and Iterators#retainAll otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOnlyElement(java.lang.Iterable<? extends T> iterable, T defaultValue)",
+    "name": "getOnlyElement",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the single element contained in iterable, or defaultValue if the iterable is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size(java.lang.Iterable<?> iterable)",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the number of elements in iterable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryFind(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)",
+    "name": "tryFind",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Iterables",
+      "name": "Iterables",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Iterables",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.base.Optional<T>",
+      "name": "com.google.common.base.Optional<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an Optional containing the first element in iterable that satisfies the given predicate, if such an element exists. <p>Warning: avoid using a predicate that matches null. If null is matched in iterable, a NullPointerException will be thrown.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

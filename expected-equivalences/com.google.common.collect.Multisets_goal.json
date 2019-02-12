@@ -1,0 +1,900 @@
+[
+  {
+    "signature": "unmodifiableMultiset(com.google.common.collect.Multiset<? extends E> multiset)",
+    "name": "unmodifiableMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an unmodifiable view of the specified multiset. Query operations on the returned multiset \"read through\" to the specified multiset, and attempts to modify the returned multiset result in an UnsupportedOperationException. <p>The returned multiset will be serializable if the specified multiset is serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAllImpl(com.google.common.collect.Multiset<?> self, java.util.Collection<?> elementsToRetain)",
+    "name": "retainAllImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "self"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToRetain"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of Multiset#retainAll.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "union(com.google.common.collect.Multiset<? extends E> multiset1, com.google.common.collect.Multiset<? extends E> multiset2)",
+    "name": "union",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset1"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an unmodifiable view of the union of two multisets. In the returned multiset, the count of each element is the maximum of its counts in the two backing multisets. The iteration order of the returned multiset matches that of the element set of multiset1 followed by the members of the element set of multiset2 that are not contained in multiset1, with repeated occurrences of the same element appearing consecutively. <p>Results are undefined if multiset1 and multiset2 are based on different equivalence relations (as HashMultiset and TreeMultiset are).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAllImpl(com.google.common.collect.Multiset<?> self, java.util.Collection<?> elementsToRemove)",
+    "name": "removeAllImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "self"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToRemove"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of Multiset#removeAll.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAllImpl(com.google.common.collect.Multiset<E> self, java.util.Collection<? extends E> elements)",
+    "name": "addAllImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "self"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of Multiset#addAll.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intersection(com.google.common.collect.Multiset<E> multiset1, com.google.common.collect.Multiset<?> multiset2)",
+    "name": "intersection",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset1"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an unmodifiable view of the intersection of two multisets. In the returned multiset, the count of each element is the minimum of its counts in the two backing multisets, with elements that would have a count of 0 not included. The iteration order of the returned multiset matches that of the element set of multiset1, with repeated occurrences of the same element appearing consecutively. <p>Results are undefined if multiset1 and multiset2 are based on different equivalence relations (as HashMultiset and TreeMultiset are).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cast(java.lang.Iterable<T> iterable)",
+    "name": "cast",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<T>",
+      "name": "com.google.common.collect.Multiset<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "iterable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Used to avoid http://bugs.sun.com/view_bug.do?bug_id=6558557.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainOccurrences(com.google.common.collect.Multiset<?> multisetToModify, com.google.common.collect.Multiset<?> multisetToRetain)",
+    "name": "retainOccurrences",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multisetToModify"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multisetToRetain"
+      }
+    ],
+    "equivalence": {
+      "comment": "Modifies multisetToModify so that its count for an element e is at most multisetToRetain.count(e). <p>To be precise, multisetToModify.count(e) is set to Math.min(multisetToModify.count(e), multisetToRetain.count(e)). This is similar to Multiset) intersection (multisetToModify, multisetToRetain), but mutates multisetToModify instead of returning a view. <p>In contrast, multisetToModify.retainAll(multisetToRetain) keeps all occurrences of elements that appear at all in multisetToRetain, and deletes all occurrences of all other elements.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalsImpl(com.google.common.collect.Multiset<?> multiset, java.lang.Object object)",
+    "name": "equalsImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of Multiset#equals.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unmodifiableMultiset(com.google.common.collect.ImmutableMultiset<E> multiset)",
+    "name": "unmodifiableMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.ImmutableMultiset",
+          "name": "ImmutableMultiset",
+          "isArray": false
+        },
+        "name": "multiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Simply returns its argument. @deprecated no need to use this.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inferDistinctElements(java.lang.Iterable<?> elements)",
+    "name": "inferDistinctElements",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the expected number of distinct elements given the specified elements. The number of distinct elements is only computed if elements is an instance of Multiset; otherwise the default value of 11 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sizeImpl(com.google.common.collect.Multiset<?> multiset)",
+    "name": "sizeImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of Multiset#size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCountImpl(com.google.common.collect.Multiset<E> self, E element, int count)",
+    "name": "setCountImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "self"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of int).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unmodifiableSortedMultiset(com.google.common.collect.SortedMultiset<E> sortedMultiset)",
+    "name": "unmodifiableSortedMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset<E>",
+      "name": "com.google.common.collect.SortedMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.SortedMultiset",
+          "name": "SortedMultiset",
+          "isArray": false
+        },
+        "name": "sortedMultiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an unmodifiable view of the specified sorted multiset. Query operations on the returned multiset \"read through\" to the specified multiset, and attempts to modify the returned multiset result in an UnsupportedOperationException. <p>The returned multiset will be serializable if the specified multiset is serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "immutableEntry(E e, int n)",
+    "name": "immutableEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset$Entry<E>",
+      "name": "com.google.common.collect.Multiset$Entry<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an immutable multiset entry with the specified element and count. The entry will be serializable if e is.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filter(com.google.common.collect.Multiset<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "unfiltered"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of the elements of unfiltered that satisfy a predicate. The returned multiset is a live view of unfiltered; changes to one affect the other. <p>The resulting multiset's iterators, and those of its entrySet() and elementSet(), do not support remove(). However, all other multiset methods supported by unfiltered are supported by the returned multiset. When given an element that doesn't satisfy the predicate, the multiset's add() and addAll() methods throw an IllegalArgumentException. When methods such as removeAll() and clear() are called on the filtered multiset, only elements that satisfy the filter will be removed from the underlying multiset. <p>The returned multiset isn't threadsafe or serializable, even if unfiltered is. <p>Many of the filtered multiset's methods, such as size(), iterate across every element in the underlying multiset and determine which elements satisfy the filter. When a live view is not needed, it may be faster to copy the returned multiset and use the copy. <p>Warning: predicate must be consistent with equals, as documented at Predicate#apply. Do not provide a predicate such as Predicates.instanceOf(ArrayList.class), which is inconsistent with equals. (See Class) for related functionality.).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iteratorImpl(com.google.common.collect.Multiset<E> multiset)",
+    "name": "iteratorImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of Multiset#iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCountImpl(com.google.common.collect.Multiset<E> self, E element, int oldCount, int newCount)",
+    "name": "setCountImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "self"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "oldCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newCount"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of int, int).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsOccurrences(com.google.common.collect.Multiset<?> superMultiset, com.google.common.collect.Multiset<?> subMultiset)",
+    "name": "containsOccurrences",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "superMultiset"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "subMultiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if subMultiset.count(o) <= superMultiset.count(o) for all o.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyHighestCountFirst(com.google.common.collect.Multiset<E> multiset)",
+    "name": "copyHighestCountFirst",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultiset<E>",
+      "name": "com.google.common.collect.ImmutableMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a copy of multiset as an ImmutableMultiset whose iteration order is highest count first, with ties broken by the iteration order of the original multiset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sum(com.google.common.collect.Multiset<? extends E> multiset1, com.google.common.collect.Multiset<? extends E> multiset2)",
+    "name": "sum",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset1"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an unmodifiable view of the sum of two multisets. In the returned multiset, the count of each element is the sum of its counts in the two backing multisets. The iteration order of the returned multiset matches that of the element set of multiset1 followed by the members of the element set of multiset2 that are not contained in multiset1, with repeated occurrences of the same element appearing consecutively. <p>Results are undefined if multiset1 and multiset2 are based on different equivalence relations (as HashMultiset and TreeMultiset are).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeOccurrences(com.google.common.collect.Multiset<?> multisetToModify, java.lang.Iterable<?> occurrencesToRemove)",
+    "name": "removeOccurrences",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multisetToModify"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "occurrencesToRemove"
+      }
+    ],
+    "equivalence": {
+      "comment": "For each occurrence of an element e in occurrencesToRemove, removes one occurrence of e in multisetToModify. <p>Equivalently, this method modifies multisetToModify so that multisetToModify.count(e) is set to Math.max(0, multisetToModify.count(e) - Iterables.frequency(occurrencesToRemove, e)). <p>This is not the same as multisetToModify. removeAll(occurrencesToRemove), which removes all occurrences of elements that appear in occurrencesToRemove. However, this operation is equivalent to, albeit sometimes more efficient than, the following: for (E e : occurrencesToRemove) { multisetToModify.remove(e); }.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeOccurrences(com.google.common.collect.Multiset<?> multisetToModify, com.google.common.collect.Multiset<?> occurrencesToRemove)",
+    "name": "removeOccurrences",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multisetToModify"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "occurrencesToRemove"
+      }
+    ],
+    "equivalence": {
+      "comment": "For each occurrence of an element e in occurrencesToRemove, removes one occurrence of e in multisetToModify. <p>Equivalently, this method modifies multisetToModify so that multisetToModify.count(e) is set to Math.max(0, multisetToModify.count(e) - occurrencesToRemove.count(e)). <p>This is not the same as multisetToModify. removeAll(occurrencesToRemove), which removes all occurrences of elements that appear in occurrencesToRemove. However, this operation is equivalent to, albeit sometimes more efficient than, the following: for (E e : occurrencesToRemove) { multisetToModify.remove(e); }.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "difference(com.google.common.collect.Multiset<E> multiset1, com.google.common.collect.Multiset<?> multiset2)",
+    "name": "difference",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multisets",
+      "name": "Multisets",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multisets",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<E>",
+      "name": "com.google.common.collect.Multiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset1"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multiset",
+          "name": "Multiset",
+          "isArray": false
+        },
+        "name": "multiset2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an unmodifiable view of the difference of two multisets. In the returned multiset, the count of each element is the result of the zero-truncated subtraction of its count in the second multiset from its count in the first multiset, with elements that would have a count of 0 not included. The iteration order of the returned multiset matches that of the element set of multiset1, with repeated occurrences of the same element appearing consecutively. <p>Results are undefined if multiset1 and multiset2 are based on different equivalence relations (as HashMultiset and TreeMultiset are).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

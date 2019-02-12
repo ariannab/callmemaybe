@@ -1,0 +1,613 @@
+[
+  {
+    "signature": "renamingDecorator(java.util.concurrent.ExecutorService service, com.google.common.base.Supplier<java.lang.String> nameSupplier)",
+    "name": "renamingDecorator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "java.util.concurrent.ExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ExecutorService",
+          "name": "ExecutorService",
+          "isArray": false
+        },
+        "name": "service"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "nameSupplier"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates an ExecutorService that renames the threads that its tasks run in. <p>The names are retrieved from the nameSupplier on the thread that is being renamed right before each task is run. The renaming is best effort, if a SecurityManager prevents the renaming then it will be skipped but the tasks will still execute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renamingDecorator(java.util.concurrent.ScheduledExecutorService service, com.google.common.base.Supplier<java.lang.String> nameSupplier)",
+    "name": "renamingDecorator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "java.util.concurrent.ScheduledExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+          "name": "ScheduledExecutorService",
+          "isArray": false
+        },
+        "name": "service"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "nameSupplier"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a ScheduledExecutorService that renames the threads that its tasks run in. <p>The names are retrieved from the nameSupplier on the thread that is being renamed right before each task is run. The renaming is best effort, if a SecurityManager prevents the renaming then it will be skipped but the tasks will still execute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAnyImpl(com.google.common.util.concurrent.ListeningExecutorService executorService, java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, boolean timed, long nanos)",
+    "name": "invokeAnyImpl",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.ListeningExecutorService",
+          "name": "ListeningExecutorService",
+          "isArray": false
+        },
+        "name": "executorService"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "tasks"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "timed"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "nanos"
+      }
+    ],
+    "equivalence": {
+      "comment": "An implementation of ExecutorService#invokeAny for ListeningExecutorService implementations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "directExecutor()",
+    "name": "directExecutor",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Executor",
+      "name": "java.util.concurrent.Executor",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an Executor that runs each task in the thread that invokes execute, as in CallerRunsPolicy. <p>This instance is equivalent to: final class DirectExecutor implements Executor { public void execute(Runnable r) { r.run(); }} <p>This should be preferred to newDirectExecutorService() because the implementing the ExecutorService subinterface necessitates significant performance overhead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExitingExecutorService(java.util.concurrent.ThreadPoolExecutor executor)",
+    "name": "getExitingExecutorService",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "java.util.concurrent.ExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ThreadPoolExecutor",
+          "name": "ThreadPoolExecutor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "equivalence": {
+      "comment": "Converts the given ThreadPoolExecutor into an ExecutorService that exits when the application is complete. It does so by using daemon threads and adding a shutdown hook to wait for their completion. <p>This method waits 120 seconds before continuing with JVM termination, even if the executor has not finished its work. <p>This is mainly for fixed thread pools. See Executors#newFixedThreadPool(int).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shutdownAndAwaitTermination(java.util.concurrent.ExecutorService service, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "shutdownAndAwaitTermination",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ExecutorService",
+          "name": "ExecutorService",
+          "isArray": false
+        },
+        "name": "service"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Shuts down the given executor gradually, first disabling new submissions and later cancelling existing tasks. <p>The method takes the following steps: <li>calls ExecutorService#shutdown(), disabling acceptance of new submitted tasks. <li>waits for half of the specified timeout. <li>if the timeout expires, it calls ExecutorService#shutdownNow(), cancelling pending tasks and interrupting running tasks. <li>waits for the other half of the specified timeout. <p>If, at any step of the process, the calling thread is interrupted, the method calls ExecutorService#shutdownNow() and returns.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listeningDecorator(java.util.concurrent.ExecutorService delegate)",
+    "name": "listeningDecorator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.ListeningExecutorService",
+      "name": "com.google.common.util.concurrent.ListeningExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ExecutorService",
+          "name": "ExecutorService",
+          "isArray": false
+        },
+        "name": "delegate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates an ExecutorService whose submit and invokeAll methods submit ListenableFutureTask instances to the given delegate executor. Those methods, as well as execute and invokeAny, are implemented in terms of calls to delegate.execute. All other methods are forwarded unchanged to the delegate. This implies that the returned ListeningExecutorService never calls the delegate's submit, invokeAll, and invokeAny methods, so any special handling of tasks must be implemented in the delegate's execute method or by wrapping the returned ListeningExecutorService. <p>If the delegate executor was already an instance of ListeningExecutorService, it is returned untouched, and the rest of this documentation does not apply.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listeningDecorator(java.util.concurrent.ScheduledExecutorService delegate)",
+    "name": "listeningDecorator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.ListeningScheduledExecutorService",
+      "name": "com.google.common.util.concurrent.ListeningScheduledExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+          "name": "ScheduledExecutorService",
+          "isArray": false
+        },
+        "name": "delegate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a ScheduledExecutorService whose submit and invokeAll methods submit ListenableFutureTask instances to the given delegate executor. Those methods, as well as execute and invokeAny, are implemented in terms of calls to delegate.execute. All other methods are forwarded unchanged to the delegate. This implies that the returned ListeningScheduledExecutorService never calls the delegate's submit, invokeAll, and invokeAny methods, so any special handling of tasks must be implemented in the delegate's execute method or by wrapping the returned ListeningScheduledExecutorService. <p>If the delegate executor was already an instance of ListeningScheduledExecutorService, it is returned untouched, and the rest of this documentation does not apply.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renamingDecorator(java.util.concurrent.Executor executor, com.google.common.base.Supplier<java.lang.String> nameSupplier)",
+    "name": "renamingDecorator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Executor",
+      "name": "java.util.concurrent.Executor",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.base.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "nameSupplier"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates an Executor that renames the threads that its tasks run in. <p>The names are retrieved from the nameSupplier on the thread that is being renamed right before each task is run. The renaming is best effort, if a SecurityManager prevents the renaming then it will be skipped but the tasks will still execute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExitingExecutorService(java.util.concurrent.ThreadPoolExecutor executor, long terminationTimeout, java.util.concurrent.TimeUnit timeUnit)",
+    "name": "getExitingExecutorService",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "java.util.concurrent.ExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ThreadPoolExecutor",
+          "name": "ThreadPoolExecutor",
+          "isArray": false
+        },
+        "name": "executor"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "terminationTimeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "timeUnit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Converts the given ThreadPoolExecutor into an ExecutorService that exits when the application is complete. It does so by using daemon threads and adding a shutdown hook to wait for their completion. <p>This is mainly for fixed thread pools. See Executors#newFixedThreadPool(int).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addDelayedShutdownHook(java.util.concurrent.ExecutorService service, long terminationTimeout, java.util.concurrent.TimeUnit timeUnit)",
+    "name": "addDelayedShutdownHook",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ExecutorService",
+          "name": "ExecutorService",
+          "isArray": false
+        },
+        "name": "service"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "terminationTimeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "timeUnit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Add a shutdown hook to wait for thread completion in the given service. This is useful if the given service uses daemon threads, and we want to keep the JVM from exiting immediately on shutdown, instead giving these daemon threads a chance to terminate normally.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newDirectExecutorService()",
+    "name": "newDirectExecutorService",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.ListeningExecutorService",
+      "name": "com.google.common.util.concurrent.ListeningExecutorService",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates an executor service that runs each task in the thread that invokes execute/submit, as in CallerRunsPolicy This applies both to individually submitted tasks and to collections of tasks submitted via invokeAll or invokeAny. In the latter case, tasks will run serially on the calling thread. Tasks are run to completion before a Future is returned to the caller (unless the executor has been shutdown). <p>Although all tasks are immediately executed in the thread that submitted the task, this ExecutorService imposes a small locking overhead on each task submission in order to implement shutdown and termination behavior. <p>The implementation deviates from the ExecutorService specification with regards to the shutdownNow method. First, \"best-effort\" with regards to canceling running tasks is implemented as \"no-effort\". No interrupts or other attempts are made to stop threads executing tasks. Second, the returned list will always be empty, as any submitted task is considered to have started execution. This applies also to tasks given to invokeAll or invokeAny which are pending serial execution, even the subset of the tasks that have not yet started execution. It is unclear from the ExecutorService specification if these should be included, and it's much easier to implement the interpretation that they not be. Finally, a call to shutdown or shutdownNow may result in concurrent calls to invokeAll/invokeAny throwing RejectedExecutionException, although a subset of the tasks may already have been executed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sameThreadExecutor()",
+    "name": "sameThreadExecutor",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.ListeningExecutorService",
+      "name": "com.google.common.util.concurrent.ListeningExecutorService",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates an executor service that runs each task in the thread that invokes execute/submit, as in CallerRunsPolicy. This applies both to individually submitted tasks and to collections of tasks submitted via invokeAll or invokeAny. In the latter case, tasks will run serially on the calling thread. Tasks are run to completion before a Future is returned to the caller (unless the executor has been shutdown). <p>Although all tasks are immediately executed in the thread that submitted the task, this ExecutorService imposes a small locking overhead on each task submission in order to implement shutdown and termination behavior. <p>The implementation deviates from the ExecutorService specification with regards to the shutdownNow method. First, \"best-effort\" with regards to canceling running tasks is implemented as \"no-effort\". No interrupts or other attempts are made to stop threads executing tasks. Second, the returned list will always be empty, as any submitted task is considered to have started execution. This applies also to tasks given to invokeAll or invokeAny which are pending serial execution, even the subset of the tasks that have not yet started execution. It is unclear from the ExecutorService specification if these should be included, and it's much easier to implement the interpretation that they not be. Finally, a call to shutdown or shutdownNow may result in concurrent calls to invokeAll/invokeAny throwing RejectedExecutionException, although a subset of the tasks may already have been executed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newThread(java.lang.String name, java.lang.Runnable runnable)",
+    "name": "newThread",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Thread",
+      "name": "java.lang.Thread",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "runnable"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a thread using platformThreadFactory, and sets its name to name unless changing the name is forbidden by the security manager.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExitingScheduledExecutorService(java.util.concurrent.ScheduledThreadPoolExecutor executor, long terminationTimeout, java.util.concurrent.TimeUnit timeUnit)",
+    "name": "getExitingScheduledExecutorService",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "java.util.concurrent.ScheduledExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ScheduledThreadPoolExecutor",
+          "name": "ScheduledThreadPoolExecutor",
+          "isArray": false
+        },
+        "name": "executor"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "terminationTimeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "timeUnit"
+      }
+    ],
+    "equivalence": {
+      "comment": "Converts the given ScheduledThreadPoolExecutor into a ScheduledExecutorService that exits when the application is complete. It does so by using daemon threads and adding a shutdown hook to wait for their completion. <p>This is mainly for fixed thread pools. See Executors#newScheduledThreadPool(int).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "platformThreadFactory()",
+    "name": "platformThreadFactory",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ThreadFactory",
+      "name": "java.util.concurrent.ThreadFactory",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a default thread factory used to create new threads. <p>On AppEngine, returns ThreadManager.currentRequestThreadFactory(). Otherwise, returns Executors#defaultThreadFactory().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExitingScheduledExecutorService(java.util.concurrent.ScheduledThreadPoolExecutor executor)",
+    "name": "getExitingScheduledExecutorService",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.MoreExecutors",
+      "name": "MoreExecutors",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.MoreExecutors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "java.util.concurrent.ScheduledExecutorService",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ScheduledThreadPoolExecutor",
+          "name": "ScheduledThreadPoolExecutor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "equivalence": {
+      "comment": "Converts the given ThreadPoolExecutor into a ScheduledExecutorService that exits when the application is complete. It does so by using daemon threads and adding a shutdown hook to wait for their completion. <p>This method waits 120 seconds before continuing with JVM termination, even if the executor has not finished its work. <p>This is mainly for fixed thread pools. See Executors#newScheduledThreadPool(int).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

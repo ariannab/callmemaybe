@@ -1,0 +1,243 @@
+[
+  {
+    "signature": "newReentrantReadWriteLock(java.lang.String lockName)",
+    "name": "newReentrantReadWriteLock",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "lockName"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to newReentrantReadWriteLock(lockName, false).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(newReentrantReadWriteLock(args[0], false))"
+    }
+  },
+  {
+    "signature": "newInstanceWithExplicitOrdering(java.lang.Class<E> enumClass, com.google.common.util.concurrent.CycleDetectingLockFactory$Policy policy)",
+    "name": "newInstanceWithExplicitOrdering",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory$WithExplicitOrdering<E>",
+      "name": "com.google.common.util.concurrent.CycleDetectingLockFactory$WithExplicitOrdering<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "enumClass"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory$Policy",
+          "name": "Policy",
+          "isArray": false
+        },
+        "name": "policy"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a CycleDetectingLockFactory.WithExplicitOrdering<E>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createNodes(java.lang.Class<E> clazz)",
+    "name": "createNodes",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<E, com.google.common.util.concurrent.CycleDetectingLockFactory$LockGraphNode>",
+      "name": "java.util.Map<E, com.google.common.util.concurrent.CycleDetectingLockFactory$LockGraphNode>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "clazz"
+      }
+    ],
+    "equivalence": {
+      "comment": "For a given Enum type, creates an immutable map from each of the Enum's values to a corresponding LockGraphNode, with the allowedPriorLocks and disallowedPriorLocks prepopulated with nodes according to the natural ordering of the associated Enum values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newReentrantLock(java.lang.String lockName)",
+    "name": "newReentrantLock",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantLock",
+      "name": "java.util.concurrent.locks.ReentrantLock",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "lockName"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to newReentrantLock(lockName, false).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(newReentrantLock(args[0], false))"
+    }
+  },
+  {
+    "signature": "newReentrantReadWriteLock(java.lang.String lockName, boolean fair)",
+    "name": "newReentrantReadWriteLock",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "lockName"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fair"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a ReentrantReadWriteLock with the given fairness policy. The lockName is used in the warning or exception output to help identify the locks involved in the detected deadlock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newReentrantLock(java.lang.String lockName, boolean fair)",
+    "name": "newReentrantLock",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantLock",
+      "name": "java.util.concurrent.locks.ReentrantLock",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "lockName"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fair"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a ReentrantLock with the given fairness policy. The lockName is used in the warning or exception output to help identify the locks involved in the detected deadlock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newInstance(com.google.common.util.concurrent.CycleDetectingLockFactory$Policy policy)",
+    "name": "newInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "name": "com.google.common.util.concurrent.CycleDetectingLockFactory",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.util.concurrent.CycleDetectingLockFactory$Policy",
+          "name": "Policy",
+          "isArray": false
+        },
+        "name": "policy"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a new factory with the specified policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

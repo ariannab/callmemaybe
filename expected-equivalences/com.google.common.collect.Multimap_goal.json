@@ -1,0 +1,594 @@
+[
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Stores a key-value pair in this multimap. <p>Some multimap implementations allow duplicate key-value pairs, in which case put always adds a new key-value pair and increases the multimap size by 1. Other implementations prohibit duplicates, and storing a key-value pair that's already in the multimap has no effect.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key, java.lang.Object value)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes a single key-value pair with the key key and the value value from this multimap, if such exists. If multiple key-value pairs in the multimap fit this description, which one is removed is unspecified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entries()",
+    "name": "entries",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Collection<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view collection of all key-value pairs contained in this multimap, as Map.Entry instances. <p>Changes to the returned collection or the entries it contains will update the underlying multimap, and vice versa. However, adding to the returned collection is not possible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view collection containing the value from each key-value pair contained in this multimap, without collapsing duplicates (so values().size() == size()). <p>Changes to the returned collection will update the underlying multimap, and vice versa. However, adding to the returned collection is not possible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if this multimap contains no key-value pairs. Equivalent to size() == 0, but can in some cases be more efficient.",
+      "kind": "FreeText",
+      "condition": "methodResultID == (receiverObjectID.size() == 0)"
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the number of key-value pairs in this multimap. <p>Note: this method does not return the number of distinct keys in the multimap, which is given by keySet().size() or asMap().size(). See the opening section of the Multimap class documentation for clarification.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all key-value pairs from the multimap, leaving it {@linkplain #isEmpty empty}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(K key, java.lang.Iterable<? extends V> values)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Stores a key-value pair in this multimap for each of values, all using the same key, key. Equivalent to (but expected to be more efficient than): for (V value : values) { put(key, value); } <p>In particular, this is a no-op if values is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this multimap contains at least one key-value pair with the value value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+    "name": "replaceValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Stores a collection of values with the same key, replacing any existing values for that key. <p>If values is empty, this is equivalent to removeAll(key).",
+      "kind": "FreeText",
+      "condition": "args[1].isEmpty() ? methodResultID.equals(receiverObjectID.removeAll(args[0]))"
+    }
+  },
+  {
+    "signature": "get(K key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view collection of the values associated with key in this multimap, if any. Note that when containsKey(key) is false, this returns an empty collection, not null. <p>Changes to the returned collection will update the underlying multimap, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the hash code for this multimap. <p>The hash code of a multimap is defined as the hash code of the map view, as returned by Multimap#asMap. <p>In general, two multimaps with identical key-value mappings may or may not have the same hash codes, depending on the implementation. For example, two SetMultimap instances with the same key-value mappings will have the same hashCode, but the hashCode of ListMultimap instances depends on the ordering of the values for each key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(com.google.common.collect.Multimap<? extends K, ? extends V> multimap)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multimap",
+          "name": "Multimap",
+          "isArray": false
+        },
+        "name": "multimap"
+      }
+    ],
+    "equivalence": {
+      "comment": "Stores all key-value pairs of multimap in this multimap, in the order returned by multimap.entries().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this multimap contains at least one key-value pair with the key key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asMap()",
+    "name": "asMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<K, java.util.Collection<V>>",
+      "name": "java.util.Map<K, java.util.Collection<V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view of this multimap as a Map from each distinct key to the nonempty collection of that key's associated values. Note that this.asMap().get(k) is equivalent to this.get(k) only when k is a key contained in the multimap; otherwise it returns null as opposed to an empty collection. <p>Changes to the returned map or the collections that serve as its values will update the underlying multimap, and vice versa. The map does not support put or putAll, nor do its entries support setValue.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<K>",
+      "name": "java.util.Set<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view collection of all distinct keys contained in this multimap. Note that the key set contains a key if and only if this multimap maps that key to at least one value. <p>Changes to the returned set will update the underlying multimap, and vice versa. However, adding to the returned set is not possible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keys()",
+    "name": "keys",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset<K>",
+      "name": "com.google.common.collect.Multiset<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a view collection containing the key from each key-value pair in this multimap, without collapsing duplicates. This collection has the same size as this multimap, and keys().count(k) == get(k).size() for all k. <p>Changes to the returned multiset will update the underlying multimap, and vice versa. However, adding to the returned collection is not possible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Compares the specified object with this multimap for equality. Two multimaps are equal when their map views, as returned by asMap, are also equal. <p>In general, two multimaps with identical key-value mappings may or may not be equal, depending on the implementation. For example, two SetMultimap instances with the same key-value mappings are equal, but equality of two ListMultimap instances depends on the ordering of the values for each key. <p>A non-empty SetMultimap cannot be equal to a non-empty ListMultimap, since their asMap views contain unequal collections as values. However, any two empty multimaps are equal, because they both have empty asMap views.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsEntry(java.lang.Object key, java.lang.Object value)",
+    "name": "containsEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this multimap contains at least one key-value pair with the key key and the value value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.lang.Object key)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Multimap",
+      "name": "Multimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Multimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes all values associated with the key key. <p>Once this method returns, key will not be mapped to any values, so it will not appear in keySet(), asMap(), or any other views.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

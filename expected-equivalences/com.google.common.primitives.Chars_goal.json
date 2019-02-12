@@ -1,0 +1,654 @@
+[
+  {
+    "signature": "checkedCast(long value)",
+    "name": "checkedCast",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the char value that is equal to value, if possible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "min(char... array)",
+    "name": "min",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the least value present in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromBytes(byte b1, byte b2)",
+    "name": "fromBytes",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b1"
+      },
+      {
+        "type": {
+          "qualifiedName": "byte",
+          "name": "byte",
+          "isArray": false
+        },
+        "name": "b2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the char value whose byte representation is the given 2 bytes, in big-endian order; equivalent to Chars.fromByteArray(new byte[] {b1, b2)}.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.fromByteArray(new byte[] {args[0], args[1])}))."
+    }
+  },
+  {
+    "signature": "compare(char a, char b)",
+    "name": "compare",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "comment": "Compares the two specified char values. The sign of the value returned is the same as that of ((Character) a).compareTo(b). <p>Note for Java 7 and later: this method should be treated as deprecated; use the equivalent Character#compare method instead.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Character.compare(args[0], args[1]))"
+    }
+  },
+  {
+    "signature": "join(java.lang.String separator, char... array)",
+    "name": "join",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "separator"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string containing the supplied char values separated by separator. For example, join(\"-\", '1', '2', '3') returns the string \"1-2-3\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(java.util.Collection<java.lang.Character> collection)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char[]",
+      "name": "char[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "collection"
+      }
+    ],
+    "equivalence": {
+      "comment": "Copies a collection of Character instances into a new array of primitive char values. <p>Elements are copied from the argument collection as if by collection.toArray(). Calling this method is as thread-safe as calling that method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(char[] array, char[] target)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the start position of the first occurrence of the specified target within array, or -1 if there is no such occurrence. <p>More formally, returns the lowest index i such that java.util.Arrays.copyOfRange(array, i, i + target.length) contains exactly the same elements as target.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asList(char... backingArray)",
+    "name": "asList",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.Character>",
+      "name": "java.util.List<java.lang.Character>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "backingArray"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a fixed-size list backed by the specified array, similar to Arrays#asList(Object[]). The list supports Object), but any attempt to set a value to null will result in a NullPointerException. <p>The returned list maintains the values, but not the identities, of Character objects written to or read from it. For example, whether list.get(0) == list.get(0) is true for the returned list is unspecified.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(Arrays.asList(args[0]))"
+    }
+  },
+  {
+    "signature": "saturatedCast(long value)",
+    "name": "saturatedCast",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the char nearest in value to value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(char[]... arrays)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "char[]",
+      "name": "char[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[C",
+          "name": "char[][]",
+          "isArray": true
+        },
+        "name": "arrays"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the values from each provided array combined into a single array. For example, concat(new char[] {a, b, new char[] {}, new char[] {c}} returns the array {a, b, c}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureCapacity(char[] array, int minLength, int padding)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char[]",
+      "name": "char[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minLength"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "padding"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an array containing the same values as array, but guaranteed to be of a specified minimum length. If array already has a length of at least minLength, it is returned directly. Otherwise, a new array of size minLength + padding is returned, containing the values of array, and zeroes in the remaining places.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(char[] array, char target)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if target is present as an element anywhere in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromByteArray(byte[] bytes)",
+    "name": "fromByteArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the char value whose big-endian representation is stored in the first 2 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getChar(). For example, the input byte array {0x54, 0x32} would yield the char value '\\\\u5432'. <p>Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much more flexibility at little cost in readability.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(ByteBuffer.wrap(args[0]).getChar())"
+    }
+  },
+  {
+    "signature": "lexicographicalComparator()",
+    "name": "lexicographicalComparator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<char[]>",
+      "name": "java.util.Comparator<char[]>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a comparator that compares two char arrays lexicographically. That is, it compares, using char)), the first pair of values that follow any common prefix, or when one array is a prefix of the other, treats the shorter array as the lesser. For example, [] < ['a'] < ['a', 'b'] < ['b']. <p>The returned comparator is inconsistent with Object#equals(Object) (since arrays support only identity equality), but it is consistent with char[]). @see Lexicographical order article at Wikipedia.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toByteArray(char value)",
+    "name": "toByteArray",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a big-endian representation of value in a 2-element byte array; equivalent to ByteBuffer.allocate(2).putChar(value).array(). For example, the input value '\\\\u5432' would yield the byte array {0x54, 0x32}. <p>If you need to convert and concatenate several values (possibly even of different types), use a shared java.nio.ByteBuffer instance, or use com.google.common.io.ByteStreams#newDataOutput() to get a growable buffer.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(ByteBuffer.allocate(2).putChar(args[0]).array())"
+    }
+  },
+  {
+    "signature": "hashCode(char value)",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a hash code for value; equal to the result of invoking ((Character) value).hashCode().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(char[] array, char target)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the last appearance of the value target in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "max(char... array)",
+    "name": "max",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the greatest value present in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(char[] array, char target)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.primitives.Chars",
+      "name": "Chars",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.primitives.Chars",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the first appearance of the value target in array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

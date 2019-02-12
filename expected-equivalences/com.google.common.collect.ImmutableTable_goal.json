@@ -1,0 +1,682 @@
+[
+  {
+    "signature": "cellIterator()",
+    "name": "cellIterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.UnmodifiableIterator<com.google.common.collect.Table$Cell<R, C, V>>",
+      "name": "com.google.common.collect.UnmodifiableIterator<com.google.common.collect.Table$Cell<R, C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(R rowKey, C columnKey, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Guaranteed to throw an exception and leave the table unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "row(R rowKey)",
+    "name": "row",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<C, V>",
+      "name": "com.google.common.collect.ImmutableMap<C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      }
+    ],
+    "equivalence": {
+      "comment": "{@inheritDoc}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object rowKey, java.lang.Object columnKey)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyOf(com.google.common.collect.Table<? extends R, ? extends C, ? extends V> table)",
+    "name": "copyOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable<R, C, V>",
+      "name": "com.google.common.collect.ImmutableTable<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Table",
+          "name": "Table",
+          "isArray": false
+        },
+        "name": "table"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an immutable copy of the provided table. <p>The Table#cellSet() iteration order of the provided table determines the iteration ordering of all views in the returned table. Note that some views of the original table and the copied table may have different iteration orders. For more control over the ordering, create a Builder and call Builder#orderRowsBy, Builder#orderColumnsBy, and Builder#putAll <p>Despite the method name, this method attempts to avoid actually copying the data when it is safe to do so. The exact circumstances under which a copy will or will not be performed are undocumented and subject to change.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cellSet()",
+    "name": "cellSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSet<com.google.common.collect.Table$Cell<R, C, V>>",
+      "name": "com.google.common.collect.ImmutableSet<com.google.common.collect.Table$Cell<R, C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rowKeySet()",
+    "name": "rowKeySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSet<R>",
+      "name": "com.google.common.collect.ImmutableSet<R>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(R rowKey, C columnKey, V value)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable<R, C, V>",
+      "name": "com.google.common.collect.ImmutableTable<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "builder()",
+    "name": "builder",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable$Builder<R, C, V>",
+      "name": "com.google.common.collect.ImmutableTable$Builder<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a new builder. The generated builder is equivalent to the builder created by the Builder#ImmutableTable.Builder() constructor.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(ImmutableTable.Builder.ImmutableTable.Builder())"
+    }
+  },
+  {
+    "signature": "createValues()",
+    "name": "createValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "columnMap()",
+    "name": "columnMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<C, java.util.Map<R, V>>",
+      "name": "com.google.common.collect.ImmutableMap<C, java.util.Map<R, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>The value Map<R, V> instances in the returned map are ImmutableMap instances as well.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "column(C columnKey)",
+    "name": "column",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<R, V>",
+      "name": "com.google.common.collect.ImmutableMap<R, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      }
+    ],
+    "equivalence": {
+      "comment": "{@inheritDoc}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(com.google.common.collect.Table<? extends R, ? extends C, ? extends V> table)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Table",
+          "name": "Table",
+          "isArray": false
+        },
+        "name": "table"
+      }
+    ],
+    "equivalence": {
+      "comment": "Guaranteed to throw an exception and leave the table unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "columnKeySet()",
+    "name": "columnKeySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSet<C>",
+      "name": "com.google.common.collect.ImmutableSet<C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of()",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable<R, C, V>",
+      "name": "com.google.common.collect.ImmutableTable<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cellOf(R rowKey, C columnKey, V value)",
+    "name": "cellOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Table$Cell<R, C, V>",
+      "name": "com.google.common.collect.Table$Cell<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Verifies that rowKey, columnKey and value are non-null, and returns a new entry with those values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rowMap()",
+    "name": "rowMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<R, java.util.Map<C, V>>",
+      "name": "com.google.common.collect.ImmutableMap<R, java.util.Map<C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>The value Map<C, V> instances in the returned map are ImmutableMap instances as well.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object rowKey, java.lang.Object columnKey)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      }
+    ],
+    "equivalence": {
+      "comment": "Guaranteed to throw an exception and leave the table unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.collect.ImmutableTable()",
+    "name": "com.google.common.collect.ImmutableTable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createCellSet()",
+    "name": "createCellSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSet<com.google.common.collect.Table$Cell<R, C, V>>",
+      "name": "com.google.common.collect.ImmutableSet<com.google.common.collect.Table$Cell<R, C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valuesIterator()",
+    "name": "valuesIterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<V>",
+      "name": "java.util.Iterator<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": ".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableTable",
+      "name": "ImmutableTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Guaranteed to throw an exception and leave the table unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

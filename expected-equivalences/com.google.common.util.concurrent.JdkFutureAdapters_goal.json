@@ -1,0 +1,72 @@
+[
+  {
+    "signature": "listenInPoolThread(java.util.concurrent.Future<V> future)",
+    "name": "listenInPoolThread",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.JdkFutureAdapters",
+      "name": "JdkFutureAdapters",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.JdkFutureAdapters",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "name": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Future",
+          "name": "Future",
+          "isArray": false
+        },
+        "name": "future"
+      }
+    ],
+    "equivalence": {
+      "comment": "Assigns a thread to the given Future to provide ListenableFuture functionality. <p>Warning: If the input future does not already implement ListenableFuture, the returned future will emulate ListenableFuture#addListener by taking a thread from an internal, unbounded pool at the first call to addListener and holding it until the future is {@linkplain Future#isDone() done}. <p>Prefer to create ListenableFuture instances with SettableFuture, java.util.concurrent.ExecutorService), ListenableFutureTask, AbstractFuture, and other utilities over creating plain Future instances to be upgraded to ListenableFuture after the fact.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listenInPoolThread(java.util.concurrent.Future<V> future, java.util.concurrent.Executor executor)",
+    "name": "listenInPoolThread",
+    "containingClass": {
+      "qualifiedName": "com.google.common.util.concurrent.JdkFutureAdapters",
+      "name": "JdkFutureAdapters",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.util.concurrent.JdkFutureAdapters",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "name": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Future",
+          "name": "Future",
+          "isArray": false
+        },
+        "name": "future"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "equivalence": {
+      "comment": "Submits a blocking task for the given Future to provide ListenableFuture functionality. <p>Warning: If the input future does not already implement ListenableFuture, the returned future will emulate ListenableFuture#addListener by submitting a task to the given executor at the first call to addListener. The task must be started by the executor promptly, or else the returned ListenableFuture may fail to work. The task's execution consists of blocking until the input future is {@linkplain Future#isDone() done}, so each call to this method may claim and hold a thread for an arbitrary length of time. Use of bounded executors or other executors that may fail to execute a task promptly may result in deadlocks. <p>Prefer to create ListenableFuture instances with SettableFuture, java.util.concurrent.ExecutorService), ListenableFutureTask, AbstractFuture, and other utilities over creating plain Future instances to be upgraded to ListenableFuture after the fact.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]
