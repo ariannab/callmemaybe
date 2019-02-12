@@ -141,32 +141,12 @@ public class Toradocu {
 
     if (configuration.isConditionTranslationEnabled()) {
       Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
+      Map<DocumentedExecutable, MethodMatch> equivalenceSpecs = new HashMap<>();
 
       List<JsonOutput> jsonOutputs = new ArrayList<>();
       // Use @tComment or the standard condition translator to translate comments.
       if (configuration.mustGenerateCrossOracles()) {
-        Map<DocumentedExecutable, MethodMatch> equivalenceSpecs =
-            CommentTranslator.createCrossOracles(members);
-        // TODO after in JsonOutput there is support for equivalences, create outputs as below and
-        // TODO compare them in tests (look at method compare() in PrecisionRecallTest)
-
-        try (BufferedWriter writer =
-            Files.newBufferedWriter(
-                configuration.getConditionTranslatorOutput().toPath(), StandardCharsets.UTF_8)) {
-
-          for (DocumentedExecutable executable : equivalenceSpecs.keySet()) {
-            jsonOutputs.add(new JsonOutput(executable, equivalenceSpecs.get(executable)));
-          }
-          String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
-          writer.write(jsonOutput);
-
-          System.out.println("Condition translator output:\n" + jsonOutput);
-        } catch (Exception e) {
-          log.error(
-              "Unable to write the output on file "
-                  + configuration.getConditionTranslatorOutput().getAbsolutePath(),
-              e);
-        }
+        equivalenceSpecs = CommentTranslator.createCrossOracles(members);
       } else if (configuration.useTComment()) {
         specifications = tcomment.TcommentKt.translate(members);
       } else {
@@ -174,32 +154,64 @@ public class Toradocu {
       }
 
       // Output the result on a file or on the standard output, if silent mode is disabled.
-      if (!configuration.isSilent() || !specifications.isEmpty()) {
-        if (configuration.getConditionTranslatorOutput() != null) {
-          try (BufferedWriter writer =
-              Files.newBufferedWriter(
-                  configuration.getConditionTranslatorOutput().toPath(), StandardCharsets.UTF_8)) {
+      if (!configuration.isSilent()) {
+        if (!equivalenceSpecs.isEmpty()) {
+          // TODO compare outputs in tests (look at method compare() in PrecisionRecallTest)
+          if (configuration.getConditionTranslatorOutput() != null) {
+            try (BufferedWriter writer =
+                Files.newBufferedWriter(
+                    configuration.getConditionTranslatorOutput().toPath(),
+                    StandardCharsets.UTF_8)) {
 
-            for (DocumentedExecutable executable : specifications.keySet()) {
-              jsonOutputs.add(new JsonOutput(executable, specifications.get(executable)));
+              List<MethodMatch> equivalences = new ArrayList<>(equivalenceSpecs.values());
+              equivalences.removeIf(e -> !e.isEquivalence() && !e.isSimilarity());
+              if (!equivalences.isEmpty()) {
+                for (DocumentedExecutable executable : equivalenceSpecs.keySet()) {
+                  jsonOutputs.add(new JsonOutput(executable, equivalenceSpecs.get(executable)));
+                }
+              }
+              if (!jsonOutputs.isEmpty()) {
+                String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
+                writer.write(jsonOutput);
+              } else {
+                // FIXME ugly, but we don't want empty goal files around for now
+                File file = new File(configuration.getConditionTranslatorOutput().toURI());
+                file.delete();
+              }
+            } catch (Exception e) {
+              log.error(
+                  "Unable to write the output on file "
+                      + configuration.getConditionTranslatorOutput().getAbsolutePath(),
+                  e);
+            }
+          }
+        } else if (!specifications.isEmpty()) {
+          if (configuration.getConditionTranslatorOutput() != null) {
+            try (BufferedWriter writer =
+                Files.newBufferedWriter(
+                    configuration.getConditionTranslatorOutput().toPath(),
+                    StandardCharsets.UTF_8)) {
+
+              for (DocumentedExecutable executable : specifications.keySet()) {
+                jsonOutputs.add(new JsonOutput(executable, specifications.get(executable)));
+              }
+              String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
+              writer.write(jsonOutput);
+            } catch (Exception e) {
+              log.error(
+                  "Unable to write the output on file "
+                      + configuration.getConditionTranslatorOutput().getAbsolutePath(),
+                  e);
+            }
+          } else {
+            for (DocumentedExecutable member : members) {
+              jsonOutputs.add(new JsonOutput(member, specifications.get(member)));
             }
             String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
-            writer.write(jsonOutput);
-          } catch (Exception e) {
-            log.error(
-                "Unable to write the output on file "
-                    + configuration.getConditionTranslatorOutput().getAbsolutePath(),
-                e);
+            System.out.println("Condition translator output:\n" + jsonOutput);
           }
-        } else {
-          for (DocumentedExecutable member : members) {
-            jsonOutputs.add(new JsonOutput(member, specifications.get(member)));
-          }
-          String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
-          System.out.println("Condition translator output:\n" + jsonOutput);
         }
       }
-
       // Create statistics.
       File expectedResultFile = configuration.getExpectedOutput();
       if (expectedResultFile != null) {

@@ -18,13 +18,24 @@ public class MethodMatch {
 
   private String methodSignature;
   private String simpleName;
+  private boolean equivalence;
   private boolean similarity;
   private List<String> arguments;
   private String oracle;
   private Map<Integer, String> constants;
 
-  MethodMatch(String methodSignature, boolean similarity, List<String> arguments) {
+  public MethodMatch() {
+    this.methodSignature = "";
+    this.simpleName = "";
+    this.equivalence = false;
+    this.similarity = false;
+    this.oracle = "";
+  }
+
+  MethodMatch(
+      String methodSignature, boolean equivalence, boolean similarity, List<String> arguments) {
     this.methodSignature = methodSignature;
+    this.equivalence = equivalence;
     this.similarity = similarity;
     this.arguments = arguments;
     this.constants = areArgsConstants();
@@ -41,6 +52,10 @@ public class MethodMatch {
 
   public boolean isSimilarity() {
     return similarity;
+  }
+
+  public boolean isEquivalence() {
+    return equivalence;
   }
 
   public List<String> getArguments() {

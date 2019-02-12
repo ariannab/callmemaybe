@@ -26,6 +26,9 @@ public class TagOutput {
   String condition;
 
   public TagOutput(String comment, String kind, String condition) {
+    if (condition == null) {
+      condition = "";
+    }
     this.comment = comment;
     this.kind = kind;
     this.condition = condition;

@@ -35,7 +35,7 @@ public class Equivalences {
         return methodMatch;
       }
     }
-    return new MethodMatch("", false, new ArrayList<>());
+    return new MethodMatch("", false, false, new ArrayList<>());
   }
 
   /**
@@ -77,9 +77,9 @@ public class Equivalences {
               || Pattern.compile("\\b" + "except" + "\\b", Pattern.CASE_INSENSITIVE)
                   .matcher(comment)
                   .find()) {
-            return new MethodMatch(methodMatch.group(group), true, arguments);
+            return new MethodMatch(methodMatch.group(group), false, true, arguments);
           } else {
-            return new MethodMatch(methodMatch.group(group), false, arguments);
+            return new MethodMatch(methodMatch.group(group), true, false, arguments);
           }
         }
       }
@@ -88,7 +88,7 @@ public class Equivalences {
   }
 
   private static List<String> extractArguments(Matcher methodMatch) {
-    if (methodMatch.groupCount() > 1 && !methodMatch.group(2).isEmpty()) {
+    if (methodMatch.group(2) != null) {
       // the method takes arguments
       String[] args = methodMatch.group(2).split(",");
       for (int i = 0; i < args.length; i++) {
