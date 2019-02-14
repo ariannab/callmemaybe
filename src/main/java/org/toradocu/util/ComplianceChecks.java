@@ -147,10 +147,17 @@ public class ComplianceChecks {
     String methodReturnType = method.getReturnType().getType().getTypeName();
     if (!methodReturnType.equals("void")) {
       sourceCodeBuilder.addArgument(methodReturnType, Configuration.RETURN_VALUE);
-      if (!primitiveTypes().contains(methodReturnType)) {
+      String returnTypeClass = method.getReturnType().getClass().getName();
+      if (!returnTypeClass.contains("AnnotatedTypeVariableImpl")
+          && !primitiveTypes().contains(methodReturnType)
+          && !isGenericType(methodReturnType)) {
         sourceCodeBuilder.addImport(methodReturnType);
       }
     }
+  }
+
+  private static boolean isGenericType(String methodReturnType) {
+    return methodReturnType.length() == 1 && Character.isUpperCase(methodReturnType.charAt(0));
   }
 
   public static Set primitiveTypes() {
