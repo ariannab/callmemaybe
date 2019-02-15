@@ -82,7 +82,11 @@ public abstract class AbstractPrecisionRecallTestSuite {
             + "\nAverage precision on @throws: "
             + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.THROWS))
             + "\nAverage recall on @throws: "
-            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.THROWS)));
+            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.THROWS))
+            + "\nAverage precision on Eq: "
+            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.FREETEXT))
+            + "\nAverage recall on Eq: "
+            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.FREETEXT)));
   }
 
   /**
@@ -131,5 +135,28 @@ public abstract class AbstractPrecisionRecallTestSuite {
         "@return recall is different than expected",
         stats.getRecall(JavadocComment.Kind.RETURN),
         closeTo(returnRecall, PRECISION));
+  }
+
+  /**
+   * Computes precision and recall for the given target class and checks that precision and recall
+   * are as expected for the given target class (for both @param and @throws tags).
+   *
+   * @param targetClass the fully qualified name of the class on which to run the test
+   * @param eqPrecision the expected precision for @throws tag translations
+   * @param eqRecall the expected recall for @throws tag translations
+   */
+  protected void test(String targetClass, double eqPrecision, double eqRecall) {
+    final Stats stats =
+        PrecisionRecallTest.computeEqPrecisionAndRecall(
+            targetClass, sourceDirPath, binDirPath, goalOutputDirPath);
+    testSuiteStats.addStats(stats);
+    assertThat(
+        "Free text (equivalence) precision is different than expected",
+        stats.getPrecision(JavadocComment.Kind.FREETEXT),
+        closeTo(eqPrecision, PRECISION));
+    assertThat(
+        "Free text (equivalence) recall is different than expected",
+        stats.getRecall(JavadocComment.Kind.FREETEXT),
+        closeTo(eqRecall, PRECISION));
   }
 }

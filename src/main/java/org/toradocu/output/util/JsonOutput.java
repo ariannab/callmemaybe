@@ -1,6 +1,7 @@
 package org.toradocu.output.util;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import org.toradocu.extractor.*;
@@ -149,11 +150,9 @@ public class JsonOutput {
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-
+    if (!(o instanceof JsonOutput)) return false;
     JsonOutput that = (JsonOutput) o;
-
-    return (isVarArgs == that.isVarArgs)
+    return isVarArgs == that.isVarArgs
         && Objects.equals(signature, that.signature)
         && Objects.equals(name, that.name)
         && Objects.equals(containingClass, that.containingClass)
@@ -162,26 +161,61 @@ public class JsonOutput {
         && Objects.equals(parameters, that.parameters)
         && Objects.equals(paramTags, that.paramTags)
         && Objects.equals(returnTag, that.returnTag)
-        && Objects.equals(throwsTags, that.throwsTags);
+        && Objects.equals(throwsTags, that.throwsTags)
+        && Objects.equals(equivalence, that.equivalence);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        isVarArgs,
         signature,
         name,
         containingClass,
         targetClass,
+        isVarArgs,
         returnType,
         parameters,
         paramTags,
         returnTag,
-        throwsTags);
+        throwsTags,
+        equivalence);
   }
 
   @Override
   public String toString() {
-    return signature + "\n" + paramTags + "\n" + returnTag + "\n" + throwsTags;
+    return "JsonOutput{"
+        + "signature='"
+        + signature
+        + '\''
+        + ", name='"
+        + name
+        + '\''
+        + ", containingClass="
+        + containingClass
+        + ", targetClass='"
+        + targetClass
+        + '\''
+        + ", isVarArgs="
+        + isVarArgs
+        + ", returnType="
+        + returnType
+        + ", parameters="
+        + parameters
+        + ", paramTags="
+        + paramTags
+        + ", returnTag="
+        + returnTag
+        + ", throwsTags="
+        + throwsTags
+        + ", equivalence="
+        + equivalence
+        + '}';
+  }
+
+  public static class JsonOutputComparator implements Comparator<JsonOutput> {
+    @Override
+    public int compare(JsonOutput o1, JsonOutput o2) {
+      return o1.signature.compareTo(o2.signature);
+    }
   }
 }

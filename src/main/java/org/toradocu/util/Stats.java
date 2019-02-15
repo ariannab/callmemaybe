@@ -1,9 +1,11 @@
 package org.toradocu.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.toradocu.Toradocu;
 import org.toradocu.extractor.JavadocComment;
+import org.toradocu.output.util.EquivalenceOutput;
 import org.toradocu.output.util.JsonOutput;
 import org.toradocu.output.util.ReturnTagOutput;
 import org.toradocu.output.util.TagOutput;
@@ -45,6 +47,15 @@ public class Stats {
   /** Number of @return conditions not translated at all by Toradocu (false negatives). */
   private int missingReturnTranslations = 0;
 
+  /** Number of equivalence conditions correctly translated by Toradocu (true positives). */
+  private int correctEqTranslations = 0;
+  /** Number of equivalence conditions wrongly translated by Toradocu (false positives). */
+  private int wrongEqTranslations = 0;
+  /** Number of equivalence conditions unexpectedly translated by Toradocu. */
+  private int unexpectedEqTranslations = 0;
+  /** Number of equivalence conditions not translated at all by Toradocu (false negatives). */
+  private int missingEqTranslations = 0;
+
   /**
    * Creates new stats for a given element with specified identifier. For example, identifier could
    * be a class name or a method name.
@@ -76,6 +87,10 @@ public class Stats {
         wrong = unexpectedReturnTranslations + wrongReturnTranslations;
         translated = correctReturnTranslations + wrong;
         return translated == 0 ? 1 : correctReturnTranslations / (double) translated;
+      case FREETEXT:
+        wrong = unexpectedEqTranslations + wrongEqTranslations;
+        translated = correctEqTranslations + wrong;
+        return translated == 0 ? 1 : correctEqTranslations / (double) translated;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
@@ -96,6 +111,8 @@ public class Stats {
         return conditions == 0 ? 1 : correctParamTranslations / (double) conditions;
       case RETURN:
         return conditions == 0 ? 1 : correctReturnTranslations / (double) conditions;
+      case FREETEXT:
+        return conditions == 0 ? 1 : correctEqTranslations / (double) conditions;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
@@ -114,6 +131,8 @@ public class Stats {
         return correctParamTranslations + wrongParamTranslations + missingParamTranslations;
       case RETURN:
         return correctReturnTranslations + wrongReturnTranslations + missingReturnTranslations;
+      case FREETEXT:
+        return correctEqTranslations + wrongEqTranslations + missingEqTranslations;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
@@ -138,7 +157,10 @@ public class Stats {
    * @return the total number of correct translations
    */
   private int numberOfCorrectTranslations() {
-    return correctParamTranslations + correctThrowsTranslations + correctReturnTranslations;
+    return correctParamTranslations
+        + correctThrowsTranslations
+        + correctReturnTranslations
+        + correctEqTranslations;
   }
 
   /**
@@ -147,7 +169,10 @@ public class Stats {
    * @return the total number of wrong translations
    */
   private int numberOfWrongTranslations() {
-    return wrongParamTranslations + wrongThrowsTranslations + wrongReturnTranslations;
+    return wrongParamTranslations
+        + wrongThrowsTranslations
+        + wrongReturnTranslations
+        + wrongEqTranslations;
   }
 
   /**
@@ -156,7 +181,10 @@ public class Stats {
    * @return the total number of missing translations
    */
   private int numberOfMissingTranslations() {
-    return missingParamTranslations + missingThrowsTranslations + missingReturnTranslations;
+    return missingParamTranslations
+        + missingThrowsTranslations
+        + missingReturnTranslations
+        + missingEqTranslations;
   }
 
   /**
@@ -167,7 +195,8 @@ public class Stats {
   private int numberOfUnexpectedTranslations() {
     return unexpectedParamTranslations
         + unexpectedThrowsTranslations
-        + unexpectedReturnTranslations;
+        + unexpectedReturnTranslations
+        + unexpectedEqTranslations;
   }
 
   /**
@@ -185,6 +214,9 @@ public class Stats {
         break;
       case RETURN:
         ++correctReturnTranslations;
+        break;
+      case FREETEXT:
+        ++correctEqTranslations;
         break;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
@@ -207,6 +239,9 @@ public class Stats {
       case RETURN:
         ++wrongReturnTranslations;
         break;
+      case FREETEXT:
+        ++wrongEqTranslations;
+        break;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
@@ -228,6 +263,9 @@ public class Stats {
       case RETURN:
         ++missingReturnTranslations;
         break;
+      case FREETEXT:
+        ++missingEqTranslations;
+        break;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
     }
@@ -248,6 +286,9 @@ public class Stats {
         break;
       case RETURN:
         ++unexpectedReturnTranslations;
+        break;
+      case FREETEXT:
+        ++unexpectedEqTranslations;
         break;
       default:
         throw new IllegalStateException("Unsupported JavadocComment.Kind " + kind);
@@ -334,6 +375,43 @@ public class Stats {
       expectedMethodReturnTag.add(expectedMethod.returnTag);
       collectStats(
           methodStats, actualMethodReturnTag, expectedMethodReturnTag, JavadocComment.Kind.RETURN);
+
+      stats.add(methodStats);
+    }
+    return stats;
+  }
+
+  /**
+   * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
+   * used to generate statistics (precision and recall) of Toradocu for each method in {@code
+   * actualMethodList}.
+   *
+   * @param actualMethodList methods with tags translated by Toradocu
+   * @param expectedMethodList methods with tags manually translated
+   * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
+   *     not of the same size
+   * @return statistics for each method of the given lists
+   */
+  public static List<Stats> getEqStats(
+      List<JsonOutput> actualMethodList, List<JsonOutput> expectedMethodList) {
+
+    if (actualMethodList.size() != expectedMethodList.size()) {
+      throw new IllegalArgumentException(
+          "Actual and expected method list should be of the same size.");
+    }
+
+    List<Stats> stats = new ArrayList<>();
+    for (int methodIndex = 0; methodIndex < expectedMethodList.size(); methodIndex++) {
+      JsonOutput actualMethod = actualMethodList.get(methodIndex);
+      JsonOutput expectedMethod = expectedMethodList.get(methodIndex);
+
+      Stats methodStats =
+          new Stats(actualMethod.containingClass.getQualifiedName() + "." + actualMethod.signature);
+      collectEqStats(
+          methodStats,
+          actualMethod.equivalence,
+          expectedMethod.equivalence,
+          JavadocComment.Kind.FREETEXT);
 
       stats.add(methodStats);
     }
@@ -446,5 +524,107 @@ public class Stats {
       }
     }
     return outputMessage;
+  }
+
+  private static StringBuilder collectEqStats(
+      Stats stats,
+      EquivalenceOutput actualTag,
+      EquivalenceOutput expectedTag,
+      JavadocComment.Kind kind) {
+
+    final StringBuilder outputMessage = new StringBuilder();
+    //    final TagOutput[] actualTagsArray = actualTags.toArray(new TagOutput[actualTags.size()]);
+    //    final TagOutput[] expectedTagsArray = expectedTags.toArray(new
+    // TagOutput[expectedTags.size()]);
+    //    for (int tagIndex = 0; tagIndex < actualTagsArray.length; tagIndex++) {
+    //      TagOutput actualTag = actualTagsArray[tagIndex];
+    //      TagOutput expectedTag = expectedTagsArray[tagIndex];
+
+    if (actualTag != null && expectedTag != null) {
+      String expectedCondition = expectedTag.getCondition().replace(" ", "");
+      String actualCondition = actualTag.getCondition().replace(" ", "");
+
+      if (expectedCondition.isEmpty() && actualCondition.isEmpty()) {
+        // Both empty, nothing interesting to print!
+        return outputMessage;
+      }
+
+      if (actualCondition.equals(expectedCondition)) {
+        if (!expectedCondition.isEmpty()) {
+          stats.addCorrectTranslation(kind);
+          outputMessage.append("Correct ");
+        }
+      } else {
+        if (expectedCondition.isEmpty()) {
+          stats.addUnexpectedTranslation(kind);
+          outputMessage.append("Unexpected ");
+        } else if (actualCondition.isEmpty()) {
+          stats.addMissingTranslation(kind);
+          outputMessage.append("Missing ");
+        } else {
+          stats.addWrongTranslation(kind);
+          outputMessage.append("Wrong ");
+        }
+      }
+      outputMessage
+          .append(kind)
+          .append(" condition. CommentContent: ")
+          .append(actualTag.getComment())
+          .append("\n\tExpected condition: ")
+          .append(expectedCondition)
+          .append("\n\tActual condition: ")
+          .append(actualCondition)
+          .append("\n");
+    }
+    //    }
+    return outputMessage;
+  }
+
+  /**
+   * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
+   * used to generate statistics (precision and recall) of Toradocu for each method in {@code
+   * actualMethodList}. The statistics are aggregated per class, we assume that the {@code
+   * actualMethodList} contains methods belonging to one class.
+   *
+   * @param targetClass the class for which collect statistics
+   * @param actualMethodList methods with tags translated by Toradocu
+   * @param expectedMethodList methods with tags manually translated
+   * @param output the output message to be populated
+   * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
+   *     not of the same size
+   * @return statistics for each method of the given lists, aggregated per class
+   */
+  public static Stats getEqStats(
+      String targetClass,
+      List<JsonOutput> actualMethodList,
+      List<JsonOutput> expectedMethodList,
+      StringBuilder output) {
+
+    if (actualMethodList.size() != expectedMethodList.size()) {
+      throw new IllegalArgumentException(
+          "Actual and expected method list should be of the same size.");
+    }
+
+    Collections.sort(actualMethodList, new JsonOutput.JsonOutputComparator());
+    Collections.sort(expectedMethodList, new JsonOutput.JsonOutputComparator());
+
+    Stats stats = new Stats(targetClass);
+    for (int methodIndex = 0; methodIndex < expectedMethodList.size(); methodIndex++) {
+      JsonOutput actualMethod = actualMethodList.get(methodIndex);
+      JsonOutput expectedMethod = expectedMethodList.get(methodIndex);
+
+      List<EquivalenceOutput> actualMethodReturnTag = new ArrayList<>();
+      List<EquivalenceOutput> expectedMethodReturnTag = new ArrayList<>();
+      actualMethodReturnTag.add(actualMethod.equivalence);
+      expectedMethodReturnTag.add(expectedMethod.equivalence);
+
+      output.append(
+          collectEqStats(
+              stats,
+              actualMethod.equivalence,
+              expectedMethod.equivalence,
+              JavadocComment.Kind.FREETEXT));
+    }
+    return stats;
   }
 }

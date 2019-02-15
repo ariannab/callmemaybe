@@ -223,7 +223,12 @@ public class Toradocu {
                     StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND)) {
           List<JsonOutput> expectedResult = GsonInstance.gson().fromJson(reader, collectionType);
-          List<Stats> targetClassResults = Stats.getStats(jsonOutputs, expectedResult);
+          List<Stats> targetClassResults;
+          if (!equivalenceSpecs.isEmpty()) {
+            targetClassResults = Stats.getEqStats(jsonOutputs, expectedResult);
+          } else {
+            targetClassResults = Stats.getStats(jsonOutputs, expectedResult);
+          }
           for (Stats result : targetClassResults) {
             if (result.numberOfConditions() != 0) { // Ignore methods with no tags.
               resultsFile.write(result.asCSV());
