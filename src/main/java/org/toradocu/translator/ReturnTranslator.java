@@ -131,13 +131,16 @@ public class ReturnTranslator {
     String op = matcherOp.group(2);
 
     CodeElement<?> first = null;
-    Set<CodeElement<?>> subject = new Matcher().subjectMatch(firstFactor, method);
+    // Extract every CodeElement associated with the method and the containing class of the method.
+    Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+    Set<CodeElement<?>> subject = new Matcher().subjectMatch(firstFactor, codeElements);
     if (!subject.isEmpty()) {
       first = subject.stream().findFirst().get();
     }
     if (first != null) {
       CodeElement<?> second = null;
-      subject = new Matcher().subjectMatch(secFactor, method);
+
+      subject = new Matcher().subjectMatch(secFactor, codeElements);
       if (!subject.isEmpty()) {
         second = subject.stream().findFirst().get();
       }
@@ -208,7 +211,10 @@ public class ReturnTranslator {
                   translation.substring(translation.indexOf("{") + 1, translation.indexOf("}"));
 
               Set<CodeElement<?>> argMatches;
-              argMatches = new Matcher().subjectMatch(argument, method);
+              // Extract every CodeElement associated with the method and the containing class of
+              // the method.
+              Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+              argMatches = new Matcher().subjectMatch(argument, codeElements);
               if (argMatches.isEmpty()) {
                 //            ConditionTranslator.log.trace("Failed predicate translation for: " + p
                 // + " due to variable not found.");
@@ -476,7 +482,9 @@ public class ReturnTranslator {
     String argument = translation.substring(translation.indexOf("{") + 1, translation.indexOf("}"));
 
     Set<CodeElement<?>> argMatches;
-    argMatches = new Matcher().subjectMatch(argument, method);
+    // Extract every CodeElement associated with the method and the containing class of the method.
+    Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+    argMatches = new Matcher().subjectMatch(argument, codeElements);
     if (argMatches.isEmpty()) {
       //            ConditionTranslator.log.trace("Failed predicate translation for: " + p + " due
       // to variable not found.");
@@ -630,6 +638,9 @@ public class ReturnTranslator {
     // Try a match looking at the semantic graph.
     CodeElement<?> codeElementMatch = null;
 
+    // Extract every CodeElement associated with the method and the containing class of the method.
+    Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+
     for (SemanticGraph sg : semanticGraphs) {
       if (!sg.getAllNodesByPartOfSpeechPattern("IN").isEmpty()
           || !sg.getAllNodesByPartOfSpeechPattern("WDT").isEmpty()) {
@@ -644,7 +655,7 @@ public class ReturnTranslator {
       for (IndexedWord n : nouns) {
         for (IndexedWord a : adj) wordToMatch += a.word();
         wordToMatch += n.word();
-        Set<CodeElement<?>> subject = new Matcher().subjectMatch(wordToMatch, method);
+        Set<CodeElement<?>> subject = new Matcher().subjectMatch(wordToMatch, codeElements);
         if (!subject.isEmpty()) codeElementMatch = subject.stream().findFirst().get();
       }
     }

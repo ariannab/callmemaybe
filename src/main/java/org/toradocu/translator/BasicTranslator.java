@@ -86,7 +86,11 @@ public class BasicTranslator {
     Matcher matcher = new Matcher();
     for (Proposition p : propositionSeries.getPropositions()) {
       Set<CodeElement<?>> subjectMatches;
-      subjectMatches = matcher.subjectMatch(p.getSubject().getSubject(), method);
+
+      // Extract every CodeElement associated with the method and the containing class of the
+      // method.
+      Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+      subjectMatches = matcher.subjectMatch(p.getSubject().getSubject(), codeElements);
       if (subjectMatches.isEmpty()) {
         // ConditionTranslator.log.debug("Failed subject translation for: " + p);
         return;
@@ -115,7 +119,11 @@ public class BasicTranslator {
                   currentTranslation.indexOf("{") + 1, currentTranslation.indexOf("}"));
 
           Set<CodeElement<?>> argMatches;
-          argMatches = matcher.subjectMatch(argument, method);
+
+          // Extract every CodeElement associated with the method and the containing class of the
+          // method.
+          Set<CodeElement<?>> methodCodeElements = JavaElementsCollector.collect(method);
+          argMatches = matcher.subjectMatch(argument, methodCodeElements);
           if (argMatches.isEmpty()) {
             //            ConditionTranslator.log.trace("Failed predicate translation for: " + p + "
             // due to variable not found.");

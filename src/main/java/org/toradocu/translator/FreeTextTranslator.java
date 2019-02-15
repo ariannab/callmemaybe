@@ -1,5 +1,6 @@
 package org.toradocu.translator;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -66,7 +67,10 @@ public class FreeTextTranslator {
     String oracle;
     Matcher matcher = new Matcher();
     String methodName = equivalenceMatch.getSimpleName();
-    Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(methodName, excMember);
+
+    // Extract every CodeElement associated with the method and the containing class of the method.
+    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
+    Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(methodName, codeElements);
 
     if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
       List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
@@ -86,6 +90,15 @@ public class FreeTextTranslator {
     }
   }
 
+  private Set<CodeElement<?>> extractMethodCodeElements(DocumentedExecutable excMember) {
+    Set<CodeElement<?>> collectedElements = new LinkedHashSet<>();
+    Class<?> containingClass = excMember.getDeclaringClass();
+    List<Method> rawMethods = JavaElementsCollector.collectRawMethods(containingClass, excMember);
+    collectedElements.addAll(
+        JavaElementsCollector.getCodeElementsFromRawMethods(excMember, rawMethods));
+    return collectedElements;
+  }
+
   /**
    * Given a text, extracts a condition, if any
    *
@@ -94,9 +107,9 @@ public class FreeTextTranslator {
    */
   private String extractCondition(String text) {
     java.util.regex.Matcher matchIf =
-        Pattern.compile("\\b" + "if" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
+        Pattern.compile("\\b" + "(?i)if" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
     java.util.regex.Matcher matchWhen =
-        Pattern.compile("\\b" + "when" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
+        Pattern.compile("\\b" + "(?i)when" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
 
     int beginIndex = 0;
     int endIndex = 0;

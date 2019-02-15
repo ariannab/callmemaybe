@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Parameter;
 import java.util.*;
+import org.jetbrains.annotations.NotNull;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
@@ -51,16 +52,17 @@ public class JavaElementsCollector {
   // Executable member is ignored and not included in the returned list of methods.
   private static List<CodeElement<?>> methodsOf(
       Class<?> containingClass, DocumentedExecutable documentedExecutable) {
-    final List<Method> methods = new ArrayList<>();
-    Collections.addAll(methods, containingClass.getMethods());
-    final Executable executable = documentedExecutable.getExecutable();
-    if (executable instanceof Method) {
-      Method method = (Method) executable;
-      methods.remove(method);
-    }
+    final List<Method> methods = collectRawMethods(containingClass, documentedExecutable);
     List<Class<?>> inScopeTypes = collectInScopeTypes(documentedExecutable);
-    // methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
+    methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
+    List<CodeElement<?>> codeElements =
+        getCodeElementsFromRawMethods(documentedExecutable, methods);
+    return codeElements;
+  }
 
+  @NotNull
+  public static List<CodeElement<?>> getCodeElementsFromRawMethods(
+      DocumentedExecutable documentedExecutable, List<Method> methods) {
     List<CodeElement<?>> codeElements = new ArrayList<>();
     for (Method method : methods) {
       if (Modifier.isStatic(method.getModifiers())) {
@@ -70,6 +72,19 @@ public class JavaElementsCollector {
       }
     }
     return codeElements;
+  }
+
+  @NotNull
+  public static List<Method> collectRawMethods(
+      Class<?> containingClass, DocumentedExecutable documentedExecutable) {
+    final List<Method> methods = new ArrayList<>();
+    Collections.addAll(methods, containingClass.getMethods());
+    final Executable executable = documentedExecutable.getExecutable();
+    if (executable instanceof Method) {
+      Method method = (Method) executable;
+      methods.remove(method);
+    }
+    return methods;
   }
 
   private static List<Class<?>> collectInScopeTypes(DocumentedExecutable documentedExecutable) {

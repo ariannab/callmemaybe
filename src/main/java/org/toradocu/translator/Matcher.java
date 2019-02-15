@@ -51,9 +51,10 @@ class Matcher {
    * @param method the {@code DocumentedExecutable} that the subject was extracted from
    * @return a set of {@code CodeElement}s that have a similar name to the subject
    */
-  Set<CodeElement<?>> subjectMatch(String subject, DocumentedExecutable method) {
+  Set<CodeElement<?>> subjectMatch(String subject, Set<CodeElement<?>> codeElements) {
     // Extract every CodeElement associated with the method and the containing class of the method.
-    Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+    // FIXME do this call outside and directly give code elements
+    // Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
 
     // Clean the subject string by removing words and characters not related to its identity so that
     // they do not influence string matching.
@@ -80,7 +81,10 @@ class Matcher {
    * @return the {@code CodeElement} that has a similar name to the container
    */
   CodeElement<?> containerMatch(String container, DocumentedExecutable method) {
-    final Set<CodeElement<?>> containers = subjectMatch(container, method);
+
+    // Extract every CodeElement associated with the method and the containing class of the method.
+    Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
+    final Set<CodeElement<?>> containers = subjectMatch(container, codeElements);
     return !containers.isEmpty() ? containers.iterator().next() : null;
   }
 
@@ -579,6 +583,7 @@ class Matcher {
   }
 
   private boolean isGenericType(String pt, List<String> paramMatch) {
+    // FIXME this is naive and potentially wrong, look at the same method in ComplianceChecks
     return paramMatch.contains("java.lang.Object")
         && pt.length() == 1
         && Character.isUpperCase(pt.charAt(0));
