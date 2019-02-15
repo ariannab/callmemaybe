@@ -200,6 +200,9 @@ public final class CommentContent {
 
   /** Removes HTML tags from the comment text. */
   private void removeHTMLTags() {
+    if (this.text.contains("<p>") && !this.text.contains("</p>")) {
+      this.text = this.text.replaceAll("<p>", "");
+    }
     String htmlTagPattern = "<([a-zA-Z][a-zA-Z0-9]*)\\b[^>]*>(.*?)</\\1>|(<(.*)/>)";
     Matcher matcher = Pattern.compile(htmlTagPattern).matcher(text);
     while (matcher.find()) {
