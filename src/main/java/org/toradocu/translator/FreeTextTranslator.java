@@ -1,6 +1,6 @@
 package org.toradocu.translator;
 
-import java.lang.reflect.Method;
+import java.lang.reflect.Executable;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -23,38 +23,52 @@ public class FreeTextTranslator {
    * @param excMember the executable member the comment belongs to
    * @return the translation, null if failed
    */
-  public MethodMatch translate(FreeText freeTextComment, DocumentedExecutable excMember) {
+  public ArrayList<MethodMatch> translate(
+      FreeText freeTextComment, DocumentedExecutable excMember) {
     String commentText = freeTextComment.getComment().getText();
-    String[] sentences = commentText.split("\\. ");
-    Set<String> conditions = new LinkedHashSet<>();
-    MethodMatch equivalenceMatch = null;
+    String[] sentences = commentText.split("[.;] ");
+    ArrayList<MethodMatch> matches = new ArrayList<>();
+    MethodMatch equivalenceMatch = new MethodMatch();
 
     for (String sentence : sentences) {
-      // Verify comment contains equivalence declaration...
-      equivalenceMatch = Equivalences.getEquivalentOrSimilarMethod(sentence);
-      if (!equivalenceMatch.getMethodSignature().isEmpty()) {
-        if (equivalenceMatch.isSimilarity()) {
-          String condition = extractCondition(sentence);
-          if (condition != null) {
-            List<PropositionSeries> extractedPropositions =
-                Parser.parse(new CommentContent(condition), excMember);
-            for (PropositionSeries propositions : extractedPropositions) {
-              BasicTranslator.translate(propositions, excMember, sentence);
-              conditions.add(propositions.getTranslation());
-
-              if (!conditions.isEmpty()) {
-                matchEquivalentMethod(excMember, equivalenceMatch);
-              }
-            }
+      // Let's avoid spurious comments...
+      if (!sentence.isEmpty() && sentence.length() > 2) {
+        // Verify comment contains equivalence declaration...
+        equivalenceMatch = Equivalences.getEquivalentOrSimilarMethod(sentence);
+        if (!equivalenceMatch.getMethodSignature().isEmpty()) {
+          if (equivalenceMatch.isSimilarity()) {
+            translateConditionalEquivalence(excMember, equivalenceMatch, sentence);
+          } else {
+            // Exact equivalence
+            matchEquivalentMethod(excMember, equivalenceMatch, "");
           }
-        } else {
-          // Exact equivalence
-          matchEquivalentMethod(excMember, equivalenceMatch);
         }
+        matches.add(equivalenceMatch);
       }
     }
+    return matches;
+  }
 
-    return equivalenceMatch;
+  private void translateConditionalEquivalence(
+      DocumentedExecutable excMember, MethodMatch equivalenceMatch, String sentence) {
+    String condition = extractCondition(sentence);
+    if (condition != null) {
+      String translation = "";
+      List<PropositionSeries> extractedPropositions =
+          Parser.parse(new CommentContent(condition), excMember);
+      for (PropositionSeries propositions : extractedPropositions) {
+        BasicTranslator.translate(propositions, excMember, sentence);
+        translation = propositions.getTranslation();
+        if (!translation.isEmpty()) {
+          matchEquivalentMethod(excMember, equivalenceMatch, translation);
+        }
+      }
+      if (translation.isEmpty()) {
+        // Condition predicate could be expressed directly with a method signature, e.g.
+        // "if list.isEmpty()" instead of the classic "if list is empty": look for signatures
+        // FIXME this could be not the right place where to check this, mb as first attemp above?
+      }
+    }
   }
 
   /**
@@ -62,8 +76,10 @@ public class FreeTextTranslator {
    *
    * @param excMember the executable member the comment belongs to
    * @param equivalenceMatch the final match, null if nothing found
+   * @param condition
    */
-  private void matchEquivalentMethod(DocumentedExecutable excMember, MethodMatch equivalenceMatch) {
+  private void matchEquivalentMethod(
+      DocumentedExecutable excMember, MethodMatch equivalenceMatch, String condition) {
     String oracle;
     Matcher matcher = new Matcher();
     String methodName = equivalenceMatch.getSimpleName();
@@ -76,15 +92,25 @@ public class FreeTextTranslator {
       List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
 
       Match theOne = matcher.reverseBestArgsTypeMatch(equivalenceMatch, excMember, sortedCodeElem);
+      String negation = "";
+      if (equivalenceMatch.isNegated()) {
+        negation = "!";
+      }
       if (theOne != null) {
         if (ComplianceChecks.primitiveTypes()
             .contains(excMember.getReturnType().getType().getTypeName())) {
-          oracle = Configuration.RETURN_VALUE + "==" + theOne.getBaseExpression();
+          oracle = Configuration.RETURN_VALUE + "==" + negation + theOne.getBaseExpression();
         } else {
-          oracle = Configuration.RETURN_VALUE + ".equals(" + theOne.getBaseExpression() + ")";
+          oracle =
+              Configuration.RETURN_VALUE + ".equals(" + negation + theOne.getBaseExpression() + ")";
         }
-        if (ComplianceChecks.isEqSpecCompilable(excMember, oracle)) {
-          equivalenceMatch.setOracle(oracle);
+
+        if (ComplianceChecks.isEqSpecCompilable(excMember, oracle, condition)) {
+          if (!condition.isEmpty()) {
+            equivalenceMatch.setOracle("if (" + condition + ") {" + oracle + "}");
+          } else {
+            equivalenceMatch.setOracle(oracle);
+          }
         }
       }
     }
@@ -93,7 +119,8 @@ public class FreeTextTranslator {
   private Set<CodeElement<?>> extractMethodCodeElements(DocumentedExecutable excMember) {
     Set<CodeElement<?>> collectedElements = new LinkedHashSet<>();
     Class<?> containingClass = excMember.getDeclaringClass();
-    List<Method> rawMethods = JavaElementsCollector.collectRawMethods(containingClass, excMember);
+    List<Executable> rawMethods =
+        JavaElementsCollector.collectRawMethods(containingClass, excMember);
     collectedElements.addAll(
         JavaElementsCollector.getCodeElementsFromRawMethods(excMember, rawMethods));
     return collectedElements;

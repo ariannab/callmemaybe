@@ -11,7 +11,6 @@ import randoop.condition.specification.PostSpecification;
 import randoop.condition.specification.PreSpecification;
 import randoop.condition.specification.ThrowsSpecification;
 
-/** Created by arianna on 28/06/17. */
 public class JsonOutput {
   public String signature;
   public String name;
@@ -25,9 +24,7 @@ public class JsonOutput {
   public List<ThrowsTagOutput> throwsTags;
   public EquivalenceOutput equivalence;
 
-  // TODO add a constructor as this one but with eq specs instead of specification!
-
-  public JsonOutput(DocumentedExecutable member, MethodMatch specification) {
+  public JsonOutput(DocumentedExecutable member, ArrayList<MethodMatch> specification) {
     // TODO translate the executable member to a serializable format
     this.signature = member.getSignature();
     this.name = member.getName();
@@ -48,12 +45,23 @@ public class JsonOutput {
     createEquivalences(member, specification);
   }
 
-  private void createEquivalences(DocumentedExecutable member, MethodMatch specification) {
+  private void createEquivalences(
+      DocumentedExecutable member, ArrayList<MethodMatch> specification) {
+    String oracle = "";
+    for (MethodMatch m : specification) {
+      if (!m.getOracle().isEmpty()) {
+        oracle += m.getOracle();
+        if (specification.size() > 1) {
+          // FIXME I don't like this, exploit join() or smt
+          oracle += ";";
+        }
+      }
+    }
     this.equivalence =
         new EquivalenceOutput(
             member.getFreeText().getComment().getText(),
             member.getFreeText().getKind().toString(),
-            specification.getOracle());
+            oracle);
   }
 
   public JsonOutput(DocumentedExecutable member, OperationSpecification specification) {

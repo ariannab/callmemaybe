@@ -141,7 +141,7 @@ public class Toradocu {
 
     if (configuration.isConditionTranslationEnabled()) {
       Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
-      Map<DocumentedExecutable, MethodMatch> equivalenceSpecs = new HashMap<>();
+      Map<DocumentedExecutable, ArrayList<MethodMatch>> equivalenceSpecs = new HashMap<>();
 
       List<JsonOutput> jsonOutputs = new ArrayList<>();
       // Use @tComment or the standard condition translator to translate comments.
@@ -156,25 +156,25 @@ public class Toradocu {
       // Output the result on a file or on the standard output, if silent mode is disabled.
       if (!configuration.isSilent()) {
         if (!equivalenceSpecs.isEmpty()) {
-          // TODO compare outputs in tests (look at method compare() in PrecisionRecallTest)
           if (configuration.getConditionTranslatorOutput() != null) {
             try (BufferedWriter writer =
                 Files.newBufferedWriter(
                     configuration.getConditionTranslatorOutput().toPath(),
                     StandardCharsets.UTF_8)) {
 
-              List<MethodMatch> equivalences = new ArrayList<>(equivalenceSpecs.values());
-              equivalences.removeIf(e -> !e.isEquivalence() && !e.isSimilarity());
+              List<List<MethodMatch>> equivalences = new ArrayList<>(equivalenceSpecs.values());
+              for (List<MethodMatch> subMatches : equivalences) {
+                subMatches.removeIf(e -> !e.isEquivalence() && !e.isSimilarity());
+              }
+              equivalences.removeIf(List::isEmpty);
               if (!equivalences.isEmpty()) {
                 for (DocumentedExecutable executable : equivalenceSpecs.keySet()) {
                   jsonOutputs.add(new JsonOutput(executable, equivalenceSpecs.get(executable)));
                 }
-              }
-              if (!jsonOutputs.isEmpty()) {
                 String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
                 writer.write(jsonOutput);
               } else {
-                // FIXME ugly, but we don't want empty goal files around for now
+                // FIXME ugly, but we don't want empty JSON files around for now
                 File file = new File(configuration.getConditionTranslatorOutput().toURI());
                 file.delete();
               }
@@ -223,16 +223,18 @@ public class Toradocu {
                     StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND)) {
           List<JsonOutput> expectedResult = GsonInstance.gson().fromJson(reader, collectionType);
-          List<Stats> targetClassResults;
-          if (!equivalenceSpecs.isEmpty()) {
+          List<Stats> targetClassResults = null;
+          if (!jsonOutputs.isEmpty()) {
             targetClassResults = Stats.getEqStats(jsonOutputs, expectedResult);
-          } else {
+          } else if (!configuration.mustGenerateCrossOracles()) {
             targetClassResults = Stats.getStats(jsonOutputs, expectedResult);
           }
-          for (Stats result : targetClassResults) {
-            if (result.numberOfConditions() != 0) { // Ignore methods with no tags.
-              resultsFile.write(result.asCSV());
-              resultsFile.newLine();
+          if (targetClassResults != null) {
+            for (Stats result : targetClassResults) {
+              if (result.numberOfConditions() != 0) { // Ignore methods with no tags.
+                resultsFile.write(result.asCSV());
+                resultsFile.newLine();
+              }
             }
           }
         } catch (IOException e) {

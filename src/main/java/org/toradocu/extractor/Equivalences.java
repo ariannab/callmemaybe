@@ -26,6 +26,8 @@ public class Equivalences {
     if (methodMatch != null) {
       return methodMatch;
     } else {
+      // TODO add "instead of" (comments like "this method should be used instead of the other
+      // method"
       KeywordsSet similarityKw =
           new KeywordsSet(
               Arrays.asList("prefer", "alternative", "replacement for"),
@@ -35,7 +37,7 @@ public class Equivalences {
         return methodMatch;
       }
     }
-    return new MethodMatch("", false, false, new ArrayList<>());
+    return new MethodMatch("", false, false, new ArrayList<>(), false);
   }
 
   /**
@@ -48,24 +50,25 @@ public class Equivalences {
    */
   private static MethodMatch getSignatureInMatchingComment(
       String comment, KeywordsSet keywordsSet) {
-    String methodRegex = "\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+";
+    String methodRegex = "(!)?(\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+)";
     for (String word : keywordsSet.getKw()) {
       Matcher matcher =
           Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE).matcher(comment);
       if (matcher.find()) {
         // I do not only want the comment to contain the keywords, I also want to find a
         // method signature in it - otherwise, what is this method equivalent to?
-        java.util.regex.Matcher methodMatch;
-        int group = 0;
+        java.util.regex.Matcher signatureMatch;
+        int group = 2;
         if (word.equals("as")) {
-          methodMatch = Pattern.compile(" as (" + methodRegex + ")").matcher(comment);
-          group = 1;
+          signatureMatch = Pattern.compile(" as " + methodRegex).matcher(comment);
         } else {
-          methodMatch = Pattern.compile(methodRegex).matcher(comment);
+          signatureMatch = Pattern.compile(methodRegex).matcher(comment);
         }
 
-        if (methodMatch.find() && !doRangesOverlap(matcher, methodMatch)) {
-          List<String> arguments = extractArguments(methodMatch);
+        if (signatureMatch.find() && !doRangesOverlap(matcher, signatureMatch)) {
+          String signatureFound = signatureMatch.group(group);
+          boolean negation = signatureMatch.group(1) != null;
+          List<String> arguments = extractArguments(signatureMatch);
           // TODO check if there is an "if" or "when" or "except" - more?
           if (keywordsSet.getCategory().equals(KeywordsSet.Category.SIMILARITY)
               || Pattern.compile("\\b" + "if" + "\\b", Pattern.CASE_INSENSITIVE)
@@ -77,9 +80,9 @@ public class Equivalences {
               || Pattern.compile("\\b" + "except" + "\\b", Pattern.CASE_INSENSITIVE)
                   .matcher(comment)
                   .find()) {
-            return new MethodMatch(methodMatch.group(group), false, true, arguments);
+            return new MethodMatch(signatureFound, false, true, arguments, negation);
           } else {
-            return new MethodMatch(methodMatch.group(group), true, false, arguments);
+            return new MethodMatch(signatureFound, true, false, arguments, negation);
           }
         }
       }
@@ -88,9 +91,9 @@ public class Equivalences {
   }
 
   private static List<String> extractArguments(Matcher methodMatch) {
-    if (methodMatch.group(2) != null) {
+    if (methodMatch.group(4) != null) {
       // the method takes arguments
-      String[] args = methodMatch.group(2).split(",");
+      String[] args = methodMatch.group(4).split(",");
       for (int i = 0; i < args.length; i++) {
         args[i] = args[i].trim();
       }

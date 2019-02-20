@@ -3,6 +3,7 @@ package org.toradocu.translator;
 import static java.util.stream.Collectors.toList;
 
 import edu.stanford.nlp.semgraph.SemanticGraph;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Executable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -52,7 +53,7 @@ public class JavaElementsCollector {
   // Executable member is ignored and not included in the returned list of methods.
   private static List<CodeElement<?>> methodsOf(
       Class<?> containingClass, DocumentedExecutable documentedExecutable) {
-    final List<Method> methods = collectRawMethods(containingClass, documentedExecutable);
+    final List<Executable> methods = collectRawMethods(containingClass, documentedExecutable);
     List<Class<?>> inScopeTypes = collectInScopeTypes(documentedExecutable);
     methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
     List<CodeElement<?>> codeElements =
@@ -62,23 +63,30 @@ public class JavaElementsCollector {
 
   @NotNull
   public static List<CodeElement<?>> getCodeElementsFromRawMethods(
-      DocumentedExecutable documentedExecutable, List<Method> methods) {
+      DocumentedExecutable documentedExecutable, List<Executable> methods) {
     List<CodeElement<?>> codeElements = new ArrayList<>();
-    for (Method method : methods) {
-      if (Modifier.isStatic(method.getModifiers())) {
-        codeElements.add(new StaticMethodCodeElement(method));
-      } else if (!documentedExecutable.isConstructor()) {
-        codeElements.add(new MethodCodeElement(Configuration.RECEIVER, method));
+    for (Executable executable : methods) {
+      if (executable instanceof Method) {
+        if (Modifier.isStatic(executable.getModifiers())) {
+          codeElements.add(new StaticMethodCodeElement(((Method) executable)));
+        } else {
+          // if (!documentedExecutable.isConstructor()) {
+          codeElements.add(new MethodCodeElement(Configuration.RECEIVER, ((Method) executable)));
+        }
+      } else if (executable instanceof Constructor) {
+        codeElements.add(
+            new ConstructorCodeElement(Configuration.RECEIVER, ((Constructor) executable)));
       }
     }
     return codeElements;
   }
 
   @NotNull
-  public static List<Method> collectRawMethods(
+  public static List<Executable> collectRawMethods(
       Class<?> containingClass, DocumentedExecutable documentedExecutable) {
-    final List<Method> methods = new ArrayList<>();
+    final List<Executable> methods = new ArrayList<>();
     Collections.addAll(methods, containingClass.getMethods());
+    Collections.addAll(methods, containingClass.getConstructors());
     final Executable executable = documentedExecutable.getExecutable();
     if (executable instanceof Method) {
       Method method = (Method) executable;
@@ -196,7 +204,7 @@ public class JavaElementsCollector {
     return ids;
   }
 
-  private static boolean invokableWithParameters(Method method, List<Class<?>> inScopeTypes) {
+  private static boolean invokableWithParameters(Executable method, List<Class<?>> inScopeTypes) {
     final List<? extends Class<?>> methodParamTypes =
         Arrays.stream(method.getParameters()).map(Parameter::getType).collect(toList());
     return inScopeTypes.containsAll(methodParamTypes);

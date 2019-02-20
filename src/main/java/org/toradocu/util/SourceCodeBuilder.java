@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class SourceCodeBuilder {
 
-  /** The boolean conditions to include in the source code. */
+  /** The boolean conditions to include in the source code as ifs. */
   private Set<String> conditions = new HashSet<>();
   /** The method arguments to include in the source code. */
   private Set<String> arguments = new HashSet<>();

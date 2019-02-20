@@ -52,10 +52,6 @@ class Matcher {
    * @return a set of {@code CodeElement}s that have a similar name to the subject
    */
   Set<CodeElement<?>> subjectMatch(String subject, Set<CodeElement<?>> codeElements) {
-    // Extract every CodeElement associated with the method and the containing class of the method.
-    // FIXME do this call outside and directly give code elements
-    // Set<CodeElement<?>> codeElements = JavaElementsCollector.collect(method);
-
     // Clean the subject string by removing words and characters not related to its identity so that
     // they do not influence string matching.
     List<String> wordsToRemove = Arrays.asList("either", "both", "any");
@@ -66,7 +62,6 @@ class Matcher {
       }
     }
     subject = subject.trim();
-
     // Filter and return the CodeElements whose name is similar to subject.
     return filterMatchingCodeElements(subject, codeElements);
   }
@@ -229,7 +224,7 @@ class Matcher {
     List<CodeElement<?>> sortedMethodList = new ArrayList<CodeElement<?>>(codeElements);
 
     // Try the classic syntactic match first of all
-    Match match = syntacticMatch(predicate, codeElements, method);
+    Match match = syntacticMatch(predicate, codeElements, method, subject.getJavaExpression());
     if (match == null && SemanticMatcher.isEnabled()) {
       // When the syntactic match fails, try semantic if enabled
       try {
@@ -334,9 +329,21 @@ class Matcher {
    * @return the best matching code element according to the edit distance, null if none found
    */
   private Match syntacticMatch(
-      String predicate, Set<CodeElement<?>> codeElements, DocumentedExecutable method) {
+      String predicate,
+      Set<CodeElement<?>> codeElements,
+      DocumentedExecutable method,
+      String subject) {
+    if (predicate.contains("equal")) {
+      System.out.println();
+    }
     List<CodeElement<?>> sortedMethodList;
     sortedMethodList = new ArrayList<>(filterMatchingCodeElements(predicate, codeElements));
+
+    sortedMethodList.removeIf(
+        m ->
+            m instanceof MethodCodeElement
+                && !((MethodCodeElement) m).getReceiver().equals(subject));
+
     if (!sortedMethodList.isEmpty())
       Collections.sort(sortedMethodList, new JavaExpressionComparator());
     if (sortedMethodList.isEmpty()) {
@@ -410,7 +417,7 @@ class Matcher {
         match.completeExpression(paramForMatch.get(j) + ",");
       }
       match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
-    } else if (otherMethodArgs != null) {
+    } else if (!foundArgMatch && otherMethodArgs != null) {
       // the method is supposed to take params but we haven't find a match: does it have to take
       // special arguments such as null?
       match = manageSpecialPatterns(predicate, receiver, sortedCodeElements, myMethodArgs);
@@ -448,7 +455,8 @@ class Matcher {
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements) {
     Match match = null;
-    Map<Integer, String> ignoreParams = equivalentMethod.getConstants();
+    Map<Integer, String> constantParamsToIgnore = equivalentMethod.getHardcodedParams();
+    Map<Integer, String> codeElementsParams = equivalentMethod.getStaticFinalParams();
     CodeElement<?> firstCodeMatch = null;
     List<String> paramForMatch = new ArrayList<String>();
     // List<String> otherMethodParams;
@@ -461,7 +469,10 @@ class Matcher {
     }
 
     for (CodeElement<?> currentMatch : sortedCodeElements) {
-      if (currentMatch instanceof MethodCodeElement) {
+      if (currentMatch instanceof ConstructorCodeElement) {
+        currentMatchParams = ((ConstructorCodeElement) currentMatch).getArgs();
+        receiver = ((ConstructorCodeElement) currentMatch).getReceiver();
+      } else if (currentMatch instanceof MethodCodeElement) {
         currentMatchParams = ((MethodCodeElement) currentMatch).getArgs();
         receiver = ((MethodCodeElement) currentMatch).getReceiver();
       } else if (currentMatch instanceof StaticMethodCodeElement) {
@@ -471,7 +482,8 @@ class Matcher {
       // and fill the parenthesis () with the right ones
       if (currentMatchParams != null
           && currentMatchParams.length == equivalentMethod.getArguments().size()
-          && currentMatchParams.length <= myMethodArgs.length + ignoreParams.size()) {
+          && currentMatchParams.length
+              <= myMethodArgs.length + constantParamsToIgnore.size() + codeElementsParams.size()) {
         int argIndex = 0;
         for (String currentMatchParam : currentMatchParams) {
           if (myParamTypes.contains(currentMatchParam)
@@ -480,12 +492,13 @@ class Matcher {
               paramForMatch.add("args[" + argIndex + "]");
               argIndex++;
             }
-          } else if (ignoreParams.containsKey(argIndex)) {
-            paramForMatch.add(ignoreParams.get(argIndex));
+          } else if (constantParamsToIgnore.containsKey(argIndex)) {
+            paramForMatch.add(constantParamsToIgnore.get(argIndex));
           }
         }
 
-        boolean sizesMatch = paramForMatch.size() == currentMatchParams.length;
+        boolean sizesMatch =
+            paramForMatch.size() + codeElementsParams.size() == currentMatchParams.length;
         if (sizesMatch) {
           firstCodeMatch = currentMatch;
           break;
@@ -504,6 +517,9 @@ class Matcher {
       }
       for (int j = 0; j < paramForMatch.size() - 1; j++) {
         match.completeExpression(paramForMatch.get(j) + ",");
+      }
+      if (!codeElementsParams.isEmpty()) {
+        // TODO match parameter code elements. How? SubjectMatch? And then fill paramForMatch
       }
       match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
     }

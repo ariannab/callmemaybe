@@ -106,21 +106,27 @@ public class ComplianceChecks {
    * @param condition the condition to compile
    * @return whether the condition compiles or not
    */
-  public static boolean isEqSpecCompilable(DocumentedExecutable method, String condition) {
+  public static boolean isEqSpecCompilable(
+      DocumentedExecutable method, String oracle, String condition) {
     if (Modifier.isPrivate(method.getDeclaringClass().getModifiers())) {
       // if the target class is private we cannot apply compliance check.
       return true;
     }
+    // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
+    // FIXME this should be checked also for returns translation
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     includeMethodResult(method, sourceCodeBuilder);
-    addConditionCodeInformation(method, condition, sourceCodeBuilder);
+    addConditionCodeInformation(method, oracle, sourceCodeBuilder);
+    if (!condition.isEmpty()) {
+      addConditionCodeInformation(method, condition, sourceCodeBuilder);
+    }
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
     } catch (CompilationException e) {
       log.info(
           "The following specification was generated but discarded:\n"
-              + condition
+              + oracle
               + "\n"
               + e.getLocalizedMessage()
               + "\n"

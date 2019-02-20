@@ -97,6 +97,7 @@ public class ParameterCodeElement extends CodeElement<Parameter> {
   @Override
   boolean isCompatibleWith(Class<?> declaringClass, String predicateTranslation) {
     final Parameter subject = getJavaCodeElement();
+
     final Class<?> subjectType = subject.getType();
 
     // Comparison with receiver object

@@ -39,7 +39,8 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code freeTextComment}
    * @return a specification
    */
-  public static MethodMatch translate(FreeText freeTextComment, DocumentedExecutable excMember) {
+  public static ArrayList<MethodMatch> translate(
+      FreeText freeTextComment, DocumentedExecutable excMember) {
     PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new FreeTextTranslator().translate(freeTextComment, excMember);
@@ -146,9 +147,9 @@ public class CommentTranslator {
     return condition;
   }
 
-  public static Map<DocumentedExecutable, MethodMatch> createCrossOracles(
+  public static Map<DocumentedExecutable, ArrayList<MethodMatch>> createCrossOracles(
       List<DocumentedExecutable> members) {
-    Map<DocumentedExecutable, MethodMatch> specs = new HashMap<>();
+    Map<DocumentedExecutable, ArrayList<MethodMatch>> specs = new HashMap<>();
     for (DocumentedExecutable member : members) {
       specs.put(member, CommentTranslator.translate(member.freeText(), member));
     }

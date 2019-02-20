@@ -96,6 +96,8 @@ public class BasicTranslator {
         return;
       }
       final Set<CodeElement<?>> matchingCodeElements = new LinkedHashSet<>();
+      // FIXME at this point we will extract also code elements that are NOT invoked from the
+      // subject. WHY?
       String loop = findMatchingCodeElements(p, subjectMatches, method, matchingCodeElements);
       if (loop.equals(LOOP_RETURN)) {
         return;
