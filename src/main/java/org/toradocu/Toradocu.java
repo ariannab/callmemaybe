@@ -22,8 +22,8 @@ import org.slf4j.impl.SimpleLogger;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedType;
+import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.extractor.JavadocExtractor;
-import org.toradocu.extractor.MethodMatch;
 import org.toradocu.extractor.ParameterNotFoundException;
 import org.toradocu.generator.OracleGenerator;
 import org.toradocu.output.util.JsonOutput;
@@ -141,7 +141,8 @@ public class Toradocu {
 
     if (configuration.isConditionTranslationEnabled()) {
       Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
-      Map<DocumentedExecutable, ArrayList<MethodMatch>> equivalenceSpecs = new HashMap<>();
+      Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> equivalenceSpecs =
+          new HashMap<>();
 
       List<JsonOutput> jsonOutputs = new ArrayList<>();
       // Use @tComment or the standard condition translator to translate comments.
@@ -162,8 +163,9 @@ public class Toradocu {
                     configuration.getConditionTranslatorOutput().toPath(),
                     StandardCharsets.UTF_8)) {
 
-              List<List<MethodMatch>> equivalences = new ArrayList<>(equivalenceSpecs.values());
-              for (List<MethodMatch> subMatches : equivalences) {
+              List<List<EquivalentMethodMatch>> equivalences =
+                  new ArrayList<>(equivalenceSpecs.values());
+              for (List<EquivalentMethodMatch> subMatches : equivalences) {
                 subMatches.removeIf(e -> !e.isEquivalence() && !e.isSimilarity());
               }
               equivalences.removeIf(List::isEmpty);

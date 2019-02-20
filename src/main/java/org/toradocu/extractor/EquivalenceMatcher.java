@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Equivalences {
+public class EquivalenceMatcher {
 
   /**
    * This method answers to the question "does the comment express an equivalence?". Basically a man
@@ -15,14 +15,14 @@ public class Equivalences {
    * @param comment comment to parse
    * @return the signature of the (supposedly) equivalent method
    */
-  public static MethodMatch getEquivalentOrSimilarMethod(String comment) {
+  public static EquivalentMethodMatch getEquivalentOrSimilarMethod(String comment) {
     // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
     // TODO consider also: behaves (as?), like
     KeywordsSet equivalenceKw =
         new KeywordsSet(
             Arrays.asList("equivalent", "similar", "analog", "same as", "identical"),
             KeywordsSet.Category.EQUIVALENCE);
-    MethodMatch methodMatch = getSignatureInMatchingComment(comment, equivalenceKw);
+    EquivalentMethodMatch methodMatch = getSignatureInMatchingComment(comment, equivalenceKw);
     if (methodMatch != null) {
       return methodMatch;
     } else {
@@ -37,7 +37,7 @@ public class Equivalences {
         return methodMatch;
       }
     }
-    return new MethodMatch("", false, false, new ArrayList<>(), false);
+    return new EquivalentMethodMatch("", false, false, new ArrayList<>(), false);
   }
 
   /**
@@ -48,7 +48,7 @@ public class Equivalences {
    * @param keywordsSet the keywords to search for
    * @return the signature of the (supposedly) equivalent method
    */
-  private static MethodMatch getSignatureInMatchingComment(
+  private static EquivalentMethodMatch getSignatureInMatchingComment(
       String comment, KeywordsSet keywordsSet) {
     String methodRegex = "(!)?(\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+)";
     for (String word : keywordsSet.getKw()) {
@@ -80,9 +80,9 @@ public class Equivalences {
               || Pattern.compile("\\b" + "except" + "\\b", Pattern.CASE_INSENSITIVE)
                   .matcher(comment)
                   .find()) {
-            return new MethodMatch(signatureFound, false, true, arguments, negation);
+            return new EquivalentMethodMatch(signatureFound, false, true, arguments, negation);
           } else {
-            return new MethodMatch(signatureFound, true, false, arguments, negation);
+            return new EquivalentMethodMatch(signatureFound, true, false, arguments, negation);
           }
         }
       }

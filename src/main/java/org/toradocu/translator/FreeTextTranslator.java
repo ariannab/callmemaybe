@@ -9,9 +9,9 @@ import java.util.regex.Pattern;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
-import org.toradocu.extractor.Equivalences;
+import org.toradocu.extractor.EquivalenceMatcher;
+import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.extractor.FreeText;
-import org.toradocu.extractor.MethodMatch;
 import org.toradocu.util.ComplianceChecks;
 
 public class FreeTextTranslator {
@@ -23,18 +23,18 @@ public class FreeTextTranslator {
    * @param excMember the executable member the comment belongs to
    * @return the translation, null if failed
    */
-  public ArrayList<MethodMatch> translate(
+  public ArrayList<EquivalentMethodMatch> translate(
       FreeText freeTextComment, DocumentedExecutable excMember) {
     String commentText = freeTextComment.getComment().getText();
     String[] sentences = commentText.split("[.;] ");
-    ArrayList<MethodMatch> matches = new ArrayList<>();
-    MethodMatch equivalenceMatch = new MethodMatch();
+    ArrayList<EquivalentMethodMatch> matches = new ArrayList<>();
+    EquivalentMethodMatch equivalenceMatch = new EquivalentMethodMatch();
 
     for (String sentence : sentences) {
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
         // Verify comment contains equivalence declaration...
-        equivalenceMatch = Equivalences.getEquivalentOrSimilarMethod(sentence);
+        equivalenceMatch = EquivalenceMatcher.getEquivalentOrSimilarMethod(sentence);
         if (!equivalenceMatch.getMethodSignature().isEmpty()) {
           if (equivalenceMatch.isSimilarity()) {
             translateConditionalEquivalence(excMember, equivalenceMatch, sentence);
@@ -50,7 +50,7 @@ public class FreeTextTranslator {
   }
 
   private void translateConditionalEquivalence(
-      DocumentedExecutable excMember, MethodMatch equivalenceMatch, String sentence) {
+      DocumentedExecutable excMember, EquivalentMethodMatch equivalenceMatch, String sentence) {
     String condition = extractCondition(sentence);
     if (condition != null) {
       String translation = "";
@@ -79,7 +79,7 @@ public class FreeTextTranslator {
    * @param condition
    */
   private void matchEquivalentMethod(
-      DocumentedExecutable excMember, MethodMatch equivalenceMatch, String condition) {
+      DocumentedExecutable excMember, EquivalentMethodMatch equivalenceMatch, String condition) {
     String oracle;
     Matcher matcher = new Matcher();
     String methodName = equivalenceMatch.getSimpleName();

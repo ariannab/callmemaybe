@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
-import org.toradocu.extractor.MethodMatch;
+import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.translator.semantic.SemanticMatcher;
 
 /**
@@ -451,7 +451,7 @@ class Matcher {
    * @return the match, may be null
    */
   Match reverseBestArgsTypeMatch(
-      MethodMatch equivalentMethod,
+      EquivalentMethodMatch equivalentMethod,
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements) {
     Match match = null;

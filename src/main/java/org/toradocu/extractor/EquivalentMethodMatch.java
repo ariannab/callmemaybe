@@ -16,7 +16,7 @@ EqSpecification extends Specification {
         this.guard = guard;
     }
  */
-public class MethodMatch {
+public class EquivalentMethodMatch {
 
   private String methodSignature;
   private String simpleName;
@@ -29,7 +29,7 @@ public class MethodMatch {
   private Map<Integer, String> staticFinalParams;
   private boolean isNegated;
 
-  public MethodMatch() {
+  public EquivalentMethodMatch() {
     this.methodSignature = "";
     this.simpleName = "";
     this.equivalence = false;
@@ -37,7 +37,7 @@ public class MethodMatch {
     this.oracle = "";
   }
 
-  MethodMatch(
+  EquivalentMethodMatch(
       String methodSignature,
       boolean equivalence,
       boolean similarity,

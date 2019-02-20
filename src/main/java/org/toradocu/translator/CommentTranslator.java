@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
+import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.extractor.FreeText;
-import org.toradocu.extractor.MethodMatch;
 import org.toradocu.extractor.ParamTag;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.extractor.ThrowsTag;
@@ -39,7 +39,7 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code freeTextComment}
    * @return a specification
    */
-  public static ArrayList<MethodMatch> translate(
+  public static ArrayList<EquivalentMethodMatch> translate(
       FreeText freeTextComment, DocumentedExecutable excMember) {
     PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
@@ -147,9 +147,9 @@ public class CommentTranslator {
     return condition;
   }
 
-  public static Map<DocumentedExecutable, ArrayList<MethodMatch>> createCrossOracles(
+  public static Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> createCrossOracles(
       List<DocumentedExecutable> members) {
-    Map<DocumentedExecutable, ArrayList<MethodMatch>> specs = new HashMap<>();
+    Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> specs = new HashMap<>();
     for (DocumentedExecutable member : members) {
       specs.put(member, CommentTranslator.translate(member.freeText(), member));
     }
