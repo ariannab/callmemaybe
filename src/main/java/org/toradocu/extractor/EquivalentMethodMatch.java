@@ -29,6 +29,13 @@ public class EquivalentMethodMatch {
   private Map<Integer, String> staticFinalParams;
   private boolean isNegated;
 
+  public enum SystemLocation {
+    C,
+    P,
+    S,
+    U
+  }
+
   public EquivalentMethodMatch() {
     this.methodSignature = "";
     this.simpleName = "";
@@ -116,13 +123,13 @@ public class EquivalentMethodMatch {
 
   private Map<Integer, String> areArgsStaticFinal() {
     Map<Integer, String> staticFinals = new HashMap<>();
-    String staticFinalRegex = "\\w+(\\.[A-Z]+|#[A-Z]+)+";
+    String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z]+|#[A-Z]+)+";
     // instead of parsing patterns as for hardcoded params, search for code matchings.
     // But I wouldn't do the match HERE: here I just verify if there are static final args!
     if (this.arguments != null) {
       for (int i = 0; i < this.arguments.size(); i++) {
         Matcher staticFinalMatch = Pattern.compile(staticFinalRegex).matcher(this.arguments.get(i));
-        if (staticFinalMatch.find()) {
+        if (staticFinalMatch.matches()) {
           staticFinals.put(i, staticFinalMatch.group(0));
         }
       }

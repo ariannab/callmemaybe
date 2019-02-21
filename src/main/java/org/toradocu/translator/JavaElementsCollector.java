@@ -113,7 +113,7 @@ public class JavaElementsCollector {
     return availableTypes;
   }
 
-  private static List<FieldCodeElement> fieldsOf(Class<?> aClass) {
+  public static List<FieldCodeElement> fieldsOf(Class<?> aClass) {
     return Arrays.stream(aClass.getFields())
         .map(field -> new FieldCodeElement(Configuration.RECEIVER, field))
         .collect(toList());

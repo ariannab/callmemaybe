@@ -17,10 +17,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import javafx.util.Pair;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.translator.semantic.SemanticMatcher;
+import org.toradocu.util.Reflection;
 
 /**
  * The {@code Matcher} class translates subjects and predicates in Javadoc comments to Java
@@ -48,7 +50,6 @@ class Matcher {
    * similar name to) the given subject string.
    *
    * @param subject the subject of a proposition from a Javadoc comment
-   * @param method the {@code DocumentedExecutable} that the subject was extracted from
    * @return a set of {@code CodeElement}s that have a similar name to the subject
    */
   Set<CodeElement<?>> subjectMatch(String subject, Set<CodeElement<?>> codeElements) {
@@ -333,9 +334,6 @@ class Matcher {
       Set<CodeElement<?>> codeElements,
       DocumentedExecutable method,
       String subject) {
-    if (predicate.contains("equal")) {
-      System.out.println();
-    }
     List<CodeElement<?>> sortedMethodList;
     sortedMethodList = new ArrayList<>(filterMatchingCodeElements(predicate, codeElements));
 
@@ -460,32 +458,37 @@ class Matcher {
     CodeElement<?> firstCodeMatch = null;
     List<String> paramForMatch = new ArrayList<String>();
     // List<String> otherMethodParams;
-    String[] currentMatchParams = null;
+    String[] currentMatchParamTypes = null;
     String receiver = "";
-    java.lang.reflect.Parameter[] myMethodArgs = method.getExecutable().getParameters();
+    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
     List<String> myParamTypes = new ArrayList<>();
-    for (Parameter arg : myMethodArgs) {
+    for (Parameter arg : myMethodParamTypes) {
       myParamTypes.add(arg.getType().getName());
     }
 
     for (CodeElement<?> currentMatch : sortedCodeElements) {
+      List<Integer> indexesToBeMatched = new ArrayList<>();
       if (currentMatch instanceof ConstructorCodeElement) {
-        currentMatchParams = ((ConstructorCodeElement) currentMatch).getArgs();
+        currentMatchParamTypes = ((ConstructorCodeElement) currentMatch).getArgs();
         receiver = ((ConstructorCodeElement) currentMatch).getReceiver();
       } else if (currentMatch instanceof MethodCodeElement) {
-        currentMatchParams = ((MethodCodeElement) currentMatch).getArgs();
+        currentMatchParamTypes = ((MethodCodeElement) currentMatch).getArgs();
         receiver = ((MethodCodeElement) currentMatch).getReceiver();
       } else if (currentMatch instanceof StaticMethodCodeElement) {
-        currentMatchParams = ((StaticMethodCodeElement) currentMatch).getArgs();
+        currentMatchParamTypes = ((StaticMethodCodeElement) currentMatch).getArgs();
       } else continue;
       // Match is a String: before building it, check if the method has parameters,
       // and fill the parenthesis () with the right ones
-      if (currentMatchParams != null
-          && currentMatchParams.length == equivalentMethod.getArguments().size()
-          && currentMatchParams.length
-              <= myMethodArgs.length + constantParamsToIgnore.size() + codeElementsParams.size()) {
+
+      if (currentMatchParamTypes != null
+          && currentMatchParamTypes.length == equivalentMethod.getArguments().size()
+          && currentMatchParamTypes.length
+              <= myMethodParamTypes.length
+                  + constantParamsToIgnore.size()
+                  + codeElementsParams.size()) {
+
         int argIndex = 0;
-        for (String currentMatchParam : currentMatchParams) {
+        for (String currentMatchParam : currentMatchParamTypes) {
           if (myParamTypes.contains(currentMatchParam)
               || isGenericType(currentMatchParam, myParamTypes)) {
             if (!receiver.equals("args[" + argIndex + "]")) {
@@ -494,34 +497,102 @@ class Matcher {
             }
           } else if (constantParamsToIgnore.containsKey(argIndex)) {
             paramForMatch.add(constantParamsToIgnore.get(argIndex));
+          } else {
+            indexesToBeMatched.add(argIndex);
           }
         }
 
         boolean sizesMatch =
-            paramForMatch.size() + codeElementsParams.size() == currentMatchParams.length;
+            paramForMatch.size() + codeElementsParams.size() == currentMatchParamTypes.length;
         if (sizesMatch) {
           firstCodeMatch = currentMatch;
-          break;
+          // break;
         }
       }
-    }
-    if (firstCodeMatch != null) {
-      String exp = firstCodeMatch.getJavaExpression();
-      if (firstCodeMatch instanceof MethodCodeElement) {
-        match =
-            new Match(
-                exp.substring(0, exp.indexOf("(") + 1),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
-      } else {
-        match = new Match(exp.substring(0, exp.indexOf("(") + 1), null);
+
+      if (firstCodeMatch != null) {
+        String exp = firstCodeMatch.getJavaExpression();
+        if (firstCodeMatch instanceof MethodCodeElement) {
+          match =
+              new Match(
+                  exp.substring(0, exp.indexOf("(") + 1),
+                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+        } else {
+          match = new Match(exp.substring(0, exp.indexOf("(") + 1), null);
+        }
+        for (int j = 0; j < paramForMatch.size() - 1; j++) {
+          match.completeExpression(paramForMatch.get(j) + ",");
+        }
+        if (!codeElementsParams.isEmpty()) {
+          String[] codeElementTokens = codeElementsParams.get(0).split("\\.");
+          String codeElementName = codeElementTokens[codeElementTokens.length - 1];
+          //  Configuration configuration = Configuration.INSTANCE;
+          //                    final String sourceFile =
+          //                            configuration.sourceDir.toString()
+          //                                    + File.separator
+          //                                    +
+          // method.getDeclaringClass().getCanonicalName().replaceAll("\\.", File.separator)
+          //                                    + ".java";
+          // List<String> packageClasses =
+          //     JavadocExtractor.getClassesInSamePackage(
+          //           method.getDeclaringClass().getCanonicalName(), sourceFile);
+
+          // The following call will not work if there is no classname preceding the code element
+          // name.
+          // Pair<String, EquivalentMethodMatch.SystemLocation> theEquivalent =
+          //        whereIsMethodDeclared(codeElementsParams.get(0), packageClasses);
+
+          // if (theEquivalent.getValue().equals(EquivalentMethodMatch.SystemLocation.U)) {
+          //          1. Extract all classes in package
+          //          2. Extract all public code elements accessible from those classes: fields or
+          // enums. (methods? I’m not sure)
+          //          3. Perform syntax match, assuming that the receiver (the class name, in this
+          // case BoundType) can be ignored.
+          //          4. Use the receiver (BoundType) to understand if the type matching (args taken
+          // by range()) is compatible
+          //   System.out.println();
+          // } else if (theEquivalent.getValue().equals(EquivalentMethodMatch.SystemLocation.P)) {
+          // OK this was easy, we know where the code element comes from!
+
+          List<FieldCodeElement> result = new ArrayList<>();
+          int filled = 0;
+          for (int i = 0; i < indexesToBeMatched.size(); i++) {
+            String className = currentMatchParamTypes[i];
+            // the class name is the one of the parameters left;
+            Class<?> matchedType = null;
+            try {
+              matchedType = Reflection.getClass(className);
+            } catch (ClassNotFoundException e) {
+              // Intentionally empty: Apply other heuristics to load the exception type.
+            }
+            if (matchedType != null) {
+              List<FieldCodeElement> allFieldsInClass = JavaElementsCollector.fieldsOf(matchedType);
+              if (!allFieldsInClass.isEmpty()) {
+                result =
+                    allFieldsInClass
+                        .stream()
+                        .filter(
+                            f ->
+                                f.getJavaExpression()
+                                    .equals(Configuration.RECEIVER + "." + codeElementName))
+                        .collect(Collectors.toList());
+              }
+            }
+            if (!result.isEmpty()) {
+              // THAT'S IT! We found the right match (classes-public field).
+              paramForMatch.add(className + "." + codeElementName);
+            }
+            // }
+          }
+
+          for (int j = 0; j < paramForMatch.size() - 1; j++) {
+            match.completeExpression(paramForMatch.get(j) + ",");
+          }
+        }
+        if (!paramForMatch.isEmpty()) {
+          match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
+        }
       }
-      for (int j = 0; j < paramForMatch.size() - 1; j++) {
-        match.completeExpression(paramForMatch.get(j) + ",");
-      }
-      if (!codeElementsParams.isEmpty()) {
-        // TODO match parameter code elements. How? SubjectMatch? And then fill paramForMatch
-      }
-      match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
     }
     if (match == null) {
       // No match is the absolute best: just pick the first one, but only if it takes no arguments!
@@ -540,6 +611,63 @@ class Matcher {
       }
     }
     return match;
+  }
+
+  /**
+   * Tells whether the signatures are located in the class (C), package (P), system (S). "U" means
+   * Unknown and typically means the method is in another system.
+   *
+   * @param type the class
+   * @param signature the signatures
+   * @param packageClasses the classes in the same package
+   * @return a string representing the location (C, P, S, U)
+   */
+  private static Pair<String, EquivalentMethodMatch.SystemLocation> whereIsMethodDeclared(
+      String signature, List<String> packageClasses) {
+    // TODO look if the method name is smt like Class#method or Class.method and look into
+    // packageClasses!
+    // TODO Currently there is no parse of the method name so this is all very naive
+
+    String method = signature.trim();
+    int hashMark = method.indexOf("#");
+    int dot = method.indexOf('.');
+    //      String methodSimpleName;
+    //       int parenthesis = method.indexOf("(");
+
+    //      List<DocumentedExecutable> executables = type.getDocumentedExecutables();
+    //      if (parenthesis != -1 && hashMark == -1) {
+    //        methodSimpleName = method.substring(0, parenthesis);
+    //        for (DocumentedExecutable ex : executables) {
+    //          if (ex.getSignature().contains(methodSimpleName)) {
+    //            return new Pair<>(ex, EquivalentMethodMatch.SystemLocation.C);
+    //          }
+    //        }
+    //      }
+    String methodClass = "";
+    if (dot != -1) {
+      methodClass = method.substring(0, dot);
+    } else if (hashMark != -1) {
+      methodClass = method.substring(0, hashMark);
+    }
+    if (!packageClasses.isEmpty() && !methodClass.isEmpty()) {
+      for (String pclass : packageClasses) {
+        if (pclass.endsWith("." + methodClass)) {
+          // FIXME don't like null here
+          return new Pair<>(pclass, EquivalentMethodMatch.SystemLocation.P);
+        }
+      }
+      // FIXME for now I am omitting outside-package classes
+      /*
+      for (String sclass : systemClasses) {
+        if (sclass.endsWith("." + methodClass)) {
+          //FIXME don't like null here
+          return new Pair<>(null, EquivalentMethodMatch.SystemLocation.S);
+        }
+      }
+      */
+    }
+
+    return new Pair<>(null, EquivalentMethodMatch.SystemLocation.U);
   }
 
   /**

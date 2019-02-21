@@ -64,9 +64,18 @@ public class FreeTextTranslator {
         }
       }
       if (translation.isEmpty()) {
+        // FIXME this could be not the right place where to check this, mb as first attempt above?
         // Condition predicate could be expressed directly with a method signature, e.g.
         // "if list.isEmpty()" instead of the classic "if list is empty": look for signatures
-        // FIXME this could be not the right place where to check this, mb as first attemp above?
+
+        String methodRegex = "(!)?(\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+)";
+        java.util.regex.Matcher signatureMatch = Pattern.compile(methodRegex).matcher(condition);
+        if (signatureMatch.find()) {
+          // TODO you find smt like parameter.methodFromParameter, thus:
+          // TODO 1. Split on dot
+          // TODO 2. match left part (is it a parameter or what?)
+          // TODO 3. match right part (is it something invokable from the left part?)
+        }
       }
     }
   }
