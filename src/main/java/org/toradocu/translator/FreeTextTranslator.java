@@ -6,6 +6,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+import org.apache.commons.lang3.StringUtils;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
@@ -35,7 +36,7 @@ public class FreeTextTranslator {
       if (!sentence.isEmpty() && sentence.length() > 2) {
         // Verify comment contains equivalence declaration...
         equivalenceMatch = EquivalenceMatcher.getEquivalentOrSimilarMethod(sentence);
-        if (!equivalenceMatch.getMethodSignature().isEmpty()) {
+        if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
           if (equivalenceMatch.isSimilarity()) {
             translateConditionalEquivalence(excMember, equivalenceMatch, sentence);
           } else {
@@ -91,38 +92,58 @@ public class FreeTextTranslator {
       DocumentedExecutable excMember, EquivalentMethodMatch equivalenceMatch, String condition) {
     String oracle;
     Matcher matcher = new Matcher();
-    String methodName = equivalenceMatch.getSimpleName();
+    for (int i = 0; i < equivalenceMatch.getMethodSignatures().size(); i++) {
+      String methodSignature = equivalenceMatch.getMethodSignatures().get(i);
+      String simpleMethodName = equivalenceMatch.getSimpleName().get(i);
+      // String methodSignature = equivalenceMatch.getSimpleName();
 
-    // Extract every CodeElement associated with the method and the containing class of the method.
-    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
-    Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(methodName, codeElements);
+      // Extract every CodeElement associated with the method and the containing class of the
+      // method.
+      Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
+      Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(simpleMethodName, codeElements);
 
-    if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
-      List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
+      if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
+        List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
 
-      Match theOne = matcher.reverseBestArgsTypeMatch(equivalenceMatch, excMember, sortedCodeElem);
-      String negation = "";
-      if (equivalenceMatch.isNegated()) {
-        negation = "!";
-      }
-      if (theOne != null) {
-        if (ComplianceChecks.primitiveTypes()
-            .contains(excMember.getReturnType().getType().getTypeName())) {
-          oracle = Configuration.RETURN_VALUE + "==" + negation + theOne.getBaseExpression();
-        } else {
-          oracle =
-              Configuration.RETURN_VALUE + ".equals(" + negation + theOne.getBaseExpression() + ")";
+        Match theOne =
+            matcher.reverseBestArgsTypeMatch(
+                methodSignature, equivalenceMatch, excMember, sortedCodeElem);
+        String negation = "";
+        if (equivalenceMatch.isNegated()) {
+          negation = "!";
         }
-
-        if (ComplianceChecks.isEqSpecCompilable(excMember, oracle, condition)) {
-          if (!condition.isEmpty()) {
-            equivalenceMatch.setOracle("if (" + condition + ") {" + oracle + "}");
+        if (theOne != null) {
+          if (ComplianceChecks.primitiveTypes()
+              .contains(excMember.getReturnType().getType().getTypeName())) {
+            oracle = Configuration.RETURN_VALUE + "==" + negation + theOne.getBaseExpression();
           } else {
-            equivalenceMatch.setOracle(oracle);
+            oracle =
+                Configuration.RETURN_VALUE
+                    + ".equals("
+                    + negation
+                    + theOne.getBaseExpression()
+                    + ")";
+          }
+
+          if (!equivalenceMatch.getOracle().isEmpty()) {
+            // We have to add something to the partial oracle
+            oracle = composeOracle(oracle, equivalenceMatch.getOracle());
+          }
+          if (ComplianceChecks.isEqSpecCompilable(excMember, oracle, condition)) {
+            if (!condition.isEmpty()) {
+              equivalenceMatch.setOracle("if (" + condition + ") {" + oracle + "}");
+            } else {
+              equivalenceMatch.setOracle(oracle);
+            }
           }
         }
       }
     }
+  }
+
+  public String composeOracle(String newOracle, String oldOracle) {
+    newOracle = StringUtils.difference(oldOracle, newOracle);
+    return oldOracle.substring(0, oldOracle.length() - 1) + "." + newOracle;
   }
 
   private Set<CodeElement<?>> extractMethodCodeElements(DocumentedExecutable excMember) {

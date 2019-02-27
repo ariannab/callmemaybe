@@ -2,7 +2,9 @@ package org.toradocu.extractor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -37,7 +39,7 @@ public class EquivalenceMatcher {
         return methodMatch;
       }
     }
-    return new EquivalentMethodMatch("", false, false, new ArrayList<>(), false);
+    return new EquivalentMethodMatch(new ArrayList<>(), false, false, new HashMap<>(), false);
   }
 
   /**
@@ -50,25 +52,38 @@ public class EquivalenceMatcher {
    */
   private static EquivalentMethodMatch getSignatureInMatchingComment(
       String comment, KeywordsSet keywordsSet) {
-    String methodRegex = "(!)?(\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+)";
+
+    EquivalentMethodMatch match = null;
+
+    // String methodRegex = "(!)?(\\w+(\\((.*?(?<!\\) ))\\)|\\.\\w+|#\\w+)+)";
+    // TODO let's try the following method regex: it should be correctly recursive for chain of
+    // calls (separated by .)
+    String methodRegex = "(!)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
     for (String word : keywordsSet.getKw()) {
-      Matcher matcher =
+      Matcher keywordMatcher =
           Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE).matcher(comment);
-      if (matcher.find()) {
+      if (keywordMatcher.find()) {
         // I do not only want the comment to contain the keywords, I also want to find a
         // method signature in it - otherwise, what is this method equivalent to?
         java.util.regex.Matcher signatureMatch;
-        int group = 2;
+        int group = 0;
         if (word.equals("as")) {
           signatureMatch = Pattern.compile(" as " + methodRegex).matcher(comment);
         } else {
           signatureMatch = Pattern.compile(methodRegex).matcher(comment);
         }
 
-        if (signatureMatch.find() && !doRangesOverlap(matcher, signatureMatch)) {
+        boolean equivalence = false;
+        boolean similarity = false;
+        boolean negation = false;
+        Map<String, List<String>> argumentsMap = new HashMap<>();
+        ArrayList<String> signaturesFound = new ArrayList<>();
+        while (signatureMatch.find() && !doRangesOverlap(keywordMatcher, signatureMatch)) {
           String signatureFound = signatureMatch.group(group);
-          boolean negation = signatureMatch.group(1) != null;
-          List<String> arguments = extractArguments(signatureMatch);
+          signaturesFound.add(signatureFound);
+          negation = signatureMatch.group(1) != null;
+          List<String> arguments = extractArguments(signatureMatch, 5);
+          argumentsMap.put(signatureFound, arguments);
           // TODO check if there is an "if" or "when" or "except" - more?
           if (keywordsSet.getCategory().equals(KeywordsSet.Category.SIMILARITY)
               || Pattern.compile("\\b" + "if" + "\\b", Pattern.CASE_INSENSITIVE)
@@ -80,20 +95,29 @@ public class EquivalenceMatcher {
               || Pattern.compile("\\b" + "except" + "\\b", Pattern.CASE_INSENSITIVE)
                   .matcher(comment)
                   .find()) {
-            return new EquivalentMethodMatch(signatureFound, false, true, arguments, negation);
+            equivalence = false;
+            similarity = true;
+            // return new EquivalentMethodMatch(signatureFound, false, true, arguments, negation);
           } else {
-            return new EquivalentMethodMatch(signatureFound, true, false, arguments, negation);
+            equivalence = true;
+            similarity = false;
+            // return new EquivalentMethodMatch(signatureFound, true, false, arguments, negation);
           }
+        }
+        if (similarity || equivalence) {
+          match =
+              new EquivalentMethodMatch(
+                  signaturesFound, equivalence, similarity, argumentsMap, negation);
         }
       }
     }
-    return null;
+    return match;
   }
 
-  private static List<String> extractArguments(Matcher methodMatch) {
+  private static List<String> extractArguments(Matcher methodMatch, int group) {
     if (methodMatch.group(4) != null) {
       // the method takes arguments
-      String[] args = methodMatch.group(4).split(",");
+      String[] args = methodMatch.group(group).split(",");
       for (int i = 0; i < args.length; i++) {
         args[i] = args[i].trim();
       }
