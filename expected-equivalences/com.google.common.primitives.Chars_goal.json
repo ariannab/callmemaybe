@@ -508,7 +508,7 @@
     "equivalence": {
       "comment": "Returns a big-endian representation of value in a 2-element byte array; equivalent to ByteBuffer.allocate(2).putChar(value).array(). For example, the input value '\\\\u5432' would yield the byte array {0x54, 0x32}. <p>If you need to convert and concatenate several values (possibly even of different types), use a shared java.nio.ByteBuffer instance, or use com.google.common.io.ByteStreams#newDataOutput() to get a growable buffer.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(ByteBuffer.allocate(2).putChar(args[0]).array())"
+      "condition": "methodResultID.equals(java.nio.ByteBuffer.allocate(2).putChar(args[0]).array())"
     }
   },
   {
