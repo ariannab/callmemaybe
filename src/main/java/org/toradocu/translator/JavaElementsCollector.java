@@ -56,14 +56,12 @@ public class JavaElementsCollector {
     final List<Executable> methods = collectRawMethods(containingClass, documentedExecutable);
     List<Class<?>> inScopeTypes = collectInScopeTypes(documentedExecutable);
     methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
-    List<CodeElement<?>> codeElements =
-        getCodeElementsFromRawMethods(documentedExecutable, methods);
+    List<CodeElement<?>> codeElements = getCodeElementsFromRawMethods(methods);
     return codeElements;
   }
 
   @NotNull
-  public static List<CodeElement<?>> getCodeElementsFromRawMethods(
-      DocumentedExecutable documentedExecutable, List<Executable> methods) {
+  public static List<CodeElement<?>> getCodeElementsFromRawMethods(List<Executable> methods) {
     List<CodeElement<?>> codeElements = new ArrayList<>();
     for (Executable executable : methods) {
       if (executable instanceof Method) {

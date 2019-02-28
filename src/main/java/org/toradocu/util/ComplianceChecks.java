@@ -154,7 +154,8 @@ public class ComplianceChecks {
     if (!methodReturnType.equals("void")) {
       sourceCodeBuilder.addArgument(methodReturnType, Configuration.RETURN_VALUE);
       String returnTypeClass = method.getReturnType().getClass().getName();
-      if (!returnTypeClass.contains("AnnotatedTypeVariableImpl")
+      if (!methodReturnType.contains("[")
+          && !returnTypeClass.contains("AnnotatedTypeVariableImpl")
           && !primitiveTypes().contains(methodReturnType)
           && !isGenericType(methodReturnType)) {
         sourceCodeBuilder.addImport(methodReturnType);
@@ -209,6 +210,13 @@ public class ComplianceChecks {
     if (!Modifier.isPublic(declaringClass.getModifiers())) {
       // class is package-private
       sourceCodeBuilder.addPackage(declaringClass);
+    }
+
+    List<String> links = method.getFreeText().getComment().getLinksContent();
+    for (String link : links) {
+      if (!link.contains("#")) {
+        sourceCodeBuilder.addImport(link);
+      }
     }
 
     sourceCodeBuilder.addImport(declaringClass.getName());

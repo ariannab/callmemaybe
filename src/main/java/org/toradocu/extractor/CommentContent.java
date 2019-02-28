@@ -29,6 +29,7 @@ public final class CommentContent {
    */
   private final Map<String, List<Integer>> wordsMarkedAsCode;
 
+  private final List<String> linksContent;
   /**
    * Builds a new CommentContent with the given {@code text}. Words marked with {@literal @code} and
    * {@literal <code></code>} in {@code text} are added to the map of words marked as code. Than,
@@ -39,7 +40,7 @@ public final class CommentContent {
   public CommentContent(String text) {
     this.text = text.replaceAll("\\s+", " ");
     this.wordsMarkedAsCode = new HashMap<>();
-
+    this.linksContent = new ArrayList<>();
     final String codePattern1 = "<code>([A-Za-z0-9_]+)</code>";
     identifyCodeWords(codePattern1);
     removeTagsNotContent(codePattern1);
@@ -47,7 +48,7 @@ public final class CommentContent {
     final String codePattern2 = "\\{@code ([^}]+)\\}";
     identifyCodeWords(codePattern2);
     removeTagsNotContent(codePattern2);
-    String linkPattern = "\\{@link #?([^}^ ]+)( [^}]+)?\\}";
+    String linkPattern = "\\{@link (#?([^}^ ]+)( [^}]+)?)\\}";
     manageLinks(linkPattern);
     removeHTMLTags();
     decodeHTML();
@@ -57,11 +58,14 @@ public final class CommentContent {
   private void manageLinks(String linkPattern) {
     Matcher matcher = Pattern.compile(linkPattern).matcher(this.text);
     while (matcher.find()) {
-      if (matcher.group(2) != null) {
-        text = text.replace(matcher.group(0), matcher.group(2));
-      } else {
-        this.text = this.text.replace(matcher.group(0), matcher.group(1));
+      if (matcher.group(1) != null) {
+        String linkContent = matcher.group(1);
+        text = text.replace(matcher.group(0), linkContent);
+        this.linksContent.add(linkContent);
       }
+      // else {
+      //        this.text = this.text.replace(matcher.group(0), matcher.group(1));
+      //      }
     }
   }
 
@@ -104,6 +108,10 @@ public final class CommentContent {
    */
   public Map<String, List<Integer>> getWordsMarkedAsCode() {
     return wordsMarkedAsCode;
+  }
+
+  public List<String> getLinksContent() {
+    return linksContent;
   }
 
   /**

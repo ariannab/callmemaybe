@@ -274,6 +274,10 @@ public final class DocumentedExecutable {
     return executable.getAnnotatedReturnType();
   }
 
+  public List<String> getLinksContent() {
+    return this.freeText.getComment().getLinksContent();
+  }
+
   /**
    * Returns the class in which this executable member is declared.
    *

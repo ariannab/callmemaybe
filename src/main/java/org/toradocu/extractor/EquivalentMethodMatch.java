@@ -36,13 +36,13 @@ public class EquivalentMethodMatch {
   private Map<String, List<Pair<Integer, String>>> staticFinalParams;
   private boolean isNegated;
 
-  public EquivalentMethodMatch() {
-    this.methodSignatures = new ArrayList<>();
-    this.simpleName = new ArrayList<>();
-    this.equivalence = false;
-    this.similarity = false;
-    this.oracle = "";
-  }
+  //  public EquivalentMethodMatch() {
+  //    this.methodSignatures = new ArrayList<>();
+  //    this.simpleName = new ArrayList<>();
+  //    this.equivalence = false;
+  //    this.similarity = false;
+  //    this.oracle = "";
+  //  }
 
   EquivalentMethodMatch(
       ArrayList<String> methodSignatures,
@@ -70,6 +70,10 @@ public class EquivalentMethodMatch {
     this.simpleName = new ArrayList<>();
     for (String methodSignature : this.methodSignatures) {
       if (methodSignature.contains("(")) {
+        if (methodSignature.contains(".") || methodSignature.contains("#")) {
+          String[] tokens = methodSignature.split("[.#]");
+          methodSignature = tokens[1];
+        }
         this.simpleName.add(methodSignature.substring(0, methodSignature.indexOf("(")));
       } else {
         this.simpleName.add(methodSignature);
@@ -122,7 +126,6 @@ public class EquivalentMethodMatch {
               Pattern.compile(pattern, Pattern.CASE_INSENSITIVE).matcher(arg);
           if (matchConstant.find()) {
             constArgs.add(new Pair<>(i, matchConstant.group(0)));
-            // constants.put(signature, matchConstant.group(0));
           }
         }
       }
@@ -138,15 +141,12 @@ public class EquivalentMethodMatch {
     for (String signature : methodSignatures) {
       String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z]+|#[A-Z]+)+";
       List<String> signatureArgs = this.arguments.get(signature);
-      // instead of parsing patterns as for hardcoded params, search for code matchings.
-      // But I wouldn't do the match HERE: here I just verify if there are static final args!
       List<String> arguments = this.arguments.get(signature);
       for (int i = 0; i < arguments.size(); i++) {
         String arg = signatureArgs.get(i);
         Matcher staticFinalMatch = Pattern.compile(staticFinalRegex).matcher(arg);
         if (staticFinalMatch.matches()) {
           sfArgs.add(new Pair<>(i, staticFinalMatch.group(0)));
-          // staticFinals.put(signature, staticFinalMatch.group(0));
         }
       }
       map.put(signature, sfArgs);

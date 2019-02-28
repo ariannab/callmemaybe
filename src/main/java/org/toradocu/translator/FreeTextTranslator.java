@@ -6,6 +6,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CommentContent;
@@ -14,6 +15,7 @@ import org.toradocu.extractor.EquivalenceMatcher;
 import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.extractor.FreeText;
 import org.toradocu.util.ComplianceChecks;
+import org.toradocu.util.Reflection;
 
 public class FreeTextTranslator {
 
@@ -29,7 +31,7 @@ public class FreeTextTranslator {
     String commentText = freeTextComment.getComment().getText();
     String[] sentences = commentText.split("[.;] ");
     ArrayList<EquivalentMethodMatch> matches = new ArrayList<>();
-    EquivalentMethodMatch equivalenceMatch = new EquivalentMethodMatch();
+    EquivalentMethodMatch equivalenceMatch;
 
     for (String sentence : sentences) {
       // Let's avoid spurious comments...
@@ -95,13 +97,41 @@ public class FreeTextTranslator {
     for (int i = 0; i < equivalenceMatch.getMethodSignatures().size(); i++) {
       String methodSignature = equivalenceMatch.getMethodSignatures().get(i);
       String simpleMethodName = equivalenceMatch.getSimpleName().get(i);
-      // String methodSignature = equivalenceMatch.getSimpleName();
 
       // Extract every CodeElement associated with the method and the containing class of the
       // method.
       Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
       Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(simpleMethodName, codeElements);
 
+      if (matchingCodeEelem != null
+          && matchingCodeEelem.isEmpty()
+          && !excMember.getLinksContent().isEmpty()) {
+        List<String> links = excMember.getLinksContent();
+        for (String className : links) {
+          Class<?> matchedType = null;
+          try {
+            matchedType = Reflection.getClass(className);
+          } catch (ClassNotFoundException e) {
+            // Intentionally empty: Apply other heuristics to load the exception type.
+          }
+          if (matchedType != null) {
+            List<CodeElement<?>> allMethodsInClass =
+                JavaElementsCollector.getCodeElementsFromRawMethods(
+                    JavaElementsCollector.collectRawMethods(matchedType, excMember));
+            if (!allMethodsInClass.isEmpty()) {
+              Set<CodeElement<?>> result =
+                  allMethodsInClass
+                      .stream()
+                      .filter(
+                          m ->
+                              m.getJavaExpression()
+                                  .equals(className + "." + simpleMethodName + "()"))
+                      .collect(Collectors.toSet());
+              matchingCodeEelem.addAll(result);
+            }
+          }
+        }
+      }
       if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
         List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
 
@@ -151,8 +181,7 @@ public class FreeTextTranslator {
     Class<?> containingClass = excMember.getDeclaringClass();
     List<Executable> rawMethods =
         JavaElementsCollector.collectRawMethods(containingClass, excMember);
-    collectedElements.addAll(
-        JavaElementsCollector.getCodeElementsFromRawMethods(excMember, rawMethods));
+    collectedElements.addAll(JavaElementsCollector.getCodeElementsFromRawMethods(rawMethods));
     return collectedElements;
   }
 

@@ -41,7 +41,7 @@ public class CommentTranslator {
    */
   public static ArrayList<EquivalentMethodMatch> translate(
       FreeText freeTextComment, DocumentedExecutable excMember) {
-    PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
+    // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new FreeTextTranslator().translate(freeTextComment, excMember);
   }

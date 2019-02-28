@@ -80,6 +80,9 @@ public class EquivalenceMatcher {
         ArrayList<String> signaturesFound = new ArrayList<>();
         while (signatureMatch.find() && !doRangesOverlap(keywordMatcher, signatureMatch)) {
           String signatureFound = signatureMatch.group(group);
+          if (signatureFound.endsWith(".")) {
+            signatureFound = signatureFound.substring(0, signatureFound.length() - 1);
+          }
           signaturesFound.add(signatureFound);
           negation = signatureMatch.group(1) != null;
           List<String> arguments = extractArguments(signatureMatch, 5);
