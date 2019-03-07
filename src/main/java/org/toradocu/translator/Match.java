@@ -15,6 +15,20 @@ public class Match {
   /** The null dereference check that an expression may need. */
   private String nullDereferenceCheck;
 
+  private CodeElement<?> codeElement;
+
+  /**
+   * Creates a new Match with the given expression and check.
+   *
+   * @param baseExpression the base expression of the Match
+   * @param nullDereferenceCheck the null dereference check, may be null
+   */
+  public Match(String baseExpression, String nullDereferenceCheck, CodeElement<?> codeElement) {
+    this.baseExpression = baseExpression;
+    this.nullDereferenceCheck = nullDereferenceCheck;
+    this.codeElement = codeElement;
+  }
+
   /**
    * Creates a new Match with the given expression and check.
    *
@@ -24,8 +38,8 @@ public class Match {
   public Match(String baseExpression, String nullDereferenceCheck) {
     this.baseExpression = baseExpression;
     this.nullDereferenceCheck = nullDereferenceCheck;
+    this.codeElement = null;
   }
-
   /**
    * Getter method for the base expression.
    *
@@ -60,6 +74,10 @@ public class Match {
    */
   void setNullDereferenceCheck(String nullDereferenceCheck) {
     this.nullDereferenceCheck = nullDereferenceCheck;
+  }
+
+  public CodeElement<?> getCodeElement() {
+    return codeElement;
   }
 
   /**

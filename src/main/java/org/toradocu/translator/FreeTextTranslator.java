@@ -1,5 +1,7 @@
 package org.toradocu.translator;
 
+import com.github.javaparser.ast.ImportDeclaration;
+import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Executable;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -7,13 +9,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import org.apache.commons.lang3.StringUtils;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CommentContent;
 import org.toradocu.extractor.DocumentedExecutable;
+import org.toradocu.extractor.DocumentedType;
 import org.toradocu.extractor.EquivalenceMatcher;
 import org.toradocu.extractor.EquivalentMethodMatch;
-import org.toradocu.extractor.FreeText;
 import org.toradocu.util.ComplianceChecks;
 import org.toradocu.util.Reflection;
 
@@ -27,8 +28,8 @@ public class FreeTextTranslator {
    * @return the translation, null if failed
    */
   public ArrayList<EquivalentMethodMatch> translate(
-      FreeText freeTextComment, DocumentedExecutable excMember) {
-    String commentText = freeTextComment.getComment().getText();
+      DocumentedType documentedType, DocumentedExecutable excMember) {
+    String commentText = excMember.getFreeText().getComment().getText();
     String[] sentences = commentText.split("[.;] ");
     ArrayList<EquivalentMethodMatch> matches = new ArrayList<>();
     EquivalentMethodMatch equivalenceMatch;
@@ -40,10 +41,10 @@ public class FreeTextTranslator {
         equivalenceMatch = EquivalenceMatcher.getEquivalentOrSimilarMethod(sentence);
         if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
           if (equivalenceMatch.isSimilarity()) {
-            translateConditionalEquivalence(excMember, equivalenceMatch, sentence);
+            translateConditionalEquivalence(excMember, equivalenceMatch, sentence, documentedType);
           } else {
             // Exact equivalence
-            matchEquivalentMethod(excMember, equivalenceMatch, "");
+            matchEquivalentMethod(excMember, equivalenceMatch, "", documentedType);
           }
         }
         matches.add(equivalenceMatch);
@@ -53,7 +54,10 @@ public class FreeTextTranslator {
   }
 
   private void translateConditionalEquivalence(
-      DocumentedExecutable excMember, EquivalentMethodMatch equivalenceMatch, String sentence) {
+      DocumentedExecutable excMember,
+      EquivalentMethodMatch equivalenceMatch,
+      String sentence,
+      DocumentedType documentedType) {
     String condition = extractCondition(sentence);
     if (condition != null) {
       String translation = "";
@@ -63,7 +67,7 @@ public class FreeTextTranslator {
         BasicTranslator.translate(propositions, excMember, sentence);
         translation = propositions.getTranslation();
         if (!translation.isEmpty()) {
-          matchEquivalentMethod(excMember, equivalenceMatch, translation);
+          matchEquivalentMethod(excMember, equivalenceMatch, translation, documentedType);
         }
       }
       if (translation.isEmpty()) {
@@ -89,12 +93,34 @@ public class FreeTextTranslator {
    * @param excMember the executable member the comment belongs to
    * @param equivalenceMatch the final match, null if nothing found
    * @param condition
+   * @param documentedType
    */
   private void matchEquivalentMethod(
-      DocumentedExecutable excMember, EquivalentMethodMatch equivalenceMatch, String condition) {
-    String oracle;
+      DocumentedExecutable excMember,
+      EquivalentMethodMatch equivalenceMatch,
+      String condition,
+      DocumentedType documentedType) {
     Matcher matcher = new Matcher();
+    Class<?> matchedType = null;
+    Match theOne = null;
+    String negation = "";
+    String previousOracle = "";
+
     for (int i = 0; i < equivalenceMatch.getMethodSignatures().size(); i++) {
+      AnnotatedType previousReturnType = null;
+      if (i > 0 && theOne != null) {
+        CodeElement<?> previousMatch = theOne.getCodeElement();
+        if (previousMatch instanceof MethodCodeElement) {
+          previousReturnType =
+              ((MethodCodeElement) previousMatch).getJavaCodeElement().getAnnotatedReturnType();
+        } else if (previousMatch instanceof StaticMethodCodeElement) {
+          previousReturnType =
+              ((StaticMethodCodeElement) previousMatch)
+                  .getJavaCodeElement()
+                  .getAnnotatedReturnType();
+        }
+      }
+
       String methodSignature = equivalenceMatch.getMethodSignatures().get(i);
       String simpleMethodName = equivalenceMatch.getSimpleName().get(i);
 
@@ -103,85 +129,148 @@ public class FreeTextTranslator {
       Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
       Set<CodeElement<?>> matchingCodeEelem = matcher.subjectMatch(simpleMethodName, codeElements);
 
-      if (matchingCodeEelem != null
-          && matchingCodeEelem.isEmpty()
-          && !excMember.getLinksContent().isEmpty()) {
+      String className = "";
+      if (previousReturnType != null) {
+        try {
+          className = previousReturnType.getType().getTypeName();
+          matchedType = Reflection.getClass(className);
+        } catch (ClassNotFoundException e) {
+          // Intentionally empty: Apply other heuristics to load the exception type.
+        }
+        if (matchedType != null) {
+          List<CodeElement<?>> allMethodsInClass =
+              JavaElementsCollector.getCodeElementsFromRawMethods(
+                  JavaElementsCollector.collectRawMethods(matchedType, excMember),
+                  matchedType.getCanonicalName());
+          if (!allMethodsInClass.isEmpty()) {
+            String methodSimpleName = className + "." + simpleMethodName;
+            Set<CodeElement<?>> result =
+                allMethodsInClass
+                    .stream()
+                    .filter(
+                        m ->
+                            m.getJavaExpression()
+                                .substring(0, m.getJavaExpression().indexOf("("))
+                                .equals(methodSimpleName))
+                    .collect(Collectors.toSet());
+            // FIXME here I am overwriting...cleverer way?
+            matchingCodeEelem = result;
+          }
+        }
+      } else if (matchingCodeEelem.isEmpty()
+          && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
         List<String> links = excMember.getLinksContent();
-        for (String className : links) {
-          Class<?> matchedType = null;
+        for (String link : links) {
+          if (matchedType != null) {
+            break;
+          }
+          if (link.contains("#")) {
+            link = link.substring(0, link.indexOf("#"));
+          }
           try {
-            matchedType = Reflection.getClass(className);
+            matchedType = Reflection.getClass(link);
           } catch (ClassNotFoundException e) {
             // Intentionally empty: Apply other heuristics to load the exception type.
           }
           if (matchedType != null) {
-            List<CodeElement<?>> allMethodsInClass =
-                JavaElementsCollector.getCodeElementsFromRawMethods(
-                    JavaElementsCollector.collectRawMethods(matchedType, excMember));
-            if (!allMethodsInClass.isEmpty()) {
-              Set<CodeElement<?>> result =
-                  allMethodsInClass
-                      .stream()
-                      .filter(
-                          m ->
-                              m.getJavaExpression()
-                                  .equals(className + "." + simpleMethodName + "()"))
-                      .collect(Collectors.toSet());
-              matchingCodeEelem.addAll(result);
+            className = link;
+            break;
+          } else {
+            for (int j = 0; j < documentedType.getImports().size(); j++) {
+              ImportDeclaration anImport = documentedType.getImports().get(j);
+              String importedClass = anImport.getNameAsString().replace("import", "").trim();
+              if (importedClass.endsWith(link)) {
+                try {
+                  matchedType = Reflection.getClass(importedClass);
+                } catch (ClassNotFoundException e) {
+                  // Intentionally empty: Apply other heuristics to load the exception type.
+                }
+                if (matchedType != null) {
+                  className = importedClass;
+                  equivalenceMatch.setImportsNeeded(className);
+                  break;
+                }
+              }
             }
+          }
+        }
+        if (matchedType != null) {
+          List<CodeElement<?>> allMethodsInClass =
+              JavaElementsCollector.getCodeElementsFromRawMethods(
+                  JavaElementsCollector.collectRawMethods(matchedType, excMember),
+                  matchedType.getCanonicalName());
+          if (!allMethodsInClass.isEmpty()) {
+            String methodSimpleName = className + "." + simpleMethodName;
+            Set<CodeElement<?>> result =
+                allMethodsInClass
+                    .stream()
+                    .filter(
+                        m ->
+                            m.getJavaExpression()
+                                .substring(0, m.getJavaExpression().indexOf("("))
+                                .equals(methodSimpleName))
+                    .collect(Collectors.toSet());
+            // FIXME here I am overwriting...cleverer way?
+            matchingCodeEelem = result;
           }
         }
       }
       if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
         List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
 
-        Match theOne =
+        theOne =
             matcher.reverseBestArgsTypeMatch(
                 methodSignature, equivalenceMatch, excMember, sortedCodeElem);
-        String negation = "";
         if (equivalenceMatch.isNegated()) {
           negation = "!";
         }
         if (theOne != null) {
-          if (ComplianceChecks.primitiveTypes()
-              .contains(excMember.getReturnType().getType().getTypeName())) {
-            oracle = Configuration.RETURN_VALUE + "==" + negation + theOne.getBaseExpression();
-          } else {
-            oracle =
-                Configuration.RETURN_VALUE
-                    + ".equals("
-                    + negation
-                    + theOne.getBaseExpression()
-                    + ")";
+          // Found a match, include it in the oracle
+          String currentOracle = negation + theOne.getBaseExpression();
+          if (!previousOracle.isEmpty()) {
+            currentOracle =
+                previousOracle + currentOracle.substring(currentOracle.lastIndexOf("."));
           }
-
-          if (!equivalenceMatch.getOracle().isEmpty()) {
-            // We have to add something to the partial oracle
-            oracle = composeOracle(oracle, equivalenceMatch.getOracle());
-          }
-          if (ComplianceChecks.isEqSpecCompilable(excMember, oracle, condition)) {
-            if (!condition.isEmpty()) {
-              equivalenceMatch.setOracle("if (" + condition + ") {" + oracle + "}");
-            } else {
-              equivalenceMatch.setOracle(oracle);
-            }
-          }
+          previousOracle = currentOracle;
         }
       }
     }
-  }
+    if (previousOracle.isEmpty()) {
+      return;
+    }
 
-  public String composeOracle(String newOracle, String oldOracle) {
-    newOracle = StringUtils.difference(oldOracle, newOracle);
-    return oldOracle.substring(0, oldOracle.length() - 1) + "." + newOracle;
+    String oracle;
+    if (ComplianceChecks.primitiveTypes()
+        .contains(excMember.getReturnType().getType().getTypeName())) {
+      oracle = Configuration.RETURN_VALUE + "==" + previousOracle;
+    } else {
+      oracle = Configuration.RETURN_VALUE + ".equals(" + previousOracle + ")";
+    }
+    //      if (!equivalenceMatch.getOracle().isEmpty()) {
+    //          // We have to add something to the partial oracle
+    //          oracle = composeOracle(oracle, equivalenceMatch.getOracle());
+    //      }
+    if (!condition.isEmpty()) {
+      equivalenceMatch.setOracle("if (" + condition + ") {" + oracle + "}");
+    } else {
+      equivalenceMatch.setOracle(oracle);
+    }
+    if (!ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch, condition)) {
+      equivalenceMatch.setOracle("");
+    }
   }
+  //  public String composeOracle(String newOracle, String oldOracle) {
+  //    newOracle = StringUtils.difference(oldOracle, newOracle);
+  //    return oldOracle.substring(0, oldOracle.length() - 1) + "." + newOracle;
+  //  }
 
   private Set<CodeElement<?>> extractMethodCodeElements(DocumentedExecutable excMember) {
     Set<CodeElement<?>> collectedElements = new LinkedHashSet<>();
     Class<?> containingClass = excMember.getDeclaringClass();
     List<Executable> rawMethods =
         JavaElementsCollector.collectRawMethods(containingClass, excMember);
-    collectedElements.addAll(JavaElementsCollector.getCodeElementsFromRawMethods(rawMethods));
+    collectedElements.addAll(
+        JavaElementsCollector.getCodeElementsFromRawMethods(rawMethods, Configuration.RECEIVER));
     return collectedElements;
   }
 

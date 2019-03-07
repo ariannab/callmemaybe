@@ -3,6 +3,7 @@ package org.toradocu.util;
 import static java.util.stream.Collectors.toList;
 
 import com.github.javaparser.ast.body.CallableDeclaration;
+import com.github.javaparser.ast.nodeTypes.NodeWithConstructors;
 import com.github.javaparser.javadoc.Javadoc;
 import com.github.javaparser.javadoc.JavadocBlockTag;
 import java.io.FileNotFoundException;
@@ -59,7 +60,9 @@ public class RandomTestSelection {
       String className =
           sourcePath.substring(sourcePath.lastIndexOf("/") + 1, sourcePath.lastIndexOf("."));
       try {
-        methods = extractor.getExecutables(className, sourcePath);
+        final NodeWithConstructors<?> target =
+            JavadocExtractor.getTypeDefinition(className, sourcePath);
+        methods = extractor.getExecutables(target);
         int numberOfTags = 0;
         for (CallableDeclaration m : methods) {
           numberOfTags += findTagsForMethod(m);
@@ -98,7 +101,9 @@ public class RandomTestSelection {
       String className =
           sourcePath.substring(sourcePath.lastIndexOf("/") + 1, sourcePath.lastIndexOf("."));
       try {
-        methods = extractor.getExecutables(className, sourcePath);
+        final NodeWithConstructors<?> target =
+            JavadocExtractor.getTypeDefinition(className, sourcePath);
+        methods = extractor.getExecutables(target);
         int numberOfTags = 0;
         for (CallableDeclaration m : methods) {
           numberOfTags += findTagsForMethod(m);

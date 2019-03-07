@@ -160,16 +160,18 @@ public class SourceCodeBuilder {
    *
    * @param anImport the name to be imported
    */
-  public void addImport(String anImport) {
-    if (anImport.contains("<")) {
-      // generics
-      anImport = anImport.substring(0, anImport.indexOf("<"));
+  void addImport(String anImport) {
+    if (!anImport.isEmpty()) {
+      if (anImport.contains("<")) {
+        // generics
+        anImport = anImport.substring(0, anImport.indexOf("<"));
+      }
+      if (anImport.contains("$")) {
+        // inner class
+        anImport = anImport.replaceAll("\\$", ".");
+      }
+      imports.add(anImport);
     }
-    if (anImport.contains("$")) {
-      // inner class
-      anImport = anImport.replaceAll("\\$", ".");
-    }
-    imports.add(anImport);
   }
 
   /**

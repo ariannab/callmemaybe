@@ -35,6 +35,7 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.function.Predicate;
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.toradocu.conf.Configuration;
@@ -73,6 +74,7 @@ public final class JavadocExtractor {
     // Obtain executable members (constructors and methods) by means of reflection.
     final Class<?> clazz = Reflection.getClass(className);
     final List<Executable> reflectionExecutables = getExecutables(clazz);
+    NodeList<ImportDeclaration> imports = new NodeList<>();
 
     // Obtain executable members (constructors and methods) in the source code.
     final ImmutablePair<String, String> fileNameAndSimpleName =
@@ -81,7 +83,10 @@ public final class JavadocExtractor {
     final String sourceFile =
         sourcePath + File.separator + fileName.replaceAll("\\.", File.separator) + ".java";
     final String simpleName = fileNameAndSimpleName.getRight();
-    final List<CallableDeclaration<?>> sourceExecutables = getExecutables(simpleName, sourceFile);
+
+    final NodeWithConstructors<?> target = getTypeDefinition(simpleName, sourceFile);
+    imports = getCompilationUnit(sourceFile).getImports();
+    final List<CallableDeclaration<?>> sourceExecutables = getExecutables(target);
 
     // Maps each reflection executable member to its corresponding source executable member.
     Map<Executable, CallableDeclaration<?>> executablesMap =
@@ -140,7 +145,7 @@ public final class JavadocExtractor {
         "Extracting Javadoc information of {} (in source folder {}) done", className, sourcePath);
 
     // Create the documented class.
-    return new DocumentedType(clazz, documentedExecutables);
+    return new DocumentedType(clazz, documentedExecutables, imports);
   }
 
   private ImmutablePair<String, String> getFileNameAndSimpleName(Class<?> clazz, String className) {
@@ -475,30 +480,27 @@ public final class JavadocExtractor {
   /**
    * Collects non-private callables from source code.
    *
-   * @param className the String class name
-   * @param sourcePath the String source path
    * @return non private-callables of the class with name {@code className}
    * @throws FileNotFoundException if the source path couldn't be resolved
    */
-  public List<CallableDeclaration<?>> getExecutables(String className, String sourcePath)
+  public List<CallableDeclaration<?>> getExecutables(NodeWithConstructors<?> target)
       throws FileNotFoundException {
     final List<CallableDeclaration<?>> sourceExecutables = new ArrayList<>();
-    final NodeWithConstructors<?> target = getTypeDefinition(className, sourcePath);
     sourceExecutables.addAll(target.getConstructors());
     sourceExecutables.addAll(target.getMethods());
     sourceExecutables.removeIf(NodeWithPrivateModifier::isPrivate); // Ignore private members.
     return Collections.unmodifiableList(sourceExecutables);
   }
 
-  private NodeWithConstructors<?> getTypeDefinition(String typeName, String sourcePath)
+  public static NodeWithConstructors<?> getTypeDefinition(String typeName, String sourcePath)
       throws FileNotFoundException {
-    final CompilationUnit cu = JavaParser.parse(new File(sourcePath));
+    final CompilationUnit cu = getCompilationUnit(sourcePath);
 
     String nestedClassName = "";
     int dollarsPosition = typeName.indexOf("$");
     if (dollarsPosition != -1) {
       // Nested class.
-      nestedClassName = typeName.substring(dollarsPosition + 1, typeName.length());
+      nestedClassName = typeName.substring(dollarsPosition + 1);
       typeName = typeName.substring(0, dollarsPosition);
     }
 
@@ -540,6 +542,12 @@ public final class JavadocExtractor {
 
     throw new IllegalArgumentException(
         "Impossible to find a class or interface with name " + typeName + " in " + sourcePath);
+  }
+
+  @NotNull
+  private static CompilationUnit getCompilationUnit(String sourcePath)
+      throws FileNotFoundException {
+    return JavaParser.parse(new File(sourcePath));
   }
 
   /**

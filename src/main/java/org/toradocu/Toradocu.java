@@ -87,12 +87,12 @@ public class Toradocu {
     // === Javadoc Extractor ===
 
     List<DocumentedExecutable> members = null;
+    DocumentedType documentedType = null;
     final String targetClass = configuration.getTargetClass();
     if (configuration.getConditionTranslatorInput() == null) {
       final JavadocExtractor javadocExtractor = new JavadocExtractor();
       try {
-        final DocumentedType documentedType =
-            javadocExtractor.extract(targetClass, configuration.sourceDir.toString());
+        documentedType = javadocExtractor.extract(targetClass, configuration.sourceDir.toString());
         members = documentedType.getDocumentedExecutables();
       } catch (ParameterNotFoundException e) {
         log.error(e.getMessage() + "\n" + Arrays.toString(e.getStackTrace()));
@@ -147,7 +147,7 @@ public class Toradocu {
       List<JsonOutput> jsonOutputs = new ArrayList<>();
       // Use @tComment or the standard condition translator to translate comments.
       if (configuration.mustGenerateCrossOracles()) {
-        equivalenceSpecs = CommentTranslator.createCrossOracles(members);
+        equivalenceSpecs = CommentTranslator.createCrossOracles(documentedType);
       } else if (configuration.useTComment()) {
         specifications = tcomment.TcommentKt.translate(members);
       } else {

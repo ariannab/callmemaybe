@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javafx.util.Pair;
+import org.toradocu.util.ComplianceChecks;
 
 // FIXME turn this into:
 /*
@@ -34,8 +35,12 @@ public class EquivalentMethodMatch {
   private Map<String, List<Pair<Integer, String>>> hardcodedParams;
 
   private Map<String, List<Pair<Integer, String>>> staticFinalParams;
+
+  private Map<String, List<Pair<Integer, String>>> typeParams;
+
   private boolean isNegated;
 
+  String importsNeeded;
   //  public EquivalentMethodMatch() {
   //    this.methodSignatures = new ArrayList<>();
   //    this.simpleName = new ArrayList<>();
@@ -58,10 +63,13 @@ public class EquivalentMethodMatch {
     if (!methodSignatures.isEmpty()) {
       this.hardcodedParams = areArgsHardcoded(methodSignatures);
       this.staticFinalParams = areArgsStaticFinal(methodSignatures);
+      this.typeParams = areArgsTypes(methodSignatures);
     } else {
       this.hardcodedParams = new HashMap<>();
       this.staticFinalParams = new HashMap<>();
+      this.typeParams = new HashMap<>();
     }
+    this.importsNeeded = "";
     this.isNegated = isNegated;
     this.oracle = "";
   }
@@ -69,11 +77,20 @@ public class EquivalentMethodMatch {
   private void extractSimpleNames() {
     this.simpleName = new ArrayList<>();
     for (String methodSignature : this.methodSignatures) {
-      if (methodSignature.contains("(")) {
-        if (methodSignature.contains(".") || methodSignature.contains("#")) {
-          String[] tokens = methodSignature.split("[.#]");
-          methodSignature = tokens[1];
+      //      Matcher classSignature = Pattern.compile("[A-Z].*[.#](.*)").matcher(methodSignature);
+      ////      if (classSignature.find()) {
+      ////          methodSignature = classSignature.group(1);
+      ////      }
+      if (Character.isUpperCase(methodSignature.charAt(0))) {
+        if (methodSignature.contains(".")) {
+          methodSignature = methodSignature.substring(methodSignature.indexOf(".") + 1);
         }
+        if (methodSignature.contains("#")) {
+          methodSignature = methodSignature.substring(methodSignature.indexOf("#") + 1);
+        }
+      }
+
+      if (methodSignature.contains("(")) {
         this.simpleName.add(methodSignature.substring(0, methodSignature.indexOf("(")));
       } else {
         this.simpleName.add(methodSignature);
@@ -112,8 +129,8 @@ public class EquivalentMethodMatch {
   private Map<String, List<Pair<Integer, String>>> areArgsHardcoded(
       ArrayList<String> methodSignatures) {
     Map<String, List<Pair<Integer, String>>> map = new HashMap<>();
-    List<Pair<Integer, String>> constArgs = new ArrayList<>();
     for (String signature : methodSignatures) {
+      List<Pair<Integer, String>> constArgs = new ArrayList<>();
       List<String> patterns = new ArrayList<>();
       patterns.add("[0-9]");
       patterns.add("true|false");
@@ -137,8 +154,8 @@ public class EquivalentMethodMatch {
   private Map<String, List<Pair<Integer, String>>> areArgsStaticFinal(
       ArrayList<String> methodSignatures) {
     Map<String, List<Pair<Integer, String>>> map = new HashMap<>();
-    List<Pair<Integer, String>> sfArgs = new ArrayList<>();
     for (String signature : methodSignatures) {
+      List<Pair<Integer, String>> sfArgs = new ArrayList<>();
       String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z]+|#[A-Z]+)+";
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
@@ -154,12 +171,47 @@ public class EquivalentMethodMatch {
     return map;
   }
 
+  private Map<String, List<Pair<Integer, String>>> areArgsTypes(
+      ArrayList<String> methodSignatures) {
+    Map<String, List<Pair<Integer, String>>> map = new HashMap<>();
+    for (String signature : methodSignatures) {
+      List<Pair<Integer, String>> tArgs = new ArrayList<>();
+      List<String> signatureArgs = this.arguments.get(signature);
+      List<String> arguments = this.arguments.get(signature);
+      for (int i = 0; i < arguments.size(); i++) {
+        String arg = signatureArgs.get(i);
+        List<Pair<Integer, String>> list = this.staticFinalParams.get(signature);
+        if (!list.contains(new Pair<>(i, arg))
+                && !arg.isEmpty()
+                && Character.isUpperCase(arg.charAt(0))
+            || arg.contains("[]")
+            || ComplianceChecks.primitiveTypes().contains(arg)) {
+          tArgs.add(new Pair<>(i, arg));
+        }
+      }
+      map.put(signature, tArgs);
+    }
+    return map;
+  }
+
   public Map<String, List<Pair<Integer, String>>> getHardcodedParams() {
     return hardcodedParams;
   }
 
   public Map<String, List<Pair<Integer, String>>> getStaticFinalParams() {
     return staticFinalParams;
+  }
+
+  public Map<String, List<Pair<Integer, String>>> getTypeParams() {
+    return typeParams;
+  }
+
+  public String getImportsNeeded() {
+    return importsNeeded;
+  }
+
+  public void setImportsNeeded(String importsNeeded) {
+    this.importsNeeded = importsNeeded;
   }
 
   public boolean isNegated() {

@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
+import org.toradocu.extractor.EquivalentMethodMatch;
 import org.toradocu.extractor.JavadocExtractor;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Property;
@@ -107,14 +108,17 @@ public class ComplianceChecks {
    * @return whether the condition compiles or not
    */
   public static boolean isEqSpecCompilable(
-      DocumentedExecutable method, String oracle, String condition) {
+      DocumentedExecutable method, EquivalentMethodMatch equivalentMethodMatch, String condition) {
+
     if (Modifier.isPrivate(method.getDeclaringClass().getModifiers())) {
       // if the target class is private we cannot apply compliance check.
       return true;
     }
+    String oracle = equivalentMethodMatch.getOracle();
     // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
     // FIXME this should be checked also for returns translation
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
+    sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
     includeMethodResult(method, sourceCodeBuilder);
     addConditionCodeInformation(method, oracle, sourceCodeBuilder);
     if (!condition.isEmpty()) {
@@ -214,7 +218,7 @@ public class ComplianceChecks {
 
     List<String> links = method.getFreeText().getComment().getLinksContent();
     for (String link : links) {
-      if (!link.contains("#")) {
+      if (!link.contains("#") && link.contains(".")) {
         sourceCodeBuilder.addImport(link);
       }
     }

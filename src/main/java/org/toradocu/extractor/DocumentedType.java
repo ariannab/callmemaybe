@@ -1,5 +1,7 @@
 package org.toradocu.extractor;
 
+import com.github.javaparser.ast.ImportDeclaration;
+import com.github.javaparser.ast.NodeList;
 import java.util.List;
 import java.util.Objects;
 import org.toradocu.util.Checks;
@@ -12,6 +14,7 @@ public final class DocumentedType {
   /** Constructors and methods of this documented type. */
   private final List<DocumentedExecutable> documentedExecutables;
 
+  private final NodeList<ImportDeclaration> imports;
   /**
    * Creates a new DocumentedType wrapping the given class and with the given constructors and
    * methods.
@@ -20,11 +23,15 @@ public final class DocumentedType {
    * @param documentedExecutables constructors and methods of {@code documentedClass}
    * @throws NullPointerException if either documentedClass or documentedExecutables is null
    */
-  DocumentedType(Class<?> documentedClass, List<DocumentedExecutable> documentedExecutables) {
+  DocumentedType(
+      Class<?> documentedClass,
+      List<DocumentedExecutable> documentedExecutables,
+      NodeList<ImportDeclaration> imports) {
     Checks.nonNullParameter(documentedClass, "documentedClass");
     Checks.nonNullParameter(documentedExecutables, "documentedExecutables");
     this.documentedClass = documentedClass;
     this.documentedExecutables = documentedExecutables;
+    this.imports = imports;
   }
 
   /**
@@ -43,6 +50,10 @@ public final class DocumentedType {
    */
   public List<DocumentedExecutable> getDocumentedExecutables() {
     return documentedExecutables;
+  }
+
+  public NodeList<ImportDeclaration> getImports() {
+    return imports;
   }
 
   @Override

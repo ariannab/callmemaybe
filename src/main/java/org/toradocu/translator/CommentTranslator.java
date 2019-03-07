@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
+import org.toradocu.extractor.DocumentedType;
 import org.toradocu.extractor.EquivalentMethodMatch;
-import org.toradocu.extractor.FreeText;
 import org.toradocu.extractor.ParamTag;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.extractor.ThrowsTag;
@@ -40,10 +40,10 @@ public class CommentTranslator {
    * @return a specification
    */
   public static ArrayList<EquivalentMethodMatch> translate(
-      FreeText freeTextComment, DocumentedExecutable excMember) {
+      DocumentedType documentedType, DocumentedExecutable excMember) {
     // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
-    return new FreeTextTranslator().translate(freeTextComment, excMember);
+    return new FreeTextTranslator().translate(documentedType, excMember);
   }
 
   /**
@@ -148,10 +148,11 @@ public class CommentTranslator {
   }
 
   public static Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> createCrossOracles(
-      List<DocumentedExecutable> members) {
+      DocumentedType documentedType) {
     Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> specs = new HashMap<>();
+    List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
     for (DocumentedExecutable member : members) {
-      specs.put(member, CommentTranslator.translate(member.freeText(), member));
+      specs.put(member, CommentTranslator.translate(documentedType, member));
     }
 
     return specs;

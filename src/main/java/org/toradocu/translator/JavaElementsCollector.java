@@ -56,12 +56,14 @@ public class JavaElementsCollector {
     final List<Executable> methods = collectRawMethods(containingClass, documentedExecutable);
     List<Class<?>> inScopeTypes = collectInScopeTypes(documentedExecutable);
     methods.removeIf(method -> !invokableWithParameters(method, inScopeTypes));
-    List<CodeElement<?>> codeElements = getCodeElementsFromRawMethods(methods);
+    List<CodeElement<?>> codeElements =
+        getCodeElementsFromRawMethods(methods, Configuration.RECEIVER);
     return codeElements;
   }
 
   @NotNull
-  public static List<CodeElement<?>> getCodeElementsFromRawMethods(List<Executable> methods) {
+  public static List<CodeElement<?>> getCodeElementsFromRawMethods(
+      List<Executable> methods, String receiver) {
     List<CodeElement<?>> codeElements = new ArrayList<>();
     for (Executable executable : methods) {
       if (executable instanceof Method) {
@@ -69,11 +71,10 @@ public class JavaElementsCollector {
           codeElements.add(new StaticMethodCodeElement(((Method) executable)));
         } else {
           // if (!documentedExecutable.isConstructor()) {
-          codeElements.add(new MethodCodeElement(Configuration.RECEIVER, ((Method) executable)));
+          codeElements.add(new MethodCodeElement(receiver, ((Method) executable)));
         }
       } else if (executable instanceof Constructor) {
-        codeElements.add(
-            new ConstructorCodeElement(Configuration.RECEIVER, ((Constructor) executable)));
+        codeElements.add(new ConstructorCodeElement(receiver, ((Constructor) executable)));
       }
     }
     return codeElements;

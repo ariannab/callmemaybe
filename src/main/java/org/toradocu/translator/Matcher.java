@@ -407,9 +407,10 @@ class Matcher {
         match =
             new Match(
                 exp.substring(0, exp.indexOf("(") + 1),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
       } else {
-        match = new Match(exp.substring(0, exp.indexOf("(") + 1), null);
+        match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
       }
       for (int j = 0; j < paramForMatch.size() - 1; j++) {
         match.completeExpression(paramForMatch.get(j) + ",");
@@ -429,12 +430,14 @@ class Matcher {
         match =
             new Match(
                 firstCodeMatch.getJavaExpression(),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
       } else if (firstCodeMatch instanceof GeneralCodeElement) {
         match =
             new Match(
                 firstCodeMatch.getJavaExpression(),
-                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
       }
     }
     return match;
@@ -462,7 +465,11 @@ class Matcher {
     java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
     List<String> myParamTypes = new ArrayList<>();
     for (Parameter arg : myMethodParamTypes) {
-      myParamTypes.add(arg.getType().getName());
+      if (arg.getType().isArray()) {
+        myParamTypes.add(convertArrayTipe(arg.getType()));
+      } else {
+        myParamTypes.add(arg.getType().getName());
+      }
     }
     List<String> eqArgs = equivalentMethod.getArguments().get(methodSignature);
     List<String> docArgs =
@@ -499,6 +506,8 @@ class Matcher {
           equivalentMethod.getHardcodedParams().get(methodSignature);
       List<Pair<Integer, String>> codeElementsParams =
           equivalentMethod.getStaticFinalParams().get(methodSignature);
+      List<Pair<Integer, String>> typeParams =
+          equivalentMethod.getTypeParams().get(methodSignature);
       if (currentMatchParamTypes != null
           && currentMatchParamTypes.length == actualArgList.size()
           && currentMatchParamTypes.length
@@ -524,6 +533,7 @@ class Matcher {
             }
           }
           for (Pair<Integer, String> argPair : constantParamsToIgnore) {
+            // If params are constants (hardcoded in doc), just fill parenthesis with the constant
             if (argPair.getKey().equals(filledSequence)) {
               paramForMatch.add(argPair.getValue());
               filledSequence++;
@@ -535,7 +545,8 @@ class Matcher {
           }
         }
         boolean sizesMatch =
-            paramForMatch.size() + codeElementsParams.size() == currentMatchParamTypes.length;
+            paramForMatch.size() + codeElementsParams.size() + typeParams.size()
+                == currentMatchParamTypes.length;
         if (sizesMatch) {
           firstCodeMatch = currentMatch;
         }
@@ -547,45 +558,54 @@ class Matcher {
           match =
               new Match(
                   exp.substring(0, exp.indexOf("(") + 1),
-                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                  firstCodeMatch);
         } else {
-          match = new Match(exp.substring(0, exp.indexOf("(") + 1), null);
+          match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
         }
         for (int j = 0; j < paramForMatch.size() - 1; j++) {
           match.completeExpression(paramForMatch.get(j) + ",");
         }
         for (int i = 0; i < indexesToBeMatched.size(); i++) {
-          String codeElement = codeElementsParams.get(i).getValue();
-          String[] codeElementTokens = codeElement.split("\\.");
-          String codeElementName = codeElementTokens[codeElementTokens.length - 1];
-
-          List<FieldCodeElement> result = new ArrayList<>();
-          String className = currentMatchParamTypes[i];
-          // the class name is the one of the parameters left;
-          Class<?> matchedType = null;
-          try {
-            matchedType = Reflection.getClass(className);
-          } catch (ClassNotFoundException e) {
-            // Intentionally empty: Apply other heuristics to load the exception type.
-          }
-          if (matchedType != null) {
-            List<FieldCodeElement> allFieldsInClass = JavaElementsCollector.fieldsOf(matchedType);
-            if (!allFieldsInClass.isEmpty()) {
-              result =
-                  allFieldsInClass
-                      .stream()
-                      .filter(
-                          f ->
-                              f.getJavaExpression()
-                                  .equals(Configuration.RECEIVER + "." + codeElementName))
-                      .collect(Collectors.toList());
+          // FIXME HERE you have to check if it's a code element param or a type param (e.g.,
+          // Object[])!
+          if (!codeElementsParams.isEmpty()) {
+            String codeElementName = parseCodeElemName(codeElementsParams, i);
+            List<FieldCodeElement> result = new ArrayList<>();
+            String className = currentMatchParamTypes[i];
+            // the class name is the one of the parameters left;
+            Class<?> matchedType = null;
+            try {
+              matchedType = Reflection.getClass(className);
+            } catch (ClassNotFoundException e) {
+              // Intentionally empty: Apply other heuristics to load the exception type.
+            }
+            if (matchedType != null) {
+              List<FieldCodeElement> allFieldsInClass = JavaElementsCollector.fieldsOf(matchedType);
+              if (!allFieldsInClass.isEmpty()) {
+                result =
+                    allFieldsInClass
+                        .stream()
+                        .filter(
+                            f ->
+                                f.getJavaExpression()
+                                    .equals(Configuration.RECEIVER + "." + codeElementName))
+                        .collect(Collectors.toList());
+              }
+            }
+            if (!result.isEmpty()) {
+              // THAT'S IT! We found the right match (classes-public field).
+              paramForMatch.add(className + "." + codeElementName);
             }
           }
-          if (!result.isEmpty()) {
-            // THAT'S IT! We found the right match (classes-public field).
-            paramForMatch.add(className + "." + codeElementName);
+          if (!typeParams.isEmpty()) {
+            Parameter myMethodType = myMethodParamTypes[i];
+            String matchParamType = currentMatchParamTypes[i];
+            if (myMethodType.getType().isArray()
+                && (matchParamType.contains("..") || matchParamType.contains("[]"))) {
+              paramForMatch.add("args[" + i + "]");
+            }
           }
-
           for (int j = 0; j < paramForMatch.size() - 1; j++) {
             match.completeExpression(paramForMatch.get(j) + ",");
           }
@@ -603,15 +623,35 @@ class Matcher {
         match =
             new Match(
                 firstCodeMatch.getJavaExpression(),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
       } else if (firstCodeMatch instanceof GeneralCodeElement) {
         match =
             new Match(
                 firstCodeMatch.getJavaExpression(),
-                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
       }
     }
     return match;
+  }
+
+  private String parseCodeElemName(List<Pair<Integer, String>> codeElementsParams, int i) {
+    String codeElement = codeElementsParams.get(i).getValue();
+    String[] codeElementTokens = codeElement.split("\\.");
+    return codeElementTokens[codeElementTokens.length - 1];
+  }
+
+  private String convertArrayTipe(Class<?> type) {
+    String name = type.getName();
+    String returnName = "";
+    switch (name) {
+      case "[B":
+        returnName = "byte[]";
+        break;
+      default:
+    }
+    return returnName;
   }
 
   /**
@@ -643,7 +683,8 @@ class Matcher {
       match =
           new Match(
               exp.substring(0, exp.indexOf("(") + 1) + "null" + ")",
-              ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+              ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+              firstCodeMatch);
     } else if (equalPattern.find()) {
       // the equal method can be invoked only from an Object to an Object of the same type
       receiver = receiver.replace("[", "").replace("]", "").replace("s", "");
@@ -658,7 +699,8 @@ class Matcher {
               match =
                   new Match(
                       exp.substring(0, exp.indexOf("(") + 1) + "args[" + j + "]" + ")",
-                      ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck());
+                      ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                      firstCodeMatch);
               foundArgMatch = true;
               break;
             }
