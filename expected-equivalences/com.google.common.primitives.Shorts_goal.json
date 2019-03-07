@@ -66,7 +66,7 @@
     "equivalence": {
       "comment": "Returns the short value whose big-endian representation is stored in the first 2 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getShort(). For example, the input byte array {0x54, 0x32} would yield the short value 0x5432. <p>Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much more flexibility at little cost in readability.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(ByteBuffer.wrap(args[0]).getShort())"
+      "condition": "methodResultID==java.nio.ByteBuffer.wrap(args[0]).getShort()"
     }
   },
   {
@@ -608,7 +608,7 @@
     "equivalence": {
       "comment": "Returns a fixed-size list backed by the specified array, similar to Arrays#asList(Object[]). The list supports Object), but any attempt to set a value to null will result in a NullPointerException. <p>The returned list maintains the values, but not the identities, of Short objects written to or read from it. For example, whether list.get(0) == list.get(0) is true for the returned list is unspecified.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(Arrays.asList(args[0]))"
+      "condition": "methodResultID.equals(java.util.Arrays.asList(args[0]))"
     }
   },
   {

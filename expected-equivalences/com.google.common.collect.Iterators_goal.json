@@ -839,7 +839,7 @@
     "equivalence": {
       "comment": "Returns an iterator containing the elements of array in order. The returned iterator is a view of the array; subsequent changes to the array will be reflected in the iterator. <p>Note: It is often preferable to represent your data using a collection type, for example using Arrays#asList(Object[]), making this method unnecessary. <p>The Iterable equivalent of this method is either Arrays#asList(Object[]), ImmutableList#copyOf(Object[])}, or ImmutableList#of.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(java.util.Arrays.asList(args[0])) && methodResultID.equals(ImmutableList#copyOf(args[0])) &&  methodResultID.equals(ImmutableList#of(args[0]))"
     }
   },
   {
