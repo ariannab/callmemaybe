@@ -51,10 +51,10 @@ public class JsonOutput {
     for (EquivalentMethodMatch m : specification) {
       if (!m.getOracle().isEmpty()) {
         oracle += m.getOracle();
-        if (specification.size() > 1) {
-          // FIXME I don't like this, exploit join() or smt
-          oracle += ";";
-        }
+        //        if (specification.size() > 1) {
+        //          // FIXME I don't like this, exploit join() or smt
+        //          oracle += ";";
+        //        }
       }
     }
     this.equivalence =

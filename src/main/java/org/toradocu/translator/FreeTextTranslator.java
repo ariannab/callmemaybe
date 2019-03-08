@@ -23,7 +23,6 @@ public class FreeTextTranslator {
   /**
    * Translates a free text comment. For now only supports equivalences.
    *
-   * @param freeTextComment an object representing a free text comment
    * @param excMember the executable member the comment belongs to
    * @return the translation, null if failed
    */
@@ -123,7 +122,7 @@ public class FreeTextTranslator {
 
       String methodSignature = equivalenceMatch.getMethodSignatures().get(i);
       String simpleMethodName = equivalenceMatch.getSimpleName().get(i);
-
+      boolean partial = !methodSignature.contains("(");
       // Extract every CodeElement associated with the method and the containing class of the
       // method.
       Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
@@ -144,7 +143,8 @@ public class FreeTextTranslator {
                   matchedType.getCanonicalName());
           if (!allMethodsInClass.isEmpty()) {
             String methodSimpleName = className + "." + simpleMethodName;
-            Set<CodeElement<?>> result =
+            // FIXME here I am overwriting...cleverer way?
+            matchingCodeEelem =
                 allMethodsInClass
                     .stream()
                     .filter(
@@ -153,13 +153,12 @@ public class FreeTextTranslator {
                                 .substring(0, m.getJavaExpression().indexOf("("))
                                 .equals(methodSimpleName))
                     .collect(Collectors.toSet());
-            // FIXME here I am overwriting...cleverer way?
-            matchingCodeEelem = result;
           }
         }
       } else if (matchingCodeEelem.isEmpty()
           && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
         List<String> links = excMember.getLinksContent();
+        String[] javaPackages = {"java.lang.", "java.util."};
         for (String link : links) {
           if (matchedType != null) {
             break;
@@ -167,10 +166,23 @@ public class FreeTextTranslator {
           if (link.contains("#")) {
             link = link.substring(0, link.indexOf("#"));
           }
-          try {
-            matchedType = Reflection.getClass(link);
-          } catch (ClassNotFoundException e) {
-            // Intentionally empty: Apply other heuristics to load the exception type.
+          if (!link.contains(".")) {
+            for (String javaP : javaPackages) {
+              String newlink = javaP + link;
+              try {
+                matchedType = Reflection.getClass(newlink);
+              } catch (ClassNotFoundException e) {
+              }
+              if (matchedType != null) {
+                link = newlink;
+                break;
+              }
+            }
+          } else {
+            try {
+              matchedType = Reflection.getClass(link);
+            } catch (ClassNotFoundException e) {
+            }
           }
           if (matchedType != null) {
             className = link;
@@ -183,7 +195,6 @@ public class FreeTextTranslator {
                 try {
                   matchedType = Reflection.getClass(importedClass);
                 } catch (ClassNotFoundException e) {
-                  // Intentionally empty: Apply other heuristics to load the exception type.
                 }
                 if (matchedType != null) {
                   className = importedClass;
@@ -218,9 +229,13 @@ public class FreeTextTranslator {
       if (matchingCodeEelem != null && !matchingCodeEelem.isEmpty()) {
         List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeEelem);
 
-        theOne =
-            matcher.reverseBestArgsTypeMatch(
-                methodSignature, equivalenceMatch, excMember, sortedCodeElem);
+        if (partial) {
+          theOne = matcher.bestArgsTypeMatch(excMember, "", new ArrayList<>(matchingCodeEelem));
+        } else {
+          theOne =
+              matcher.reverseBestArgsTypeMatch(
+                  methodSignature, equivalenceMatch, excMember, sortedCodeElem);
+        }
         if (equivalenceMatch.isNegated()) {
           negation = "!";
         }

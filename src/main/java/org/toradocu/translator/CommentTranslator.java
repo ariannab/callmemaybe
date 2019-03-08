@@ -152,7 +152,8 @@ public class CommentTranslator {
     Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> specs = new HashMap<>();
     List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
     for (DocumentedExecutable member : members) {
-      specs.put(member, CommentTranslator.translate(documentedType, member));
+      ArrayList<EquivalentMethodMatch> spec = CommentTranslator.translate(documentedType, member);
+      specs.put(member, spec);
     }
 
     return specs;

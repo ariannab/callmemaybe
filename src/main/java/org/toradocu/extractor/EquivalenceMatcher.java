@@ -59,6 +59,7 @@ public class EquivalenceMatcher {
     // TODO let's try the following method regex: it should be correctly recursive for chain of
     // calls (separated by .)
     String methodRegex = "(!)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+    String partialMethodRegex = "(!)?[A-Z]\\w+[.#]\\w+";
     for (String word : keywordsSet.getKw()) {
       Matcher keywordMatcher =
           Pattern.compile("\\b" + word + "\\b", Pattern.CASE_INSENSITIVE).matcher(comment);
@@ -66,12 +67,18 @@ public class EquivalenceMatcher {
         // I do not only want the comment to contain the keywords, I also want to find a
         // method signature in it - otherwise, what is this method equivalent to?
         java.util.regex.Matcher signatureMatch;
+        boolean partial = false;
         int group = 0;
         if (word.equals("as")) {
           signatureMatch = Pattern.compile(" as " + methodRegex).matcher(comment);
         } else {
           signatureMatch = Pattern.compile(methodRegex).matcher(comment);
         }
+        if (!signatureMatch.find()) {
+          signatureMatch = Pattern.compile(partialMethodRegex).matcher(comment);
+          partial = true;
+        }
+        signatureMatch.reset();
 
         boolean equivalence = false;
         boolean similarity = false;
@@ -85,7 +92,10 @@ public class EquivalenceMatcher {
           }
           signaturesFound.add(signatureFound);
           negation = signatureMatch.group(1) != null;
-          List<String> arguments = extractArguments(signatureMatch, 5);
+          List<String> arguments = new ArrayList<>();
+          if (!partial) {
+            arguments = extractArguments(signatureMatch, 5);
+          }
           argumentsMap.put(signatureFound, arguments);
           // TODO check if there is an "if" or "when" or "except" - more?
           if (keywordsSet.getCategory().equals(KeywordsSet.Category.SIMILARITY)
@@ -118,7 +128,7 @@ public class EquivalenceMatcher {
   }
 
   private static List<String> extractArguments(Matcher methodMatch, int group) {
-    if (methodMatch.group(4) != null) {
+    if (methodMatch.group(group) != null) {
       // the method takes arguments
       String[] args = methodMatch.group(group).split(",");
       for (int i = 0; i < args.length; i++) {
