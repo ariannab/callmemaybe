@@ -32,6 +32,9 @@ public final class CommentContent {
   private final Map<String, List<Integer>> wordsMarkedAsCode;
 
   private final List<String> linksContent;
+
+  private boolean isSnippetExpression;
+
   /**
    * Builds a new CommentContent with the given {@code text}. Words marked with {@literal @code} and
    * {@literal <code></code>} in {@code text} are added to the map of words marked as code. Than,
@@ -146,8 +149,14 @@ public final class CommentContent {
 
           // FIXME too naive! Use regex match, for spaces not preceded by comma, and count matches
           // if (StringUtils.countMatches(codeSubsets[i], " ") > 1) {
-          if (codeSubsets[i].split(" ").length > 1 && anyReservedMatch(codeSubsets[i])) {
-            this.codeSnippet = codeSubsets[i];
+          if (codeSubsets[i].split(" ").length > 1) {
+            if (anyReservedMatch(codeSubsets[i])) {
+              this.codeSnippet = codeSubsets[i];
+              this.isSnippetExpression = false;
+            } else if (anyBooleanOperator(codeSubsets[i])) {
+              this.codeSnippet = codeSubsets[i];
+              this.isSnippetExpression = true;
+            }
           }
         }
         if (words.length == 1 && words[0].matches(".[[<>=]=?|!=].")) {
@@ -179,6 +188,9 @@ public final class CommentContent {
       while (subSentence.charAt(index) == '}') {
         reminder += "}";
         index++;
+        if (index >= subSentence.length()) {
+          break;
+        }
       }
     }
     return reminder;
@@ -202,7 +214,6 @@ public final class CommentContent {
       "\\belse\\b",
       "\\benum\\b",
       "\\bextends\\b",
-      "\\bfalse\\b",
       "\\bfinal\\b",
       "\\bfinally\\b",
       "\\bfloat\\b",
@@ -233,15 +244,11 @@ public final class CommentContent {
       "\\bthrow\\b",
       "\\bthrows\\b",
       "\\btransient\\b",
-      "\\btrue\\b",
       "\\btry\\b",
       "\\bvoid\\b",
       "\\bvolatile\\b",
       "\\bwhile\\b",
-      "\\bcontinue\\b",
-      "\\|\\|",
-      "&&",
-      "=="
+      "\\bcontinue\\b"
     };
 
     String joinedRegex = String.join("|", reserved);
@@ -251,6 +258,14 @@ public final class CommentContent {
     return find || matches;
   }
 
+  private boolean anyBooleanOperator(String codeSubset) {
+    String[] reserved = {"\\|\\|", "&&", "=="};
+    String joinedRegex = String.join("|", reserved);
+    Matcher matcher = Pattern.compile(joinedRegex).matcher(codeSubset);
+    boolean find = matcher.find();
+    boolean matches = matcher.matches();
+    return find || matches;
+  }
   /**
    * Counts how many occurrences of the String {@code word} there are before the given {@code
    * limitIndex} inside the {@code subSentence}. By doing this we know which occurrence of the word
@@ -325,6 +340,10 @@ public final class CommentContent {
 
   public String getCodeSnippet() {
     return codeSnippet;
+  }
+
+  public boolean isSnippetExpression() {
+    return isSnippetExpression;
   }
 
   @Override

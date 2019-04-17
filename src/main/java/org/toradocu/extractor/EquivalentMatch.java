@@ -237,11 +237,11 @@ public class EquivalentMatch {
     return codeSnippet;
   }
 
-  public void setCodeSnippet(String codeSnippet) {
+  public void setCodeSnippet(String codeSnippet, boolean isExpression) {
     if (codeSnippet.isEmpty()) {
       this.codeSnippet = null;
     } else {
-      this.codeSnippet = new CodeSnippet(codeSnippet);
+      this.codeSnippet = new CodeSnippet(codeSnippet, isExpression);
     }
   }
 

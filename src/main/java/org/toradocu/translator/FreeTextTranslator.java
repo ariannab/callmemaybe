@@ -44,7 +44,7 @@ public class FreeTextTranslator {
         // Verify comment contains equivalence declaration...
         equivalenceMatch =
             EquivalenceMatcher.getEquivalentOrSimilarMethod(
-                sentence, commentContent.getCodeSnippet());
+                sentence, commentContent.getCodeSnippet(), commentContent.isSnippetExpression());
 
         String condition = extractCondition(sentence);
         if (equivalenceMatch.isSimilarity()
@@ -62,7 +62,7 @@ public class FreeTextTranslator {
           boolean compilable =
               isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
           if (compilable) {
-            String finalOracle = prepareResult(excMember, equivalenceMatch.getCodeSnippetText());
+            String finalOracle = prepareResult(excMember, equivalenceMatch.getCodeSnippet());
             equivalenceMatch.setOracle(finalOracle);
           } else {
             equivalenceMatch.setOracle("");
@@ -306,14 +306,17 @@ public class FreeTextTranslator {
     Class<?> matchedType = null;
     Match theFinalMatch = null;
 
+    CodeSnippet snippet = equivalenceMatch.getCodeSnippet();
     if (!symbol.contains("(")) {
       List<DocumentedParameter> args = excMember.getParameters();
       for (int i = 0; i < args.size(); i++) {
         if (symbol.equals(args.get(i).getName())) {
-          CodeSnippet snippet = equivalenceMatch.getCodeSnippet();
           snippet.addMatchToSymbol(symbol, "args[" + i + "]");
           snippet.completeSnippet();
           // buildAndCompileOracle(excMember, equivalenceMatch, "", snippet.getSnippet());
+        } else if (isGenericType(symbol)) { // FIXME naive check
+          snippet.addMatchToSymbol(symbol, "Object");
+          snippet.completeSnippet();
         }
       }
     } else {
@@ -397,11 +400,15 @@ public class FreeTextTranslator {
         }
       }
       if (theFinalMatch != null) {
-        CodeSnippet snippet = equivalenceMatch.getCodeSnippet();
         snippet.addMatchToSymbol(symbol, theFinalMatch.getBaseExpression());
         snippet.completeSnippet();
       }
     }
+  }
+
+  private boolean isGenericType(String pt) {
+    // FIXME this is naive and potentially wrong, look at the same method in ComplianceChecks
+    return pt.length() == 1 && Character.isUpperCase(pt.charAt(0));
   }
 
   private Set<CodeElement<?>> extractMatchingCodeElementFromType(
@@ -472,6 +479,36 @@ public class FreeTextTranslator {
       oracle = Configuration.RETURN_VALUE + "==(" + previousOracle + ")";
     } else {
       oracle = Configuration.RETURN_VALUE + ".equals(" + previousOracle + ")";
+    }
+    return oracle;
+  }
+
+  @NotNull
+  private String prepareResult(DocumentedExecutable excMember, CodeSnippet codeSnippet) {
+    String previousOracle = codeSnippet.getSnippet();
+    String oracle;
+    String separator1;
+    String separator2;
+    if (codeSnippet.isExpression()) {
+      separator1 = "(";
+      separator2 = ")";
+    } else {
+      separator1 = "[";
+      separator2 = "]";
+    }
+    if (ComplianceChecks.primitiveTypes()
+        .contains(excMember.getReturnType().getType().getTypeName())) {
+      oracle =
+          Configuration.RETURN_VALUE + "==" + separator1 + " " + previousOracle + " " + separator2;
+    } else {
+      oracle =
+          Configuration.RETURN_VALUE
+              + ".equals"
+              + separator1
+              + " "
+              + previousOracle
+              + " "
+              + separator2;
     }
     return oracle;
   }

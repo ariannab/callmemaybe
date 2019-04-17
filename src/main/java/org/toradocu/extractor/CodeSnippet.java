@@ -7,20 +7,25 @@ import java.util.regex.Pattern;
 public class CodeSnippet {
   private String snippet;
   private Map<String, String> symbols;
+  private boolean isExpression;
 
-  CodeSnippet(String snippet) {
+  CodeSnippet(String snippet, boolean isExpression) {
     this.snippet = snippet;
     this.symbols = new HashMap<>();
+    this.isExpression = isExpression;
   }
 
   public void completeSnippet() {
     for (String symbol : symbols.keySet()) {
       String compilableExpression = symbols.get(symbol);
-      if (symbol.contains("(")) {
-        symbol = symbol.substring(0, symbol.indexOf("("));
-        compilableExpression = compilableExpression.substring(0, compilableExpression.indexOf("("));
+      if (compilableExpression != null) {
+        if (symbol.contains("(")) {
+          symbol = symbol.substring(0, symbol.indexOf("("));
+          compilableExpression =
+              compilableExpression.substring(0, compilableExpression.indexOf("("));
+        }
+        this.snippet = this.snippet.replaceAll(Pattern.quote(symbol), compilableExpression);
       }
-      this.snippet = this.snippet.replaceAll(Pattern.quote(symbol), compilableExpression);
     }
   }
 
@@ -34,5 +39,9 @@ public class CodeSnippet {
 
   public String getSnippet() {
     return snippet;
+  }
+
+  public boolean isExpression() {
+    return isExpression;
   }
 }

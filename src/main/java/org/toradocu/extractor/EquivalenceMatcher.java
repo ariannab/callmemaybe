@@ -18,7 +18,8 @@ public class EquivalenceMatcher {
    * @param codeSnippet
    * @return the signature of the (supposedly) equivalent method
    */
-  public static EquivalentMatch getEquivalentOrSimilarMethod(String comment, String codeSnippet) {
+  public static EquivalentMatch getEquivalentOrSimilarMethod(
+      String comment, String codeSnippet, boolean isExpression) {
     // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
     // TODO consider also: behaves (as?), like
     KeywordsSet equivalenceKw =
@@ -26,7 +27,7 @@ public class EquivalenceMatcher {
             Arrays.asList("equivalent", "similar", "analog", "same as", "identical"),
             KeywordsSet.Category.EQUIVALENCE);
     EquivalentMatch methodMatch =
-        getSignatureInMatchingComment(comment, codeSnippet, equivalenceKw);
+        getSignatureInMatchingComment(comment, codeSnippet, isExpression, equivalenceKw);
     if (methodMatch != null) {
       return methodMatch;
     } else {
@@ -36,7 +37,7 @@ public class EquivalenceMatcher {
           new KeywordsSet(
               Arrays.asList("prefer", "alternative", "replacement for"),
               KeywordsSet.Category.SIMILARITY);
-      methodMatch = getSignatureInMatchingComment(comment, codeSnippet, similarityKw);
+      methodMatch = getSignatureInMatchingComment(comment, codeSnippet, isExpression, similarityKw);
       if (methodMatch != null) {
         return methodMatch;
       }
@@ -54,7 +55,7 @@ public class EquivalenceMatcher {
    * @return the signature of the (supposedly) equivalent method
    */
   private static EquivalentMatch getSignatureInMatchingComment(
-      String comment, String codeSnippet, KeywordsSet keywordsSet) {
+      String comment, String codeSnippet, boolean isExpression, KeywordsSet keywordsSet) {
     EquivalentMatch match = null;
 
     for (String word : keywordsSet.getKw()) {
@@ -77,7 +78,7 @@ public class EquivalenceMatcher {
         //                                    false);
         //                }
 
-        match.setCodeSnippet(codeSnippet);
+        match.setCodeSnippet(codeSnippet, isExpression);
       }
     }
     return match;
