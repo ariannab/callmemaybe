@@ -21,6 +21,7 @@ EqSpecification extends Specification {
 public class EquivalentMethodMatch {
 
   private ArrayList<String> methodSignatures;
+  private String codeSnippet;
   private ArrayList<String> simpleName;
   private boolean equivalence;
   private boolean similarity;
@@ -50,16 +51,25 @@ public class EquivalentMethodMatch {
   //  }
 
   EquivalentMethodMatch(
+      String codeSnippet,
       ArrayList<String> methodSignatures,
       boolean equivalence,
       boolean similarity,
       Map<String, List<String>> arguments,
       boolean isNegated) {
+    this.codeSnippet = codeSnippet;
     this.methodSignatures = methodSignatures;
     extractSimpleNames();
     this.equivalence = equivalence;
     this.similarity = similarity;
     this.arguments = arguments;
+    manageArgs();
+    this.importsNeeded = "";
+    this.isNegated = isNegated;
+    this.oracle = "";
+  }
+
+  private void manageArgs() {
     if (!methodSignatures.isEmpty()) {
       this.hardcodedParams = areArgsHardcoded(methodSignatures);
       this.staticFinalParams = areArgsStaticFinal(methodSignatures);
@@ -69,9 +79,6 @@ public class EquivalentMethodMatch {
       this.staticFinalParams = new HashMap<>();
       this.typeParams = new HashMap<>();
     }
-    this.importsNeeded = "";
-    this.isNegated = isNegated;
-    this.oracle = "";
   }
 
   private void extractSimpleNames() {
@@ -194,6 +201,11 @@ public class EquivalentMethodMatch {
     return map;
   }
 
+  public void addSignature(String signature){
+    this.methodSignatures.add(signature);
+    extractSimpleNames();
+  }
+
   public Map<String, List<Pair<Integer, String>>> getHardcodedParams() {
     return hardcodedParams;
   }
@@ -216,5 +228,13 @@ public class EquivalentMethodMatch {
 
   public boolean isNegated() {
     return isNegated;
+  }
+
+  public String getCodeSnippet() {
+    return codeSnippet;
+  }
+
+  public void setCodeSnippet(String codeSnippet) {
+    this.codeSnippet = codeSnippet;
   }
 }

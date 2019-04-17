@@ -136,7 +136,7 @@
     "equivalence": {
       "comment": "Compares the two specified char values. The sign of the value returned is the same as that of ((Character) a).compareTo(b). <p>Note for Java 7 and later: this method should be treated as deprecated; use the equivalent Character#compare method instead.",
       "kind": "FreeText",
-      "condition": "methodResultID==java.lang.Character.compare(args[0],args[1])"
+      "condition": "methodResultID==(java.lang.Character.compare(args[0],args[1]))"
     }
   },
   {
@@ -455,7 +455,7 @@
     "equivalence": {
       "comment": "Returns the char value whose big-endian representation is stored in the first 2 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getChar(). For example, the input byte array {0x54, 0x32} would yield the char value '\\\\u5432'. <p>Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much more flexibility at little cost in readability.",
       "kind": "FreeText",
-      "condition": "methodResultID==java.nio.ByteBuffer.wrap(args[0]).getChar()"
+      "condition": "methodResultID==(java.nio.ByteBuffer.wrap(args[0]).getChar())"
     }
   },
   {

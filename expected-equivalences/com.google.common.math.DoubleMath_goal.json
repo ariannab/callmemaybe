@@ -533,7 +533,7 @@
     "equivalence": {
       "comment": "Returns true if x represents a mathematical integer. <p>This is equivalent to, but not necessarily implemented as, the expression !Double.isNaN(x) && !Double.isInfinite(x) && x == Math.rint(x).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(!Double.isNaN(args[0]) && !Double.isInfinite(args[0]) && x == Math.rint(args[0]))"
+      "condition": "methodResultID==(!Double.isNaN(args[0])&&!Double.isInfinite(args[0])&&args[0]==Math.rint(args[0]))"
     }
   },
   {

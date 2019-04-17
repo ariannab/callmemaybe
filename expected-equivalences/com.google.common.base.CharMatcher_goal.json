@@ -279,7 +279,7 @@
     "equivalence": {
       "comment": "Returns true if a character sequence contains no matching characters. Equivalent to !matchesAnyOf(sequence). <p>The default implementation iterates over the sequence, invoking matches for each character, until this returns false or the end is reached.",
       "kind": "FreeText",
-      "condition": "methodResultID==!receiverObjectID.matchesAnyOf(args[0])"
+      "condition": "methodResultID==(!receiverObjectID.matchesAnyOf(args[0]))"
     }
   },
   {
@@ -798,7 +798,7 @@
     "equivalence": {
       "comment": "Returns true if a character sequence contains at least one matching character. Equivalent to !matchesNoneOf(sequence). <p>The default implementation iterates over the sequence, invoking matches for each character, until this returns true or the end is reached.",
       "kind": "FreeText",
-      "condition": "methodResultID==!receiverObjectID.matchesNoneOf(args[0])"
+      "condition": "methodResultID==(!receiverObjectID.matchesNoneOf(args[0]))"
     }
   },
   {
