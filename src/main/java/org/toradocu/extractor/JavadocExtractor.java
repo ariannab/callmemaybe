@@ -107,10 +107,9 @@ public final class JavadocExtractor {
           createTags(classesInPackage, sourceCallable, parameters, qualifiedClassName);
 
       final Optional<JavadocComment> javadocComment = sourceCallable.getJavadocComment();
-      String freeTextComment = "";
       String parsedFreeText = "";
       if (javadocComment.isPresent()) {
-        freeTextComment = javadocComment.get().getContent();
+        String freeTextComment = javadocComment.get().getContent();
         String[] freeTextLines = freeTextComment.split("\n");
         for (String line : freeTextLines) {
           String trimmedLine = line.trim();
@@ -120,8 +119,7 @@ public final class JavadocExtractor {
               || trimmedLine.startsWith("* @throws")) {
             break;
           } else if (trimmedLine.startsWith("* ")) {
-            parsedFreeText =
-                parsedFreeText.concat(trimmedLine.substring(2, trimmedLine.length())) + " ";
+            parsedFreeText = parsedFreeText.concat(trimmedLine.substring(2)) + " ";
           }
         }
       }

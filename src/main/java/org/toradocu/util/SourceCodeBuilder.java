@@ -80,9 +80,13 @@ public class SourceCodeBuilder {
     fakeSource.append(") {");
     fakeSource.append("\n");
     for (String condition : conditions) {
-      fakeSource.append("if(");
+      //      if(!condition.contains("if")) {
+      //        fakeSource.append("if(");
+      //      }
       fakeSource.append(condition);
-      fakeSource.append(")");
+      //      if(!condition.contains("if")) {
+      //        fakeSource.append(")");
+      //      }
       fakeSource.append("\n");
     }
     fakeSource.append("return;} }");

@@ -18,6 +18,8 @@ public final class CommentContent {
    */
   private String text;
 
+  private String codeSnippet;
+
   /**
    * Words marked with {@literal @code} tag in comment text. With "word" we mean a single String (in
    * case of a whole sentence tagged as code, each word is stored separately). We do not retain
@@ -41,15 +43,16 @@ public final class CommentContent {
     this.text = text.replaceAll("\\s+", " ");
     this.wordsMarkedAsCode = new HashMap<>();
     this.linksContent = new ArrayList<>();
+    String linkPattern = "\\{@(link|linkplain) (#?([^}^ ]+)( [^}]+)?)\\}";
+    manageLinks(linkPattern);
+    this.codeSnippet = "";
     final String codePattern1 = "<code>([A-Za-z0-9_]+)</code>";
     identifyCodeWords(codePattern1);
     removeTagsNotContent(codePattern1);
 
-    final String codePattern2 = "\\{@code ([^}]+)\\}";
+    final String codePattern2 = "\\{@code (.*?)\\}";
     identifyCodeWords(codePattern2);
     removeTagsNotContent(codePattern2);
-    String linkPattern = "\\{@link (#?([^}^ ]+)( [^}]+)?)\\}";
-    manageLinks(linkPattern);
     removeHTMLTags();
     decodeHTML();
     this.text = this.text.trim();
@@ -58,8 +61,8 @@ public final class CommentContent {
   private void manageLinks(String linkPattern) {
     Matcher matcher = Pattern.compile(linkPattern).matcher(this.text);
     while (matcher.find()) {
-      if (matcher.group(1) != null) {
-        String linkContent = matcher.group(1);
+      if (matcher.group(2) != null) {
+        String linkContent = matcher.group(2).split(" ")[0];
         text = text.replace(matcher.group(0), linkContent);
         this.linksContent.add(linkContent);
       }
@@ -126,9 +129,27 @@ public final class CommentContent {
       Matcher codeMatcher = Pattern.compile(codePattern).matcher(subSentence);
 
       while (codeMatcher.find()) {
-        String taggedSubstring = codeMatcher.group(1).trim();
-        String[] words = null;
+        String taggedSubstring = codeMatcher.group(0).trim();
+        String[] words;
         words = taggedSubstring.split("\\s+");
+        String pattern = "{@code";
+        String[] codeSubsets = taggedSubstring.split("(?=(" + Pattern.quote(pattern) + "))");
+        for (int i = 0; i < codeSubsets.length; i++) {
+          String reminder = computeReminder(subSentence, codeSubsets[i]);
+          codeSubsets[i] =
+              codeSubsets[i]
+                      .substring(
+                          codeSubsets[i].indexOf(pattern) + pattern.length(),
+                          codeSubsets[i].lastIndexOf("}"))
+                      .trim()
+                  + reminder;
+
+          // FIXME too naive! Use regex match, for spaces not preceded by comma, and count matches
+          // if (StringUtils.countMatches(codeSubsets[i], " ") > 1) {
+          if (codeSubsets[i].split(" ").length > 1 && anyReservedMatch(codeSubsets[i])) {
+            this.codeSnippet = codeSubsets[i];
+          }
+        }
         if (words.length == 1 && words[0].matches(".[[<>=]=?|!=].")) {
           words = taggedSubstring.split("[<>=]=?|!=]");
         }
@@ -149,6 +170,85 @@ public final class CommentContent {
         }
       }
     }
+  }
+
+  private String computeReminder(String subSentence, String codeSubset) {
+    String reminder = "";
+    int index = subSentence.indexOf(codeSubset) + codeSubset.length();
+    if (index < subSentence.length()) {
+      while (subSentence.charAt(index) == '}') {
+        reminder += "}";
+        index++;
+      }
+    }
+    return reminder;
+  }
+
+  private boolean anyReservedMatch(String codeSubset) {
+    String[] reserved = {
+      "\\babstract\\b",
+      "\\bassert\\b",
+      "\\bboolean\\b",
+      "\\bbreak\\b",
+      "\\bbyte\\b",
+      "\\bcase\\b",
+      "\\bcatch\\b",
+      "\\bchar\\b",
+      "\\bclass\\b",
+      "\\bconst\\b",
+      "\\bdefault\\b",
+      "\\bdo\\b",
+      "\\bdouble\\b",
+      "\\belse\\b",
+      "\\benum\\b",
+      "\\bextends\\b",
+      "\\bfalse\\b",
+      "\\bfinal\\b",
+      "\\bfinally\\b",
+      "\\bfloat\\b",
+      "\\bfor\\b",
+      "\\bgoto\\b",
+      "\\bif\\b",
+      "\\bimplements\\b",
+      "\\bimport\\b",
+      "\\binstanceof\\b",
+      "\\bint\\b",
+      "\\binterface\\b",
+      "\\blong\\b",
+      "\\bnative\\b",
+      "\\bnew\\b",
+      "\\bnull\\b",
+      "\\bpackage\\b",
+      "\\bprivate\\b",
+      "\\bprotected\\b",
+      "\\bpublic\\b",
+      "\\breturn\\b",
+      "\\bshort\\b",
+      "\\bstatic\\b",
+      "\\bstrictfp\\b",
+      "\\bsuper\\b",
+      "\\bswitch\\b",
+      "\\bsynchronized\\b",
+      "\\bthis\\b",
+      "\\bthrow\\b",
+      "\\bthrows\\b",
+      "\\btransient\\b",
+      "\\btrue\\b",
+      "\\btry\\b",
+      "\\bvoid\\b",
+      "\\bvolatile\\b",
+      "\\bwhile\\b",
+      "\\bcontinue\\b",
+      "\\|\\|",
+      "&&",
+      "=="
+    };
+
+    String joinedRegex = String.join("|", reserved);
+    Matcher matcher = Pattern.compile(joinedRegex).matcher(codeSubset);
+    boolean find = matcher.find();
+    boolean matches = matcher.matches();
+    return find || matches;
   }
 
   /**
@@ -221,6 +321,10 @@ public final class CommentContent {
         this.text = this.text.replace(matcher.group(0), "");
       }
     }
+  }
+
+  public String getCodeSnippet() {
+    return codeSnippet;
   }
 
   @Override

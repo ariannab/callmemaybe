@@ -13,7 +13,7 @@ import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 import org.toradocu.extractor.DocumentedType;
-import org.toradocu.extractor.EquivalentMethodMatch;
+import org.toradocu.extractor.EquivalentMatch;
 import org.toradocu.extractor.ParamTag;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.extractor.ThrowsTag;
@@ -39,7 +39,7 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code freeTextComment}
    * @return a specification
    */
-  public static ArrayList<EquivalentMethodMatch> translate(
+  public static ArrayList<EquivalentMatch> translate(
       DocumentedType documentedType, DocumentedExecutable excMember) {
     // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
@@ -147,12 +147,12 @@ public class CommentTranslator {
     return condition;
   }
 
-  public static Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> createCrossOracles(
+  public static Map<DocumentedExecutable, ArrayList<EquivalentMatch>> createCrossOracles(
       DocumentedType documentedType) {
-    Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> specs = new HashMap<>();
+    Map<DocumentedExecutable, ArrayList<EquivalentMatch>> specs = new HashMap<>();
     List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
     for (DocumentedExecutable member : members) {
-      ArrayList<EquivalentMethodMatch> spec = CommentTranslator.translate(documentedType, member);
+      ArrayList<EquivalentMatch> spec = CommentTranslator.translate(documentedType, member);
       specs.put(member, spec);
     }
 

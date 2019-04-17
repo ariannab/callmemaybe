@@ -58,8 +58,6 @@ public class ImplicitParamSubjectPatterns implements PreprocessingPhase {
     if (originalComment.equals(preProcessedComment)) {
       final List<PropositionSeries> extractedPropositions =
           Parser.parse(new CommentContent(originalComment), excMember);
-      final List<SemanticGraph> semanticGraphs =
-          extractedPropositions.stream().map(PropositionSeries::getSemanticGraph).collect(toList());
 
       preProcessedComment = originalComment.replace(";", ",");
       String[] beginnings = {"the", "a", "an", "any"};

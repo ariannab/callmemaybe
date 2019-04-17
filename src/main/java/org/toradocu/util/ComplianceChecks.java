@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
-import org.toradocu.extractor.EquivalentMethodMatch;
+import org.toradocu.extractor.EquivalentMatch;
 import org.toradocu.extractor.JavadocExtractor;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Property;
@@ -40,7 +40,7 @@ public class ComplianceChecks {
       return true;
     }
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
-    addConditionCodeInformation(method, condition, sourceCodeBuilder);
+    addOracle(method, condition, sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
@@ -77,8 +77,8 @@ public class ComplianceChecks {
     }
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     includeMethodResult(method, sourceCodeBuilder);
-    addConditionCodeInformation(method, guard.getConditionText(), sourceCodeBuilder);
-    addConditionCodeInformation(method, property.getConditionText(), sourceCodeBuilder);
+    addOracle(method, guard.getConditionText(), sourceCodeBuilder);
+    addOracle(method, property.getConditionText(), sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
@@ -108,7 +108,7 @@ public class ComplianceChecks {
    * @return whether the condition compiles or not
    */
   public static boolean isEqSpecCompilable(
-      DocumentedExecutable method, EquivalentMethodMatch equivalentMethodMatch, String condition) {
+      DocumentedExecutable method, EquivalentMatch equivalentMethodMatch, String condition) {
 
     if (Modifier.isPrivate(method.getDeclaringClass().getModifiers())) {
       // if the target class is private we cannot apply compliance check.
@@ -120,10 +120,10 @@ public class ComplianceChecks {
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
     includeMethodResult(method, sourceCodeBuilder);
-    addConditionCodeInformation(method, oracle, sourceCodeBuilder);
-    if (!condition.isEmpty()) {
-      addConditionCodeInformation(method, condition, sourceCodeBuilder);
-    }
+    addOracle(method, oracle, sourceCodeBuilder);
+    //    if (!condition.isEmpty()) {
+    //      addOracle(method, condition, sourceCodeBuilder);
+    //    }
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
@@ -136,6 +136,39 @@ public class ComplianceChecks {
               + "\n"
               + "Are you trying to compare different result types?"
               + "\n");
+      return false;
+    } catch (ClassNotFoundException e) {
+      // ignore
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return true;
+  }
+
+  /**
+   * Compilation check for equivalence specifications
+   *
+   * @param method the method the equivalence comment belongs to
+   * @param condition the condition to compile
+   * @return whether the condition compiles or not
+   */
+  public static boolean isSnippetCompilable(
+      DocumentedExecutable method, EquivalentMatch equivalentMethodMatch, ComplianceError ce) {
+    String oracle = equivalentMethodMatch.getCodeSnippetText();
+    // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
+    // FIXME this should be checked also for returns translation
+    SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
+    sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
+    includeMethodResult(method, sourceCodeBuilder);
+    addOracle(method, oracle, sourceCodeBuilder);
+    //    if (!condition.isEmpty()) {
+    //      addOracle(method, condition, sourceCodeBuilder);
+    //    }
+    String sourceCode = sourceCodeBuilder.buildSource();
+    try {
+      compileSource(sourceCode);
+    } catch (CompilationException e) {
+      ce.build(e.getLocalizedMessage());
       return false;
     } catch (ClassNotFoundException e) {
       // ignore
@@ -265,12 +298,12 @@ public class ComplianceChecks {
    * Extracts and add to the source code information expressed in the given condition text.
    *
    * @param method documented executable the guard belongs to
-   * @param conditionText the condition text
+   * @param oracle the condition text
    * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
    */
-  private static void addConditionCodeInformation(
-      DocumentedExecutable method, String conditionText, SourceCodeBuilder sourceCodeBuilder) {
-    String substitutedText = substituteArgs(sourceCodeBuilder, method, conditionText);
+  private static void addOracle(
+      DocumentedExecutable method, String oracle, SourceCodeBuilder sourceCodeBuilder) {
+    String substitutedText = substituteArgs(sourceCodeBuilder, method, oracle);
     sourceCodeBuilder.addCondition(substitutedText);
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
   }

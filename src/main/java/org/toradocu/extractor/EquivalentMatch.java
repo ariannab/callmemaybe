@@ -18,10 +18,10 @@ EqSpecification extends Specification {
         this.guard = guard;
     }
  */
-public class EquivalentMethodMatch {
+public class EquivalentMatch {
 
   private ArrayList<String> methodSignatures;
-  private String codeSnippet;
+  private CodeSnippet codeSnippet;
   private ArrayList<String> simpleName;
   private boolean equivalence;
   private boolean similarity;
@@ -42,7 +42,7 @@ public class EquivalentMethodMatch {
   private boolean isNegated;
 
   String importsNeeded;
-  //  public EquivalentMethodMatch() {
+  //  public EquivalentMatch() {
   //    this.methodSignatures = new ArrayList<>();
   //    this.simpleName = new ArrayList<>();
   //    this.equivalence = false;
@@ -50,14 +50,13 @@ public class EquivalentMethodMatch {
   //    this.oracle = "";
   //  }
 
-  EquivalentMethodMatch(
-      String codeSnippet,
+  EquivalentMatch(
       ArrayList<String> methodSignatures,
       boolean equivalence,
       boolean similarity,
       Map<String, List<String>> arguments,
       boolean isNegated) {
-    this.codeSnippet = codeSnippet;
+
     this.methodSignatures = methodSignatures;
     extractSimpleNames();
     this.equivalence = equivalence;
@@ -201,7 +200,7 @@ public class EquivalentMethodMatch {
     return map;
   }
 
-  public void addSignature(String signature){
+  public void addSignature(String signature) {
     this.methodSignatures.add(signature);
     extractSimpleNames();
   }
@@ -230,11 +229,23 @@ public class EquivalentMethodMatch {
     return isNegated;
   }
 
-  public String getCodeSnippet() {
+  public String getCodeSnippetText() {
+    return codeSnippet.getSnippet();
+  }
+
+  public CodeSnippet getCodeSnippet() {
     return codeSnippet;
   }
 
   public void setCodeSnippet(String codeSnippet) {
-    this.codeSnippet = codeSnippet;
+    if (codeSnippet.isEmpty()) {
+      this.codeSnippet = null;
+    } else {
+      this.codeSnippet = new CodeSnippet(codeSnippet);
+    }
+  }
+
+  public void addSnippetSymbol(String symbol) {
+    this.codeSnippet.getSymbols().put(symbol, null);
   }
 }

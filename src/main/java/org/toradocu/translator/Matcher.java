@@ -20,7 +20,7 @@ import javafx.util.Pair;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
-import org.toradocu.extractor.EquivalentMethodMatch;
+import org.toradocu.extractor.EquivalentMatch;
 import org.toradocu.translator.semantic.SemanticMatcher;
 import org.toradocu.util.Reflection;
 
@@ -454,16 +454,62 @@ class Matcher {
    */
   Match reverseBestArgsTypeMatch(
       String methodSignature,
-      EquivalentMethodMatch equivalentMethod,
+      EquivalentMatch equivalentMethod,
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements) {
     Match match = null;
     CodeElement<?> firstCodeMatch = null;
     List<String> paramForMatch = new ArrayList<>();
-    String[] currentMatchParamTypes;
     String receiver = "";
     java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
     List<String> myParamTypes = new ArrayList<>();
+
+    match =
+        matchAccordingToArgs(
+            methodSignature,
+            equivalentMethod,
+            method,
+            sortedCodeElements,
+            match,
+            firstCodeMatch,
+            paramForMatch,
+            receiver,
+            myMethodParamTypes,
+            myParamTypes);
+
+    if (match == null) {
+      // No match is the absolute best: just pick the first one, but only if it takes no arguments!
+      firstCodeMatch = sortedCodeElements.stream().findFirst().get();
+      if ((firstCodeMatch instanceof MethodCodeElement
+          && ((MethodCodeElement) firstCodeMatch).getArgs() == null)) {
+        match =
+            new Match(
+                firstCodeMatch.getJavaExpression(),
+                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
+      } else if (firstCodeMatch instanceof GeneralCodeElement) {
+        match =
+            new Match(
+                firstCodeMatch.getJavaExpression(),
+                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
+      }
+    }
+    return match;
+  }
+
+  private Match matchAccordingToArgs(
+      String methodSignature,
+      EquivalentMatch equivalentMethod,
+      DocumentedExecutable method,
+      List<CodeElement<?>> sortedCodeElements,
+      Match match,
+      CodeElement<?> firstCodeMatch,
+      List<String> paramForMatch,
+      String receiver,
+      Parameter[] myMethodParamTypes,
+      List<String> myParamTypes) {
+    String[] currentMatchParamTypes;
     for (Parameter arg : myMethodParamTypes) {
       if (arg.getType().isArray()) {
         myParamTypes.add(convertArrayTipe(arg.getType()));
@@ -479,14 +525,16 @@ class Matcher {
             .map(DocumentedParameter::getName)
             .collect(Collectors.toList());
     List<Integer> rightIndexes = new ArrayList<>();
-    for (String eqArg : eqArgs) {
-      // This answers the question:
-      // Which param indexes do we have to match in the equivalent method, w/ respect to the doc.
-      // method?
-      // e.g., the 1st (index 0) param of the equivalent method could be the 3rd (index 2) of the
-      // doc. method,
-      // and thus the match will have to be equivalentMatch(args[2])
-      rightIndexes.add(docArgs.indexOf(eqArg));
+    if (eqArgs != null) {
+      for (String eqArg : eqArgs) {
+        // This answers the question:
+        // Which param indexes do we have to match in the equivalent method, w/ respect to the doc.
+        // method?
+        // e.g., the 1st (index 0) param of the equivalent method could be the 3rd (index 2) of the
+        // doc. method,
+        // and thus the match will have to be equivalentMatch(args[2])
+        rightIndexes.add(docArgs.indexOf(eqArg));
+      }
     }
 
     for (CodeElement<?> currentMatch : sortedCodeElements) {
@@ -509,6 +557,7 @@ class Matcher {
       List<Pair<Integer, String>> typeParams =
           equivalentMethod.getTypeParams().get(methodSignature);
       if (currentMatchParamTypes != null
+          && actualArgList != null
           && currentMatchParamTypes.length == actualArgList.size()
           && currentMatchParamTypes.length
               <= myMethodParamTypes.length
@@ -567,8 +616,6 @@ class Matcher {
           match.completeExpression(paramForMatch.get(j) + ",");
         }
         for (int i = 0; i < indexesToBeMatched.size(); i++) {
-          // FIXME HERE you have to check if it's a code element param or a type param (e.g.,
-          // Object[])!
           if (!codeElementsParams.isEmpty()) {
             String codeElementName = parseCodeElemName(codeElementsParams, i);
             List<FieldCodeElement> result = new ArrayList<>();
@@ -601,8 +648,9 @@ class Matcher {
           if (!typeParams.isEmpty()) {
             Parameter myMethodType = myMethodParamTypes[i];
             String matchParamType = currentMatchParamTypes[i];
-            if (myMethodType.getType().isArray()
-                && (matchParamType.contains("..") || matchParamType.contains("[]"))) {
+            if ((myMethodType.getType().isArray()
+                    && (matchParamType.contains("..") || matchParamType.contains("[]")))
+                || myMethodParamTypes[i].getType().getName().equals("java.lang.Object")) {
               paramForMatch.add("args[" + i + "]");
             }
           }
@@ -613,24 +661,6 @@ class Matcher {
         if (!paramForMatch.isEmpty()) {
           match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
         }
-      }
-    }
-    if (match == null) {
-      // No match is the absolute best: just pick the first one, but only if it takes no arguments!
-      firstCodeMatch = sortedCodeElements.stream().findFirst().get();
-      if ((firstCodeMatch instanceof MethodCodeElement
-          && ((MethodCodeElement) firstCodeMatch).getArgs() == null)) {
-        match =
-            new Match(
-                firstCodeMatch.getJavaExpression(),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
-      } else if (firstCodeMatch instanceof GeneralCodeElement) {
-        match =
-            new Match(
-                firstCodeMatch.getJavaExpression(),
-                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
       }
     }
     return match;
