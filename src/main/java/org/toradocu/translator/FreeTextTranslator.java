@@ -41,10 +41,22 @@ public class FreeTextTranslator {
     for (String sentence : sentences) {
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
+        String codeSnippet = null;
+        String cleanSentence = sentence.replaceAll(" ", "");
+        List<String> snippets = commentContent.getCodeSnippet();
+        for (String snippet : snippets) {
+          String cleanSnippet = snippet.replaceAll(" ", "");
+          if (cleanSentence.contains(cleanSnippet)) {
+            codeSnippet = snippet;
+          }
+        }
         // Verify comment contains equivalence declaration...
         equivalenceMatch =
             EquivalenceMatcher.getEquivalentOrSimilarMethod(
-                sentence, commentContent.getCodeSnippet(), commentContent.isSnippetExpression());
+                sentence,
+                codeSnippet,
+                commentContent.isSnippetExpression(),
+                commentContent.isTernaryOp());
 
         String condition = extractCondition(sentence);
         if (equivalenceMatch.isSimilarity()
@@ -397,6 +409,8 @@ public class FreeTextTranslator {
                   firstCodeMatch.getJavaExpression(),
                   ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
                   firstCodeMatch);
+        } else if (firstCodeMatch instanceof StaticMethodCodeElement) {
+          theFinalMatch = new Match(firstCodeMatch.getJavaExpression(), "", firstCodeMatch);
         }
       }
       if (theFinalMatch != null) {

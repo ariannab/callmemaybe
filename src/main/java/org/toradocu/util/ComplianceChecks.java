@@ -14,6 +14,7 @@ import org.mdkt.compiler.InMemoryJavaCompiler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.toradocu.conf.Configuration;
+import org.toradocu.extractor.CodeSnippet;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 import org.toradocu.extractor.EquivalentMatch;
@@ -154,16 +155,14 @@ public class ComplianceChecks {
    */
   public static boolean isSnippetCompilable(
       DocumentedExecutable method, EquivalentMatch equivalentMethodMatch, ComplianceError ce) {
-    String oracle = equivalentMethodMatch.getCodeSnippetText();
+    // String oracle = equivalentMethodMatch.getCodeSnippetText();
+    CodeSnippet snippet = equivalentMethodMatch.getCodeSnippet();
     // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
     // FIXME this should be checked also for returns translation
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
     includeMethodResult(method, sourceCodeBuilder);
-    addOracle(method, oracle, sourceCodeBuilder);
-    //    if (!condition.isEmpty()) {
-    //      addOracle(method, condition, sourceCodeBuilder);
-    //    }
+    addOracle(method, snippet, sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
@@ -302,8 +301,29 @@ public class ComplianceChecks {
    * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
    */
   private static void addOracle(
+      DocumentedExecutable method, CodeSnippet snippet, SourceCodeBuilder sourceCodeBuilder) {
+    String substitutedText = substituteArgs(sourceCodeBuilder, method, snippet.getSnippet());
+    if (snippet.isExpression()) {
+      substitutedText = "if(" + substitutedText + ")";
+    } else if (snippet.isTernary()) {
+      substitutedText =
+          method.getReturnType().getType().getTypeName() + " result = " + substitutedText + ";";
+    }
+    sourceCodeBuilder.addCondition(substitutedText);
+    importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
+  }
+
+  /**
+   * Extracts and add to the source code information expressed in the given condition text.
+   *
+   * @param method documented executable the guard belongs to
+   * @param oracle the condition text
+   * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
+   */
+  private static void addOracle(
       DocumentedExecutable method, String oracle, SourceCodeBuilder sourceCodeBuilder) {
     String substitutedText = substituteArgs(sourceCodeBuilder, method, oracle);
+    substitutedText = "if(" + substitutedText + ")";
     sourceCodeBuilder.addCondition(substitutedText);
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
   }

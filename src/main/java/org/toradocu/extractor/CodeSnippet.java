@@ -2,17 +2,18 @@ package org.toradocu.extractor;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 public class CodeSnippet {
   private String snippet;
   private Map<String, String> symbols;
   private boolean isExpression;
+  private boolean isTernaryOp;
 
-  CodeSnippet(String snippet, boolean isExpression) {
+  CodeSnippet(String snippet, boolean isExpression, boolean ternaryOp) {
     this.snippet = snippet;
     this.symbols = new HashMap<>();
     this.isExpression = isExpression;
+    this.isTernaryOp = ternaryOp;
   }
 
   public void completeSnippet() {
@@ -24,7 +25,7 @@ public class CodeSnippet {
           compilableExpression =
               compilableExpression.substring(0, compilableExpression.indexOf("("));
         }
-        this.snippet = this.snippet.replaceAll(Pattern.quote(symbol), compilableExpression);
+        this.snippet = this.snippet.replaceAll("\\b" + symbol + "\\b", compilableExpression);
       }
     }
   }
@@ -43,5 +44,9 @@ public class CodeSnippet {
 
   public boolean isExpression() {
     return isExpression;
+  }
+
+  public boolean isTernary() {
+    return isTernaryOp;
   }
 }

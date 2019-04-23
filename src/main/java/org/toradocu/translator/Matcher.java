@@ -477,24 +477,6 @@ class Matcher {
             myMethodParamTypes,
             myParamTypes);
 
-    if (match == null) {
-      // No match is the absolute best: just pick the first one, but only if it takes no arguments!
-      firstCodeMatch = sortedCodeElements.stream().findFirst().get();
-      if ((firstCodeMatch instanceof MethodCodeElement
-          && ((MethodCodeElement) firstCodeMatch).getArgs() == null)) {
-        match =
-            new Match(
-                firstCodeMatch.getJavaExpression(),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
-      } else if (firstCodeMatch instanceof GeneralCodeElement) {
-        match =
-            new Match(
-                firstCodeMatch.getJavaExpression(),
-                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
-      }
-    }
     return match;
   }
 
@@ -535,6 +517,25 @@ class Matcher {
         // and thus the match will have to be equivalentMatch(args[2])
         rightIndexes.add(docArgs.indexOf(eqArg));
       }
+    } else {
+      // Method in comment does not accept arguments! Pick first match.
+      // No match is the absolute best: just pick the first one, but only if it takes no arguments!
+      firstCodeMatch = sortedCodeElements.stream().findFirst().get();
+      if ((firstCodeMatch instanceof MethodCodeElement
+          && ((MethodCodeElement) firstCodeMatch).getArgs() == null)) {
+        match =
+            new Match(
+                firstCodeMatch.getJavaExpression(),
+                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
+      } else if (firstCodeMatch instanceof GeneralCodeElement) {
+        match =
+            new Match(
+                firstCodeMatch.getJavaExpression(),
+                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
+      }
+      return match;
     }
 
     for (CodeElement<?> currentMatch : sortedCodeElements) {

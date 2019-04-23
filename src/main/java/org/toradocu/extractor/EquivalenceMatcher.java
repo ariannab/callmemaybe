@@ -19,7 +19,7 @@ public class EquivalenceMatcher {
    * @return the signature of the (supposedly) equivalent method
    */
   public static EquivalentMatch getEquivalentOrSimilarMethod(
-      String comment, String codeSnippet, boolean isExpression) {
+      String comment, String codeSnippet, boolean isExpression, boolean isTernaryOp) {
     // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
     // TODO consider also: behaves (as?), like
     KeywordsSet equivalenceKw =
@@ -27,7 +27,8 @@ public class EquivalenceMatcher {
             Arrays.asList("equivalent", "similar", "analog", "same as", "identical"),
             KeywordsSet.Category.EQUIVALENCE);
     EquivalentMatch methodMatch =
-        getSignatureInMatchingComment(comment, codeSnippet, isExpression, equivalenceKw);
+        getSignatureInMatchingComment(
+            comment, codeSnippet, isExpression, isTernaryOp, equivalenceKw);
     if (methodMatch != null) {
       return methodMatch;
     } else {
@@ -37,7 +38,9 @@ public class EquivalenceMatcher {
           new KeywordsSet(
               Arrays.asList("prefer", "alternative", "replacement for"),
               KeywordsSet.Category.SIMILARITY);
-      methodMatch = getSignatureInMatchingComment(comment, codeSnippet, isExpression, similarityKw);
+      methodMatch =
+          getSignatureInMatchingComment(
+              comment, codeSnippet, isExpression, isTernaryOp, similarityKw);
       if (methodMatch != null) {
         return methodMatch;
       }
@@ -55,7 +58,11 @@ public class EquivalenceMatcher {
    * @return the signature of the (supposedly) equivalent method
    */
   private static EquivalentMatch getSignatureInMatchingComment(
-      String comment, String codeSnippet, boolean isExpression, KeywordsSet keywordsSet) {
+      String comment,
+      String codeSnippet,
+      boolean isExpression,
+      boolean isTernaryOp,
+      KeywordsSet keywordsSet) {
     EquivalentMatch match = null;
 
     for (String word : keywordsSet.getKw()) {
@@ -64,21 +71,10 @@ public class EquivalenceMatcher {
       if (keywordMatcher.find()) {
         boolean similarity = isSimilarity(comment, keywordsSet);
         boolean equivalence = !similarity;
-        // if ((similarity && (codeSnippet.isEmpty() || !comment.contains(codeSnippet))) ||
-        // equivalence) {
         match = buildMatchWithSignatures(comment, word, keywordMatcher, equivalence);
-
-        //                } else {
-        //                    match =
-        //                            new EquivalentMatch(
-        //                                    new ArrayList<>(),
-        //                                    equivalence,
-        //                                    similarity,
-        //                                    new HashMap<>(),
-        //                                    false);
-        //                }
-
-        match.setCodeSnippet(codeSnippet, isExpression);
+        if (codeSnippet != null) {
+          match.setCodeSnippet(codeSnippet, isExpression, isTernaryOp);
+        }
       }
     }
     return match;
@@ -131,7 +127,7 @@ public class EquivalenceMatcher {
   }
 
   private static List<String> extractArguments(Matcher methodMatch, int group) {
-    if (methodMatch.group(group) != null) {
+    if (methodMatch.group(group) != null && !methodMatch.group(group).isEmpty()) {
       // the method takes arguments
       String[] args = methodMatch.group(group).split(",");
       for (int i = 0; i < args.length; i++) {

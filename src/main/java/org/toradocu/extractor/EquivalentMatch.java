@@ -142,13 +142,15 @@ public class EquivalentMatch {
       patterns.add("true|false");
       patterns.add("\"[a-zA-Z]+\"");
       List<String> arguments = this.arguments.get(signature);
-      for (int i = 0; i < arguments.size(); i++) {
-        for (String pattern : patterns) {
-          String arg = arguments.get(i);
-          java.util.regex.Matcher matchConstant =
-              Pattern.compile(pattern, Pattern.CASE_INSENSITIVE).matcher(arg);
-          if (matchConstant.find()) {
-            constArgs.add(new Pair<>(i, matchConstant.group(0)));
+      if (arguments != null) {
+        for (int i = 0; i < arguments.size(); i++) {
+          for (String pattern : patterns) {
+            String arg = arguments.get(i);
+            java.util.regex.Matcher matchConstant =
+                Pattern.compile(pattern, Pattern.CASE_INSENSITIVE).matcher(arg);
+            if (matchConstant.find()) {
+              constArgs.add(new Pair<>(i, matchConstant.group(0)));
+            }
           }
         }
       }
@@ -165,11 +167,13 @@ public class EquivalentMatch {
       String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z]+|#[A-Z]+)+";
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
-      for (int i = 0; i < arguments.size(); i++) {
-        String arg = signatureArgs.get(i);
-        Matcher staticFinalMatch = Pattern.compile(staticFinalRegex).matcher(arg);
-        if (staticFinalMatch.matches()) {
-          sfArgs.add(new Pair<>(i, staticFinalMatch.group(0)));
+      if (arguments != null) {
+        for (int i = 0; i < arguments.size(); i++) {
+          String arg = signatureArgs.get(i);
+          Matcher staticFinalMatch = Pattern.compile(staticFinalRegex).matcher(arg);
+          if (staticFinalMatch.matches()) {
+            sfArgs.add(new Pair<>(i, staticFinalMatch.group(0)));
+          }
         }
       }
       map.put(signature, sfArgs);
@@ -184,15 +188,17 @@ public class EquivalentMatch {
       List<Pair<Integer, String>> tArgs = new ArrayList<>();
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
-      for (int i = 0; i < arguments.size(); i++) {
-        String arg = signatureArgs.get(i);
-        List<Pair<Integer, String>> list = this.staticFinalParams.get(signature);
-        if (!list.contains(new Pair<>(i, arg))
-                && !arg.isEmpty()
-                && Character.isUpperCase(arg.charAt(0))
-            || arg.contains("[]")
-            || ComplianceChecks.primitiveTypes().contains(arg)) {
-          tArgs.add(new Pair<>(i, arg));
+      if (arguments != null) {
+        for (int i = 0; i < arguments.size(); i++) {
+          String arg = signatureArgs.get(i);
+          List<Pair<Integer, String>> list = this.staticFinalParams.get(signature);
+          if (!list.contains(new Pair<>(i, arg))
+                  && !arg.isEmpty()
+                  && Character.isUpperCase(arg.charAt(0))
+              || arg.contains("[]")
+              || ComplianceChecks.primitiveTypes().contains(arg)) {
+            tArgs.add(new Pair<>(i, arg));
+          }
         }
       }
       map.put(signature, tArgs);
@@ -237,11 +243,11 @@ public class EquivalentMatch {
     return codeSnippet;
   }
 
-  public void setCodeSnippet(String codeSnippet, boolean isExpression) {
+  public void setCodeSnippet(String codeSnippet, boolean isExpression, boolean ternaryOp) {
     if (codeSnippet.isEmpty()) {
       this.codeSnippet = null;
     } else {
-      this.codeSnippet = new CodeSnippet(codeSnippet, isExpression);
+      this.codeSnippet = new CodeSnippet(codeSnippet, isExpression, ternaryOp);
     }
   }
 

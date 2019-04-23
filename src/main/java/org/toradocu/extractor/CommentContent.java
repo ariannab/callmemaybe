@@ -18,7 +18,7 @@ public final class CommentContent {
    */
   private String text;
 
-  private String codeSnippet;
+  private List<String> codeSnippet;
 
   /**
    * Words marked with {@literal @code} tag in comment text. With "word" we mean a single String (in
@@ -34,6 +34,7 @@ public final class CommentContent {
   private final List<String> linksContent;
 
   private boolean isSnippetExpression;
+  private boolean isSnippetTernaryOp;
 
   /**
    * Builds a new CommentContent with the given {@code text}. Words marked with {@literal @code} and
@@ -48,7 +49,7 @@ public final class CommentContent {
     this.linksContent = new ArrayList<>();
     String linkPattern = "\\{@(link|linkplain) (#?([^}^ ]+)( [^}]+)?)\\}";
     manageLinks(linkPattern);
-    this.codeSnippet = "";
+    this.codeSnippet = new ArrayList<>();
     final String codePattern1 = "<code>([A-Za-z0-9_]+)</code>";
     identifyCodeWords(codePattern1);
     removeTagsNotContent(codePattern1);
@@ -69,9 +70,6 @@ public final class CommentContent {
         text = text.replace(matcher.group(0), linkContent);
         this.linksContent.add(linkContent);
       }
-      // else {
-      //        this.text = this.text.replace(matcher.group(0), matcher.group(1));
-      //      }
     }
   }
 
@@ -147,15 +145,16 @@ public final class CommentContent {
                       .trim()
                   + reminder;
 
-          // FIXME too naive! Use regex match, for spaces not preceded by comma, and count matches
-          // if (StringUtils.countMatches(codeSubsets[i], " ") > 1) {
           if (codeSubsets[i].split(" ").length > 1) {
             if (anyReservedMatch(codeSubsets[i])) {
-              this.codeSnippet = codeSubsets[i];
+              this.codeSnippet.add(codeSubsets[i]);
               this.isSnippetExpression = false;
             } else if (anyBooleanOperator(codeSubsets[i])) {
-              this.codeSnippet = codeSubsets[i];
+              this.codeSnippet.add(codeSubsets[i]);
               this.isSnippetExpression = true;
+            } else if (anyTernaryOperator(codeSubsets[i])) {
+              this.codeSnippet.add(codeSubsets[i]);
+              this.isSnippetTernaryOp = true;
             }
           }
         }
@@ -179,6 +178,15 @@ public final class CommentContent {
         }
       }
     }
+  }
+
+  private boolean anyTernaryOperator(String codeSubset) {
+    String[] reserved = {"\\?"};
+    String joinedRegex = String.join("|", reserved);
+    Matcher matcher = Pattern.compile(joinedRegex).matcher(codeSubset);
+    boolean find = matcher.find();
+    boolean matches = matcher.matches();
+    return find || matches;
   }
 
   private String computeReminder(String subSentence, String codeSubset) {
@@ -338,7 +346,7 @@ public final class CommentContent {
     }
   }
 
-  public String getCodeSnippet() {
+  public List<String> getCodeSnippet() {
     return codeSnippet;
   }
 
@@ -359,5 +367,9 @@ public final class CommentContent {
   @Override
   public int hashCode() {
     return Objects.hash(text, wordsMarkedAsCode);
+  }
+
+  public boolean isTernaryOp() {
+    return isSnippetTernaryOp;
   }
 }
