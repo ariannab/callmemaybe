@@ -14,6 +14,7 @@ public final class DocumentedType {
   /** Constructors and methods of this documented type. */
   private final List<DocumentedExecutable> documentedExecutables;
 
+  private final List<String> classesInPackage;
   private final NodeList<ImportDeclaration> imports;
   /**
    * Creates a new DocumentedType wrapping the given class and with the given constructors and
@@ -21,17 +22,20 @@ public final class DocumentedType {
    *
    * @param documentedClass the {@code Class} of this documentedClass
    * @param documentedExecutables constructors and methods of {@code documentedClass}
+   * @param classesInPackage
    * @throws NullPointerException if either documentedClass or documentedExecutables is null
    */
   DocumentedType(
       Class<?> documentedClass,
       List<DocumentedExecutable> documentedExecutables,
-      NodeList<ImportDeclaration> imports) {
+      NodeList<ImportDeclaration> imports,
+      List<String> classesInPackage) {
     Checks.nonNullParameter(documentedClass, "documentedClass");
     Checks.nonNullParameter(documentedExecutables, "documentedExecutables");
     this.documentedClass = documentedClass;
     this.documentedExecutables = documentedExecutables;
     this.imports = imports;
+    this.classesInPackage = classesInPackage;
   }
 
   /**
@@ -39,7 +43,7 @@ public final class DocumentedType {
    *
    * @return the runtime class of the documented type this DocumentedType represents
    */
-  Class<?> getDocumentedClass() {
+  public Class<?> getDocumentedClass() {
     return documentedClass;
   }
 
@@ -50,6 +54,10 @@ public final class DocumentedType {
    */
   public List<DocumentedExecutable> getDocumentedExecutables() {
     return documentedExecutables;
+  }
+
+  public List<String> getClassesInPackage() {
+    return classesInPackage;
   }
 
   public NodeList<ImportDeclaration> getImports() {

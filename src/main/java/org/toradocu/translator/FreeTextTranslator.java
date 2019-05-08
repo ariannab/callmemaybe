@@ -4,8 +4,10 @@ import com.github.javaparser.ast.ImportDeclaration;
 import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Executable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -41,22 +43,18 @@ public class FreeTextTranslator {
     for (String sentence : sentences) {
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
-        String codeSnippet = null;
         String cleanSentence = sentence.replaceAll(" ", "");
-        List<String> snippets = commentContent.getCodeSnippet();
-        for (String snippet : snippets) {
-          String cleanSnippet = snippet.replaceAll(" ", "");
+        List<CodeSnippet> snippets = commentContent.getCodeSnippets();
+        CodeSnippet sentenceSnippet = null;
+        for (CodeSnippet snippet : snippets) {
+          String cleanSnippet = snippet.getSnippet().replaceAll(" ", "");
           if (cleanSentence.contains(cleanSnippet)) {
-            codeSnippet = snippet;
+            sentenceSnippet = snippet;
           }
         }
         // Verify comment contains equivalence declaration...
         equivalenceMatch =
-            EquivalenceMatcher.getEquivalentOrSimilarMethod(
-                sentence,
-                codeSnippet,
-                commentContent.isSnippetExpression(),
-                commentContent.isTernaryOp());
+            EquivalenceMatcher.getEquivalentOrSimilarMethod(sentence, sentenceSnippet);
 
         String condition = extractCondition(sentence);
         if (equivalenceMatch.isSimilarity()
@@ -97,7 +95,7 @@ public class FreeTextTranslator {
     equivalenceMatch.setOracle(oracle);
     ComplianceError complianceError = new ComplianceError();
     boolean compilable;
-    List<String> missingSymbols;
+    List<String> missingSymbols = new ArrayList<>();
     compilable = ComplianceChecks.isSnippetCompilable(excMember, equivalenceMatch, complianceError);
     do {
       if (!compilable) {
@@ -114,7 +112,9 @@ public class FreeTextTranslator {
         compilable =
             ComplianceChecks.isSnippetCompilable(excMember, equivalenceMatch, complianceError);
       }
-    } while (!compilable && !complianceError.getMissingSymbols().isEmpty());
+    } while (!compilable
+        && !complianceError.getMissingSymbols().isEmpty()
+        && !complianceError.getMissingSymbols().equals(missingSymbols));
 
     return compilable;
   }
@@ -125,14 +125,11 @@ public class FreeTextTranslator {
       String condition,
       DocumentedType documentedType) {
 
-    // FIXME no; consider that it might be a condition but even not. Should we check it here or
-    // before invoking?
     if (condition != null
         && equivalenceMatch.getCodeSnippet() != null
         && condition.contains(equivalenceMatch.getCodeSnippetText())) {
       // FIXME in the following lines you are only compiling the condition snippet; but the
-      // condition refers to
-      // FIXME an equivalence w/ another method: solve it as usual!
+      // FIXME condition refers to an equivalence w/ another method: solve it as usual!
 
       // If you're here, the condition is in the form of a snippet.
       // 1) Attempt to compile it as usual.
@@ -143,8 +140,6 @@ public class FreeTextTranslator {
         String finalOracle = prepareResultWithCondition(excMember, equivalenceMatch);
         equivalenceMatch.setOracle(finalOracle);
         // 3) Finally, check that the overall oracle compiles
-        // FIXME result malformed: check what happens in isEqSpecCompilable (there should be support
-        // for the condition)
         compilable = ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch, "");
         if (!compilable) {
           equivalenceMatch.setOracle("");
@@ -187,6 +182,7 @@ public class FreeTextTranslator {
     String negation = "";
     String previousOracle = "";
 
+    // FIXME check shared/duplicated code with the matching of snippet (missing symbols)
     for (int i = 0; i < equivalenceMatch.getMethodSignatures().size(); i++) {
       AnnotatedType previousReturnType = null;
       if (i > 0 && theFinalMatch != null) {
@@ -214,7 +210,7 @@ public class FreeTextTranslator {
         if (matchedType != null) {
           matchingCodeElem =
               extractMatchingCodeElementFromType(
-                  excMember, matchedType, simpleMethodName, matchingCodeElem, className);
+                  excMember, matchedType, simpleMethodName, className);
         }
       } else if (matchingCodeElem.isEmpty()
           && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
@@ -269,7 +265,7 @@ public class FreeTextTranslator {
         if (matchedType != null) {
           matchingCodeElem =
               extractMatchingCodeElementFromType(
-                  excMember, matchedType, simpleMethodName, matchingCodeElem, className);
+                  excMember, matchedType, simpleMethodName, className);
         }
       }
       if (matchingCodeElem != null && !matchingCodeElem.isEmpty()) {
@@ -315,109 +311,134 @@ public class FreeTextTranslator {
       String symbol,
       DocumentedType documentedType) {
     Matcher matcher = new Matcher();
-    Class<?> matchedType = null;
-    Match theFinalMatch = null;
-
+    String matchingSymbol = null;
     CodeSnippet snippet = equivalenceMatch.getCodeSnippet();
-    if (!symbol.contains("(")) {
-      List<DocumentedParameter> args = excMember.getParameters();
-      for (int i = 0; i < args.size(); i++) {
-        if (symbol.equals(args.get(i).getName())) {
-          snippet.addMatchToSymbol(symbol, "args[" + i + "]");
-          snippet.completeSnippet();
-          // buildAndCompileOracle(excMember, equivalenceMatch, "", snippet.getSnippet());
-        } else if (isGenericType(symbol)) { // FIXME naive check
-          snippet.addMatchToSymbol(symbol, "Object");
-          snippet.completeSnippet();
-        }
-      }
-    } else {
-      // Extract every CodeElement associated with the method and the containing class of the
-      // method.
-      String simpleName = symbol.substring(0, symbol.indexOf("("));
-      Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
-      Set<CodeElement<?>> matchingCodeElem = matcher.subjectMatch(simpleName, codeElements);
+    if (!symbol.contains("(")
+        && !(Character.isUpperCase(symbol.charAt(0)) && symbol.length() > 1)) {
+      matchingSymbol = identifyMissingSymbolInArgs(excMember, symbol, snippet);
+    }
+    if (matchingSymbol == null) {
+      matchingSymbol = identifyMissingSymbolInImports(documentedType, equivalenceMatch, symbol);
+    }
+    if (matchingSymbol == null) {
+      matchingSymbol = identifyMissingSymbolInCode(excMember, symbol, matcher, snippet);
+    }
+    if (matchingSymbol != null) {
+      snippet.addMatchToSymbol(symbol, matchingSymbol);
+      snippet.completeSnippet();
+    }
+  }
 
-      String className = "";
-      if (matchingCodeElem.isEmpty()
-          && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
-        List<String> links = excMember.getLinksContent();
-        String[] javaPackages = {"java.lang.", "java.util."};
-        for (String link : links) {
-          if (matchedType != null) {
-            break;
-          }
-          if (link.contains("#")) {
-            link = link.substring(0, link.indexOf("#"));
-          }
-          if (!link.contains(".")) {
-            for (String javaP : javaPackages) {
-              String newlink = javaP + link;
-              try {
-                matchedType = Reflection.getClass(newlink);
-              } catch (ClassNotFoundException e) {
-              }
-              if (matchedType != null) {
-                link = newlink;
-                break;
-              }
-            }
-          } else {
-            try {
-              matchedType = Reflection.getClass(link);
-            } catch (ClassNotFoundException e) {
-            }
-          }
-          if (matchedType != null) {
-            className = link;
-            break;
-          } else {
-            for (int j = 0; j < documentedType.getImports().size(); j++) {
-              ImportDeclaration anImport = documentedType.getImports().get(j);
-              String importedClass = anImport.getNameAsString().replace("import", "").trim();
-              if (importedClass.endsWith(link)) {
-                try {
-                  matchedType = Reflection.getClass(importedClass);
-                } catch (ClassNotFoundException e) {
-                }
-                if (matchedType != null) {
-                  className = importedClass;
-                  equivalenceMatch.setImportsNeeded(className);
-                  break;
-                }
-              }
-            }
-          }
-        }
-        if (matchedType != null) {
-          matchingCodeElem =
-              extractMatchingCodeElementFromType(
-                  excMember, matchedType, symbol, matchingCodeElem, className);
-        }
-      }
-      if (matchingCodeElem != null && !matchingCodeElem.isEmpty()) {
-        CodeElement<?> firstCodeMatch = matchingCodeElem.stream().findFirst().get();
-        if (firstCodeMatch instanceof MethodCodeElement) {
-          theFinalMatch =
-              new Match(
-                  firstCodeMatch.getJavaExpression(),
-                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                  firstCodeMatch);
-        } else if (firstCodeMatch instanceof GeneralCodeElement) {
-          theFinalMatch =
-              new Match(
-                  firstCodeMatch.getJavaExpression(),
-                  ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                  firstCodeMatch);
-        } else if (firstCodeMatch instanceof StaticMethodCodeElement) {
-          theFinalMatch = new Match(firstCodeMatch.getJavaExpression(), "", firstCodeMatch);
-        }
-      }
-      if (theFinalMatch != null) {
-        snippet.addMatchToSymbol(symbol, theFinalMatch.getBaseExpression());
-        snippet.completeSnippet();
+  private String identifyMissingSymbolInCode(
+      DocumentedExecutable excMember, String symbol, Matcher matcher, CodeSnippet snippet) {
+    // Extract every CodeElement associated with the method and the containing class of the
+    // method.
+    String simpleName;
+    if (symbol.contains("(")) {
+      simpleName = symbol.substring(0, symbol.indexOf("("));
+    } else {
+      simpleName = symbol;
+    }
+    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
+    Set<CodeElement<?>> matchingCodeElem = matcher.subjectMatch(simpleName, codeElements);
+
+    // matchingCodeElem = identifyMissingSymbolInImports(excMember, symbol, matchingCodeElem);
+    Match theFinalMatch = null;
+    if (matchingCodeElem != null && !matchingCodeElem.isEmpty()) {
+      CodeElement<?> firstCodeMatch = matchingCodeElem.stream().findFirst().get();
+      if (firstCodeMatch instanceof MethodCodeElement) {
+        theFinalMatch =
+            new Match(
+                firstCodeMatch.getJavaExpression(),
+                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
+      } else if (firstCodeMatch instanceof GeneralCodeElement) {
+        theFinalMatch =
+            new Match(
+                firstCodeMatch.getJavaExpression(),
+                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                firstCodeMatch);
+      } else if (firstCodeMatch instanceof StaticMethodCodeElement) {
+        theFinalMatch = new Match(firstCodeMatch.getJavaExpression(), "", firstCodeMatch);
       }
     }
+    if (theFinalMatch != null) {
+      //            snippet.addMatchToSymbol(symbol, theFinalMatch.getBaseExpression());
+      //            snippet.completeSnippet();
+
+      return theFinalMatch.getBaseExpression();
+    }
+
+    return null;
+  }
+
+  private String identifyMissingSymbolInImports(
+      DocumentedType documentedType, EquivalentMatch equivalenceMatch, String symbol) {
+    // TODO IMPORTANT also extract package classes!
+    String className;
+    Class<?> matchedType = null;
+    if (!documentedType.getImports().isEmpty()) {
+      for (int j = 0; j < documentedType.getImports().size(); j++) {
+        ImportDeclaration anImport = documentedType.getImports().get(j);
+        String importedClass = anImport.getNameAsString().replace("import", "").trim();
+        if (importedClass.endsWith(symbol)) {
+          try {
+            matchedType = Reflection.getClass(importedClass);
+          } catch (ClassNotFoundException e) {
+          }
+          if (matchedType != null) {
+            className = importedClass;
+            equivalenceMatch.setImportsNeeded(className);
+            break;
+          }
+        }
+      }
+    }
+    if (matchedType != null) {
+      return matchedType.getName();
+    } else {
+      for (String classInPackage : documentedType.getClassesInPackage()) {
+        if (classInPackage.endsWith(symbol)) {
+          return classInPackage;
+        }
+      }
+    }
+    return null;
+  }
+
+  private String identifyMissingSymbolInArgs(
+      DocumentedExecutable excMember, String symbol, CodeSnippet snippet) {
+    List<DocumentedParameter> args = excMember.getParameters();
+    Optional<DocumentedParameter> matchingSymbolName =
+        args.stream().filter(a -> a.getName().equals(symbol)).findFirst();
+    if (matchingSymbolName.isPresent()) {
+      int i = args.indexOf(matchingSymbolName.get());
+      snippet.addMatchToSymbol(symbol, "args[" + i + "]");
+      snippet.completeSnippet();
+      return symbol;
+    }
+
+    for (int i = 0; i < args.size(); i++) {
+      String argName = args.get(i).getName();
+      if (isGenericType(symbol)) { // FIXME naive check
+        snippet.addMatchToSymbol(symbol, "Object");
+        snippet.completeSnippet();
+        break;
+      } else {
+        Matcher syntaxMatcher = new Matcher();
+        List<ParameterCodeElement> codeArgs = JavaElementsCollector.parametersOf(excMember);
+        Set<CodeElement<?>> syntaxMatches =
+            syntaxMatcher.filterMatchingCodeElements(argName, new HashSet<>(codeArgs));
+        if (syntaxMatches.iterator().hasNext()) {
+          //                    snippet.addMatchToSymbol(symbol,
+          // syntaxMatches.iterator().next().getJavaExpression());
+          //                    snippet.completeSnippet();
+          //                    break;
+          return syntaxMatches.iterator().next().getJavaExpression();
+        }
+      }
+    }
+    return null;
   }
 
   private boolean isGenericType(String pt) {
@@ -429,12 +450,12 @@ public class FreeTextTranslator {
       DocumentedExecutable excMember,
       Class<?> matchedType,
       String simpleMethodName,
-      Set<CodeElement<?>> matchingCodeEelem,
       String className) {
     List<CodeElement<?>> allMethodsInClass =
         JavaElementsCollector.getCodeElementsFromRawMethods(
             JavaElementsCollector.collectRawMethods(matchedType, excMember),
             matchedType.getCanonicalName());
+    Set<CodeElement<?>> matchingCodeEelem = null;
     if (!allMethodsInClass.isEmpty()) {
       String methodSimpleName = className + "." + simpleMethodName;
       // FIXME here I am overwriting...cleverer way?
@@ -503,7 +524,7 @@ public class FreeTextTranslator {
     String oracle;
     String separator1;
     String separator2;
-    if (codeSnippet.isExpression()) {
+    if (codeSnippet.isExpression() || codeSnippet.isComplexSignature()) {
       separator1 = "(";
       separator2 = ")";
     } else {
@@ -556,16 +577,21 @@ public class FreeTextTranslator {
 
     int beginIndex = 0;
     int endIndex = 0;
+    boolean matchIfOrWhen = false;
     if (matchIf.find()) {
       beginIndex = matchIf.start();
+      matchIfOrWhen = true;
     } else if (matchWhen.find()) {
       beginIndex = matchWhen.start();
+      matchIfOrWhen = true;
     }
 
     // endIndex is the index of the SUBSEQUENT (to the if or when) comma or dot
-    endIndex = text.indexOf(",");
-    if (endIndex > beginIndex) {
-      return text.substring(beginIndex, endIndex);
+    if (matchIfOrWhen) {
+      endIndex = text.indexOf(",");
+      if (endIndex > beginIndex) {
+        return text.substring(beginIndex, endIndex);
+      }
     }
     return null;
   }

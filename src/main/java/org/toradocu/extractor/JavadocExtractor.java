@@ -143,7 +143,7 @@ public final class JavadocExtractor {
         "Extracting Javadoc information of {} (in source folder {}) done", className, sourcePath);
 
     // Create the documented class.
-    return new DocumentedType(clazz, documentedExecutables, imports);
+    return new DocumentedType(clazz, documentedExecutables, imports, classesInPackage);
   }
 
   private ImmutablePair<String, String> getFileNameAndSimpleName(Class<?> clazz, String className) {

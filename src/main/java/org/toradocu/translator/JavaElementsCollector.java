@@ -118,8 +118,7 @@ public class JavaElementsCollector {
         .collect(toList());
   }
 
-  private static List<ParameterCodeElement> parametersOf(
-      DocumentedExecutable documentedExecutable) {
+  static List<ParameterCodeElement> parametersOf(DocumentedExecutable documentedExecutable) {
     List<ParameterCodeElement> paramCodeElements = new ArrayList<>();
 
     // The first two parameters of enum constructors are synthetic and must be removed to reflect

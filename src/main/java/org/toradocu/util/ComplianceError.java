@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComplianceError {
-  public static final String MISSING_SYMBOL_PATTERN = "message=cannot find symbol";
-  public static final String FIRST_TOKEN = "symbol:";
+  static final String MISSING_SYMBOL_PATTERN = "message=cannot find symbol";
+  static final String FIRST_TOKEN = "symbol:";
+  String message;
   List<String> missingSymbols;
 
   //  public ComplianceError(String errorMessage) {
@@ -33,6 +34,7 @@ public class ComplianceError {
   //  }
 
   public void build(String errorMessage) {
+    this.message = errorMessage;
     String[] missingMessages = errorMessage.split(MISSING_SYMBOL_PATTERN);
     for (String message : missingMessages) {
       int startOfPattern = message.indexOf(FIRST_TOKEN);

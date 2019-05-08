@@ -18,7 +18,7 @@ public final class CommentContent {
    */
   private String text;
 
-  private List<String> codeSnippet;
+  private List<CodeSnippet> commentSnippets;
 
   /**
    * Words marked with {@literal @code} tag in comment text. With "word" we mean a single String (in
@@ -33,9 +33,6 @@ public final class CommentContent {
 
   private final List<String> linksContent;
 
-  private boolean isSnippetExpression;
-  private boolean isSnippetTernaryOp;
-
   /**
    * Builds a new CommentContent with the given {@code text}. Words marked with {@literal @code} and
    * {@literal <code></code>} in {@code text} are added to the map of words marked as code. Than,
@@ -47,15 +44,16 @@ public final class CommentContent {
     this.text = text.replaceAll("\\s+", " ");
     this.wordsMarkedAsCode = new HashMap<>();
     this.linksContent = new ArrayList<>();
-    String linkPattern = "\\{@(link|linkplain) (#?([^}^ ]+)( [^}]+)?)\\}";
+    // String linkPattern = "\\{@(link|linkplain) (#?([^}^ ]+)( [^}]+)?)\\}";
+    String linkPattern = "\\{@(link|linkplain) (.*?)\\}";
     manageLinks(linkPattern);
-    this.codeSnippet = new ArrayList<>();
+    this.commentSnippets = new ArrayList<>();
     final String codePattern1 = "<code>([A-Za-z0-9_]+)</code>";
-    identifyCodeWords(codePattern1);
+    identifyCodeTagsContent(codePattern1);
     removeTagsNotContent(codePattern1);
 
-    final String codePattern2 = "\\{@code (.*?)\\}";
-    identifyCodeWords(codePattern2);
+    final String codePattern2 = "(\\{@code (.*?)\\})(\\.|;|,| |<)";
+    identifyCodeTagsContent(codePattern2);
     removeTagsNotContent(codePattern2);
     removeHTMLTags();
     decodeHTML();
@@ -66,7 +64,8 @@ public final class CommentContent {
     Matcher matcher = Pattern.compile(linkPattern).matcher(this.text);
     while (matcher.find()) {
       if (matcher.group(2) != null) {
-        String linkContent = matcher.group(2).split(" ")[0];
+        // String linkContent = matcher.group(2).split(" ")[0];
+        String linkContent = matcher.group(2);
         text = text.replace(matcher.group(0), linkContent);
         this.linksContent.add(linkContent);
       }
@@ -124,13 +123,13 @@ public final class CommentContent {
    *
    * @param codePattern regular expression used to identify the words marked as code
    */
-  private void identifyCodeWords(String codePattern) {
-    String[] subSentences = text.split("\\. ");
+  private void identifyCodeTagsContent(String codePattern) {
+    String[] subSentences = text.split("\"[.] \"");
     for (String subSentence : subSentences) {
       Matcher codeMatcher = Pattern.compile(codePattern).matcher(subSentence);
 
       while (codeMatcher.find()) {
-        String taggedSubstring = codeMatcher.group(0).trim();
+        String taggedSubstring = codeMatcher.group(1).trim();
         String[] words;
         words = taggedSubstring.split("\\s+");
         String pattern = "{@code";
@@ -145,17 +144,39 @@ public final class CommentContent {
                       .trim()
                   + reminder;
 
-          if (codeSubsets[i].split(" ").length > 1) {
+          String nestedParenthesisRegex =
+              "(\\([A-Za-z0-9,.'\"()]*\\([A-Za-z0-9,.'\"()]*\\)[A-Za-z0-9,.'\"]*\\))+";
+          String methodRegex = "(!)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+          String invocationWithCastingRegex = "\\(.*?\\)\\.(!)?" + methodRegex;
+          java.util.regex.Matcher nestedParMatcher =
+              Pattern.compile(nestedParenthesisRegex).matcher(codeSubsets[i]);
+          java.util.regex.Matcher invocationCastingMatcher =
+              Pattern.compile(invocationWithCastingRegex).matcher(codeSubsets[i]);
+          java.util.regex.Matcher methodMatcher =
+              Pattern.compile(methodRegex).matcher(codeSubsets[i]);
+          if (codeSubsets[i].contains(" ")) {
             if (anyReservedMatch(codeSubsets[i])) {
-              this.codeSnippet.add(codeSubsets[i]);
-              this.isSnippetExpression = false;
+              CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, false, false);
+              this.commentSnippets.add(snippet);
             } else if (anyBooleanOperator(codeSubsets[i])) {
-              this.codeSnippet.add(codeSubsets[i]);
-              this.isSnippetExpression = true;
+              CodeSnippet snippet = new CodeSnippet(codeSubsets[i], true, false, false);
+              this.commentSnippets.add(snippet);
             } else if (anyTernaryOperator(codeSubsets[i])) {
-              this.codeSnippet.add(codeSubsets[i]);
-              this.isSnippetTernaryOp = true;
+              CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, true, false);
+              this.commentSnippets.add(snippet);
+            } else if (codeSubsets[i].contains("new")) {
+              CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, false, true);
+              this.commentSnippets.add(snippet);
+            } else if (methodMatcher.find() && methodMatcher.group(5).contains(".")) {
+              CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, false, true);
+              this.commentSnippets.add(snippet);
+            } else if (invocationCastingMatcher.find()) {
+              CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, false, true);
+              this.commentSnippets.add(snippet);
             }
+          } else if (nestedParMatcher.find()) {
+            CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, false, true);
+            this.commentSnippets.add(snippet);
           }
         }
         if (words.length == 1 && words[0].matches(".[[<>=]=?|!=].")) {
@@ -205,60 +226,53 @@ public final class CommentContent {
   }
 
   private boolean anyReservedMatch(String codeSubset) {
-    String[] reserved = {
-      "\\babstract\\b",
-      "\\bassert\\b",
-      "\\bboolean\\b",
-      "\\bbreak\\b",
-      "\\bbyte\\b",
-      "\\bcase\\b",
-      "\\bcatch\\b",
-      "\\bchar\\b",
-      "\\bclass\\b",
-      "\\bconst\\b",
-      "\\bdefault\\b",
-      "\\bdo\\b",
-      "\\bdouble\\b",
-      "\\belse\\b",
-      "\\benum\\b",
-      "\\bextends\\b",
-      "\\bfinal\\b",
-      "\\bfinally\\b",
-      "\\bfloat\\b",
-      "\\bfor\\b",
-      "\\bgoto\\b",
-      "\\bif\\b",
-      "\\bimplements\\b",
-      "\\bimport\\b",
-      "\\binstanceof\\b",
-      "\\bint\\b",
-      "\\binterface\\b",
-      "\\blong\\b",
-      "\\bnative\\b",
-      "\\bnew\\b",
-      "\\bnull\\b",
-      "\\bpackage\\b",
-      "\\bprivate\\b",
-      "\\bprotected\\b",
-      "\\bpublic\\b",
-      "\\breturn\\b",
-      "\\bshort\\b",
-      "\\bstatic\\b",
-      "\\bstrictfp\\b",
-      "\\bsuper\\b",
-      "\\bswitch\\b",
-      "\\bsynchronized\\b",
-      "\\bthis\\b",
-      "\\bthrow\\b",
-      "\\bthrows\\b",
-      "\\btransient\\b",
-      "\\btry\\b",
-      "\\bvoid\\b",
-      "\\bvolatile\\b",
-      "\\bwhile\\b",
-      "\\bcontinue\\b"
-    };
+    //    String[] reserved = {
+    //      "\\babstract\\b",
+    //      "\\bassert\\b",
+    //      "\\bbreak\\b",
+    //      "\\bcase\\b",
+    //      "\\bcatch\\b",
+    //      "\\bclass\\b",
+    //      "\\bconst\\b",
+    //      "\\bdefault\\b",
+    //      "\\bdo\\b",
+    //      "\\belse\\b",
+    //      "\\benum\\b",
+    //      "\\bextends\\b",
+    //      "\\bfinal\\b",
+    //      "\\bfinally\\b",
+    //      "\\bfor\\b",
+    //      "\\bgoto\\b",
+    //      "\\bif\\b",
+    //      "\\bimplements\\b",
+    //      "\\bimport\\b",
+    //      "\\binstanceof\\b",
+    //      "\\binterface\\b",
+    //      "\\blong\\b",
+    //      "\\bnative\\b",
+    //      "\\bnew\\b",
+    //      "\\bpackage\\b",
+    //      "\\bprivate\\b",
+    //      "\\bprotected\\b",
+    //      "\\bpublic\\b",
+    //      "\\breturn\\b",
+    //      "\\bstatic\\b",
+    //      "\\bstrictfp\\b",
+    //      "\\bsuper\\b",
+    //      "\\bswitch\\b",
+    //      "\\bsynchronized\\b",
+    //      "\\bthis\\b",
+    //      "\\bthrow\\b",
+    //      "\\bthrows\\b",
+    //      "\\btransient\\b",
+    //      "\\btry\\b",
+    //      "\\bvoid\\b",
+    //      "\\bvolatile\\b",
+    //      "\\bwhile\\b",
+    //      "\\bcontinue\\b"
+    //    };
 
+    String[] reserved = {"\\bfor\\b", "\\bwhile\\b", "\\bif\\b", "\\bdo\\b"};
     String joinedRegex = String.join("|", reserved);
     Matcher matcher = Pattern.compile(joinedRegex).matcher(codeSubset);
     boolean find = matcher.find();
@@ -274,6 +288,7 @@ public final class CommentContent {
     boolean matches = matcher.matches();
     return find || matches;
   }
+
   /**
    * Counts how many occurrences of the String {@code word} there are before the given {@code
    * limitIndex} inside the {@code subSentence}. By doing this we know which occurrence of the word
@@ -325,7 +340,7 @@ public final class CommentContent {
   private void removeTagsNotContent(String pattern) {
     Matcher matcher = Pattern.compile(pattern).matcher(text);
     while (matcher.find()) {
-      this.text = this.text.replace(matcher.group(0), matcher.group(1));
+      this.text = this.text.replace(matcher.group(1), matcher.group(2));
     }
   }
 
@@ -346,12 +361,8 @@ public final class CommentContent {
     }
   }
 
-  public List<String> getCodeSnippet() {
-    return codeSnippet;
-  }
-
-  public boolean isSnippetExpression() {
-    return isSnippetExpression;
+  public List<CodeSnippet> getCodeSnippets() {
+    return commentSnippets;
   }
 
   @Override
@@ -367,9 +378,5 @@ public final class CommentContent {
   @Override
   public int hashCode() {
     return Objects.hash(text, wordsMarkedAsCode);
-  }
-
-  public boolean isTernaryOp() {
-    return isSnippetTernaryOp;
   }
 }

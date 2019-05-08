@@ -203,7 +203,7 @@ public class ComplianceChecks {
     return methodReturnType.length() == 1 && Character.isUpperCase(methodReturnType.charAt(0));
   }
 
-  public static Set primitiveTypes() {
+  public static Set<String> primitiveTypes() {
     Set<String> primitives = new HashSet<>();
     primitives.add("int");
     primitives.add("boolean");
@@ -308,6 +308,16 @@ public class ComplianceChecks {
     } else if (snippet.isTernary()) {
       substitutedText =
           method.getReturnType().getType().getTypeName() + " result = " + substitutedText + ";";
+    } else if (snippet.isComplexSignature()) {
+      String equality;
+      String end = "";
+      if (primitiveTypes().contains(method.getReturnType().getType().getTypeName())) {
+        equality = Configuration.RETURN_VALUE + "==";
+      } else {
+        equality = Configuration.RETURN_VALUE + ".equals(";
+        end = ")";
+      }
+      substitutedText = "if(" + equality + substitutedText + ")" + end;
     }
     sourceCodeBuilder.addCondition(substitutedText);
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);

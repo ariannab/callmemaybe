@@ -19,16 +19,16 @@ public class EquivalenceMatcher {
    * @return the signature of the (supposedly) equivalent method
    */
   public static EquivalentMatch getEquivalentOrSimilarMethod(
-      String comment, String codeSnippet, boolean isExpression, boolean isTernaryOp) {
+      String comment, CodeSnippet codeSnippet) {
     // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
     // TODO consider also: behaves (as?), like
     KeywordsSet equivalenceKw =
         new KeywordsSet(
-            Arrays.asList("equivalent", "similar", "analog", "same as", "identical"),
+            Arrays.asList(
+                "equivalent", "similar", "analog", "identical", "behaves exactly", "equal to"),
             KeywordsSet.Category.EQUIVALENCE);
     EquivalentMatch methodMatch =
-        getSignatureInMatchingComment(
-            comment, codeSnippet, isExpression, isTernaryOp, equivalenceKw);
+        getSignatureInMatchingComment(comment, codeSnippet, equivalenceKw);
     if (methodMatch != null) {
       return methodMatch;
     } else {
@@ -38,9 +38,7 @@ public class EquivalenceMatcher {
           new KeywordsSet(
               Arrays.asList("prefer", "alternative", "replacement for"),
               KeywordsSet.Category.SIMILARITY);
-      methodMatch =
-          getSignatureInMatchingComment(
-              comment, codeSnippet, isExpression, isTernaryOp, similarityKw);
+      methodMatch = getSignatureInMatchingComment(comment, codeSnippet, similarityKw);
       if (methodMatch != null) {
         return methodMatch;
       }
@@ -58,11 +56,7 @@ public class EquivalenceMatcher {
    * @return the signature of the (supposedly) equivalent method
    */
   private static EquivalentMatch getSignatureInMatchingComment(
-      String comment,
-      String codeSnippet,
-      boolean isExpression,
-      boolean isTernaryOp,
-      KeywordsSet keywordsSet) {
+      String comment, CodeSnippet codeSnippet, KeywordsSet keywordsSet) {
     EquivalentMatch match = null;
 
     for (String word : keywordsSet.getKw()) {
@@ -73,7 +67,7 @@ public class EquivalenceMatcher {
         boolean equivalence = !similarity;
         match = buildMatchWithSignatures(comment, word, keywordMatcher, equivalence);
         if (codeSnippet != null) {
-          match.setCodeSnippet(codeSnippet, isExpression, isTernaryOp);
+          match.setCodeSnippet(codeSnippet);
         }
       }
     }

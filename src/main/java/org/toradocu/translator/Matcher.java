@@ -13,9 +13,11 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javafx.util.Pair;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
@@ -91,8 +93,7 @@ class Matcher {
    * @param codeElements the set of {@code CodeElement}s to filter
    * @return a set of {@code CodeElement}s that match the given string
    */
-  private Set<CodeElement<?>> filterMatchingCodeElements(
-      String filter, Set<CodeElement<?>> codeElements) {
+  Set<CodeElement<?>> filterMatchingCodeElements(String filter, Set<CodeElement<?>> codeElements) {
     Set<CodeElement<?>> minCodeElements = new LinkedHashSet<>();
     // If the word to match is a one-letter word (or empty string), we look for an exact match.
     int minDistance = 0;
@@ -518,23 +519,23 @@ class Matcher {
         rightIndexes.add(docArgs.indexOf(eqArg));
       }
     } else {
-      // Method in comment does not accept arguments! Pick first match.
-      // No match is the absolute best: just pick the first one, but only if it takes no arguments!
-      firstCodeMatch = sortedCodeElements.stream().findFirst().get();
-      if ((firstCodeMatch instanceof MethodCodeElement
-          && ((MethodCodeElement) firstCodeMatch).getArgs() == null)) {
+      // Else, in the equivalent signature there are no parameters! Filter candidates and pick the
+      // first one!
+      Stream<CodeElement<?>> noArgsCandidates =
+          sortedCodeElements
+              .stream()
+              .filter(
+                  x -> x instanceof MethodCodeElement && ((MethodCodeElement) x).getArgs() == null);
+      Optional<CodeElement<?>> first = noArgsCandidates.findFirst();
+      if (first.isPresent()) {
+        firstCodeMatch = first.get();
         match =
             new Match(
                 firstCodeMatch.getJavaExpression(),
                 ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
                 firstCodeMatch);
-      } else if (firstCodeMatch instanceof GeneralCodeElement) {
-        match =
-            new Match(
-                firstCodeMatch.getJavaExpression(),
-                ((GeneralCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
       }
+
       return match;
     }
 

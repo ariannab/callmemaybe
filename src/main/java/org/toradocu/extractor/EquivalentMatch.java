@@ -243,15 +243,12 @@ public class EquivalentMatch {
     return codeSnippet;
   }
 
-  public void setCodeSnippet(String codeSnippet, boolean isExpression, boolean ternaryOp) {
-    if (codeSnippet.isEmpty()) {
-      this.codeSnippet = null;
-    } else {
-      this.codeSnippet = new CodeSnippet(codeSnippet, isExpression, ternaryOp);
-    }
+  public void setCodeSnippet(CodeSnippet codeSnippet) {
+    this.codeSnippet = codeSnippet;
   }
 
   public void addSnippetSymbol(String symbol) {
     this.codeSnippet.getSymbols().put(symbol, null);
+    this.codeSnippet.getSolvedSymbols().put(symbol, false);
   }
 }
