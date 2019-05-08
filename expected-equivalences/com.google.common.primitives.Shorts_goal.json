@@ -376,7 +376,7 @@
     "equivalence": {
       "comment": "Returns a hash code for value; equal to the result of invoking ((Short) value).hashCode().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(((Short) args[0]).hashCode())"
     }
   },
   {
@@ -577,7 +577,7 @@
     "equivalence": {
       "comment": "Returns the short value whose byte representation is the given 2 bytes, in big-endian order; equivalent to Shorts.fromByteArray(new byte[] {b1, b2)}.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(Shorts.fromByteArray(new byte[] {args[0], args[1])})"
+      "condition": "methodResultID==(Shorts.fromByteArray(new byte[] {args[0], args[1]}))"
     }
   },
   {

@@ -97,7 +97,7 @@
     "equivalence": {
       "comment": "Returns the char value whose byte representation is the given 2 bytes, in big-endian order; equivalent to Chars.fromByteArray(new byte[] {b1, b2)}.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.fromByteArray(new byte[] {args[0], args[1])}))."
+      "condition": "methodResultID==(Chars.fromByteArray(new byte[] {args[0], args[1]}))"
     }
   },
   {
@@ -539,7 +539,7 @@
     "equivalence": {
       "comment": "Returns a hash code for value; equal to the result of invoking ((Character) value).hashCode().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(((Character) args[0]).hashCode())"
     }
   },
   {

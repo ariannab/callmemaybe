@@ -27,7 +27,7 @@
     "equivalence": {
       "comment": "Equivalent to putLong(Double.doubleToRawLongBits(d)).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.putLong(Double.doubleToRawLongBits(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectID.putLong(Double.doubleToRawLongBits(args[0])))"
     }
   },
   {
@@ -97,7 +97,7 @@
     "equivalence": {
       "comment": "Equivalent to putInt(Float.floatToRawIntBits(f)).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.putInt(Float.floatToRawIntBits(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectID.putInt(Float.floatToRawIntBits(args[0])))"
     }
   },
   {
@@ -274,7 +274,7 @@
     "equivalence": {
       "comment": "Equivalent to putByte(b ? (byte) 1 : (byte) 0).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.putByte(args[0] ? (byte) 1 : (byte) 0)"
+      "condition": "methodResultID.equals[receiverObjectID.putByte(args[0] ? (byte) 1 : (byte) 0)]"
     }
   },
   {
@@ -453,7 +453,7 @@
     "equivalence": {
       "comment": "Equivalent to putBytes(charSequence.toString().getBytes(charset)).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.putBytes(charSequence.toString().getBytes(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectID.putBytes(args[0].toString().getBytes(args[1])))"
     }
   },
   {

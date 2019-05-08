@@ -261,7 +261,7 @@
     "equivalence": {
       "comment": "Returns the int value whose byte representation is the given 4 bytes, in big-endian order; equivalent to Ints.fromByteArray(new byte[] {b1, b2, b3, b4)}.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(Ints.fromByteArray(new byte[] {args[0], args[1], args[2], args[3])}))"
+      "condition": "methodResultID==(Ints.fromByteArray(new byte[] {args[0], args[1], args[2], args[3]}))"
     }
   },
   {
@@ -292,7 +292,7 @@
     "equivalence": {
       "comment": "Returns a hash code for value; equal to the result of invoking ((Integer) value).hashCode().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(((Integer) args[0]).hashCode())"
     }
   },
   {
@@ -647,7 +647,7 @@
     "equivalence": {
       "comment": "Returns the int value whose big-endian representation is stored in the first 4 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getInt(). For example, the input byte array {0x12, 0x13, 0x14, 0x15, 0x33} would yield the int value 0x12131415. <p>Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much more flexibility at little cost in readability.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(ByteBuffer.wrap(args[0]).getInt())"
+      "condition": "methodResultID==(java.nio.ByteBuffer.wrap(args[0]).getInt())"
     }
   },
   {

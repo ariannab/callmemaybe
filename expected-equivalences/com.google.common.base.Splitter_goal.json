@@ -226,7 +226,7 @@
     "equivalence": {
       "comment": "Returns a splitter that considers any subsequence matching a given pattern (regular expression) to be a separator. For example, Splitter.onPattern(\"\\r?\\n\").split(entireFile) splits a string into lines whether it uses DOS-style or UNIX-style line terminators. This is equivalent to Splitter.on(Pattern.compile(pattern)).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.on(java.util.regex.Pattern.compile(args[0])))"
+      "condition": "methodResultID.equals(Splitter.on(java.util.regex.Pattern.compile(args[0])))"
     }
   },
   {

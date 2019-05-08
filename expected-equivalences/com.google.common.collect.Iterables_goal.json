@@ -756,7 +756,7 @@
     "equivalence": {
       "comment": "Returns an iterable whose iterators cycle indefinitely over the provided elements. <p>After remove is invoked on a generated iterator, the removed element will no longer appear in either that iterator or any other iterator created from the same source iterable. That is, this method behaves exactly as Iterables.cycle(Lists.newArrayList(elements)). The iterator's hasNext method returns true until all of the original elements have been removed. <p>Warning: Typical uses of the resulting iterator may produce an infinite loop. You should use an explicit break or be certain that you will eventually remove all the elements. <p>To cycle over the elements n times, use the following: Iterables.concat(Collections.nCopies(n, Arrays.asList(elements))).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(Iterables.cycle(Lists.newArrayList(args[0])))"
+      "condition": "methodResultID.equals(Iterables.cycle(com.google.common.collect.Lists.newArrayList(args[0])))"
     }
   },
   {

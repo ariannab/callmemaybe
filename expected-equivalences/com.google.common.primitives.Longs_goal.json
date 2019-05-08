@@ -245,7 +245,7 @@
     "equivalence": {
       "comment": "Returns the long value whose big-endian representation is stored in the first 8 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getLong(). For example, the input byte array {0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19} would yield the long value 0x1213141516171819L. <p>Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much more flexibility at little cost in readability.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(ByteBuffer.wrap(args[0]).getLong())"
+      "condition": "methodResultID==(java.nio.ByteBuffer.wrap(args[0]).getLong())"
     }
   },
   {
@@ -603,7 +603,7 @@
     "equivalence": {
       "comment": "Returns the long value whose byte representation is the given 8 bytes, in big-endian order; equivalent to Longs.fromByteArray(new byte[] {b1, b2, b3, b4, b5, b6, b7, b8)}.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(Longs.fromByteArray(new byte[] {args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]))"
+      "condition": "methodResultID==(Longs.fromByteArray(new byte[] {args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]}))"
     }
   },
   {
@@ -634,7 +634,7 @@
     "equivalence": {
       "comment": "Returns a hash code for value; equal to the result of invoking ((Long) value).hashCode(). <p>This method always return the value specified by Long#hashCode() in java, which might be different from ((Long) value).hashCode() in GWT because Long#hashCode() in GWT does not obey the JRE contract.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(((Long) args[0]).hashCode())"
     }
   },
   {
