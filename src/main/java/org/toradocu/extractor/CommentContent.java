@@ -48,12 +48,12 @@ public final class CommentContent {
     String linkPattern = "\\{@(link|linkplain) (.*?)\\}";
     manageLinks(linkPattern);
     this.commentSnippets = new ArrayList<>();
-    final String codePattern1 = "<code>([A-Za-z0-9_]+)</code>";
+    final String codePattern1 = "<code>(.*?)</code>";
     identifyCodeTagsContent(codePattern1);
     removeTagsNotContent(codePattern1);
 
     final String codePattern2 = "(\\{@code (.*?)\\})(\\.|;|,| |<)";
-    identifyCodeTagsContent(codePattern2);
+    identifyNestedCodeTagsContent(codePattern2, "{@code");
     removeTagsNotContent(codePattern2);
     removeHTMLTags();
     decodeHTML();
@@ -123,7 +123,7 @@ public final class CommentContent {
    *
    * @param codePattern regular expression used to identify the words marked as code
    */
-  private void identifyCodeTagsContent(String codePattern) {
+  private void identifyNestedCodeTagsContent(String codePattern, String patternBegin) {
     String[] subSentences = text.split("\"[.] \"");
     for (String subSentence : subSentences) {
       Matcher codeMatcher = Pattern.compile(codePattern).matcher(subSentence);
@@ -132,14 +132,13 @@ public final class CommentContent {
         String taggedSubstring = codeMatcher.group(1).trim();
         String[] words;
         words = taggedSubstring.split("\\s+");
-        String pattern = "{@code";
-        String[] codeSubsets = taggedSubstring.split("(?=(" + Pattern.quote(pattern) + "))");
+        String[] codeSubsets = taggedSubstring.split("(?=(" + Pattern.quote(patternBegin) + "))");
         for (int i = 0; i < codeSubsets.length; i++) {
           String reminder = computeReminder(subSentence, codeSubsets[i]);
           codeSubsets[i] =
               codeSubsets[i]
                       .substring(
-                          codeSubsets[i].indexOf(pattern) + pattern.length(),
+                          codeSubsets[i].indexOf(patternBegin) + patternBegin.length(),
                           codeSubsets[i].lastIndexOf("}"))
                       .trim()
                   + reminder;
@@ -183,6 +182,33 @@ public final class CommentContent {
           words = taggedSubstring.split("[<>=]=?|!=]");
         }
 
+        int indexOfMatch = codeMatcher.start();
+        for (String word : words) {
+          if (!word.isEmpty() && !word.matches(".*[0-9+-/*(){}[<>=]=?|!=].*")) {
+            // search this word before this index in original text
+            List<Integer> occurrences = new ArrayList<>();
+            occurrences.add(countStringOccurrence(word, subSentence, indexOfMatch));
+            if (wordsMarkedAsCode.get(word) != null) {
+              wordsMarkedAsCode.get(word).addAll(occurrences);
+            } else {
+              wordsMarkedAsCode.put(word, occurrences);
+            }
+          }
+          indexOfMatch += word.length() + 1;
+        }
+      }
+    }
+  }
+
+  private void identifyCodeTagsContent(String codePattern) {
+    String[] subSentences = text.split("\"[.] \"");
+    for (String subSentence : subSentences) {
+      Matcher codeMatcher = Pattern.compile(codePattern).matcher(subSentence);
+
+      while (codeMatcher.find()) {
+        String taggedSubstring = codeMatcher.group(1).trim();
+        String[] words;
+        words = taggedSubstring.split("\\s+");
         int indexOfMatch = codeMatcher.start();
         for (String word : words) {
           if (!word.isEmpty() && !word.matches(".*[0-9+-/*(){}[<>=]=?|!=].*")) {
@@ -340,7 +366,7 @@ public final class CommentContent {
   private void removeTagsNotContent(String pattern) {
     Matcher matcher = Pattern.compile(pattern).matcher(text);
     while (matcher.find()) {
-      this.text = this.text.replace(matcher.group(1), matcher.group(2));
+      this.text = this.text.replace(matcher.group(0), matcher.group(1));
     }
   }
 

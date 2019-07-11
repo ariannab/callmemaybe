@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javafx.util.Pair;
 import org.toradocu.util.ComplianceChecks;
 
 // FIXME turn this into:
@@ -33,11 +32,11 @@ public class EquivalentMatch {
    * This Map and the one below map a signature with A PAIR INT (PARAM POSITION), STRING (PARAM
    * NAME)
    */
-  private Map<String, List<Pair<Integer, String>>> hardcodedParams;
+  private Map<String, Map<Integer, String>> hardcodedParams;
 
-  private Map<String, List<Pair<Integer, String>>> staticFinalParams;
+  private Map<String, Map<Integer, String>> staticFinalParams;
 
-  private Map<String, List<Pair<Integer, String>>> typeParams;
+  private Map<String, Map<Integer, String>> typeParams;
 
   private boolean isNegated;
 
@@ -132,11 +131,10 @@ public class EquivalentMatch {
     return this.oracle;
   }
 
-  private Map<String, List<Pair<Integer, String>>> areArgsHardcoded(
-      ArrayList<String> methodSignatures) {
-    Map<String, List<Pair<Integer, String>>> map = new HashMap<>();
+  private Map<String, Map<Integer, String>> areArgsHardcoded(ArrayList<String> methodSignatures) {
+    Map<String, Map<Integer, String>> map = new HashMap<>();
     for (String signature : methodSignatures) {
-      List<Pair<Integer, String>> constArgs = new ArrayList<>();
+      Map<Integer, String> constArgs = new HashMap<>();
       List<String> patterns = new ArrayList<>();
       patterns.add("[0-9]");
       patterns.add("true|false");
@@ -149,7 +147,7 @@ public class EquivalentMatch {
             java.util.regex.Matcher matchConstant =
                 Pattern.compile(pattern, Pattern.CASE_INSENSITIVE).matcher(arg);
             if (matchConstant.find()) {
-              constArgs.add(new Pair<>(i, matchConstant.group(0)));
+              constArgs.put(i, matchConstant.group(0));
             }
           }
         }
@@ -159,12 +157,11 @@ public class EquivalentMatch {
     return map;
   }
 
-  private Map<String, List<Pair<Integer, String>>> areArgsStaticFinal(
-      ArrayList<String> methodSignatures) {
-    Map<String, List<Pair<Integer, String>>> map = new HashMap<>();
+  private Map<String, Map<Integer, String>> areArgsStaticFinal(ArrayList<String> methodSignatures) {
+    Map<String, Map<Integer, String>> map = new HashMap<>();
     for (String signature : methodSignatures) {
-      List<Pair<Integer, String>> sfArgs = new ArrayList<>();
-      String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z]+|#[A-Z]+)+";
+      Map<Integer, String> sfArgs = new HashMap<>();
+      String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z_]+|#[A-Z_]+)+";
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
       if (arguments != null) {
@@ -172,7 +169,7 @@ public class EquivalentMatch {
           String arg = signatureArgs.get(i);
           Matcher staticFinalMatch = Pattern.compile(staticFinalRegex).matcher(arg);
           if (staticFinalMatch.matches()) {
-            sfArgs.add(new Pair<>(i, staticFinalMatch.group(0)));
+            sfArgs.put(i, staticFinalMatch.group(0));
           }
         }
       }
@@ -181,23 +178,20 @@ public class EquivalentMatch {
     return map;
   }
 
-  private Map<String, List<Pair<Integer, String>>> areArgsTypes(
-      ArrayList<String> methodSignatures) {
-    Map<String, List<Pair<Integer, String>>> map = new HashMap<>();
+  private Map<String, Map<Integer, String>> areArgsTypes(ArrayList<String> methodSignatures) {
+    Map<String, Map<Integer, String>> map = new HashMap<>();
     for (String signature : methodSignatures) {
-      List<Pair<Integer, String>> tArgs = new ArrayList<>();
+      Map<Integer, String> tArgs = new HashMap<>();
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
       if (arguments != null) {
         for (int i = 0; i < arguments.size(); i++) {
           String arg = signatureArgs.get(i);
-          List<Pair<Integer, String>> list = this.staticFinalParams.get(signature);
-          if (!list.contains(new Pair<>(i, arg))
-                  && !arg.isEmpty()
-                  && Character.isUpperCase(arg.charAt(0))
+          Map<Integer, String> sfParams = this.staticFinalParams.get(signature);
+          if (!sfParams.containsKey(i) && !arg.isEmpty() && Character.isUpperCase(arg.charAt(0))
               || arg.contains("[]")
               || ComplianceChecks.primitiveTypes().contains(arg)) {
-            tArgs.add(new Pair<>(i, arg));
+            tArgs.putIfAbsent(i, arg);
           }
         }
       }
@@ -211,15 +205,15 @@ public class EquivalentMatch {
     extractSimpleNames();
   }
 
-  public Map<String, List<Pair<Integer, String>>> getHardcodedParams() {
+  public Map<String, Map<Integer, String>> getHardcodedParams() {
     return hardcodedParams;
   }
 
-  public Map<String, List<Pair<Integer, String>>> getStaticFinalParams() {
+  public Map<String, Map<Integer, String>> getStaticFinalParams() {
     return staticFinalParams;
   }
 
-  public Map<String, List<Pair<Integer, String>>> getTypeParams() {
+  public Map<String, Map<Integer, String>> getTypeParams() {
     return typeParams;
   }
 
