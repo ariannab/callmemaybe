@@ -25,7 +25,14 @@ public class EquivalenceMatcher {
     KeywordsSet equivalenceKw =
         new KeywordsSet(
             Arrays.asList(
-                "equivalent", "similar", "analog", "identical", "behaves exactly", "equal to"),
+                "equivalent",
+                "similar",
+                "analog",
+                "identical",
+                "behaves exactly",
+                "equal to",
+                "same as",
+                "same value"),
             KeywordsSet.Category.EQUIVALENCE);
     EquivalentMatch methodMatch =
         getSignatureInMatchingComment(comment, codeSnippet, equivalenceKw);
@@ -79,22 +86,27 @@ public class EquivalenceMatcher {
     boolean negation = false;
     String methodRegex = "(!)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
     String partialMethodRegex = "(!)?[A-Z]\\w+[.#]\\w+";
-
+    Map<String, List<String>> argumentsMap = new HashMap<>();
+    ArrayList<String> signaturesFound = new ArrayList<>();
     java.util.regex.Matcher signatureMatch;
     boolean partial = false;
+
     int group = 0;
-    if (word.equals("as")) {
-      signatureMatch = Pattern.compile(" as " + methodRegex).matcher(comment);
-    } else {
-      signatureMatch = Pattern.compile(methodRegex).matcher(comment);
+    if (word.contains("as")) {
+      signatureMatch = Pattern.compile("( as )" + methodRegex).matcher(comment);
+      if (!signatureMatch.find()) {
+        return new EquivalentMatch(signaturesFound, false, false, argumentsMap, negation);
+      }
     }
-    if (!signatureMatch.find()) {
+
+    signatureMatch = Pattern.compile(methodRegex).matcher(comment);
+
+    boolean matchFound = signatureMatch.find();
+    if (!matchFound) {
       signatureMatch = Pattern.compile(partialMethodRegex).matcher(comment);
       partial = true;
     }
     signatureMatch.reset();
-    Map<String, List<String>> argumentsMap = new HashMap<>();
-    ArrayList<String> signaturesFound = new ArrayList<>();
     while (signatureMatch.find() && !doRangesOverlap(keywordMatcher, signatureMatch)) {
       String signatureFound = signatureMatch.group(group);
       if (signatureFound.endsWith(".")) {

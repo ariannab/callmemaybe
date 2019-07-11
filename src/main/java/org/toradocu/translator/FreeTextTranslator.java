@@ -193,11 +193,16 @@ public class FreeTextTranslator {
 
       String methodSignature = equivalenceMatch.getMethodSignatures().get(i);
       String simpleMethodName = equivalenceMatch.getSimpleName().get(i);
+      String methodNameForSubjectMatch = simpleMethodName;
+      if (simpleMethodName.startsWith("get")) {
+        methodNameForSubjectMatch = simpleMethodName.substring(3);
+      }
       boolean partial = !methodSignature.contains("(");
       // Extract every CodeElement associated with the method and the containing class of the
       // method.
       Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
-      Set<CodeElement<?>> matchingCodeElem = matcher.subjectMatch(simpleMethodName, codeElements);
+      Set<CodeElement<?>> matchingCodeElem =
+          matcher.subjectMatch(methodNameForSubjectMatch, codeElements);
 
       String className = "";
       if (previousReturnType != null) {

@@ -50,23 +50,28 @@ public final class CommentContent {
     this.commentSnippets = new ArrayList<>();
     final String codePattern1 = "<code>(.*?)</code>";
     identifyCodeTagsContent(codePattern1);
-    removeTagsNotContent(codePattern1);
+    removeTagsNotContent(codePattern1, 0, 1);
 
     final String codePattern2 = "(\\{@code (.*?)\\})(\\.|;|,| |<)";
     identifyNestedCodeTagsContent(codePattern2, "{@code");
-    removeTagsNotContent(codePattern2);
+    removeTagsNotContent(codePattern2, 1, 2);
     removeHTMLTags();
     decodeHTML();
     this.text = this.text.trim();
   }
 
   private void manageLinks(String linkPattern) {
-    Matcher matcher = Pattern.compile(linkPattern).matcher(this.text);
-    while (matcher.find()) {
-      if (matcher.group(2) != null) {
+    Matcher linkTagmatcher = Pattern.compile(linkPattern).matcher(this.text);
+    while (linkTagmatcher.find()) {
+      if (linkTagmatcher.group(2) != null) {
         // String linkContent = matcher.group(2).split(" ")[0];
-        String linkContent = matcher.group(2);
-        text = text.replace(matcher.group(0), linkContent);
+        String linkContent = linkTagmatcher.group(2);
+        String linkWithUrlAndSpecRegex = "(#([A-Za-z]+).*)(\\2)";
+        Matcher urlSplitterMatcher = Pattern.compile(linkWithUrlAndSpecRegex).matcher(linkContent);
+        while (urlSplitterMatcher.find()) {
+          linkContent = linkContent.replace(urlSplitterMatcher.group(1), "");
+        }
+        text = text.replace(linkTagmatcher.group(0), linkContent);
         this.linksContent.add(linkContent);
       }
     }
@@ -362,11 +367,12 @@ public final class CommentContent {
    * Removes Javadoc inline tags from the comment text preserving the content of the tags.
    *
    * @param pattern a regular expression
+   * @param i
    */
-  private void removeTagsNotContent(String pattern) {
+  private void removeTagsNotContent(String pattern, int groupReplace, int groupReplacer) {
     Matcher matcher = Pattern.compile(pattern).matcher(text);
     while (matcher.find()) {
-      this.text = this.text.replace(matcher.group(0), matcher.group(1));
+      this.text = this.text.replace(matcher.group(groupReplace), matcher.group(groupReplacer));
     }
   }
 

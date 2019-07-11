@@ -136,7 +136,7 @@ public class EquivalentMatch {
     for (String signature : methodSignatures) {
       Map<Integer, String> constArgs = new HashMap<>();
       List<String> patterns = new ArrayList<>();
-      patterns.add("[0-9]");
+      patterns.add("[0-9]+(\\.[0-9]+)?");
       patterns.add("true|false");
       patterns.add("\"[a-zA-Z]+\"");
       List<String> arguments = this.arguments.get(signature);
