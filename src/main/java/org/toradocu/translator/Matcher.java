@@ -13,12 +13,12 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import javafx.util.Pair;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
@@ -552,12 +552,11 @@ class Matcher {
       } else continue;
 
       List<String> actualArgList = equivalentMethod.getArguments().get(methodSignature);
-      List<Pair<Integer, String>> constantParamsToIgnore =
+      Map<Integer, String> constantParamsToIgnore =
           equivalentMethod.getHardcodedParams().get(methodSignature);
-      List<Pair<Integer, String>> codeElementsParams =
+      Map<Integer, String> codeElementsParams =
           equivalentMethod.getStaticFinalParams().get(methodSignature);
-      List<Pair<Integer, String>> typeParams =
-          equivalentMethod.getTypeParams().get(methodSignature);
+      Map<Integer, String> typeParams = equivalentMethod.getTypeParams().get(methodSignature);
       if (currentMatchParamTypes != null
           && actualArgList != null
           && currentMatchParamTypes.length == actualArgList.size()
@@ -567,6 +566,7 @@ class Matcher {
                   + codeElementsParams.size()) {
 
         int filledSequence = 0;
+        int indexCount = 0;
         // Filled sequence refers to the sequence of parameters of the eq. method to be matched,
         // thus is a placeholder to tell at what point are we in completing the match String
         for (int index : rightIndexes) {
@@ -574,26 +574,29 @@ class Matcher {
           String currentMatchParam = currentMatchParamTypes[filledSequence];
           if (index != -1
               && (myParamTypes.get(index).equals(currentMatchParam)
+                  || isParametricType(currentMatchParam, myParamTypes.get(index))
                   || isGenericType(currentMatchParam, myParamTypes))) {
             // Here we check that the type of the current arg to fill matches
             // the type of the right index (the doc. method arg index)
             if (!receiver.equals("args[" + index + "]")) {
               paramForMatch.add("args[" + index + "]");
               filledSequence++;
+              indexCount++;
               continue;
             }
           }
-          for (Pair<Integer, String> argPair : constantParamsToIgnore) {
+          for (Map.Entry<Integer, String> entry : constantParamsToIgnore.entrySet()) {
             // If params are constants (hardcoded in doc), just fill parenthesis with the constant
-            if (argPair.getKey().equals(filledSequence)) {
-              paramForMatch.add(argPair.getValue());
+            if (entry.getKey().equals(filledSequence)) {
+              paramForMatch.add(entry.getValue());
               filledSequence++;
               filled = true;
             }
           }
-          if (!filled) {
-            indexesToBeMatched.add(filledSequence);
+          if (!filled && !indexesToBeMatched.contains(indexCount)) {
+            indexesToBeMatched.add(indexCount);
           }
+          indexCount++;
         }
         boolean sizesMatch =
             paramForMatch.size() + codeElementsParams.size() + typeParams.size()
@@ -617,11 +620,11 @@ class Matcher {
         for (int j = 0; j < paramForMatch.size() - 1; j++) {
           match.completeExpression(paramForMatch.get(j) + ",");
         }
-        for (int i = 0; i < indexesToBeMatched.size(); i++) {
-          if (!codeElementsParams.isEmpty()) {
-            String codeElementName = parseCodeElemName(codeElementsParams, i);
+        for (int indexToBeMatch : indexesToBeMatched) {
+          if (!codeElementsParams.isEmpty() && codeElementsParams.containsKey(indexToBeMatch)) {
+            String codeElementName = parseCodeElemName(codeElementsParams, indexToBeMatch);
             List<FieldCodeElement> result = new ArrayList<>();
-            String className = currentMatchParamTypes[i];
+            String className = currentMatchParamTypes[indexToBeMatch];
             // the class name is the one of the parameters left;
             Class<?> matchedType = null;
             try {
@@ -648,28 +651,40 @@ class Matcher {
             }
           }
           if (!typeParams.isEmpty()) {
-            Parameter myMethodType = myMethodParamTypes[i];
-            String matchParamType = currentMatchParamTypes[i];
-            if ((myMethodType.getType().isArray()
-                    && (matchParamType.contains("..") || matchParamType.contains("[]")))
-                || myMethodParamTypes[i].getType().getName().equals("java.lang.Object")) {
-              paramForMatch.add("args[" + i + "]");
+            for (int i = 0; i < myMethodParamTypes.length; i++) {
+              Parameter myMethodType = myMethodParamTypes[i];
+              // String matchParamType = currentMatchParamTypes[i];
+              for (String matchParamType : currentMatchParamTypes) {
+                if ((myMethodType.getType().isArray()
+                        && (matchParamType.contains("..") || matchParamType.contains("[]")))
+                    || myMethodParamTypes[i].getType().getName().equals("java.lang.Object")) {
+                  paramForMatch.add("args[" + i + "]");
+                }
+              }
             }
           }
           for (int j = 0; j < paramForMatch.size() - 1; j++) {
             match.completeExpression(paramForMatch.get(j) + ",");
           }
         }
+
+        // We finished matching all indexes, we can close the expression
         if (!paramForMatch.isEmpty()) {
           match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
+          return match;
         }
       }
     }
     return match;
   }
 
-  private String parseCodeElemName(List<Pair<Integer, String>> codeElementsParams, int i) {
-    String codeElement = codeElementsParams.get(i).getValue();
+  private boolean isParametricType(String currentMatch, String s) {
+    int parameter = currentMatch.indexOf("<T>");
+    return parameter != -1 && currentMatch.substring(0, parameter).equals(s);
+  }
+
+  private String parseCodeElemName(Map<Integer, String> codeElementsParams, int i) {
+    String codeElement = codeElementsParams.get(i);
     String[] codeElementTokens = codeElement.split("\\.");
     return codeElementTokens[codeElementTokens.length - 1];
   }
