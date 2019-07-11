@@ -807,7 +807,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call #getAngles(RotationOrder, RotationConvention) getAngles(order, RotationConvention.VECTOR_OPERATOR)",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(getAngles(args[0], RotationConvention.VECTOR_OPERATOR))"
+      "condition": "methodResultID.equals(receiverObjectID.getAngles(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
     }
   },
   {
@@ -952,7 +952,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call #getAxis(RotationConvention) getAxis(RotationConvention.VECTOR_OPERATOR)",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectID.getAxis(org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
     }
   }
 ]
