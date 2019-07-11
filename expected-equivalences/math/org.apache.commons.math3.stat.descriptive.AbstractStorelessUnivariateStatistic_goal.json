@@ -1,0 +1,308 @@
+[
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(double[] values, int begin, int length)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "This default implementation calls #clear, then invokes #increment in a loop over the specified portion of the input array, and then uses #getResult to compute the return value.  Note that this implementation changes the internal state of the statistic. Its side effects are the same as invoking #clear and then #incrementAll(double[], int, int).  Implementations may override this method with a more efficient and possibly more accurate implementation that works directly with the input array.  If the array is null or the index parameters are not valid, an MathIllegalArgumentException is thrown.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object object)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true iff object is an AbstractStorelessUnivariateStatistic returning the same values as this for getResult() and getN()",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incrementAll(double[] values, int begin, int length)",
+    "name": "incrementAll",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "This default implementation just calls #increment in a loop over the specified portion of the input array.  Throws IllegalArgumentException if the input values array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incrementAll(double[] values)",
+    "name": "incrementAll",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "This default implementation just calls #increment in a loop over the input array.  Throws IllegalArgumentException if the input values array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns hash code based on getResult() and getN()",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic",
+      "name": "org.apache.commons.math3.stat.descriptive.StorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "increment(double d)",
+    "name": "increment",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResult()",
+    "name": "getResult",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(double[] values)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+      "name": "AbstractStorelessUnivariateStatistic",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "This default implementation calls #clear, then invokes #increment in a loop over the the input array, and then uses #getResult to compute the return value.  Note that this implementation changes the internal state of the statistic. Its side effects are the same as invoking #clear and then #incrementAll(double[]).  Implementations may override this method with a more efficient and possibly more accurate implementation that works directly with the input array.  If the array is null, a MathIllegalArgumentException is thrown.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

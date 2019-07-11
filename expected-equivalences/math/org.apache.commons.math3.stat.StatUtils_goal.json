@@ -1,0 +1,1298 @@
+[
+  {
+    "signature": "sumSq(double[] values)",
+    "name": "sumSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the squares of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>IllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumLog(double[] values)",
+    "name": "sumLog",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the natural logs of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>IllegalArgumentException</code> if the array is null.  See org.apache.commons.math3.stat.descriptive.summary.SumOfLogs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mean(double[] values)",
+    "name": "mean",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the arithmetic mean of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>IllegalArgumentException</code> if the array is null.  See org.apache.commons.math3.stat.descriptive.moment.Mean for details on the computing algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "populationVariance(double[] values)",
+    "name": "populationVariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the  population variance of the entries in the input array, or Double.NaN if the array is empty.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the formula and computing algorithm.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanDifference(double[] sample1, double[] sample2)",
+    "name": "meanDifference",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample1"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the mean of the (signed) differences between corresponding elements of the input arrays -- i.e., sum(sample1[i] - sample2[i]) / sample1.length.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "max(double[] values, int begin, int length)",
+    "name": "max",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the maximum of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>MathIllegalArgumentException</code> if the array is null or the array index parameters are not valid.  <ul> <li>The result is <code>NaN</code> iff all values are <code>NaN</code> (i.e. <code>NaN</code> values have no impact on the value of the statistic).</li> <li>If any of the values equals <code>Double.POSITIVE_INFINITY</code>, the result is <code>Double.POSITIVE_INFINITY.</code></li> </ul>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normalize(double[] sample)",
+    "name": "normalize",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample"
+      }
+    ],
+    "equivalence": {
+      "comment": "Normalize (standardize) the sample, so it is has a mean of 0 and a standard deviation of 1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variance(double[] values, int begin, int length)",
+    "name": "variance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the variance of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty. This method returns the bias-corrected sample variance (using n - 1 in the denominator). Use #populationVariance(double[], int, int) for the non-bias-corrected population variance.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null or the array index parameters are not valid.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumSq(double[] values, int begin, int length)",
+    "name": "sumSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the squares of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>IllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumDifference(double[] sample1, double[] sample2)",
+    "name": "sumDifference",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample1"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the (signed) differences between corresponding elements of the input arrays -- i.e., sum(sample1[i] - sample2[i]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "geometricMean(double[] values)",
+    "name": "geometricMean",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the geometric mean of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>IllegalArgumentException</code> if the array is null.  See org.apache.commons.math3.stat.descriptive.moment.GeometricMean for details on the computing algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "percentile(double[] values, double p)",
+    "name": "percentile",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an estimate of the pth percentile of the values in the values array. <p> <ul> <li>Returns <code>Double.NaN</code> if values has length <code>0</code></li></p> <li>Returns (for any value of p) <code>values[0]</code> if values has length <code>1</code></li> <li>Throws <code>IllegalArgumentException</code> if values is null or p is not a valid quantile value (p must be greater than 0 and less than or equal to 100)</li> </ul></p>  See org.apache.commons.math3.stat.descriptive.rank.Percentile for a description of the percentile estimation algorithm used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variance(double[] values, double mean)",
+    "name": "variance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "mean"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the variance of the entries in the input array, using the precomputed mean value. Returns Double.NaN if the array is empty. This method returns the bias-corrected sample variance (using n - 1 in the denominator). Use #populationVariance(double[], double) for the non-bias-corrected population variance.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  The formula used assumes that the supplied mean value is the arithmetic mean of the sample data, not a known population parameter. This method is supplied only to save computation when the mean has already been computed.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "geometricMean(double[] values, int begin, int length)",
+    "name": "geometricMean",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the geometric mean of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>IllegalArgumentException</code> if the array is null.  See org.apache.commons.math3.stat.descriptive.moment.GeometricMean for details on the computing algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "product(double[] values)",
+    "name": "product",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the product of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>IllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "min(double[] values)",
+    "name": "min",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the minimum of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>MathIllegalArgumentException</code> if the array is null.  <ul> <li>The result is <code>NaN</code> iff all values are <code>NaN</code> (i.e. <code>NaN</code> values have no impact on the value of the statistic).</li> <li>If any of the values equals <code>Double.NEGATIVE_INFINITY</code>, the result is <code>Double.NEGATIVE_INFINITY.</code></li> </ul>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sum(double[] values)",
+    "name": "sum",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the values in the input array, or Double.NaN if the array is empty.  Throws <code>IllegalArgumentException</code> if the input array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "populationVariance(double[] values, double mean)",
+    "name": "populationVariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "mean"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the  population variance of the entries in the input array, using the precomputed mean value. Returns Double.NaN if the array is empty.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  The formula used assumes that the supplied mean value is the arithmetic mean of the sample data, not a known population parameter. This method is supplied only to save computation when the mean has already been computed.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "max(double[] values)",
+    "name": "max",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the maximum of the entries in the input array, or Double.NaN if the array is empty.  Throws <code>MathIllegalArgumentException</code> if the array is null.  <ul> <li>The result is <code>NaN</code> iff all values are <code>NaN</code> (i.e. <code>NaN</code> values have no impact on the value of the statistic).</li> <li>If any of the values equals <code>Double.POSITIVE_INFINITY</code>, the result is <code>Double.POSITIVE_INFINITY.</code></li> </ul>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mode(double[] sample, int begin, int length)",
+    "name": "mode",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sample mode(s). The mode is the most frequently occurring value in the sample. If there is a unique value with maximum frequency, this value is returned as the only element of the output array. Otherwise, the returned array contains the maximum frequency elements in increasing order. For example, if sample is {0, 12, 5, 6, 0, 13, 5, 17}, the returned array will have length two, with 0 in the first element and 5 in the second. NaN values are ignored when computing the mode - i.e., NaNs will never appear in the output array. If the sample includes only NaNs or has length 0, an empty array is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "product(double[] values, int begin, int length)",
+    "name": "product",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the product of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>IllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "populationVariance(double[] values, double mean, int begin, int length)",
+    "name": "populationVariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "mean"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the  population variance of the entries in the specified portion of the input array, using the precomputed mean value. Returns Double.NaN if the designated subarray is empty.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  The formula used assumes that the supplied mean value is the arithmetic mean of the sample data, not a known population parameter. This method is supplied only to save computation when the mean has already been computed.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null or the array index parameters are not valid.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumLog(double[] values, int begin, int length)",
+    "name": "sumLog",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the natural logs of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>IllegalArgumentException</code> if the array is null.  See org.apache.commons.math3.stat.descriptive.summary.SumOfLogs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variance(double[] values, double mean, int begin, int length)",
+    "name": "variance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "mean"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the variance of the entries in the specified portion of the input array, using the precomputed mean value. Returns Double.NaN if the designated subarray is empty. This method returns the bias-corrected sample variance (using n - 1 in the denominator). Use #populationVariance(double[], double, int, int) for the non-bias-corrected population variance.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  The formula used assumes that the supplied mean value is the arithmetic mean of the sample data, not a known population parameter. This method is supplied only to save computation when the mean has already been computed.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null or the array index parameters are not valid.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variance(double[] values)",
+    "name": "variance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the variance of the entries in the input array, or Double.NaN if the array is empty. This method returns the bias-corrected sample variance (using n - 1 in the denominator). Use #populationVariance(double[]) for the non-bias-corrected population variance.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mode(double[] sample)",
+    "name": "mode",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sample mode(s). The mode is the most frequently occurring value in the sample. If there is a unique value with maximum frequency, this value is returned as the only element of the output array. Otherwise, the returned array contains the maximum frequency elements in increasing order. For example, if sample is {0, 12, 5, 6, 0, 13, 5, 17}, the returned array will have length two, with 0 in the first element and 5 in the second. NaN values are ignored when computing the mode - i.e., NaNs will never appear in the output array. If the sample includes only NaNs or has length 0, an empty array is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sum(double[] values, int begin, int length)",
+    "name": "sum",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the sum of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>IllegalArgumentException</code> if the array is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "varianceDifference(double[] sample1, double[] sample2, double meanDifference)",
+    "name": "varianceDifference",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample1"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "sample2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "meanDifference"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the variance of the (signed) differences between corresponding elements of the input arrays -- i.e., var(sample1[i] - sample2[i]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mean(double[] values, int begin, int length)",
+    "name": "mean",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the arithmetic mean of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>IllegalArgumentException</code> if the array is null.  See org.apache.commons.math3.stat.descriptive.moment.Mean for details on the computing algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "min(double[] values, int begin, int length)",
+    "name": "min",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the minimum of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  Throws <code>MathIllegalArgumentException</code> if the array is null or the array index parameters are not valid.  <ul> <li>The result is <code>NaN</code> iff all values are <code>NaN</code> (i.e. <code>NaN</code> values have no impact on the value of the statistic).</li> <li>If any of the values equals <code>Double.NEGATIVE_INFINITY</code>, the result is <code>Double.NEGATIVE_INFINITY.</code></li> </ul>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "populationVariance(double[] values, int begin, int length)",
+    "name": "populationVariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the  population variance of the entries in the specified portion of the input array, or Double.NaN if the designated subarray is empty.  See org.apache.commons.math3.stat.descriptive.moment.Variance for details on the computing algorithm.  Returns 0 for a single-value (i.e. length = 1) sample.  Throws <code>MathIllegalArgumentException</code> if the array is null or the array index parameters are not valid.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "percentile(double[] values, int begin, int length, double p)",
+    "name": "percentile",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.StatUtils",
+      "name": "StatUtils",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.StatUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "begin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an estimate of the pth percentile of the values in the values array, starting with the element in (0-based) position begin in the array and including length values. <p> <ul> <li>Returns <code>Double.NaN</code> if <code>length = 0</code></li> <li>Returns (for any value of p) <code>values[begin]</code> if <code>length = 1 </code></li> <li>Throws <code>MathIllegalArgumentException</code> if values is null , begin or length is invalid, or p is not a valid quantile value (p must be greater than 0 and less than or equal to 100)</li> </ul></p>  See org.apache.commons.math3.stat.descriptive.rank.Percentile for a description of the percentile estimation algorithm used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

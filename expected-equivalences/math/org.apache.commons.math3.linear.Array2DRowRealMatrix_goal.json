@@ -1,0 +1,1046 @@
+[
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowRealMatrix(double[][] d, boolean copyArray)",
+    "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "d"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "copyArray"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new RealMatrix using the input array as the underlying data array. If an array is built specially in order to be embedded in a RealMatrix and not used directly, the copyArray may be set to false. This will prevent the copying and improve performance as no new array will be built and no data will be copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(org.apache.commons.math3.linear.Array2DRowRealMatrix m)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+          "name": "Array2DRowRealMatrix",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "comment": "Compute the sum of this and m.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.RealMatrixChangingVisitor visitor)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixChangingVisitor",
+          "name": "RealMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.RealMatrixPreservingVisitor visitor)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixPreservingVisitor",
+          "name": "RealMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createMatrix(int rowDimension, int columnDimension)",
+    "name": "createMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+      "name": "org.apache.commons.math3.linear.RealMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowDimension"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnDimension"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowRealMatrix()",
+    "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates a matrix with no data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addToEntry(int row, int column, double increment)",
+    "name": "addToEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "increment"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+      "name": "org.apache.commons.math3.linear.RealMatrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDataRef()",
+    "name": "getDataRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get a reference to the underlying data array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.RealMatrixChangingVisitor visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixChangingVisitor",
+          "name": "RealMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.RealMatrixPreservingVisitor visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixPreservingVisitor",
+          "name": "RealMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "multiplyEntry(int row, int column, double factor)",
+    "name": "multiplyEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "factor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowRealMatrix(double[][] d)",
+    "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new RealMatrix using the input array as the underlying data array. The input array is copied, not referenced. This constructor has the same effect as calling #Array2DRowRealMatrix(double[][], boolean) with the second argument set to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "operate(double[] v)",
+    "name": "operate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEntry(int row, int column)",
+    "name": "getEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowRealMatrix(int rowDimension, int columnDimension)",
+    "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowDimension"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnDimension"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new RealMatrix with the supplied row and column dimensions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getData()",
+    "name": "getData",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSubMatrix(double[][] subMatrix, int row, int column)",
+    "name": "setSubMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "subMatrix"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.RealMatrixChangingVisitor visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixChangingVisitor",
+          "name": "RealMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.RealMatrixPreservingVisitor visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixPreservingVisitor",
+          "name": "RealMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "multiply(org.apache.commons.math3.linear.Array2DRowRealMatrix m)",
+    "name": "multiply",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+          "name": "Array2DRowRealMatrix",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the result of postmultiplying this by m.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRowDimension()",
+    "name": "getRowDimension",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "preMultiply(double[] v)",
+    "name": "preMultiply",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEntry(int row, int column, double value)",
+    "name": "setEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowRealMatrix(double[] v)",
+    "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new (column) RealMatrix using v as the data for the unique column of the created matrix. The input array is copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(org.apache.commons.math3.linear.Array2DRowRealMatrix m)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+          "name": "Array2DRowRealMatrix",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns this minus m.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getColumnDimension()",
+    "name": "getColumnDimension",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.RealMatrixChangingVisitor visitor)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixChangingVisitor",
+          "name": "RealMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.RealMatrixPreservingVisitor visitor)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+      "name": "Array2DRowRealMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowRealMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrixPreservingVisitor",
+          "name": "RealMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

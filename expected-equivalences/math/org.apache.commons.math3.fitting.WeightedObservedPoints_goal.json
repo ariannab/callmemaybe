@@ -1,0 +1,163 @@
+[
+  {
+    "signature": "add(double weight, double x, double y)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+      "name": "WeightedObservedPoints",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds a point to the sample.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+      "name": "WeightedObservedPoints",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all observations from this container.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(double x, double y)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+      "name": "WeightedObservedPoints",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds a point to the sample. Calling this method is equivalent to calling add(1.0, x, y).",
+      "kind": "FreeText",
+      "condition": "add(1.0, args[0], args[1])"
+    }
+  },
+  {
+    "signature": "toList()",
+    "name": "toList",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+      "name": "WeightedObservedPoints",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<org.apache.commons.math3.fitting.WeightedObservedPoint>",
+      "name": "java.util.List<org.apache.commons.math3.fitting.WeightedObservedPoint>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Gets a snapshot of the observed points. The list of stored points is copied in order to ensure that modification of the returned instance does not affect this container. Conversely, further modification of this container (through the add or clear methods) will not affect the returned list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(org.apache.commons.math3.fitting.WeightedObservedPoint observed)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+      "name": "WeightedObservedPoints",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.WeightedObservedPoints",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.fitting.WeightedObservedPoint",
+          "name": "WeightedObservedPoint",
+          "isArray": false
+        },
+        "name": "observed"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds a point to the sample.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

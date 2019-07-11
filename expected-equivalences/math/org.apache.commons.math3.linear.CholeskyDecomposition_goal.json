@@ -1,0 +1,158 @@
+[
+  {
+    "signature": "getDeterminant()",
+    "name": "getDeterminant",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.CholeskyDecomposition",
+      "name": "CholeskyDecomposition",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Return the determinant of the matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSolver()",
+    "name": "getSolver",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.CholeskyDecomposition",
+      "name": "CholeskyDecomposition",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.DecompositionSolver",
+      "name": "org.apache.commons.math3.linear.DecompositionSolver",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get a solver for finding the A &times; X = B solution in least square sense.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLT()",
+    "name": "getLT",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.CholeskyDecomposition",
+      "name": "CholeskyDecomposition",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+      "name": "org.apache.commons.math3.linear.RealMatrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the transpose of the matrix L of the decomposition. L<sup>T</sup> is an upper-triangular matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getL()",
+    "name": "getL",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.CholeskyDecomposition",
+      "name": "CholeskyDecomposition",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+      "name": "org.apache.commons.math3.linear.RealMatrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the matrix L of the decomposition. L is an lower-triangular matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.CholeskyDecomposition(org.apache.commons.math3.linear.RealMatrix matrix)",
+    "name": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.CholeskyDecomposition",
+      "name": "CholeskyDecomposition",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+          "name": "RealMatrix",
+          "isArray": false
+        },
+        "name": "matrix"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calculates the Cholesky decomposition of the given matrix.  Calling this constructor is equivalent to call #CholeskyDecomposition(RealMatrix, double, double) with the thresholds set to the default values #DEFAULT_RELATIVE_SYMMETRY_THRESHOLD and #DEFAULT_ABSOLUTE_POSITIVITY_THRESHOLD",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.CholeskyDecomposition(org.apache.commons.math3.linear.RealMatrix matrix, double relativeSymmetryThreshold, double absolutePositivityThreshold)",
+    "name": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.CholeskyDecomposition",
+      "name": "CholeskyDecomposition",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.CholeskyDecomposition",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+          "name": "RealMatrix",
+          "isArray": false
+        },
+        "name": "matrix"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "relativeSymmetryThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "absolutePositivityThreshold"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calculates the Cholesky decomposition of the given matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

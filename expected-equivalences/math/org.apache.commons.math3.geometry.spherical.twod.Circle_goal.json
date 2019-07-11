@@ -1,0 +1,643 @@
+[
+  {
+    "signature": "getXAxis()",
+    "name": "getXAxis",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "This method returns the same value as #getPointAt(double) getPointAt(0.0) but it does not do any computation and always return the same instance.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(getPointAt(0.0))"
+    }
+  },
+  {
+    "signature": "copySelf()",
+    "name": "copySelf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "project(org.apache.commons.math3.geometry.Point<org.apache.commons.math3.geometry.spherical.twod.Sphere2D> point)",
+    "name": "project",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.Point<org.apache.commons.math3.geometry.spherical.twod.Sphere2D>",
+      "name": "org.apache.commons.math3.geometry.Point<org.apache.commons.math3.geometry.spherical.twod.Sphere2D>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.Point",
+          "name": "Point",
+          "isArray": false
+        },
+        "name": "point"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPole()",
+    "name": "getPole",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "As the circle is a great circle, the pole does <em>not</em> belong to it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInsideArc(org.apache.commons.math3.geometry.spherical.twod.Circle other)",
+    "name": "getInsideArc",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.oned.Arc",
+      "name": "org.apache.commons.math3.geometry.spherical.oned.Arc",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+          "name": "Circle",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOffset(org.apache.commons.math3.geometry.Point<org.apache.commons.math3.geometry.spherical.twod.Sphere2D> point)",
+    "name": "getOffset",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.Point",
+          "name": "Point",
+          "isArray": false
+        },
+        "name": "point"
+      }
+    ],
+    "equivalence": {
+      "comment": "@see #getOffset(Vector3D)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTransform(org.apache.commons.math3.geometry.euclidean.threed.Rotation rotation)",
+    "name": "getTransform",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.partitioning.Transform<org.apache.commons.math3.geometry.spherical.twod.Sphere2D, org.apache.commons.math3.geometry.spherical.oned.Sphere1D>",
+      "name": "org.apache.commons.math3.geometry.partitioning.Transform<org.apache.commons.math3.geometry.spherical.twod.Sphere2D, org.apache.commons.math3.geometry.spherical.oned.Sphere1D>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "rotation"
+      }
+    ],
+    "equivalence": {
+      "comment": "Transform} embedding a 3D rotation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wholeSpace()",
+    "name": "wholeSpace",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.SphericalPolygonsSet",
+      "name": "org.apache.commons.math3.geometry.spherical.twod.SphericalPolygonsSet",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReverse()",
+    "name": "getReverse",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get a circle with reversed orientation with respect to the instance. A new object is built, the instance is untouched.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset(org.apache.commons.math3.geometry.euclidean.threed.Vector3D newPole)",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "newPole"
+      }
+    ],
+    "equivalence": {
+      "comment": "The circle is oriented in the trigonometric direction around pole.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPointAt(double alpha)",
+    "name": "getPointAt",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "alpha"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSubSpace(org.apache.commons.math3.geometry.Point<org.apache.commons.math3.geometry.spherical.twod.Sphere2D> point)",
+    "name": "toSubSpace",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.oned.S1Point",
+      "name": "org.apache.commons.math3.geometry.spherical.oned.S1Point",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.Point",
+          "name": "Point",
+          "isArray": false
+        },
+        "name": "point"
+      }
+    ],
+    "equivalence": {
+      "comment": "@see #getPhase(Vector3D)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wholeHyperplane()",
+    "name": "wholeHyperplane",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.SubCircle",
+      "name": "org.apache.commons.math3.geometry.spherical.twod.SubCircle",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sameOrientationAs(org.apache.commons.math3.geometry.partitioning.Hyperplane<org.apache.commons.math3.geometry.spherical.twod.Sphere2D> other)",
+    "name": "sameOrientationAs",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.partitioning.Hyperplane",
+          "name": "Hyperplane",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.spherical.twod.Circle(org.apache.commons.math3.geometry.spherical.twod.Circle circle)",
+    "name": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+          "name": "Circle",
+          "isArray": false
+        },
+        "name": "circle"
+      }
+    ],
+    "equivalence": {
+      "comment": "The created instance is completely independent from the original instance, it is a deep copy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTolerance()",
+    "name": "getTolerance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPhase(org.apache.commons.math3.geometry.euclidean.threed.Vector3D direction)",
+    "name": "getPhase",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "direction"
+      }
+    ],
+    "equivalence": {
+      "comment": "The direction may not belong to the circle as the phase is computed for the meridian plane between the circle pole and the direction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "revertSelf()",
+    "name": "revertSelf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getYAxis()",
+    "name": "getYAxis",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "This method returns the same value as #getPointAt(double) getPointAt(0.5 * FastMath.PI) but it does not do any computation and always return the same instance.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(getPointAt(0.5 * FastMath.PI))"
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.spherical.twod.Circle(org.apache.commons.math3.geometry.euclidean.threed.Vector3D pole, double tolerance)",
+    "name": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "pole"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "tolerance"
+      }
+    ],
+    "equivalence": {
+      "comment": "The circle is oriented in the trigonometric direction around pole.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.spherical.twod.Circle(org.apache.commons.math3.geometry.spherical.twod.S2Point first, org.apache.commons.math3.geometry.spherical.twod.S2Point second, double tolerance)",
+    "name": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.S2Point",
+          "name": "S2Point",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.S2Point",
+          "name": "S2Point",
+          "isArray": false
+        },
+        "name": "second"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "tolerance"
+      }
+    ],
+    "equivalence": {
+      "comment": "The circle is oriented from first to second point using the path smaller than \\( \\pi \\).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSpace(org.apache.commons.math3.geometry.Point<org.apache.commons.math3.geometry.spherical.oned.Sphere1D> point)",
+    "name": "toSpace",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.S2Point",
+      "name": "org.apache.commons.math3.geometry.spherical.twod.S2Point",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.Point",
+          "name": "Point",
+          "isArray": false
+        },
+        "name": "point"
+      }
+    ],
+    "equivalence": {
+      "comment": "@see #getPointAt(double)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOffset(org.apache.commons.math3.geometry.euclidean.threed.Vector3D direction)",
+    "name": "getOffset",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+      "name": "Circle",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.spherical.twod.Circle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "direction"
+      }
+    ],
+    "equivalence": {
+      "comment": "The offset is defined as the angular distance between the circle center and the direction minus the circle radius. It is therefore 0 on the circle, positive for directions outside of the cone delimited by the circle, and negative inside the cone.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,1416 @@
+[
+  {
+    "signature": "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.Rotation r, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(org.apache.commons.math3.geometry.euclidean.threed.RotationOrder order, T alpha1, T alpha2, T alpha3)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationOrder",
+          "name": "RotationOrder",
+          "isArray": false
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha3"
+      }
+    ],
+    "equivalence": {
+      "comment": "Cardan rotations are three successive rotations around the canonical axes X, Y and Z, each axis being used once. There are 6 such sets of rotations (XYZ, XZY, YXZ, YZX, ZXY and ZYX). Euler rotations are three successive rotations around the canonical axes X, Y and Z, the first and last rotations being around the same axis. There are 6 such sets of rotations (XYX, XZX, YXY, YZY, ZXZ and ZYZ), the most popular one being ZXZ. Beware that many people routinely use the term Euler angles even for what really are Cardan angles (this confusion is especially widespread in the aerospace business where Roll, Pitch and Yaw angles are often wrongly tagged as Euler angles).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAxis()",
+    "name": "getAxis",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(T[] in, T[] out)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r1, org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r2)",
+    "name": "distance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "r1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "r2"
+      }
+    ],
+    "equivalence": {
+      "comment": "The <i>distance</i> is intended here as a way to check if two rotations are almost similar (i.e. they transform vectors the same way) or very different. It is mathematically defined as the angle of the rotation r that prepended to one of the rotations gives the other one:  r<sub>1</sub>(r) = r<sub>2</sub>  This distance is an angle between 0 and &pi;. Its value is the smallest possible upper bound of the angle in radians between r<sub>1</sub>(v) and r<sub>2</sub>(v) for all possible vectors v. This upper bound is reached for some v. The distance is equal to 0 if and only if the two rotations are identical. Comparing two rotations should always be done using this value rather than for example comparing the components of the quaternions. It is much more stable, and has a geometric meaning. Also comparing quaternions components is error prone since for example quaternions (0.36, 0.48, -0.48, -0.64) and (-0.36, -0.48, 0.48, 0.64) represent exactly the same rotation despite their components are different (they are exact opposites).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call #compose(FieldRotation, RotationConvention) compose(r, RotationConvention.VECTOR_OPERATOR).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.compose(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+    }
+  },
+  {
+    "signature": "applyTo(org.apache.commons.math3.geometry.euclidean.threed.Rotation r)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call #compose(Rotation, RotationConvention) compose(r, RotationConvention.VECTOR_OPERATOR).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.compose(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+    }
+  },
+  {
+    "signature": "composeInverse(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "composeInverse",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "If the semantics of the rotations composition corresponds to a RotationConvention#VECTOR_OPERATOR vector operator convention, applying the inverse of the instance to a rotation is computing the composition in an order compliant with the following rule : let u be any vector and v its image by r1 (i.e. r1.applyTo(u) = v}). Let {@code w be the inverse image of v by r2 (i.e. r2.applyInverseTo(v) = w}). Then {@code w = comp.applyTo(u), where comp = r2.composeInverse(r1).   If the semantics of the rotations composition corresponds to a RotationConvention#FRAME_TRANSFORM frame transform convention, the application order will be reversed, which means it is the <em>innermost</em> rotation that will be reversed. So keeping the exact same meaning of all r1, r2, u, v, w and comp as above, comp could also be computed as comp = r1.revert().composeInverse(r2.revert(), RotationConvention.FRAME_TRANSFORM).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "composeInverse(org.apache.commons.math3.geometry.euclidean.threed.Rotation r, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "composeInverse",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "If the semantics of the rotations composition corresponds to a RotationConvention#VECTOR_OPERATOR vector operator convention, applying the inverse of the instance to a rotation is computing the composition in an order compliant with the following rule : let u be any vector and v its image by r1 (i.e. r1.applyTo(u) = v}). Let {@code w be the inverse image of v by r2 (i.e. r2.applyInverseTo(v) = w}). Then {@code w = comp.applyTo(u), where comp = r2.composeInverse(r1).   If the semantics of the rotations composition corresponds to a RotationConvention#FRAME_TRANSFORM frame transform convention, the application order will be reversed, which means it is the <em>innermost</em> rotation that will be reversed. So keeping the exact same meaning of all r1, r2, u, v, w and comp as above, comp could also be computed as comp = r1.revert().composeInverse(r2.revert(), RotationConvention.FRAME_TRANSFORM).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQ0()",
+    "name": "getQ0",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyInverseTo(double[] in, T[] out)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQ1()",
+    "name": "getQ1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(org.apache.commons.math3.geometry.euclidean.threed.Vector3D u)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(org.apache.commons.math3.geometry.euclidean.threed.RotationOrder order, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention, T alpha1, T alpha2, T alpha3)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationOrder",
+          "name": "RotationOrder",
+          "isArray": false
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha3"
+      }
+    ],
+    "equivalence": {
+      "comment": "Cardan rotations are three successive rotations around the canonical axes X, Y and Z, each axis being used once. There are 6 such sets of rotations (XYZ, XZY, YXZ, YZX, ZXY and ZYX). Euler rotations are three successive rotations around the canonical axes X, Y and Z, the first and last rotations being around the same axis. There are 6 such sets of rotations (XYX, XZX, YXY, YZY, ZXZ and ZYZ), the most popular one being ZXZ. Beware that many people routinely use the term Euler angles even for what really are Cardan angles (this confusion is especially widespread in the aerospace business where Roll, Pitch and Yaw angles are often wrongly tagged as Euler angles).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQ3()",
+    "name": "getQ3",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(T q0, T q1, T q2, T q3, boolean needsNormalization)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "q0"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "q1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "q2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "q3"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "needsNormalization"
+      }
+    ],
+    "equivalence": {
+      "comment": "A rotation can be built from a <em>normalized</em> quaternion, i.e. a quaternion for which q<sub>0</sub><sup>2</sup> + q<sub>1</sub><sup>2</sup> + q<sub>2</sub><sup>2</sup> + q<sub>3</sub><sup>2</sup> = 1. If the quaternion is not normalized, the constructor can normalize it in a preprocessing step. Note that some conventions put the scalar part of the quaternion as the 4<sup>th</sup> component and the vector part as the first three components. This is <em>not</em> our convention. We put the scalar part as the first component.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAngles(org.apache.commons.math3.geometry.euclidean.threed.RotationOrder order, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "getAngles",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationOrder",
+          "name": "RotationOrder",
+          "isArray": false
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "The equations show that each rotation can be defined by two different values of the Cardan or Euler angles set. For example if Cardan angles are used, the rotation defined by the angles a<sub>1</sub>, a<sub>2</sub> and a<sub>3</sub> is the same as the rotation defined by the angles &pi; + a<sub>1</sub>, &pi; - a<sub>2</sub> and &pi; + a<sub>3</sub>. This method implements the following arbitrary choices:  <li>for Cardan angles, the chosen set is the one for which the second angle is between -&pi;/2 and &pi;/2 (i.e its cosine is positive),</li> <li>for Euler angles, the chosen set is the one for which the second angle is between 0 and &pi; (i.e its sine is positive).</li>  Cardan and Euler angle have a very disappointing drawback: all of them have singularities. This means that if the instance is too close to the singularities corresponding to the given rotation order, it will be impossible to retrieve the angles. For Cardan angles, this is often called gimbal lock. There is <em>nothing</em> to do to prevent this, it is an intrinsic problem with Cardan and Euler representation (but not a problem with the rotation itself, which is perfectly well defined). For Cardan angles, singularities occur when the second angle is close to -&pi;/2 or +&pi;/2, for Euler angle singularities occur when the second angle is close to 0 or &pi;, this implies that the identity rotation is always singular for Euler angles!",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(T[][] m, double threshold)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[][]",
+          "isArray": true
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "threshold"
+      }
+    ],
+    "equivalence": {
+      "comment": "Rotation matrices are orthogonal matrices, i.e. unit matrices (which are matrices for which m.m<sup>T</sup> = I) with real coefficients. The module of the determinant of unit matrices is 1, among the orthogonal 3X3 matrices, only the ones having a positive determinant (+1) are rotation matrices. <p>When a rotation is defined by a matrix with truncated values (typically when it is extracted from a technical sheet where only four to five significant digits are available), the matrix is not orthogonal anymore. This constructor handles this case transparently by using a copy of the given matrix and applying a correction to the copy in order to perfect its orthogonality. If the Frobenius norm of the correction needed is above the given threshold, then the matrix is considered to be too far from a true rotation matrix and an exception is thrown.<p>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAxis(org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "getAxis",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "Note that as #getAngle() always returns an angle between 0 and &pi;, changing the convention changes the direction of the axis, not the sign of the angle.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyInverseTo(T[] in, T[] out)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toRotation()",
+    "name": "toRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> axis, T angle, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "axis"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "angle"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "We use the convention that angles are oriented according to the effect of the rotation on vectors around the axis. That means that if (i, j, k) is a direct frame and if we first provide +k as the axis and &pi;/2 as the angle to this constructor, and then #applyTo(FieldVector3D) apply the instance to +i, we will get +j. Another way to represent our convention is to say that a rotation of angle &theta; about the unit vector (x, y, z) is the same as the rotation build from quaternion components { cos(-&theta;/2), x * sin(-&theta;/2), y * sin(-&theta;/2), z * sin(-&theta;/2) }. Note the minus sign on the angle! On the one hand this convention is consistent with a vectorial perspective (moving vectors in fixed frames), on the other hand it is different from conventions with a frame perspective (fixed vectors viewed from different frames) like the ones used for example in spacecraft attitude community or in the graphics community.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Except for possible scale factors, if the instance were applied to the pair (u<sub>1</sub>, u<sub>2</sub>) it will produce the pair (v<sub>1</sub>, v<sub>2</sub>). If the angular separation between u<sub>1</sub> and u<sub>2</sub> is not the same as the angular separation between v<sub>1</sub> and v<sub>2</sub>, then a corrected v'<sub>2</sub> will be used rather than v<sub>2</sub>, the corrected vector will be in the (&pm;v<sub>1</sub>, +v<sub>2</sub>) half-plane.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Except for a possible scale factor, if the instance were applied to the vector u it will produce the vector v. There is an infinite number of such rotations, this constructor choose the one with the smallest associated angle (i.e. the one whose axis is orthogonal to the (u, v) plane). If u and v are collinear, an arbitrary rotation axis is chosen.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMatrix()",
+    "name": "getMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[][]",
+      "name": "T[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.Rotation rOuter, org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> rInner)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "rOuter"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "rInner"
+      }
+    ],
+    "equivalence": {
+      "comment": "Applying the inverse of a rotation to another rotation is computing the composition in an order compliant with the following rule : let u be any vector and v its image by rInner (i.e. rInner.applyTo(u) = v), let w be the inverse image of v by rOuter (i.e. rOuter.applyInverseTo(v) = w), then w = comp.applyTo(u), where comp = applyInverseTo(rOuter, rInner).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(org.apache.commons.math3.geometry.euclidean.threed.Rotation r, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.Vector3D u)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQ2()",
+    "name": "getQ2",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAngles(org.apache.commons.math3.geometry.euclidean.threed.RotationOrder order)",
+    "name": "getAngles",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationOrder",
+          "name": "RotationOrder",
+          "isArray": false
+        },
+        "name": "order"
+      }
+    ],
+    "equivalence": {
+      "comment": "The equations show that each rotation can be defined by two different values of the Cardan or Euler angles set. For example if Cardan angles are used, the rotation defined by the angles a<sub>1</sub>, a<sub>2</sub> and a<sub>3</sub> is the same as the rotation defined by the angles &pi; + a<sub>1</sub>, &pi; - a<sub>2</sub> and &pi; + a<sub>3</sub>. This method implements the following arbitrary choices:  <li>for Cardan angles, the chosen set is the one for which the second angle is between -&pi;/2 and &pi;/2 (i.e its cosine is positive),</li> <li>for Euler angles, the chosen set is the one for which the second angle is between 0 and &pi; (i.e its sine is positive).</li>  Cardan and Euler angle have a very disappointing drawback: all of them have singularities. This means that if the instance is too close to the singularities corresponding to the given rotation order, it will be impossible to retrieve the angles. For Cardan angles, this is often called gimbal lock. There is <em>nothing</em> to do to prevent this, it is an intrinsic problem with Cardan and Euler representation (but not a problem with the rotation itself, which is perfectly well defined). For Cardan angles, singularities occur when the second angle is close to -&pi;/2 or +&pi;/2, for Euler angle singularities occur when the second angle is close to 0 or &pi;, this implies that the identity rotation is always singular for Euler angles!",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(double[] in, T[] out)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyTo(org.apache.commons.math3.geometry.euclidean.threed.Rotation r1, org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> rInner)",
+    "name": "applyTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "rInner"
+      }
+    ],
+    "equivalence": {
+      "comment": "Applying a rotation to another rotation is computing the composition in an order compliant with the following rule : let u be any vector and v its image by rInner (i.e. rInner.applyTo(u) = v), let w be the image of v by rOuter (i.e. rOuter.applyTo(v) = w), then w = comp.applyTo(u), where comp = applyTo(rOuter, rInner).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "revert()",
+    "name": "revert",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Build a rotation which reverse the effect of another rotation. This means that if r(u) = v, then r.revert(v) = u. The instance is not changed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compose(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "compose",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "If the semantics of the rotations composition corresponds to a RotationConvention#VECTOR_OPERATOR vector operator convention, applying the instance to a rotation is computing the composition in an order compliant with the following rule : let u be any vector and v its image by r1 (i.e. r1.applyTo(u) = v}). Let {@code w be the image of v by rotation r2 (i.e. r2.applyTo(v) = w}). Then {@code w = comp.applyTo(u), where comp = r2.compose(r1, RotationConvention.VECTOR_OPERATOR).   If the semantics of the rotations composition corresponds to a RotationConvention#FRAME_TRANSFORM frame transform convention, the application order will be reversed. So keeping the exact same meaning of all r1, r2, u, v, w and comp as above, comp could also be computed as comp = r1.compose(r2, RotationConvention.FRAME_TRANSFORM).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compose(org.apache.commons.math3.geometry.euclidean.threed.Rotation r, org.apache.commons.math3.geometry.euclidean.threed.RotationConvention convention)",
+    "name": "compose",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.RotationConvention",
+          "name": "RotationConvention",
+          "isArray": false
+        },
+        "name": "convention"
+      }
+    ],
+    "equivalence": {
+      "comment": "If the semantics of the rotations composition corresponds to a RotationConvention#VECTOR_OPERATOR vector operator convention, applying the instance to a rotation is computing the composition in an order compliant with the following rule : let u be any vector and v its image by r1 (i.e. r1.applyTo(u) = v}). Let {@code w be the image of v by rotation r2 (i.e. r2.applyTo(v) = w}). Then {@code w = comp.applyTo(u), where comp = r2.compose(r1, RotationConvention.VECTOR_OPERATOR).   If the semantics of the rotations composition corresponds to a RotationConvention#FRAME_TRANSFORM frame transform convention, the application order will be reversed. So keeping the exact same meaning of all r1, r2, u, v, w and comp as above, comp could also be computed as comp = r1.compose(r2, RotationConvention.FRAME_TRANSFORM).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAngle()",
+    "name": "getAngle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+          "name": "FieldRotation",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call #composeInverse(FieldRotation, RotationConvention) composeInverse(r, RotationConvention.VECTOR_OPERATOR).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.composeInverse(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+    }
+  },
+  {
+    "signature": "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.Rotation r)",
+    "name": "applyInverseTo",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
+          "name": "Rotation",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call #composeInverse(Rotation, RotationConvention) composeInverse(r, RotationConvention.VECTOR_OPERATOR).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.composeInverse(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> axis, T angle)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+      "name": "FieldRotation",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "axis"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "angle"
+      }
+    ],
+    "equivalence": {
+      "comment": "We use the convention that angles are oriented according to the effect of the rotation on vectors around the axis. That means that if (i, j, k) is a direct frame and if we first provide +k as the axis and &pi;/2 as the angle to this constructor, and then #applyTo(FieldVector3D) apply the instance to +i, we will get +j. Another way to represent our convention is to say that a rotation of angle &theta; about the unit vector (x, y, z) is the same as the rotation build from quaternion components { cos(-&theta;/2), x * sin(-&theta;/2), y * sin(-&theta;/2), z * sin(-&theta;/2) }. Note the minus sign on the angle! On the one hand this convention is consistent with a vectorial perspective (moving vectors in fixed frames), on the other hand it is different from conventions with a frame perspective (fixed vectors viewed from different frames) like the ones used for example in spacecraft attitude community or in the graphics community.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,1173 @@
+[
+  {
+    "signature": "createMatrix(int rowDimension, int columnDimension)",
+    "name": "createMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.FieldMatrix<T>",
+      "name": "org.apache.commons.math3.linear.FieldMatrix<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowDimension"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnDimension"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(org.apache.commons.math3.Field<T> field, T[][] d, boolean copyArray)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.Field",
+          "name": "Field",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[][]",
+          "isArray": true
+        },
+        "name": "d"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "copyArray"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new FieldMatrix<T> using the input array as the underlying data array. If an array is built specially in order to be embedded in a FieldMatrix<T> and not used directly, the copyArray may be set to false. This will prevent the copying and improve performance as no new array will be built and no data will be copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEntry(int row, int column)",
+    "name": "getEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEntry(int row, int column, T value)",
+    "name": "setEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.FieldElement",
+          "name": "FieldElement",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(T[][] d, boolean copyArray)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[][]",
+          "isArray": true
+        },
+        "name": "d"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "copyArray"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new FieldMatrix<T> using the input array as the underlying data array. If an array is built specially in order to be embedded in a FieldMatrix<T> and not used directly, the copyArray may be set to false. This will prevent the copying and improve performance as no new array will be built and no data will be copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.FieldMatrixChangingVisitor<T> visitor)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixChangingVisitor",
+          "name": "FieldMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.FieldMatrixPreservingVisitor<T> visitor)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixPreservingVisitor",
+          "name": "FieldMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(T[][] d)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[][]",
+          "isArray": true
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new FieldMatrix<T> using the input array as the underlying data array. The input array is copied, not referenced. This constructor has the same effect as calling #Array2DRowFieldMatrix(FieldElement[][], boolean) with the second argument set to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getData()",
+    "name": "getData",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[][]",
+      "name": "T[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(org.apache.commons.math3.Field<T> field, T[][] d)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.Field",
+          "name": "Field",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[][]",
+          "isArray": true
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new FieldMatrix<T> using the input array as the underlying data array. The input array is copied, not referenced. This constructor has the same effect as calling #Array2DRowFieldMatrix(FieldElement[][], boolean) with the second argument set to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDataRef()",
+    "name": "getDataRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[][]",
+      "name": "T[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get a reference to the underlying data array. This methods returns internal data, not fresh copy of it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getColumnDimension()",
+    "name": "getColumnDimension",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addToEntry(int row, int column, T increment)",
+    "name": "addToEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.FieldElement",
+          "name": "FieldElement",
+          "isArray": false
+        },
+        "name": "increment"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.FieldMatrixChangingVisitor<T> visitor)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixChangingVisitor",
+          "name": "FieldMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.FieldMatrixPreservingVisitor<T> visitor)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixPreservingVisitor",
+          "name": "FieldMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(org.apache.commons.math3.linear.Array2DRowFieldMatrix<T> m)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix<T>",
+      "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+          "name": "Array2DRowFieldMatrix",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "comment": "Add m to this matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "preMultiply(T[] v)",
+    "name": "preMultiply",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "multiply(org.apache.commons.math3.linear.Array2DRowFieldMatrix<T> m)",
+    "name": "multiply",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix<T>",
+      "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+          "name": "Array2DRowFieldMatrix",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "comment": "Postmultiplying this matrix by m.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "multiplyEntry(int row, int column, T factor)",
+    "name": "multiplyEntry",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.FieldElement",
+          "name": "FieldElement",
+          "isArray": false
+        },
+        "name": "factor"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSubMatrix(T[][] subMatrix, int row, int column)",
+    "name": "setSubMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[][]",
+          "isArray": true
+        },
+        "name": "subMatrix"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "row"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "column"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "operate(T[] v)",
+    "name": "operate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(org.apache.commons.math3.Field<T> field, T[] v)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.Field",
+          "name": "Field",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new (column) FieldMatrix<T> using v as the data for the unique column of the created matrix. The input array is copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRowDimension()",
+    "name": "getRowDimension",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.FieldMatrixChangingVisitor<T> visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixChangingVisitor",
+          "name": "FieldMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInRowOrder(org.apache.commons.math3.linear.FieldMatrixPreservingVisitor<T> visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInRowOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixPreservingVisitor",
+          "name": "FieldMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(org.apache.commons.math3.Field<T> field, int rowDimension, int columnDimension)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.Field",
+          "name": "Field",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowDimension"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnDimension"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new FieldMatrix<T> with the supplied row and column dimensions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(T[] v)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.FieldElement;",
+          "name": "FieldElement[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a new (column) FieldMatrix<T> using v as the data for the unique column of the created matrix. The input array is copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.FieldMatrixChangingVisitor<T> visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixChangingVisitor",
+          "name": "FieldMatrixChangingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "walkInColumnOrder(org.apache.commons.math3.linear.FieldMatrixPreservingVisitor<T> visitor, int startRow, int endRow, int startColumn, int endColumn)",
+    "name": "walkInColumnOrder",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.FieldMatrixPreservingVisitor",
+          "name": "FieldMatrixPreservingVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endRow"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startColumn"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endColumn"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.linear.Array2DRowFieldMatrix(org.apache.commons.math3.Field<T> field)",
+    "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.Field",
+          "name": "Field",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a matrix with no data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(org.apache.commons.math3.linear.Array2DRowFieldMatrix<T> m)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix<T>",
+      "name": "org.apache.commons.math3.linear.Array2DRowFieldMatrix<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+          "name": "Array2DRowFieldMatrix",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "comment": "Subtract m from this matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+      "name": "Array2DRowFieldMatrix",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.FieldMatrix<T>",
+      "name": "org.apache.commons.math3.linear.FieldMatrix<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

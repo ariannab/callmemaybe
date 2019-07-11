@@ -1,0 +1,429 @@
+[
+  {
+    "signature": "evaluate(org.apache.commons.math3.analysis.MultivariateFunction evaluationFunction, java.util.Comparator<org.apache.commons.math3.optimization.PointValuePair> comparator)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.analysis.MultivariateFunction",
+          "name": "MultivariateFunction",
+          "isArray": false
+        },
+        "name": "evaluationFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Evaluate all the non-evaluated points of the simplex.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.optimization.direct.AbstractSimplex(double[] steps)",
+    "name": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "steps"
+      }
+    ],
+    "equivalence": {
+      "comment": "The start configuration for simplex is built from a box parallel to the canonical axes of the space. The simplex is the subset of vertices of a box parallel to the canonical axes. It is built as the path followed while traveling from one vertex of the box to the diagonally opposite vertex moving only along the box edges. The first vertex of the box will be located at the start point of the optimization. As an example, in dimension 3 a simplex has 4 vertices. Setting the steps to (1, 10, 2) and the start point to (1, 1, 1) would imply the start simplex would be: { (1, 1, 1), (2, 1, 1), (2, 11, 1), (2, 11, 3) }. The first vertex would be set to the start point at (1, 1, 1) and the last vertex would be set to the diagonally opposite vertex at (2, 11, 3).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSize()",
+    "name": "getSize",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get simplex size. After calling the #build(double[]) build method, this method will will be equivalent to getDimension() + 1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.optimization.direct.AbstractSimplex(double[][] referenceSimplex)",
+    "name": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "referenceSimplex"
+      }
+    ],
+    "equivalence": {
+      "comment": "The real initial simplex will be set up by moving the reference simplex such that its first point is located at the start point of the optimization.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDimension()",
+    "name": "getDimension",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get simplex dimension.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPoints()",
+    "name": "getPoints",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.optimization.PointValuePair[]",
+      "name": "org.apache.commons.math3.optimization.PointValuePair[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get the points of the simplex.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPoint(int index)",
+    "name": "getPoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.optimization.PointValuePair",
+      "name": "org.apache.commons.math3.optimization.PointValuePair",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Get the simplex point stored at the requested index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.optimization.direct.AbstractSimplex(int n, double sideLength)",
+    "name": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "sideLength"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a hypercube simplex with the given side length.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "build(double[] startPoint)",
+    "name": "build",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "startPoint"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build an initial simplex.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPoint(int index, org.apache.commons.math3.optimization.PointValuePair point)",
+    "name": "setPoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.optimization.PointValuePair",
+          "name": "PointValuePair",
+          "isArray": false
+        },
+        "name": "point"
+      }
+    ],
+    "equivalence": {
+      "comment": "Store a new point at location index. Note that no deep-copy of point is performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.optimization.direct.AbstractSimplex(int n)",
+    "name": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a unit hypercube simplex.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterate(org.apache.commons.math3.analysis.MultivariateFunction evaluationFunction, java.util.Comparator<org.apache.commons.math3.optimization.PointValuePair> comparator)",
+    "name": "iterate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.analysis.MultivariateFunction",
+          "name": "MultivariateFunction",
+          "isArray": false
+        },
+        "name": "evaluationFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Compute the next simplex of the algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceWorstPoint(org.apache.commons.math3.optimization.PointValuePair pointValuePair, java.util.Comparator<org.apache.commons.math3.optimization.PointValuePair> comparator)",
+    "name": "replaceWorstPoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.optimization.PointValuePair",
+          "name": "PointValuePair",
+          "isArray": false
+        },
+        "name": "pointValuePair"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Replace the worst point of the simplex by a new point.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPoints(org.apache.commons.math3.optimization.PointValuePair[] points)",
+    "name": "setPoints",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+      "name": "AbstractSimplex",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.direct.AbstractSimplex",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.optimization.PointValuePair;",
+          "name": "PointValuePair[]",
+          "isArray": true
+        },
+        "name": "points"
+      }
+    ],
+    "equivalence": {
+      "comment": "Replace all points. Note that no deep-copy of points is performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

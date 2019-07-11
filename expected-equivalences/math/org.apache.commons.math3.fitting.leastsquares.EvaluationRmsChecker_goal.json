@@ -1,0 +1,109 @@
+[
+  {
+    "signature": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker(double tol)",
+    "name": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+      "name": "EvaluationRmsChecker",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "tol"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a convergence checker for the RMS with the same relative and absolute tolerance. Convenience constructor for when the relative and absolute tolerances are the same. Same as new EvaluationRmsChecker(tol, tol).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "converged(int iteration, org.apache.commons.math3.fitting.leastsquares.LeastSquaresProblem$Evaluation previous, org.apache.commons.math3.fitting.leastsquares.LeastSquaresProblem$Evaluation current)",
+    "name": "converged",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+      "name": "EvaluationRmsChecker",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iteration"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.fitting.leastsquares.LeastSquaresProblem$Evaluation",
+          "name": "Evaluation",
+          "isArray": false
+        },
+        "name": "previous"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.fitting.leastsquares.LeastSquaresProblem$Evaluation",
+          "name": "Evaluation",
+          "isArray": false
+        },
+        "name": "current"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker(double relTol, double absTol)",
+    "name": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+      "name": "EvaluationRmsChecker",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "relTol"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "absTol"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a convergence checker for the RMS with a relative and absolute tolerance. The optimization has converged when the RMS of consecutive evaluations are equal to within the given relative tolerance or absolute tolerance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

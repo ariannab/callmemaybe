@@ -1,0 +1,229 @@
+[
+  {
+    "signature": "append(org.apache.commons.math3.stat.correlation.StorelessCovariance sc)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+          "name": "StorelessCovariance",
+          "isArray": false
+        },
+        "name": "sc"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends sc to this, effectively aggregating the computations in sc with this. After invoking this method, covariances returned should be close to what would have been obtained by performing all of the #increment(double[]) operations in sc directly on this.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "increment(double[] data)",
+    "name": "increment",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "comment": "Increment the covariance matrix with one row of data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getData()",
+    "name": "getData",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Return the covariance matrix as two-dimensional array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.stat.correlation.StorelessCovariance(int dim)",
+    "name": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dim"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a bias corrected covariance matrix with a given dimension.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCovariance(int xIndex, int yIndex)",
+    "name": "getCovariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "xIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "yIndex"
+      }
+    ],
+    "equivalence": {
+      "comment": "Get the covariance for an individual element of the covariance matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getN()",
+    "name": "getN",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "This Covariance method is not supported by a StorelessCovariance, since the number of bivariate observations does not have to be the same for different pairs of covariates - i.e., N as defined in Covariance#getN() is undefined.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCovarianceMatrix()",
+    "name": "getCovarianceMatrix",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.linear.RealMatrix",
+      "name": "org.apache.commons.math3.linear.RealMatrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.stat.correlation.StorelessCovariance(int dim, boolean biasCorrected)",
+    "name": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+      "name": "StorelessCovariance",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.stat.correlation.StorelessCovariance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dim"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "biasCorrected"
+      }
+    ],
+    "equivalence": {
+      "comment": "Create a covariance matrix with a given number of rows and columns and the indicated bias correction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

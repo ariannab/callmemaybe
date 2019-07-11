@@ -1,0 +1,301 @@
+[
+  {
+    "signature": "getObservations()",
+    "name": "getObservations",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.WeightedObservedPoint[]",
+      "name": "org.apache.commons.math3.optimization.fitting.WeightedObservedPoint[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addObservedPoint(double x, double y)",
+    "name": "addObservedPoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call addObservedPoint(1.0, x, y).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addObservedPoint(double weight, double x, double y)",
+    "name": "addObservedPoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clearObservations()",
+    "name": "clearObservations",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Remove all observations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fit(T f, double[] initialGuess)",
+    "name": "fit",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.analysis.ParametricUnivariateFunction",
+          "name": "ParametricUnivariateFunction",
+          "isArray": false
+        },
+        "name": "f"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "initialGuess"
+      }
+    ],
+    "equivalence": {
+      "comment": "Fit a curve. This method compute the coefficients of the curve that best fit the sample of observed points previously given through calls to the #addObservedPoint(WeightedObservedPoint) addObservedPoint method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fit(int maxEval, T f, double[] initialGuess)",
+    "name": "fit",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxEval"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.analysis.ParametricUnivariateFunction",
+          "name": "ParametricUnivariateFunction",
+          "isArray": false
+        },
+        "name": "f"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "initialGuess"
+      }
+    ],
+    "equivalence": {
+      "comment": "Fit a curve. This method compute the coefficients of the curve that best fit the sample of observed points previously given through calls to the #addObservedPoint(WeightedObservedPoint) addObservedPoint method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.optimization.fitting.CurveFitter(org.apache.commons.math3.optimization.DifferentiableMultivariateVectorOptimizer optimizer)",
+    "name": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.optimization.DifferentiableMultivariateVectorOptimizer",
+          "name": "DifferentiableMultivariateVectorOptimizer",
+          "isArray": false
+        },
+        "name": "optimizer"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.optimization.fitting.CurveFitter(org.apache.commons.math3.optimization.MultivariateDifferentiableVectorOptimizer optimizer)",
+    "name": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.optimization.MultivariateDifferentiableVectorOptimizer",
+          "name": "MultivariateDifferentiableVectorOptimizer",
+          "isArray": false
+        },
+        "name": "optimizer"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addObservedPoint(org.apache.commons.math3.optimization.fitting.WeightedObservedPoint observed)",
+    "name": "addObservedPoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+      "name": "CurveFitter",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.optimization.fitting.CurveFitter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.optimization.fitting.WeightedObservedPoint",
+          "name": "WeightedObservedPoint",
+          "isArray": false
+        },
+        "name": "observed"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

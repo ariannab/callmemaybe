@@ -1,0 +1,2947 @@
+[
+  {
+    "signature": "angle(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "angle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "This method computes the angular separation between two vectors using the dot product for well separated vectors and the cross product for almost aligned vectors. This allows to have a good accuracy in all cases, even for vectors very close to each other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance1(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "distance1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNorm1()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance1(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "distance1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNorm1()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "scalarMultiply(T a)",
+    "name": "scalarMultiply",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "scalarMultiply(double a)",
+    "name": "scalarMultiply",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getX()",
+    "name": "getX",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isNaN()",
+    "name": "isNaN",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if any coordinate of this vector is NaN; false otherwise",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, T a2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2, T a3, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u3)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u3"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from three other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2 + a3 * u3",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u1, T a2, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u2, T a3, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u3)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u3"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from three other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2 + a3 * u3",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(double a1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, double a2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2, double a3, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u3)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u3"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from three other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2 + a3 * u3",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get a hashCode for the 3D vector.  All NaN values have the same hash code.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isInfinite()",
+    "name": "isInfinite",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if any coordinate of this vector is infinite and none are NaN; false otherwise",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normalize()",
+    "name": "normalize",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "distance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNorm()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "distance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNorm()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "angle(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "angle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "This method computes the angular separation between two vectors using the dot product for well separated vectors and the cross product for almost aligned vectors. This allows to have a good accuracy in all cases, even for vectors very close to each other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(T factor, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(T factor, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(double factor, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(double factor, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNorm()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "distance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNorm()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNorm())"
+    }
+  },
+  {
+    "signature": "distance(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distance",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNorm()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNorm())"
+    }
+  },
+  {
+    "signature": "getNormSq()",
+    "name": "getNormSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T alpha, T delta)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "alpha"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "delta"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from its azimuthal coordinates",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDelta()",
+    "name": "getDelta",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dotProduct(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "dotProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dotProduct(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "dotProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dotProduct(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "dotProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toVector3D()",
+    "name": "toVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(T factor, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(T factor, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(double factor, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(double factor, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "factor"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, T a2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from two other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u1, T a2, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u2)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from two other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(double a1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, double a2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from two other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "negate()",
+    "name": "negate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAlpha()",
+    "name": "getAlpha",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossProduct(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "crossProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossProduct(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "crossProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, T a2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2, T a3, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u3, T a4, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u4)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a4"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u4"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from four other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2 + a3 * u3 + a4 * u4",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u1, T a2, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u2, T a3, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u3, T a4, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u4)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a4"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u4"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from four other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2 + a3 * u3 + a4 * u4",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(double a1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u1, double a2, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u2, double a3, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u3, double a4, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u4)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a2"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a3"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u3"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a4"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u4"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from four other ones and corresponding scale factors. The vector built will be a1 * u1 + a2 * u2 + a3 * u3 + a4 * u4",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from another one and a scale factor. The vector built will be a * u",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T a, org.apache.commons.math3.geometry.euclidean.threed.Vector3D u)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from another one and a scale factor. The vector built will be a * u",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(double a, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> u)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "u"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from another one and a scale factor. The vector built will be a * u",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "angle(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "angle",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "This method computes the angular separation between two vectors using the dot product for well separated vectors and the cross product for almost aligned vectors. This allows to have a good accuracy in all cases, even for vectors very close to each other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distanceInf(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distanceInf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNormInf()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormInf())"
+    }
+  },
+  {
+    "signature": "distanceInf(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "distanceInf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNormInf()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormInf())"
+    }
+  },
+  {
+    "signature": "distanceInf(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distanceInf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNormInf()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormInf())"
+    }
+  },
+  {
+    "signature": "distanceInf(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "distanceInf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNormInf()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormInf())"
+    }
+  },
+  {
+    "signature": "distanceInf(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "distanceInf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNormInf()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormInf())"
+    }
+  },
+  {
+    "signature": "toString(java.text.NumberFormat format)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.text.NumberFormat",
+          "name": "NumberFormat",
+          "isArray": false
+        },
+        "name": "format"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orthogonal()",
+    "name": "orthogonal",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "There are an infinite number of normalized vectors orthogonal to the instance. This method picks up one of them almost arbitrarily. It is useful when one needs to compute a reference frame with one of the axes in a predefined direction. The following example shows how to build a frame having the k axis aligned with the known vector u : <pre><code> Vector3D k = u.normalize(); Vector3D i = k.orthogonal(); Vector3D j = Vector3D.crossProduct(k, i); </code></pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZ()",
+    "name": "getZ",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T[] v)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lorg.apache.commons.math3.RealFieldElement;",
+          "name": "RealFieldElement[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from its coordinates",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNorm1()",
+    "name": "getNorm1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distance1(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distance1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNorm1()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNorm1())"
+    }
+  },
+  {
+    "signature": "distance1(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "distance1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNorm1()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNorm1())"
+    }
+  },
+  {
+    "signature": "distance1(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distance1",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNorm1()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNorm1())"
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object other)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Test for the equality of two 3D vectors.  If all coordinates of two 3D vectors are exactly the same, and none of their RealFieldElement#getReal() real part are <code>NaN</code>, the two 3D vectors are considered to be equal.   <code>NaN</code> coordinates are considered to affect globally the vector and be equals to each other - i.e, if either (or all) real part of the coordinates of the 3D vector are <code>NaN</code>, the 3D vector is <code>NaN</code>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D(T x, T y, T z)",
+    "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.RealFieldElement",
+          "name": "RealFieldElement",
+          "isArray": false
+        },
+        "name": "z"
+      }
+    ],
+    "equivalence": {
+      "comment": "Build a vector from its coordinates",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNorm()",
+    "name": "getNorm",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dotProduct(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "dotProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "The implementation uses specific multiplication and addition algorithms to preserve accuracy and reduce cancellation effects. It should be very accurate even for nearly orthogonal vectors.  @see MathArrays#linearCombination(double, double, double, double, double, double)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dotProduct(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "dotProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "The implementation uses specific multiplication and addition algorithms to preserve accuracy and reduce cancellation effects. It should be very accurate even for nearly orthogonal vectors.  @see MathArrays#linearCombination(double, double, double, double, double, double)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distanceSq(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distanceSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNormSq()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormSq())"
+    }
+  },
+  {
+    "signature": "distanceSq(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "distanceSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNormSq()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormSq())"
+    }
+  },
+  {
+    "signature": "distanceSq(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "distanceSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>v1.subtract(v2).getNormSq()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormSq())"
+    }
+  },
+  {
+    "signature": "crossProduct(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "crossProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossProduct(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v1, org.apache.commons.math3.geometry.euclidean.threed.Vector3D v2)",
+    "name": "crossProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossProduct(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v1, org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v2)",
+    "name": "crossProduct",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getY()",
+    "name": "getY",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "name": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNormInf()",
+    "name": "getNormInf",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distanceSq(org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D<T> v)",
+    "name": "distanceSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+          "name": "FieldVector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNormSq()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormSq())"
+    }
+  },
+  {
+    "signature": "distanceSq(org.apache.commons.math3.geometry.euclidean.threed.Vector3D v)",
+    "name": "distanceSq",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+      "name": "FieldVector3D",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
+          "name": "Vector3D",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to calling: <code>q.subtract(p).getNormSq()</code> except that no intermediate vector is built",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0].subtract(args[1]).getNormSq())"
+    }
+  }
+]

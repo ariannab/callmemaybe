@@ -1,0 +1,142 @@
+[
+  {
+    "signature": "addSamplePoint(double x, double[]... value)",
+    "name": "addSamplePoint",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+      "name": "HermiteInterpolator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "This method must be called once for each sample point. It is allowed to mix some calls with values only with calls with values and first derivatives.   The point abscissae for all calls <em>must</em> be different.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPolynomials()",
+    "name": "getPolynomials",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+      "name": "HermiteInterpolator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.analysis.polynomials.PolynomialFunction[]",
+      "name": "org.apache.commons.math3.analysis.polynomials.PolynomialFunction[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "value(double x)",
+    "name": "value",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+      "name": "HermiteInterpolator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call the PolynomialFunction#value(double) value methods of all polynomials returned by #getPolynomials() getPolynomials, except it does not build the intermediate polynomials, so this method is faster and numerically more stable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "value(org.apache.commons.math3.analysis.differentiation.DerivativeStructure x)",
+    "name": "value",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+      "name": "HermiteInterpolator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.math3.analysis.differentiation.DerivativeStructure[]",
+      "name": "org.apache.commons.math3.analysis.differentiation.DerivativeStructure[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.math3.analysis.differentiation.DerivativeStructure",
+          "name": "DerivativeStructure",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "equivalence": {
+      "comment": "Calling this method is equivalent to call the PolynomialFunction#value(DerivativeStructure) value methods of all polynomials returned by #getPolynomials() getPolynomials, except it does not build the intermediate polynomials, so this method is faster and numerically more stable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator()",
+    "name": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+      "name": "HermiteInterpolator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]
