@@ -19,7 +19,7 @@ EqSpecification extends Specification {
  */
 public class EquivalentMatch {
 
-  private ArrayList<String> methodSignatures;
+  private Map<String, String> methodSignatures;
   private CodeSnippet codeSnippet;
   private ArrayList<String> simpleName;
   private boolean equivalence;
@@ -50,7 +50,7 @@ public class EquivalentMatch {
   //  }
 
   EquivalentMatch(
-      ArrayList<String> methodSignatures,
+      Map<String, String> methodSignatures,
       boolean equivalence,
       boolean similarity,
       Map<String, List<String>> arguments,
@@ -81,7 +81,7 @@ public class EquivalentMatch {
 
   private void extractSimpleNames() {
     this.simpleName = new ArrayList<>();
-    for (String methodSignature : this.methodSignatures) {
+    for (String methodSignature : this.methodSignatures.keySet()) {
       //      Matcher classSignature = Pattern.compile("[A-Z].*[.#](.*)").matcher(methodSignature);
       ////      if (classSignature.find()) {
       ////          methodSignature = classSignature.group(1);
@@ -103,7 +103,7 @@ public class EquivalentMatch {
     }
   }
 
-  public ArrayList<String> getMethodSignatures() {
+  public Map<String, String> getMethodSignatures() {
     return methodSignatures;
   }
 
@@ -131,9 +131,9 @@ public class EquivalentMatch {
     return this.oracle;
   }
 
-  private Map<String, Map<Integer, String>> areArgsHardcoded(ArrayList<String> methodSignatures) {
+  private Map<String, Map<Integer, String>> areArgsHardcoded(Map<String, String> methodSignatures) {
     Map<String, Map<Integer, String>> map = new HashMap<>();
-    for (String signature : methodSignatures) {
+    for (String signature : methodSignatures.keySet()) {
       Map<Integer, String> constArgs = new HashMap<>();
       List<String> patterns = new ArrayList<>();
       patterns.add("[0-9]+(\\.[0-9]+)?");
@@ -146,7 +146,7 @@ public class EquivalentMatch {
             String arg = arguments.get(i);
             java.util.regex.Matcher matchConstant =
                 Pattern.compile(pattern, Pattern.CASE_INSENSITIVE).matcher(arg);
-            if (matchConstant.find()) {
+            if (matchConstant.matches()) {
               constArgs.put(i, matchConstant.group(0));
             }
           }
@@ -157,9 +157,10 @@ public class EquivalentMatch {
     return map;
   }
 
-  private Map<String, Map<Integer, String>> areArgsStaticFinal(ArrayList<String> methodSignatures) {
+  private Map<String, Map<Integer, String>> areArgsStaticFinal(
+      Map<String, String> methodSignatures) {
     Map<String, Map<Integer, String>> map = new HashMap<>();
-    for (String signature : methodSignatures) {
+    for (String signature : methodSignatures.keySet()) {
       Map<Integer, String> sfArgs = new HashMap<>();
       String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z_]+|#[A-Z_]+)+";
       List<String> signatureArgs = this.arguments.get(signature);
@@ -178,9 +179,9 @@ public class EquivalentMatch {
     return map;
   }
 
-  private Map<String, Map<Integer, String>> areArgsTypes(ArrayList<String> methodSignatures) {
+  private Map<String, Map<Integer, String>> areArgsTypes(Map<String, String> methodSignatures) {
     Map<String, Map<Integer, String>> map = new HashMap<>();
-    for (String signature : methodSignatures) {
+    for (String signature : methodSignatures.keySet()) {
       Map<Integer, String> tArgs = new HashMap<>();
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
@@ -198,11 +199,6 @@ public class EquivalentMatch {
       map.put(signature, tArgs);
     }
     return map;
-  }
-
-  public void addSignature(String signature) {
-    this.methodSignatures.add(signature);
-    extractSimpleNames();
   }
 
   public Map<String, Map<Integer, String>> getHardcodedParams() {

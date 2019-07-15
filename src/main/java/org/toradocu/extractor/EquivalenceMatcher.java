@@ -3,6 +3,7 @@ package org.toradocu.extractor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -50,7 +51,7 @@ public class EquivalenceMatcher {
         return methodMatch;
       }
     }
-    return new EquivalentMatch(new ArrayList<>(), false, false, new HashMap<>(), false);
+    return new EquivalentMatch(new HashMap<>(), false, false, new HashMap<>(), false);
   }
 
   /**
@@ -84,14 +85,16 @@ public class EquivalenceMatcher {
   private static EquivalentMatch buildMatchWithSignatures(
       String comment, String word, Matcher keywordMatcher, boolean equivalence) {
     boolean negation = false;
-    String methodRegex = "(!)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+    String receiver;
+    String methodRegex =
+        "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
     String partialMethodRegex = "(!)?[A-Z]\\w+[.#]\\w+";
     Map<String, List<String>> argumentsMap = new HashMap<>();
-    ArrayList<String> signaturesFound = new ArrayList<>();
+    Map<String, String> signaturesFound = new LinkedHashMap<>();
     java.util.regex.Matcher signatureMatch;
     boolean partial = false;
 
-    int group = 0;
+    int signatureGroup = 0;
     if (word.contains("as")) {
       signatureMatch = Pattern.compile("( as )" + methodRegex).matcher(comment);
       if (!signatureMatch.find()) {
@@ -108,15 +111,22 @@ public class EquivalenceMatcher {
     }
     signatureMatch.reset();
     while (signatureMatch.find() && !doRangesOverlap(keywordMatcher, signatureMatch)) {
-      String signatureFound = signatureMatch.group(group);
+      receiver = "";
+      if (signatureMatch.groupCount() > 2 && signatureMatch.group(3) != null) {
+        receiver = signatureMatch.group(3);
+      }
+      String signatureFound = signatureMatch.group(signatureGroup);
       if (signatureFound.endsWith(".")) {
         signatureFound = signatureFound.substring(0, signatureFound.length() - 1);
       }
-      signaturesFound.add(signatureFound);
+      if (!receiver.isEmpty()) {
+        signatureFound = signatureFound.replace(receiver + ".", "");
+      }
+      signaturesFound.put(signatureFound, receiver);
       negation = signatureMatch.group(1) != null;
       List<String> arguments = new ArrayList<>();
       if (!partial) {
-        arguments = extractArguments(signatureMatch, 5);
+        arguments = extractArguments(signatureMatch, 7);
       }
       argumentsMap.put(signatureFound, arguments);
     }

@@ -574,6 +574,7 @@ class Matcher {
           String currentMatchParam = currentMatchParamTypes[filledSequence];
           if (index != -1
               && (myParamTypes.get(index).equals(currentMatchParam)
+                  || areTypesAssignable(myParamTypes.get(index), currentMatchParam)
                   || isParametricType(currentMatchParam, myParamTypes.get(index))
                   || isGenericType(currentMatchParam, myParamTypes))) {
             // Here we check that the type of the current arg to fill matches
@@ -676,6 +677,21 @@ class Matcher {
       }
     }
     return match;
+  }
+
+  private boolean areTypesAssignable(String myMethodParamType, String currentMatchParamType) {
+    if (currentMatchParamType.matches(".*<(.*)>")) {
+      currentMatchParamType = currentMatchParamType.replaceAll("<.*>", "");
+    }
+    Class myParamClass;
+    Class otherParamClass;
+    try {
+      myParamClass = Class.forName(myMethodParamType);
+      otherParamClass = Class.forName(currentMatchParamType);
+    } catch (Exception e) {
+      return false;
+    }
+    return otherParamClass.isAssignableFrom(myParamClass);
   }
 
   private boolean isParametricType(String currentMatch, String s) {

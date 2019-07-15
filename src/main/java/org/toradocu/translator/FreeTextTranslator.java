@@ -77,7 +77,7 @@ public class FreeTextTranslator {
           } else {
             equivalenceMatch.setOracle("");
           }
-        } else if (equivalenceMatch.isEquivalence()) {
+        } else if (equivalenceMatch.isEquivalence() || equivalenceMatch.isSimilarity()) {
           // Exact equivalence
           matchEquivalentMethod(excMember, equivalenceMatch, "", documentedType);
         }
@@ -182,8 +182,9 @@ public class FreeTextTranslator {
     String negation = "";
     String previousOracle = "";
 
+    int i = 0;
     // FIXME check shared/duplicated code with the matching of snippet (missing symbols)
-    for (int i = 0; i < equivalenceMatch.getMethodSignatures().size(); i++) {
+    for (String methodSignature : equivalenceMatch.getMethodSignatures().keySet()) {
       AnnotatedType previousReturnType = null;
       if (i > 0 && theFinalMatch != null) {
         // We are not in the first iteration: we are solving multiple signatures, thus
@@ -191,7 +192,6 @@ public class FreeTextTranslator {
         previousReturnType = extractPreviousType(theFinalMatch);
       }
 
-      String methodSignature = equivalenceMatch.getMethodSignatures().get(i);
       String simpleMethodName = equivalenceMatch.getSimpleName().get(i);
       String methodNameForSubjectMatch = simpleMethodName;
       if (simpleMethodName.startsWith("get")) {
@@ -200,7 +200,26 @@ public class FreeTextTranslator {
       boolean partial = !methodSignature.contains("(");
       // Extract every CodeElement associated with the method and the containing class of the
       // method.
-      Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
+
+      // FIXME IF RECEIVER IS NOT EMPTY, EXTRACT METHODS FROM ITS TYPE (NOT FROM EXECMEMBER)
+      Set<CodeElement<?>> codeElements;
+      String receiver = equivalenceMatch.getMethodSignatures().get(methodSignature);
+      if (receiver.isEmpty()) {
+        codeElements = extractMethodCodeElements(excMember, Configuration.RECEIVER);
+      } else {
+        List<String> docArgs =
+            excMember
+                .getParameters()
+                .stream()
+                .map(DocumentedParameter::getName)
+                .collect(Collectors.toList());
+        int receiverIndex = docArgs.indexOf(receiver);
+        if (receiverIndex == -1) {
+          return;
+        }
+        receiver = "args[" + receiverIndex + "]";
+        codeElements = extractMethodCodeElements(excMember, receiver);
+      }
       Set<CodeElement<?>> matchingCodeElem =
           matcher.subjectMatch(methodNameForSubjectMatch, codeElements);
 
@@ -296,6 +315,7 @@ public class FreeTextTranslator {
           previousOracle = currentOracle;
         }
       }
+      i++;
     }
     if (previousOracle.isEmpty()) {
       return;
@@ -344,7 +364,8 @@ public class FreeTextTranslator {
     } else {
       simpleName = symbol;
     }
-    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember);
+
+    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember, Configuration.RECEIVER);
     Set<CodeElement<?>> matchingCodeElem = matcher.subjectMatch(simpleName, codeElements);
 
     // matchingCodeElem = identifyMissingSymbolInImports(excMember, symbol, matchingCodeElem);
@@ -558,13 +579,14 @@ public class FreeTextTranslator {
   //    return oldOracle.substring(0, oldOracle.length() - 1) + "." + newOracle;
   //  }
 
-  private Set<CodeElement<?>> extractMethodCodeElements(DocumentedExecutable excMember) {
+  private Set<CodeElement<?>> extractMethodCodeElements(
+      DocumentedExecutable excMember, String receiver) {
     Set<CodeElement<?>> collectedElements = new LinkedHashSet<>();
     Class<?> containingClass = excMember.getDeclaringClass();
     List<Executable> rawMethods =
         JavaElementsCollector.collectRawMethods(containingClass, excMember);
     collectedElements.addAll(
-        JavaElementsCollector.getCodeElementsFromRawMethods(rawMethods, Configuration.RECEIVER));
+        JavaElementsCollector.getCodeElementsFromRawMethods(rawMethods, receiver));
     return collectedElements;
   }
 
