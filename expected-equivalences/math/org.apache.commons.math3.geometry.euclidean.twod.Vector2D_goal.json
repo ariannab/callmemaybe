@@ -97,7 +97,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to calling: <code>p1.subtract(p2).getNormSq()</code> except that no intermediate vector is built",
       "kind": "FreeText",
-      "condition": "args[0].subtract(args[1]).getNormSq()"
+      "condition": "methodResultID==(args[0].subtract(args[1]).getNormSq())"
     }
   },
   {
@@ -158,7 +158,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to calling: <code>p1.subtract(p2).getNorm()</code> except that no intermediate vector is built",
       "kind": "FreeText",
-      "condition": "args[0].subtract(args[1]).getNorm()"
+      "condition": "methodResultID==(args[0].subtract(args[1]).getNorm())"
     }
   },
   {
@@ -965,7 +965,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to calling: <code>p1.subtract(p2).getNormInf()</code> except that no intermediate vector is built",
       "kind": "FreeText",
-      "condition": "args[0].subtract(args[1]).getNormInf()"
+      "condition": "methodResultID==(args[0].subtract(args[1]).getNormInf())"
     }
   },
   {
