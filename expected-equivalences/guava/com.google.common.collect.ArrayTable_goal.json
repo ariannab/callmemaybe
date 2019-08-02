@@ -278,7 +278,7 @@
     "equivalence": {
       "comment": "Associates value with the specified row and column indices. The logic put(rowKeyList().get(rowIndex), columnKeyList().get(columnIndex), value) has the same behavior, but this method runs more quickly.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(put(rowKeyList().get(args[0]), columnKeyList().get(args[1]), args[2]))"
     }
   },
   {
@@ -613,7 +613,7 @@
     "equivalence": {
       "comment": "Associates the value null with the specified keys, assuming both keys are valid. If either key is null or isn't among the keys provided during construction, this method has no effect. <p>This method is equivalent to put(rowKey, columnKey, null) when both provided keys are valid.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(put(args[0], args[1], null))"
     }
   },
   {
