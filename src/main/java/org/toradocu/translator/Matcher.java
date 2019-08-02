@@ -618,9 +618,9 @@ class Matcher {
         } else {
           match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
         }
-        for (int j = 0; j < paramForMatch.size() - 1; j++) {
-          match.completeExpression(paramForMatch.get(j) + ",");
-        }
+        //        for (int j = 0; j < paramForMatch.size() - 1; j++) {
+        //          match.completeExpression(paramForMatch.get(j) + ",");
+        //        }
         for (int indexToBeMatch : indexesToBeMatched) {
           if (!codeElementsParams.isEmpty() && codeElementsParams.containsKey(indexToBeMatch)) {
             String codeElementName = parseCodeElemName(codeElementsParams, indexToBeMatch);
@@ -652,23 +652,25 @@ class Matcher {
             }
           }
           if (!typeParams.isEmpty()) {
+            String matchParamType = currentMatchParamTypes[indexToBeMatch];
             for (int i = 0; i < myMethodParamTypes.length; i++) {
               Parameter myMethodType = myMethodParamTypes[i];
-              // String matchParamType = currentMatchParamTypes[i];
-              for (String matchParamType : currentMatchParamTypes) {
-                if ((myMethodType.getType().isArray()
-                        && (matchParamType.contains("..") || matchParamType.contains("[]")))
-                    || myMethodParamTypes[i].getType().getName().equals("java.lang.Object")) {
-                  paramForMatch.add("args[" + i + "]");
-                }
+              // for (String matchParamType : currentMatchParamTypes) {
+              if (myMethodType.getType().getName().equals(matchParamType)
+                  || (myMethodType.getType().isArray()
+                      && (matchParamType.contains("..") || matchParamType.contains("[]")))
+                  || myMethodParamTypes[i].getType().getName().equals("java.lang.Object")) {
+                paramForMatch.add("args[" + i + "]");
+                break;
               }
+              // }
             }
-          }
-          for (int j = 0; j < paramForMatch.size() - 1; j++) {
-            match.completeExpression(paramForMatch.get(j) + ",");
           }
         }
 
+        for (int j = 0; j < paramForMatch.size() - 1; j++) {
+          match.completeExpression(paramForMatch.get(j) + ",");
+        }
         // We finished matching all indexes, we can close the expression
         if (!paramForMatch.isEmpty()) {
           match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");

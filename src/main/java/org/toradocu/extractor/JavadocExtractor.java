@@ -13,6 +13,7 @@ import com.github.javaparser.ast.body.BodyDeclaration;
 import com.github.javaparser.ast.body.CallableDeclaration;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.ConstructorDeclaration;
+import com.github.javaparser.ast.comments.Comment;
 import com.github.javaparser.ast.comments.JavadocComment;
 import com.github.javaparser.ast.nodeTypes.NodeWithConstructors;
 import com.github.javaparser.ast.nodeTypes.modifiers.NodeWithPrivateModifier;
@@ -106,7 +107,11 @@ public final class JavadocExtractor {
       BlockTags blockTags =
           createTags(classesInPackage, sourceCallable, parameters, qualifiedClassName);
 
-      final Optional<JavadocComment> javadocComment = sourceCallable.getJavadocComment();
+      Optional<JavadocComment> javadocComment = sourceCallable.getJavadocComment();
+      if (!javadocComment.isPresent()) {
+        orphanJavadocFound(sourceCallable);
+        javadocComment = sourceCallable.getJavadocComment();
+      }
       String parsedFreeText = "";
       if (javadocComment.isPresent()) {
         String freeTextComment = javadocComment.get().getContent();
@@ -144,6 +149,27 @@ public final class JavadocExtractor {
 
     // Create the documented class.
     return new DocumentedType(clazz, documentedExecutables, imports, classesInPackage);
+  }
+
+  /**
+   * Workaround to assign orphan Javadoc comments to the right method. Orphan comments are caused by
+   * Javadoc comments that did not respect the documentation standard (e.g. no blank line admitted
+   * between the Javadoc and the method signature). They are valuable pieces of documentation
+   * nonetheless, and we want to keep them.
+   *
+   * @param sourceCallable the source callable for which to search corresponding Javadoc in orphan
+   *     comments
+   */
+  private void orphanJavadocFound(CallableDeclaration<?> sourceCallable) {
+    Optional<Node> parentClass = sourceCallable.getParentNode();
+    if (parentClass.isPresent()) {
+      List<Comment> orphanComments = parentClass.get().getOrphanComments();
+      for (Comment orphan : orphanComments) {
+        if (orphan.isJavadocComment() && sourceCallable.toString().startsWith(orphan.toString())) {
+          sourceCallable.setJavadocComment(orphan.asJavadocComment());
+        }
+      }
+    }
   }
 
   private ImmutablePair<String, String> getFileNameAndSimpleName(Class<?> clazz, String className) {
@@ -571,7 +597,7 @@ public final class JavadocExtractor {
 
     Map<Executable, CallableDeclaration<?>> map = new LinkedHashMap<>(reflectionExecutables.size());
     for (CallableDeclaration<?> sourceCallable : sourceExecutables) {
-      final List<Executable> matches =
+      List<Executable> matches =
           reflectionExecutables
               .stream()
               .filter(
@@ -586,15 +612,40 @@ public final class JavadocExtractor {
                 + sourceCallable.getSignature());
       }
       if (matches.size() > 1) {
-        throw new AssertionError(
-            "Found multiple reflection executable members corresponding to "
-                + sourceCallable.getSignature()
-                + ". Matching executable members are:\n"
-                + Arrays.toString(matches.toArray()));
+        matches = skimMultipleMatches(matches, sourceCallable.getModifiers());
+        if (matches.size() > 1) {
+          throw new AssertionError(
+              "Found multiple reflection executable members corresponding to "
+                  + sourceCallable.getSignature()
+                  + ". Matching executable members are:\n"
+                  + Arrays.toString(matches.toArray()));
+        }
       }
       map.put(matches.get(0), sourceCallable);
     }
     return map;
+  }
+
+  private List<Executable> skimMultipleMatches(
+      List<Executable> matches, NodeList<com.github.javaparser.ast.Modifier> sModifiers) {
+
+    List<Executable> result = new ArrayList<>();
+    for (Executable match : matches) {
+      // Skim between simple public methods and public final methods
+      int eModifiers = match.getModifiers();
+      if (Modifier.isPublic(eModifiers)
+          && Modifier.isFinal(eModifiers)
+          && sModifiers.contains(com.github.javaparser.ast.Modifier.finalModifier())
+          && sModifiers.contains(com.github.javaparser.ast.Modifier.publicModifier())) {
+        result.add(match);
+        return result;
+      }
+    }
+    // Skim deprecated methods
+    return matches
+        .stream()
+        .filter(field -> field.getAnnotation(Deprecated.class) != null)
+        .collect(toList());
   }
 
   private void filterOutEnumMethods(

@@ -201,7 +201,6 @@ public class FreeTextTranslator {
       // Extract every CodeElement associated with the method and the containing class of the
       // method.
 
-      // FIXME IF RECEIVER IS NOT EMPTY, EXTRACT METHODS FROM ITS TYPE (NOT FROM EXECMEMBER)
       Set<CodeElement<?>> codeElements;
       String receiver = equivalenceMatch.getMethodSignatures().get(methodSignature);
       if (receiver.isEmpty()) {
