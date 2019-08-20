@@ -19,24 +19,25 @@ public class EquivalenceMatcher {
    * @param codeSnippet
    * @return the signature of the (supposedly) equivalent method
    */
-  public static EquivalentMatch getEquivalentOrSimilarMethod(
-      String comment, CodeSnippet codeSnippet) {
+  public static EquivalentMatch findEquivalencesInComment(String comment, CodeSnippet codeSnippet) {
     // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
-    // TODO consider also: behaves (as?), like
+    // TODO consider also: behaves (as?), like, SYNONYM
     KeywordsSet equivalenceKw =
         new KeywordsSet(
             Arrays.asList(
                 "equivalent",
                 "similar",
                 "analog",
+                "like",
                 "identical",
                 "behaves exactly",
                 "equal to",
-                "same as",
-                "same value"),
+                "same"
+                // "same as",
+                // "same value",
+                ),
             KeywordsSet.Category.EQUIVALENCE);
-    EquivalentMatch methodMatch =
-        getSignatureInMatchingComment(comment, codeSnippet, equivalenceKw);
+    EquivalentMatch methodMatch = classifyEquivalenceComment(comment, codeSnippet, equivalenceKw);
     if (methodMatch != null) {
       return methodMatch;
     } else {
@@ -46,7 +47,7 @@ public class EquivalenceMatcher {
           new KeywordsSet(
               Arrays.asList("prefer", "alternative", "replacement for"),
               KeywordsSet.Category.SIMILARITY);
-      methodMatch = getSignatureInMatchingComment(comment, codeSnippet, similarityKw);
+      methodMatch = classifyEquivalenceComment(comment, codeSnippet, similarityKw);
       if (methodMatch != null) {
         return methodMatch;
       }
@@ -63,7 +64,9 @@ public class EquivalenceMatcher {
    * @param keywordsSet the keywords to search for
    * @return the signature of the (supposedly) equivalent method
    */
-  private static EquivalentMatch getSignatureInMatchingComment(
+
+  // FIXME THIS METHOD TAKES FOR GRANTED THAT THERE IS JUST ONE MATCH?
+  private static EquivalentMatch classifyEquivalenceComment(
       String comment, CodeSnippet codeSnippet, KeywordsSet keywordsSet) {
     EquivalentMatch match = null;
 
@@ -88,26 +91,27 @@ public class EquivalenceMatcher {
     String receiver;
     String methodRegex =
         "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
-    String partialMethodRegex = "(!)?[A-Z]\\w+[.#]\\w+";
+    // "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?)\\)$)+)(\\)+)?\\.?";
+    String partialMethodRegex = "(!)?([A-Z]\\w+)?[.#]\\w+";
     Map<String, List<String>> argumentsMap = new HashMap<>();
     Map<String, String> signaturesFound = new LinkedHashMap<>();
     java.util.regex.Matcher signatureMatch;
     boolean partial = false;
 
     int signatureGroup = 0;
-    if (word.contains("as")) {
-      signatureMatch = Pattern.compile("( as )" + methodRegex).matcher(comment);
-      if (!signatureMatch.find()) {
-        return new EquivalentMatch(signaturesFound, false, false, argumentsMap, negation);
-      }
-    }
+    //    if (word.contains("as")) {
+    //      signatureMatch = Pattern.compile("( as )" + methodRegex).matcher(comment);
+    //      if (!signatureMatch.find()) {
+    //        return new EquivalentMatch(signaturesFound, false, false, argumentsMap, negation);
+    //      }
+    //    }
 
     signatureMatch = Pattern.compile(methodRegex).matcher(comment);
 
     boolean matchFound = signatureMatch.find();
     if (!matchFound) {
       signatureMatch = Pattern.compile(partialMethodRegex).matcher(comment);
-      partial = true;
+      partial = signatureMatch.find();
     }
     signatureMatch.reset();
     while (signatureMatch.find() && !doRangesOverlap(keywordMatcher, signatureMatch)) {

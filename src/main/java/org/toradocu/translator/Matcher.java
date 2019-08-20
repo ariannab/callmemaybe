@@ -655,15 +655,15 @@ class Matcher {
             String matchParamType = currentMatchParamTypes[indexToBeMatch];
             for (int i = 0; i < myMethodParamTypes.length; i++) {
               Parameter myMethodType = myMethodParamTypes[i];
-              // for (String matchParamType : currentMatchParamTypes) {
-              if (myMethodType.getType().getName().equals(matchParamType)
+              if (isGenericType(matchParamType)
+                  && myMethodType.getType().getName().equals("java.lang.Object")) {
+                paramForMatch.add("args[" + i + "]");
+              } else if (myMethodType.getType().getName().equals(matchParamType)
                   || (myMethodType.getType().isArray()
-                      && (matchParamType.contains("..") || matchParamType.contains("[]")))
-                  || myMethodParamTypes[i].getType().getName().equals("java.lang.Object")) {
+                      && (matchParamType.contains("..") || matchParamType.contains("[]")))) {
                 paramForMatch.add("args[" + i + "]");
                 break;
               }
-              // }
             }
           }
         }
@@ -710,11 +710,10 @@ class Matcher {
   private String convertArrayTipe(Class<?> type) {
     String name = type.getName();
     String returnName = "";
-    switch (name) {
-      case "[B":
-        returnName = "byte[]";
-        break;
-      default:
+    if (name.equals("[B")) {
+      returnName = "byte[]";
+    } else if (name.matches("\\[L.*;")) {
+      returnName = name.substring(2, (name.length() - 1)) + "[]";
     }
     return returnName;
   }
@@ -782,6 +781,11 @@ class Matcher {
     return paramMatch.contains("java.lang.Object")
         && pt.length() == 1
         && Character.isUpperCase(pt.charAt(0));
+  }
+
+  private boolean isGenericType(String pt) {
+    // FIXME this is naive and potentially wrong, look at the same method in ComplianceChecks
+    return pt.length() == 1 && Character.isUpperCase(pt.charAt(0));
   }
 
   /**

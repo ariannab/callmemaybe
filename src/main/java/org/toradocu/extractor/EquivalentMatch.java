@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.toradocu.translator.CodeElement;
 import org.toradocu.util.ComplianceChecks;
 
 // FIXME turn this into:
@@ -19,7 +20,12 @@ EqSpecification extends Specification {
  */
 public class EquivalentMatch {
 
+  /**
+   * Bounds each method signature with its specific receiver, if any (default is receiverObjectID)
+   */
   private Map<String, String> methodSignatures;
+
+  private Map<String, CodeElement<?>> documentedSignatures;
   private CodeSnippet codeSnippet;
   private ArrayList<String> simpleName;
   private boolean equivalence;
@@ -27,6 +33,7 @@ public class EquivalentMatch {
   /** Maps each String signature to a list of String arguments */
   private Map<String, List<String>> arguments;
 
+  private String condition;
   private String oracle;
   /**
    * This Map and the one below map a signature with A PAIR INT (PARAM POSITION), STRING (PARAM
@@ -40,7 +47,7 @@ public class EquivalentMatch {
 
   private boolean isNegated;
 
-  String importsNeeded;
+  private String importsNeeded;
   //  public EquivalentMatch() {
   //    this.methodSignatures = new ArrayList<>();
   //    this.simpleName = new ArrayList<>();
@@ -57,6 +64,7 @@ public class EquivalentMatch {
       boolean isNegated) {
 
     this.methodSignatures = methodSignatures;
+    this.documentedSignatures = new HashMap<String, CodeElement<?>>();
     extractSimpleNames();
     this.equivalence = equivalence;
     this.similarity = similarity;
@@ -65,6 +73,7 @@ public class EquivalentMatch {
     this.importsNeeded = "";
     this.isNegated = isNegated;
     this.oracle = "";
+    this.condition = "";
   }
 
   private void manageArgs() {
@@ -102,42 +111,23 @@ public class EquivalentMatch {
       }
     }
   }
-
-  public Map<String, String> getMethodSignatures() {
-    return methodSignatures;
-  }
-
-  public boolean isSimilarity() {
-    return similarity;
-  }
-
-  public boolean isEquivalence() {
-    return equivalence;
-  }
-
-  public Map<String, List<String>> getArguments() {
-    return arguments;
-  }
-
-  public ArrayList<String> getSimpleName() {
-    return simpleName;
-  }
-
-  public void setOracle(String oracle) {
-    this.oracle = oracle;
-  }
-
-  public String getOracle() {
-    return this.oracle;
-  }
-
+  /**
+   * Are values for the parameter hardcoded? e.g. digits for an int, a string between quotes for a
+   * String, etc.
+   *
+   * @param methodSignatures
+   * @return
+   */
   private Map<String, Map<Integer, String>> areArgsHardcoded(Map<String, String> methodSignatures) {
     Map<String, Map<Integer, String>> map = new HashMap<>();
     for (String signature : methodSignatures.keySet()) {
       Map<Integer, String> constArgs = new HashMap<>();
       List<String> patterns = new ArrayList<>();
-      patterns.add("[0-9]+(\\.[0-9]+)?");
-      patterns.add("true|false");
+      // Is the value a number?
+      patterns.add("-?[0-9]+(\\.[0-9]+)?");
+      // Is the value an hardcoded code expression ?
+      patterns.add("true|false|null");
+      // Is the value a string between quotes?
       patterns.add("\"[a-zA-Z]+\"");
       List<String> arguments = this.arguments.get(signature);
       if (arguments != null) {
@@ -157,12 +147,18 @@ public class EquivalentMatch {
     return map;
   }
 
+  /**
+   * Are arguments static final fields?
+   *
+   * @param methodSignatures
+   * @return
+   */
   private Map<String, Map<Integer, String>> areArgsStaticFinal(
       Map<String, String> methodSignatures) {
     Map<String, Map<Integer, String>> map = new HashMap<>();
     for (String signature : methodSignatures.keySet()) {
       Map<Integer, String> sfArgs = new HashMap<>();
-      String staticFinalRegex = "[A-Z]+|\\w+(\\.[A-Z_]+|#[A-Z_]+)+";
+      String staticFinalRegex = "[A-Z]{2,}|\\w+(\\.[A-Z_]+|#[A-Z_]+)+";
       List<String> signatureArgs = this.arguments.get(signature);
       List<String> arguments = this.arguments.get(signature);
       if (arguments != null) {
@@ -179,6 +175,12 @@ public class EquivalentMatch {
     return map;
   }
 
+  /**
+   * Are arguments expressed only with their type? e.g. add(int, Object)
+   *
+   * @param methodSignatures
+   * @return
+   */
   private Map<String, Map<Integer, String>> areArgsTypes(Map<String, String> methodSignatures) {
     Map<String, Map<Integer, String>> map = new HashMap<>();
     for (String signature : methodSignatures.keySet()) {
@@ -240,5 +242,49 @@ public class EquivalentMatch {
   public void addSnippetSymbol(String symbol) {
     this.codeSnippet.getSymbols().put(symbol, null);
     this.codeSnippet.getSolvedSymbols().put(symbol, false);
+  }
+
+  public String getCondition() {
+    return condition;
+  }
+
+  public void setCondition(String condition) {
+    this.condition = condition;
+  }
+
+  public Map<String, String> getMethodSignatures() {
+    return methodSignatures;
+  }
+
+  public boolean isSimilarity() {
+    return similarity;
+  }
+
+  public boolean isEquivalence() {
+    return equivalence;
+  }
+
+  public Map<String, List<String>> getArguments() {
+    return arguments;
+  }
+
+  public ArrayList<String> getSimpleName() {
+    return simpleName;
+  }
+
+  public void setOracle(String oracle) {
+    this.oracle = oracle;
+  }
+
+  public String getOracle() {
+    return this.oracle;
+  }
+
+  public void addDocumentedSignature(String signature, CodeElement<?> documentedExecutable) {
+    this.documentedSignatures.put(signature, documentedExecutable);
+  }
+
+  public Map<String, CodeElement<?>> getDocumentedSignatures() {
+    return documentedSignatures;
   }
 }

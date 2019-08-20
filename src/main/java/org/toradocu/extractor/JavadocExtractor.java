@@ -22,6 +22,8 @@ import com.github.javaparser.javadoc.JavadocBlockTag;
 import com.github.javaparser.javadoc.JavadocBlockTag.Type;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Executable;
 import java.lang.reflect.Modifier;
@@ -35,6 +37,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.function.Predicate;
+import org.apache.commons.lang.ClassUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -68,12 +71,26 @@ public final class JavadocExtractor {
    *     cannot be found in path {@code sourcePath}
    */
   public DocumentedType extract(String className, String sourcePath)
-      throws ClassNotFoundException, FileNotFoundException, ParameterNotFoundException {
+      throws ClassNotFoundException, IOException, ParameterNotFoundException {
 
     log.trace("Extracting Javadoc information of {} (in source folder {})", className, sourcePath);
 
     // Obtain executable members (constructors and methods) by means of reflection.
     final Class<?> clazz = Reflection.getClass(className);
+
+    FileWriter writer = new FileWriter("superclassi.txt", true);
+
+    for (Object i : ClassUtils.getAllInterfaces(clazz)) {
+      writer.append(i.toString());
+      writer.append("\r\n");
+    }
+    for (Object c : ClassUtils.getAllSuperclasses(clazz)) {
+      writer.append(c.toString());
+      writer.append("\r\n");
+    }
+
+    writer.close();
+
     final List<Executable> reflectionExecutables = getExecutables(clazz);
     NodeList<ImportDeclaration> imports = new NodeList<>();
 

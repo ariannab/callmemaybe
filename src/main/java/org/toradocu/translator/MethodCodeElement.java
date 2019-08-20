@@ -21,6 +21,8 @@ public class MethodCodeElement extends CodeElement<Method> {
   private String[] args;
   /** Expression that checks the nullness of the receiver. */
   private String nullDereferenceCheck;
+  /** Return type of this method code element */
+  private String returnType;
 
   /**
    * Constructs and initializes a {@code MethodCodeElement} that identifies the given method. The
@@ -44,6 +46,7 @@ public class MethodCodeElement extends CodeElement<Method> {
     }
 
     addIdentifier(methodName);
+    this.returnType = method.getReturnType().getTypeName();
 
     if (method.getParameterCount() != 0) {
       String methodString = method.toGenericString();
@@ -106,5 +109,13 @@ public class MethodCodeElement extends CodeElement<Method> {
       Arrays.stream(args).forEach(paramsJoiner::add);
       return receiver + "." + getJavaCodeElement().getName() + paramsJoiner;
     } else return receiver + "." + getJavaCodeElement().getName() + "()";
+  }
+
+  public String getReturnType() {
+    return returnType;
+  }
+
+  public void setReturnType(String returnType) {
+    this.returnType = returnType;
   }
 }

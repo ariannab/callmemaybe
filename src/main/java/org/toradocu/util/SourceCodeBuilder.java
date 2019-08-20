@@ -35,6 +35,8 @@ public class SourceCodeBuilder {
   /** The package declaration. */
   private String packageDeclaration = "";
 
+  private String exception = "";
+
   /**
    * Method to be invoked after all the field (source code elements) have been prepared. Composes
    * the source code.
@@ -77,7 +79,12 @@ public class SourceCodeBuilder {
       fakeSource.append(",");
     }
     fakeSource.append(String.join(",", varArgArguments));
-    fakeSource.append(") {");
+    fakeSource.append(")");
+    if (!exception.isEmpty()) {
+      fakeSource.append(" throws ");
+      fakeSource.append(exception);
+    }
+    fakeSource.append("{");
     fakeSource.append("\n");
     for (String condition : conditions) {
       //      if(!condition.contains("if")) {
@@ -236,5 +243,9 @@ public class SourceCodeBuilder {
    */
   public void addPackage(Class<?> declaringClass) {
     this.packageDeclaration = declaringClass.getPackage().getName();
+  }
+
+  public void addExceptionInSignature(String unreportedException) {
+    this.exception = unreportedException;
   }
 }

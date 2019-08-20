@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -40,6 +41,7 @@ public class FreeTextTranslator {
     ArrayList<EquivalentMatch> matches = new ArrayList<>();
     EquivalentMatch equivalenceMatch;
 
+    // FIXME IF != SENTENCES HAVE != EQUIVALENCES WHAT HAPPENS HERE???
     for (String sentence : sentences) {
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
@@ -53,35 +55,41 @@ public class FreeTextTranslator {
           }
         }
         // Verify comment contains equivalence declaration...
-        equivalenceMatch =
-            EquivalenceMatcher.getEquivalentOrSimilarMethod(sentence, sentenceSnippet);
+        equivalenceMatch = EquivalenceMatcher.findEquivalencesInComment(sentence, sentenceSnippet);
+        String translatedCondition = "";
 
-        String condition = extractCondition(sentence);
-        if (equivalenceMatch.isSimilarity()
-            && !equivalenceMatch.getMethodSignatures().isEmpty()
-            && equivalenceMatch.getCodeSnippet() != null
-            && condition != null) {
-          // Similarity, e.g. conditional equivalence
-          translateConditionalEquivalence(excMember, equivalenceMatch, condition, documentedType);
-        } else if (equivalenceMatch.getCodeSnippet() != null
-            && !equivalenceMatch.getCodeSnippetText().isEmpty()
-            && sentence
-                .replaceAll(" ", "")
-                .contains(equivalenceMatch.getCodeSnippetText().replaceAll(" ", ""))) {
-          // No condition, thus equivalence against snippet
-          boolean compilable =
-              isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
-          if (compilable) {
-            String finalOracle = prepareResult(excMember, equivalenceMatch.getCodeSnippet());
-            equivalenceMatch.setOracle(finalOracle);
-          } else {
-            equivalenceMatch.setOracle("");
+        if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
+          String condition = extractCondition(sentence);
+          if (equivalenceMatch.isSimilarity()
+              && !equivalenceMatch.getMethodSignatures().isEmpty()
+              && equivalenceMatch.getCodeSnippet() != null
+              && condition != null) {
+            // Similarity, e.g. conditional equivalence
+            translatedCondition =
+                translateConditionalEquivalence(
+                    excMember, equivalenceMatch, condition, documentedType);
+          } else if (equivalenceMatch.getCodeSnippet() != null
+              && !equivalenceMatch.getCodeSnippetText().isEmpty()
+              && sentence
+                  .replaceAll(" ", "")
+                  .contains(equivalenceMatch.getCodeSnippetText().replaceAll(" ", ""))) {
+            // No condition, thus equivalence against snippet
+            boolean compilable =
+                isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
+            if (compilable) {
+              String finalOracle = prepareResult(excMember, equivalenceMatch.getCodeSnippet());
+              equivalenceMatch.setOracle(finalOracle);
+            } else {
+              equivalenceMatch.setOracle("");
+            }
           }
-        } else if (equivalenceMatch.isEquivalence() || equivalenceMatch.isSimilarity()) {
-          // Exact equivalence
-          matchEquivalentMethod(excMember, equivalenceMatch, "", documentedType);
+
+          if (equivalenceMatch.isEquivalence() || !translatedCondition.isEmpty()) {
+            // Exact equivalence
+            matchEquivalentMethod(excMember, equivalenceMatch, translatedCondition, documentedType);
+          }
+          matches.add(equivalenceMatch);
         }
-        matches.add(equivalenceMatch);
       }
     }
     return matches;
@@ -96,15 +104,31 @@ public class FreeTextTranslator {
     ComplianceError complianceError = new ComplianceError();
     boolean compilable;
     List<String> missingSymbols = new ArrayList<>();
+    List<String> swappableArgs = new ArrayList<>();
     compilable = ComplianceChecks.isSnippetCompilable(excMember, equivalenceMatch, complianceError);
     do {
       if (!compilable) {
         // There was a compilation error for missing symbols in the snippet,
         // so we have to match them correctly
         missingSymbols = complianceError.getMissingSymbols();
+        swappableArgs = complianceError.getSwappableMethods();
         for (String missingSymbol : missingSymbols) {
           equivalenceMatch.addSnippetSymbol(missingSymbol);
           matchEquivalentSnippet(excMember, equivalenceMatch, missingSymbol, documentedType);
+
+          if (!equivalenceMatch
+              .getCodeSnippet()
+              .getSolvedSymbols()
+              .entrySet()
+              .stream()
+              .filter(x -> !x.getValue())
+              .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue))
+              .isEmpty()) {
+            return false;
+          }
+        }
+        for (String swappableArg : swappableArgs) {
+          matchEquivalentSnippet(excMember, equivalenceMatch, swappableArg, documentedType);
         }
 
         complianceError = new ComplianceError();
@@ -112,14 +136,12 @@ public class FreeTextTranslator {
         compilable =
             ComplianceChecks.isSnippetCompilable(excMember, equivalenceMatch, complianceError);
       }
-    } while (!compilable
-        && !complianceError.getMissingSymbols().isEmpty()
-        && !complianceError.getMissingSymbols().equals(missingSymbols));
+    } while (!compilable && complianceError.isErrorSolved());
 
     return compilable;
   }
 
-  private void translateConditionalEquivalence(
+  private String translateConditionalEquivalence(
       DocumentedExecutable excMember,
       EquivalentMatch equivalenceMatch,
       String condition,
@@ -135,25 +157,27 @@ public class FreeTextTranslator {
       // 1) Attempt to compile it as usual.
       boolean compilable = isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
       if (compilable) {
-        // 2) Then, if it compiles, insert it in an if() in the oracle
-        matchEquivalentMethod(excMember, equivalenceMatch, condition, documentedType);
-        String finalOracle = prepareResultWithCondition(excMember, equivalenceMatch);
-        equivalenceMatch.setOracle(finalOracle);
-        // 3) Finally, check that the overall oracle compiles
-        compilable = ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch, "");
-        if (!compilable) {
-          equivalenceMatch.setOracle("");
-        } else {
-          // FIXME probably the condition is NOT finalOracle...check this flow...
-          matchEquivalentMethod(excMember, equivalenceMatch, finalOracle, documentedType);
-        }
+        //        // 2) Then, if it compiles, insert it in an if() in the oracle
+        //        matchEquivalentMethod(excMember, equivalenceMatch, condition, documentedType);
+        //        String finalOracle = prepareResultWithCondition(excMember, equivalenceMatch);
+        //        equivalenceMatch.setOracle(finalOracle);
+        //        // 3) Finally, check that the overall oracle compiles
+        //        compilable = ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch, "");
+        //        if (!compilable) {
+        //          equivalenceMatch.setOracle("");
+        //        } else {
+        //          // FIXME probably the condition is NOT finalOracle...check this flow...
+        //          matchEquivalentMethod(excMember, equivalenceMatch, finalOracle, documentedType);
+        //        }
+        return equivalenceMatch.getCodeSnippet().getSnippet();
       }
     }
+    return "";
   }
 
   private String prepareResultWithCondition(DocumentedExecutable excMember, EquivalentMatch match) {
     // FIXME naive and potentially incorrect:
-    String previousOracle = match.getMethodSignatures().get(0);
+    String previousOracle = match.getMethodSignatures().keySet().stream().findFirst().get();
     String oracle = "if(" + match.getCodeSnippetText() + ") {";
     if (ComplianceChecks.primitiveTypes()
         .contains(excMember.getReturnType().getType().getTypeName())) {
@@ -246,40 +270,42 @@ public class FreeTextTranslator {
           if (link.contains("#")) {
             link = link.substring(0, link.indexOf("#"));
           }
-          if (!link.contains(".")) {
-            for (String javaP : javaPackages) {
-              String newlink = javaP + link;
-              try {
-                matchedType = Reflection.getClass(newlink);
-              } catch (ClassNotFoundException e) {
-              }
-              if (matchedType != null) {
-                link = newlink;
-                break;
-              }
-            }
-          } else {
-            try {
-              matchedType = Reflection.getClass(link);
-            } catch (ClassNotFoundException e) {
-            }
-          }
-          if (matchedType != null) {
-            className = link;
-            break;
-          } else {
-            for (int j = 0; j < documentedType.getImports().size(); j++) {
-              ImportDeclaration anImport = documentedType.getImports().get(j);
-              String importedClass = anImport.getNameAsString().replace("import", "").trim();
-              if (importedClass.endsWith(link)) {
+          if (!link.isEmpty()) {
+            if (!link.contains(".")) {
+              for (String javaP : javaPackages) {
+                String newlink = javaP + link;
                 try {
-                  matchedType = Reflection.getClass(importedClass);
+                  matchedType = Reflection.getClass(newlink);
                 } catch (ClassNotFoundException e) {
                 }
                 if (matchedType != null) {
-                  className = importedClass;
-                  equivalenceMatch.setImportsNeeded(className);
+                  link = newlink;
                   break;
+                }
+              }
+            } else {
+              try {
+                matchedType = Reflection.getClass(link);
+              } catch (ClassNotFoundException e) {
+              }
+            }
+            if (matchedType != null) {
+              className = link;
+              break;
+            } else {
+              for (int j = 0; j < documentedType.getImports().size(); j++) {
+                ImportDeclaration anImport = documentedType.getImports().get(j);
+                String importedClass = anImport.getNameAsString().replace("import", "").trim();
+                if (importedClass.endsWith(link)) {
+                  try {
+                    matchedType = Reflection.getClass(importedClass);
+                  } catch (ClassNotFoundException e) {
+                  }
+                  if (matchedType != null) {
+                    className = importedClass;
+                    equivalenceMatch.setImportsNeeded(className);
+                    break;
+                  }
                 }
               }
             }
@@ -294,8 +320,7 @@ public class FreeTextTranslator {
       if (matchingCodeElem != null && !matchingCodeElem.isEmpty()) {
         List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeElem);
         if (partial) {
-          theFinalMatch =
-              matcher.bestArgsTypeMatch(excMember, "", new ArrayList<>(matchingCodeElem));
+          theFinalMatch = matcher.bestArgsTypeMatch(excMember, "", sortedCodeElem);
         } else {
           theFinalMatch =
               matcher.reverseBestArgsTypeMatch(
@@ -312,6 +337,8 @@ public class FreeTextTranslator {
                 previousOracle + currentOracle.substring(currentOracle.lastIndexOf("."));
           }
           previousOracle = currentOracle;
+          // equivalenceMatch.addDocumentedSignature(methodSignature,
+          // theFinalMatch.getCodeElement());
         }
       }
       i++;
@@ -319,7 +346,8 @@ public class FreeTextTranslator {
     if (previousOracle.isEmpty()) {
       return;
     }
-    buildAndCompileOracle(excMember, equivalenceMatch, condition, previousOracle);
+    buildAndCompileOracle(
+        excMember, equivalenceMatch, theFinalMatch.getCodeElement(), condition, previousOracle);
   }
 
   /**
@@ -337,6 +365,26 @@ public class FreeTextTranslator {
     Matcher matcher = new Matcher();
     String matchingSymbol = null;
     CodeSnippet snippet = equivalenceMatch.getCodeSnippet();
+    String snippetText = snippet.getSnippet();
+    if (snippetText.charAt(snippetText.indexOf(symbol) + symbol.length()) == '(') {
+      // method to swap args
+      String wrongArgs =
+          snippetText
+              .substring(snippetText.indexOf(symbol) + symbol.length())
+              .replaceAll("\\(", "")
+              .replaceAll("\\)", "");
+      String[] args = wrongArgs.split(",");
+      String newExpr = "";
+      for (int i = args.length - 1; i >= 0; i--) {
+        newExpr += args[i];
+        if (i > 0) {
+          newExpr += ",";
+        }
+      }
+
+      snippet.substitutePart(wrongArgs, newExpr);
+      return;
+    }
     if (!symbol.contains("(")
         && !(Character.isUpperCase(symbol.charAt(0)) && symbol.length() > 1)) {
       matchingSymbol = identifyMissingSymbolInArgs(excMember, symbol, snippet);
@@ -445,7 +493,7 @@ public class FreeTextTranslator {
 
     for (int i = 0; i < args.size(); i++) {
       String argName = args.get(i).getName();
-      if (isGenericType(symbol)) { // FIXME naive check
+      if (ComplianceChecks.isGenericType(symbol)) { // FIXME naive check
         snippet.addMatchToSymbol(symbol, "Object");
         snippet.completeSnippet();
         break;
@@ -466,10 +514,10 @@ public class FreeTextTranslator {
     return null;
   }
 
-  private boolean isGenericType(String pt) {
-    // FIXME this is naive and potentially wrong, look at the same method in ComplianceChecks
-    return pt.length() == 1 && Character.isUpperCase(pt.charAt(0));
-  }
+  //  private boolean isGenericType(String pt) {
+  //    // FIXME this is naive and potentially wrong, look at the same method in ComplianceChecks
+  //    return pt.length() == 1 && Character.isUpperCase(pt.charAt(0));
+  //  }
 
   private Set<CodeElement<?>> extractMatchingCodeElementFromType(
       DocumentedExecutable excMember,
@@ -513,34 +561,71 @@ public class FreeTextTranslator {
   private void buildAndCompileOracle(
       DocumentedExecutable excMember,
       EquivalentMatch equivalenceMatch,
+      CodeElement<?> codeElement,
       String condition,
       String previousOracle) {
-    String oracle = prepareResult(excMember, previousOracle);
-    //      if (!equivalenceMatch.getOracle().isEmpty()) {
-    //          // We have to add something to the partial oracle
-    //          oracle = composeOracle(oracle, equivalenceMatch.getOracle());
-    //      }
+    String oracle = prepareResult(equivalenceMatch, codeElement, excMember, previousOracle);
     if (!condition.isEmpty()) {
-      equivalenceMatch.setOracle(
-          "if (" + equivalenceMatch.getCodeSnippet().getSnippet() + ") {" + oracle + "}");
-    } else {
-      equivalenceMatch.setOracle(oracle);
+      equivalenceMatch.setCondition(condition);
     }
-    if (!ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch, condition)) {
+    equivalenceMatch.setOracle(oracle);
+
+    if (!ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch)) {
       equivalenceMatch.setOracle("");
     }
   }
 
   @NotNull
-  private String prepareResult(DocumentedExecutable excMember, String previousOracle) {
+  private String prepareResult(
+      EquivalentMatch equivalenceMatch,
+      CodeElement<?> codeElement,
+      DocumentedExecutable excMember,
+      String previousOracle) {
     String oracle;
-    if (ComplianceChecks.primitiveTypes()
+    String execMemberReturnType = excMember.getReturnType().getType().getTypeName();
+    String otherReturnType = "";
+    // CodeElement<?> otherMethod =
+    // equivalenceMatch.getDocumentedSignatures().get(excMember.getSignature());
+    if (codeElement instanceof MethodCodeElement) {
+      otherReturnType = ((MethodCodeElement) codeElement).getReturnType();
+    }
+    if (execMemberReturnType.equals("void") || !execMemberReturnType.equals(otherReturnType)) {
+      oracle = manageVoidAndUncompatibleMethods(excMember, previousOracle);
+    } else if (ComplianceChecks.primitiveTypes()
         .contains(excMember.getReturnType().getType().getTypeName())) {
       oracle = Configuration.RETURN_VALUE + "==(" + previousOracle + ")";
     } else {
       oracle = Configuration.RETURN_VALUE + ".equals(" + previousOracle + ")";
     }
     return oracle;
+  }
+
+  public static String manageVoidAndUncompatibleMethods(
+      DocumentedExecutable excMember, String previousOracle) {
+    //    receiverObjectID.clear(); == previousOracle
+    //    receiverObjectClone.removeAllElements();
+    //    assert(receiverObjectID.equals(receiverObjectClone));
+    String signature = excMember.getSignature();
+    String signatureWithRightArguments = signature.substring(0, signature.indexOf("(") + 1);
+    int size = excMember.getParameters().size();
+    for (int i = 0; i < size; i++) {
+      signatureWithRightArguments += "args[" + i + "]";
+      if (size > 1 && i < size - 1) {
+        signatureWithRightArguments += ",";
+      }
+    }
+    signatureWithRightArguments += ")";
+    String preStatements =
+        previousOracle
+            + ";\n"
+            + Configuration.RECEIVER_CLONE
+            + "."
+            + signatureWithRightArguments
+            + ";\n";
+    String assertion =
+        "assert(" + Configuration.RECEIVER_CLONE + ".equals(" + Configuration.RECEIVER + "));";
+
+    return preStatements + " " + assertion;
   }
 
   @NotNull

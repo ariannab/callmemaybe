@@ -315,7 +315,7 @@ public final class CommentContent {
   }
 
   private boolean anyBooleanOperator(String codeSubset) {
-    String[] reserved = {"\\|\\|", "&&", "=="};
+    String[] reserved = {"\\|\\|", "&&", "==", "!="};
     String joinedRegex = String.join("|", reserved);
     Matcher matcher = Pattern.compile(joinedRegex).matcher(codeSubset);
     boolean find = matcher.find();

@@ -12,6 +12,8 @@ public class CodeSnippet {
   private boolean isTernaryOp;
   private boolean isComplexSignature;
 
+  private boolean complexSignatureWithIncompatibleTypes;
+
   CodeSnippet(String snippet, boolean isExpression, boolean ternaryOp, boolean complexSignature) {
     this.snippet = snippet;
     this.symbols = new HashMap<>();
@@ -19,6 +21,7 @@ public class CodeSnippet {
     this.isExpression = isExpression;
     this.isTernaryOp = ternaryOp;
     this.isComplexSignature = complexSignature;
+    this.complexSignatureWithIncompatibleTypes = false;
   }
 
   public void completeSnippet() {
@@ -60,6 +63,10 @@ public class CodeSnippet {
     return snippet;
   }
 
+  public void substitutePart(String oldText, String newText) {
+    this.snippet = this.snippet.replace(oldText, newText);
+  }
+
   public boolean isExpression() {
     return isExpression;
   }
@@ -70,5 +77,14 @@ public class CodeSnippet {
 
   public boolean isComplexSignature() {
     return isComplexSignature;
+  }
+
+  public boolean isComplexSignatureWithIncompatibleTypes() {
+    return complexSignatureWithIncompatibleTypes;
+  }
+
+  public void setComplexSignatureWithIncompatibleTypes(
+      boolean complexSignatureWithIncompatibleTypes) {
+    this.complexSignatureWithIncompatibleTypes = complexSignatureWithIncompatibleTypes;
   }
 }

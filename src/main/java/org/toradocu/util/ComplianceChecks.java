@@ -19,6 +19,7 @@ import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 import org.toradocu.extractor.EquivalentMatch;
 import org.toradocu.extractor.JavadocExtractor;
+import org.toradocu.translator.FreeTextTranslator;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Property;
 
@@ -105,38 +106,86 @@ public class ComplianceChecks {
    * Compilation check for equivalence specifications
    *
    * @param method the method the equivalence comment belongs to
-   * @param condition the condition to compile
    * @return whether the condition compiles or not
    */
   public static boolean isEqSpecCompilable(
-      DocumentedExecutable method, EquivalentMatch equivalentMethodMatch, String condition) {
+      DocumentedExecutable method, EquivalentMatch equivalentMethodMatch) {
 
     if (Modifier.isPrivate(method.getDeclaringClass().getModifiers())) {
       // if the target class is private we cannot apply compliance check.
       return true;
     }
-    String oracle = equivalentMethodMatch.getOracle();
     // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
     // FIXME this should be checked also for returns translation
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
     includeMethodResult(method, sourceCodeBuilder);
-    addOracle(method, oracle, sourceCodeBuilder);
-    //    if (!condition.isEmpty()) {
-    //      addOracle(method, condition, sourceCodeBuilder);
-    //    }
+    addOracle(method, equivalentMethodMatch, sourceCodeBuilder);
+    boolean compilable = false;
+    int attempts = 0;
+    while (!compilable && attempts < 3) {
+      String sourceCode = sourceCodeBuilder.buildSource();
+      try {
+        compileSource(sourceCode);
+      } catch (CompilationException e) {
+        String prevOracle = equivalentMethodMatch.getOracle();
+        ComplianceError ce = new ComplianceError();
+        attempts++;
+        ce.chooseErrorStrategy(e.getLocalizedMessage(), method, prevOracle);
+        if (!ce.getUnreportedException().isEmpty()) {
+          sourceCodeBuilder.addExceptionInSignature(ce.getUnreportedException());
+        } else if (ce.isIncompatibleTypes()) {
+          String newOracle =
+              FreeTextTranslator.manageVoidAndUncompatibleMethods(method, prevOracle);
+          equivalentMethodMatch.setOracle(newOracle);
+          addOracle(method, equivalentMethodMatch, sourceCodeBuilder);
+        } else {
+          log.info(
+              "The following specification for method "
+                  + method.getSignature()
+                  + " was generated but discarded:\n"
+                  + prevOracle
+                  + "\n"
+                  + e.getLocalizedMessage()
+                  + "\n"
+                  + "Are you trying to compare different result types?"
+                  + "\n");
+
+          return false;
+        }
+        continue;
+      } catch (ClassNotFoundException e) {
+        // ignore
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      compilable = true;
+    }
+    return true;
+  }
+
+  /**
+   * Compilation check for equivalence specifications
+   *
+   * @param method the method the equivalence comment belongs to
+   * @return whether the condition compiles or not
+   */
+  public static boolean isSnippetCompilable(
+      DocumentedExecutable method, EquivalentMatch equivalentMethodMatch, ComplianceError ce) {
+    // String oracle = equivalentMethodMatch.getCodeSnippetText();
+    CodeSnippet snippet = equivalentMethodMatch.getCodeSnippet();
+    // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
+    // FIXME this should be checked also for returns translation
+    snippet = sobstituteKnownSpecialSymbols(snippet);
+    SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
+    sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
+    includeMethodResult(method, sourceCodeBuilder);
+    addOracle(method, snippet, sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
     } catch (CompilationException e) {
-      log.info(
-          "The following specification was generated but discarded:\n"
-              + oracle
-              + "\n"
-              + e.getLocalizedMessage()
-              + "\n"
-              + "Are you trying to compare different result types?"
-              + "\n");
+      ce.chooseErrorStrategy(e.getLocalizedMessage(), method, snippet);
       return false;
     } catch (ClassNotFoundException e) {
       // ignore
@@ -146,35 +195,9 @@ public class ComplianceChecks {
     return true;
   }
 
-  /**
-   * Compilation check for equivalence specifications
-   *
-   * @param method the method the equivalence comment belongs to
-   * @param condition the condition to compile
-   * @return whether the condition compiles or not
-   */
-  public static boolean isSnippetCompilable(
-      DocumentedExecutable method, EquivalentMatch equivalentMethodMatch, ComplianceError ce) {
-    // String oracle = equivalentMethodMatch.getCodeSnippetText();
-    CodeSnippet snippet = equivalentMethodMatch.getCodeSnippet();
-    // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
-    // FIXME this should be checked also for returns translation
-    SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
-    sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
-    includeMethodResult(method, sourceCodeBuilder);
-    addOracle(method, snippet, sourceCodeBuilder);
-    String sourceCode = sourceCodeBuilder.buildSource();
-    try {
-      compileSource(sourceCode);
-    } catch (CompilationException e) {
-      ce.build(e.getLocalizedMessage());
-      return false;
-    } catch (ClassNotFoundException e) {
-      // ignore
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    return true;
+  private static CodeSnippet sobstituteKnownSpecialSymbols(CodeSnippet snippet) {
+    snippet.addMatchToSymbol("this", Configuration.RECEIVER);
+    return snippet;
   }
 
   /**
@@ -199,7 +222,7 @@ public class ComplianceChecks {
     }
   }
 
-  private static boolean isGenericType(String methodReturnType) {
+  public static boolean isGenericType(String methodReturnType) {
     return methodReturnType.length() == 1 && Character.isUpperCase(methodReturnType.charAt(0));
   }
 
@@ -250,7 +273,10 @@ public class ComplianceChecks {
 
     List<String> links = method.getFreeText().getComment().getLinksContent();
     for (String link : links) {
-      if (!link.contains("#") && link.contains(".")) {
+      if (link.matches("[a-z].*")
+          && !link.contains("#")
+          && !link.contains("(")
+          && link.contains(".")) {
         sourceCodeBuilder.addImport(link);
       }
     }
@@ -297,27 +323,74 @@ public class ComplianceChecks {
    * Extracts and add to the source code information expressed in the given condition text.
    *
    * @param method documented executable the guard belongs to
-   * @param oracle the condition text
+   * @param snippet
    * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
    */
   private static void addOracle(
       DocumentedExecutable method, CodeSnippet snippet, SourceCodeBuilder sourceCodeBuilder) {
+    // FIXME this is comparison between method result and code snippet so build a legit method
+    // signature
+    // FIXME which body is the snippet and only then you can compare results
     String substitutedText = substituteArgs(sourceCodeBuilder, method, snippet.getSnippet());
+
     if (snippet.isExpression()) {
-      substitutedText = "if(" + substitutedText + ")";
+      substitutedText = "assert(" + substitutedText + ")" + ";";
     } else if (snippet.isTernary()) {
       substitutedText =
           method.getReturnType().getType().getTypeName() + " result = " + substitutedText + ";";
     } else if (snippet.isComplexSignature()) {
-      String equality;
-      String end = "";
-      if (primitiveTypes().contains(method.getReturnType().getType().getTypeName())) {
-        equality = Configuration.RETURN_VALUE + "==";
+      if (snippet.isComplexSignatureWithIncompatibleTypes()) {
+        substitutedText =
+            FreeTextTranslator.manageVoidAndUncompatibleMethods(method, snippet.getSnippet());
+        substitutedText = substituteArgs(sourceCodeBuilder, method, substitutedText);
+        if (substitutedText.contains(Configuration.RECEIVER_CLONE)) {
+          sourceCodeBuilder.addArgument(
+              method.getDeclaringClass().getTypeName(), Configuration.RECEIVER_CLONE);
+        }
       } else {
-        equality = Configuration.RETURN_VALUE + ".equals(";
-        end = ")";
+        String equality;
+        String end = "";
+        if (primitiveTypes().contains(method.getReturnType().getType().getTypeName())) {
+          equality = Configuration.RETURN_VALUE + "==";
+        } else {
+          equality = Configuration.RETURN_VALUE + ".equals(";
+          end = ")";
+        }
+        substitutedText = "assert(" + equality + substitutedText + ")" + end + ";";
       }
-      substitutedText = "if(" + equality + substitutedText + ")" + end;
+    }
+    sourceCodeBuilder.addCondition(substitutedText);
+    importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
+  }
+
+  /**
+   * Extracts and add to the source code information expressed in the given condition text.
+   *
+   * @param method documented executable the guard belongs to
+   * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
+   */
+  private static void addOracle(
+      DocumentedExecutable method, EquivalentMatch match, SourceCodeBuilder sourceCodeBuilder) {
+    String oracle = match.getOracle();
+    String condition = match.getCondition();
+    if (oracle.contains(Configuration.RECEIVER_CLONE)) {
+      sourceCodeBuilder.addArgument(
+          method.getDeclaringClass().getTypeName(), Configuration.RECEIVER_CLONE);
+    }
+    String substitutedText = substituteArgs(sourceCodeBuilder, method, oracle);
+    if (!condition.isEmpty()) {
+      String premises = "if (" + condition + ") {";
+      String conclusion = "}";
+      if (!substitutedText.contains("\n")) {
+        substitutedText = premises + "assert(" + substitutedText + ")" + ";" + conclusion;
+      } else {
+        substitutedText = premises + substitutedText + conclusion;
+      }
+      substitutedText = substituteArgs(sourceCodeBuilder, method, substitutedText);
+    } else if (!oracle.contains("\n")) {
+      // FIXME Oracle on more than one statement means comparison between object states. Though I
+      // don't like this
+      substitutedText = "assert(" + substitutedText + ")" + ";";
     }
     sourceCodeBuilder.addCondition(substitutedText);
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
@@ -332,8 +405,11 @@ public class ComplianceChecks {
    */
   private static void addOracle(
       DocumentedExecutable method, String oracle, SourceCodeBuilder sourceCodeBuilder) {
+    if (oracle.contains(Configuration.RECEIVER_CLONE)) {
+      sourceCodeBuilder.addArgument(
+          method.getDeclaringClass().getTypeName(), Configuration.RECEIVER_CLONE);
+    }
     String substitutedText = substituteArgs(sourceCodeBuilder, method, oracle);
-    substitutedText = "if(" + substitutedText + ")";
     sourceCodeBuilder.addCondition(substitutedText);
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
   }
