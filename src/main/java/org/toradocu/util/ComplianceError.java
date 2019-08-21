@@ -19,6 +19,7 @@ public class ComplianceError {
   private boolean errorSolved;
   private List<String> missingSymbols;
   private String unreportedException;
+  private String instanceOfClause;
   private boolean incompatibleTypes;
 
   // private Map<String, List<String>> incompatibleArgs = new HashMap<>();
@@ -29,6 +30,7 @@ public class ComplianceError {
     this.swappableMethods = new ArrayList<>();
     this.errorSolved = false;
     this.unreportedException = "";
+    this.instanceOfClause = "";
     this.incompatibleTypes = false;
   }
 
@@ -66,7 +68,23 @@ public class ComplianceError {
       manageUnreportedException(errorMessage);
     } else if (errorMessage.contains(INCOMPARABLE_TYPES)) {
       this.incompatibleTypes = true;
+    } else if (errorMessage.contains(CANNOT_APPLY_TYPE)) {
+      addInstanceOfClause(errorMessage);
     }
+  }
+
+  private void addInstanceOfClause(String errorMessage) {
+    this.instanceOfClause = "true";
+    //    errorMessage = errorMessage.replaceAll("\\)]", "");
+    //    String argMismatch = "argument mismatch;";
+    //    String argumentMismatchLine = errorMessage.substring(errorMessage.indexOf(argMismatch)
+    //    + argMismatch.length());
+    //    String[] types = argumentMismatchLine.split("cannot be converted to");
+    //    for(int i=0; i<types.length; i++) {
+    //        types[i] = types[i].replaceAll("<.*>", "");
+    //    }
+    // this.instanceOfClause = "if(" + types[1] + " instanceof " + types[0] + ")";
+    // java.util.Collection<E> cannot be converted to java.util.EnumSet<E>")
   }
 
   private void manageUnreportedException(String errorMessage) {
@@ -162,5 +180,9 @@ public class ComplianceError {
 
   public boolean isIncompatibleTypes() {
     return incompatibleTypes;
+  }
+
+  public String getInstanceOfClause() {
+    return instanceOfClause;
   }
 }

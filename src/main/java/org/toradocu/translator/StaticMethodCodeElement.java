@@ -17,6 +17,8 @@ public class StaticMethodCodeElement extends CodeElement<Method> {
   private String[] parameters;
   /** The arguments of this method. */
   private String[] args;
+  /** Return type of this method code element */
+  private String returnType;
 
   /**
    * Constructs and initializes a {@code StaticMethodCodeElement} that identifies the given static
@@ -41,6 +43,7 @@ public class StaticMethodCodeElement extends CodeElement<Method> {
     }
 
     addIdentifier(methodName);
+    this.returnType = method.getReturnType().getTypeName();
 
     if (method.getParameterCount() != 0) {
       String methodString = method.toGenericString();
@@ -87,5 +90,13 @@ public class StaticMethodCodeElement extends CodeElement<Method> {
       javaExpression = javaExpression.substring(0, javaExpression.length() - 2);
     }
     return javaExpression + ")";
+  }
+
+  public String getReturnType() {
+    return returnType;
+  }
+
+  public void setReturnType(String returnType) {
+    this.returnType = returnType;
   }
 }

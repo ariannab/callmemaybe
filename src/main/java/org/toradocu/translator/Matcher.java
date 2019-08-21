@@ -387,7 +387,8 @@ class Matcher {
         for (java.lang.reflect.Parameter myMethodParam : myMethodArgs) {
           Type myParamType = myMethodParam.getParameterizedType();
           if (otherMethodParams.contains(myParamType.getTypeName())
-              || isGenericType(myParamType.getTypeName(), otherMethodParams)) {
+              || isGenericType(myParamType.getTypeName(), otherMethodParams)
+              || isAssignableToAny(myParamType, otherMethodArgs)) {
             paramForMatch.add("args[" + pcount + "]");
             if (!receiver.equals("args[" + pcount + "]")) {
               firstCodeMatch = currentMatch;
@@ -442,6 +443,16 @@ class Matcher {
       }
     }
     return match;
+  }
+
+  private boolean isAssignableToAny(Type myParamType, String[] otherMethodArgs) {
+    String myType = myParamType.getTypeName();
+    for (String other : otherMethodArgs) {
+      if (areTypesAssignable(myType, other)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
@@ -681,9 +692,12 @@ class Matcher {
     return match;
   }
 
-  private boolean areTypesAssignable(String myMethodParamType, String currentMatchParamType) {
+  static boolean areTypesAssignable(String myMethodParamType, String currentMatchParamType) {
     if (currentMatchParamType.matches(".*<(.*)>")) {
       currentMatchParamType = currentMatchParamType.replaceAll("<.*>", "");
+    }
+    if (myMethodParamType.matches(".*<(.*)>")) {
+      myMethodParamType = myMethodParamType.replaceAll("<.*>", "");
     }
     Class myParamClass;
     Class otherParamClass;
@@ -693,7 +707,8 @@ class Matcher {
     } catch (Exception e) {
       return false;
     }
-    return otherParamClass.isAssignableFrom(myParamClass);
+    return otherParamClass.isAssignableFrom(myParamClass)
+        || myParamClass.isAssignableFrom(otherParamClass);
   }
 
   private boolean isParametricType(String currentMatch, String s) {

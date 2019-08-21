@@ -41,6 +41,7 @@ public final class CommentContent {
    */
   public CommentContent(String text) {
     this.text = text.replaceAll("\\s+", " ");
+    // this.text = text.replaceAll(";", ".");
     this.wordsMarkedAsCode = new HashMap<>();
     this.linksContent = new ArrayList<>();
     // String linkPattern = "\\{@(link|linkplain) (#?([^}^ ]+)( [^}]+)?)\\}";

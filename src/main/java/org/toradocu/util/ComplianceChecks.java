@@ -140,6 +140,9 @@ public class ComplianceChecks {
           equivalentMethodMatch.setOracle(newOracle);
           addOracle(method, equivalentMethodMatch, sourceCodeBuilder);
         } else {
+          if (!ce.getInstanceOfClause().isEmpty()) {
+            log.info("Equivalence found, but an instanceof check is needed");
+          }
           log.info(
               "The following specification for method "
                   + method.getSignature()
@@ -347,7 +350,7 @@ public class ComplianceChecks {
           sourceCodeBuilder.addArgument(
               method.getDeclaringClass().getTypeName(), Configuration.RECEIVER_CLONE);
         }
-      } else {
+      } else if (!method.getReturnType().getType().getTypeName().equals("void")) {
         String equality;
         String end = "";
         if (primitiveTypes().contains(method.getReturnType().getType().getTypeName())) {

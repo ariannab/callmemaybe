@@ -33,6 +33,9 @@ public class EquivalentMatch {
   /** Maps each String signature to a list of String arguments */
   private Map<String, List<String>> arguments;
 
+  /** Bounds signature with its class e.g. for format like ClassName#signature */
+  private Map<String, String> classesInSignatures;
+
   private String condition;
   private String oracle;
   /**
@@ -65,6 +68,7 @@ public class EquivalentMatch {
 
     this.methodSignatures = methodSignatures;
     this.documentedSignatures = new HashMap<String, CodeElement<?>>();
+    extractClasses();
     extractSimpleNames();
     this.equivalence = equivalence;
     this.similarity = similarity;
@@ -74,6 +78,22 @@ public class EquivalentMatch {
     this.isNegated = isNegated;
     this.oracle = "";
     this.condition = "";
+  }
+
+  private void extractClasses() {
+    String className = "";
+    this.classesInSignatures = new HashMap<>();
+    for (String methodSignature : this.methodSignatures.keySet()) {
+      if (Character.isUpperCase(methodSignature.charAt(0))) {
+        if (methodSignature.contains(".")) {
+          className = methodSignature.substring(0, methodSignature.indexOf("."));
+        }
+        if (methodSignature.contains("#")) {
+          className = methodSignature.substring(0, methodSignature.indexOf("#"));
+        }
+      }
+      this.classesInSignatures.put(methodSignature, className);
+    }
   }
 
   private void manageArgs() {
@@ -280,11 +300,15 @@ public class EquivalentMatch {
     return this.oracle;
   }
 
-  public void addDocumentedSignature(String signature, CodeElement<?> documentedExecutable) {
-    this.documentedSignatures.put(signature, documentedExecutable);
+  //  public void addDocumentedSignature(String signature, CodeElement<?> documentedExecutable) {
+  //    this.documentedSignatures.put(signature, documentedExecutable);
+  //  }
+
+  public Map<String, String> getClassesInSignatures() {
+    return classesInSignatures;
   }
 
-  public Map<String, CodeElement<?>> getDocumentedSignatures() {
-    return documentedSignatures;
-  }
+  //  public Map<String, CodeElement<?>> getDocumentedSignatures() {
+  //    return documentedSignatures;
+  //  }
 }

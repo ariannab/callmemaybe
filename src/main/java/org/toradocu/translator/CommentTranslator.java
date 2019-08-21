@@ -152,8 +152,14 @@ public class CommentTranslator {
     Map<DocumentedExecutable, ArrayList<EquivalentMatch>> specs = new HashMap<>();
     List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
     for (DocumentedExecutable member : members) {
+      //      if(member.getName().equals("toString") || member.getName().equals("hashCode") ||
+      // member.getName().equals("equals")){
+      //        // Do not attempt to produce cross oracles for core methods.
+      //        specs.put(member, new ArrayList<>());
+      //      }else {
       ArrayList<EquivalentMatch> spec = CommentTranslator.translate(documentedType, member);
       specs.put(member, spec);
+      //    }
     }
 
     return specs;

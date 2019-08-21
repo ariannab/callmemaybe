@@ -90,7 +90,7 @@ public class EquivalenceMatcher {
     boolean negation = false;
     String receiver;
     String methodRegex =
-        "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+        "(new )?(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
     // "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?)\\)$)+)(\\)+)?\\.?";
     String partialMethodRegex = "(!)?([A-Z]\\w+)?[.#]\\w+";
     Map<String, List<String>> argumentsMap = new HashMap<>();
@@ -115,26 +115,37 @@ public class EquivalenceMatcher {
     }
     signatureMatch.reset();
     while (signatureMatch.find() && !doRangesOverlap(keywordMatcher, signatureMatch)) {
+      if (signatureMatch.group(1) != null) {
+        // FIXME Not supporting "new"
+        break;
+      }
       receiver = "";
-      if (signatureMatch.groupCount() > 2 && signatureMatch.group(3) != null) {
-        receiver = signatureMatch.group(3);
+      if (signatureMatch.groupCount() > 3 && signatureMatch.group(4) != null) {
+        receiver = signatureMatch.group(4);
       }
       String signatureFound = signatureMatch.group(signatureGroup);
-      if (signatureFound.endsWith(".")) {
-        signatureFound = signatureFound.substring(0, signatureFound.length() - 1);
+      if (!signatureIsEqualMethod(signatureFound)) {
+        if (signatureFound.endsWith(".")) {
+          signatureFound = signatureFound.substring(0, signatureFound.length() - 1);
+        }
+        if (!receiver.isEmpty()) {
+          signatureFound = signatureFound.replace(receiver + ".", "");
+        }
+        signaturesFound.put(signatureFound, receiver);
+        negation = signatureMatch.group(2) != null;
+        List<String> arguments = new ArrayList<>();
+        if (!partial) {
+          arguments = extractArguments(signatureMatch, 8);
+        }
+        argumentsMap.put(signatureFound, arguments);
       }
-      if (!receiver.isEmpty()) {
-        signatureFound = signatureFound.replace(receiver + ".", "");
-      }
-      signaturesFound.put(signatureFound, receiver);
-      negation = signatureMatch.group(1) != null;
-      List<String> arguments = new ArrayList<>();
-      if (!partial) {
-        arguments = extractArguments(signatureMatch, 7);
-      }
-      argumentsMap.put(signatureFound, arguments);
     }
     return new EquivalentMatch(signaturesFound, equivalence, !equivalence, argumentsMap, negation);
+  }
+
+  private static boolean signatureIsEqualMethod(String signatureFound) {
+    // FIXME avoid involving the equals method in cross-oracles
+    return signatureFound.contains(".equals(") || signatureFound.endsWith("#equals");
   }
 
   private static boolean isSimilarity(String comment, KeywordsSet keywordsSet) {

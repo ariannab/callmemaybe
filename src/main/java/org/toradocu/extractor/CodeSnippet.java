@@ -25,14 +25,14 @@ public class CodeSnippet {
   }
 
   public void completeSnippet() {
-    Map<String, Boolean> unsolved =
+    Map<String, Boolean> toComplete =
         solvedSymbols
             .entrySet()
             .stream()
-            .filter(x -> !x.getValue())
+            .filter(Map.Entry::getValue)
             .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-    for (String symbol : unsolved.keySet()) {
+    for (String symbol : toComplete.keySet()) {
       String compilableExpression = symbols.get(symbol);
       if (compilableExpression != null) {
         String toSubstitute = symbol;
@@ -49,6 +49,7 @@ public class CodeSnippet {
 
   public void addMatchToSymbol(String symbol, String match) {
     this.symbols.put(symbol, match);
+    this.solvedSymbols.put(symbol, true);
   }
 
   public Map<String, String> getSymbols() {
