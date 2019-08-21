@@ -24,7 +24,7 @@ public class JsonOutput {
   public List<ThrowsTagOutput> throwsTags;
   public EquivalenceOutput equivalence;
 
-  public JsonOutput(DocumentedExecutable member, ArrayList<EquivalentMethodMatch> specification) {
+  public JsonOutput(DocumentedExecutable member, ArrayList<EquivalentMatch> specification) {
     // TODO translate the executable member to a serializable format
     this.signature = member.getSignature();
     this.name = member.getName();
@@ -46,9 +46,13 @@ public class JsonOutput {
   }
 
   private void createEquivalences(
-      DocumentedExecutable member, ArrayList<EquivalentMethodMatch> specification) {
+      DocumentedExecutable member, ArrayList<EquivalentMatch> specification) {
     String oracle = "";
-    for (EquivalentMethodMatch m : specification) {
+    int i = 0;
+    for (EquivalentMatch m : specification) {
+      if (i > 0) {
+        oracle += " && ";
+      }
       if (!m.getOracle().isEmpty()) {
         oracle += m.getOracle();
         //        if (specification.size() > 1) {
@@ -56,10 +60,12 @@ public class JsonOutput {
         //          oracle += ";";
         //        }
       }
+      i++;
     }
     this.equivalence =
         new EquivalenceOutput(
             member.getFreeText().getComment().getText(),
+            member.getSignature(),
             member.getFreeText().getKind().toString(),
             oracle);
   }

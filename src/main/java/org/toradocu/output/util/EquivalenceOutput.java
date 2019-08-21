@@ -2,8 +2,15 @@ package org.toradocu.output.util;
 
 public class EquivalenceOutput extends TagOutput {
 
-  public EquivalenceOutput(String comment, String kind, String condition) {
+  private String member;
+
+  public EquivalenceOutput(String comment, String method, String kind, String condition) {
     super(comment, kind, condition);
+    this.member = method;
+  }
+
+  public String getMember() {
+    return this.member;
   }
 
   @Override
