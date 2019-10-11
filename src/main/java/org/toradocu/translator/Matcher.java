@@ -133,7 +133,8 @@ class Matcher {
       String comment) {
 
     String predicate = proposition.getPredicate();
-    // Special case to handle predicates about arrays' length. We need a more general solution.
+    // FIXME Special case to handle predicates about arrays' length and iteators. We need a more
+    // general solution.
     if (subject.getJavaCodeElement().toString().contains("[]")) {
       final java.util.regex.Matcher lengthPattern =
           Pattern.compile("has length ([0-9]+|zero)").matcher(predicate);
@@ -172,6 +173,8 @@ class Matcher {
             + subject.getJavaExpression()
             + ".length==0";
       }
+    } else if (subject.getIdentifiers().contains("Iterable") && predicate.equals("is empty")) {
+      return "!" + subject.getJavaExpression() + ".iterator().hasNext()";
     }
 
     // General case

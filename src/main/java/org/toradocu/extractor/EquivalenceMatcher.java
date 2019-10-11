@@ -31,6 +31,7 @@ public class EquivalenceMatcher {
                 "like",
                 "identical",
                 "behaves exactly",
+                "behaves identically",
                 "equal to",
                 "same"
                 // "same as",
@@ -76,7 +77,7 @@ public class EquivalenceMatcher {
       if (keywordMatcher.find()) {
         boolean similarity = isSimilarity(comment, keywordsSet);
         boolean equivalence = !similarity;
-        match = buildMatchWithSignatures(comment, word, keywordMatcher, equivalence);
+        match = buildMatchWithSignatures(comment, keywordMatcher, equivalence);
         if (codeSnippet != null) {
           match.setCodeSnippet(codeSnippet);
         }
@@ -86,7 +87,7 @@ public class EquivalenceMatcher {
   }
 
   private static EquivalentMatch buildMatchWithSignatures(
-      String comment, String word, Matcher keywordMatcher, boolean equivalence) {
+      String comment, Matcher keywordMatcher, boolean equivalence) {
     boolean negation = false;
     String receiver;
     String methodRegex =
@@ -132,7 +133,12 @@ public class EquivalenceMatcher {
           signatureFound = signatureFound.replace(receiver + ".", "");
         }
         signaturesFound.put(signatureFound, receiver);
-        negation = signatureMatch.group(2) != null;
+        if (partial) {
+          // FIXME not very nice, and in general this group-management should be improved
+          negation = signatureMatch.group(1) != null;
+        } else {
+          negation = signatureMatch.group(2) != null;
+        }
         List<String> arguments = new ArrayList<>();
         if (!partial) {
           arguments = extractArguments(signatureMatch, 8);

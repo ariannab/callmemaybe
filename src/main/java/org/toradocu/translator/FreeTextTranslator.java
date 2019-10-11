@@ -38,7 +38,7 @@ public class FreeTextTranslator {
 
     CommentContent commentContent = excMember.getFreeText().getComment();
     String commentText = commentContent.getText();
-    String[] sentences = commentText.split("[.] ");
+    String[] sentences = commentText.split("\\. |(?<!\\.\\.)\\.\\)");
     ArrayList<EquivalentMatch> matches = new ArrayList<>();
     EquivalentMatch equivalenceMatch;
 
@@ -63,7 +63,7 @@ public class FreeTextTranslator {
           String condition = extractCondition(sentence);
           if (equivalenceMatch.isSimilarity()
               && !equivalenceMatch.getMethodSignatures().isEmpty()
-              && equivalenceMatch.getCodeSnippet() != null
+              // && equivalenceMatch.getCodeSnippet() != null
               && condition != null) {
             // Similarity, e.g. conditional equivalence
             translatedCondition =
@@ -153,26 +153,21 @@ public class FreeTextTranslator {
     if (condition != null
         && equivalenceMatch.getCodeSnippet() != null
         && condition.contains(equivalenceMatch.getCodeSnippetText())) {
-      // FIXME in the following lines you are only compiling the condition snippet; but the
-      // FIXME condition refers to an equivalence w/ another method: solve it as usual!
-
-      // If you're here, the condition is in the form of a snippet.
-      // 1) Attempt to compile it as usual.
+      // Condition is in form of snippet
       boolean compilable = isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
       if (compilable) {
-        //        // 2) Then, if it compiles, insert it in an if() in the oracle
-        //        matchEquivalentMethod(excMember, equivalenceMatch, condition, documentedType);
-        //        String finalOracle = prepareResultWithCondition(excMember, equivalenceMatch);
-        //        equivalenceMatch.setOracle(finalOracle);
-        //        // 3) Finally, check that the overall oracle compiles
-        //        compilable = ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch, "");
-        //        if (!compilable) {
-        //          equivalenceMatch.setOracle("");
-        //        } else {
-        //          // FIXME probably the condition is NOT finalOracle...check this flow...
-        //          matchEquivalentMethod(excMember, equivalenceMatch, finalOracle, documentedType);
-        //        }
         return equivalenceMatch.getCodeSnippet().getSnippet();
+      }
+    } else {
+      // Condition is in form of natural language
+      final List<PropositionSeries> extractedPropositions =
+          Parser.parse(new CommentContent(condition), excMember);
+      for (PropositionSeries prop : extractedPropositions) {
+        BasicTranslator.translate(prop, excMember, condition);
+        String translation = prop.getTranslation();
+        if (!translation.isEmpty()) {
+          return translation;
+        }
       }
     }
     return "";
@@ -263,6 +258,20 @@ public class FreeTextTranslator {
               extractMatchingCodeElementFromType(
                   excMember, matchedType, simpleMethodName, className);
         }
+      } else if (!equivalenceMatch.getClassesInSignatures().get(methodSignature).isEmpty()) {
+        String externalClass = equivalenceMatch.getClassesInSignatures().get(methodSignature);
+
+        String[] javaPackages = {"java.lang.", "java.util."};
+        for (String p : javaPackages) {
+          try {
+            className = p + externalClass;
+            matchedType = Reflection.getClass(className);
+          } catch (ClassNotFoundException e) {
+          }
+          if (matchedType != null) {
+            equivalenceMatch.setImportsNeeded(className);
+          }
+        }
       } else if (matchingCodeElem.isEmpty()
           || !equivalenceMatch.getClassesInSignatures().get(methodSignature).isEmpty()
               && (!excMember.getLinksContent().isEmpty()
@@ -319,12 +328,12 @@ public class FreeTextTranslator {
             }
           }
         }
-        if (matchedType != null) {
-          matchingCodeElem =
-              extractMatchingCodeElementFromType(
-                  excMember, matchedType, simpleMethodName, className);
-        }
       }
+      if (matchedType != null) {
+        matchingCodeElem =
+            extractMatchingCodeElementFromType(excMember, matchedType, simpleMethodName, className);
+      }
+
       if (matchingCodeElem != null && !matchingCodeElem.isEmpty()) {
         List<CodeElement<?>> sortedCodeElem = new ArrayList<>(matchingCodeElem);
         if (partial) {
@@ -585,6 +594,12 @@ public class FreeTextTranslator {
 
     if (!ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch)) {
       equivalenceMatch.setOracle("");
+    } else {
+      if (!condition.isEmpty()) {
+        String premises = "if(" + condition + ") {";
+        String end = "}";
+        equivalenceMatch.setOracle(premises + oracle + end);
+      }
     }
   }
 

@@ -29,7 +29,7 @@ public class CodeSnippet {
         solvedSymbols
             .entrySet()
             .stream()
-            .filter(Map.Entry::getValue)
+            .filter(e -> !e.getValue())
             .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
     for (String symbol : toComplete.keySet()) {
@@ -49,7 +49,7 @@ public class CodeSnippet {
 
   public void addMatchToSymbol(String symbol, String match) {
     this.symbols.put(symbol, match);
-    this.solvedSymbols.put(symbol, true);
+    this.solvedSymbols.put(symbol, false);
   }
 
   public Map<String, String> getSymbols() {

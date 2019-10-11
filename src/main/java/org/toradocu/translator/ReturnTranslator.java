@@ -516,7 +516,7 @@ public class ReturnTranslator {
    * @param comment the comment text
    * @return a String predicate match if any, or null
    */
-  private static String tryPredicateMatch(
+  static String tryPredicateMatch(
       DocumentedExecutable method,
       List<SemanticGraph> semanticGraphs,
       List<PropositionSeries> extractedPropositions,
