@@ -74,7 +74,19 @@ public class ComplianceError {
   }
 
   private void addInstanceOfClause(String errorMessage) {
-    this.instanceOfClause = "true";
+    /*
+      [kind=ERROR, line=5, message=method complementOf in class java.util.EnumSet<E>
+      cannot be applied to given types;
+    required: java.util.EnumSet<E>
+    found: java.util.Collection<E>
+    reason: cannot infer type-variable(s) E
+      (argument mismatch; java.util.Collection<E> cannot be converted to java.util.EnumSet<E>)]
+       */
+    String requiredType = "required: ";
+    this.instanceOfClause =
+        errorMessage.substring(errorMessage.indexOf(requiredType) + requiredType.length());
+    this.instanceOfClause = this.instanceOfClause.substring(0, this.instanceOfClause.indexOf("\n"));
+
     //    errorMessage = errorMessage.replaceAll("\\)]", "");
     //    String argMismatch = "argument mismatch;";
     //    String argumentMismatchLine = errorMessage.substring(errorMessage.indexOf(argMismatch)
@@ -118,7 +130,6 @@ public class ComplianceError {
 
   private boolean mustSwapArgs(String errorMessage) {
     String errorMessageStructure = "Unable to compile the source\\n\\[.*\\n(.*)\\n(.*)";
-    String methodName = "";
     java.util.regex.Matcher structureMatcher =
         Pattern.compile(errorMessageStructure).matcher(errorMessage);
     if (structureMatcher.find()) {

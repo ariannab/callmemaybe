@@ -127,6 +127,8 @@ class PrecisionRecallTest {
 
     argsList.add("--cross-oracles");
     argsList.add("true");
+    argsList.add("--disable-semantics");
+    argsList.add("true");
 
     final String translator = System.getProperty("org.toradocu.translator");
     if (translator != null && translator.equals("tcomment")) {
@@ -199,9 +201,9 @@ class PrecisionRecallTest {
       List<JsonOutput> actualResult = GsonInstance.gson().fromJson(outFile, collectionType);
       List<JsonOutput> goalResult = GsonInstance.gson().fromJson(goalFile, collectionType);
       final Stats stats = Stats.getEqStats(targetClass, actualResult, goalResult, report);
-      if (!report.toString().isEmpty()) {
-        report.insert(0, message + "\n");
-      }
+      // if (!report.toString().isEmpty()) {
+      report.insert(0, message + "\n");
+      // }
       System.out.println(report);
       return stats;
     } catch (IOException e) {

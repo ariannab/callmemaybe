@@ -103,6 +103,21 @@ task issta18(type: Test) {
   ignoreFailures = true
 }
 
+task accuracyEQ(type: Test) {
+  include 'org/toradocu/accuracy/equivalences/dataset/'
+  enableAssertions = false
+}
+
+task accuracyEQSB15(type: Test) {
+  include 'org/toradocu/accuracy/equivalences/sbes15/'
+  enableAssertions = false
+}
+
+task accuracyEQSB14(type: Test) {
+  include 'org/toradocu/accuracy/equivalences/sbes14/'
+  enableAssertions = false
+}
+
 task copyIssta2018GoalFiles(type: Copy) {
   def basePath = 'src/test/resources/goal-output'
   from(basePath) {
@@ -272,7 +287,7 @@ dependencies {
   compile 'org.deeplearning4j:deeplearning4j-nlp:0.9.1'
   compile 'org.nd4j:nd4j-native-platform:0.9.1'
   compile 'org.jsoup:jsoup:1.8.3' // JSoup used only to remove HTML tags in comments.
-  compile 'com.github.javaparser:javaparser-core:3.5.4'
+  compile 'com.github.javaparser:javaparser-core:3.11.0'
   compile 'com.beust:jcommander:1.69'
   compile 'com.google.code.gson:gson:2.8.0'
   compile 'commons-io:commons-io:2.5'

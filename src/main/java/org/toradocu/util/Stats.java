@@ -342,9 +342,9 @@ public class Stats {
    *
    * @param actualMethodList methods with tags translated by Toradocu
    * @param expectedMethodList methods with tags manually translated
+   * @return statistics for each method of the given lists
    * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
    *     not of the same size
-   * @return statistics for each method of the given lists
    */
   public static List<Stats> getStats(
       List<JsonOutput> actualMethodList, List<JsonOutput> expectedMethodList) {
@@ -388,9 +388,9 @@ public class Stats {
    *
    * @param actualMethodList methods with tags translated by Toradocu
    * @param expectedMethodList methods with tags manually translated
+   * @return statistics for each method of the given lists
    * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
    *     not of the same size
-   * @return statistics for each method of the given lists
    */
   public static List<Stats> getEqStats(
       List<JsonOutput> actualMethodList, List<JsonOutput> expectedMethodList) {
@@ -428,9 +428,9 @@ public class Stats {
    * @param actualMethodList methods with tags translated by Toradocu
    * @param expectedMethodList methods with tags manually translated
    * @param output the output message to be populated
+   * @return statistics for each method of the given lists, aggregated per class
    * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
    *     not of the same size
-   * @return statistics for each method of the given lists, aggregated per class
    */
   public static Stats getStats(
       String targetClass,
@@ -490,21 +490,21 @@ public class Stats {
       TagOutput expectedTag = expectedTagsArray[tagIndex];
 
       if (actualTag != null && expectedTag != null) {
-        String expectedCondition = expectedTag.getCondition().replace(" ", "");
-        String actualCondition = actualTag.getCondition().replace(" ", "");
+        String expectedConditionNoSpace = expectedTag.getCondition().replaceAll("\\n ", "");
+        String actualConditionNoSpace = actualTag.getCondition().replaceAll("\\n ", "");
 
-        if (actualCondition.equals(expectedCondition)) {
-          if (!expectedCondition.isEmpty()) {
+        if (actualConditionNoSpace.equals(expectedConditionNoSpace)) {
+          if (!expectedConditionNoSpace.isEmpty()) {
             stats.addCorrectTranslation(kind);
             outputMessage.append("Correct ");
           } else {
             continue; // No output message when Toradocu does not output anything as expected.
           }
         } else {
-          if (expectedCondition.isEmpty()) {
+          if (expectedConditionNoSpace.isEmpty()) {
             stats.addUnexpectedTranslation(kind);
             outputMessage.append("Unexpected ");
-          } else if (actualCondition.isEmpty()) {
+          } else if (actualConditionNoSpace.isEmpty()) {
             stats.addMissingTranslation(kind);
             outputMessage.append("Missing ");
           } else {
@@ -517,9 +517,9 @@ public class Stats {
             .append(" condition. CommentContent: ")
             .append(actualTag.getComment())
             .append("\n\tExpected condition: ")
-            .append(expectedCondition)
+            .append(expectedTag.getCondition())
             .append("\n\tActual condition: ")
-            .append(actualCondition)
+            .append(actualTag.getCondition())
             .append("\n");
       }
     }
@@ -541,24 +541,26 @@ public class Stats {
     //      TagOutput expectedTag = expectedTagsArray[tagIndex];
 
     if (actualTag != null && expectedTag != null) {
-      String expectedCondition = expectedTag.getCondition().replace(" ", "");
-      String actualCondition = actualTag.getCondition().replace(" ", "");
+      String expectedConditionNoSpace = expectedTag.getCondition().replaceAll("[\\n ]", "");
+      String actualConditionNoSpace = actualTag.getCondition().replaceAll("[\\n ]", "");
 
-      if (expectedCondition.isEmpty() && actualCondition.isEmpty()) {
+      if (expectedConditionNoSpace.isEmpty() && actualConditionNoSpace.isEmpty()) {
         // Both empty, nothing interesting to print!
         return outputMessage;
       }
 
-      if (actualCondition.equals(expectedCondition)) {
-        if (!expectedCondition.isEmpty()) {
+      outputMessage.append("\n\n");
+
+      if (actualConditionNoSpace.equals(expectedConditionNoSpace)) {
+        if (!expectedConditionNoSpace.isEmpty()) {
           stats.addCorrectTranslation(kind);
           outputMessage.append("Correct ");
         }
       } else {
-        if (expectedCondition.isEmpty()) {
+        if (expectedConditionNoSpace.isEmpty()) {
           stats.addUnexpectedTranslation(kind);
           outputMessage.append("Unexpected ");
-        } else if (actualCondition.isEmpty()) {
+        } else if (actualConditionNoSpace.isEmpty()) {
           stats.addMissingTranslation(kind);
           outputMessage.append("Missing ");
         } else {
@@ -568,12 +570,16 @@ public class Stats {
       }
       outputMessage
           .append(kind)
-          .append(" condition. CommentContent: ")
+          .append("condition ")
+          .append("for method: ")
+          .append(actualTag.getMember().substring(0, actualTag.getMember().indexOf(")") + 1))
+          .append("\n")
+          .append("CommentContent: ")
           .append(actualTag.getComment())
           .append("\n\tExpected condition: ")
-          .append(expectedCondition)
+          .append(expectedTag.getCondition())
           .append("\n\tActual condition: ")
-          .append(actualCondition)
+          .append(actualTag.getCondition())
           .append("\n");
     }
     //    }
@@ -590,9 +596,9 @@ public class Stats {
    * @param actualMethodList methods with tags translated by Toradocu
    * @param expectedMethodList methods with tags manually translated
    * @param output the output message to be populated
+   * @return statistics for each method of the given lists, aggregated per class
    * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
    *     not of the same size
-   * @return statistics for each method of the given lists, aggregated per class
    */
   public static Stats getEqStats(
       String targetClass,

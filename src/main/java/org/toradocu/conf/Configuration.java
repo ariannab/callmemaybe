@@ -17,6 +17,8 @@ public enum Configuration {
   public static final String RECEIVER = "receiverObjectID";
   /** Keyword that identifies method result in generated specifications. */
   public static final String RETURN_VALUE = "methodResultID";
+  /** Keyword that identifies receiver object clone in generated specifications. */
+  public static final String RECEIVER_CLONE = "receiverObjectClone";
 
   // General options
 
@@ -31,7 +33,7 @@ public enum Configuration {
       description = "Path of the directory containing source files of the target class",
       converter = PathConverter.class,
       required = true)
-  public Path sourceDir;
+  public static Path sourceDir;
 
   @Parameter(
       names = "--class-dir",

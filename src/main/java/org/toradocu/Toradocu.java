@@ -22,7 +22,7 @@ import org.slf4j.impl.SimpleLogger;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedType;
-import org.toradocu.extractor.EquivalentMethodMatch;
+import org.toradocu.extractor.EquivalentMatch;
 import org.toradocu.extractor.JavadocExtractor;
 import org.toradocu.extractor.ParameterNotFoundException;
 import org.toradocu.generator.OracleGenerator;
@@ -92,7 +92,7 @@ public class Toradocu {
     if (configuration.getConditionTranslatorInput() == null) {
       final JavadocExtractor javadocExtractor = new JavadocExtractor();
       try {
-        documentedType = javadocExtractor.extract(targetClass, configuration.sourceDir.toString());
+        documentedType = javadocExtractor.extract(targetClass, Configuration.sourceDir.toString());
         members = documentedType.getDocumentedExecutables();
       } catch (ParameterNotFoundException e) {
         log.error(e.getMessage() + "\n" + Arrays.toString(e.getStackTrace()));
@@ -112,7 +112,7 @@ public class Toradocu {
                 + "\nError stack trace:\n"
                 + Arrays.toString(e.getStackTrace()));
         System.exit(1);
-      } catch (FileNotFoundException e) {
+      } catch (IOException e) {
         e.printStackTrace(); // TODO Print a more meaningful message!
         System.exit(1);
       }
@@ -141,8 +141,7 @@ public class Toradocu {
 
     if (configuration.isConditionTranslationEnabled()) {
       Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
-      Map<DocumentedExecutable, ArrayList<EquivalentMethodMatch>> equivalenceSpecs =
-          new HashMap<>();
+      Map<DocumentedExecutable, ArrayList<EquivalentMatch>> equivalenceSpecs = new HashMap<>();
 
       List<JsonOutput> jsonOutputs = new ArrayList<>();
       // Use @tComment or the standard condition translator to translate comments.
@@ -163,12 +162,11 @@ public class Toradocu {
                     configuration.getConditionTranslatorOutput().toPath(),
                     StandardCharsets.UTF_8)) {
 
-              List<List<EquivalentMethodMatch>> equivalences =
-                  new ArrayList<>(equivalenceSpecs.values());
-              for (List<EquivalentMethodMatch> subMatches : equivalences) {
+              List<List<EquivalentMatch>> equivalences = new ArrayList<>(equivalenceSpecs.values());
+              for (List<EquivalentMatch> subMatches : equivalences) {
                 subMatches.removeIf(e -> !e.isEquivalence() && !e.isSimilarity());
               }
-              equivalences.removeIf(List::isEmpty);
+              // equivalences.removeIf(List::isEmpty);
               if (!equivalences.isEmpty()) {
                 for (DocumentedExecutable executable : equivalenceSpecs.keySet()) {
                   jsonOutputs.add(new JsonOutput(executable, equivalenceSpecs.get(executable)));
