@@ -1,0 +1,279 @@
+[
+  {
+    "signature": "rowKeySet()",
+    "name": "rowKeySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedSet<R>",
+      "name": "java.util.SortedSet<R>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rowKeySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "columnComparator()",
+    "name": "columnComparator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<? super C>",
+      "name": "java.util.Comparator<? super C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "columnComparator()",
+      "comment": "Returns the comparator that orders the columns. With natural ordering, Ordering#natural() is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "create()",
+    "name": "create",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable<R, C, V>",
+      "name": "com.google.common.collect.TreeBasedTable<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "create()",
+      "comment": "Creates an empty TreeBasedTable that uses the natural orderings of both row and column keys. The method signature specifies R extends Comparable with a raw Comparable, instead of R extends Comparable<? super R>, and the same for C. That's necessary to support classes defined without generics.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rowComparator()",
+    "name": "rowComparator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<? super R>",
+      "name": "java.util.Comparator<? super R>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rowComparator()",
+      "comment": "Returns the comparator that orders the rows. With natural ordering, Ordering#natural() is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "row(R rowKey)",
+    "name": "row",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedMap<C, V>",
+      "name": "java.util.SortedMap<C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      }
+    ],
+    "equivalence": {
+      "member": "row(R rowKey)",
+      "comment": "{@inheritDoc} Because a TreeBasedTable has unique sorted values for a given row, this method returns a SortedMap, instead of the Map specified in the Table interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rowMap()",
+    "name": "rowMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedMap<R, java.util.Map<C, V>>",
+      "name": "java.util.SortedMap<R, java.util.Map<C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rowMap()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createColumnKeyIterator()",
+    "name": "createColumnKeyIterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<C>",
+      "name": "java.util.Iterator<C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createColumnKeyIterator()",
+      "comment": "Overridden column iterator to return columns values in globally sorted order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.collect.TreeBasedTable(java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)",
+    "name": "com.google.common.collect.TreeBasedTable",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "rowComparator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "columnComparator"
+      }
+    ],
+    "equivalence": {
+      "member": "com.google.common.collect.TreeBasedTable(java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "create(java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)",
+    "name": "create",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable<R, C, V>",
+      "name": "com.google.common.collect.TreeBasedTable<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "rowComparator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "columnComparator"
+      }
+    ],
+    "equivalence": {
+      "member": "create(java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)",
+      "comment": "Creates an empty TreeBasedTable that is ordered by the specified comparators.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "create(com.google.common.collect.TreeBasedTable<R, C, ? extends V> table)",
+    "name": "create",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable",
+      "name": "TreeBasedTable",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.TreeBasedTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.TreeBasedTable<R, C, V>",
+      "name": "com.google.common.collect.TreeBasedTable<R, C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.TreeBasedTable",
+          "name": "TreeBasedTable",
+          "isArray": false
+        },
+        "name": "table"
+      }
+    ],
+    "equivalence": {
+      "member": "create(com.google.common.collect.TreeBasedTable<R, C, ? extends V> table)",
+      "comment": "Creates a TreeBasedTable with the same mappings and sort order as the specified TreeBasedTable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

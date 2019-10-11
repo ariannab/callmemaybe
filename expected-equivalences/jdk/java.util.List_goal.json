@@ -1,0 +1,830 @@
+[
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends the specified element to the end of this list (optional operation). Lists that support this operation may place limitations on what elements may be added to this list. In particular, some lists will refuse to add null elements, and others will impose restrictions on the type of elements that may be added. List classes should clearly specify in their documentation any restrictions on what elements may be added.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(java.lang.Object o)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element. More formally, returns the highest index i such that (o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))), or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(java.util.Collection<?> c)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retains only the elements in this list that are contained in the specified collection (optional operation). In other words, removes from this list all of its elements that are not contained in the specified collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all of the elements from this list (optional operation). The list will be empty after this call returns.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsAll(java.util.Collection<?> c)",
+    "name": "containsAll",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this list contains all of the elements of the specified collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the hash code value for this list. The hash code of a list is defined to be the result of the following calculation: int hashCode = 1; for (E e : list) hashCode = 31*hashCode + (e==null ? 0 : e.hashCode());  This ensures that list1.equals(list2) implies that list1.hashCode()==list2.hashCode() for any two lists, list1 and list2, as required by the general contract of Object#hashCode.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.UnaryOperator<E> operator)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.UnaryOperator",
+          "name": "UnaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Replaces each element of this list with the result of applying the operator to that element. Errors or runtime exceptions thrown by the operator are relayed to the caller. @implSpec The default implementation is equivalent to, for this list}: {@code final ListIterator<E> li = list.listIterator(); while (li.hasNext()) { li.set(operator.apply(li.next()));  } If the list's list-iterator does not support the set operation then an UnsupportedOperationException will be thrown when replacing the first element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subList(int fromIndex, int toIndex)",
+    "name": "subList",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<E>",
+      "name": "java.util.List<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive. (If fromIndex and toIndex are equal, the returned list is empty.) The returned list is backed by this list, so non-structural changes in the returned list are reflected in this list, and vice-versa. The returned list supports all of the optional list operations supported by this list. This method eliminates the need for explicit range operations (of the sort that commonly exist for arrays). Any operation that expects a list can be used as a range operation by passing a subList view instead of a whole list. For example, the following idiom removes a range of elements from a list: list.subList(from, to).clear();  Similar idioms may be constructed for indexOf and lastIndexOf, and all of the algorithms in the Collections class can be applied to a subList. The semantics of the list returned by this method become undefined if the backing list (i.e., this list) is structurally modified in any way other than via the returned list. (Structural modifications are those that change the size of this list, or otherwise perturb it in such a fashion that iterations in progress may yield incorrect results.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(java.lang.Object o)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element. More formally, returns the lowest index i such that (o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))), or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(T[] a)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an array containing all of the elements in this list in proper sequence (from first to last element); the runtime type of the returned array is that of the specified array. If the list fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this list. If the list fits in the specified array with room to spare (i.e., the array has more elements than the list), the element in the array immediately following the end of the list is set to null. (This is useful in determining the length of the list only if the caller knows that the list does not contain any null elements.) Like the #toArray() method, this method acts as bridge between array-based and collection-based APIs. Further, this method allows precise control over the runtime type of the output array, and may, under certain circumstances, be used to save allocation costs. Suppose x is a list known to contain only strings. The following code can be used to dump the list into a newly allocated array of String: String[] y = x.toArray(new String[0]);  Note that toArray(new Object[0]) is identical in function to toArray().",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.toArray(new Object[0]).equals(receiverObjectID.toArray())"
+    }
+  },
+  {
+    "signature": "set(int index, E element)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "equivalence": {
+      "comment": "Replaces the element at the specified position in this list with the specified element (optional operation).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if this list contains no elements.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(int index)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes the element at the specified position in this list (optional operation). Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes the first occurrence of the specified element from this list, if it is present (optional operation). If this list does not contain the element, it is unchanged. More formally, removes the element with the lowest index i such that (o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))) (if such an element exists). Returns true if this list contained the specified element (or equivalently, if this list changed as a result of the call).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listIterator()",
+    "name": "listIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ListIterator<E>",
+      "name": "java.util.ListIterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a list iterator over the elements in this list (in proper sequence).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an iterator over the elements in this list in proper sequence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E>",
+      "name": "java.util.Spliterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates a Spliterator over the elements in this list. The Spliterator reports Spliterator#SIZED and Spliterator#ORDERED. Implementations should document the reporting of additional characteristic values. @implSpec The default implementation creates a <a href=\"Spliterator.html#binding\">late-binding</a> spliterator from the list's Iterator. The spliterator inherits the fail-fast properties of the list's iterator. @implNote The created Spliterator additionally reports Spliterator#SUBSIZED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an array containing all of the elements in this list in proper sequence (from first to last element). The returned array will be \"safe\" in that no references to it are maintained by this list. (In other words, this method must allocate a new array even if this list is backed by an array). The caller is thus free to modify the returned array. This method acts as bridge between array-based and collection-based APIs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the element at the specified position in this list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int index, E element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "equivalence": {
+      "comment": "Inserts the specified element at the specified position in this list (optional operation). Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(int index, java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Inserts all of the elements in the specified collection into this list at the specified position (optional operation). Shifts the element currently at that position (if any) and any subsequent elements to the right (increases their indices). The new elements will appear in this list in the order that they are returned by the specified collection's iterator. The behavior of this operation is undefined if the specified collection is modified while the operation is in progress. (Note that this will occur if the specified collection is this list, and it's nonempty.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.util.Collection<?> c)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes from this list all of its elements that are contained in the specified collection (optional operation).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this list contains the specified element. More formally, returns true if and only if this list contains at least one element e such that (o==null&nbsp;?&nbsp;e==null&nbsp;:&nbsp;o.equals(e)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listIterator(int index)",
+    "name": "listIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ListIterator<E>",
+      "name": "java.util.ListIterator<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list. The specified index indicates the first element that would be returned by an initial call to ListIterator#next next. An initial call to ListIterator#previous previous would return the element with the specified index minus one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the number of elements in this list. If this list contains more than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sort(java.util.Comparator<? super E> c)",
+    "name": "sort",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sorts this list using the supplied Comparator to compare elements. @implSpec The default implementation is equivalent to, for this {@code list}: Collections.sort(list, c)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Compares the specified object with this list for equality. Returns true if and only if the specified object is also a list, both lists have the same size, and all corresponding pairs of elements in the two lists are equal. (Two elements e1 and e2 are equal if (e1==null ? e2==null : e1.equals(e2)).) In other words, two lists are defined to be equal if they contain the same elements in the same order. This definition ensures that the equals method works properly across different implementations of the List interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.List",
+      "name": "List",
+      "isArray": false
+    },
+    "targetClass": "java.util.List",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator (optional operation). The behavior of this operation is undefined if the specified collection is modified while the operation is in progress. (Note that this will occur if the specified collection is this list, and it's nonempty.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

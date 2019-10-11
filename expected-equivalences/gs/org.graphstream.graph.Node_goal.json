@@ -1,0 +1,1089 @@
+[
+  {
+    "signature": "getBreadthFirstIterator()",
+    "name": "getBreadthFirstIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator for breadth first exploration of the graph, starting at this node.  If the graph is not connected, only a part of it will be explored. By default, this iterator will respect edge orientation.   This method is implicitly generic and return an Iterator over something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedNode> ite = node.getBreadthFirstIterator(); </pre> the method will return an Iterator<ExtendedNode>. If no left part exists, method will just return an Iterator<Node>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeSet()",
+    "name": "getEdgeSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<T>",
+      "name": "java.util.Collection<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of all entering and leaving edges.  This method is implicitly generic and return an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterable<ExtendedEdge> ite = node.getEdgeSet(); </pre> the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Override the Object.toString() method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDepthFirstIterator()",
+    "name": "getDepthFirstIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator for depth first exploration of the graph, starting at this node.  If the graph is not connected, only a part of it will be explored. By default, this iterator will respect edge orientation.   This method is implicitly generic and return an Iterator over something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedNode> ite = node.getDepthFirstIterator(); </pre> the method will return an Iterator<ExtendedNode>. If no left part exists, method will just return an Iterator<Node>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNeighborNodeIterator()",
+    "name": "getNeighborNodeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator on the set of neighbor nodes connected to this node via one or more edges. This iterator iterates across any leaving, entering and non directed edges (nodes are neighbors even if they only have a directed edge from them toward this node). If there are multiple edges connecting the same node, it might be iterated several times.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeBetween(java.lang.String id)",
+    "name": "getEdgeBetween",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieve an edge between this node and the node 'id', if it exits.  This method selects directed or undirected edges. If the edge is directed, its direction is not important and leaving or entering edges will be selected.   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeBetween(&quot;...&quot;); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEnteringEdgeSet()",
+    "name": "getEnteringEdgeSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<T>",
+      "name": "java.util.Collection<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of all entering edges.  This method is implicitly generic and return an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterable<ExtendedEdge> ite = node.getEnteringEdgeSet(); </pre> the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeFrom(java.lang.String id)",
+    "name": "getEdgeFrom",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieve an edge that leaves node 'id' toward this node.  This method selects only edges leaving node 'id' an pointing at this node (this also selects undirected edges).   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeFrom(&quot;...&quot;); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeFrom(org.graphstream.graph.Node node)",
+    "name": "getEdgeFrom",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieves an edge that leaves given node toward this node.  This method selects only edges leaving the other node an pointing at this node (this also selects undirected edges).   This method is implicitly generic and returns something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeFrom(...); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeFrom(org.graphstream.graph.Node node)",
+    "name": "hasEdgeFrom",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge enters this node from a given node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEachEdge()",
+    "name": "getEachEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of all entering and leaving edges.  This method is implicitly generic and return an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterable<ExtendedEdge> ite = node.getEdgeSet(); </pre> the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeToward(int index)",
+    "name": "getEdgeToward",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieves an edge that leaves this node toward the node with given index.  This method selects only edges leaving this node an pointing at the parameter node (this also selects undirected edges).   This method is implicitly generic and returns something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeToward(...); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGraph()",
+    "name": "getGraph",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Graph",
+      "name": "org.graphstream.graph.Graph",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Parent graph. Some elements are not able to give their parent graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeBetween(org.graphstream.graph.Node node)",
+    "name": "getEdgeBetween",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieves an edge between this node and and another node if one exists.  This method selects directed or undirected edges. If the edge is directed, its direction is not important and leaving or entering edges will be selected.   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeBetween(...); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInDegree()",
+    "name": "getInDegree",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Number of entering edges.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBreadthFirstIterator(boolean directed)",
+    "name": "getBreadthFirstIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "directed"
+      }
+    ],
+    "equivalence": {
+      "comment": "Iterator for breadth first exploration of the graph, starting at this node.  If the graph is not connected, only a part of it will be explored.   This method is implicitly generic and return an Iterator over something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedNode> ite = node.getBreadthFirstIterator(true); </pre> the method will return an Iterator<ExtendedNode>. If no left part exists, method will just return an Iterator<Node>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEachLeavingEdge()",
+    "name": "getEachLeavingEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of all leaving edges.  This method is implicitly generic and return an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterable<ExtendedEdge> ite = node.getLeavingEdgeSet(); </pre> the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeFrom(java.lang.String id)",
+    "name": "hasEdgeFrom",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge enters this node from node 'id'.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeBetween(java.lang.String id)",
+    "name": "hasEdgeBetween",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge exists between this node and node 'id'.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEachEnteringEdge()",
+    "name": "getEachEnteringEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<T>",
+      "name": "java.lang.Iterable<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of all entering edges.  This method is implicitly generic and return an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterable<ExtendedEdge> ite = node.getEnteringEdgeSet(); </pre> the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLeavingEdgeIterator()",
+    "name": "getLeavingEdgeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator only on entering edges.  This iterator iterates only on directed edges going from other nodes toward this node (non-directed edges are included in the iteration).   This method is implicitly generic and return an Iterator over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedEdge> ite = node.getLeavingEdgeIterator(); </pre> the method will return an Iterator<ExtendedEdge>. If no left part exists, method will just return an Iterator<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeToward(java.lang.String id)",
+    "name": "getEdgeToward",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieve an edge that leaves this node toward 'id'.  This method selects only edges leaving this node an pointing at node 'id' (this also selects undirected edges).   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeToward(&quot;...&quot;); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDepthFirstIterator(boolean directed)",
+    "name": "getDepthFirstIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "directed"
+      }
+    ],
+    "equivalence": {
+      "comment": "Iterator for depth first exploration of the graph, starting at this node.  If the graph is not connected, only a part of it will be explored.   This method is implicitly generic and return an Iterator over something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedNode> ite = node.getDepthFirstIterator(true); </pre> the method will return an Iterator<ExtendedNode>. If no left part exists, method will just return an Iterator<Node>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeFrom(int index)",
+    "name": "hasEdgeFrom",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge enters this node from a node with given index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeFrom(int index)",
+    "name": "getEdgeFrom",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieves an edge that leaves node with given index toward this node.  This method selects only edges leaving the other node an pointing at this node (this also selects undirected edges).   This method is implicitly generic and returns something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeFrom(&quot;...&quot;); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutDegree()",
+    "name": "getOutDegree",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Number of leaving edges.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLeavingEdge(int i)",
+    "name": "getLeavingEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "equivalence": {
+      "comment": "I-th leaving edge. Edges are stored in no given order.  However this method allows to iterate very quickly on all leaving edges, or to choose a given leaving edge with direct access.   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getLeavingEdge(i); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLeavingEdgeSet()",
+    "name": "getLeavingEdgeSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<T>",
+      "name": "java.util.Collection<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of all leaving edges.  This method is implicitly generic and return an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterable<ExtendedEdge> ite = node.getLeavingEdgeSet(); </pre> the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeToward(org.graphstream.graph.Node node)",
+    "name": "getEdgeToward",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieves an edge that leaves this node toward another node.  This method selects only edges leaving this node an pointing at the parameter node (this also selects undirected edges).   This method is implicitly generic and returns something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeToward(...); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeToward(org.graphstream.graph.Node node)",
+    "name": "hasEdgeToward",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge leaves this node toward a given node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEnteringEdge(int i)",
+    "name": "getEnteringEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "equivalence": {
+      "comment": "I-th entering edge. Edges are stored in no given order.  However this method allows to iterate very quickly on all entering edges, or to choose a given entering edge with direct access.   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEnteringEdge(i); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdge(int i)",
+    "name": "getEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "equivalence": {
+      "comment": "I-th edge. Edges are stored in no given order.  However this method allows to iterate very quickly on all edges, or to choose a given edge with direct access.   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdge(i); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeBetween(int index)",
+    "name": "getEdgeBetween",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retrieves an edge between this node and the node with index i if one exists.  This method selects directed or undirected edges. If the edge is directed, its direction is not important and leaving or entering edges will be selected.   This method is implicitly generic and return something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedEdge e = node.getEdgeBetween(...); </pre> the method will return an ExtendedEdge. If no left part exists, method will just return an Edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeToward(int index)",
+    "name": "hasEdgeToward",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge leaves this node toward a node with given index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeIterator()",
+    "name": "getEdgeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator on the set of connected edges.  This iterator iterates on all edges leaving and entering (this includes any non-directed edge present, and a non-directed edge is only iterated once).   This method is implicitly generic and return an Iterator over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedEdge> ite = node.getEdgeIterator(); </pre> the method will return an Iterator<ExtendedEdge>. If no left part exists, method will just return an Iterator<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeToward(java.lang.String id)",
+    "name": "hasEdgeToward",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge leaves this node toward node 'id'.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDegree()",
+    "name": "getDegree",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Total number of relations with other nodes or this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEnteringEdgeIterator()",
+    "name": "getEnteringEdgeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator only on leaving edges.  This iterator iterates only on directed edges going from this node to others (non-directed edges are included in the iteration).   This method is implicitly generic and return an Iterator over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call : <pre> Iterator<ExtendedEdge> ite = node.getEnteringEdgeIterator(); </pre> the method will return an Iterator<ExtendedEdge>. If no left part exists, method will just return an Iterator<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeBetween(int index)",
+    "name": "hasEdgeBetween",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge exists between this node and a node with given index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEdgeBetween(org.graphstream.graph.Node node)",
+    "name": "hasEdgeBetween",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "True if an edge exists between this node and another node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

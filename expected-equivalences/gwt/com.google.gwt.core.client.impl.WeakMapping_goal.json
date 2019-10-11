@@ -1,0 +1,135 @@
+[
+  {
+    "signature": "get(java.lang.Object instance, java.lang.String key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.core.client.impl.WeakMapping",
+      "name": "WeakMapping",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.core.client.impl.WeakMapping",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the Object associated with the given key in the (key, value) mapping associated with the given Object instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(java.lang.Object instance, java.lang.String key, java.lang.Object value)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.core.client.impl.WeakMapping",
+      "name": "WeakMapping",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.core.client.impl.WeakMapping",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Associates a value with a given key in the (key, value) mapping associated with the given Object instance. Note that the key space is module-wide, so some care should be taken to choose sufficiently unique identifiers.  Due to restrictions of the Production Mode implementation, the instance argument must not be a String.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeak(java.lang.Object instance, java.lang.String key, java.lang.Object value)",
+    "name": "setWeak",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.core.client.impl.WeakMapping",
+      "name": "WeakMapping",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.core.client.impl.WeakMapping",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #set(Object, String, Object), but doesn't guarantee that value can be retrieved.",
+      "kind": "FreeText",
+      "condition": "com.google.gwt.core.client.impl.WeakMapping.set(args[0],args[1],args[0]); receiverObjectClone.setWeak(args[0],args[1],args[2]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  }
+]

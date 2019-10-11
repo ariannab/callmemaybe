@@ -1,0 +1,116 @@
+[
+  {
+    "signature": "createSecure()",
+    "name": "createSecure",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.Randomness",
+      "name": "Randomness",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.Randomness",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.SecureRandom",
+      "name": "java.security.SecureRandom",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Provides a secure source of randomness. This acts exactly similar to #get(), but returning a new SecureRandom.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shuffle(java.util.List<?> list)",
+    "name": "shuffle",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.Randomness",
+      "name": "Randomness",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.Randomness",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "list"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(org.elasticsearch.common.settings.Settings settings, org.elasticsearch.common.settings.Setting<java.lang.Long> setting)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.Randomness",
+      "name": "Randomness",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.Randomness",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Random",
+      "name": "java.util.Random",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.settings.Settings",
+          "name": "Settings",
+          "isArray": false
+        },
+        "name": "settings"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.settings.Setting",
+          "name": "Setting",
+          "isArray": false
+        },
+        "name": "setting"
+      }
+    ],
+    "equivalence": {
+      "comment": "Provides a reproducible source of randomness seeded by a long seed in the settings with the key setting.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get()",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.Randomness",
+      "name": "Randomness",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.Randomness",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Random",
+      "name": "java.util.Random",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Provides a source of randomness that is reproducible when running under the Elasticsearch test suite, and otherwise produces a non-reproducible source of randomness. Reproducible sources of randomness are created when the system property \"tests.seed\" is set and the security policy allows reading this system property. Otherwise, non-reproducible sources of randomness are created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

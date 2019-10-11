@@ -278,7 +278,7 @@
     "equivalence": {
       "comment": "Associates value with the specified row and column indices. The logic put(rowKeyList().get(rowIndex), columnKeyList().get(columnIndex), value) has the same behavior, but this method runs more quickly.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(put(rowKeyList().get(args[0]), columnKeyList().get(args[1]), args[2]))"
+      "condition": "methodResultID.equals( receiverObjectID.put(receiverObjectID.rowKeyList().get(args[0]), receiverObjectID.columnKeyList().get(args[1]), args[2]) )"
     }
   },
   {

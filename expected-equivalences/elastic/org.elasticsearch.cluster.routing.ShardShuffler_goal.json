@@ -1,0 +1,94 @@
+[
+  {
+    "signature": "nextSeed()",
+    "name": "nextSeed",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.routing.ShardShuffler",
+      "name": "ShardShuffler",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.routing.ShardShuffler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Return a new seed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shuffle(java.util.List<org.elasticsearch.cluster.routing.ShardRouting> shards, int seed)",
+    "name": "shuffle",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.routing.ShardShuffler",
+      "name": "ShardShuffler",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.routing.ShardShuffler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<org.elasticsearch.cluster.routing.ShardRouting>",
+      "name": "java.util.List<org.elasticsearch.cluster.routing.ShardRouting>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "shards"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "seed"
+      }
+    ],
+    "equivalence": {
+      "comment": "Return a shuffled view over the list of shards. The behavior of this method must be deterministic: if the same list and the same seed are provided twice, then the result needs to be the same.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shuffle(java.util.List<org.elasticsearch.cluster.routing.ShardRouting> shards)",
+    "name": "shuffle",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.routing.ShardShuffler",
+      "name": "ShardShuffler",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.routing.ShardShuffler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<org.elasticsearch.cluster.routing.ShardRouting>",
+      "name": "java.util.List<org.elasticsearch.cluster.routing.ShardRouting>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "shards"
+      }
+    ],
+    "equivalence": {
+      "comment": "Equivalent to calling shuffle(shards, nextSeed()).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(args[0], nextSeed())"
+    }
+  }
+]

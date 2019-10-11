@@ -1,0 +1,222 @@
+[
+  {
+    "signature": "getCurrencyCode()",
+    "name": "getCurrencyCode",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the ISO4217 code for this currency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSymbolPositionFixed()",
+    "name": "isSymbolPositionFixed",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if the position of the currency symbol relative to the number is fixed regardless of locale defaults. In this case, the position will be determined by #isSymbolPrefix().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultFractionDigits()",
+    "name": "getDefaultFractionDigits",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the default number of decimal positions for this currency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPortableCurrencySymbol()",
+    "name": "getPortableCurrencySymbol",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the default symbol to use for this currency, intended to be recognizable in most locales. If such a symbol is not available, it is acceptable to return the same value as #getCurrencySymbol().",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getCurrencySymbol())"
+    }
+  },
+  {
+    "signature": "isSymbolPrefix()",
+    "name": "isSymbolPrefix",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if the currency symbol should go before the number, false if it should go after the number. This is ignored unless #isSymbolPositionFixed() is true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSpacingFixed()",
+    "name": "isSpacingFixed",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if the spacing between the currency symbol and the number is fixed regardless of locale defaults. In this case, spacing will be determined by #isSpaceForced().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSimpleCurrencySymbol()",
+    "name": "getSimpleCurrencySymbol",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the simplest symbol to use for this currency, which is not guaranteed to be unique -- for example, this might return \"$\" for both USD and CAD. It is acceptable to return the same value as #getCurrencySymbol().",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getCurrencySymbol())"
+    }
+  },
+  {
+    "signature": "getCurrencySymbol()",
+    "name": "getCurrencySymbol",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the default symbol to use for this currency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isDeprecated()",
+    "name": "isDeprecated",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if this currency is deprecated and should not be returned by default in currency lists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSpaceForced()",
+    "name": "isSpaceForced",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.CurrencyData",
+      "name": "CurrencyData",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.CurrencyData",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns true if there should always be a space between the currency symbol and the number, false if there should be no space. Ignored unless #isSpacingFixed() returns true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

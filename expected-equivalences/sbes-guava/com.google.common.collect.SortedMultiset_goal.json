@@ -1,0 +1,333 @@
+[
+  {
+    "signature": "headMultiset(E upperBound, com.google.common.collect.BoundType boundType)",
+    "name": "headMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset<E>",
+      "name": "com.google.common.collect.SortedMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "upperBound"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.BoundType",
+          "name": "BoundType",
+          "isArray": false
+        },
+        "name": "boundType"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of this multiset restricted to the elements less than upperBound, optionally including upperBound itself. The returned multiset is a view of this multiset, so changes to one will be reflected in the other. The returned multiset supports all operations that this multiset supports. <p>The returned multiset will throw an IllegalArgumentException on attempts to add elements outside its range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)",
+    "name": "tailMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset<E>",
+      "name": "com.google.common.collect.SortedMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "lowerBound"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.BoundType",
+          "name": "BoundType",
+          "isArray": false
+        },
+        "name": "boundType"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of this multiset restricted to the elements greater than lowerBound, optionally including lowerBound itself. The returned multiset is a view of this multiset, so changes to one will be reflected in the other. The returned multiset supports all operations that this multiset supports. <p>The returned multiset will throw an IllegalArgumentException on attempts to add elements outside its range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastEntry()",
+    "name": "lastEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset$Entry<E>",
+      "name": "com.google.common.collect.Multiset$Entry<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the entry of the last element in this multiset, or null if this multiset is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollFirstEntry()",
+    "name": "pollFirstEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset$Entry<E>",
+      "name": "com.google.common.collect.Multiset$Entry<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns and removes the entry associated with the lowest element in this multiset, or returns null if this multiset is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstEntry()",
+    "name": "firstEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset$Entry<E>",
+      "name": "com.google.common.collect.Multiset$Entry<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the entry of the first element in this multiset, or null if this multiset is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollLastEntry()",
+    "name": "pollLastEntry",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.Multiset$Entry<E>",
+      "name": "com.google.common.collect.Multiset$Entry<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns and removes the entry associated with the greatest element in this multiset, or returns null if this multiset is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementSet()",
+    "name": "elementSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableSet<E>",
+      "name": "java.util.NavigableSet<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a NavigableSet view of the distinct elements in this multiset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>The iterator returns the elements in ascending order according to this multiset's comparator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingMultiset()",
+    "name": "descendingMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset<E>",
+      "name": "com.google.common.collect.SortedMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a descending view of this multiset. Modifications made to either map will be reflected in the other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subMultiset(E lowerBound, com.google.common.collect.BoundType lowerBoundType, E upperBound, com.google.common.collect.BoundType upperBoundType)",
+    "name": "subMultiset",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset<E>",
+      "name": "com.google.common.collect.SortedMultiset<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "lowerBound"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.BoundType",
+          "name": "BoundType",
+          "isArray": false
+        },
+        "name": "lowerBoundType"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "upperBound"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.BoundType",
+          "name": "BoundType",
+          "isArray": false
+        },
+        "name": "upperBoundType"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of this multiset restricted to the range between lowerBound and upperBound. The returned multiset is a view of this multiset, so changes to one will be reflected in the other. The returned multiset supports all operations that this multiset supports. <p>The returned multiset will throw an IllegalArgumentException on attempts to add elements outside its range. <p>This method is equivalent to tailMultiset(lowerBound, lowerBoundType).headMultiset(upperBound, upperBoundType).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.tailMultiset(args[0],args[1]).headMultiset(args[2],args[3]))"
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "name": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "{@inheritDoc} <p>The entrySet's iterator returns entries in ascending element order according to the this multiset's comparator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparator()",
+    "name": "comparator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SortedMultiset",
+      "name": "SortedMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SortedMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<? super E>",
+      "name": "java.util.Comparator<? super E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the comparator that orders this multiset, or Ordering#natural() if the natural ordering of the elements is used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

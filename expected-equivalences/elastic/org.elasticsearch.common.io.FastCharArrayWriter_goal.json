@@ -1,0 +1,486 @@
+[
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Resets the buffer so that you can use it again without throwing away the already allocated buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Converts input data to a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toCharArray()",
+    "name": "toCharArray",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char[]",
+      "name": "char[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a copy of the input data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.common.io.FastCharArrayWriter(int initialSize)",
+    "name": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialSize"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a new CharArrayWriter with the specified initial size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Flush the stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "append(java.lang.CharSequence csq)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "csq"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends the specified character sequence to this writer.  An invocation of this method of the form out.append(csq) behaves in exactly the same way as the invocation  out.write(csq.toString())   Depending on the specification of toString for the character sequence csq, the entire sequence may not be appended. For instance, invoking the toString method of a character buffer will return a subsequence whose content depends upon the buffer's position and limit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.common.io.FastCharArrayWriter()",
+    "name": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates a new CharArrayWriter.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unsafeCharArray()",
+    "name": "unsafeCharArray",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char[]",
+      "name": "char[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the underlying char array. Note, use #size() in order to know the size of of the actual content within the array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "append(java.lang.CharSequence csq, int start, int end)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "csq"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "start"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "end"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends a subsequence of the specified character sequence to this writer.  An invocation of this method of the form out.append(csq, start, end) when csq is not null, behaves in exactly the same way as the invocation  out.write(csq.subSequence(start, end).toString())",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "append(char c)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends the specified character to this writer.  An invocation of this method of the form out.append(c) behaves in exactly the same way as the invocation  out.write(c)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Close the stream. This method does not release the buffer, since its contents might still be required. Note: Invoking this method in this class will have no effect.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write(java.lang.String str, int off, int len)",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "comment": "Write a portion of a string to the buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write(char[] c, int off, int len)",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "comment": "Writes characters to the buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeTo(java.io.Writer out)",
+    "name": "writeTo",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Writer",
+          "name": "Writer",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "comment": "Writes the contents of the buffer to another character stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write(int c)",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Writes a character to the buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStringTrim()",
+    "name": "toStringTrim",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Converts the input data to a string with trimmed whitespaces.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.io.FastCharArrayWriter",
+      "name": "FastCharArrayWriter",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.io.FastCharArrayWriter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the current size of the buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

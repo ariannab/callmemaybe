@@ -1,0 +1,436 @@
+[
+  {
+    "signature": "appendElement(T[] array, T element)",
+    "name": "appendElement",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyOf(java.util.Map<? extends K, ? extends V> map)",
+    "name": "copyOf",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "map"
+      }
+    ],
+    "equivalence": {
+      "comment": "Return a copy of the provided map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.common.collect.CopyOnWriteHashMap()",
+    "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "Create a new empty map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyAndPut(K key, V value)",
+    "name": "copyAndPut",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "comment": "Associate key with value and return a new copy of the hash table. The current hash table is not modified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyAndPutAll(java.util.Map<? extends K, ? extends V> other)",
+    "name": "copyAndPutAll",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #copyAndPut(Object, Object) but for an arbitrary number of entries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "insertElement(T[] array, T element, int index)",
+    "name": "insertElement",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyAndRemove(java.lang.Object key)",
+    "name": "copyAndRemove",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "Remove the given key from this map. The current hash table is not modified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyAndRemoveAll(java.util.Collection<?> keys)",
+    "name": "copyAndRemoveAll",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "keys"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #copyAndRemove(Object) but for an arbitrary number of entries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyAndPutAll(java.lang.Iterable<java.util.Map$Entry<K1, V1>> entries)",
+    "name": "copyAndPutAll",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "entries"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyAndPutAll(java.util.stream.Stream<java.util.Map$Entry<K1, V1>> entries)",
+    "name": "copyAndPutAll",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+      "name": "CopyOnWriteHashMap",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.collect.CopyOnWriteHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "name": "org.elasticsearch.common.collect.CopyOnWriteHashMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Stream",
+          "name": "Stream",
+          "isArray": false
+        },
+        "name": "entries"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

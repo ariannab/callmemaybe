@@ -1,0 +1,795 @@
+[
+  {
+    "signature": "resolveSearchRoutingAllIndices(org.elasticsearch.cluster.metadata.MetaData metaData, java.lang.String routing)",
+    "name": "resolveSearchRoutingAllIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.util.Set<java.lang.String>>",
+      "name": "java.util.Map<java.lang.String, java.util.Set<java.lang.String>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.metadata.MetaData",
+          "name": "MetaData",
+          "isArray": false
+        },
+        "name": "metaData"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "routing"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets the same routing for all indices",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexAliases(org.elasticsearch.cluster.ClusterState state, java.lang.String index, java.util.function.Predicate<org.elasticsearch.cluster.metadata.AliasMetaData> requiredAlias, boolean skipIdentity, java.lang.String... expressions)",
+    "name": "indexAliases",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "requiredAlias"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "skipIdentity"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "expressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Iterates through the list of indices and selects the effective list of required aliases for the given index. Only aliases where the given predicate tests successfully are returned. If the indices list contains a non-required reference to the index itself - null is returned. Returns null if no filtering is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndices(org.elasticsearch.cluster.ClusterState state, org.elasticsearch.action.support.IndicesOptions options, long startTime, java.lang.String... indexExpressions)",
+    "name": "concreteIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.index.Index[]",
+      "name": "org.elasticsearch.index.Index[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.action.support.IndicesOptions",
+          "name": "IndicesOptions",
+          "isArray": false
+        },
+        "name": "options"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "startTime"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "indexExpressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Translates the provided index expression into actual concrete indices, properly deduplicated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resolveSearchRouting(org.elasticsearch.cluster.ClusterState state, java.lang.String routing, java.lang.String... expressions)",
+    "name": "resolveSearchRouting",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.util.Set<java.lang.String>>",
+      "name": "java.util.Map<java.lang.String, java.util.Set<java.lang.String>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "routing",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "expressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Resolves the search routing if in the expression aliases are used. If expressions point to concrete indices or aliases with no routing defined the specified routing is used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndexNames(org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$Context context, java.lang.String... indexExpressions)",
+    "name": "concreteIndexNames",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$Context",
+          "name": "Context",
+          "isArray": false
+        },
+        "name": "context"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "indexExpressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndexNames(org.elasticsearch.cluster.ClusterState state, org.elasticsearch.action.IndicesRequest request)",
+    "name": "concreteIndexNames",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.action.IndicesRequest",
+          "name": "IndicesRequest",
+          "isArray": false
+        },
+        "name": "request"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #concreteIndexNames(ClusterState, IndicesOptions, String...), but the index expressions and options are encapsulated in the specified request.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasIndexOrAlias(java.lang.String aliasOrIndex, org.elasticsearch.cluster.ClusterState state)",
+    "name": "hasIndexOrAlias",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "aliasOrIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndices(org.elasticsearch.cluster.ClusterState state, org.elasticsearch.action.IndicesRequest request)",
+    "name": "concreteIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.index.Index[]",
+      "name": "org.elasticsearch.index.Index[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.action.IndicesRequest",
+          "name": "IndicesRequest",
+          "isArray": false
+        },
+        "name": "request"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #concreteIndices(ClusterState, IndicesOptions, String...), but the index expressions and options are encapsulated in the specified request.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndices(org.elasticsearch.cluster.ClusterState state, org.elasticsearch.action.support.IndicesOptions options, java.lang.String... indexExpressions)",
+    "name": "concreteIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.index.Index[]",
+      "name": "org.elasticsearch.index.Index[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.action.support.IndicesOptions",
+          "name": "IndicesOptions",
+          "isArray": false
+        },
+        "name": "options"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "indexExpressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Translates the provided index expression into actual concrete indices, properly deduplicated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resolveDateMathExpression(java.lang.String dateExpression)",
+    "name": "resolveDateMathExpression",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "dateExpression"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPatternMatchingAllIndices(org.elasticsearch.cluster.metadata.MetaData metaData, java.lang.String[] indicesOrAliases, java.lang.String[] concreteIndices)",
+    "name": "isPatternMatchingAllIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.metadata.MetaData",
+          "name": "MetaData",
+          "isArray": false
+        },
+        "name": "metaData"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "indicesOrAliases"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "concreteIndices"
+      }
+    ],
+    "equivalence": {
+      "comment": "Identifies whether the first argument (an array containing index names) is a pattern that matches all indices",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matchesIndex(java.lang.String indexName, java.lang.String expression, org.elasticsearch.cluster.ClusterState state)",
+    "name": "matchesIndex",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "indexName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "expression"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true iff the given expression resolves to the given index name otherwise false",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndexNames(org.elasticsearch.cluster.ClusterState state, org.elasticsearch.action.support.IndicesOptions options, java.lang.String... indexExpressions)",
+    "name": "concreteIndexNames",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.action.support.IndicesOptions",
+          "name": "IndicesOptions",
+          "isArray": false
+        },
+        "name": "options"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "indexExpressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Translates the provided index expression into actual concrete indices, properly deduplicated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteIndices(org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$Context context, java.lang.String... indexExpressions)",
+    "name": "concreteIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.index.Index[]",
+      "name": "org.elasticsearch.index.Index[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$Context",
+          "name": "Context",
+          "isArray": false
+        },
+        "name": "context"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "indexExpressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver(org.elasticsearch.common.settings.Settings settings)",
+    "name": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.settings.Settings",
+          "name": "Settings",
+          "isArray": false
+        },
+        "name": "settings"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filteringAliases(org.elasticsearch.cluster.ClusterState state, java.lang.String index, java.lang.String... expressions)",
+    "name": "filteringAliases",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "expressions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Iterates through the list of indices and selects the effective list of filtering aliases for the given index. Only aliases with filters are returned. If the indices list contains a non-filtering reference to the index itself - null is returned. Returns null if no filtering is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concreteSingleIndex(org.elasticsearch.cluster.ClusterState state, org.elasticsearch.action.IndicesRequest request)",
+    "name": "concreteSingleIndex",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.index.Index",
+      "name": "org.elasticsearch.index.Index",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.cluster.ClusterState",
+          "name": "ClusterState",
+          "isArray": false
+        },
+        "name": "state"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.action.IndicesRequest",
+          "name": "IndicesRequest",
+          "isArray": false
+        },
+        "name": "request"
+      }
+    ],
+    "equivalence": {
+      "comment": "Utility method that allows to resolve an index expression to its corresponding single concrete index. Callers should make sure they provide proper org.elasticsearch.action.support.IndicesOptions that require a single index as a result. The indices resolution must in fact return a single index when using this method, an IllegalArgumentException gets thrown otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isAllIndices(java.util.List<java.lang.String> aliasesOrIndices)",
+    "name": "isAllIndices",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "aliasesOrIndices"
+      }
+    ],
+    "equivalence": {
+      "comment": "Identifies whether the array containing index names given as argument refers to all indices The empty or null array identifies all indices",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isExplicitAllPattern(java.util.List<java.lang.String> aliasesOrIndices)",
+    "name": "isExplicitAllPattern",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+      "name": "IndexNameExpressionResolver",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.metadata.IndexNameExpressionResolver",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "aliasesOrIndices"
+      }
+    ],
+    "equivalence": {
+      "comment": "Identifies whether the array containing index names given as argument explicitly refers to all indices The empty or null array doesn't explicitly map to all indices",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

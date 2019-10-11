@@ -1,0 +1,948 @@
+[
+  {
+    "signature": "spanWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection$Direction dir, java.lang.String str)",
+    "name": "spanWrapWithKnownDir",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #spanWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection.Direction, String, boolean, boolean), but assumes isHtml is false and dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(spanWrapWithKnownDir(args[0], args[1], false, true))"
+    }
+  },
+  {
+    "signature": "getInstance(com.google.gwt.i18n.client.HasDirection$Direction contextDir)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "com.google.gwt.i18n.shared.BidiFormatter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "contextDir"
+      }
+    ],
+    "equivalence": {
+      "comment": "Factory for creating an instance of BidiFormatter given the context direction. The default behavior of #spanWrap and its variations is set to avoid span wrapping unless it's necessary ('dir' attribute needs to be set).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstance(boolean rtlContext)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "com.google.gwt.i18n.shared.BidiFormatter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "rtlContext"
+      }
+    ],
+    "equivalence": {
+      "comment": "Factory for creating an instance of BidiFormatter given the context direction. The default behavior of #spanWrap and its variations is set to avoid span wrapping unless it's necessary ('dir' attribute needs to be set).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mark()",
+    "name": "mark",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the Unicode BiDi mark matching the context direction (LRM for LTR context direction, RLM for RTL context direction), or the empty string for default / unknown context direction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "markAfter(java.lang.String str)",
+    "name": "markAfter",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #markAfter(String, boolean), but assumes isHtml is false.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(markAfter(args[0],false))"
+    }
+  },
+  {
+    "signature": "spanWrap(java.lang.String str, boolean isHtml)",
+    "name": "spanWrap",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #spanWrap(String, boolean, boolean), but assumes dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(spanWrap(args[0], args[1], true))"
+    }
+  },
+  {
+    "signature": "knownDirAttr(com.google.gwt.i18n.client.HasDirection$Direction dir)",
+    "name": "knownDirAttr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns \"dir=ltr\" or \"dir=rtl\", depending on the given direction, if it is not the same as the context direction. Otherwise, returns the empty string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endEdge()",
+    "name": "endEdge",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns \"left\" for RTL context direction. Otherwise (LTR or default / unknown context direction) returns \"right\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstanceForCurrentLocale(boolean alwaysSpan)",
+    "name": "getInstanceForCurrentLocale",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "com.google.gwt.i18n.shared.BidiFormatter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "alwaysSpan"
+      }
+    ],
+    "equivalence": {
+      "comment": "Factory for creating an instance of BidiFormatter whose context direction matches the current locale's direction, and given the desired span wrapping behavior (see below).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unicodeWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection$Direction dir, java.lang.String str, boolean isHtml)",
+    "name": "unicodeWrapWithKnownDir",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #unicodeWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection.Direction, String, boolean, boolean), but assumes dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(unicodeWrapWithKnownDir(args[0], args[1], args[2], true))"
+    }
+  },
+  {
+    "signature": "unicodeWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection$Direction dir, java.lang.String str)",
+    "name": "unicodeWrapWithKnownDir",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #unicodeWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection.Direction, String, boolean, boolean), but assumes isHtml is false and dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(unicodeWrapWithKnownDir(args[0], args[1], false, true))"
+    }
+  },
+  {
+    "signature": "getInstance(com.google.gwt.i18n.client.HasDirection$Direction contextDir, boolean alwaysSpan)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "com.google.gwt.i18n.shared.BidiFormatter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "contextDir"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "alwaysSpan"
+      }
+    ],
+    "equivalence": {
+      "comment": "Factory for creating an instance of BidiFormatter given the context direction and the desired span wrapping behavior (see below).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spanWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection$Direction dir, java.lang.String str, boolean isHtml)",
+    "name": "spanWrapWithKnownDir",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #spanWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection.Direction, String, boolean, boolean), but assumes dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(spanWrapWithKnownDir(args[0], args[1], args[2], true))"
+    }
+  },
+  {
+    "signature": "startEdge()",
+    "name": "startEdge",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns \"right\" for RTL context direction. Otherwise (LTR or default / unknown context direction) returns \"left\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dirAttr(java.lang.String str)",
+    "name": "dirAttr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #dirAttr(String, boolean), but assumes isHtml is false.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(dirAttr(args[0], false)"
+    }
+  },
+  {
+    "signature": "getInstanceForCurrentLocale()",
+    "name": "getInstanceForCurrentLocale",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "com.google.gwt.i18n.shared.BidiFormatter",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Factory for creating an instance of BidiFormatter whose context direction matches the current locale's direction. The default behavior of #spanWrap and its variations is set to avoid span wrapping unless it's necessary ('dir' attribute needs to be set).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spanWrap(java.lang.String str)",
+    "name": "spanWrap",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #spanWrap(String, boolean, boolean), but assumes isHtml is false and dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(spanWrap(args[0], false, true))"
+    }
+  },
+  {
+    "signature": "unicodeWrap(java.lang.String str, boolean isHtml)",
+    "name": "unicodeWrap",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #unicodeWrap(String, boolean, boolean), but assumes dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(unicodeWrap(args[0], args[1], true))"
+    }
+  },
+  {
+    "signature": "spanWrap(java.lang.String str, boolean isHtml, boolean dirReset)",
+    "name": "spanWrap",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "dirReset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Formats a string of unknown direction for use in HTML output of the context direction, so an opposite-direction string is neither garbled nor garbles what follows it.  The algorithm: estimates the direction of input argument str. In case its direction doesn't match the context direction, wraps it with a 'span' tag and adds a \"dir\" attribute (either 'dir=rtl' or 'dir=ltr').  If setAlwaysSpan(true) was used, the input is always wrapped with 'span', skipping just the dir attribute when it's not needed.  If dirReset, and if the overall direction or the exit direction of str are opposite to the context direction, a trailing unicode BiDi mark matching the context direction is appended (LRM or RLM).  If !isHtml, HTML-escapes str regardless of wrapping.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unicodeWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection$Direction dir, java.lang.String str, boolean isHtml, boolean dirReset)",
+    "name": "unicodeWrapWithKnownDir",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "dirReset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Formats a string of given direction for use in plain-text output of the context direction, so an opposite-direction string is neither garbled nor garbles what follows it. As opposed to #spanWrapWithKnownDir, this makes use of unicode BiDi formatting characters. In HTML, its *only* valid use is inside of elements that do not allow mark-up, e.g. an 'option' tag.  The algorithm: estimates the direction of input argument str. In case it doesn't match the context direction, wraps it with Unicode BiDi formatting characters: RLE+str+PDF for RTL text, or LRE+ str+PDF for LTR text.  If {@code opt_dirReset}, and if the overall direction or the exit direction of str are opposite to the context direction, a trailing unicode BiDi mark matching the context direction is appended (LRM or RLM).  Does *not* do HTML-escaping regardless of the value of isHtml.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dirAttr(java.lang.String str, boolean isHtml)",
+    "name": "dirAttr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns \"dir=ltr\" or \"dir=rtl\", depending on {@code str}'s estimated direction, if it is not the same as the context direction. Otherwise, returns the empty string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unicodeWrap(java.lang.String str)",
+    "name": "unicodeWrap",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #unicodeWrap(String, boolean, boolean), but assumes isHtml is false and dirReset is true.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(unicodeWrap(args[0], false, true))"
+    }
+  },
+  {
+    "signature": "markAfter(java.lang.String str, boolean isHtml)",
+    "name": "markAfter",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a Unicode BiDi mark matching the context direction (LRM or RLM) if either the direction or the exit direction of str is opposite to the context direction. Otherwise returns the empty string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spanWrapWithKnownDir(com.google.gwt.i18n.client.HasDirection$Direction dir, java.lang.String str, boolean isHtml, boolean dirReset)",
+    "name": "spanWrapWithKnownDir",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+          "name": "Direction",
+          "isArray": false
+        },
+        "name": "dir"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "dirReset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Formats a string of given direction for use in HTML output of the context direction, so an opposite-direction string is neither garbled nor garbles what follows it.  The algorithm: estimates the direction of input argument str. In case its direction doesn't match the context direction, wraps it with a 'span' tag and adds a \"dir\" attribute (either 'dir=rtl' or 'dir=ltr').  If setAlwaysSpan(true) was used, the input is always wrapped with 'span', skipping just the dir attribute when it's not needed.  If dirReset, and if the overall direction or the exit direction of str are opposite to the context direction, a trailing unicode BiDi mark matching the context direction is appended (LRM or RLM).  If !isHtml, HTML-escapes str regardless of wrapping.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstance(boolean rtlContext, boolean alwaysSpan)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "com.google.gwt.i18n.shared.BidiFormatter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "rtlContext"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "alwaysSpan"
+      }
+    ],
+    "equivalence": {
+      "comment": "Factory for creating an instance of BidiFormatter given the context direction and the desired span wrapping behavior (see below).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unicodeWrap(java.lang.String str, boolean isHtml, boolean dirReset)",
+    "name": "unicodeWrap",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiFormatter",
+      "name": "BidiFormatter",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "dirReset"
+      }
+    ],
+    "equivalence": {
+      "comment": "Formats a string of unknown direction for use in plain-text output of the context direction, so an opposite-direction string is neither garbled nor garbles what follows it. As opposed to #spanWrap, this makes use of Unicode BiDi formatting characters. In HTML, its *only* valid use is inside of elements that do not allow mark-up, e.g. an 'option' tag.  The algorithm: estimates the direction of input argument str. In case it doesn't match the context direction, wraps it with Unicode BiDi formatting characters: RLE+str+PDF for RTL text, or LRE+ str+PDF for LTR text.  If {@code opt_dirReset}, and if the overall direction or the exit direction of str are opposite to the context direction, a trailing unicode BiDi mark matching the context direction is appended (LRM or RLM).  Does *not* do HTML-escaping regardless of the value of isHtml.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

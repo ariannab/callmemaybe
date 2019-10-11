@@ -1,0 +1,187 @@
+[
+  {
+    "signature": "asMap()",
+    "name": "asMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SetMultimap",
+      "name": "SetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<K, java.util.Collection<V>>",
+      "name": "java.util.Map<K, java.util.Collection<V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "asMap()",
+      "comment": "{@inheritDoc} Note: The returned map's values are guaranteed to be of type Set. To obtain this map with the more specific generic type Map<K, Set<V>>, call Multimaps#asMap(SetMultimap) instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entries()",
+    "name": "entries",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SetMultimap",
+      "name": "SetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "entries()",
+      "comment": "{@inheritDoc} Because a SetMultimap has unique values for a given key, this method returns a Set, instead of the java.util.Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SetMultimap",
+      "name": "SetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Compares the specified object to this multimap for equality. Two SetMultimap instances are equal if, for each key, they contain the same values. Equality does not depend on the ordering of keys or values. An empty SetMultimap is equal to any other empty Multimap, including an empty ListMultimap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.lang.Object key)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SetMultimap",
+      "name": "SetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<V>",
+      "name": "java.util.Set<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "removeAll(java.lang.Object key)",
+      "comment": "{@inheritDoc} Because a SetMultimap has unique values for a given key, this method returns a Set, instead of the java.util.Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(K key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SetMultimap",
+      "name": "SetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<V>",
+      "name": "java.util.Set<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "get(K key)",
+      "comment": "{@inheritDoc} Because a SetMultimap has unique values for a given key, this method returns a Set, instead of the java.util.Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+    "name": "replaceValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.SetMultimap",
+      "name": "SetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.SetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<V>",
+      "name": "java.util.Set<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+      "comment": "{@inheritDoc} Because a SetMultimap has unique values for a given key, this method returns a Set, instead of the java.util.Collection specified in the Multimap interface. Any duplicates in values will be stored in the multimap once.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,588 @@
+[
+  {
+    "signature": "encodeResponseForSuccess(java.lang.reflect.Method serviceMethod, java.lang.Object object, com.google.gwt.user.server.rpc.SerializationPolicy serializationPolicy)",
+    "name": "encodeResponseForSuccess",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+          "name": "SerializationPolicy",
+          "isArray": false
+        },
+        "name": "serializationPolicy"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string that encodes the object. It is an error to try to encode an object that is not assignable to the service method's return type.  If the serializationPolicy parameter is not null, it is used to determine what types can be encoded as part of this response. If this parameter is null, then only subtypes of com.google.gwt.user.client.rpc.IsSerializable IsSerializable or types which have custom field serializers may be encoded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeRequest(java.lang.String encodedRequest)",
+    "name": "decodeRequest",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPCRequest",
+      "name": "com.google.gwt.user.server.rpc.RPCRequest",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encodedRequest"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an RPCRequest that is built by decoding the contents of an encoded RPC request.  This method is equivalent to calling #decodeRequest(String, Class) with null for the type parameter.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.decodeRequest(args[0], null))"
+    }
+  },
+  {
+    "signature": "decodeRequest(java.lang.String encodedRequest, java.lang.Class<?> type, com.google.gwt.user.server.rpc.SerializationPolicyProvider serializationPolicyProvider)",
+    "name": "decodeRequest",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPCRequest",
+      "name": "com.google.gwt.user.server.rpc.RPCRequest",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encodedRequest"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicyProvider",
+          "name": "SerializationPolicyProvider",
+          "isArray": false
+        },
+        "name": "serializationPolicyProvider"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an RPCRequest that is built by decoding the contents of an encoded RPC request and optionally validating that type can handle the request. If the type parameter is not null, the implementation checks that the type is assignable to the RemoteService interface requested in the encoded request string.  If the serializationPolicyProvider parameter is not null, it is asked for a SerializationPolicy to use to restrict the set of types that can be decoded from the request. If this parameter is null, then only subtypes of com.google.gwt.user.client.rpc.IsSerializable IsSerializable or types which have custom field serializers can be decoded.   Invoking this method with null for the type parameter, decodeRequest(encodedRequest, null), is equivalent to calling decodeRequest(encodedRequest).",
+      "kind": "FreeText",
+      "condition": "decodeRequest(args[0], null).equals(decodeRequest(args[0]))"
+    }
+  },
+  {
+    "signature": "encodeResponseForSuccess(java.lang.reflect.Method serviceMethod, java.lang.Object object, com.google.gwt.user.server.rpc.SerializationPolicy serializationPolicy, int flags)",
+    "name": "encodeResponseForSuccess",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+          "name": "SerializationPolicy",
+          "isArray": false
+        },
+        "name": "serializationPolicy"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeRequest(java.lang.String encodedRequest, java.lang.Class<?> type)",
+    "name": "decodeRequest",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPCRequest",
+      "name": "com.google.gwt.user.server.rpc.RPCRequest",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encodedRequest"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an RPCRequest that is built by decoding the contents of an encoded RPC request and optionally validating that type can handle the request. If the type parameter is not null, the implementation checks that the type is assignable to the RemoteService interface requested in the encoded request string.  Invoking this method with null for the type parameter, decodeRequest(encodedRequest, null), is equivalent to calling decodeRequest(encodedRequest).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(com.google.gwt.user.server.rpc.RPC.decodeRequest(args[0]))"
+    }
+  },
+  {
+    "signature": "invokeAndEncodeResponse(java.lang.Object target, java.lang.reflect.Method serviceMethod, java.lang.Object[] args)",
+    "name": "invokeAndEncodeResponse",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string that encodes the result of calling a service method, which could be the value returned by the method or an exception thrown by it.  This method does no security checking; security checking must be done on the method prior to this invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultSerializationPolicy()",
+    "name": "getDefaultSerializationPolicy",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+      "name": "com.google.gwt.user.server.rpc.SerializationPolicy",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a default serialization policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeResponseForFailure(java.lang.reflect.Method serviceMethod, java.lang.Throwable cause)",
+    "name": "encodeResponseForFailure",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "cause"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string that encodes an exception. If method is not null, it is an error if the exception is not in the method's list of checked exceptions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeResponseForFailure(java.lang.reflect.Method serviceMethod, java.lang.Throwable cause, com.google.gwt.user.server.rpc.SerializationPolicy serializationPolicy, int flags)",
+    "name": "encodeResponseForFailure",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "cause"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+          "name": "SerializationPolicy",
+          "isArray": false
+        },
+        "name": "serializationPolicy"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAndEncodeResponse(java.lang.Object target, java.lang.reflect.Method serviceMethod, java.lang.Object[] args, com.google.gwt.user.server.rpc.SerializationPolicy serializationPolicy)",
+    "name": "invokeAndEncodeResponse",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "args"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+          "name": "SerializationPolicy",
+          "isArray": false
+        },
+        "name": "serializationPolicy"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string that encodes the result of calling a service method, which could be the value returned by the method or an exception thrown by it.  If the serializationPolicy parameter is not null, it is used to determine what types can be encoded as part of this response. If this parameter is null, then only subtypes of com.google.gwt.user.client.rpc.IsSerializable IsSerializable or types which have custom field serializers may be encoded.   This method does no security checking; security checking must be done on the method prior to this invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeResponseForSuccess(java.lang.reflect.Method serviceMethod, java.lang.Object object)",
+    "name": "encodeResponseForSuccess",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string that encodes the object. It is an error to try to encode an object that is not assignable to the service method's return type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAndEncodeResponse(java.lang.Object target, java.lang.reflect.Method serviceMethod, java.lang.Object[] args, com.google.gwt.user.server.rpc.SerializationPolicy serializationPolicy, int flags)",
+    "name": "invokeAndEncodeResponse",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "args"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+          "name": "SerializationPolicy",
+          "isArray": false
+        },
+        "name": "serializationPolicy"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeResponseForFailure(java.lang.reflect.Method serviceMethod, java.lang.Throwable cause, com.google.gwt.user.server.rpc.SerializationPolicy serializationPolicy)",
+    "name": "encodeResponseForFailure",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.user.server.rpc.RPC",
+      "name": "RPC",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.user.server.rpc.RPC",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "serviceMethod"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "cause"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.user.server.rpc.SerializationPolicy",
+          "name": "SerializationPolicy",
+          "isArray": false
+        },
+        "name": "serializationPolicy"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a string that encodes an exception. If method is not null, it is an error if the exception is not in the method's list of checked exceptions.  If the serializationPolicy parameter is not null, it is used to determine what types can be encoded as part of this response. If this parameter is null, then only subtypes of com.google.gwt.user.client.rpc.IsSerializable IsSerializable or types which have custom field serializers may be encoded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

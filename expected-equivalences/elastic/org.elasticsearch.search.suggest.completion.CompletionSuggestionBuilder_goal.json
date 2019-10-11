@@ -1,0 +1,571 @@
+[
+  {
+    "signature": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder(java.lang.String field)",
+    "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder(org.elasticsearch.common.io.stream.StreamInput in)",
+    "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.io.stream.StreamInput",
+          "name": "StreamInput",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "comment": "Read from a stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "innerToXContent(org.elasticsearch.common.xcontent.XContentBuilder builder, org.elasticsearch.common.xcontent.ToXContent$Params params)",
+    "name": "innerToXContent",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.xcontent.XContentBuilder",
+      "name": "org.elasticsearch.common.xcontent.XContentBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.XContentBuilder",
+          "name": "XContentBuilder",
+          "isArray": false
+        },
+        "name": "builder"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.ToXContent$Params",
+          "name": "Params",
+          "isArray": false
+        },
+        "name": "params"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contexts(java.util.Map<java.lang.String, java.util.List<? extends org.elasticsearch.common.xcontent.ToXContent>> queryContexts)",
+    "name": "contexts",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "queryContexts"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets query contexts for completion",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regex(java.lang.String regex)",
+    "name": "regex",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets a regular expression pattern for prefixes to provide completions for.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parseContextBytes(org.elasticsearch.common.bytes.BytesReference contextBytes, org.elasticsearch.common.xcontent.NamedXContentRegistry xContentRegistry, org.elasticsearch.search.suggest.completion.context.ContextMappings contextMappings)",
+    "name": "parseContextBytes",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.util.List<org.elasticsearch.search.suggest.completion.context.ContextMapping$InternalQueryContext>>",
+      "name": "java.util.Map<java.lang.String, java.util.List<org.elasticsearch.search.suggest.completion.context.ContextMapping$InternalQueryContext>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.bytes.BytesReference",
+          "name": "BytesReference",
+          "isArray": false
+        },
+        "name": "contextBytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.NamedXContentRegistry",
+          "name": "NamedXContentRegistry",
+          "isArray": false
+        },
+        "name": "xContentRegistry"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.search.suggest.completion.context.ContextMappings",
+          "name": "ContextMappings",
+          "isArray": false
+        },
+        "name": "contextMappings"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prefix(java.lang.String prefix)",
+    "name": "prefix",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "prefix"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets the prefix to provide completions for. The prefix gets analyzed by the suggest analyzer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skipDuplicates()",
+    "name": "skipDuplicates",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns whether duplicate suggestions should be filtered out.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doEquals(org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder other)",
+    "name": "doEquals",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+          "name": "CompletionSuggestionBuilder",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prefix(java.lang.String prefix, org.elasticsearch.search.suggest.completion.FuzzyOptions fuzzyOptions)",
+    "name": "prefix",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "prefix"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.search.suggest.completion.FuzzyOptions",
+          "name": "FuzzyOptions",
+          "isArray": false
+        },
+        "name": "fuzzyOptions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #prefix(String) with full fuzzy options see FuzzyOptions.Builder",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.prefix(args[0]))"
+    }
+  },
+  {
+    "signature": "regex(java.lang.String regex, org.elasticsearch.search.suggest.completion.RegexOptions regexOptions)",
+    "name": "regex",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.search.suggest.completion.RegexOptions",
+          "name": "RegexOptions",
+          "isArray": false
+        },
+        "name": "regexOptions"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #regex(String) with full regular expression options see RegexOptions.Builder",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.regex(args[0]))"
+    }
+  },
+  {
+    "signature": "skipDuplicates(boolean skipDuplicates)",
+    "name": "skipDuplicates",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "skipDuplicates"
+      }
+    ],
+    "equivalence": {
+      "comment": "Should duplicates be filtered or not. Defaults to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromXContent(org.elasticsearch.common.xcontent.XContentParser parser)",
+    "name": "fromXContent",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.XContentParser",
+          "name": "XContentParser",
+          "isArray": false
+        },
+        "name": "parser"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "build(org.elasticsearch.index.query.QueryShardContext context)",
+    "name": "build",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.SuggestionSearchContext$SuggestionContext",
+      "name": "org.elasticsearch.search.suggest.SuggestionSearchContext$SuggestionContext",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.index.query.QueryShardContext",
+          "name": "QueryShardContext",
+          "isArray": false
+        },
+        "name": "context"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doHashCode()",
+    "name": "doHashCode",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doWriteTo(org.elasticsearch.common.io.stream.StreamOutput out)",
+    "name": "doWriteTo",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.io.stream.StreamOutput",
+          "name": "StreamOutput",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prefix(java.lang.String prefix, org.elasticsearch.common.unit.Fuzziness fuzziness)",
+    "name": "prefix",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "prefix"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.unit.Fuzziness",
+          "name": "Fuzziness",
+          "isArray": false
+        },
+        "name": "fuzziness"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #prefix(String) with fuzziness of fuzziness",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.prefix(args[0]))"
+    }
+  },
+  {
+    "signature": "getWriteableName()",
+    "name": "getWriteableName",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+      "name": "CompletionSuggestionBuilder",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.search.suggest.completion.CompletionSuggestionBuilder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

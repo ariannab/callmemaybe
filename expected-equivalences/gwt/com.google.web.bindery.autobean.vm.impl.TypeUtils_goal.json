@@ -1,0 +1,204 @@
+[
+  {
+    "signature": "getDefaultPrimitiveValue(java.lang.Class<?> clazz)",
+    "name": "getDefaultPrimitiveValue",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+      "name": "TypeUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "clazz"
+      }
+    ],
+    "equivalence": {
+      "comment": "Given a primitive Class type, return a default value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureBaseType(java.lang.reflect.Type type)",
+    "name": "ensureBaseType",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+      "name": "TypeUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Class<?>",
+      "name": "java.lang.Class<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Type",
+          "name": "Type",
+          "isArray": false
+        },
+        "name": "type"
+      }
+    ],
+    "equivalence": {
+      "comment": "Similar to ModelUtils#ensureBaseType(JType) but for the reflection API.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(ModelUtils.ensureBaseType(args[0]))"
+    }
+  },
+  {
+    "signature": "getSingleParameterization(java.lang.Class<?> intf, java.lang.reflect.Type... types)",
+    "name": "getSingleParameterization",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+      "name": "TypeUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.reflect.Type",
+      "name": "java.lang.reflect.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "intf"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.reflect.Type;",
+          "name": "Type[]",
+          "isArray": true
+        },
+        "name": "types"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maybeAutobox(java.lang.Class<V> domainType)",
+    "name": "maybeAutobox",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+      "name": "TypeUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Class<V>",
+      "name": "java.lang.Class<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "domainType"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isValueType(java.lang.Class<?> clazz)",
+    "name": "isValueType",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+      "name": "TypeUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "clazz"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParameterization(java.lang.Class<?> intf, java.lang.reflect.Type... types)",
+    "name": "getParameterization",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+      "name": "TypeUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.autobean.vm.impl.TypeUtils",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.reflect.Type[]",
+      "name": "java.lang.reflect.Type[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "intf"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.reflect.Type;",
+          "name": "Type[]",
+          "isArray": true
+        },
+        "name": "types"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

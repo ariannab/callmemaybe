@@ -1,0 +1,164 @@
+[
+  {
+    "signature": "removeAll(java.lang.Object key)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ListMultimap",
+      "name": "ListMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ListMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<V>",
+      "name": "java.util.List<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "removeAll(java.lang.Object key)",
+      "comment": "{@inheritDoc} Because the values for a given key may have duplicates and follow the insertion ordering, this method returns a List, instead of the java.util.Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+    "name": "replaceValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ListMultimap",
+      "name": "ListMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ListMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<V>",
+      "name": "java.util.List<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+      "comment": "{@inheritDoc} Because the values for a given key may have duplicates and follow the insertion ordering, this method returns a List, instead of the java.util.Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asMap()",
+    "name": "asMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ListMultimap",
+      "name": "ListMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ListMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<K, java.util.Collection<V>>",
+      "name": "java.util.Map<K, java.util.Collection<V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "asMap()",
+      "comment": "{@inheritDoc} Note: The returned map's values are guaranteed to be of type List. To obtain this map with the more specific generic type Map<K, List<V>>, call Multimaps#asMap(ListMultimap) instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(K key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ListMultimap",
+      "name": "ListMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ListMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<V>",
+      "name": "java.util.List<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "get(K key)",
+      "comment": "{@inheritDoc} Because the values for a given key may have duplicates and follow the insertion ordering, this method returns a List, instead of the java.util.Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ListMultimap",
+      "name": "ListMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ListMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Compares the specified object to this multimap for equality. Two ListMultimap instances are equal if, for each key, they contain the same values in the same order. If the value orderings disagree, the multimaps will not be considered equal. An empty ListMultimap is equal to any other empty Multimap, including an empty SetMultimap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

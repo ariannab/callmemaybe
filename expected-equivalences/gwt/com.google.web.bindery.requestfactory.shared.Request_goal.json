@@ -1,0 +1,139 @@
+[
+  {
+    "signature": "fire(com.google.web.bindery.requestfactory.shared.Receiver<? super T> receiver)",
+    "name": "fire",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.Request",
+      "name": "Request",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.requestfactory.shared.Request",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.web.bindery.requestfactory.shared.Receiver",
+          "name": "Receiver",
+          "isArray": false
+        },
+        "name": "receiver"
+      }
+    ],
+    "equivalence": {
+      "comment": "Convenience method equivalent to calling to(...).fire().",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.fire(); receiverObjectClone.fire(args[0]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "to(com.google.web.bindery.requestfactory.shared.Receiver<? super T> receiver)",
+    "name": "to",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.Request",
+      "name": "Request",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.requestfactory.shared.Request",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.RequestContext",
+      "name": "com.google.web.bindery.requestfactory.shared.RequestContext",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.web.bindery.requestfactory.shared.Receiver",
+          "name": "Receiver",
+          "isArray": false
+        },
+        "name": "receiver"
+      }
+    ],
+    "equivalence": {
+      "comment": "Specify the object that will receive the result of the method invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fire()",
+    "name": "fire",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.Request",
+      "name": "Request",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.requestfactory.shared.Request",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Submit this request. Failures will be reported through the global uncaught exception handler, if any.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "with(java.lang.String... propertyRefs)",
+    "name": "with",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.Request",
+      "name": "Request",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.requestfactory.shared.Request",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.Request<T>",
+      "name": "com.google.web.bindery.requestfactory.shared.Request<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "propertyRefs"
+      }
+    ],
+    "equivalence": {
+      "comment": "Request additional reference properties to fetch with the return value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRequestContext()",
+    "name": "getRequestContext",
+    "containingClass": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.Request",
+      "name": "Request",
+      "isArray": false
+    },
+    "targetClass": "com.google.web.bindery.requestfactory.shared.Request",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.web.bindery.requestfactory.shared.RequestContext",
+      "name": "com.google.web.bindery.requestfactory.shared.RequestContext",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the RequestContext associated with the Request.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

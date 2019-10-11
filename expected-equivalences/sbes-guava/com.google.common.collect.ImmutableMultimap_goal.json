@@ -1,0 +1,1174 @@
+[
+  {
+    "signature": "remove(java.lang.Object key, java.lang.Object value)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "remove(java.lang.Object key, java.lang.Object value)",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "values()",
+      "comment": "Returns an immutable collection of the values in this multimap. Its iterator traverses the values for the first key, the values for the second key, and so on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createKeys()",
+    "name": "createKeys",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultiset<K>",
+      "name": "com.google.common.collect.ImmutableMultiset<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createKeys()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(K k1, V v1, K k2, V v2)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v2"
+      }
+    ],
+    "equivalence": {
+      "member": "of(K k1, V v1, K k2, V v2)",
+      "comment": "Returns an immutable multimap containing the given entries, in order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inverse()",
+    "name": "inverse",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<V, K>",
+      "name": "com.google.common.collect.ImmutableMultimap<V, K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "inverse()",
+      "comment": "Returns an immutable multimap which is the inverse of this one. For every key-value mapping in the original, the result will have a mapping with key and value reversed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(K key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "member": "get(K key)",
+      "comment": "Returns an immutable collection of the values for the given key. If no mappings in the multimap have the provided key, an empty immutable collection is returned. The values are in the same order as the parameters used to build this multimap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of()",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "of()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyOf(java.lang.Iterable<? extends java.util.Map$Entry<? extends K, ? extends V>> entries)",
+    "name": "copyOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "entries"
+      }
+    ],
+    "equivalence": {
+      "member": "copyOf(java.lang.Iterable<? extends java.util.Map$Entry<? extends K, ? extends V>> entries)",
+      "comment": "Returns an immutable multimap containing the specified entries. The returned multimap iterates over keys in the order they were first encountered in the input, and the values for each key are iterated in the order they were encountered.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "put(K key, V value)",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyOf(com.google.common.collect.Multimap<? extends K, ? extends V> multimap)",
+    "name": "copyOf",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multimap",
+          "name": "Multimap",
+          "isArray": false
+        },
+        "name": "multimap"
+      }
+    ],
+    "equivalence": {
+      "member": "copyOf(com.google.common.collect.Multimap<? extends K, ? extends V> multimap)",
+      "comment": "Returns an immutable multimap containing the same mappings as multimap, in the \"key-grouped\" iteration order described in the class documentation. Despite the method name, this method attempts to avoid actually copying the data when it is safe to do so. The exact circumstances under which a copy will or will not be performed are undocumented and subject to change.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entryIterator()",
+    "name": "entryIterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.UnmodifiableIterator<java.util.Map$Entry<K, V>>",
+      "name": "com.google.common.collect.UnmodifiableIterator<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "entryIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keys()",
+    "name": "keys",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultiset<K>",
+      "name": "com.google.common.collect.ImmutableMultiset<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "keys()",
+      "comment": "Returns an immutable multiset containing all the keys in this multimap, in the same order and with the same frequencies as they appear in this multimap; to get only a single occurrence of each key, use #keySet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asMap()",
+    "name": "asMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMap<K, java.util.Collection<V>>",
+      "name": "com.google.common.collect.ImmutableMap<K, java.util.Collection<V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "asMap()",
+      "comment": "Returns an immutable map that associates each key with its corresponding values in the multimap. Keys and values appear in the same order as in this multimap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createValues()",
+    "name": "createValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createValues()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "com.google.common.collect.ImmutableMultimap(com.google.common.collect.ImmutableMap<K, ? extends com.google.common.collect.ImmutableCollection<V>> map, int size)",
+    "name": "com.google.common.collect.ImmutableMultimap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.ImmutableMap",
+          "name": "ImmutableMap",
+          "isArray": false
+        },
+        "name": "map"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "equivalence": {
+      "member": "com.google.common.collect.ImmutableMultimap(com.google.common.collect.ImmutableMap<K, ? extends com.google.common.collect.ImmutableCollection<V>> map, int size)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPartialView()",
+    "name": "isPartialView",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isPartialView()",
+      "comment": "Returns true if this immutable multimap's implementation contains references to user-created objects that aren't accessible via this multimap's methods. This is generally used to determine whether copyOf implementations should make an explicit copy to avoid memory leaks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(K key, java.lang.Iterable<? extends V> values)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "putAll(K key, java.lang.Iterable<? extends V> values)",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableSet<K>",
+      "name": "com.google.common.collect.ImmutableSet<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "keySet()",
+      "comment": "Returns an immutable set of the distinct keys in this multimap, in the same order as they appear in this multimap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createAsMap()",
+    "name": "createAsMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<K, java.util.Collection<V>>",
+      "name": "java.util.Map<K, java.util.Collection<V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createAsMap()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(com.google.common.collect.Multimap<? extends K, ? extends V> multimap)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Multimap",
+          "name": "Multimap",
+          "isArray": false
+        },
+        "name": "multimap"
+      }
+    ],
+    "equivalence": {
+      "member": "putAll(com.google.common.collect.Multimap<? extends K, ? extends V> multimap)",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createEntries()",
+    "name": "createEntries",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<java.util.Map$Entry<K, V>>",
+      "name": "com.google.common.collect.ImmutableCollection<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createEntries()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueIterator()",
+    "name": "valueIterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.UnmodifiableIterator<V>",
+      "name": "com.google.common.collect.UnmodifiableIterator<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "valueIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+    "name": "replaceValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "size()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(K k1, V v1)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v1"
+      }
+    ],
+    "equivalence": {
+      "member": "of(K k1, V v1)",
+      "comment": "Returns an immutable multimap containing a single entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k4"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v4"
+      }
+    ],
+    "equivalence": {
+      "member": "of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)",
+      "comment": "Returns an immutable multimap containing the given entries, in the \"key-grouped\" insertion order described in the class documentation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entries()",
+    "name": "entries",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<java.util.Map$Entry<K, V>>",
+      "name": "com.google.common.collect.ImmutableCollection<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "entries()",
+      "comment": "Returns an immutable collection of all key-value pairs in the multimap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "builder()",
+    "name": "builder",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap$Builder<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap$Builder<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "builder()",
+      "comment": "Returns a new builder. The generated builder is equivalent to the builder created by the Builder constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "clear()",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k4"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v4"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k5"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v5"
+      }
+    ],
+    "equivalence": {
+      "member": "of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)",
+      "comment": "Returns an immutable multimap containing the given entries, in the \"key-grouped\" insertion order described in the class documentation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.lang.Object key)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableCollection<V>",
+      "name": "com.google.common.collect.ImmutableCollection<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "member": "removeAll(java.lang.Object key)",
+      "comment": "Guaranteed to throw an exception and leave the multimap unmodified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(K k1, V v1, K k2, V v2, K k3, V v3)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap",
+      "name": "ImmutableMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.ImmutableMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "name": "com.google.common.collect.ImmutableMultimap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "v3"
+      }
+    ],
+    "equivalence": {
+      "member": "of(K k1, V v1, K k2, V v2, K k3, V v3)",
+      "comment": "Returns an immutable multimap containing the given entries, in the \"key-grouped\" insertion order described in the class documentation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

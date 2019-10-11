@@ -1,0 +1,248 @@
+[
+  {
+    "signature": "addTo(com.google.gwt.i18n.client.AutoDirectionHandler$Target target)",
+    "name": "addTo",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler$Target",
+          "name": "Target",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "comment": "Operates like #addTo(Target, DirectionEstimator), but always uses a default DirectionEstimator, com.google.gwt.i18n.shared.WordCountDirectionEstimator.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.addTo(args[0], com.google.gwt.i18n.shared.WordCountDirectionEstimator))"
+    }
+  },
+  {
+    "signature": "setDirectionEstimator(boolean enabled)",
+    "name": "setDirectionEstimator",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "enabled"
+      }
+    ],
+    "equivalence": {
+      "comment": "Toggles direction estimation on (using a default estimator) and off.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addTo(com.google.gwt.i18n.client.AutoDirectionHandler$Target target, boolean enabled)",
+    "name": "addTo",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler$Target",
+          "name": "Target",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "enabled"
+      }
+    ],
+    "equivalence": {
+      "comment": "Operates like #addTo(Target, DirectionEstimator), but uses a default DirectionEstimator, com.google.gwt.i18n.shared.WordCountDirectionEstimator if enabled, or else a null DirectionEstimator, which means disabling direction estimation.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.addTo(args[0]), com.google.gwt.i18n.shared.WordCountDirectionEstimator)) ||  methodResultID.equals(receiverObjectID.addTo(args[0]), null))"
+    }
+  },
+  {
+    "signature": "getDirectionEstimator()",
+    "name": "getDirectionEstimator",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.DirectionEstimator",
+      "name": "com.google.gwt.i18n.shared.DirectionEstimator",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the DirectionEstimator object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onKeyUp(com.google.gwt.event.dom.client.KeyUpEvent event)",
+    "name": "onKeyUp",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.event.dom.client.KeyUpEvent",
+          "name": "KeyUpEvent",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "equivalence": {
+      "comment": "Automatically adjusts hasDirection's direction on KeyUpEvent events. Implementation of KeyUpHandler interface method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addTo(com.google.gwt.i18n.client.AutoDirectionHandler$Target target, com.google.gwt.i18n.shared.DirectionEstimator directionEstimator)",
+    "name": "addTo",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler$Target",
+          "name": "Target",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.shared.DirectionEstimator",
+          "name": "DirectionEstimator",
+          "isArray": false
+        },
+        "name": "directionEstimator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds auto-direction adjustment to a given object: - Creates an AutoDirectionHandler. - Initializes it with the given DirectionEstimator. - Adds it as an event handler for the relevant events on the given object. - Returns the AutoDirectionHandler, so its setAutoDir() method can be called when the object's text changes by means other than the handled events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDirectionEstimator(com.google.gwt.i18n.shared.DirectionEstimator directionEstimator)",
+    "name": "setDirectionEstimator",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.gwt.i18n.shared.DirectionEstimator",
+          "name": "DirectionEstimator",
+          "isArray": false
+        },
+        "name": "directionEstimator"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets the DirectionEstimator object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "refreshDirection()",
+    "name": "refreshDirection",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.client.AutoDirectionHandler",
+      "name": "AutoDirectionHandler",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.client.AutoDirectionHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Adjusts target's direction according to the estimated direction of the text it supplies.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "signature": "onRejection(java.lang.Exception e)",
+    "name": "onRejection",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+      "name": "AbstractRunnable",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Exception",
+          "name": "Exception",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "equivalence": {
+      "comment": "This should be executed if the thread-pool executing this action rejected the execution. The default implementation forwards to #onFailure(Exception)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onAfter()",
+    "name": "onAfter",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+      "name": "AbstractRunnable",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "This method is called in a finally block after successful execution or on a rejection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "run()",
+    "name": "run",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+      "name": "AbstractRunnable",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onFailure(java.lang.Exception e)",
+    "name": "onFailure",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+      "name": "AbstractRunnable",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Exception",
+          "name": "Exception",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "equivalence": {
+      "comment": "This method is invoked for all exception thrown by #doRun()",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isForceExecution()",
+    "name": "isForceExecution",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+      "name": "AbstractRunnable",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Should the runnable force its execution in case it gets rejected?",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doRun()",
+    "name": "doRun",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+      "name": "AbstractRunnable",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.AbstractRunnable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "This method has the same semantics as Runnable#run()",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

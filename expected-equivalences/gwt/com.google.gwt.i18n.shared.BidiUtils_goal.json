@@ -1,0 +1,553 @@
+[
+  {
+    "signature": "estimateDirection(java.lang.String str, boolean isHtml)",
+    "name": "estimateDirection",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+      "name": "com.google.gwt.i18n.client.HasDirection$Direction",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Estimates the directionality of a string based on relative word counts. If the number of RTL words is above a certain percentage of the total number of strongly directional words, returns RTL. Otherwise, if any words are strongly or weakly LTR, returns LTR. Otherwise, returns DEFAULT, which is used to mean \"neutral\". Numbers are counted as weakly LTR.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "startsWithRtl(java.lang.String str)",
+    "name": "startsWithRtl",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #startsWithRtl(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID==(startsWithRtl(args[0], false))"
+    }
+  },
+  {
+    "signature": "endsWithLtr(java.lang.String str, boolean isHtml)",
+    "name": "endsWithLtr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Check whether the last strongly-directional character in the string is LTR.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endsWithRtl(java.lang.String str, boolean isHtml)",
+    "name": "endsWithRtl",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Check whether the last strongly-directional character in the string is RTL.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "startsWithLtr(java.lang.String str)",
+    "name": "startsWithLtr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #startsWithLtr(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(startsWithLtr(args[0], false))"
+    }
+  },
+  {
+    "signature": "estimateDirection(java.lang.String str)",
+    "name": "estimateDirection",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.client.HasDirection$Direction",
+      "name": "com.google.gwt.i18n.client.HasDirection$Direction",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #estimateDirection(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(estimateDirection(args[0], false))"
+    }
+  },
+  {
+    "signature": "get()",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "com.google.gwt.i18n.shared.BidiUtils",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get an instance of BidiUtils.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endsWithRtl(java.lang.String str)",
+    "name": "endsWithRtl",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #endsWithRtl(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(endsWithRtl(args[0], false))"
+    }
+  },
+  {
+    "signature": "startsWithLtr(java.lang.String str, boolean isHtml)",
+    "name": "startsWithLtr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Check whether the first strongly-directional character in the string is LTR.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "startsWithRtl(java.lang.String str, boolean isHtml)",
+    "name": "startsWithRtl",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Check whether the first strongly-directional character in the string is RTL.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stripHtmlIfNeeded(java.lang.String str, boolean isStripNeeded)",
+    "name": "stripHtmlIfNeeded",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isStripNeeded"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the input text with spaces instead of HTML tags or HTML escapes, if isStripNeeded is true. Else returns the input as is. Useful for text directionality estimation. Note: the function should not be used in other contexts; it is not 100% correct, but rather a good-enough implementation for directionality estimation purposes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasAnyLtr(java.lang.String str, boolean isHtml)",
+    "name": "hasAnyLtr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Checks if the given string has any LTR characters in it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endsWithLtr(java.lang.String str)",
+    "name": "endsWithLtr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #endsWithLtr(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(endsWithLtr(args[0], false))"
+    }
+  },
+  {
+    "signature": "hasAnyRtl(java.lang.String str)",
+    "name": "hasAnyRtl",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #hasAnyRtl(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(hasAnyRtl(args[0], false))"
+    }
+  },
+  {
+    "signature": "hasAnyLtr(java.lang.String str)",
+    "name": "hasAnyLtr",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "comment": "Like #hasAnyLtr(String, boolean), but assumes str is not HTML / HTML-escaped.",
+      "kind": "FreeText",
+      "condition": "methodResultID==(hasAnyLtr(args[0], false))"
+    }
+  },
+  {
+    "signature": "hasAnyRtl(java.lang.String str, boolean isHtml)",
+    "name": "hasAnyRtl",
+    "containingClass": {
+      "qualifiedName": "com.google.gwt.i18n.shared.BidiUtils",
+      "name": "BidiUtils",
+      "isArray": false
+    },
+    "targetClass": "com.google.gwt.i18n.shared.BidiUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isHtml"
+      }
+    ],
+    "equivalence": {
+      "comment": "Checks if the given string has any RTL characters in it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

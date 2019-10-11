@@ -1,0 +1,1111 @@
+[
+  {
+    "signature": "rawPath()",
+    "name": "rawPath",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "The non decoded, raw path provided.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLocalAddress()",
+    "name": "getLocalAddress",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.net.SocketAddress",
+      "name": "java.net.SocketAddress",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.rest.RestRequest(org.elasticsearch.common.xcontent.NamedXContentRegistry xContentRegistry, java.lang.String uri, java.util.Map<java.lang.String, java.util.List<java.lang.String>> headers)",
+    "name": "org.elasticsearch.rest.RestRequest",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.NamedXContentRegistry",
+          "name": "NamedXContentRegistry",
+          "isArray": false
+        },
+        "name": "xContentRegistry"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "uri"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "headers"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a new RestRequest",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "param(java.lang.String key, java.lang.String defaultValue)",
+    "name": "param",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyContentParser(org.elasticsearch.common.CheckedConsumer<org.elasticsearch.common.xcontent.XContentParser, java.io.IOException> applyParser)",
+    "name": "applyContentParser",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.CheckedConsumer",
+          "name": "CheckedConsumer",
+          "isArray": false
+        },
+        "name": "applyParser"
+      }
+    ],
+    "equivalence": {
+      "comment": "If there is any content then call applyParser with the parser, otherwise do nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contentParser()",
+    "name": "contentParser",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.xcontent.XContentParser",
+      "name": "org.elasticsearch.common.xcontent.XContentParser",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "A parser for the contents of this request if there is a body, otherwise throws an ElasticsearchParseException. Use #applyContentParser(CheckedConsumer) if you want to gracefully handle when the request doesn't have any contents. Use #contentOrSourceParamParser() for requests that support specifying the request body in the source param.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contentOrSourceParamParser()",
+    "name": "contentOrSourceParamParser",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.xcontent.XContentParser",
+      "name": "org.elasticsearch.common.xcontent.XContentParser",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "A parser for the contents of this request if it has contents, otherwise a parser for the source parameter if there is one, otherwise throws an ElasticsearchParseException. Use #withContentOrSourceParamParserOrNull(CheckedConsumer) instead if you need to handle the absence request content gracefully.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "param(java.lang.String key)",
+    "name": "param",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.rest.RestRequest(org.elasticsearch.common.xcontent.NamedXContentRegistry xContentRegistry, java.util.Map<java.lang.String, java.lang.String> params, java.lang.String path, java.util.Map<java.lang.String, java.util.List<java.lang.String>> headers)",
+    "name": "org.elasticsearch.rest.RestRequest",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.NamedXContentRegistry",
+          "name": "NamedXContentRegistry",
+          "isArray": false
+        },
+        "name": "xContentRegistry"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "params"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "path"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "headers"
+      }
+    ],
+    "equivalence": {
+      "comment": "Creates a new RestRequest",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsStringArrayOrEmptyIfAll(java.lang.String key)",
+    "name": "paramAsStringArrayOrEmptyIfAll",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasContentOrSourceParam()",
+    "name": "hasContentOrSourceParam",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Does this request have content or a source parameter? Use this instead of #hasContent() if this RestHandler treats the source parameter like the body content.",
+      "kind": "FreeText",
+      "condition": "methodResultID==(receiverObjectID.hasContent())"
+    }
+  },
+  {
+    "signature": "requiredContent()",
+    "name": "requiredContent",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.bytes.BytesReference",
+      "name": "org.elasticsearch.common.bytes.BytesReference",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHeaders()",
+    "name": "getHeaders",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.util.List<java.lang.String>>",
+      "name": "java.util.Map<java.lang.String, java.util.List<java.lang.String>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get all of the headers and values associated with the headers. Modifications of this map are not supported.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setXContentType(org.elasticsearch.common.xcontent.XContentType xContentType)",
+    "name": "setXContentType",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.xcontent.XContentType",
+          "name": "XContentType",
+          "isArray": false
+        },
+        "name": "xContentType"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets the XContentType",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsTime(java.lang.String key, org.elasticsearch.common.unit.TimeValue defaultValue)",
+    "name": "paramAsTime",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.unit.TimeValue",
+      "name": "org.elasticsearch.common.unit.TimeValue",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.unit.TimeValue",
+          "name": "TimeValue",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getXContentType()",
+    "name": "getXContentType",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.xcontent.XContentType",
+      "name": "org.elasticsearch.common.xcontent.XContentType",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "The XContentType that was parsed from the Content-Type header. This value will be null in the case of a request without a valid Content-Type header, a request without content (#hasContent(), or a plain text request",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsStringArray(java.lang.String key, java.lang.String[] defaultValue)",
+    "name": "paramAsStringArray",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsFloat(java.lang.String key, float defaultValue)",
+    "name": "paramAsFloat",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasParam(java.lang.String key)",
+    "name": "hasParam",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "consumedParams()",
+    "name": "consumedParams",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a list of parameters that have been consumed. This method returns a copy, callers are free to modify the returned list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "method()",
+    "name": "method",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest$Method",
+      "name": "org.elasticsearch.rest.RestRequest$Method",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "uri()",
+    "name": "uri",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "The uri of the rest request, with the query string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "content()",
+    "name": "content",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.bytes.BytesReference",
+      "name": "org.elasticsearch.common.bytes.BytesReference",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unconsumedParams()",
+    "name": "unconsumedParams",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a list of parameters that have not yet been consumed. This method returns a copy, callers are free to modify the returned list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsLong(java.lang.String key, long defaultValue)",
+    "name": "paramAsLong",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAllHeaderValues(java.lang.String name)",
+    "name": "getAllHeaderValues",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "comment": "Get all values for the header or null if the header was not found",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "path()",
+    "name": "path",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "The path part of the URI (without the query string), decoded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRemoteAddress()",
+    "name": "getRemoteAddress",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.net.SocketAddress",
+      "name": "java.net.SocketAddress",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsInt(java.lang.String key, int defaultValue)",
+    "name": "paramAsInt",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsSize(java.lang.String key, org.elasticsearch.common.unit.ByteSizeValue defaultValue)",
+    "name": "paramAsSize",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.unit.ByteSizeValue",
+      "name": "org.elasticsearch.common.unit.ByteSizeValue",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.unit.ByteSizeValue",
+          "name": "ByteSizeValue",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getXContentRegistry()",
+    "name": "getXContentRegistry",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.xcontent.NamedXContentRegistry",
+      "name": "org.elasticsearch.common.xcontent.NamedXContentRegistry",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get the NamedXContentRegistry that should be used to create parsers from this request.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "params()",
+    "name": "params",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.lang.String>",
+      "name": "java.util.Map<java.lang.String, java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasContent()",
+    "name": "hasContent",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withContentOrSourceParamParserOrNull(org.elasticsearch.common.CheckedConsumer<org.elasticsearch.common.xcontent.XContentParser, java.io.IOException> withParser)",
+    "name": "withContentOrSourceParamParserOrNull",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.CheckedConsumer",
+          "name": "CheckedConsumer",
+          "isArray": false
+        },
+        "name": "withParser"
+      }
+    ],
+    "equivalence": {
+      "comment": "Call a consumer with the parser for the contents of this request if it has contents, otherwise with a parser for the source parameter if there is one, otherwise with null. Use #contentOrSourceParamParser() if you should throw an exception back to the user when there isn't request content.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contentOrSourceParam()",
+    "name": "contentOrSourceParam",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.elasticsearch.common.collect.Tuple<org.elasticsearch.common.xcontent.XContentType, org.elasticsearch.common.bytes.BytesReference>",
+      "name": "org.elasticsearch.common.collect.Tuple<org.elasticsearch.common.xcontent.XContentType, org.elasticsearch.common.bytes.BytesReference>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Get the content of the request or the contents of the source param or throw an exception if both are missing. Prefer #contentOrSourceParamParser() or #withContentOrSourceParamParserOrNull(CheckedConsumer) if you need a parser.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsBoolean(java.lang.String key, boolean defaultValue)",
+    "name": "paramAsBoolean",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paramAsBoolean(java.lang.String key, java.lang.Boolean defaultValue)",
+    "name": "paramAsBoolean",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Boolean",
+      "name": "java.lang.Boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Boolean",
+          "name": "Boolean",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "header(java.lang.String name)",
+    "name": "header",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.rest.RestRequest",
+      "name": "RestRequest",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.rest.RestRequest",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "comment": "Get the value of the header or null if not found. This method only retrieves the first header value if multiple values are sent. Use of #getAllHeaderValues(String) should be preferred",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getAllHeaderValues(args[0]))"
+    }
+  }
+]

@@ -1,0 +1,711 @@
+[
+  {
+    "signature": "equals(java.lang.Object object)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "object",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object object)",
+      "comment": "{@inheritDoc} This implementation returns true if object is a multiset of the same size and if, for each element, the two multisets have the same count.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(java.util.Collection<? extends E> elementsToAdd)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToAdd"
+      }
+    ],
+    "equivalence": {
+      "member": "addAll(java.util.Collection<? extends E> elementsToAdd)",
+      "comment": "{@inheritDoc} This implementation is highly efficient when elementsToAdd is itself a Multiset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "add(E element)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object element)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "remove(java.lang.Object element)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hashCode()",
+      "comment": "{@inheritDoc} This implementation returns the hash code of Multiset#entrySet().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distinctElements()",
+    "name": "distinctElements",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "distinctElements()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "count(java.lang.Object element)",
+    "name": "count",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "count(java.lang.Object element)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E element, int occurrences)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "occurrences"
+      }
+    ],
+    "equivalence": {
+      "member": "add(E element, int occurrences)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entryIterator()",
+    "name": "entryIterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<com.google.common.collect.Multiset$Entry<E>>",
+      "name": "java.util.Iterator<com.google.common.collect.Multiset$Entry<E>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "entryIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "name": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "entrySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "iterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "clear()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createElementSet()",
+    "name": "createElementSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<E>",
+      "name": "java.util.Set<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createElementSet()",
+      "comment": "Creates a new instance of this multiset's element set, which will be returned by #elementSet().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isEmpty()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "{@inheritDoc} This implementation returns the result of invoking toString on Multiset#entrySet().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "size()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCount(E element, int oldCount, int newCount)",
+    "name": "setCount",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "oldCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newCount"
+      }
+    ],
+    "equivalence": {
+      "member": "setCount(E element, int oldCount, int newCount)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.util.Collection<?> elementsToRemove)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToRemove"
+      }
+    ],
+    "equivalence": {
+      "member": "removeAll(java.util.Collection<?> elementsToRemove)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(java.util.Collection<?> elementsToRetain)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "elementsToRetain"
+      }
+    ],
+    "equivalence": {
+      "member": "retainAll(java.util.Collection<?> elementsToRetain)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementSet()",
+    "name": "elementSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<E>",
+      "name": "java.util.Set<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "elementSet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCount(E element, int count)",
+    "name": "setCount",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "member": "setCount(E element, int count)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object element)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "contains(java.lang.Object element)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object element, int occurrences)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "occurrences"
+      }
+    ],
+    "equivalence": {
+      "member": "remove(java.lang.Object element, int occurrences)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createEntrySet()",
+    "name": "createEntrySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractMultiset",
+      "name": "AbstractMultiset",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractMultiset",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "name": "java.util.Set<com.google.common.collect.Multiset$Entry<E>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createEntrySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

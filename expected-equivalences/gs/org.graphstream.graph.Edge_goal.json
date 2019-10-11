@@ -1,0 +1,165 @@
+[
+  {
+    "signature": "isDirected()",
+    "name": "isDirected",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Is the edge directed ?.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode1()",
+    "name": "getNode1",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Second node of the edge.  This is equivalent to the #getTargetNode() method, but may be clearer in the source code if the graph you are using is not directed.   This method is implicitly generic and return something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedNode n = edge.getNode1(); </pre> the method will return an ExtendedNode. If no left part exists, method will just return a Node.  @see #getNode0() @see #getTargetNode()",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getTargetNode())"
+    }
+  },
+  {
+    "signature": "getSourceNode()",
+    "name": "getSourceNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Start node.  When the edge is directed this is the source node, in this case you can get the opposite node using #getTargetNode(). This is equivalent to the #getNode0() method but may be clearer in the source code if the graph you are using is directed.   This method is implicitly generic and return something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedNode n = edge.getSourceNode(); </pre> the method will return an ExtendedNode. If no left part exists, method will just return a Node.  @see #getNode0() @see #getTargetNode()",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getNode0())"
+    }
+  },
+  {
+    "signature": "getOpposite(org.graphstream.graph.Node node)",
+    "name": "getOpposite",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "equivalence": {
+      "comment": "When knowing one node and one edge of this node, this method return the node at the other end of the edge.  Return null if the given node is not at any end of the edge.   This method is implicitly generic and return something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedNode n = edge.getOppositeNode((ExtendedNode) m); </pre> the method will return an ExtendedNode. If no left part exists, method will just return a Node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTargetNode()",
+    "name": "getTargetNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "End node.  When the edge is directed this is the target node, in this case you can get the opposite node using #getSourceNode(). This is equivalent to the #getNode1() method but may be clearer in the source code if the graph you are using is directed.   This method is implicitly generic and return something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedNode n = edge.getTargetNode(); </pre> the method will return an ExtendedNode. If no left part exists, method will just return a Node.  @see #getNode1() @see #getSourceNode()",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getNode1())"
+    }
+  },
+  {
+    "signature": "isLoop()",
+    "name": "isLoop",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Does the source and target of this edge identify the same node ?.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode0()",
+    "name": "getNode0",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "Edge",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Edge",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "First node of the edge.  This is equivalent to the #getSourceNode() method, but may be clearer in the source code if the graph you are using is not directed.   This method is implicitly generic and return something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call : <pre> ExtendedNode n = edge.getNode0(); </pre> the method will return an ExtendedNode. If no left part exists, method will just return a Node.  @see #getNode1() @see #getSourceNode()",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getSourceNode())"
+    }
+  }
+]

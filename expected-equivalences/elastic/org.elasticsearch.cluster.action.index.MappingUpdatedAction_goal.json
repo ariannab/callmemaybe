@@ -1,0 +1,169 @@
+[
+  {
+    "signature": "updateMappingOnMaster(org.elasticsearch.index.Index index, java.lang.String type, org.elasticsearch.index.mapper.Mapping mappingUpdate, org.elasticsearch.common.unit.TimeValue timeout)",
+    "name": "updateMappingOnMaster",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+      "name": "MappingUpdatedAction",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.index.Index",
+          "name": "Index",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "type"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.index.mapper.Mapping",
+          "name": "Mapping",
+          "isArray": false
+        },
+        "name": "mappingUpdate"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.unit.TimeValue",
+          "name": "TimeValue",
+          "isArray": false
+        },
+        "name": "timeout"
+      }
+    ],
+    "equivalence": {
+      "comment": "Update mappings synchronously on the master node, waiting for at most timeout. When this method returns successfully mappings have been applied to the master node and propagated to data nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.cluster.action.index.MappingUpdatedAction(org.elasticsearch.common.settings.Settings settings, org.elasticsearch.common.settings.ClusterSettings clusterSettings)",
+    "name": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+      "name": "MappingUpdatedAction",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.settings.Settings",
+          "name": "Settings",
+          "isArray": false
+        },
+        "name": "settings"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.settings.ClusterSettings",
+          "name": "ClusterSettings",
+          "isArray": false
+        },
+        "name": "clusterSettings"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateMappingOnMaster(org.elasticsearch.index.Index index, java.lang.String type, org.elasticsearch.index.mapper.Mapping mappingUpdate)",
+    "name": "updateMappingOnMaster",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+      "name": "MappingUpdatedAction",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.index.Index",
+          "name": "Index",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "type"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.index.mapper.Mapping",
+          "name": "Mapping",
+          "isArray": false
+        },
+        "name": "mappingUpdate"
+      }
+    ],
+    "equivalence": {
+      "comment": "Same as #updateMappingOnMaster(Index, String, Mapping, TimeValue) using the default timeout.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClient(org.elasticsearch.client.Client client)",
+    "name": "setClient",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+      "name": "MappingUpdatedAction",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.cluster.action.index.MappingUpdatedAction",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.client.Client",
+          "name": "Client",
+          "isArray": false
+        },
+        "name": "client"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

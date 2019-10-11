@@ -1,0 +1,634 @@
+[
+  {
+    "signature": "cellSet()",
+    "name": "cellSet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<com.google.common.collect.Table$Cell<R, C, V>>",
+      "name": "java.util.Set<com.google.common.collect.Table$Cell<R, C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "cellSet()",
+      "comment": "Returns a set of all row key / column key / value triplets. Changes to the returned set will update the underlying table, and vice versa. The cell set does not support the add or addAll methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "columnMap()",
+    "name": "columnMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<C, java.util.Map<R, V>>",
+      "name": "java.util.Map<C, java.util.Map<R, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "columnMap()",
+      "comment": "Returns a view that associates each column key with the corresponding map from row keys to values. Changes to the returned map will update this table. The returned map does not support put() or putAll(), or setValue() on its entries. In contrast, the maps returned by columnMap().get() have the same behavior as those returned by #column. Those maps may support setValue(), put(), and putAll().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(com.google.common.collect.Table<? extends R, ? extends C, ? extends V> table)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "com.google.common.collect.Table",
+          "name": "Table",
+          "isArray": false
+        },
+        "name": "table"
+      }
+    ],
+    "equivalence": {
+      "member": "putAll(com.google.common.collect.Table<? extends R, ? extends C, ? extends V> table)",
+      "comment": "Copies all mappings from the specified table to this table. The effect is equivalent to calling #put with each row key / column key / value mapping in table.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "column(C columnKey)",
+    "name": "column",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<R, V>",
+      "name": "java.util.Map<R, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      }
+    ],
+    "equivalence": {
+      "member": "column(C columnKey)",
+      "comment": "Returns a view of all mappings that have the given column key. For each row key / column key / value mapping in the table with that column key, the returned map associates the row key with the value. If no mappings in the table have the provided column key, an empty map is returned. Changes to the returned map will update the underlying table, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "clear()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsColumn(java.lang.Object columnKey)",
+    "name": "containsColumn",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "containsColumn(java.lang.Object columnKey)",
+      "comment": "Returns true if the table contains a mapping with the specified column.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object rowKey, java.lang.Object columnKey)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "remove(java.lang.Object rowKey, java.lang.Object columnKey)",
+      "comment": "Removes the mapping, if any, associated with the given keys.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "values()",
+      "comment": "Returns a collection of all values, which may contain duplicates. Changes to the returned collection will update the underlying table, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object rowKey, java.lang.Object columnKey)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "contains(java.lang.Object rowKey, java.lang.Object columnKey)",
+      "comment": "Returns true if the table contains a mapping with the specified row and column keys.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rowKeySet()",
+    "name": "rowKeySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<R>",
+      "name": "java.util.Set<R>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rowKeySet()",
+      "comment": "Returns a set of row keys that have one or more values in the table. Changes to the set will update the underlying table, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(R rowKey, C columnKey, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "put(R rowKey, C columnKey, V value)",
+      "comment": "Associates the specified value with the specified keys. If the table already contained a mapping for those keys, the old value is replaced with the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rowMap()",
+    "name": "rowMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<R, java.util.Map<C, V>>",
+      "name": "java.util.Map<R, java.util.Map<C, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rowMap()",
+      "comment": "Returns a view that associates each row key with the corresponding map from column keys to values. Changes to the returned map will update this table. The returned map does not support put() or putAll(), or setValue() on its entries. In contrast, the maps returned by rowMap().get() have the same behavior as those returned by #row. Those maps may support setValue(), put(), and putAll().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if the table contains a mapping with the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object rowKey, java.lang.Object columnKey)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "columnKey",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "get(java.lang.Object rowKey, java.lang.Object columnKey)",
+      "comment": "Returns the value corresponding to the given row and column keys, or null if no such mapping exists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "columnKeySet()",
+    "name": "columnKeySet",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<C>",
+      "name": "java.util.Set<C>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "columnKeySet()",
+      "comment": "Returns a set of column keys that have one or more values in the table. Changes to the set will update the underlying table, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "row(R rowKey)",
+    "name": "row",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<C, V>",
+      "name": "java.util.Map<C, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey"
+      }
+    ],
+    "equivalence": {
+      "member": "row(R rowKey)",
+      "comment": "Returns a view of all mappings that have the given row key. For each row key / column key / value mapping in the table with that row key, the returned map associates the column key with the value. If no mappings in the table have the provided row key, an empty map is returned. Changes to the returned map will update the underlying table, and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Compares the specified object with this table for equality. Two tables are equal when their cell views, as returned by #cellSet, are equal.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code for this table. The hash code of a table is defined as the hash code of its cell view, as returned by #cellSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsRow(java.lang.Object rowKey)",
+    "name": "containsRow",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rowKey",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "containsRow(java.lang.Object rowKey)",
+      "comment": "Returns true if the table contains a mapping with the specified row key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isEmpty()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.Table",
+      "name": "Table",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.Table",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "size()",
+      "comment": "Returns the number of row key / column key / value mappings in the table.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

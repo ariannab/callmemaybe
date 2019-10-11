@@ -1,0 +1,178 @@
+[
+  {
+    "signature": "getEdgeSet()",
+    "name": "getEdgeSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<T>",
+      "name": "java.util.Collection<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Unmodifiable view of the set of edges. This method is implicitly generic and returns a Collection of something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call :  Collection<ExtendedEdge> c = struct.getEdgeSet();  the method will return a Collection<ExtendedEdge>. If no left part exists, method will just return a Collection<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeSet()",
+    "name": "getNodeSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<T>",
+      "name": "java.util.Collection<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Unmodifiable view of the set of nodes. This method is implicitly generic and returns a Collection of something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call :  Collection<ExtendedNode> c = struct.getNodeSet();  the method will return a Collection<ExtendedNode>. If no left part exists, method will just return a Collection<Node>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeCount()",
+    "name": "getEdgeCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Number of edges in this graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeCount()",
+    "name": "getNodeCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Number of nodes in this graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeIterator()",
+    "name": "getNodeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator on the set of nodes, in an undefined order. This method is implicitly generic and returns an Iterator over something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call :  Iterator<ExtendedNode> ite = graph.getNodeIterator();  the method will return an Iterator<ExtendedNode>. If no left part exists, method will just return an Iterator<Node>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeIterator()",
+    "name": "getEdgeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Iterator on the set of edges, in an undefined order. This method is implicitly generic and returns an Iterator over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call :  Iterator<ExtendedEdge> ite = graph.getEdgeIterator();  the method will return an Iterator<ExtendedEdge>. If no left part exists, method will just return an Iterator<Edge>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEachEdge()",
+    "name": "getEachEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends T>",
+      "name": "java.lang.Iterable<? extends T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of edges usable in a for-each instruction. This method is implicitly generic and returns an Iterable over something which extends Edge. The return type is the one of the left part of the assignment. For example, in the following call :  Iterable<ExtendedNEdge> ite = struct.getEachEdge();  the method will return an Iterable<ExtendedEdge>. If no left part exists, method will just return an Iterable<Edge>. It is possible to use it in a for-each loop by giving the parameter :  for (ExtendedEdge e : struct.<ExtendedEdge> getEachEdge()) { // ... }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEachNode()",
+    "name": "getEachNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.graph.Structure",
+      "name": "Structure",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.graph.Structure",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends T>",
+      "name": "java.lang.Iterable<? extends T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Set of nodes usable in a for-each instruction. This method is implicitly generic and returns an Iterable over something which extends Node. The return type is the one of the left part of the assignment. For example, in the following call :  Iterable<ExtendedNode> ite = struct.getEachNode();  the method will return an Iterable<ExtendedNode>. If no left part exists, method will just return an Iterable<Node>. It is possible to use it in a for-each loop by giving the parameter :  for (ExtendedNode n : struct.<ExtendedNode> getEachNode()) { // ... }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

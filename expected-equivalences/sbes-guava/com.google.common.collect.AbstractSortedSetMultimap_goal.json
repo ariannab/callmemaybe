@@ -1,0 +1,228 @@
+[
+  {
+    "signature": "com.google.common.collect.AbstractSortedSetMultimap(java.util.Map<K, java.util.Collection<V>> map)",
+    "name": "com.google.common.collect.AbstractSortedSetMultimap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "map"
+      }
+    ],
+    "equivalence": {
+      "member": "com.google.common.collect.AbstractSortedSetMultimap(java.util.Map<K, java.util.Collection<V>> map)",
+      "comment": "Creates a new multimap that uses the provided map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(K key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedSet<V>",
+      "name": "java.util.SortedSet<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "get(K key)",
+      "comment": "Returns a collection view of all values associated with a key. If no mappings in the multimap have the provided key, an empty collection is returned. Changes to the returned collection will update the underlying multimap, and vice versa. Because a SortedSetMultimap has unique sorted values for a given key, this method returns a SortedSet, instead of the Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createCollection()",
+    "name": "createCollection",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedSet<V>",
+      "name": "java.util.SortedSet<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createCollection()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+    "name": "replaceValues",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedSet<V>",
+      "name": "java.util.SortedSet<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceValues(K key, java.lang.Iterable<? extends V> values)",
+      "comment": "Stores a collection of values with the same key, replacing any existing values for that key. The returned collection is immutable. Because a SortedSetMultimap has unique sorted values for a given key, this method returns a SortedSet, instead of the Collection specified in the Multimap interface. Any duplicates in values will be stored in the multimap once.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createUnmodifiableEmptyCollection()",
+    "name": "createUnmodifiableEmptyCollection",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedSet<V>",
+      "name": "java.util.SortedSet<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createUnmodifiableEmptyCollection()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asMap()",
+    "name": "asMap",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<K, java.util.Collection<V>>",
+      "name": "java.util.Map<K, java.util.Collection<V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "asMap()",
+      "comment": "Returns a map view that associates each key with the corresponding values in the multimap. Changes to the returned map, such as element removal, will update the underlying multimap. The map does not support setValue on its entries, put, or putAll. When passed a key that is present in the map, asMap().get(Object) has the same behavior as #get, returning a live collection. When passed a key that is not present, however, asMap().get(Object) returns null instead of an empty collection. Though the method signature doesn't say so explicitly, the returned map has SortedSet values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.lang.Object key)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedSet<V>",
+      "name": "java.util.SortedSet<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key",
+        "nullable": true
+      }
+    ],
+    "equivalence": {
+      "member": "removeAll(java.lang.Object key)",
+      "comment": "Removes all values associated with a given key. The returned collection is immutable. Because a SortedSetMultimap has unique sorted values for a given key, this method returns a SortedSet, instead of the Collection specified in the Multimap interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "com.google.common.collect.AbstractSortedSetMultimap",
+      "name": "AbstractSortedSetMultimap",
+      "isArray": false
+    },
+    "targetClass": "com.google.common.collect.AbstractSortedSetMultimap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "values()",
+      "comment": "{@inheritDoc} Consequently, the values do not follow their natural ordering or the ordering of the value comparator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

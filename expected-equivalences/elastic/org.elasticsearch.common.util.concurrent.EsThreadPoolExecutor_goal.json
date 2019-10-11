@@ -1,0 +1,434 @@
+[
+  {
+    "signature": "getTasks()",
+    "name": "getTasks",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Stream<java.lang.Runnable>",
+      "name": "java.util.stream.Stream<java.lang.Runnable>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a stream of all pending tasks. This is similar to #getQueue() but will expose the originally submitted Runnable instances rather than potentially wrapped ones.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.getQueue())"
+    }
+  },
+  {
+    "signature": "afterExecute(java.lang.Runnable r, java.lang.Throwable t)",
+    "name": "afterExecute",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapRunnable(java.lang.Runnable command)",
+    "name": "wrapRunnable",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Runnable",
+      "name": "java.lang.Runnable",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "command"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "execute(java.lang.Runnable command)",
+    "name": "execute",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "command"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor(java.lang.String name, int corePoolSize, int maximumPoolSize, long keepAliveTime, java.util.concurrent.TimeUnit unit, java.util.concurrent.BlockingQueue<java.lang.Runnable> workQueue, java.util.concurrent.ThreadFactory threadFactory, org.elasticsearch.common.util.concurrent.XRejectedExecutionHandler handler, org.elasticsearch.common.util.concurrent.ThreadContext contextHolder)",
+    "name": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "corePoolSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maximumPoolSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "keepAliveTime"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.BlockingQueue",
+          "name": "BlockingQueue",
+          "isArray": false
+        },
+        "name": "workQueue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ThreadFactory",
+          "name": "ThreadFactory",
+          "isArray": false
+        },
+        "name": "threadFactory"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.util.concurrent.XRejectedExecutionHandler",
+          "name": "XRejectedExecutionHandler",
+          "isArray": false
+        },
+        "name": "handler"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.util.concurrent.ThreadContext",
+          "name": "ThreadContext",
+          "isArray": false
+        },
+        "name": "contextHolder"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shutdown(org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor$ShutdownListener listener)",
+    "name": "shutdown",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor$ShutdownListener",
+          "name": "ShutdownListener",
+          "isArray": false
+        },
+        "name": "listener"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unwrap(java.lang.Runnable runnable)",
+    "name": "unwrap",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Runnable",
+      "name": "java.lang.Runnable",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "runnable"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor(java.lang.String name, int corePoolSize, int maximumPoolSize, long keepAliveTime, java.util.concurrent.TimeUnit unit, java.util.concurrent.BlockingQueue<java.lang.Runnable> workQueue, java.util.concurrent.ThreadFactory threadFactory, org.elasticsearch.common.util.concurrent.ThreadContext contextHolder)",
+    "name": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "corePoolSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maximumPoolSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "keepAliveTime"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.BlockingQueue",
+          "name": "BlockingQueue",
+          "isArray": false
+        },
+        "name": "workQueue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ThreadFactory",
+          "name": "ThreadFactory",
+          "isArray": false
+        },
+        "name": "threadFactory"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.elasticsearch.common.util.concurrent.ThreadContext",
+          "name": "ThreadContext",
+          "isArray": false
+        },
+        "name": "contextHolder"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "terminated()",
+    "name": "terminated",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doExecute(java.lang.Runnable command)",
+    "name": "doExecute",
+    "containingClass": {
+      "qualifiedName": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+      "name": "EsThreadPoolExecutor",
+      "isArray": false
+    },
+    "targetClass": "org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "command"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

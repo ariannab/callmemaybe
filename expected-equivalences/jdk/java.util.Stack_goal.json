@@ -1,0 +1,147 @@
+[
+  {
+    "signature": "java.util.Stack()",
+    "name": "java.util.Stack",
+    "containingClass": {
+      "qualifiedName": "java.util.Stack",
+      "name": "Stack",
+      "isArray": false
+    },
+    "targetClass": "java.util.Stack",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates an empty Stack.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pop()",
+    "name": "pop",
+    "containingClass": {
+      "qualifiedName": "java.util.Stack",
+      "name": "Stack",
+      "isArray": false
+    },
+    "targetClass": "java.util.Stack",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes the object at the top of this stack and returns that object as the value of this function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "push(E item)",
+    "name": "push",
+    "containingClass": {
+      "qualifiedName": "java.util.Stack",
+      "name": "Stack",
+      "isArray": false
+    },
+    "targetClass": "java.util.Stack",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "item"
+      }
+    ],
+    "equivalence": {
+      "comment": "Pushes an item onto the top of this stack. This has exactly the same effect as: <pre> addElement(item)</pre>",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.push(args[0]); receiverObjectClone.addElement(args[0]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "empty()",
+    "name": "empty",
+    "containingClass": {
+      "qualifiedName": "java.util.Stack",
+      "name": "Stack",
+      "isArray": false
+    },
+    "targetClass": "java.util.Stack",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Tests if this stack is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(java.lang.Object o)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "java.util.Stack",
+      "name": "Stack",
+      "isArray": false
+    },
+    "targetClass": "java.util.Stack",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the 1-based position where an object is on this stack. If the object o occurs as an item in this stack, this method returns the distance from the top of the stack of the occurrence nearest the top of the stack; the topmost item on the stack is considered to be at distance 1. The equals method is used to compare o to the items in this stack.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peek()",
+    "name": "peek",
+    "containingClass": {
+      "qualifiedName": "java.util.Stack",
+      "name": "Stack",
+      "isArray": false
+    },
+    "targetClass": "java.util.Stack",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Looks at the object at the top of this stack without removing it from the stack.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

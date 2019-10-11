@@ -1,0 +1,1614 @@
+[
+  {
+    "signature": "lastIndexOf(java.lang.Object o)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the last occurrence of the specified element in this vector, or -1 if this vector does not contain the element. More formally, returns the highest index i such that (o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))), or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Tests if this vector has no components.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setElementAt(E obj, int index)",
+    "name": "setElementAt",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets the component at the specified index of this vector to be the specified object. The previous component at that position is discarded. The index must be a value greater than or equal to 0 and less than the current size of the vector. This method is identical in functionality to the set(int, E) method (which is part of the List interface). Note that the set method reverses the order of the parameters, to more closely match array usage. Note also that the set method returns the old value that was stored at the specified position.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.set(args[1],args[0]); receiverObjectClone.setElementAt(args[0], args[1]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "lastIndexOf(java.lang.Object o, int index)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the last occurrence of the specified element in this vector, searching backwards from index, or returns -1 if the element is not found. More formally, returns the highest index i such that (i&nbsp;<=&nbsp;index&nbsp;&&&nbsp;(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))), or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeIf(java.util.function.Predicate<? super E> filter)",
+    "name": "removeIf",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "filter"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementData(int index)",
+    "name": "elementData",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastElement()",
+    "name": "lastElement",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the last component of the vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes the first occurrence of the specified element in this Vector If the Vector does not contain the element, it is unchanged. More formally, removes the element with the lowest index i such that (o==null ? get(i)==null : o.equals(get(i))) (if such an element exists).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.util.Collection<?> c)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes from this Vector all of its elements that are contained in the specified Collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.Vector()",
+    "name": "java.util.Vector",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "comment": "Constructs an empty vector so that its internal data array has size 10 and its standard capacity increment is zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a clone of this vector. The copy will contain a reference to a clone of the internal data array, not a reference to the original internal data array of this Vector object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsAll(java.util.Collection<?> c)",
+    "name": "containsAll",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this Vector contains all of the elements in the specified Collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.Vector(int initialCapacity)",
+    "name": "java.util.Vector",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "equivalence": {
+      "comment": "Constructs an empty vector with the specified initial capacity and with its capacity increment equal to zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAllElements()",
+    "name": "removeAllElements",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all components from this vector and sets its size to zero. This method is identical in functionality to the #clear method (which is part of the List interface).",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.clear(); receiverObjectClone.removeAllElements(); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "ensureCapacity(int minCapacity)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minCapacity"
+      }
+    ],
+    "equivalence": {
+      "comment": "Increases the capacity of this vector, if necessary, to ensure that it can hold at least the number of components specified by the minimum capacity argument. If the current capacity of this vector is less than minCapacity, then its capacity is increased by replacing its internal data array, kept in the field elementData, with a larger one. The size of the new data array will be the old size plus capacityIncrement, unless the value of capacityIncrement is less than or equal to zero, in which case the new capacity will be twice the old capacity; but if this new size is still smaller than minCapacity, then the new capacity will be minCapacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "insertElementAt(E obj, int index)",
+    "name": "insertElementAt",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Inserts the specified object as a component in this vector at the specified index. Each component in this vector with an index greater or equal to the specified index is shifted upward to have an index one greater than the value it had previously. The index must be a value greater than or equal to 0 and less than or equal to the current size of the vector. (If the index is equal to the current size of the vector, the new element is appended to the Vector.) This method is identical in functionality to the add(int, E) method (which is part of the List interface). Note that the add method reverses the order of the parameters, to more closely match array usage.",
+      "kind": "FreeText",
+      "condition": " receiverObjectID.add(args[1],args[0]); receiverObjectClone.insertElementAt(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "addAll(java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends all of the elements in the specified Collection to the end of this Vector, in the order that they are returned by the specified Collection's Iterator. The behavior of this operation is undefined if the specified Collection is modified while the operation is in progress. (This implies that the behavior of this call is undefined if the specified Collection is this Vector, and this Vector is nonempty.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.Consumer<? super E> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sort(java.util.Comparator<? super E> c)",
+    "name": "sort",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addElement(E obj)",
+    "name": "addElement",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "equivalence": {
+      "comment": "Adds the specified component to the end of this vector, increasing its size by one. The capacity of this vector is increased if its size becomes greater than its capacity. This method is identical in functionality to the add(E) method (which is part of the List interface).",
+      "kind": "FreeText",
+      "condition": " receiverObjectID.add(args[0]); receiverObjectClone.addElement(args[0]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an array containing all of the elements in this Vector in the correct order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the element at the specified position in this Vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elements()",
+    "name": "elements",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<E>",
+      "name": "java.util.Enumeration<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an enumeration of the components of this vector. The returned Enumeration object will generate all items in this vector. The first item generated is the item at index 0, then the item at index 1, and so on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subList(int fromIndex, int toIndex)",
+    "name": "subList",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<E>",
+      "name": "java.util.List<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a view of the portion of this List between fromIndex, inclusive, and toIndex, exclusive. (If fromIndex and toIndex are equal, the returned List is empty.) The returned List is backed by this List, so changes in the returned List are reflected in this List, and vice-versa. The returned List supports all of the optional List operations supported by this List. This method eliminates the need for explicit range operations (of the sort that commonly exist for arrays). Any operation that expects a List can be used as a range operation by operating on a subList view instead of a whole List. For example, the following idiom removes a range of elements from a List:  list.subList(from, to).clear();  Similar idioms may be constructed for indexOf and lastIndexOf, and all of the algorithms in the Collections class can be applied to a subList. The semantics of the List returned by this method become undefined if the backing list (i.e., this List) is structurally modified in any way other than via the returned List. (Structural modifications are those that change the size of the List, or otherwise perturb it in such a fashion that iterations in progress may yield incorrect results.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(java.util.Collection<?> c)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Retains only the elements in this Vector that are contained in the specified Collection. In other words, removes from this Vector all of its elements that are not contained in the specified Collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listIterator()",
+    "name": "listIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ListIterator<E>",
+      "name": "java.util.ListIterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a list iterator over the elements in this list (in proper sequence). The returned list iterator is <i>fail-fast</i>. @see #listIterator(int)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.Vector(java.util.Collection<? extends E> c)",
+    "name": "java.util.Vector",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Constructs a vector containing the elements of the specified collection, in the order they are returned by the collection's iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the number of components in this vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeElementAt(int index)",
+    "name": "removeElementAt",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Deletes the component at the specified index. Each component in this vector with an index greater or equal to the specified index is shifted downward to have an index one smaller than the value it had previously. The size of this vector is decreased by 1. The index must be a value greater than or equal to 0 and less than the current size of the vector. This method is identical in functionality to the #remove(int) method (which is part of the List interface). Note that the remove method returns the old value that was stored at the specified position.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.remove(args[0]); receiverObjectClone.removeElementAt(args[0]); assert(receiverObjectClone.equals(receiverObjectID));"
+    }
+  },
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "equivalence": {
+      "comment": "Appends the specified element to the end of this Vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeRange(int fromIndex, int toIndex)",
+    "name": "removeRange",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes from this list all of the elements whose index is between fromIndex, inclusive, and toIndex, exclusive. Shifts any succeeding elements to the left (reduces their index). This call shortens the list by (toIndex - fromIndex) elements. (If toIndex==fromIndex, this operation has no effect.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trimToSize()",
+    "name": "trimToSize",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Trims the capacity of this vector to be the vector's current size. If the capacity of this vector is larger than its current size, then the capacity is changed to equal the size by replacing its internal data array, kept in the field elementData, with a smaller one. An application can use this operation to minimize the storage of a vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "capacity()",
+    "name": "capacity",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the current capacity of this vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInto(java.lang.Object[] anArray)",
+    "name": "copyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "anArray"
+      }
+    ],
+    "equivalence": {
+      "comment": "Copies the components of this vector into the specified array. The item at index k in this vector is copied into component k of anArray.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns a string representation of this Vector, containing the String representation of each element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listIterator(int index)",
+    "name": "listIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ListIterator<E>",
+      "name": "java.util.ListIterator<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list. The specified index indicates the first element that would be returned by an initial call to ListIterator#next next. An initial call to ListIterator#previous previous would return the element with the specified index minus one. The returned list iterator is <i>fail-fast</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns an iterator over the elements in this list in proper sequence. The returned iterator is <i>fail-fast</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int index, E element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "equivalence": {
+      "comment": "Inserts the specified element at the specified position in this Vector. Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSize(int newSize)",
+    "name": "setSize",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newSize"
+      }
+    ],
+    "equivalence": {
+      "comment": "Sets the size of this vector. If the new size is greater than the current size, new null items are added to the end of the vector. If the new size is less than the current size, all components at index newSize and greater are discarded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(int index, java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "comment": "Inserts all of the elements in the specified Collection into this Vector at the specified position. Shifts the element currently at that position (if any) and any subsequent elements to the right (increases their indices). The new elements will appear in the Vector in the order that they are returned by the specified Collection's iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E>",
+      "name": "java.util.Spliterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Creates a <a href=\"Spliterator.html#binding\">late-binding</a> and fail-fast Spliterator over the elements in this list. The Spliterator reports Spliterator#SIZED, Spliterator#SUBSIZED, and Spliterator#ORDERED. Overriding implementations should document the reporting of additional characteristic values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.Vector(int initialCapacity, int capacityIncrement)",
+    "name": "java.util.Vector",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacityIncrement"
+      }
+    ],
+    "equivalence": {
+      "comment": "Constructs an empty vector with the specified initial capacity and capacity increment.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(java.lang.Object o, int index)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the first occurrence of the specified element in this vector, searching forwards from index, or returns -1 if the element is not found. More formally, returns the lowest index i such that (i&nbsp;>=&nbsp;index&nbsp;&&&nbsp;(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))), or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstElement()",
+    "name": "firstElement",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the first component (the item at index {@code 0}) of this vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.UnaryOperator<E> operator)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.UnaryOperator",
+          "name": "UnaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "equivalence": {
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int index, E element)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "equivalence": {
+      "comment": "Replaces the element at the specified position in this Vector with the specified element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Removes all of the elements from this Vector. The Vector will be empty after this call returns (unless it throws an exception).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(int index)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes the element at the specified position in this Vector. Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the Vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(T[] a)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns an array containing all of the elements in this Vector in the correct order; the runtime type of the returned array is that of the specified array. If the Vector fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this Vector. If the Vector fits in the specified array with room to spare (i.e., the array has more elements than the Vector), the element in the array immediately following the end of the Vector is set to null. (This is useful in determining the length of the Vector only if the caller knows that the Vector does not contain any null elements.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeElement(java.lang.Object obj)",
+    "name": "removeElement",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "equivalence": {
+      "comment": "Removes the first (lowest-indexed) occurrence of the argument from this vector. If the object is found in this vector, each component in the vector with an index greater or equal to the object's index is shifted downward to have an index one smaller than the value it had previously. This method is identical in functionality to the #remove(Object) method (which is part of the List interface).",
+      "kind": "FreeText",
+      "condition": "methodResultID==(receiverObjectID.remove(args[0]))"
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns true if this vector contains the specified element. More formally, returns true if and only if this vector contains at least one element e such that (o==null&nbsp;?&nbsp;e==null&nbsp;:&nbsp;o.equals(e)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(java.lang.Object o)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the index of the first occurrence of the specified element in this vector, or -1 if this vector does not contain the element. More formally, returns the lowest index i such that (o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i))), or -1 if there is no such index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "comment": "Returns the hash code value for this Vector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementAt(int index)",
+    "name": "elementAt",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "comment": "Returns the component at the specified index. This method is identical in functionality to the #get(int) method (which is part of the List interface).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectID.get(args[0]))"
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.Vector",
+      "name": "Vector",
+      "isArray": false
+    },
+    "targetClass": "java.util.Vector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "comment": "Compares the specified Object with this Vector for equality. Returns true if and only if the specified Object is also a List, both Lists have the same size, and all corresponding pairs of elements in the two Lists are equal. (Two elements e1 and e2 are equal if (e1==null ? e2==null : e1.equals(e2)).) In other words, two Lists are defined to be equal if they contain the same elements in the same order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]
