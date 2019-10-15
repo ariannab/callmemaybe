@@ -413,7 +413,7 @@ public class ComplianceChecks {
           method.getDeclaringClass().getTypeName(), Configuration.RECEIVER_CLONE);
     }
     String substitutedText = substituteArgs(sourceCodeBuilder, method, oracle);
-    sourceCodeBuilder.addCondition(substitutedText);
+    sourceCodeBuilder.addCondition("assert (" + substitutedText + ")" + ";");
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);
   }
 
