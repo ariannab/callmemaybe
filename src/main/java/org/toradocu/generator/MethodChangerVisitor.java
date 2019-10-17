@@ -46,8 +46,9 @@ public class MethodChangerVisitor
   private final Configuration conf = Toradocu.configuration;
 
   /**
-   * Modifies the methods {@code advice} and {@code getExpectedExceptions} of the aspect template,
-   * injecting the appropriate source code to get an aspect (oracle) for the method arg.
+   * Modifies the methods {@code advice} and {@code getExpectedExceptions}, {@code
+   * paramTagsSatisfied}, {@code checkResult} of the aspect template, injecting the appropriate
+   * source code to get an aspect (oracle) for the method arg.
    *
    * @param methodDeclaration the method declaration of the method to visit
    * @param spec the {@code ExecutableMember} for which to generate the aspect (oracle)
