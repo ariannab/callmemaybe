@@ -95,6 +95,10 @@ public class MethodChangerVisitor
       String guard = addCasting(postSpecification.getGuard().getConditionText(), executableMember);
       String property =
           addCasting(postSpecification.getProperty().getConditionText(), executableMember);
+      if (property.isEmpty()) {
+        // TODO why does this happen and how can we avoid it
+        continue;
+      }
       String check = createBlock("if ((" + property + ")==false) { fail(\"Error!\"); }");
       IfStmt ifStmt = createIfStmt(guard, postSpecification.getDescription(), check);
       methodDeclaration.getBody().ifPresent(body -> body.addStatement(ifStmt));

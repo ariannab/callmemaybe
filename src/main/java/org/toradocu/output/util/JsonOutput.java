@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import org.toradocu.extractor.*;
 import org.toradocu.extractor.DocumentedParameter;
+import org.toradocu.extractor.EquivalentMatch;
 import randoop.condition.specification.OperationSpecification;
 import randoop.condition.specification.PostSpecification;
 import randoop.condition.specification.PreSpecification;
@@ -119,11 +120,14 @@ public class JsonOutput {
   private void createThrowsTags(DocumentedExecutable member, List<ThrowsSpecification> specs) {
     this.throwsTags = new ArrayList<>();
     for (int i = 0; i < member.throwsTags().size(); i++) {
+      String condition = "";
       ThrowsTag throwsTag = member.throwsTags().get(i);
       Class eType = throwsTag.getException();
       Type exType = new Type(eType.getName(), eType.getSimpleName(), eType.isArray());
-      final ThrowsSpecification throwsSpecification = specs.get(i);
-      String condition = throwsSpecification.getGuard().getConditionText();
+      if (!specs.isEmpty() && specs.get(i) != null) {
+        final ThrowsSpecification throwsSpecification = specs.get(i);
+        condition = throwsSpecification.getGuard().getConditionText();
+      }
       ThrowsTagOutput paramJsonObj =
           new ThrowsTagOutput(
               exType, throwsTag.getComment(), throwsTag.getKind().name(), condition);
@@ -134,19 +138,19 @@ public class JsonOutput {
   private void createParamTags(DocumentedExecutable member, List<PreSpecification> specs) {
     this.paramTags = new ArrayList<>();
     for (int i = 0; i < member.paramTags().size(); i++) {
+      String preSpecText = "";
       ParamTag paramTag = member.paramTags().get(i);
       DocumentedParameter param = paramTag.getParameter();
       Class pType = param.asReflectionParameter().getType();
       Type paramType = new Type(pType.getName(), pType.getSimpleName(), pType.isArray());
       Parameter paramObj = new Parameter(paramType, param.getName(), param.isNullable());
-      final PreSpecification preSpecification = specs.get(i);
+      if (!specs.isEmpty() && specs.get(i) != null) {
+        final PreSpecification preSpecification = specs.get(i);
+        preSpecText = preSpecification.getGuard().getConditionText();
+      }
       ParamTagOutput paramJsonObj =
           new ParamTagOutput(
-              paramObj,
-              paramTag.getComment(),
-              paramTag.getKind().name(),
-              preSpecification.getGuard().getConditionText());
-
+              paramObj, paramTag.getComment(), paramTag.getKind().name(), preSpecText);
       paramTags.add(paramJsonObj);
     }
   }
