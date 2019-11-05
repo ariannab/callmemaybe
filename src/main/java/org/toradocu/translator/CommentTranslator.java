@@ -3,7 +3,9 @@ package org.toradocu.translator;
 import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import org.slf4j.Logger;
@@ -17,8 +19,11 @@ import org.toradocu.extractor.ParamTag;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.extractor.ThrowsTag;
 import org.toradocu.translator.preprocess.PreprocessorFactory;
+import org.toradocu.translator.spec.Assertion;
+import org.toradocu.translator.spec.Body;
 import org.toradocu.translator.spec.EqOperationSpecification;
 import org.toradocu.translator.spec.EquivalenceSpec;
+import org.toradocu.translator.spec.PostAssertion;
 import org.toradocu.util.Checks;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Identifiers;
@@ -26,7 +31,6 @@ import randoop.condition.specification.OperationSignature;
 import randoop.condition.specification.OperationSpecification;
 import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Precondition;
-import randoop.condition.specification.Property;
 import randoop.condition.specification.ThrowsCondition;
 
 /** Translates comments into procedure specifications. */
@@ -138,35 +142,57 @@ public class CommentTranslator {
       OperationSignature operation = OperationSignature.of(member.getExecutable());
       List<String> paramNames =
           member.getParameters().stream().map(DocumentedParameter::getName).collect(toList());
+
       Identifiers identifiers =
           new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
-      // OperationSpecification contains a list for all possible specifications related to the
-      // operation,
-      // thus Pre, Post, Exc...
+
       EqOperationSpecification opSpec = new EqOperationSpecification(operation, identifiers);
       ArrayList<EquivalentMatch> equivalentMatches =
           CommentTranslator.translate(documentedType, member);
 
-      // EquivalenceMatch now extends PostSpecification, so the list returned to the translator is
-      // stored as a list of PostSpecifications added to the OperationSpec
-      List<EquivalenceSpec> eqSpecifications = new ArrayList<>();
-      for (EquivalentMatch em : equivalentMatches) {
-        String guard = em.getCondition().isEmpty() ? "true" : em.getCondition();
-        eqSpecifications.add(
-            // FIXME just an experiment, remember there are special cases, e.g. snippets!
-            new EquivalenceSpec(
-                member.getFreeText().getComment().getText(),
-                new Guard("", guard),
-                new Property("", em.getOracle())));
-      }
+      List<EquivalenceSpec> eqSpecifications = createEqSpecifications(member, equivalentMatches);
 
-      // if(!postSpecifications.isEmpty()) {
       opSpec.addEqSpecifications(eqSpecifications);
       methodsSpecs.put(member, opSpec);
-      // }
     }
 
     return methodsSpecs;
+  }
+
+  private static List<EquivalenceSpec> createEqSpecifications(
+      DocumentedExecutable member, ArrayList<EquivalentMatch> equivalentMatches) {
+
+    List<EquivalenceSpec> eqSpecifications = new ArrayList<>();
+    for (EquivalentMatch em : equivalentMatches) {
+      // FIXME check who actually is post and pre here
+      // FIXME 1. If em has a condition -> precondition
+      // FIXME 2. If the oracle has some \n -> Body with statements, last one is the Assertion
+      // FIXME 3. If the oracle is a single sentence -> Assertion
+      PostAssertion postAssertion = null;
+      String precondition = "";
+      String assertion;
+      if (!em.getCondition().isEmpty()) {
+        precondition = em.getCondition().isEmpty() ? "true" : em.getCondition();
+      }
+      if (em.getOracle().contains("\n")) {
+        LinkedList<String> statements = new LinkedList<>();
+        Collections.addAll(statements, em.getOracle().split("\n"));
+        assertion = statements.get(statements.size() - 1);
+        statements.remove(assertion);
+        postAssertion = new PostAssertion(new Body(statements), new Assertion(assertion));
+      } else {
+        assertion = em.getOracle();
+        postAssertion = new PostAssertion(new Body(new LinkedList<>()), new Assertion(assertion));
+      }
+
+      eqSpecifications.add(
+          new EquivalenceSpec(
+              member.getFreeText().getComment().getText(),
+              new Guard("", precondition),
+              postAssertion));
+    }
+
+    return eqSpecifications;
   }
 
   /**

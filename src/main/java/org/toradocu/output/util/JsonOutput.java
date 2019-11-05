@@ -37,8 +37,8 @@ public class JsonOutput {
       if (i > 1) {
         oracle.append(" && ");
       }
-      if (!m.getProperty().getConditionSource().isEmpty()) {
-        oracle.append(m.getProperty().getConditionSource());
+      if (!m.getPostAssertion().toString().isEmpty()) {
+        oracle.append(m.getPostAssertion().toString());
         i++;
       }
     }
