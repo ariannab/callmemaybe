@@ -22,16 +22,16 @@ import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.util.Reflection;
 import randoop.condition.specification.Guard;
-import randoop.condition.specification.PostSpecification;
+import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Property;
 
 public class ReturnTranslator {
 
-  public List<PostSpecification> translate(ReturnTag tag, DocumentedExecutable excMember) {
+  public List<Postcondition> translate(ReturnTag tag, DocumentedExecutable excMember) {
     String commentText = tag.getComment().getText();
     // Manage translation of each sub-sentence linked by the Or conjunction separately
     String[] subSentences = manageOrConjunction(commentText);
-    List<List<PostSpecification>> conditions = new ArrayList<>();
+    List<List<Postcondition>> conditions = new ArrayList<>();
 
     for (String subSentence : subSentences) {
       // Split the sentence in three parts: predicate + true case + false case.
@@ -81,22 +81,22 @@ public class ReturnTranslator {
    * @param conditions the translated conditions
    * @return a {@code List<PostSpecification>}
    */
-  private List<PostSpecification> mergeOrConjunction(
-      String comment, String[] subSentences, List<List<PostSpecification>> conditions) {
+  private List<Postcondition> mergeOrConjunction(
+      String comment, String[] subSentences, List<List<Postcondition>> conditions) {
     if (conditions.size() > 1) {
       if (!conditions.get(0).isEmpty() && !conditions.get(1).isEmpty()) {
         // Both the conditions were correctly translated and can be merged
         String property =
             "("
-                + (conditions.get(0).get(0).getProperty().getConditionText()
+                + (conditions.get(0).get(0).getProperty().getConditionSource()
                     + "||"
-                    + conditions.get(1).get(0).getProperty().getConditionText())
+                    + conditions.get(1).get(0).getProperty().getConditionSource())
                 + ")";
-        List<PostSpecification> specs = new ArrayList<>();
+        List<Postcondition> specs = new ArrayList<>();
         specs.add(
-            new PostSpecification(
+            new Postcondition(
                 comment,
-                new Guard(comment, conditions.get(0).get(0).getGuard().getConditionText()),
+                new Guard(comment, conditions.get(0).get(0).getGuard().getConditionSource()),
                 new Property(comment, property)));
         return specs;
       } else if (conditions.get(0).isEmpty()
@@ -323,12 +323,12 @@ public class ReturnTranslator {
    * @param predicateSplitPoint index of the "if"
    * @return the translation produced
    */
-  private static List<PostSpecification> returnStandardPattern(
+  private static List<Postcondition> returnStandardPattern(
       DocumentedExecutable method,
       String textToTranslate,
       CommentContent comment,
       int predicateSplitPoint) {
-    List<PostSpecification> specs = new ArrayList<>();
+    List<Postcondition> specs = new ArrayList<>();
 
     if (textToTranslate.contains(";")) {
       textToTranslate = textToTranslate.replace(";", ",");
@@ -358,7 +358,7 @@ public class ReturnTranslator {
           Guard trueGuard = new Guard(textToTranslate, conditionTranslation);
           Property trueProperty = new Property(textToTranslate, predicateTranslation);
           if (isPostSpecCompilable(method, trueGuard, trueProperty)) {
-            specs.add(new PostSpecification(textToTranslate, trueGuard, trueProperty));
+            specs.add(new Postcondition(textToTranslate, trueGuard, trueProperty));
           }
           String elsePredicate = translateLastPart(falseCase, method);
           if (elsePredicate != null) {
@@ -366,7 +366,7 @@ public class ReturnTranslator {
             Guard falseGuard = new Guard(textToTranslate, invertedGuard);
             Property falseProperty = new Property(textToTranslate, elsePredicate);
             if (isPostSpecCompilable(method, falseGuard, falseProperty)) {
-              specs.add(new PostSpecification(textToTranslate, falseGuard, falseProperty));
+              specs.add(new Postcondition(textToTranslate, falseGuard, falseProperty));
             }
           }
         }
@@ -388,9 +388,9 @@ public class ReturnTranslator {
    * @param comment the String comment belonging to the tag
    * @return a String translation if any, or an empty string
    */
-  private static List<PostSpecification> returnNotStandard(
+  private static List<Postcondition> returnNotStandard(
       DocumentedExecutable method, String comment) {
-    List<PostSpecification> specs = new ArrayList<>();
+    List<Postcondition> specs = new ArrayList<>();
 
     String translation = null;
     final String[] truePatterns = {"true", "true always", "true, always", "always true"};
@@ -465,7 +465,7 @@ public class ReturnTranslator {
       }
     }
     if (property != null && isPostSpecCompilable(method, guard, property)) {
-      specs.add(new PostSpecification(comment, guard, property));
+      specs.add(new Postcondition(comment, guard, property));
     }
     return specs;
   }

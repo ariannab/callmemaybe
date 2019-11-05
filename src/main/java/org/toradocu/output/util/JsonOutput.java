@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
-import org.toradocu.extractor.*;
+import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
-import org.toradocu.extractor.EquivalentMatch;
+import org.toradocu.extractor.ParamTag;
+import org.toradocu.extractor.ReturnTag;
+import org.toradocu.extractor.ThrowsTag;
+import org.toradocu.translator.spec.EqOperationSpecification;
+import org.toradocu.translator.spec.EquivalenceSpec;
 import randoop.condition.specification.OperationSpecification;
-import randoop.condition.specification.PostSpecification;
-import randoop.condition.specification.PreSpecification;
-import randoop.condition.specification.ThrowsSpecification;
+import randoop.condition.specification.Postcondition;
+import randoop.condition.specification.Precondition;
+import randoop.condition.specification.ThrowsCondition;
 
 public class JsonOutput {
   public String signature;
@@ -25,50 +29,25 @@ public class JsonOutput {
   public List<ThrowsTagOutput> throwsTags;
   public EquivalenceOutput equivalence;
 
-  public JsonOutput(DocumentedExecutable member, ArrayList<EquivalentMatch> specification) {
-    // TODO translate the executable member to a serializable format
-    this.signature = member.getSignature();
-    this.name = member.getName();
-    this.containingClass =
-        new org.toradocu.output.util.Type(
-            member.getDeclaringClass().getName(),
-            member.getDeclaringClass().getSimpleName(),
-            member.getDeclaringClass().isArray());
-    this.targetClass = member.getDeclaringClass().getName();
-    this.isVarArgs = member.isVarArgs();
-
-    String returnTypeName = member.getExecutable().getAnnotatedReturnType().getType().getTypeName();
-    this.returnType =
-        new org.toradocu.output.util.Type(
-            returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
-
-    createParameters(member);
-    createEquivalences(member, specification);
-  }
-
   private void createEquivalences(
-      DocumentedExecutable member, ArrayList<EquivalentMatch> specification) {
-    String oracle = "";
+      DocumentedExecutable member, EqOperationSpecification specification) {
+    StringBuilder oracle = new StringBuilder();
     int i = 0;
-    for (EquivalentMatch m : specification) {
-      if (i > 0) {
-        oracle += " && ";
+    for (EquivalenceSpec m : specification.getEquivalenceSpecs()) {
+      if (i > 1) {
+        oracle.append(" && ");
       }
-      if (!m.getOracle().isEmpty()) {
-        oracle += m.getOracle();
-        //        if (specification.size() > 1) {
-        //          // FIXME I don't like this, exploit join() or smt
-        //          oracle += ";";
-        //        }
+      if (!m.getProperty().getConditionSource().isEmpty()) {
+        oracle.append(m.getProperty().getConditionSource());
+        i++;
       }
-      i++;
     }
     this.equivalence =
         new EquivalenceOutput(
             member.getFreeText().getComment().getText(),
             member.getSignature(),
             member.getFreeText().getKind().toString(),
-            oracle);
+            oracle.toString());
   }
 
   public JsonOutput(DocumentedExecutable member, OperationSpecification specification) {
@@ -89,12 +68,17 @@ public class JsonOutput {
             returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
 
     createParameters(member);
-    createParamTags(member, specification.getPreSpecifications());
-    createThrowsTags(member, specification.getThrowsSpecifications());
-    createReturnTags(member, specification.getPostSpecifications());
+
+    if (specification instanceof EqOperationSpecification) {
+      createEquivalences(member, (EqOperationSpecification) specification);
+    } else {
+      createParamTags(member, specification.getPreconditions());
+      createThrowsTags(member, specification.getThrowsConditions());
+      createReturnTags(member, specification.getPostconditions());
+    }
   }
 
-  private void createReturnTags(DocumentedExecutable member, List<PostSpecification> specs) {
+  private void createReturnTags(DocumentedExecutable member, List<Postcondition> specs) {
     if (specs.size() > 2) {
       throw new IllegalArgumentException("Old Toradocu had a limited support for return specs");
     }
@@ -103,21 +87,21 @@ public class JsonOutput {
     if (mrt != null) { // If member has a @return comment.
       String spec = "";
       if (!specs.isEmpty()) { // If Toradocu produced a translation for the @return comment.
-        PostSpecification postSpec = specs.get(0);
+        Postcondition postSpec = specs.get(0);
         spec =
-            postSpec.getGuard().getConditionText()
+            postSpec.getGuard().getConditionSource()
                 + " ? "
-                + postSpec.getProperty().getConditionText();
+                + postSpec.getProperty().getConditionSource();
         if (specs.size() > 1) {
           postSpec = specs.get(1);
-          spec += " : " + postSpec.getProperty().getConditionText();
+          spec += " : " + postSpec.getProperty().getConditionSource();
         }
       }
       this.returnTag = new ReturnTagOutput(mrt.getComment().getText(), mrt.getKind().name(), spec);
     }
   }
 
-  private void createThrowsTags(DocumentedExecutable member, List<ThrowsSpecification> specs) {
+  private void createThrowsTags(DocumentedExecutable member, List<ThrowsCondition> specs) {
     this.throwsTags = new ArrayList<>();
     for (int i = 0; i < member.throwsTags().size(); i++) {
       String condition = "";
@@ -125,8 +109,8 @@ public class JsonOutput {
       Class eType = throwsTag.getException();
       Type exType = new Type(eType.getName(), eType.getSimpleName(), eType.isArray());
       if (!specs.isEmpty() && specs.get(i) != null) {
-        final ThrowsSpecification throwsSpecification = specs.get(i);
-        condition = throwsSpecification.getGuard().getConditionText();
+        final ThrowsCondition throwsSpecification = specs.get(i);
+        condition = throwsSpecification.getGuard().getConditionSource();
       }
       ThrowsTagOutput paramJsonObj =
           new ThrowsTagOutput(
@@ -135,7 +119,7 @@ public class JsonOutput {
     }
   }
 
-  private void createParamTags(DocumentedExecutable member, List<PreSpecification> specs) {
+  private void createParamTags(DocumentedExecutable member, List<Precondition> specs) {
     this.paramTags = new ArrayList<>();
     for (int i = 0; i < member.paramTags().size(); i++) {
       String preSpecText = "";
@@ -145,8 +129,8 @@ public class JsonOutput {
       Type paramType = new Type(pType.getName(), pType.getSimpleName(), pType.isArray());
       Parameter paramObj = new Parameter(paramType, param.getName(), param.isNullable());
       if (!specs.isEmpty() && specs.get(i) != null) {
-        final PreSpecification preSpecification = specs.get(i);
-        preSpecText = preSpecification.getGuard().getConditionText();
+        final Precondition preSpecification = specs.get(i);
+        preSpecText = preSpecification.getGuard().getConditionSource();
       }
       ParamTagOutput paramJsonObj =
           new ParamTagOutput(

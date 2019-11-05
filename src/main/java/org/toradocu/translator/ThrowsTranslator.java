@@ -5,11 +5,11 @@ import static org.toradocu.util.ComplianceChecks.isSpecCompilable;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.ThrowsTag;
 import randoop.condition.specification.Guard;
-import randoop.condition.specification.ThrowsSpecification;
+import randoop.condition.specification.ThrowsCondition;
 
 public class ThrowsTranslator {
 
-  public ThrowsSpecification translate(ThrowsTag tag, DocumentedExecutable excMember) {
+  public ThrowsCondition translate(ThrowsTag tag, DocumentedExecutable excMember) {
     final String commentTranslation =
         alwaysThrowException(tag.getComment().getText())
             ? "true"
@@ -18,12 +18,12 @@ public class ThrowsTranslator {
     final Guard guard = new Guard(tag.getComment().getText(), commentTranslation);
     final String exceptionName = tag.getException().getName();
 
-    if (commentTranslation.isEmpty() || !isSpecCompilable(excMember, guard.getConditionText())) {
-      return new ThrowsSpecification(
+    if (commentTranslation.isEmpty() || !isSpecCompilable(excMember, guard.getConditionSource())) {
+      return new ThrowsCondition(
           tag.toString(), new Guard(tag.getComment().getText(), ""), exceptionName);
     }
 
-    return new ThrowsSpecification(tag.toString(), guard, exceptionName);
+    return new ThrowsCondition(tag.toString(), guard, exceptionName);
   }
 
   /**

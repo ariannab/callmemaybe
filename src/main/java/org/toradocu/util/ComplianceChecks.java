@@ -79,17 +79,17 @@ public class ComplianceChecks {
     }
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     includeMethodResult(method, sourceCodeBuilder);
-    addOracle(method, guard.getConditionText(), sourceCodeBuilder);
-    addOracle(method, property.getConditionText(), sourceCodeBuilder);
+    addOracle(method, guard.getConditionSource(), sourceCodeBuilder);
+    addOracle(method, property.getConditionSource(), sourceCodeBuilder);
     String sourceCode = sourceCodeBuilder.buildSource();
     try {
       compileSource(sourceCode);
     } catch (CompilationException e) {
       log.info(
           "The following specification was generated but discarded:\n"
-              + guard.getConditionText()
+              + guard.getConditionSource()
               + " ? "
-              + property.getConditionText()
+              + property.getConditionSource()
               + "\n"
               + e.getLocalizedMessage()
               + "\n");

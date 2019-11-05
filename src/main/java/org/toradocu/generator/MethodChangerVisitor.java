@@ -31,9 +31,9 @@ import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
 import org.toradocu.util.Checks;
 import randoop.condition.specification.OperationSpecification;
-import randoop.condition.specification.PostSpecification;
-import randoop.condition.specification.PreSpecification;
-import randoop.condition.specification.ThrowsSpecification;
+import randoop.condition.specification.Postcondition;
+import randoop.condition.specification.Precondition;
+import randoop.condition.specification.ThrowsCondition;
 
 /**
  * Visitor that modifies the aspect template (see method {@code visit}) to generate an aspect
@@ -91,10 +91,11 @@ public class MethodChangerVisitor
     // Replace second parameter name ("target") with specific name from configuration.
     methodDeclaration.getParameter(1).setName(new SimpleName(Configuration.RECEIVER));
     // Check postconditions.
-    for (PostSpecification postSpecification : spec.getPostSpecifications()) {
-      String guard = addCasting(postSpecification.getGuard().getConditionText(), executableMember);
+    for (Postcondition postSpecification : spec.getPostconditions()) {
+      String guard =
+          addCasting(postSpecification.getGuard().getConditionSource(), executableMember);
       String property =
-          addCasting(postSpecification.getProperty().getConditionText(), executableMember);
+          addCasting(postSpecification.getProperty().getConditionSource(), executableMember);
       if (property.isEmpty()) {
         // TODO why does this happen and how can we avoid it
         continue;
@@ -114,8 +115,8 @@ public class MethodChangerVisitor
     // Replace first parameter name ("target") with specific name from configuration.
     methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RECEIVER));
     boolean returnStmtNeeded = true;
-    for (PreSpecification preSpecification : specification.getPreSpecifications()) {
-      String condition = preSpecification.getGuard().getConditionText();
+    for (Precondition preSpecification : specification.getPreconditions()) {
+      String condition = preSpecification.getGuard().getConditionSource();
       if (condition.isEmpty()) {
         continue; // TODO Does it make sense to have empty guards here? We should avoid that.
       }
@@ -142,12 +143,12 @@ public class MethodChangerVisitor
       OperationSpecification operationSpec) {
     // Replace first parameter name ("target") with specific name from configuration.
     methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RECEIVER));
-    for (ThrowsSpecification throwsSpecification : operationSpec.getThrowsSpecifications()) {
-      if (throwsSpecification.getGuard().getConditionText().isEmpty()) {
+    for (ThrowsCondition throwsSpecification : operationSpec.getThrowsConditions()) {
+      if (throwsSpecification.getGuard().getConditionSource().isEmpty()) {
         continue;
       }
       String condition =
-          addCasting(throwsSpecification.getGuard().getConditionText(), executableMember);
+          addCasting(throwsSpecification.getGuard().getConditionSource(), executableMember);
 
       IfStmt ifStmt = new IfStmt();
       Expression conditionExpression;

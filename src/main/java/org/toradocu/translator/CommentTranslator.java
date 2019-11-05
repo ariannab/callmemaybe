@@ -17,15 +17,17 @@ import org.toradocu.extractor.ParamTag;
 import org.toradocu.extractor.ReturnTag;
 import org.toradocu.extractor.ThrowsTag;
 import org.toradocu.translator.preprocess.PreprocessorFactory;
+import org.toradocu.translator.spec.EqOperationSpecification;
+import org.toradocu.translator.spec.EquivalenceSpec;
 import org.toradocu.util.Checks;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Identifiers;
-import randoop.condition.specification.Operation;
+import randoop.condition.specification.OperationSignature;
 import randoop.condition.specification.OperationSpecification;
-import randoop.condition.specification.PostSpecification;
-import randoop.condition.specification.PreSpecification;
+import randoop.condition.specification.Postcondition;
+import randoop.condition.specification.Precondition;
 import randoop.condition.specification.Property;
-import randoop.condition.specification.ThrowsSpecification;
+import randoop.condition.specification.ThrowsCondition;
 
 /** Translates comments into procedure specifications. */
 public class CommentTranslator {
@@ -53,7 +55,7 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code tag}
    * @return a precondition specification (an empty specification if the translation fails)
    */
-  public static PreSpecification translate(ParamTag tag, DocumentedExecutable excMember) {
+  public static Precondition translate(ParamTag tag, DocumentedExecutable excMember) {
     PreprocessorFactory.create(tag.getKind()).preprocess(tag, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new ParamTranslator().translate(tag, excMember);
@@ -67,7 +69,7 @@ public class CommentTranslator {
    * @return a list of precondition specifications (each specification can be empty if the
    *     translation failed)
    */
-  public static List<PostSpecification> translate(ReturnTag tag, DocumentedExecutable excMember) {
+  public static List<Postcondition> translate(ReturnTag tag, DocumentedExecutable excMember) {
     PreprocessorFactory.create(tag.getKind()).preprocess(tag, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new ReturnTranslator().translate(tag, excMember);
@@ -80,7 +82,7 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code tag}
    * @return a precondition specification (an empty specification if the translation fails)
    */
-  public static ThrowsSpecification translate(ThrowsTag tag, DocumentedExecutable excMember) {
+  public static ThrowsCondition translate(ThrowsTag tag, DocumentedExecutable excMember) {
     PreprocessorFactory.create(tag.getKind()).preprocess(tag, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new ThrowsTranslator().translate(tag, excMember);
@@ -97,26 +99,26 @@ public class CommentTranslator {
       List<DocumentedExecutable> members) {
     Map<DocumentedExecutable, OperationSpecification> specs = new LinkedHashMap<>();
     for (DocumentedExecutable member : members) {
-      Operation operation = Operation.getOperation(member.getExecutable());
+      OperationSignature operation = OperationSignature.of(member.getExecutable());
       List<String> paramNames =
           member.getParameters().stream().map(DocumentedParameter::getName).collect(toList());
       Identifiers identifiers =
-          new Identifiers(paramNames, Configuration.RECEIVER, Configuration.RETURN_VALUE);
+          new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
       OperationSpecification spec = new OperationSpecification(operation, identifiers);
 
-      List<PreSpecification> preSpecifications = new ArrayList<>();
+      List<Precondition> preSpecifications = new ArrayList<>();
       for (ParamTag paramTag : member.paramTags()) {
         preSpecifications.add(CommentTranslator.translate(paramTag, member));
       }
       spec.addParamSpecifications(preSpecifications);
 
-      List<ThrowsSpecification> throwsSpecifications = new ArrayList<>();
+      List<ThrowsCondition> throwsSpecifications = new ArrayList<>();
       for (ThrowsTag throwsTag : member.throwsTags()) {
         throwsSpecifications.add(CommentTranslator.translate(throwsTag, member));
       }
-      spec.addThrowsSpecifications(throwsSpecifications);
+      spec.addThrowsConditions(throwsSpecifications);
 
-      List<PostSpecification> postSpecifications = new ArrayList<>();
+      List<Postcondition> postSpecifications = new ArrayList<>();
       ReturnTag returnTag = member.returnTag();
       if (returnTag != null) {
         postSpecifications.addAll(CommentTranslator.translate(returnTag, member));
@@ -128,38 +130,38 @@ public class CommentTranslator {
     return specs;
   }
 
-  public static Map<DocumentedExecutable, OperationSpecification> createCrossOracles(
+  public static Map<DocumentedExecutable, EqOperationSpecification> createCrossOracles(
       DocumentedType documentedType) {
-    Map<DocumentedExecutable, OperationSpecification> methodsSpecs = new LinkedHashMap<>();
+    Map<DocumentedExecutable, EqOperationSpecification> methodsSpecs = new LinkedHashMap<>();
     List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
     for (DocumentedExecutable member : members) {
-      Operation operation = Operation.getOperation(member.getExecutable());
+      OperationSignature operation = OperationSignature.of(member.getExecutable());
       List<String> paramNames =
           member.getParameters().stream().map(DocumentedParameter::getName).collect(toList());
       Identifiers identifiers =
-          new Identifiers(paramNames, Configuration.RECEIVER, Configuration.RETURN_VALUE);
+          new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
       // OperationSpecification contains a list for all possible specifications related to the
       // operation,
       // thus Pre, Post, Exc...
-      OperationSpecification opSpec = new OperationSpecification(operation, identifiers);
+      EqOperationSpecification opSpec = new EqOperationSpecification(operation, identifiers);
       ArrayList<EquivalentMatch> equivalentMatches =
           CommentTranslator.translate(documentedType, member);
 
       // EquivalenceMatch now extends PostSpecification, so the list returned to the translator is
       // stored as a list of PostSpecifications added to the OperationSpec
-      ArrayList postSpecifications = new ArrayList();
+      List<EquivalenceSpec> eqSpecifications = new ArrayList<>();
       for (EquivalentMatch em : equivalentMatches) {
         String guard = em.getCondition().isEmpty() ? "true" : em.getCondition();
-        postSpecifications.add(
+        eqSpecifications.add(
             // FIXME just an experiment, remember there are special cases, e.g. snippets!
-            new PostSpecification(
+            new EquivalenceSpec(
                 member.getFreeText().getComment().getText(),
                 new Guard("", guard),
                 new Property("", em.getOracle())));
       }
 
       // if(!postSpecifications.isEmpty()) {
-      opSpec.addReturnSpecifications(postSpecifications);
+      opSpec.addEqSpecifications(eqSpecifications);
       methodsSpecs.put(member, opSpec);
       // }
     }
