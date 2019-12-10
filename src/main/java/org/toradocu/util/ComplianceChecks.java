@@ -125,6 +125,7 @@ public class ComplianceChecks {
     int attempts = 0;
     while (!compilable && attempts < 3) {
       String sourceCode = sourceCodeBuilder.buildSource();
+      log.info("attempting to compile:\n" + sourceCode);
       try {
         compileSource(sourceCode);
       } catch (CompilationException e) {
@@ -195,11 +196,23 @@ public class ComplianceChecks {
     } catch (Exception e) {
       e.printStackTrace();
     }
+    // TODO when you reach this point, you are sure the snippet compiles => just embed it in the
+    // TODO PostAssertion. Minus:
+    // TODO 1. the class declaration
+    // TODO 2. what else?
+
+    String cleanedSnippet = cleanSnippetSourceCode(sourceCode);
+    equivalentMethodMatch.setOracle(cleanedSnippet);
     return true;
   }
 
+  private static String cleanSnippetSourceCode(String sourceCode) {
+    String noDecl = sourceCode.replace(SourceCodeBuilder.CLASS_DECLARATION, "");
+    return noDecl.substring(noDecl.indexOf("{") + 1, noDecl.lastIndexOf("}")).trim();
+  }
+
   private static CodeSnippet sobstituteKnownSpecialSymbols(CodeSnippet snippet) {
-    snippet.addMatchToSymbol("this", Configuration.RECEIVER);
+    snippet.addMatchToSymbol("this", Configuration.RECEIVER_CLONE);
     return snippet;
   }
 
@@ -257,6 +270,7 @@ public class ComplianceChecks {
     }
     compiler.useOptions("-cp", String.join(":", classpath));
     compiler.compile("GeneratedSpecs", sourceCode);
+    System.out.println(sourceCode);
   }
 
   /**
@@ -284,8 +298,14 @@ public class ComplianceChecks {
       }
     }
 
-    sourceCodeBuilder.addImport(declaringClass.getName());
+    if (declaringClass.getName().contains(".")) {
+      // FIXME Naive and not elegant
+      sourceCodeBuilder.addImport(declaringClass.getName());
+    }
+    // FIXME just to be sure, now pass both target object AND its clone. But we probably need only
+    // the clone.
     sourceCodeBuilder.addArgument(declaringClass.getName(), Configuration.RECEIVER);
+    sourceCodeBuilder.addArgument(declaringClass.getName(), Configuration.RECEIVER_CLONE);
     sourceCodeBuilder.copyClassTypeArguments(declaringClass.getTypeParameters());
     sourceCodeBuilder.copyTypeArguments(method.getExecutable().getTypeParameters());
     return sourceCodeBuilder;

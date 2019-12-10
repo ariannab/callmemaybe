@@ -20,6 +20,11 @@ import org.jetbrains.annotations.NotNull;
  */
 public class SourceCodeBuilder {
 
+  static final String PACKAGE_KEYWORD = "package";
+  static final String IMPORT_KEYWORD = "import";
+  static final String CLASS_DECLARATION = "public class GeneratedSpecs";
+  static final String BLANK = " ";
+
   /** The boolean conditions to include in the source code as ifs. */
   private Set<String> conditions = new HashSet<>();
   /** The method arguments to include in the source code. */
@@ -46,18 +51,22 @@ public class SourceCodeBuilder {
   public String buildSource() {
     StringBuilder fakeSource = new StringBuilder();
 
+    // FIXME would be nice to use constants whenever possible here
     if (!packageDeclaration.isEmpty()) {
-      fakeSource.append("package ");
+      fakeSource.append(PACKAGE_KEYWORD);
+      fakeSource.append(BLANK);
       fakeSource.append(packageDeclaration);
       fakeSource.append(";");
     }
     for (String anImport : imports) {
-      fakeSource.append("import ");
+      fakeSource.append(IMPORT_KEYWORD);
+      fakeSource.append(BLANK);
       fakeSource.append(anImport);
       fakeSource.append(";");
       fakeSource.append("\n");
     }
-    fakeSource.append("public class GeneratedSpecs ");
+    fakeSource.append(CLASS_DECLARATION);
+    fakeSource.append(BLANK);
     if (!classTypeParameters.isEmpty()) {
       fakeSource.append("<");
       fakeSource.append(String.join(",", classTypeParameters));
@@ -73,7 +82,7 @@ public class SourceCodeBuilder {
     }
 
     fakeSource.append("void");
-    fakeSource.append(" foo (");
+    fakeSource.append(" snippetWrapper (");
     fakeSource.append(String.join(",", arguments));
     if (!arguments.isEmpty() && !varArgArguments.isEmpty()) {
       fakeSource.append(",");
@@ -96,7 +105,14 @@ public class SourceCodeBuilder {
       //      }
       fakeSource.append("\n");
     }
-    fakeSource.append("return;} }");
+    fakeSource.append("return;");
+
+    // Close method
+    fakeSource.append("\n");
+    fakeSource.append("}");
+    // Close class
+    fakeSource.append("\n");
+    fakeSource.append("}");
     return fakeSource.toString();
   }
 

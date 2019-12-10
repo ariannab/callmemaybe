@@ -4,7 +4,9 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 import org.toradocu.extractor.CodeSnippet;
 import org.toradocu.extractor.DocumentedExecutable;
@@ -17,7 +19,7 @@ public class ComplianceError {
   private static final String SYMBOL_TOKEN = "symbol:";
   private static final String METHOD_TOKEN = "method ";
   private boolean errorSolved;
-  private List<String> missingSymbols;
+  private Set<String> missingSymbols;
   private String unreportedException;
   private String instanceOfClause;
   private boolean incompatibleTypes;
@@ -26,7 +28,7 @@ public class ComplianceError {
   private List<String> swappableMethods;
 
   public ComplianceError() {
-    this.missingSymbols = new ArrayList<>();
+    this.missingSymbols = new HashSet<>();
     this.swappableMethods = new ArrayList<>();
     this.errorSolved = false;
     this.unreportedException = "";
@@ -173,7 +175,7 @@ public class ComplianceError {
     }
   }
 
-  public List<String> getMissingSymbols() {
+  public Set<String> getMissingSymbols() {
     return this.missingSymbols;
   }
 
