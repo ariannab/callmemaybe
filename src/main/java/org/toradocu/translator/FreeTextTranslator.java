@@ -82,8 +82,11 @@ public class FreeTextTranslator {
             boolean compilable =
                 isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
             if (compilable) {
-              String finalOracle = prepareResult(excMember, equivalenceMatch.getCodeSnippet());
-              equivalenceMatch.setOracle(finalOracle);
+              String finalOracle = prepareResult(excMember, equivalenceMatch);
+              if (!finalOracle.isEmpty()) {
+                // FIXME ugly be more intelligent w/ real snippets
+                equivalenceMatch.setOracle(finalOracle);
+              }
             } else {
               equivalenceMatch.setOracle("");
             }
@@ -106,8 +109,8 @@ public class FreeTextTranslator {
     equivalenceMatch.setOracle(oracle);
     ComplianceError complianceError = new ComplianceError();
     boolean compilable;
-    List<String> missingSymbols = new ArrayList<>();
-    List<String> swappableArgs = new ArrayList<>();
+    Set<String> missingSymbols;
+    List<String> swappableArgs;
     compilable = ComplianceChecks.isSnippetCompilable(excMember, equivalenceMatch, complianceError);
     do {
       if (!compilable) {
@@ -364,6 +367,10 @@ public class FreeTextTranslator {
       return;
     }
     if (theFinalMatch != null) {
+      // It is not safe to perform any invocation on the target object: we do not wish to
+      // modify its state. Perform invocations on a clone.
+      previousOracle =
+          previousOracle.replaceAll(Configuration.RECEIVER, Configuration.RECEIVER_CLONE);
       buildAndCompileOracle(
           excMember, equivalenceMatch, theFinalMatch.getCodeElement(), condition, previousOracle);
     }
@@ -418,6 +425,12 @@ public class FreeTextTranslator {
       matchingSymbol = identifyMissingSymbolInCode(excMember, symbol, matcher, snippet);
     }
     if (matchingSymbol != null) {
+      if (matchingSymbol.contains(Configuration.RECEIVER)) {
+        // It is not safe to perform any invocation on the receiver object, because we
+        // do not wish to modify its state. Perform invocations on a clone.
+        matchingSymbol =
+            matchingSymbol.replaceAll(Configuration.RECEIVER, Configuration.RECEIVER_CLONE);
+      }
       snippet.addMatchToSymbol(symbol, matchingSymbol);
       snippet.completeSnippet();
     }
@@ -590,17 +603,19 @@ public class FreeTextTranslator {
     if (!condition.isEmpty()) {
       equivalenceMatch.setCondition(condition);
     }
+
     equivalenceMatch.setOracle(oracle);
 
     if (!ComplianceChecks.isEqSpecCompilable(excMember, equivalenceMatch)) {
       equivalenceMatch.setOracle("");
-    } else {
-      if (!condition.isEmpty()) {
-        String premises = "if(" + condition + ") {";
-        String end = "}";
-        equivalenceMatch.setOracle(premises + oracle + end);
-      }
     }
+    //        else {
+    //            if (!condition.isEmpty()) {
+    //                String premises = "if(" + condition + ") {";
+    //                String end = "}";
+    //                equivalenceMatch.setOracle(premises + oracle + end);
+    //            }
+    //        }
   }
 
   @NotNull
@@ -641,31 +656,33 @@ public class FreeTextTranslator {
     //    receiverObjectID.clear(); == previousOracle
     //    receiverObjectClone.removeAllElements();
     //    assert(receiverObjectID.equals(receiverObjectClone));
-    String signature = excMember.getSignature();
-    String signatureWithRightArguments = signature.substring(0, signature.indexOf("(") + 1);
-    int size = excMember.getParameters().size();
-    for (int i = 0; i < size; i++) {
-      signatureWithRightArguments += "args[" + i + "]";
-      if (size > 1 && i < size - 1) {
-        signatureWithRightArguments += ",";
-      }
-    }
-    signatureWithRightArguments += ")";
-    String preStatements =
-        previousOracle
-            + ";\n"
-            + Configuration.RECEIVER_CLONE
-            + "."
-            + signatureWithRightArguments
-            + ";\n";
+
+    //        String signature = excMember.getSignature();
+    //        String signatureWithRightArguments = signature.substring(0, signature.indexOf("(") +
+    // 1);
+    //        int size = excMember.getParameters().size();
+    //        for (int i = 0; i < size; i++) {
+    //            signatureWithRightArguments += "args[" + i + "]";
+    //            if (size > 1 && i < size - 1) {
+    //                signatureWithRightArguments += ",";
+    //            }
+    //        }
+    //        signatureWithRightArguments += ")";
+    String preStatements = previousOracle + ";\n";
+    //                        + Configuration.RECEIVER_CLONE
+    //                        + "."
+    //                        + signatureWithRightArguments
+    //                        + ";\n";
+
     String assertion =
         "assert(" + Configuration.RECEIVER_CLONE + ".equals(" + Configuration.RECEIVER + "));";
 
-    return preStatements + " " + assertion;
+    return preStatements + assertion;
   }
 
   @NotNull
-  private String prepareResult(DocumentedExecutable excMember, CodeSnippet codeSnippet) {
+  private String prepareResult(DocumentedExecutable excMember, EquivalentMatch em) {
+    CodeSnippet codeSnippet = em.getCodeSnippet();
     String previousOracle = codeSnippet.getSnippet();
     String oracle;
     String separator1;
@@ -673,23 +690,42 @@ public class FreeTextTranslator {
     if (codeSnippet.isExpression() || codeSnippet.isComplexSignature()) {
       separator1 = "(";
       separator2 = ")";
+
+      //    else {
+      //      separator1 = "[";
+      //      separator2 = "]";
+      //    }
+      if (ComplianceChecks.primitiveTypes()
+          .contains(excMember.getReturnType().getType().getTypeName())) {
+        oracle =
+            Configuration.RETURN_VALUE
+                + "=="
+                + separator1
+                + " "
+                + previousOracle
+                + " "
+                + separator2;
+      } else {
+        oracle =
+            Configuration.RETURN_VALUE
+                + ".equals"
+                + separator1
+                + " "
+                + previousOracle
+                + " "
+                + separator2;
+      }
+      return oracle;
     } else {
-      separator1 = "[";
-      separator2 = "]";
-    }
-    if (ComplianceChecks.primitiveTypes()
-        .contains(excMember.getReturnType().getType().getTypeName())) {
+      // FIXME String management ugly as hell
       oracle =
-          Configuration.RETURN_VALUE + "==" + separator1 + " " + previousOracle + " " + separator2;
-    } else {
-      oracle =
-          Configuration.RETURN_VALUE
-              + ".equals"
-              + separator1
-              + " "
-              + previousOracle
-              + " "
-              + separator2;
+          em.getOracle()
+              + "\n"
+              + "//END OF METHOD"
+              + "\nsnippetWrapper("
+              + Configuration.RECEIVER_CLONE
+              + ")";
+      oracle = manageVoidAndUncompatibleMethods(excMember, oracle);
     }
     return oracle;
   }

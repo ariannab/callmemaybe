@@ -168,21 +168,34 @@ public class CommentTranslator {
       // FIXME 1. If em has a condition -> precondition
       // FIXME 2. If the oracle has some \n -> Body with statements, last one is the Assertion
       // FIXME 3. If the oracle is a single sentence -> Assertion
-      PostAssertion postAssertion = null;
-      String precondition = "";
+
+      // FIXME the problem with 1. and 2. is that we embedded the if in the oracle already,
+      // FIXME let's avoid that...it messes up the assertion statement as well.
+      PostAssertion postAssertion;
+      String precondition = em.getCondition().isEmpty() ? "true" : em.getCondition();
       String assertion;
-      if (!em.getCondition().isEmpty()) {
-        precondition = em.getCondition().isEmpty() ? "true" : em.getCondition();
-      }
+
+      // FIXME be sure that at this point a snippet oracle is already correct, i.e.:
+      // FIXME 1. compilable out of the box
+      // FIXME 2. with /n statements
+      // FIXME 3. with last statement being the assertion!
       if (em.getOracle().contains("\n")) {
         LinkedList<String> statements = new LinkedList<>();
         Collections.addAll(statements, em.getOracle().split("\n"));
         assertion = statements.get(statements.size() - 1);
         statements.remove(assertion);
-        postAssertion = new PostAssertion(new Body(statements), new Assertion(assertion));
+        // FIXME statements.indexOf("//END OF METHOD");
+        // FIXME here we could fill the dummy method, but do we care..?
+        postAssertion =
+            new PostAssertion(
+                new Body(statements), new Assertion(assertion), new Body(new LinkedList<>()));
       } else {
         assertion = em.getOracle();
-        postAssertion = new PostAssertion(new Body(new LinkedList<>()), new Assertion(assertion));
+        postAssertion =
+            new PostAssertion(
+                new Body(new LinkedList<>()),
+                new Assertion(assertion),
+                new Body(new LinkedList<>()));
       }
 
       eqSpecifications.add(

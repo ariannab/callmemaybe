@@ -17,7 +17,7 @@ public class EqOperationSpecification extends OperationSpecification {
   // FIXME call the super that accepts such lists and plus add the equivalences
   public EqOperationSpecification(OperationSignature operation, Identifiers identifiers) {
     super(operation, identifiers);
-    this.equivalenceSpecs = new ArrayList();
+    this.equivalenceSpecs = new ArrayList<>();
   }
 
   public void addEqSpecifications(List<EquivalenceSpec> specifications) {
@@ -32,8 +32,12 @@ public class EqOperationSpecification extends OperationSpecification {
     return "{ \"operation\": "
         + this.getOperation().toString()
         + ", \"identifiers\": "
-        + this.getIdentifiers().toString()
+        // + this.getIdentifiers().toString()
         + ", \"eqSpecifications\": "
-        + this.equivalenceSpecs;
+        + this.equivalenceSpecs.toString();
+  }
+
+  public boolean isEmpty() {
+    return this.equivalenceSpecs.isEmpty();
   }
 }
