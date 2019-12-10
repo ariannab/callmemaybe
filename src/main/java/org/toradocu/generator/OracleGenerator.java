@@ -39,7 +39,8 @@ public class OracleGenerator {
    * @param specifications the specifications that created aspects will check at runtime. Must not
    *     be null.
    */
-  public static void createAspects(Map<DocumentedExecutable, OperationSpecification> specifications)
+  public static void createAspects(
+      Map<DocumentedExecutable, ? extends OperationSpecification> specifications)
       throws IOException {
     Checks.nonNullParameter(specifications, "specifications");
 
@@ -86,7 +87,7 @@ public class OracleGenerator {
     boolean creationSucceeded;
     final File outputDir = new File(aspectsOutputDir);
     if (outputDir.exists()) {
-      log.error("Directory where to store aspects already exists: " + aspectsOutputDir);
+      log.error("Directory where to store aspects already exists: " + outputDir.getAbsolutePath());
       creationSucceeded = true;
     } else {
       creationSucceeded = outputDir.mkdirs();

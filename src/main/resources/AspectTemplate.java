@@ -5,6 +5,7 @@ import java.util.List;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import com.rits.cloning.Cloner;
 
 @Aspect
 public class Aspect_Template {
@@ -14,7 +15,7 @@ public class Aspect_Template {
         "Triggered aspect: " + this.getClass().getName() + " (" + jp.getSourceLocation() + ")";
     Object target = jp.getTarget();
     Object[] args = jp.getArgs();
-
+    Object clonedTarget = new Cloner().deepClone(target);
     if (!paramTagsSatisfied(target, args)) {
       System.err.println(output + " -> Ignored test case: inputs violate pre-conditions");
       throw new TestCaseAspect.InvalidParamException();
@@ -22,6 +23,13 @@ public class Aspect_Template {
       List<Class<?>> expectedExceptions = getExpectedExceptions(target, args);
       if (expectedExceptions.isEmpty()) {
         Object result = jp.proceed(args);
+        if(equivalenceHolds(result, target, clonedTarget, args)){
+          System.err.println(output + " -> Success: Expected equivalence holds");
+        }else{
+          fail(
+              output + " -> Failure: Expected equivalence DOES NOT hold");
+          return null;
+        }
         return checkResult(result, target, args);
       } else {
         try {
@@ -49,6 +57,10 @@ public class Aspect_Template {
   private boolean paramTagsSatisfied(Object target, Object[] args) {}
 
   private Object checkResult(Object result, Object target, Object[] args) {}
+
+  private boolean equivalenceHolds(Object result, Object target, Object clonedTarget, Object[] args) {}
+
+  private void snippetWrapper(Object clonedTarget) {}
 
   private List<Class<?>> getExpectedExceptions(Object target, Object[] args) {
     List<Class<?>> expectedExceptions = new ArrayList<Class<?>>();

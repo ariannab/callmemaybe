@@ -21,6 +21,8 @@ import com.github.javaparser.ast.stmt.Statement;
 import com.github.javaparser.ast.stmt.TryStmt;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.visitor.ModifierVisitor;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Optional;
 import java.util.StringJoiner;
 import org.apache.commons.lang3.tuple.Pair;
@@ -29,7 +31,11 @@ import org.toradocu.Toradocu;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
+import org.toradocu.translator.spec.EqOperationSpecification;
+import org.toradocu.translator.spec.EquivalenceSpec;
+import org.toradocu.translator.spec.PostAssertion;
 import org.toradocu.util.Checks;
+import org.toradocu.util.ComplianceChecks;
 import randoop.condition.specification.OperationSpecification;
 import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Precondition;
@@ -40,7 +46,7 @@ import randoop.condition.specification.ThrowsCondition;
  * (oracle) for a {@code ExecutableMember}.
  */
 public class MethodChangerVisitor
-    extends ModifierVisitor<Pair<DocumentedExecutable, OperationSpecification>> {
+    extends ModifierVisitor<Pair<DocumentedExecutable, ? extends OperationSpecification>> {
 
   /** Holds Toradocu configuration options. */
   private final Configuration conf = Toradocu.configuration;
@@ -58,7 +64,7 @@ public class MethodChangerVisitor
   @Override
   public Node visit(
       MethodDeclaration methodDeclaration,
-      Pair<DocumentedExecutable, OperationSpecification> spec) {
+      Pair<DocumentedExecutable, ? extends OperationSpecification> spec) {
     Checks.nonNullParameter(methodDeclaration, "methodDeclaration");
     Checks.nonNullParameter(spec, "spec");
 
@@ -78,8 +84,115 @@ public class MethodChangerVisitor
       case "checkResult":
         checkResultChanger(methodDeclaration, documentedExecutable, operationSpec);
         break;
+      case "equivalenceHolds":
+        if (operationSpec instanceof EqOperationSpecification) {
+          equivalenceHoldsChanger(
+              methodDeclaration, documentedExecutable, (EqOperationSpecification) operationSpec);
+        }
+        break;
+      case "snippetWrapper":
+        if (operationSpec instanceof EqOperationSpecification) {
+          snippetWrapperChanger(
+              methodDeclaration, documentedExecutable, (EqOperationSpecification) operationSpec);
+        }
+        break;
     }
     return methodDeclaration;
+  }
+
+  private void equivalenceHoldsChanger(
+      MethodDeclaration methodDeclaration,
+      DocumentedExecutable executableMember,
+      EqOperationSpecification spec) {
+    // Replace first parameter name ("result") with specific name from configuration.
+    methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RETURN_VALUE));
+    // Replace second parameter name ("target") with specific name from configuration.
+    methodDeclaration.getParameter(1).setName(new SimpleName(Configuration.RECEIVER));
+    // Replace third parameter name ("clone") with specific name from configuration.
+    methodDeclaration.getParameter(2).setName(new SimpleName(Configuration.RECEIVER_CLONE));
+    // Check equivalences.
+    for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
+      String guard = addCasting(eqSpec.getGuard().getConditionSource(), executableMember);
+      PostAssertion postAssertion = eqSpec.getPostAssertion();
+      String property = addCasting(postAssertion.getAssertionContent(), executableMember);
+      if (property.isEmpty()) {
+        // TODO why does this happen and how can we avoid it
+        continue;
+      }
+
+      ReturnStmt returnResultStmt = new ReturnStmt(new NameExpr("false"));
+
+      String check = createBlock("if ((" + property + ")==false) { " + returnResultStmt + " }");
+
+      //            if (property.contains(Configuration.RECEIVER_CLONE)) {
+      //                // We need statements that create the clone.
+      //                String type = executableMember.getDeclaringClass().getName();
+      //                type = removeParametersFromType(type);
+      //                String cloneStm =
+      //                        type
+      //                                + " "
+      //                                + Configuration.RECEIVER_CLONE
+      //                                + "= new Cloner().shallowClone("
+      //                                + addCasting(Configuration.RECEIVER, executableMember)
+      //                                + ");";
+      //                methodDeclaration
+      //                        .getBody()
+      //                        .ifPresent(body ->
+      // body.addStatement(JavaParser.parseStatement(cloneStm)));
+      //            }
+
+      IfStmt ifStmt = createIfStmt(guard, eqSpec.getDescription(), check);
+      if (!postAssertion.getBody().isEmpty()) {
+        LinkedList<String> statements = postAssertion.getBodyContent();
+        List<String> restOfStatements =
+            statements.subList(statements.indexOf("//END OF METHOD") + 1, statements.size());
+        for (String stm : restOfStatements) {
+          methodDeclaration
+              .getBody()
+              .ifPresent(
+                  body ->
+                      body.addStatement(
+                          JavaParser.parseStatement(addCasting(stm, executableMember))));
+        }
+      }
+      methodDeclaration.getBody().ifPresent(body -> body.addStatement(ifStmt));
+    }
+    ReturnStmt returnResultStmt = new ReturnStmt(new NameExpr("true"));
+    methodDeclaration.getBody().ifPresent(body -> body.addStatement(returnResultStmt));
+  }
+
+  private void snippetWrapperChanger(
+      MethodDeclaration methodDeclaration,
+      DocumentedExecutable executableMember,
+      EqOperationSpecification spec) {
+
+    // Replace first parameter name ("target") with specific name from configuration.
+    methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RECEIVER_CLONE));
+
+    // Check postconditions.
+    for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
+      PostAssertion postAssertion = eqSpec.getPostAssertion();
+      if (!postAssertion.getBody().isEmpty()) {
+        LinkedList<String> statements = postAssertion.getBodyContent();
+        if (statements.indexOf("//END OF METHOD") == -1) {
+          return;
+        }
+        List<String> dummyMethod = statements.subList(1, statements.indexOf("//END OF METHOD") - 1);
+        for (String stm : dummyMethod) {
+          methodDeclaration
+              .getBody()
+              .ifPresent(
+                  body ->
+                      body.addStatement(
+                          JavaParser.parseStatement(addCasting(stm, executableMember))));
+        }
+      }
+    }
+
+    //    String signature = dummyMethod.get(0);
+    //    String parameterList = signature.substring(signature.indexOf("("),
+    // signature.indexOf(")"));
+
   }
 
   private void checkResultChanger(
@@ -303,6 +416,10 @@ public class MethodChangerVisitor
 
     // Casting of result object in condition.
     String returnType = method.getReturnType().getType().getTypeName();
+    if (ComplianceChecks.isGenericType(returnType)) {
+      // FIXME this might be wrong, since the check in ComplianceChecks is naive - improve it
+      returnType = "java.lang.Object";
+    }
     returnType = removeParametersFromType(returnType);
     if (!returnType.equals("void")) {
       condition =
@@ -315,8 +432,12 @@ public class MethodChangerVisitor
     String type = method.getDeclaringClass().getName();
     type = removeParametersFromType(type);
     condition =
-        condition.replace(
-            Configuration.RECEIVER, "((" + type + ") " + Configuration.RECEIVER + ")");
+        condition
+            .replace(Configuration.RECEIVER, "((" + type + ") " + Configuration.RECEIVER + ")")
+            .replace(
+                Configuration.RECEIVER_CLONE,
+                "((" + type + ") " + Configuration.RECEIVER_CLONE + ")");
+
     return condition;
   }
 
