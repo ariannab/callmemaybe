@@ -38,6 +38,9 @@ public class EqOperationSpecification extends OperationSpecification {
   }
 
   public boolean isEmpty() {
-    return this.equivalenceSpecs.isEmpty();
+    return this.equivalenceSpecs.isEmpty()
+        || this.equivalenceSpecs
+            .stream()
+            .allMatch(s -> s.getPostAssertion().getAssertionContent().isEmpty());
   }
 }

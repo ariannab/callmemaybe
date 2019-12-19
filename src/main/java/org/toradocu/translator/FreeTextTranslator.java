@@ -275,10 +275,9 @@ public class FreeTextTranslator {
             equivalenceMatch.setImportsNeeded(className);
           }
         }
-      } else if (matchingCodeElem.isEmpty()
-          || !equivalenceMatch.getClassesInSignatures().get(methodSignature).isEmpty()
-              && (!excMember.getLinksContent().isEmpty()
-                  || !documentedType.getImports().isEmpty())) {
+      }
+      if (matchedType == null
+          && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
         List<String> links = excMember.getLinksContent();
         String[] javaPackages = {"java.lang.", "java.util."};
         for (String link : links) {
