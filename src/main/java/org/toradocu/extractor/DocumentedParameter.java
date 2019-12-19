@@ -83,6 +83,49 @@ public final class DocumentedParameter {
     return nullable;
   }
 
+  public String getTypeName() {
+    // FIXME  ugly workaround
+    String ending = "";
+    if (parameter.isVarArgs()) {
+      ending = "...";
+    } else if (getType().isArray()) {
+      ending = "[]";
+    }
+    String name = getType().getName();
+    if (name.contains("[")) {
+      switch (name) {
+        case "[Z":
+          name = "boolean";
+          break;
+        case "[B":
+          name = "byte";
+          break;
+        case "[S":
+          name = "short";
+          break;
+        case "[I":
+          name = "int";
+          break;
+        case "[J":
+          name = "long";
+          break;
+        case "[F":
+          name = "float";
+          break;
+        case "[D":
+          name = "double";
+          break;
+        case "[C":
+          name = "char";
+          break;
+        case "[L":
+          name = "Object";
+          break;
+      }
+    }
+    return name + ending;
+  }
+
   /**
    * Returns true if this {@code DocumentedParameter} and the specified object are equal.
    *

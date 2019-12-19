@@ -111,6 +111,7 @@ public class MethodChangerVisitor
     // Replace third parameter name ("clone") with specific name from configuration.
     methodDeclaration.getParameter(2).setName(new SimpleName(Configuration.RECEIVER_CLONE));
     // Check equivalences.
+
     for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
       String guard = addCasting(eqSpec.getGuard().getConditionSource(), executableMember);
       PostAssertion postAssertion = eqSpec.getPostAssertion();
@@ -157,6 +158,7 @@ public class MethodChangerVisitor
       }
       methodDeclaration.getBody().ifPresent(body -> body.addStatement(ifStmt));
     }
+
     ReturnStmt returnResultStmt = new ReturnStmt(new NameExpr("true"));
     methodDeclaration.getBody().ifPresent(body -> body.addStatement(returnResultStmt));
   }
@@ -387,7 +389,7 @@ public class MethodChangerVisitor
 
     StringJoiner joiner = new StringJoiner(", ", "(", ")");
     for (DocumentedParameter documentedParameter : executable.getParameters()) {
-      joiner.add(documentedParameter.getType().getName());
+      joiner.add(documentedParameter.getTypeName());
     }
     pointcut.append(joiner.toString());
     return pointcut.toString();

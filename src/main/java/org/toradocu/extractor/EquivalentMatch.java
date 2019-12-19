@@ -67,7 +67,7 @@ public class EquivalentMatch {
       boolean isNegated) {
 
     this.methodSignatures = methodSignatures;
-    this.documentedSignatures = new HashMap<String, CodeElement<?>>();
+    this.documentedSignatures = new HashMap<>();
     extractClasses();
     extractSimpleNames();
     this.equivalence = equivalence;

@@ -139,6 +139,8 @@ public class OracleGenerator {
             ClassOrInterfaceDeclaration.class, c -> c.getNameAsString().equals("Aspect_Template"))
         .ifPresent(c -> c.setName(aspectName));
 
+    cu.addImport(JavaParser.parseImport("import " + method.getDeclaringClass().getName() + ";"));
+
     new MethodChangerVisitor().visit(cu, Pair.of(method, specification));
 
     final String aspectPath =
