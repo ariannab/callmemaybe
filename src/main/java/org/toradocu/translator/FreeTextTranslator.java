@@ -645,7 +645,12 @@ public class FreeTextTranslator {
         .contains(excMember.getReturnType().getType().getTypeName())) {
       oracle = Configuration.RETURN_VALUE + "==(" + previousOracle + ")";
     } else {
-      oracle = Configuration.RETURN_VALUE + ".equals(" + previousOracle + ")";
+      if (execMemberReturnType.contains("[]")) {
+        oracle =
+            "java.util.Arrays.equals(" + Configuration.RETURN_VALUE + ", " + previousOracle + ")";
+      } else {
+        oracle = Configuration.RETURN_VALUE + ".equals(" + previousOracle + ")";
+      }
     }
     return oracle;
   }
@@ -673,6 +678,7 @@ public class FreeTextTranslator {
     //                        + signatureWithRightArguments
     //                        + ";\n";
 
+    // FIXME what if the are arrays  (Arrays.equals)
     String assertion =
         "assert(" + Configuration.RECEIVER_CLONE + ".equals(" + Configuration.RECEIVER + "));";
 
