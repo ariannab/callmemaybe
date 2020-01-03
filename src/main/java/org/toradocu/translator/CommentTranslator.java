@@ -45,7 +45,7 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code freeTextComment}
    * @return a specification
    */
-  public static ArrayList<EquivalentMatch> translate(
+  public static List<EquivalentMatch> translate(
       DocumentedType documentedType, DocumentedExecutable excMember) {
     // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
@@ -147,8 +147,7 @@ public class CommentTranslator {
           new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
 
       EqOperationSpecification opSpec = new EqOperationSpecification(operation, identifiers);
-      ArrayList<EquivalentMatch> equivalentMatches =
-          CommentTranslator.translate(documentedType, member);
+      List<EquivalentMatch> equivalentMatches = CommentTranslator.translate(documentedType, member);
 
       List<EquivalenceSpec> eqSpecifications = createEqSpecifications(member, equivalentMatches);
 
@@ -160,37 +159,45 @@ public class CommentTranslator {
   }
 
   private static List<EquivalenceSpec> createEqSpecifications(
-      DocumentedExecutable member, ArrayList<EquivalentMatch> equivalentMatches) {
+      DocumentedExecutable member, List<EquivalentMatch> equivalentMatches) {
 
     List<EquivalenceSpec> eqSpecifications = new ArrayList<>();
     for (EquivalentMatch em : equivalentMatches) {
-      // FIXME check who actually is post and pre here
-      // FIXME 1. If em has a condition -> precondition
-      // FIXME 2. If the oracle has some \n -> Body with statements, last one is the Assertion
-      // FIXME 3. If the oracle is a single sentence -> Assertion
-
-      // FIXME the problem with 1. and 2. is that we embedded the if in the oracle already,
-      // FIXME let's avoid that...it messes up the assertion statement as well.
       PostAssertion postAssertion;
       String precondition = em.getCondition().isEmpty() ? "true" : em.getCondition();
       String assertion;
+      String originalOracle = em.getOracle();
 
-      // FIXME be sure that at this point a snippet oracle is already correct, i.e.:
-      // FIXME 1. compilable out of the box
-      // FIXME 2. with /n statements
-      // FIXME 3. with last statement being the assertion!
-      if (em.getOracle().contains("\n")) {
+      // TODO be sure that at this point a snippet oracle is already correct, i.e.:
+      // TODO 1. compilable out of the box
+      // TODO 2. with /n statements
+      // TODO 3. with last statement being the assertion!
+
+      if (originalOracle.contains("\n")) {
         LinkedList<String> statements = new LinkedList<>();
-        Collections.addAll(statements, em.getOracle().split("\n"));
+        LinkedList<String> dummyMethod = new LinkedList<>();
+        Collections.addAll(statements, originalOracle.split("\n"));
+
+        if (originalOracle.contains("//END OF METHOD")) {
+          for (String e : statements) {
+            if (e.equals("//END OF METHOD")) {
+              break;
+            }
+            dummyMethod.add(e);
+          }
+          //                    method = statements.subList(0, statements.indexOf("//END OF
+          // METHOD"));s
+          statements.removeAll(dummyMethod);
+        }
         assertion = statements.get(statements.size() - 1);
         statements.remove(assertion);
         // FIXME statements.indexOf("//END OF METHOD");
         // FIXME here we could fill the dummy method, but do we care..?
         postAssertion =
             new PostAssertion(
-                new Body(statements), new Assertion(assertion), new Body(new LinkedList<>()));
+                new Body(statements), new Assertion(assertion), new Body(dummyMethod));
       } else {
-        assertion = em.getOracle();
+        assertion = originalOracle;
         postAssertion =
             new PostAssertion(
                 new Body(new LinkedList<>()),

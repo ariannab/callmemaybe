@@ -121,6 +121,9 @@ public final class DocumentedParameter {
         case "[L":
           name = "Object";
           break;
+        case "[Ljava.lang.Object;":
+          name = "Object";
+          break;
       }
     }
     return name + ending;

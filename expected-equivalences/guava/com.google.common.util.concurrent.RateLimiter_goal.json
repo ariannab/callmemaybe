@@ -18,7 +18,7 @@
     "equivalence": {
       "comment": "Acquires a single permit from this RateLimiter, blocking until the request can be granted. Tells the amount of time slept, if any. <p>This method is equivalent to acquire(1).",
       "kind": "FreeText",
-      "condition": "methodResultID==(receiverObjectID.acquire(1))"
+      "condition": "methodResultID==(receiverObjectClone.acquire(1))"
     }
   },
   {
@@ -93,7 +93,7 @@
     "equivalence": {
       "comment": "Acquires a permit from this RateLimiter if it can be acquired immediately without delay. <p> This method is equivalent to tryAcquire(1).",
       "kind": "FreeText",
-      "condition": "methodResultID==(receiverObjectID.tryAcquire(1))"
+      "condition": "methodResultID==(receiverObjectClone.tryAcquire(1))"
     }
   },
   {
@@ -193,7 +193,7 @@
     "equivalence": {
       "comment": "Acquires a permit from this RateLimiter if it can be obtained without exceeding the specified timeout, or returns false immediately (without waiting) if the permit would not have been granted before the timeout expired. <p>This method is equivalent to tryAcquire(1, timeout, unit).",
       "kind": "FreeText",
-      "condition": "methodResultID==(receiverObjectID.tryAcquire(1,args[0],args[1]))"
+      "condition": "methodResultID==(receiverObjectClone.tryAcquire(1,args[0],args[1]))"
     }
   },
   {

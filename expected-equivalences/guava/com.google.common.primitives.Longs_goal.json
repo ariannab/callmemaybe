@@ -393,7 +393,7 @@
     "equivalence": {
       "comment": "Compares the two specified long values. The sign of the value returned is the same as that of ((Long) a).compareTo(b). <p>Note for Java 7 and later: this method should be treated as deprecated; use the equivalent Long#compare method instead.",
       "kind": "FreeText",
-      "condition": "methodResultID==(java.lang.Long.compare(args[0],args[1]))"
+      "condition": "methodResultID==( ((Long) args[0]).compareTo(args[1]) )"
     }
   },
   {
@@ -516,7 +516,7 @@
     "equivalence": {
       "comment": "Returns a big-endian representation of value in an 8-element byte array; equivalent to ByteBuffer.allocate(8).putLong(value).array(). For example, the input value 0x1213141516171819L would yield the byte array {0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19}. <p>If you need to convert and concatenate several values (possibly even of different types), use a shared java.nio.ByteBuffer instance, or use com.google.common.io.ByteStreams#newDataOutput() to get a growable buffer.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(java.nio.ByteBuffer.allocate(8).putLong(args[0]).array())"
+      "condition": "java.util.Arrays.equals(methodResultID, java.nio.ByteBuffer.allocate(8).putLong(args[0]).array())"
     }
   },
   {

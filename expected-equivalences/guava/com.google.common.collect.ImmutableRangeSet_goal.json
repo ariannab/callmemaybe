@@ -142,7 +142,7 @@
     "equivalence": {
       "comment": "Returns an immutable range set containing the specified single range. If range.isEmpty(), this is equivalent to ImmutableRangeSet#of().",
       "kind": "FreeText",
-      "condition": "args[0].isEmpty() ? methodResultID.equals(receiverObjectID.of())"
+      "condition": "args[0].isEmpty() ? methodResultID.equals(receiverObjectClone.of())"
     }
   },
   {

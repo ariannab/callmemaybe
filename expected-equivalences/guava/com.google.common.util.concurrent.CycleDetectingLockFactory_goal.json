@@ -27,7 +27,7 @@
     "equivalence": {
       "comment": "Equivalent to newReentrantReadWriteLock(lockName, false).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.newReentrantReadWriteLock(args[0],false))"
+      "condition": "methodResultID.equals(receiverObjectClone.newReentrantReadWriteLock(args[0],false))"
     }
   },
   {
@@ -128,7 +128,7 @@
     "equivalence": {
       "comment": "Equivalent to newReentrantLock(lockName, false).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.newReentrantLock(args[0],false))"
+      "condition": "methodResultID.equals(receiverObjectClone.newReentrantLock(args[0],false))"
     }
   },
   {

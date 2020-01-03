@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CodeSnippet;
 import org.toradocu.extractor.CommentContent;
@@ -33,7 +34,7 @@ public class FreeTextTranslator {
    * @param excMember the executable member the comment belongs to
    * @return the translation, null if failed
    */
-  public ArrayList<EquivalentMatch> translate(
+  public List<EquivalentMatch> translate(
       DocumentedType documentedType, DocumentedExecutable excMember) {
 
     CommentContent commentContent = excMember.getFreeText().getComment();
@@ -46,52 +47,41 @@ public class FreeTextTranslator {
     for (String sentence : sentences) {
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
-        String cleanSentence = sentence.replaceAll(" ", "");
-        List<CodeSnippet> snippets = commentContent.getCodeSnippets();
-        CodeSnippet sentenceSnippet = null;
-        for (CodeSnippet snippet : snippets) {
-          String cleanSnippet = snippet.getSnippet().replaceAll(" ", "");
-          if (cleanSentence.contains(cleanSnippet)) {
-            sentenceSnippet = snippet;
-          }
-        }
-        // Verify comment contains equivalence declaration...
+        // Verify if there is a snippet in the sentence...
+        CodeSnippet sentenceSnippet = determineSnippet(commentContent, sentence);
+        // Verify sentence contains an equivalence declaration...
         equivalenceMatch = EquivalenceMatcher.findEquivalencesInComment(sentence, sentenceSnippet);
-        String translatedCondition = "";
 
         if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
+          String translatedCondition = "";
           String condition = extractCondition(sentence);
           if (equivalenceMatch.isSimilarity()
               && !equivalenceMatch.getMethodSignatures().isEmpty()
-              // && equivalenceMatch.getCodeSnippet() != null
               && condition != null) {
-            // Similarity, e.g. conditional equivalence
+            // Similarity, e.g. conditional equivalence: translate condition first
             translatedCondition =
                 translateConditionalEquivalence(
                     excMember, equivalenceMatch, condition, documentedType);
             if (!translatedCondition.isEmpty()) {
+              // If the condition was successfully translated, proceed with equivalent method match
               matchEquivalentMethod(
                   excMember, equivalenceMatch, translatedCondition, documentedType);
             }
-          } else if (equivalenceMatch.getCodeSnippet() != null
-              && !equivalenceMatch.getCodeSnippetText().isEmpty()
-              && sentence
-                  .replaceAll(" ", "")
-                  .contains(equivalenceMatch.getCodeSnippetText().replaceAll(" ", ""))) {
-            // No condition, thus equivalence against snippet
+          } else if (equivalenceMatch.getCodeSnippet() != null) {
+            // Equivalence against snippet
+            // FIXME what about similarity w/ snippets?
             boolean compilable =
                 isSolvedSnippetCompilable(documentedType, excMember, equivalenceMatch);
             if (compilable) {
               String finalOracle = prepareResult(excMember, equivalenceMatch);
               if (!finalOracle.isEmpty()) {
-                // FIXME ugly be more intelligent w/ real snippets
                 equivalenceMatch.setOracle(finalOracle);
               }
             } else {
               equivalenceMatch.setOracle("");
             }
           } else {
-            // Exact equivalence
+            // Exact equivalence, no condition, no snippet
             matchEquivalentMethod(excMember, equivalenceMatch, translatedCondition, documentedType);
           }
           matches.add(equivalenceMatch);
@@ -99,6 +89,20 @@ public class FreeTextTranslator {
       }
     }
     return matches;
+  }
+
+  @Nullable
+  private CodeSnippet determineSnippet(CommentContent commentContent, String sentence) {
+    String cleanSentence = sentence.replaceAll(" ", "");
+    List<CodeSnippet> snippets = commentContent.getCodeSnippets();
+    CodeSnippet sentenceSnippet = null;
+    for (CodeSnippet snippet : snippets) {
+      String cleanSnippet = snippet.getSnippet().replaceAll(" ", "");
+      if (cleanSentence.contains(cleanSnippet)) {
+        sentenceSnippet = snippet;
+      }
+    }
+    return sentenceSnippet;
   }
 
   private boolean isSolvedSnippetCompilable(
@@ -679,10 +683,10 @@ public class FreeTextTranslator {
     //                        + ";\n";
 
     // FIXME what if the are arrays  (Arrays.equals)
-    String assertion =
-        "assert(" + Configuration.RECEIVER_CLONE + ".equals(" + Configuration.RECEIVER + "));";
+    String booleanExpression =
+        Configuration.RECEIVER_CLONE + ".equals(" + Configuration.RECEIVER + ")";
 
-    return preStatements + assertion;
+    return preStatements + booleanExpression;
   }
 
   @NotNull
@@ -692,7 +696,7 @@ public class FreeTextTranslator {
     String oracle;
     String separator1;
     String separator2;
-    if (codeSnippet.isExpression() || codeSnippet.isComplexSignature()) {
+    if (codeSnippet.isExpression() || codeSnippet.isComplexSignature() || codeSnippet.isTernary()) {
       separator1 = "(";
       separator2 = ")";
 
@@ -722,13 +726,14 @@ public class FreeTextTranslator {
       }
       return oracle;
     } else {
-      // FIXME String management ugly as hell
       oracle =
-          em.getOracle()
+          previousOracle
               + "\n"
               + "//END OF METHOD"
               + "\nsnippetWrapper("
               + Configuration.RECEIVER_CLONE
+              + ","
+              + "args"
               + ")";
       oracle = manageVoidAndUncompatibleMethods(excMember, oracle);
     }

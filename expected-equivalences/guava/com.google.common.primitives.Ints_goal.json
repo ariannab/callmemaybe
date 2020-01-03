@@ -128,7 +128,7 @@
     "equivalence": {
       "comment": "Returns a big-endian representation of value in a 4-element byte array; equivalent to ByteBuffer.allocate(4).putInt(value).array(). For example, the input value 0x12131415 would yield the byte array {0x12, 0x13, 0x14, 0x15}. <p>If you need to convert and concatenate several values (possibly even of different types), use a shared java.nio.ByteBuffer instance, or use com.google.common.io.ByteStreams#newDataOutput() to get a growable buffer.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(java.nio.ByteBuffer.allocate(4).putInt(args[0]).array())"
+      "condition": "java.util.Arrays.equals(methodResultID, java.nio.ByteBuffer.allocate(4).putInt(args[0]).array())"
     }
   },
   {
@@ -331,7 +331,7 @@
     "equivalence": {
       "comment": "Compares the two specified int values. The sign of the value returned is the same as that of ((Integer) a).compareTo(b). <p>Note for Java 7 and later: this method should be treated as deprecated; use the equivalent Integer#compare method instead.",
       "kind": "FreeText",
-      "condition": "methodResultID==(java.lang.Integer.compare(args[0],args[1]))"
+      "condition": "methodResultID==( ((Integer) args[0]).compareTo(args[1]) )"
     }
   },
   {

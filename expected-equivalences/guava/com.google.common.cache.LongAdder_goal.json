@@ -215,7 +215,7 @@
     "equivalence": {
       "comment": "Equivalent to add(-1).",
       "kind": "FreeText",
-      "condition": "receiverObjectID.add(-1); receiverObjectClone.decrement(); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.add(-1); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -259,7 +259,7 @@
     "equivalence": {
       "comment": "Equivalent to add(1).",
       "kind": "FreeText",
-      "condition": " receiverObjectID.add(1); receiverObjectClone.increment(); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": " receiverObjectClone.add(1); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -281,7 +281,7 @@
     "equivalence": {
       "comment": "Equivalent to sum.",
       "kind": "FreeText",
-      "condition": "methodResultID ==(receiverObjectID.sum())"
+      "condition": "methodResultID ==(receiverObjectClone.sum())"
     }
   },
   {

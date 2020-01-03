@@ -158,7 +158,7 @@
     "equivalence": {
       "comment": "Writes the given lines of text to this sink with each line (including the last) terminated with the operating system's default line separator. This method is equivalent to writeLines(lines, System.getProperty(\"line.separator\")).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.writeLines(args[0], System.getProperty(\"line.separator\"))"
+      "condition": "methodResultID.equals(receiverObjectClone.writeLines(args[0], System.getProperty(\"line.separator\"))"
     }
   },
   {

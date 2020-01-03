@@ -431,7 +431,7 @@
     "equivalence": {
       "comment": "Adds a number of occurrences of an element to this multiset. Note that if occurrences == 1, this method has the identical effect to add(Object). This method is functionally equivalent (except in the case of overflow) to the call addAll(Collections.nCopies(element, occurrences)), which would presumably perform much more poorly.",
       "kind": "FreeText",
-      "condition": "if(args[1] == 1) {receiverObjectID.add(args[0]); receiverObjectClone.add(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));} && methodResultID==( receiverObjectID.addAll(java.util.Collections.nCopies( args[1],args[0])) )"
+      "condition": "if(args[1] == 1) {receiverObjectID.add(args[0]); receiverObjectClone.add(args[0],args[1]); receiverObjectClone.equals(receiverObjectID)} && methodResultID==( receiverObjectID.addAll(java.util.Collections.nCopies( args[1],args[0])) )"
     }
   },
   {
@@ -493,7 +493,7 @@
     "equivalence": {
       "comment": "Removes a number of occurrences of the specified element from this multiset. If the multiset contains fewer than this number of occurrences to begin with, all occurrences will be removed. Note that if occurrences == 1, this is functionally equivalent to the call remove(element).",
       "kind": "FreeText",
-      "condition": "if(args[1] == 1) {receiverObjectID.remove(args[0]); receiverObjectClone.remove(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));}"
+      "condition": "if(args[1] == 1) {receiverObjectID.remove(args[0]); receiverObjectClone.remove(args[0],args[1]); receiverObjectClone.equals(receiverObjectID)}"
     }
   },
   {

@@ -22,7 +22,6 @@ import com.github.javaparser.javadoc.JavadocBlockTag;
 import com.github.javaparser.javadoc.JavadocBlockTag.Type;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Executable;
@@ -37,7 +36,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.function.Predicate;
-import org.apache.commons.lang.ClassUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -78,18 +76,19 @@ public final class JavadocExtractor {
     // Obtain executable members (constructors and methods) by means of reflection.
     final Class<?> clazz = Reflection.getClass(className);
 
-    FileWriter writer = new FileWriter("superclassi.txt", true);
-
-    for (Object i : ClassUtils.getAllInterfaces(clazz)) {
-      writer.append(i.toString());
-      writer.append("\r\n");
-    }
-    for (Object c : ClassUtils.getAllSuperclasses(clazz)) {
-      writer.append(c.toString());
-      writer.append("\r\n");
-    }
-
-    writer.close();
+    // FIXME can we remove this?
+    //    FileWriter writer = new FileWriter("superclassi.txt", true);
+    //
+    //    for (Object i : ClassUtils.getAllInterfaces(clazz)) {
+    //      writer.append(i.toString());
+    //      writer.append("\r\n");
+    //    }
+    //    for (Object c : ClassUtils.getAllSuperclasses(clazz)) {
+    //      writer.append(c.toString());
+    //      writer.append("\r\n");
+    //    }
+    //
+    //    writer.close();
 
     final List<Executable> reflectionExecutables = getExecutables(clazz);
     NodeList<ImportDeclaration> imports = new NodeList<>();

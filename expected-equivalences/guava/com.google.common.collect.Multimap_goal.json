@@ -144,7 +144,7 @@
     "equivalence": {
       "comment": "Returns true if this multimap contains no key-value pairs. Equivalent to size() == 0, but can in some cases be more efficient.",
       "kind": "FreeText",
-      "condition": "methodResultID == (receiverObjectID.size() == 0)"
+      "condition": "methodResultID == (receiverObjectClone.size() == 0)"
     }
   },
   {
@@ -226,9 +226,9 @@
       }
     ],
     "equivalence": {
-      "comment": "Stores a key-value pair in this multimap for each of values, all using the same key, key. methodResultID==[ for (V value : args[1]) { receiverObjectID.put(args[0], value);} ] to (but expected to be more efficient than): for (V value : values) { put(key, value); } <p>In particular, this is a no-op if values is empty.",
+      "comment": "Stores a key-value pair in this multimap for each of values, all using the same key, key. Equivalent to (but expected to be more efficient than): for (V value : values) { put(key, value); } <p>In particular, this is a no-op if values is empty.",
       "kind": "FreeText",
-      "condition": "methodResultID==[ for (V value : args[1]) { receiverObjectID.put(args[0], value);} ]"
+      "condition": "methodResultID==[ for (V value : args[1]) { receiverObjectClone.put(args[0], value);} ]"
     }
   },
   {
@@ -300,7 +300,7 @@
     "equivalence": {
       "comment": "Stores a collection of values with the same key, replacing any existing values for that key. <p>If values is empty, this is equivalent to removeAll(key).",
       "kind": "FreeText",
-      "condition": "if(!args[1].iterator().hasNext()) {methodResultID.equals(receiverObjectID.removeAll(args[0]))}"
+      "condition": "if(!args[1].iterator().hasNext()) {methodResultID.equals(receiverObjectClone.removeAll(args[0]))}"
     }
   },
   {

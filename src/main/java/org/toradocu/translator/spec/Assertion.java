@@ -1,18 +1,12 @@
 package org.toradocu.translator.spec;
 
-import java.util.regex.Pattern;
-
 public class Assertion {
   public static final String OPENING = "assert(";
   public static final String CLOSING = ");";
   private final String booleanExpression;
 
   public Assertion(String booleanExpression) {
-    // FIXME ugly, check where this was created and eliminate it
-    this.booleanExpression =
-        booleanExpression
-            .replaceAll(Pattern.quote(OPENING), "")
-            .replaceAll(Pattern.quote(CLOSING), "");
+    this.booleanExpression = booleanExpression;
   }
 
   public String getBooleanExpression() {
@@ -22,6 +16,10 @@ public class Assertion {
   @Override
   public String toString() {
     return booleanExpression;
+  }
+
+  public String asAssertionString() {
+    return OPENING + booleanExpression + CLOSING;
   }
 
   public boolean isEmpty() {

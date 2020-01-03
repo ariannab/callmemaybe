@@ -279,7 +279,7 @@
       "member": "create(com.google.common.collect.Multimap<? extends K, ? extends V> multimap)",
       "comment": "Constructs a LinkedHashMultimap with the same mappings as the specified multimap. If a key-value mapping appears multiple times in the input multimap, it only appears once in the constructed multimap. The new multimap has the same Multimap#entries() iteration order as the input multimap, except for excluding duplicate mappings.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.entries())"
+      "condition": "methodResultID.equals(receiverObjectClone.entries())"
     }
   },
   {

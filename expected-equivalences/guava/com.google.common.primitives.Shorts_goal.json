@@ -236,7 +236,7 @@
     "equivalence": {
       "comment": "Compares the two specified short values. The sign of the value returned is the same as that of ((Short) a).compareTo(b). <p>Note for Java 7 and later: this method should be treated as deprecated; use the equivalent Short#compare method instead.",
       "kind": "FreeText",
-      "condition": "methodResultID==(java.lang.Short.compare(args[0],args[1]))"
+      "condition": "methodResultID==( ((Short) args[0]).compareTo(args[1]) )"
     }
   },
   {
@@ -639,7 +639,7 @@
     "equivalence": {
       "comment": "Returns a big-endian representation of value in a 2-element byte array; equivalent to ByteBuffer.allocate(2).putShort(value).array(). For example, the input value (short) 0x1234 would yield the byte array {0x12, 0x34}. <p>If you need to convert and concatenate several values (possibly even of different types), use a shared java.nio.ByteBuffer instance, or use com.google.common.io.ByteStreams#newDataOutput() to get a growable buffer.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(java.nio.ByteBuffer.allocate(2).putShort(args[0]).array())"
+      "condition": "java.util.Arrays.equals(methodResultID, java.nio.ByteBuffer.allocate(2).putShort(args[0]).array())"
     }
   },
   {
