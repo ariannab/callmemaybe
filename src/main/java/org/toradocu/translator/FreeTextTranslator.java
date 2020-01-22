@@ -692,11 +692,11 @@ public class FreeTextTranslator {
   @NotNull
   private String prepareResult(DocumentedExecutable excMember, EquivalentMatch em) {
     CodeSnippet codeSnippet = em.getCodeSnippet();
-    String previousOracle = codeSnippet.getSnippet();
     String oracle;
     String separator1;
     String separator2;
     if (codeSnippet.isExpression() || codeSnippet.isComplexSignature() || codeSnippet.isTernary()) {
+      String previousOracle = codeSnippet.getSnippet();
       separator1 = "(";
       separator2 = ")";
 
@@ -726,6 +726,16 @@ public class FreeTextTranslator {
       }
       return oracle;
     } else {
+      // getOracle at this point should return the complete COMPILABLE snippetWrapper
+      String previousOracle = em.getOracle();
+      // FIXME manage this snippet signature&co better
+
+      String declaration = previousOracle.substring(0, previousOracle.indexOf("{") + 1);
+
+      String snippet = em.getCodeSnippet().getSnippet();
+
+      previousOracle = declaration + "\n" + snippet + "\n" + "}";
+
       oracle =
           previousOracle
               + "\n"

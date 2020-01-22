@@ -188,6 +188,7 @@ public class CommentTranslator {
           //                    method = statements.subList(0, statements.indexOf("//END OF
           // METHOD"));s
           statements.removeAll(dummyMethod);
+          statements.remove("//END OF METHOD");
         }
         assertion = statements.get(statements.size() - 1);
         statements.remove(assertion);

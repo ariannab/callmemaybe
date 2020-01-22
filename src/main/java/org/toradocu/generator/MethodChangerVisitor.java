@@ -24,9 +24,11 @@ import com.github.javaparser.ast.visitor.ModifierVisitor;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.StringJoiner;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
+import org.reflections.Reflections;
 import org.toradocu.Toradocu;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
@@ -113,9 +115,9 @@ public class MethodChangerVisitor
     // Check equivalences.
 
     for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
-      String guard = addCasting(eqSpec.getGuard().getConditionSource(), executableMember);
+      String guard = addCasting(eqSpec.getGuard().getConditionSource(), executableMember, false);
       PostAssertion postAssertion = eqSpec.getPostAssertion();
-      String property = addCasting(postAssertion.getAssertionContent(), executableMember);
+      String property = addCasting(postAssertion.getAssertionContent(), executableMember, false);
       if (property.isEmpty()) {
         // TODO why does this happen and how can we avoid it
         continue;
@@ -125,26 +127,11 @@ public class MethodChangerVisitor
 
       String check = createBlock("if ((" + property + ")==false) { " + returnResultStmt + " }");
 
-      //            if (property.contains(Configuration.RECEIVER_CLONE)) {
-      //                // We need statements that create the clone.
-      //                String type = executableMember.getDeclaringClass().getName();
-      //                type = removeParametersFromType(type);
-      //                String cloneStm =
-      //                        type
-      //                                + " "
-      //                                + Configuration.RECEIVER_CLONE
-      //                                + "= new Cloner().shallowClone("
-      //                                + addCasting(Configuration.RECEIVER, executableMember)
-      //                                + ");";
-      //                methodDeclaration
-      //                        .getBody()
-      //                        .ifPresent(body ->
-      // body.addStatement(JavaParser.parseStatement(cloneStm)));
-      //            }
-
       IfStmt ifStmt = createIfStmt(guard, eqSpec.getDescription(), check);
       if (!postAssertion.getBody().isEmpty()) {
         LinkedList<String> statements = postAssertion.getBodyContent();
+
+        // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
         List<String> restOfStatements =
             statements.subList(statements.indexOf("//END OF METHOD") + 1, statements.size());
         for (String stm : restOfStatements) {
@@ -153,7 +140,7 @@ public class MethodChangerVisitor
               .ifPresent(
                   body ->
                       body.addStatement(
-                          JavaParser.parseStatement(addCasting(stm, executableMember))));
+                          JavaParser.parseStatement(addCasting(stm, executableMember, true))));
         }
       }
       methodDeclaration.getBody().ifPresent(body -> body.addStatement(ifStmt));
@@ -175,18 +162,44 @@ public class MethodChangerVisitor
     for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
       PostAssertion postAssertion = eqSpec.getPostAssertion();
       if (!postAssertion.getBody().isEmpty()) {
-        LinkedList<String> statements = postAssertion.getBodyContent();
-        if (statements.indexOf("//END OF METHOD") == -1) {
-          return;
-        }
-        List<String> dummyMethod = statements.subList(1, statements.indexOf("//END OF METHOD") - 1);
-        for (String stm : dummyMethod) {
-          methodDeclaration
-              .getBody()
-              .ifPresent(
-                  body ->
-                      body.addStatement(
-                          JavaParser.parseStatement(addCasting(stm, executableMember))));
+        //        LinkedList<String> statements = postAssertion.getBodyContent();
+
+        // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
+        //        if (statements.indexOf("//END OF METHOD") == -1) {
+        //          return;
+        //        }
+
+        // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
+        //        List<String> dummyMethod = statements.subList(1, statements.indexOf("//END OF
+        // METHOD") - 1);
+
+        LinkedList<String> dummyMethod = postAssertion.getDummyMethod().getStatements();
+        if (!dummyMethod.isEmpty()) {
+          String dummyMethodDeclaration = dummyMethod.pop();
+          // TODO could be managed better
+          if (dummyMethodDeclaration.contains("public <")) {
+            String parametrization =
+                dummyMethodDeclaration.substring(
+                    dummyMethodDeclaration.indexOf("<") + 1, dummyMethodDeclaration.indexOf(">"));
+            String[] allTypeParam = parametrization.split(",");
+            for (String p : allTypeParam) {
+              methodDeclaration.addTypeParameter(p);
+            }
+          }
+
+          // TODO could be managed better
+          if (dummyMethod.getLast().equals("}")) {
+            dummyMethod.removeLast();
+          }
+
+          for (String stm : dummyMethod) {
+            methodDeclaration
+                .getBody()
+                .ifPresent(
+                    body ->
+                        body.addStatement(
+                            JavaParser.parseStatement(addCasting(stm, executableMember, true))));
+          }
         }
       }
     }
@@ -208,9 +221,9 @@ public class MethodChangerVisitor
     // Check postconditions.
     for (Postcondition postSpecification : spec.getPostconditions()) {
       String guard =
-          addCasting(postSpecification.getGuard().getConditionSource(), executableMember);
+          addCasting(postSpecification.getGuard().getConditionSource(), executableMember, false);
       String property =
-          addCasting(postSpecification.getProperty().getConditionSource(), executableMember);
+          addCasting(postSpecification.getProperty().getConditionSource(), executableMember, false);
       if (property.isEmpty()) {
         // TODO why does this happen and how can we avoid it
         continue;
@@ -235,7 +248,7 @@ public class MethodChangerVisitor
       if (condition.isEmpty()) {
         continue; // TODO Does it make sense to have empty guards here? We should avoid that.
       }
-      condition = addCasting(condition, executableMember);
+      condition = addCasting(condition, executableMember, false);
       String thenBlock = createBlock("return true;");
       String elseBlock = "";
       IfStmt ifStmt =
@@ -263,7 +276,7 @@ public class MethodChangerVisitor
         continue;
       }
       String condition =
-          addCasting(throwsSpecification.getGuard().getConditionSource(), executableMember);
+          addCasting(throwsSpecification.getGuard().getConditionSource(), executableMember, false);
 
       IfStmt ifStmt = new IfStmt();
       Expression conditionExpression;
@@ -321,20 +334,39 @@ public class MethodChangerVisitor
 
   private void adviceChanger(
       MethodDeclaration methodDeclaration, DocumentedExecutable executableMember) {
-    String pointcut;
-
+    StringBuilder pointcut = new StringBuilder();
     if (executableMember.isConstructor()) {
-      pointcut = "execution(" + getPointcut(executableMember) + ")";
+      pointcut.append(
+          "execution("
+              + getPointcut(executableMember, executableMember.getDeclaringClass().getName())
+              + ")");
     } else {
-      pointcut = "call(" + getPointcut(executableMember) + ")";
+      pointcut
+          .append("call(")
+          .append(getPointcut(executableMember, executableMember.getDeclaringClass().getName()))
+          .append(")");
+
+      // FIXME "com.google" is just a test for guava
+      Reflections reflections = new Reflections("com.google");
+      // We have to add more classes that may contain the method call
+      Set<Class<?>> subTypes =
+          (Set<Class<?>>) reflections.getSubTypesOf(executableMember.getDeclaringClass());
+      for (Class st : subTypes) {
+        pointcut
+            .append(" || ")
+            .append("call(")
+            .append(getPointcut(executableMember, st.getName()))
+            .append(")");
+      }
       String testClassName = conf.getTestClass();
       if (testClassName != null) {
-        pointcut += " && within(" + testClassName + ")";
+        pointcut.append(" && within(").append(testClassName).append(")");
       }
     }
 
     AnnotationExpr annotation =
-        new SingleMemberAnnotationExpr(new Name("Around"), new StringLiteralExpr(pointcut));
+        new SingleMemberAnnotationExpr(
+            new Name("Around"), new StringLiteralExpr(pointcut.toString()));
     NodeList<AnnotationExpr> annotations = methodDeclaration.getAnnotations();
     annotations.add(annotation);
     methodDeclaration.setAnnotations(annotations);
@@ -371,27 +403,29 @@ public class MethodChangerVisitor
    * @param executable {@code ExecutableMember} for which to generate the pointcut definition
    * @return the pointcut definition matching {@code method}
    */
-  private static String getPointcut(DocumentedExecutable executable) {
+  private static String getPointcut(DocumentedExecutable executable, String containingClass) {
     StringBuilder pointcut = new StringBuilder();
 
     if (executable.isConstructor()) { // Constructors
-      pointcut.append(executable.getDeclaringClass()).append(".new(");
+      pointcut.append(containingClass).append(".new(");
     } else { // Regular methods
       String type = executable.getReturnType().getType().getTypeName();
       type = removeParametersFromType(type);
+      //      String containingClass = executable.getDeclaringClass().getName();
+
       pointcut
           .append(type)
           .append(" ")
-          .append(executable.getDeclaringClass().getName())
+          .append(containingClass)
           .append(".")
           .append(executable.getName());
     }
 
-    StringJoiner joiner = new StringJoiner(", ", "(", ")");
+    StringJoiner parametersJoiner = new StringJoiner(", ", "(", ")");
     for (DocumentedParameter documentedParameter : executable.getParameters()) {
-      joiner.add(documentedParameter.getTypeName());
+      parametersJoiner.add(documentedParameter.getTypeName());
     }
-    pointcut.append(joiner.toString());
+    pointcut.append(parametersJoiner.toString());
     return pointcut.toString();
   }
 
@@ -404,7 +438,8 @@ public class MethodChangerVisitor
    * @return the input condition with casted method arguments and target
    * @throws NullPointerException if {@code condition} or {@code method} is null
    */
-  private static String addCasting(String condition, DocumentedExecutable method) {
+  private static String addCasting(
+      String condition, DocumentedExecutable method, boolean inSnippet) {
     Checks.nonNullParameter(condition, "condition");
     Checks.nonNullParameter(method, "method");
 
@@ -412,6 +447,10 @@ public class MethodChangerVisitor
     for (DocumentedParameter parameter : method.getParameters()) {
       String type = parameter.getType().getTypeName();
       type = removeParametersFromType(type);
+      if (inSnippet && parameter.toString().contains(">")) {
+        // TODO could be managed better
+        type = parameter.toString().substring(0, parameter.toString().indexOf(">") + 1);
+      }
       condition = condition.replace("args[" + index + "]", "((" + type + ") args[" + index + "])");
       index++;
     }
