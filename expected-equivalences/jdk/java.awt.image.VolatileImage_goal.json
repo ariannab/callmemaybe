@@ -1,0 +1,241 @@
+[
+  {
+    "signature": "getSnapshot()",
+    "name": "getSnapshot",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.image.BufferedImage",
+      "name": "java.awt.image.BufferedImage",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getSnapshot()",
+      "comment": "Returns a static snapshot image of this object. The BufferedImage returned is only current with the VolatileImage at the time of the request and will not be updated with any future changes to the VolatileImage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWidth()",
+    "name": "getWidth",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getWidth()",
+      "comment": "Returns the width of the VolatileImage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHeight()",
+    "name": "getHeight",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getHeight()",
+      "comment": "Returns the height of the VolatileImage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSource()",
+    "name": "getSource",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.image.ImageProducer",
+      "name": "java.awt.image.ImageProducer",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getSource()",
+      "comment": "This returns an ImageProducer for this VolatileImage. Note that the VolatileImage object is optimized for rendering operations and blitting to the screen or other VolatileImage objects, as opposed to reading back the pixels of the image. Therefore, operations such as getSource may not perform as fast as operations that do not rely on reading the pixels. Note also that the pixel values read from the image are current with those in the image only at the time that they are retrieved. This method takes a snapshot of the image at the time the request is made and the ImageProducer object returned works with that static snapshot image, not the original VolatileImage. Calling getSource() is equivalent to calling getSnapshot().getSource().",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectClone.getSnapshot().getSource())"
+    }
+  },
+  {
+    "signature": "getGraphics()",
+    "name": "getGraphics",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Graphics",
+      "name": "java.awt.Graphics",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getGraphics()",
+      "comment": "This method returns a Graphics2D, but is here for backwards compatibility. #createGraphics() createGraphics is more convenient, since it is declared to return a Graphics2D.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createGraphics()",
+    "name": "createGraphics",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "java.awt.Graphics2D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "createGraphics()",
+      "comment": "Creates a Graphics2D, which can be used to draw into this VolatileImage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "validate(java.awt.GraphicsConfiguration gc)",
+    "name": "validate",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.GraphicsConfiguration",
+          "name": "GraphicsConfiguration",
+          "isArray": false
+        },
+        "name": "gc"
+      }
+    ],
+    "equivalence": {
+      "member": "validate(java.awt.GraphicsConfiguration gc)",
+      "comment": "Attempts to restore the drawing surface of the image if the surface had been lost since the last validate call. Also validates this image against the given GraphicsConfiguration parameter to see whether operations from this image to the GraphicsConfiguration are compatible. An example of an incompatible combination might be a situation where a VolatileImage object was created on one graphics device and then was used to render to a different graphics device. Since VolatileImage objects tend to be very device-specific, this operation might not work as intended, so the return code from this validate call would note that incompatibility. A null or incorrect value for gc may cause incorrect values to be returned from validate and may cause later problems with rendering.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contentsLost()",
+    "name": "contentsLost",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "contentsLost()",
+      "comment": "Returns true if rendering data was lost since last validate call. This method should be called by the application at the end of any series of rendering operations to or from the image to see whether the image needs to be validated and the rendering redone.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.ImageCapabilities",
+      "name": "java.awt.ImageCapabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCapabilities()",
+      "comment": "Returns an ImageCapabilities object which can be inquired as to the specific capabilities of this VolatileImage. This would allow programmers to find out more runtime information on the specific VolatileImage object that they have created. For example, the user might create a VolatileImage but the system may have no video memory left for creating an image of that size, so although the object is a VolatileImage, it is not as accelerated as other VolatileImage objects on this platform might be. The user might want that information to find other solutions to their problem.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTransparency()",
+    "name": "getTransparency",
+    "containingClass": {
+      "qualifiedName": "java.awt.image.VolatileImage",
+      "name": "VolatileImage",
+      "isArray": false
+    },
+    "targetClass": "java.awt.image.VolatileImage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTransparency()",
+      "comment": "Returns the transparency. Returns either OPAQUE, BITMASK, or TRANSLUCENT.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,824 @@
+[
+  {
+    "signature": "setIn(java.io.InputStream in)",
+    "name": "setIn",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "member": "setIn(java.io.InputStream in)",
+      "comment": "Reassigns the \"standard\" input stream. First, if there is a security manager, its checkPermission method is called with a RuntimePermission(\"setIO\") permission to see if it's ok to reassign the \"standard\" input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOut(java.io.PrintStream out)",
+    "name": "setOut",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.PrintStream",
+          "name": "PrintStream",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "member": "setOut(java.io.PrintStream out)",
+      "comment": "Reassigns the \"standard\" output stream. First, if there is a security manager, its checkPermission method is called with a RuntimePermission(\"setIO\") permission to see if it's ok to reassign the \"standard\" output stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setErr(java.io.PrintStream err)",
+    "name": "setErr",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.PrintStream",
+          "name": "PrintStream",
+          "isArray": false
+        },
+        "name": "err"
+      }
+    ],
+    "equivalence": {
+      "member": "setErr(java.io.PrintStream err)",
+      "comment": "Reassigns the \"standard\" error output stream. First, if there is a security manager, its checkPermission method is called with a RuntimePermission(\"setIO\") permission to see if it's ok to reassign the \"standard\" error output stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "console()",
+    "name": "console",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.io.Console",
+      "name": "java.io.Console",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "console()",
+      "comment": "Returns the unique java.io.Console Console object associated with the current Java virtual machine, if any.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inheritedChannel()",
+    "name": "inheritedChannel",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.nio.channels.Channel",
+      "name": "java.nio.channels.Channel",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "inheritedChannel()",
+      "comment": "Returns the channel inherited from the entity that created this Java virtual machine.  This method returns the channel obtained by invoking the java.nio.channels.spi.SelectorProvider#inheritedChannel inheritedChannel method of the system-wide default java.nio.channels.spi.SelectorProvider object.  <p> In addition to the network-oriented channels described in java.nio.channels.spi.SelectorProvider#inheritedChannel inheritedChannel, this method may return other kinds of channels in the future.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSecurityManager(java.lang.SecurityManager s)",
+    "name": "setSecurityManager",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.SecurityManager",
+          "name": "SecurityManager",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "setSecurityManager(java.lang.SecurityManager s)",
+      "comment": "Sets the System security.  If there is a security manager already installed, this method first calls the security manager's checkPermission method with a RuntimePermission(\"setSecurityManager\") permission to ensure it's ok to replace the existing security manager. This may result in throwing a SecurityException.  Otherwise, the argument is established as the current security manager. If the argument is null and no security manager has been established, then no action is taken and the method simply returns.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSecurityManager()",
+    "name": "getSecurityManager",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.SecurityManager",
+      "name": "java.lang.SecurityManager",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getSecurityManager()",
+      "comment": "Gets the system security interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "currentTimeMillis()",
+    "name": "currentTimeMillis",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "currentTimeMillis()",
+      "comment": "Returns the current time in milliseconds. Note that while the unit of time of the return value is a millisecond, the granularity of the value depends on the underlying operating system and may be larger. For example, many operating systems measure time in units of tens of milliseconds.  See the description of the class Date for a discussion of slight discrepancies that may arise between \"computer time\" and coordinated universal time (UTC).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nanoTime()",
+    "name": "nanoTime",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "nanoTime()",
+      "comment": "Returns the current value of the running Java Virtual Machine's high-resolution time source, in nanoseconds. This method can only be used to measure elapsed time and is not related to any other notion of system or wall-clock time. The value returned represents nanoseconds since some fixed but arbitrary origin time (perhaps in the future, so values may be negative). The same origin is used by all invocations of this method in an instance of a Java virtual machine; other virtual machine instances are likely to use a different origin. This method provides nanosecond precision, but not necessarily nanosecond resolution (that is, how frequently the value changes) - no guarantees are made except that the resolution is at least as good as that of #currentTimeMillis(). Differences in successive calls that span greater than approximately 292 years (263 nanoseconds) will not correctly compute elapsed time due to numerical overflow. The values returned by this method become meaningful only when the difference between two such values, obtained within the same instance of a Java virtual machine, is computed.  For example, to measure how long some code takes to execute:  long startTime = System.nanoTime(); // ... the code being measured ... long estimatedTime = System.nanoTime() - startTime; To compare two nanoTime values  long t0 = System.nanoTime(); ... long t1 = System.nanoTime(); one should use t1 - t0 < 0, not t1 < t0, because of the possibility of numerical overflow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arraycopy(java.lang.Object src, int srcPos, java.lang.Object dest, int destPos, int length)",
+    "name": "arraycopy",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "src"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "srcPos"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "dest"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "destPos"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "member": "arraycopy(java.lang.Object src, int srcPos, java.lang.Object dest, int destPos, int length)",
+      "comment": "Copies an array from the specified source array, beginning at the specified position, to the specified position of the destination array. A subsequence of array components are copied from the source array referenced by src to the destination array referenced by dest. The number of components copied is equal to the length argument. The components at positions srcPos through srcPos+length-1 in the source array are copied into positions destPos through destPos+length-1, respectively, of the destination array.  If the src and dest arguments refer to the same array object, then the copying is performed as if the components at positions srcPos through srcPos+length-1 were first copied to a temporary array with length components and then the contents of the temporary array were copied into positions destPos through destPos+length-1 of the destination array.  If dest is null, then a NullPointerException is thrown.  If src is null, then a NullPointerException is thrown and the destination array is not modified.  Otherwise, if any of the following is true, an ArrayStoreException is thrown and the destination is not modified:  <li>The src argument refers to an object that is not an array. <li>The dest argument refers to an object that is not an array. <li>The src argument and dest argument refer to arrays whose component types are different primitive types. <li>The src argument refers to an array with a primitive component type and the dest argument refers to an array with a reference component type. <li>The src argument refers to an array with a reference component type and the dest argument refers to an array with a primitive component type.   Otherwise, if any of the following is true, an IndexOutOfBoundsException is thrown and the destination is not modified:  <li>The srcPos argument is negative. <li>The destPos argument is negative. <li>The length argument is negative. <li>srcPos+length is greater than src.length, the length of the source array. <li>destPos+length is greater than dest.length, the length of the destination array.   Otherwise, if any actual component of the source array from position srcPos through srcPos+length-1 cannot be converted to the component type of the destination array by assignment conversion, an ArrayStoreException is thrown. In this case, let k be the smallest nonnegative integer less than length such that src[srcPos+k] cannot be converted to the component type of the destination array; when the exception is thrown, source array components from positions srcPos through srcPos+k-1 will already have been copied to destination array positions destPos through destPos+<i>k</I>-1 and no other positions of the destination array will have been modified. (Because of the restrictions already itemized, this paragraph effectively applies only to the situation where both arrays have component types that are reference types.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "identityHashCode(java.lang.Object x)",
+    "name": "identityHashCode",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "equivalence": {
+      "member": "identityHashCode(java.lang.Object x)",
+      "comment": "Returns the same hash code for the given object as would be returned by the default method hashCode(), whether or not the given object's class overrides hashCode(). The hash code for the null reference is zero.",
+      "kind": "FreeText",
+      "condition": "methodResultID==(receiverObjectClone.hashCode())"
+    }
+  },
+  {
+    "signature": "getProperties()",
+    "name": "getProperties",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Properties",
+      "name": "java.util.Properties",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getProperties()",
+      "comment": "Determines the current system properties.  First, if there is a security manager, its checkPropertiesAccess method is called with no arguments. This may result in a security exception.  The current set of system properties for use by the #getProperty(String) method is returned as a Properties object. If there is no current set of system properties, a set of system properties is first created and initialized. This set of system properties always includes values for the following keys:  <tr><th>Key</th> <th>Description of Associated Value</th></tr> <tr><td>java.version</td> <td>Java Runtime Environment version</td></tr> <tr><td>java.vendor</td> <td>Java Runtime Environment vendor</td></tr> <tr><td>java.vendor.url</td> <td>Java vendor URL</td></tr> <tr><td>java.home</td> <td>Java installation directory</td></tr> <tr><td>java.vm.specification.version</td> <td>Java Virtual Machine specification version</td></tr> <tr><td>java.vm.specification.vendor</td> <td>Java Virtual Machine specification vendor</td></tr> <tr><td>java.vm.specification.name</td> <td>Java Virtual Machine specification name</td></tr> <tr><td>java.vm.version</td> <td>Java Virtual Machine implementation version</td></tr> <tr><td>java.vm.vendor</td> <td>Java Virtual Machine implementation vendor</td></tr> <tr><td>java.vm.name</td> <td>Java Virtual Machine implementation name</td></tr> <tr><td>java.specification.version</td> <td>Java Runtime Environment specification version</td></tr> <tr><td>java.specification.vendor</td> <td>Java Runtime Environment specification vendor</td></tr> <tr><td>java.specification.name</td> <td>Java Runtime Environment specification name</td></tr> <tr><td>java.class.version</td> <td>Java class format version number</td></tr> <tr><td>java.class.path</td> <td>Java class path</td></tr> <tr><td>java.library.path</td> <td>List of paths to search when loading libraries</td></tr> <tr><td>java.io.tmpdir</td> <td>Default temp file path</td></tr> <tr><td>java.compiler</td> <td>Name of JIT compiler to use</td></tr> <tr><td>java.ext.dirs</td> <td>Path of extension directory or directories</td></tr> <tr><td>os.name</td> <td>Operating system name</td></tr> <tr><td>os.arch</td> <td>Operating system architecture</td></tr> <tr><td>os.version</td> <td>Operating system version</td></tr> <tr><td>file.separator</td> <td>File separator (\"/\" on UNIX)</td></tr> <tr><td>path.separator</td> <td>Path separator (\":\" on UNIX)</td></tr> <tr><td>line.separator</td> <td>Line separator (\"\\n\" on UNIX)</td></tr> <tr><td>user.name</td> <td>User's account name</td></tr> <tr><td>user.home</td> <td>User's home directory</td></tr> <tr><td>user.dir</td> <td>User's current working directory</td></tr>   Multiple paths in a system property value are separated by the path separator character of the platform.  Note that even if the security manager does not permit the getProperties operation, it may choose to permit the #getProperty(String) operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lineSeparator()",
+    "name": "lineSeparator",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "lineSeparator()",
+      "comment": "Returns the system-dependent line separator string. It always returns the same value - the initial value of the #getProperty(String) system property line.separator. On UNIX systems, it returns \"\\n\"; on Microsoft Windows systems it returns \"\\r\\n\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setProperties(java.util.Properties props)",
+    "name": "setProperties",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Properties",
+          "name": "Properties",
+          "isArray": false
+        },
+        "name": "props"
+      }
+    ],
+    "equivalence": {
+      "member": "setProperties(java.util.Properties props)",
+      "comment": "Sets the system properties to the Properties argument.  First, if there is a security manager, its checkPropertiesAccess method is called with no arguments. This may result in a security exception.  The argument becomes the current set of system properties for use by the #getProperty(String) method. If the argument is null, then the current set of system properties is forgotten.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProperty(java.lang.String key)",
+    "name": "getProperty",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "member": "getProperty(java.lang.String key)",
+      "comment": "Gets the system property indicated by the specified key.  First, if there is a security manager, its checkPropertyAccess method is called with the key as its argument. This may result in a SecurityException.  If there is no current set of system properties, a set of system properties is first created and initialized in the same manner as for the getProperties method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProperty(java.lang.String key, java.lang.String def)",
+    "name": "getProperty",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "equivalence": {
+      "member": "getProperty(java.lang.String key, java.lang.String def)",
+      "comment": "Gets the system property indicated by the specified key.  First, if there is a security manager, its checkPropertyAccess method is called with the key as its argument.  If there is no current set of system properties, a set of system properties is first created and initialized in the same manner as for the getProperties method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setProperty(java.lang.String key, java.lang.String value)",
+    "name": "setProperty",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setProperty(java.lang.String key, java.lang.String value)",
+      "comment": "Sets the system property indicated by the specified key.  First, if a security manager exists, its SecurityManager.checkPermission method is called with a PropertyPermission(key, \"write\") permission. This may result in a SecurityException being thrown. If no exception is thrown, the specified property is set to the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clearProperty(java.lang.String key)",
+    "name": "clearProperty",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "equivalence": {
+      "member": "clearProperty(java.lang.String key)",
+      "comment": "Removes the system property indicated by the specified key.  First, if a security manager exists, its SecurityManager.checkPermission method is called with a PropertyPermission(key, \"write\") permission. This may result in a SecurityException being thrown. If no exception is thrown, the specified property is removed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getenv(java.lang.String name)",
+    "name": "getenv",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "getenv(java.lang.String name)",
+      "comment": "Gets the value of the specified environment variable. An environment variable is a system-dependent external named value. If a security manager exists, its SecurityManager#checkPermission checkPermission method is called with a RuntimePermission(\"getenv.\"+name) permission. This may result in a SecurityException being thrown. If no exception is thrown the value of the variable name is returned. <i>System properties</i> and <i>environment variables</i> are both conceptually mappings between names and values. Both mechanisms can be used to pass user-defined information to a Java process. Environment variables have a more global effect, because they are visible to all descendants of the process which defines them, not just the immediate Java subprocess. They can have subtly different semantics, such as case insensitivity, on different operating systems. For these reasons, environment variables are more likely to have unintended side effects. It is best to use system properties where possible. Environment variables should be used when a global effect is desired, or when an external system interface requires an environment variable (such as PATH). On UNIX systems the alphabetic case of name is typically significant, while on Microsoft Windows systems it is typically not. For example, the expression System.getenv(\"FOO\").equals(System.getenv(\"foo\")) is likely to be true on Microsoft Windows.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getenv()",
+    "name": "getenv",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.lang.String>",
+      "name": "java.util.Map<java.lang.String, java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getenv()",
+      "comment": "Returns an unmodifiable string map view of the current system environment. The environment is a system-dependent mapping from names to values which is passed from parent to child processes. If the system does not support environment variables, an empty map is returned. The returned map will never contain null keys or values. Attempting to query the presence of a null key or value will throw a NullPointerException. Attempting to query the presence of a key or value which is not of type String will throw a ClassCastException. The returned map and its collection views may not obey the general contract of the Object#equals and Object#hashCode methods. The returned map is typically case-sensitive on all platforms. If a security manager exists, its SecurityManager#checkPermission checkPermission method is called with a RuntimePermission(\"getenv.*\") permission. This may result in a SecurityException being thrown. When passing information to a Java subprocess, system properties are generally preferred over environment variables.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exit(int status)",
+    "name": "exit",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "status"
+      }
+    ],
+    "equivalence": {
+      "member": "exit(int status)",
+      "comment": "Terminates the currently running Java Virtual Machine. The argument serves as a status code; by convention, a nonzero status code indicates abnormal termination.  This method calls the exit method in class Runtime. This method never returns normally.  The call System.exit(n) is effectively equivalent to the call: <pre> Runtime.getRuntime().exit(n) </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "gc()",
+    "name": "gc",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "gc()",
+      "comment": "Runs the garbage collector.  Calling the gc method suggests that the Java Virtual Machine expend effort toward recycling unused objects in order to make the memory they currently occupy available for quick reuse. When control returns from the method call, the Java Virtual Machine has made a best effort to reclaim space from all discarded objects.  The call System.gc() is effectively equivalent to the call: <pre> Runtime.getRuntime().gc() </pre> @see java.lang.Runtime#gc()",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runFinalization()",
+    "name": "runFinalization",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "runFinalization()",
+      "comment": "Runs the finalization methods of any objects pending finalization.  Calling this method suggests that the Java Virtual Machine expend effort toward running the finalize methods of objects that have been found to be discarded but whose finalize methods have not yet been run. When control returns from the method call, the Java Virtual Machine has made a best effort to complete all outstanding finalizations.  The call System.runFinalization() is effectively equivalent to the call: <pre> Runtime.getRuntime().runFinalization() </pre> @see java.lang.Runtime#runFinalization()",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runFinalizersOnExit(boolean value)",
+    "name": "runFinalizersOnExit",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "runFinalizersOnExit(boolean value)",
+      "comment": "Enable or disable finalization on exit; doing so specifies that the finalizers of all objects that have finalizers that have not yet been automatically invoked are to be run before the Java runtime exits. By default, finalization on exit is disabled. If there is a security manager, its checkExit method is first called with 0 as its argument to ensure the exit is allowed. This could result in a SecurityException. @deprecated This method is inherently unsafe. It may result in finalizers being called on live objects while other threads are concurrently manipulating those objects, resulting in erratic behavior or deadlock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "load(java.lang.String filename)",
+    "name": "load",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "filename"
+      }
+    ],
+    "equivalence": {
+      "member": "load(java.lang.String filename)",
+      "comment": "Loads the native library specified by the filename argument. The filename argument must be an absolute path name. If the filename argument, when stripped of any platform-specific library prefix, path, and file extension, indicates a library whose name is, for example, L, and a native library called L is statically linked with the VM, then the JNI_OnLoad_L function exported by the library is invoked rather than attempting to load a dynamic library. A filename matching the argument does not have to exist in the file system. See the JNI Specification for more details. Otherwise, the filename argument is mapped to a native library image in an implementation-dependent manner.  The call System.load(name) is effectively equivalent to the call: <pre> Runtime.getRuntime().load(name) </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "loadLibrary(java.lang.String libname)",
+    "name": "loadLibrary",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "libname"
+      }
+    ],
+    "equivalence": {
+      "member": "loadLibrary(java.lang.String libname)",
+      "comment": "Loads the native library specified by the libname argument. The libname argument must not contain any platform specific prefix, file extension or path. If a native library called libname is statically linked with the VM, then the JNI_OnLoad_libname function exported by the library is invoked. See the JNI Specification for more details. Otherwise, the libname argument is loaded from a system library location and mapped to a native library image in an implementation- dependent manner.  The call System.loadLibrary(name) is effectively equivalent to the call <pre> Runtime.getRuntime().loadLibrary(name) </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mapLibraryName(java.lang.String libname)",
+    "name": "mapLibraryName",
+    "containingClass": {
+      "qualifiedName": "java.lang.System",
+      "name": "System",
+      "isArray": false
+    },
+    "targetClass": "java.lang.System",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "libname"
+      }
+    ],
+    "equivalence": {
+      "member": "mapLibraryName(java.lang.String libname)",
+      "comment": "Maps a library name into a platform-specific string representing a native library.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

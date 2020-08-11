@@ -18,7 +18,7 @@
     "equivalence": {
       "comment": "Returns a stream of all pending tasks. This is similar to #getQueue() but will expose the originally submitted Runnable instances rather than potentially wrapped ones.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getQueue())"
+      "condition": "methodResultID.equals(receiverObjectClone.getQueue())"
     }
   },
   {

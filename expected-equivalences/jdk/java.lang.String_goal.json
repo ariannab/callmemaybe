@@ -1,0 +1,3247 @@
+[
+  {
+    "signature": "java.lang.String()",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "java.lang.String()",
+      "comment": "Initializes a newly created String object so that it represents an empty character sequence. Note that use of this constructor is unnecessary since Strings are immutable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(java.lang.String original)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "original"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(java.lang.String original)",
+      "comment": "Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string. Unless an explicit copy of original is needed, use of this constructor is unnecessary since Strings are immutable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(char[] value)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(char[] value)",
+      "comment": "Allocates a new String so that it represents the sequence of characters currently contained in the character array argument. The contents of the character array are copied; subsequent modification of the character array does not affect the newly created string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(char[] value, int offset, int count)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(char[] value, int offset, int count)",
+      "comment": "Allocates a new String that contains characters from a subarray of the character array argument. The offset argument is the index of the first character of the subarray and the count argument specifies the length of the subarray. The contents of the subarray are copied; subsequent modification of the character array does not affect the newly created string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(int[] codePoints, int offset, int count)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "codePoints"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(int[] codePoints, int offset, int count)",
+      "comment": "Allocates a new String that contains characters from a subarray of the Unicode code point array argument. The offset argument is the index of the first code point of the subarray and the count argument specifies the length of the subarray. The contents of the subarray are converted to char}s; subsequent modification of the {@code int array does not affect the newly created string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] ascii, int hibyte, int offset, int count)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "ascii"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hibyte"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] ascii, int hibyte, int offset, int count)",
+      "comment": "Allocates a new String constructed from a subarray of an array of 8-bit integer values.  The offset argument is the index of the first byte of the subarray, and the count argument specifies the length of the subarray.  Each byte in the subarray is converted to a char as specified in the method above. @deprecated This method does not properly convert bytes into characters. As of JDK&nbsp;1.1, the preferred way to do this is via the String constructors that take a java.nio.charset.Charset, charset name, or that use the platform's default charset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] ascii, int hibyte)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "ascii"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hibyte"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] ascii, int hibyte)",
+      "comment": "Allocates a new String containing characters constructed from an array of 8-bit integer values. Each character cin the resulting string is constructed from the corresponding component b in the byte array such that: <blockquote><pre> <b>c</b> == (char)(((hibyte & 0xff) << 8) | (<b>b</b> & 0xff)) </pre></blockquote> @deprecated This method does not properly convert bytes into characters. As of JDK&nbsp;1.1, the preferred way to do this is via the String constructors that take a java.nio.charset.Charset, charset name, or that use the platform's default charset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] bytes, int offset, int length, java.lang.String charsetName)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "charsetName"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] bytes, int offset, int length, java.lang.String charsetName)",
+      "comment": "Constructs a new String by decoding the specified subarray of bytes using the specified charset. The length of the new String is a function of the charset, and hence may not be equal to the length of the subarray.  The behavior of this constructor when the given bytes are not valid in the given charset is unspecified. The java.nio.charset.CharsetDecoder class should be used when more control over the decoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] bytes, int offset, int length, java.nio.charset.Charset charset)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.charset.Charset",
+          "name": "Charset",
+          "isArray": false
+        },
+        "name": "charset"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] bytes, int offset, int length, java.nio.charset.Charset charset)",
+      "comment": "Constructs a new String by decoding the specified subarray of bytes using the specified java.nio.charset.Charset charset. The length of the new String is a function of the charset, and hence may not be equal to the length of the subarray.  This method always replaces malformed-input and unmappable-character sequences with this charset's default replacement string. The java.nio.charset.CharsetDecoder class should be used when more control over the decoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] bytes, java.lang.String charsetName)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "charsetName"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] bytes, java.lang.String charsetName)",
+      "comment": "Constructs a new String by decoding the specified array of bytes using the specified java.nio.charset.Charset charset. The length of the new String is a function of the charset, and hence may not be equal to the length of the byte array.  The behavior of this constructor when the given bytes are not valid in the given charset is unspecified. The java.nio.charset.CharsetDecoder class should be used when more control over the decoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] bytes, java.nio.charset.Charset charset)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.charset.Charset",
+          "name": "Charset",
+          "isArray": false
+        },
+        "name": "charset"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] bytes, java.nio.charset.Charset charset)",
+      "comment": "Constructs a new String by decoding the specified array of bytes using the specified java.nio.charset.Charset charset. The length of the new String is a function of the charset, and hence may not be equal to the length of the byte array.  This method always replaces malformed-input and unmappable-character sequences with this charset's default replacement string. The java.nio.charset.CharsetDecoder class should be used when more control over the decoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] bytes, int offset, int length)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] bytes, int offset, int length)",
+      "comment": "Constructs a new String by decoding the specified subarray of bytes using the platform's default charset. The length of the new String is a function of the charset, and hence may not be equal to the length of the subarray.  The behavior of this constructor when the given bytes are not valid in the default charset is unspecified. The java.nio.charset.CharsetDecoder class should be used when more control over the decoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(byte[] bytes)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(byte[] bytes)",
+      "comment": "Constructs a new String by decoding the specified array of bytes using the platform's default charset. The length of the new String is a function of the charset, and hence may not be equal to the length of the byte array.  The behavior of this constructor when the given bytes are not valid in the default charset is unspecified. The java.nio.charset.CharsetDecoder class should be used when more control over the decoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(java.lang.StringBuffer buffer)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "buffer"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(java.lang.StringBuffer buffer)",
+      "comment": "Allocates a new string that contains the sequence of characters currently contained in the string buffer argument. The contents of the string buffer are copied; subsequent modification of the string buffer does not affect the newly created string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(java.lang.StringBuilder builder)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuilder",
+          "name": "StringBuilder",
+          "isArray": false
+        },
+        "name": "builder"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(java.lang.StringBuilder builder)",
+      "comment": "Allocates a new string that contains the sequence of characters currently contained in the string builder argument. The contents of the string builder are copied; subsequent modification of the string builder does not affect the newly created string.  This constructor is provided to ease migration to StringBuilder. Obtaining a string from a string builder via the toString method is likely to run faster and is generally preferred.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.lang.String(char[] value, boolean share)",
+    "name": "java.lang.String",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "share"
+      }
+    ],
+    "equivalence": {
+      "member": "java.lang.String(char[] value, boolean share)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "length()",
+    "name": "length",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "length()",
+      "comment": "Returns the length of this string. The length is equal to the number of Unicode code units in the string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isEmpty()",
+      "comment": "Returns true if, and only if, #length() is 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "charAt(int index)",
+    "name": "charAt",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "charAt(int index)",
+      "comment": "Returns the char value at the specified index. An index ranges from 0 to length() - 1. The first char value of the sequence is at index 0, the next at index 1, and so on, as for array indexing. If the char value specified by the index is a surrogate, the surrogate value is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "codePointAt(int index)",
+    "name": "codePointAt",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "codePointAt(int index)",
+      "comment": "Returns the character (Unicode code point) at the specified index. The index refers to char values (Unicode code units) and ranges from 0 to #length()- 1.  If the char value specified at the given index is in the high-surrogate range, the following index is less than the length of this String, and the char value at the following index is in the low-surrogate range, then the supplementary code point corresponding to this surrogate pair is returned. Otherwise, the char value at the given index is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "codePointBefore(int index)",
+    "name": "codePointBefore",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "codePointBefore(int index)",
+      "comment": "Returns the character (Unicode code point) before the specified index. The index refers to char values (Unicode code units) and ranges from 1 to CharSequence#length() length.  If the char value at (index - 1) is in the low-surrogate range, (index - 2) is not negative, and the char value at (index - 2) is in the high-surrogate range, then the supplementary code point value of the surrogate pair is returned. If the char value at index - 1 is an unpaired low-surrogate or a high-surrogate, the surrogate value is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "codePointCount(int beginIndex, int endIndex)",
+    "name": "codePointCount",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "beginIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "codePointCount(int beginIndex, int endIndex)",
+      "comment": "Returns the number of Unicode code points in the specified text range of this String. The text range begins at the specified beginIndex and extends to the char at index endIndex - 1. Thus the length (in chars) of the text range is {@code endIndex-beginIndex}. Unpaired surrogates within the text range count as one code point each.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offsetByCodePoints(int index, int codePointOffset)",
+    "name": "offsetByCodePoints",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "codePointOffset"
+      }
+    ],
+    "equivalence": {
+      "member": "offsetByCodePoints(int index, int codePointOffset)",
+      "comment": "Returns the index within this String that is offset from the given index by codePointOffset code points. Unpaired surrogates within the text range given by index and codePointOffset count as one code point each.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChars(char[] dst, int dstBegin)",
+    "name": "getChars",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "dst"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dstBegin"
+      }
+    ],
+    "equivalence": {
+      "member": "getChars(char[] dst, int dstBegin)",
+      "comment": "Copy characters from this string into dst starting at dstBegin. This method doesn't perform any range checking.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)",
+    "name": "getChars",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "srcBegin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "srcEnd"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "dst"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dstBegin"
+      }
+    ],
+    "equivalence": {
+      "member": "getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)",
+      "comment": "Copies characters from this string into the destination character array.  The first character to be copied is at index srcBegin; the last character to be copied is at index srcEnd-1 (thus the total number of characters to be copied is srcEnd-srcBegin}). The characters are copied into the subarray of {@code dst starting at index dstBegin and ending at index: <pre> dstbegin + (srcEnd-srcBegin) - 1 </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytes(int srcBegin, int srcEnd, byte[] dst, int dstBegin)",
+    "name": "getBytes",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "srcBegin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "srcEnd"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "dst"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dstBegin"
+      }
+    ],
+    "equivalence": {
+      "member": "getBytes(int srcBegin, int srcEnd, byte[] dst, int dstBegin)",
+      "comment": "Copies characters from this string into the destination byte array. Each byte receives the 8 low-order bits of the corresponding character. The eight high-order bits of each character are not copied and do not participate in the transfer in any way.  The first character to be copied is at index srcBegin; the last character to be copied is at index srcEnd-1. The total number of characters to be copied is srcEnd-srcBegin. The characters, converted to bytes, are copied into the subarray of dst starting at index dstBegin and ending at index: <pre> dstbegin + (srcEnd-srcBegin) - 1 </pre> @deprecated This method does not properly convert characters into bytes. As of JDK&nbsp;1.1, the preferred way to do this is via the #getBytes() method, which uses the platform's default charset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytes(java.lang.String charsetName)",
+    "name": "getBytes",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "charsetName"
+      }
+    ],
+    "equivalence": {
+      "member": "getBytes(java.lang.String charsetName)",
+      "comment": "Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array.  The behavior of this method when this string cannot be encoded in the given charset is unspecified. The java.nio.charset.CharsetEncoder class should be used when more control over the encoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytes(java.nio.charset.Charset charset)",
+    "name": "getBytes",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.charset.Charset",
+          "name": "Charset",
+          "isArray": false
+        },
+        "name": "charset"
+      }
+    ],
+    "equivalence": {
+      "member": "getBytes(java.nio.charset.Charset charset)",
+      "comment": "Encodes this String into a sequence of bytes using the given java.nio.charset.Charset charset, storing the result into a new byte array.  This method always replaces malformed-input and unmappable-character sequences with this charset's default replacement byte array. The java.nio.charset.CharsetEncoder class should be used when more control over the encoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytes()",
+    "name": "getBytes",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getBytes()",
+      "comment": "Encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array.  The behavior of this method when this string cannot be encoded in the default charset is unspecified. The java.nio.charset.CharsetEncoder class should be used when more control over the encoding process is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object anObject)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "anObject"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object anObject)",
+      "comment": "Compares this string to the specified object. The result is true if and only if the argument is not null and is a String object that represents the same sequence of characters as this object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contentEquals(java.lang.StringBuffer sb)",
+    "name": "contentEquals",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "sb"
+      }
+    ],
+    "equivalence": {
+      "member": "contentEquals(java.lang.StringBuffer sb)",
+      "comment": "Compares this string to the specified StringBuffer. The result is true if and only if this String represents the same sequence of characters as the specified StringBuffer. This method synchronizes on the StringBuffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contentEquals(java.lang.CharSequence cs)",
+    "name": "contentEquals",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "cs"
+      }
+    ],
+    "equivalence": {
+      "member": "contentEquals(java.lang.CharSequence cs)",
+      "comment": "Compares this string to the specified CharSequence. The result is true if and only if this String represents the same sequence of char values as the specified sequence. Note that if the CharSequence is a StringBuffer then the method synchronizes on it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalsIgnoreCase(java.lang.String anotherString)",
+    "name": "equalsIgnoreCase",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "anotherString"
+      }
+    ],
+    "equivalence": {
+      "member": "equalsIgnoreCase(java.lang.String anotherString)",
+      "comment": "Compares this String to another String, ignoring case considerations. Two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case.  Two characters c1 and c2 are considered the same ignoring case if at least one of the following is true:  <li> The two characters are the same (as compared by the == operator) <li> Applying the method java.lang.Character#toUpperCase(char) to each character produces the same result <li> Applying the method java.lang.Character#toLowerCase(char) to each character produces the same result",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareTo(java.lang.String anotherString)",
+    "name": "compareTo",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "anotherString"
+      }
+    ],
+    "equivalence": {
+      "member": "compareTo(java.lang.String anotherString)",
+      "comment": "Compares two strings lexicographically. The comparison is based on the Unicode value of each character in the strings. The character sequence represented by this String object is compared lexicographically to the character sequence represented by the argument string. The result is a negative integer if this String object lexicographically precedes the argument string. The result is a positive integer if this String object lexicographically follows the argument string. The result is zero if the strings are equal; compareTo returns 0 exactly when the #equals(Object) method would return true.  This is the definition of lexicographic ordering. If two strings are different, then either they have different characters at some index that is a valid index for both strings, or their lengths are different, or both. If they have different characters at one or more index positions, let k be the smallest such index; then the string whose character at position k has the smaller value, as determined by using the < operator, lexicographically precedes the other string. In this case, compareTo returns the difference of the two character values at position k in the two string -- that is, the value: <pre> this.charAt(k)-anotherString.charAt(k) </pre> If there is no index position at which they differ, then the shorter string lexicographically precedes the longer string. In this case, compareTo returns the difference of the lengths of the strings -- that is, the value: <pre> this.length()-anotherString.length() </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareToIgnoreCase(java.lang.String str)",
+    "name": "compareToIgnoreCase",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "member": "compareToIgnoreCase(java.lang.String str)",
+      "comment": "Compares two strings lexicographically, ignoring case differences. This method returns an integer whose sign is that of calling compareTo with normalized versions of the strings where case differences have been eliminated by calling Character.toLowerCase(Character.toUpperCase(character)) on each character.  Note that this method does not take locale into account, and will result in an unsatisfactory ordering for certain locales. The java.text package provides collators to allow locale-sensitive ordering.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regionMatches(int toffset, java.lang.String other, int ooffset, int len)",
+    "name": "regionMatches",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "ooffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "member": "regionMatches(int toffset, java.lang.String other, int ooffset, int len)",
+      "comment": "Tests if two string regions are equal.  A substring of this String object is compared to a substring of the argument other. The result is true if these substrings represent identical character sequences. The substring of this String object to be compared begins at index toffset and has length len. The substring of other to be compared begins at index ooffset and has length len. The result is false if and only if at least one of the following is true: <li>toffset is negative. <li>ooffset is negative. <li>toffset+len is greater than the length of this String object. <li>ooffset+len is greater than the length of the other argument. <li>There is some nonnegative integer <i>k</i> less than len such that: this.charAt(toffset + <i>k</i>) != other.charAt(ooffset +  <i>k</i>)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regionMatches(boolean ignoreCase, int toffset, java.lang.String other, int ooffset, int len)",
+    "name": "regionMatches",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "ignoreCase"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "ooffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "member": "regionMatches(boolean ignoreCase, int toffset, java.lang.String other, int ooffset, int len)",
+      "comment": "Tests if two string regions are equal.  A substring of this String object is compared to a substring of the argument other. The result is true if these substrings represent character sequences that are the same, ignoring case if and only if ignoreCase is true. The substring of this String object to be compared begins at index toffset and has length len. The substring of other to be compared begins at index ooffset and has length len. The result is false if and only if at least one of the following is true: <li>toffset is negative. <li>ooffset is negative. <li>toffset+len is greater than the length of this String object. <li>ooffset+len is greater than the length of the other argument. <li>ignoreCase is false and there is some nonnegative integer <i>k</i> less than len such that: <blockquote><pre> this.charAt(toffset+k) != other.charAt(ooffset+k) </pre></blockquote> <li>ignoreCase is true and there is some nonnegative integer <i>k</i> less than len such that: <blockquote><pre> Character.toLowerCase(this.charAt(toffset+k)) != </pre></blockquote> and: <blockquote><pre> Character.toUpperCase(this.charAt(toffset+k)) != Character.toUpperCase(other.charAt(ooffset+k)) </pre></blockquote>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "startsWith(java.lang.String prefix, int toffset)",
+    "name": "startsWith",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "prefix"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toffset"
+      }
+    ],
+    "equivalence": {
+      "member": "startsWith(java.lang.String prefix, int toffset)",
+      "comment": "Tests if the substring of this string beginning at the specified index starts with the specified prefix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "startsWith(java.lang.String prefix)",
+    "name": "startsWith",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "prefix"
+      }
+    ],
+    "equivalence": {
+      "member": "startsWith(java.lang.String prefix)",
+      "comment": "Tests if this string starts with the specified prefix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endsWith(java.lang.String suffix)",
+    "name": "endsWith",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "suffix"
+      }
+    ],
+    "equivalence": {
+      "member": "endsWith(java.lang.String suffix)",
+      "comment": "Tests if this string ends with the specified suffix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hashCode()",
+      "comment": "Returns a hash code for this string. The hash code for a String object is computed as <pre> s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1] </pre> using int arithmetic, where s[i] is the ith character of the string, n is the length of the string, and ^ indicates exponentiation. (The hash value of the empty string is zero.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(int ch)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "ch"
+      }
+    ],
+    "equivalence": {
+      "member": "indexOf(int ch)",
+      "comment": "Returns the index within this string of the first occurrence of the specified character. If a character with value ch occurs in the character sequence represented by this String object, then the index (in Unicode code units) of the first such occurrence is returned. For values of ch in the range from 0 to 0xFFFF (inclusive), this is the smallest value k such that: <blockquote><pre> this.charAt(k) == ch </pre></blockquote> is true. For other values of ch, it is the smallest value k such that: <blockquote><pre> this.codePointAt(k) == ch </pre></blockquote> is true. In either case, if no such character occurs in this string, then -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(int ch, int fromIndex)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "ch"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "indexOf(int ch, int fromIndex)",
+      "comment": "Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index.  If a character with value ch occurs in the character sequence represented by this String object at an index no smaller than fromIndex, then the index of the first such occurrence is returned. For values of ch in the range from 0 to 0xFFFF (inclusive), this is the smallest value k such that: <blockquote><pre> (this.charAt(k) == ch) && (k >= fromIndex) </pre></blockquote> is true. For other values of ch, it is the smallest value k such that: <blockquote><pre> (this.codePointAt(k) == ch) && (k >= fromIndex) </pre></blockquote> is true. In either case, if no such character occurs in this string at or after position fromIndex, then -1 is returned.  There is no restriction on the value of fromIndex. If it is negative, it has the same effect as if it were zero: this entire string may be searched. If it is greater than the length of this string, it has the same effect as if it were equal to the length of this string: -1 is returned. All indices are specified in char values (Unicode code units).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(int ch)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "ch"
+      }
+    ],
+    "equivalence": {
+      "member": "lastIndexOf(int ch)",
+      "comment": "Returns the index within this string of the last occurrence of the specified character. For values of ch in the range from 0 to 0xFFFF (inclusive), the index (in Unicode code units) returned is the largest value k such that: <blockquote><pre> this.charAt(k) == ch </pre></blockquote> is true. For other values of ch, it is the largest value k such that: <blockquote><pre> this.codePointAt(k) == ch </pre></blockquote> is true. In either case, if no such character occurs in this string, then -1 is returned. The String is searched backwards starting at the last character.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(int ch, int fromIndex)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "ch"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "lastIndexOf(int ch, int fromIndex)",
+      "comment": "Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index. For values of ch in the range from 0 to 0xFFFF (inclusive), the index returned is the largest value k such that: <blockquote><pre> (this.charAt(k) == ch) && (k <= fromIndex) </pre></blockquote> is true. For other values of ch, it is the largest value k such that: <blockquote><pre> (this.codePointAt(k) == ch) && (k <= fromIndex) </pre></blockquote> is true. In either case, if no such character occurs in this string at or before position fromIndex, then -1 is returned. All indices are specified in char values (Unicode code units).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(java.lang.String str)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "member": "indexOf(java.lang.String str)",
+      "comment": "Returns the index within this string of the first occurrence of the specified substring. The returned index is the smallest value k for which: <blockquote><pre> this.startsWith(str, k) </pre></blockquote> If no such value of k exists, then -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(java.lang.String str, int fromIndex)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "indexOf(java.lang.String str, int fromIndex)",
+      "comment": "Returns the index within this string of the first occurrence of the specified substring, starting at the specified index. The returned index is the smallest value k for which: <blockquote><pre> k >= fromIndex && this.startsWith(str, k) </pre></blockquote> If no such value of k exists, then -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(char[] source, int sourceOffset, int sourceCount, java.lang.String target, int fromIndex)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "indexOf(char[] source, int sourceOffset, int sourceCount, java.lang.String target, int fromIndex)",
+      "comment": "Code shared by String and AbstractStringBuilder to do searches. The source is the character array being searched, and the target is the string being searched for.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOf(char[] source, int sourceOffset, int sourceCount, char[] target, int targetOffset, int targetCount, int fromIndex)",
+    "name": "indexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "targetOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "targetCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "indexOf(char[] source, int sourceOffset, int sourceCount, char[] target, int targetOffset, int targetCount, int fromIndex)",
+      "comment": "Code shared by String and StringBuffer to do searches. The source is the character array being searched, and the target is the string being searched for.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(java.lang.String str)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "member": "lastIndexOf(java.lang.String str)",
+      "comment": "Returns the index within this string of the last occurrence of the specified substring. The last occurrence of the empty string \"\" is considered to occur at the index value this.length(). The returned index is the largest value k for which: <blockquote><pre> this.startsWith(str, k) </pre></blockquote> If no such value of k exists, then -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(java.lang.String str, int fromIndex)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "lastIndexOf(java.lang.String str, int fromIndex)",
+      "comment": "Returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index. The returned index is the largest value k for which: <blockquote><pre> k <= fromIndex && this.startsWith(str, k) </pre></blockquote> If no such value of k exists, then -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(char[] source, int sourceOffset, int sourceCount, java.lang.String target, int fromIndex)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "lastIndexOf(char[] source, int sourceOffset, int sourceCount, java.lang.String target, int fromIndex)",
+      "comment": "Code shared by String and AbstractStringBuilder to do searches. The source is the character array being searched, and the target is the string being searched for.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOf(char[] source, int sourceOffset, int sourceCount, char[] target, int targetOffset, int targetCount, int fromIndex)",
+    "name": "lastIndexOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "targetOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "targetCount"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "lastIndexOf(char[] source, int sourceOffset, int sourceCount, char[] target, int targetOffset, int targetCount, int fromIndex)",
+      "comment": "Code shared by String and StringBuffer to do searches. The source is the character array being searched, and the target is the string being searched for.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "substring(int beginIndex)",
+    "name": "substring",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "beginIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "substring(int beginIndex)",
+      "comment": "Returns a string that is a substring of this string. The substring begins with the character at the specified index and extends to the end of this string.  Examples: <pre> \"unhappy\".substring(2) returns \"happy\" \"Harbison\".substring(3) returns \"bison\" \"emptiness\".substring(9) returns \"\" (an empty string) </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "substring(int beginIndex, int endIndex)",
+    "name": "substring",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "beginIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "substring(int beginIndex, int endIndex)",
+      "comment": "Returns a string that is a substring of this string. The substring begins at the specified beginIndex and extends to the character at index endIndex - 1. Thus the length of the substring is endIndex-beginIndex.  Examples: <pre> \"hamburger\".substring(4, 8) returns \"urge\" \"smiles\".substring(1, 5) returns \"mile\" </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subSequence(int beginIndex, int endIndex)",
+    "name": "subSequence",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.CharSequence",
+      "name": "java.lang.CharSequence",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "beginIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "subSequence(int beginIndex, int endIndex)",
+      "comment": "Returns a character sequence that is a subsequence of this sequence.  An invocation of this method of the form <pre> str.subSequence(begin,&nbsp;end)</pre> behaves in exactly the same way as the invocation <pre> str.substring(begin,&nbsp;end)</pre> @apiNote This method is defined so that the String class can implement the CharSequence interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.lang.String str)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      }
+    ],
+    "equivalence": {
+      "member": "concat(java.lang.String str)",
+      "comment": "Concatenates the specified string to the end of this string.  If the length of the argument string is 0, then this String object is returned. Otherwise, a String object is returned that represents a character sequence that is the concatenation of the character sequence represented by this String object and the character sequence represented by the argument string. Examples: <pre> \"cares\".concat(\"s\") returns \"caress\" \"to\".concat(\"get\").concat(\"her\") returns \"together\" </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(char oldChar, char newChar)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "oldChar"
+      },
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "newChar"
+      }
+    ],
+    "equivalence": {
+      "member": "replace(char oldChar, char newChar)",
+      "comment": "Returns a string resulting from replacing all occurrences of oldChar in this string with newChar.  If the character oldChar does not occur in the character sequence represented by this String object, then a reference to this String object is returned. Otherwise, a String object is returned that represents a character sequence identical to the character sequence represented by this String object, except that every occurrence of oldChar is replaced by an occurrence of newChar.  Examples: <pre> \"mesquite in your cellar\".replace('e', 'o') returns \"mosquito in your collar\" \"the war of baronets\".replace('r', 'y') returns \"the way of bayonets\" \"sparring with a purple porpoise\".replace('p', 't') returns \"starring with a turtle tortoise\" \"JonL\".replace('q', 'x') returns \"JonL\" (no change) </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matches(java.lang.String regex)",
+    "name": "matches",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      }
+    ],
+    "equivalence": {
+      "member": "matches(java.lang.String regex)",
+      "comment": "Tells whether or not this string matches the given regular expression.  An invocation of this method of the form str.matches(regex) yields exactly the same result as the expression <blockquote> java.util.regex.Pattern.java.util.regex.Patternmatches(regex, str) </blockquote>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.CharSequence s)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "contains(java.lang.CharSequence s)",
+      "comment": "Returns true if and only if this string contains the specified sequence of char values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceFirst(java.lang.String regex, java.lang.String replacement)",
+    "name": "replaceFirst",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "replacement"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceFirst(java.lang.String regex, java.lang.String replacement)",
+      "comment": "Replaces the first substring of this string that matches the given regular expression with the given replacement.  An invocation of this method of the form str.replaceFirst(regex, repl) yields exactly the same result as the expression <blockquote>  java.util.regex.Pattern.java.util.regex.Pattern#compile compile(regex).java.util.regex.Pattern#matcher(java.lang.CharSequence) matcher(str).java.util.regex.Matcher#replaceFirst replaceFirst(repl)  </blockquote> Note that backslashes ({@code \\}) and dollar signs ({@code $}) in the replacement string may cause the results to be different than if it were being treated as a literal replacement string; see java.util.regex.Matcher#replaceFirst. Use java.util.regex.Matcher#quoteReplacement to suppress the special meaning of these characters, if desired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.lang.String regex, java.lang.String replacement)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "replacement"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceAll(java.lang.String regex, java.lang.String replacement)",
+      "comment": "Replaces each substring of this string that matches the given regular expression with the given replacement.  An invocation of this method of the form str.replaceAll(regex, repl) yields exactly the same result as the expression <blockquote>  java.util.regex.Pattern.java.util.regex.Pattern#compile compile(regex).java.util.regex.Pattern#matcher(java.lang.CharSequence) matcher(str).java.util.regex.Matcher#replaceAll replaceAll(repl)  </blockquote> Note that backslashes ({@code \\}) and dollar signs ({@code $}) in the replacement string may cause the results to be different than if it were being treated as a literal replacement string; see java.util.regex.Matcher#replaceAll Matcher.replaceAll. Use java.util.regex.Matcher#quoteReplacement to suppress the special meaning of these characters, if desired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(java.lang.CharSequence target, java.lang.CharSequence replacement)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "replacement"
+      }
+    ],
+    "equivalence": {
+      "member": "replace(java.lang.CharSequence target, java.lang.CharSequence replacement)",
+      "comment": "Replaces each substring of this string that matches the literal target sequence with the specified literal replacement sequence. The replacement proceeds from the beginning of the string to the end, for example, replacing \"aa\" with \"b\" in the string \"aaa\" will result in \"ba\" rather than \"ab\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "split(java.lang.String regex, int limit)",
+    "name": "split",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "limit"
+      }
+    ],
+    "equivalence": {
+      "member": "split(java.lang.String regex, int limit)",
+      "comment": "Splits this string around matches of the given regular expression.  The array returned by this method contains each substring of this string that is terminated by another substring that matches the given expression or is terminated by the end of the string. The substrings in the array are in the order in which they occur in this string. If the expression does not match any part of the input then the resulting array has just one element, namely this string.  When there is a positive-width match at the beginning of this string then an empty leading substring is included at the beginning of the resulting array. A zero-width match at the beginning however never produces such empty leading substring.  The limit parameter controls the number of times the pattern is applied and therefore affects the length of the resulting array. If the limit n is greater than zero then the pattern will be applied at most n&nbsp;-&nbsp;1 times, the array's length will be no greater than n, and the array's last entry will contain all input beyond the last matched delimiter. If n is non-positive then the pattern will be applied as many times as possible and the array can have any length. If n is zero then the pattern will be applied as many times as possible, the array can have any length, and trailing empty strings will be discarded.  The string \"boo:and:foo\", for example, yields the following results with these parameters: <table cellpadding=1 cellspacing=0 summary=\"Split example showing regex, limit, and result\"> <tr> <th>Regex</th> <th>Limit</th> <th>Result</th> </tr> <tr><td align=center>:</td> <td align=center>2</td> <td>{ \"boo\", \"and:foo\" }</td></tr> <tr><td align=center>:</td> <td align=center>5</td> <td>{ \"boo\", \"and\", \"foo\" }</td></tr> <tr><td align=center>:</td> <td align=center>-2</td> <td>{ \"boo\", \"and\", \"foo\" }</td></tr> <tr><td align=center>o</td> <td align=center>5</td> <td>{ \"b\", \"\", \":and:f\", \"\", \"\" }</td></tr> <tr><td align=center>o</td> <td align=center>-2</td> <td>{ \"b\", \"\", \":and:f\", \"\", \"\" }</td></tr> <tr><td align=center>o</td> <td align=center>0</td> <td>{ \"b\", \"\", \":and:f\" }</td></tr> </table>  An invocation of this method of the form str.split(regex,}&nbsp;n{@code ) yields the same result as the expression <blockquote>  java.util.regex.Pattern.java.util.regex.Pattern#compile compile(regex).java.util.regex.Pattern#split(java.lang.CharSequence,int) split(<i>str</i>,&nbsp;n)  </blockquote>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "split(java.lang.String regex)",
+    "name": "split",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      }
+    ],
+    "equivalence": {
+      "member": "split(java.lang.String regex)",
+      "comment": "Splits this string around matches of the given regular expression.  This method works as if by invoking the two-argument #split(String, int) split method with the given expression and a limit argument of zero. Trailing empty strings are therefore not included in the resulting array.  The string \"boo:and:foo\", for example, yields the following results with these expressions: <table cellpadding=1 cellspacing=0 summary=\"Split examples showing regex and result\"> <tr> <th>Regex</th> <th>Result</th> </tr> <tr><td align=center>:</td> <td>{ \"boo\", \"and\", \"foo\" }</td></tr> <tr><td align=center>o</td> <td>{ \"b\", \"\", \":and:f\" }</td></tr> </table>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "join(java.lang.CharSequence delimiter, java.lang.CharSequence... elements)",
+    "name": "join",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "delimiter"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.CharSequence;",
+          "name": "CharSequence[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "member": "join(java.lang.CharSequence delimiter, java.lang.CharSequence... elements)",
+      "comment": "Returns a new String composed of copies of the CharSequence elements joined together with a copy of the specified delimiter. For example, <pre>String message = String.join(\"-\", \"Java\", \"is\", \"cool\"); // message returned is: \"Java-is-cool\" </pre> Note that if an element is null, then \"null\" is added.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "join(java.lang.CharSequence delimiter, java.lang.Iterable<? extends java.lang.CharSequence> elements)",
+    "name": "join",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "delimiter"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Iterable",
+          "name": "Iterable",
+          "isArray": false
+        },
+        "name": "elements"
+      }
+    ],
+    "equivalence": {
+      "member": "join(java.lang.CharSequence delimiter, java.lang.Iterable<? extends java.lang.CharSequence> elements)",
+      "comment": "Returns a new String composed of copies of the CharSequence elements joined together with a copy of the specified delimiter. For example, <pre>List<String> strings = new LinkedList<>(); strings.add(\"Java\");strings.add(\"is\"); strings.add(\"cool\"); String message = String.join(\" \", strings); //message returned is: \"Java is cool\" Set<String> strings = new LinkedHashSet<>(); strings.add(\"Java\"); strings.add(\"is\"); strings.add(\"very\"); strings.add(\"cool\"); String message = String.join(\"-\", strings); //message returned is: \"Java-is-very-cool\" </pre> Note that if an individual element is null, then \"null\" is added.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toLowerCase(java.util.Locale locale)",
+    "name": "toLowerCase",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "toLowerCase(java.util.Locale locale)",
+      "comment": "Converts all of the characters in this String to lower case using the rules of the given Locale. Case mapping is based on the Unicode Standard version specified by the java.lang.Character Character class. Since case mappings are not always 1:1 char mappings, the resulting String may be a different length than the original String.  Examples of lowercase mappings are in the following table:  <tr> <th>Language Code of Locale</th> <th>Upper Case</th> <th>Lower Case</th> <th>Description</th> </tr> <tr> <td>tr (Turkish)</td> <td>&#92;u0130</td> <td>&#92;u0069</td> <td>capital letter I with dot above -> small letter i</td> </tr> <tr> <td>tr (Turkish)</td> <td>&#92;u0049</td> <td>&#92;u0131</td> <td>capital letter I -> small letter dotless i </td> </tr> <tr> <td>(all)</td> <td>French Fries</td> <td>french fries</td> <td>lowercased all chars in String</td> </tr> <tr> <td>(all)</td> <td><img src=\"doc-files/capiota.gif\" alt=\"capiota\"><img src=\"doc-files/capchi.gif\" alt=\"capchi\"> <img src=\"doc-files/captheta.gif\" alt=\"captheta\"><img src=\"doc-files/capupsil.gif\" alt=\"capupsil\"> <img src=\"doc-files/capsigma.gif\" alt=\"capsigma\"></td> <td><img src=\"doc-files/iota.gif\" alt=\"iota\"><img src=\"doc-files/chi.gif\" alt=\"chi\"> <img src=\"doc-files/theta.gif\" alt=\"theta\"><img src=\"doc-files/upsilon.gif\" alt=\"upsilon\"> <img src=\"doc-files/sigma1.gif\" alt=\"sigma\"></td> <td>lowercased all chars in String</td> </tr>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toLowerCase()",
+    "name": "toLowerCase",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toLowerCase()",
+      "comment": "Converts all of the characters in this String to lower case using the rules of the default locale. This is equivalent to calling toLowerCase(Locale.getDefault()).  Note: This method is locale sensitive, and may produce unexpected results if used for strings that are intended to be interpreted locale independently. Examples are programming language identifiers, protocol keys, and HTML tags. For instance, \"TITLE\".toLowerCase() in a Turkish locale returns \"t\\u005Cu0131tle\", where '\\u005Cu0131' is the LATIN SMALL LETTER DOTLESS I character. To obtain correct results for locale insensitive strings, use toLowerCase(Locale.ROOT).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals[receiverObjectClone.toLowerCase(java.util.Locale.getDefault());]"
+    }
+  },
+  {
+    "signature": "toUpperCase(java.util.Locale locale)",
+    "name": "toUpperCase",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "toUpperCase(java.util.Locale locale)",
+      "comment": "Converts all of the characters in this String to upper case using the rules of the given Locale. Case mapping is based on the Unicode Standard version specified by the java.lang.Character Character class. Since case mappings are not always 1:1 char mappings, the resulting String may be a different length than the original String.  Examples of locale-sensitive and 1:M case mappings are in the following table.  <tr> <th>Language Code of Locale</th> <th>Lower Case</th> <th>Upper Case</th> <th>Description</th> </tr> <tr> <td>tr (Turkish)</td> <td>&#92;u0069</td> <td>&#92;u0130</td> <td>small letter i -> capital letter I with dot above</td> </tr> <tr> <td>tr (Turkish)</td> <td>&#92;u0131</td> <td>&#92;u0049</td> <td>small letter dotless i -> capital letter I</td> </tr> <tr> <td>(all)</td> <td>&#92;u00df</td> <td>&#92;u0053 &#92;u0053</td> <td>small letter sharp s -> two letters: SS</td> </tr> <tr> <td>(all)</td> <td>Fahrvergn&uuml;gen</td> <td>FAHRVERGN&Uuml;GEN</td> <td></td> </tr>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toUpperCase()",
+    "name": "toUpperCase",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toUpperCase()",
+      "comment": "Converts all of the characters in this String to upper case using the rules of the default locale. This method is equivalent to toUpperCase(Locale.getDefault()).  Note: This method is locale sensitive, and may produce unexpected results if used for strings that are intended to be interpreted locale independently. Examples are programming language identifiers, protocol keys, and HTML tags. For instance, \"title\".toUpperCase() in a Turkish locale returns \"T\\u005Cu0130TLE\", where '\\u005Cu0130' is the LATIN CAPITAL LETTER I WITH DOT ABOVE character. To obtain correct results for locale insensitive strings, use toUpperCase(Locale.ROOT).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals[receiverObjectClone.toUpperCase(java.util.Locale.getDefault());]"
+    }
+  },
+  {
+    "signature": "trim()",
+    "name": "trim",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "trim()",
+      "comment": "Returns a string whose value is this string, with any leading and trailing whitespace removed.  If this String object represents an empty character sequence, or the first and last characters of character sequence represented by this String object both have codes greater than '\\u005Cu0020' (the space character), then a reference to this String object is returned.  Otherwise, if there is no character with a code greater than '\\u005Cu0020' in the string, then a String object representing an empty string is returned.  Otherwise, let k be the index of the first character in the string whose code is greater than '\\u005Cu0020', and let m be the index of the last character in the string whose code is greater than '\\u005Cu0020'. A String object is returned, representing the substring of this string that begins with the character at index k and ends with the character at index m-that is, the result of this.substring(k, m + 1).  This method may be used to trim whitespace (as defined above) from the beginning and end of a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "This object (which is already a string!) is itself returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toCharArray()",
+    "name": "toCharArray",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char[]",
+      "name": "char[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toCharArray()",
+      "comment": "Converts this string to a new character array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "format(java.lang.String format, java.lang.Object... args)",
+    "name": "format",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "format"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "format(java.lang.String format, java.lang.Object... args)",
+      "comment": "Returns a formatted string using the specified format string and arguments.  The locale always used is the one returned by java.util.Locale#getDefault() Locale.getDefault().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "format(java.util.Locale l, java.lang.String format, java.lang.Object... args)",
+    "name": "format",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "l"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "format"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "format(java.util.Locale l, java.lang.String format, java.lang.Object... args)",
+      "comment": "Returns a formatted string using the specified locale, format string, and arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(java.lang.Object obj)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(java.lang.Object obj)",
+      "comment": "Returns the string representation of the Object argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(char[] data)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(char[] data)",
+      "comment": "Returns the string representation of the char array argument. The contents of the character array are copied; subsequent modification of the character array does not affect the returned string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(char[] data, int offset, int count)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(char[] data, int offset, int count)",
+      "comment": "Returns the string representation of a specific subarray of the char array argument.  The offset argument is the index of the first character of the subarray. The count argument specifies the length of the subarray. The contents of the subarray are copied; subsequent modification of the character array does not affect the returned string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyValueOf(char[] data, int offset, int count)",
+    "name": "copyValueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "equivalence": {
+      "member": "copyValueOf(char[] data, int offset, int count)",
+      "comment": "Equivalent to #valueOf(char[], int, int).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(java.lang.String.valueOf(args[0],args[1],args[1]))"
+    }
+  },
+  {
+    "signature": "copyValueOf(char[] data)",
+    "name": "copyValueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "member": "copyValueOf(char[] data)",
+      "comment": "Equivalent to #valueOf(char[]).",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(java.lang.String.valueOf(args[0]))"
+    }
+  },
+  {
+    "signature": "valueOf(boolean b)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(boolean b)",
+      "comment": "Returns the string representation of the boolean argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(char c)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "char",
+          "name": "char",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(char c)",
+      "comment": "Returns the string representation of the char argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(int i)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(int i)",
+      "comment": "Returns the string representation of the int argument.  The representation is exactly the one returned by the Integer.toString method of one argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(long l)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(long l)",
+      "comment": "Returns the string representation of the long argument.  The representation is exactly the one returned by the Long.toString method of one argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(float f)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "f"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(float f)",
+      "comment": "Returns the string representation of the float argument.  The representation is exactly the one returned by the Float.toString method of one argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(double d)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "member": "valueOf(double d)",
+      "comment": "Returns the string representation of the double argument.  The representation is exactly the one returned by the Double.toString method of one argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intern()",
+    "name": "intern",
+    "containingClass": {
+      "qualifiedName": "java.lang.String",
+      "name": "String",
+      "isArray": false
+    },
+    "targetClass": "java.lang.String",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "intern()",
+      "comment": "Returns a canonical representation for the string object.  A pool of strings, initially empty, is maintained privately by the class String.  When the intern method is invoked, if the pool already contains a string equal to this String object as determined by the #equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the pool and a reference to this String object is returned.  It follows that for any two strings s and t, s.intern() == t.intern() is true if and only if s.equals(t) is true.  All literal strings and string-valued constant expressions are interned. String literals are defined in section 3.10.5 of the The Java&trade; Language Specification.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -57,7 +57,7 @@
     "equivalence": {
       "comment": "Run this animation at the given startTime. If the startTime has already passed, the animation will run synchronously as if it started at the specified start time. If the animation is already running, it will be canceled first.  This is equivalent to run(duration, startTime, null).",
       "kind": "FreeText",
-      "condition": "receiverObjectID.run(args[0],args[1],null); receiverObjectClone.run(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.run(args[0],args[1],null); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -145,7 +145,7 @@
     "equivalence": {
       "comment": "Immediately run this animation. If the animation is already running, it will be canceled first.  This is equivalent to run(duration, null).",
       "kind": "FreeText",
-      "condition": "receiverObjectID.run(args[0],null); receiverObjectClone.run(args[0]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.run(args[0],null); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {

@@ -330,7 +330,7 @@
     "equivalence": {
       "comment": "Does this request have content or a source parameter? Use this instead of #hasContent() if this RestHandler treats the source parameter like the body content.",
       "kind": "FreeText",
-      "condition": "methodResultID==(receiverObjectID.hasContent())"
+      "condition": "methodResultID==(receiverObjectClone.hasContent())"
     }
   },
   {
@@ -1105,7 +1105,7 @@
     "equivalence": {
       "comment": "Get the value of the header or null if not found. This method only retrieves the first header value if multiple values are sent. Use of #getAllHeaderValues(String) should be preferred",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getAllHeaderValues(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.getAllHeaderValues(args[0]))"
     }
   }
 ]

@@ -1,0 +1,589 @@
+[
+  {
+    "signature": "weka.core.BinarySparseInstance(weka.core.Instance instance)",
+    "name": "weka.core.BinarySparseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.BinarySparseInstance(weka.core.Instance instance)",
+      "comment": "Constructor that generates a sparse instance from the given instance. Reference to the dataset is set to null. (ie. the instance doesn't have access to information about the attribute types)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.BinarySparseInstance(weka.core.SparseInstance instance)",
+    "name": "weka.core.BinarySparseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SparseInstance",
+          "name": "SparseInstance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.BinarySparseInstance(weka.core.SparseInstance instance)",
+      "comment": "Constructor that copies the info from the given instance. Reference to the dataset is set to null. (ie. the instance doesn't have access to information about the attribute types)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.BinarySparseInstance(double weight, double[] attValues)",
+    "name": "weka.core.BinarySparseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "attValues"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.BinarySparseInstance(double weight, double[] attValues)",
+      "comment": "Constructor that generates a sparse instance from the given parameters. Reference to the dataset is set to null. (ie. the instance doesn't have access to information about the attribute types)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.BinarySparseInstance(double weight, int[] indices, int maxNumValues)",
+    "name": "weka.core.BinarySparseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "indices"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxNumValues"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.BinarySparseInstance(double weight, int[] indices, int maxNumValues)",
+      "comment": "Constructor that inititalizes instance variable with given values. Reference to the dataset is set to null. (ie. the instance doesn't have access to information about the attribute types)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.BinarySparseInstance(int numAttributes)",
+    "name": "weka.core.BinarySparseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numAttributes"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.BinarySparseInstance(int numAttributes)",
+      "comment": "Constructor of an instance that sets weight to one, all values to 1, and the reference to the dataset to null. (ie. the instance doesn't have access to information about the attribute types)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "copy()",
+      "comment": "Produces a shallow copy of this instance. The copy has access to the same dataset. (if you want to make a copy that doesn't have access to the dataset, use new BinarySparseInstance(instance)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy(double[] values)",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "copy(double[] values)",
+      "comment": "Copies the instance but fills up its values based on the given array of doubles. The copy has access to the same dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeInstance(weka.core.Instance inst)",
+    "name": "mergeInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "equivalence": {
+      "member": "mergeInstance(weka.core.Instance inst)",
+      "comment": "Merges this instance with the given instance and returns the result. Dataset is set to null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceMissingValues(double[] array)",
+    "name": "replaceMissingValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceMissingValues(double[] array)",
+      "comment": "Does nothing, since we don't support missing values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(int attIndex, double value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValue(int attIndex, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format). Performs a deep copy of the vector of attribute values before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValueSparse(int indexOfIndex, double value)",
+    "name": "setValueSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValueSparse(int indexOfIndex, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format). Performs a deep copy of the vector of attribute values before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toDoubleArray()",
+    "name": "toDoubleArray",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toDoubleArray()",
+      "comment": "Returns the values of each attribute as an array of doubles.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Returns the description of one instance in sparse format. If the instance doesn't have access to a dataset, it returns the internal floating-point values. Quotes string values that contain whitespace characters.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "value(int attIndex)",
+    "name": "value",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "value(int attIndex)",
+      "comment": "Returns an instance's attribute value in internal format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueSparse(int indexOfIndex)",
+    "name": "valueSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "valueSparse(int indexOfIndex)",
+      "comment": "Returns an instance's attribute value in internal format. Does exactly the same thing as value() if applied to an Instance.",
+      "kind": "FreeText",
+      "condition": "methodResultID==receiverObjectID.value(args[0])"
+    }
+  },
+  {
+    "signature": "forceDeleteAttributeAt(int position)",
+    "name": "forceDeleteAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "forceDeleteAttributeAt(int position)",
+      "comment": "Deletes an attribute at the given position (0 to numAttributes() - 1).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forceInsertAttributeAt(int position)",
+    "name": "forceInsertAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "forceInsertAttributeAt(int position)",
+      "comment": "Inserts an attribute at the given position (0 to numAttributes()) and sets its value to 1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] options)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] options)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.core.BinarySparseInstance",
+      "name": "BinarySparseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BinarySparseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

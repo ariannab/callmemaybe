@@ -1,0 +1,112 @@
+[
+  {
+    "signature": "setBatchSize(java.lang.String size)",
+    "name": "setBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.core.BatchPredictor",
+      "name": "BatchPredictor",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BatchPredictor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "equivalence": {
+      "member": "setBatchSize(java.lang.String size)",
+      "comment": "Set the batch size to use. The implementer will prefer (but not necessarily expect) this many instances to be passed in to distributionsForInstances().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBatchSize()",
+    "name": "getBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.core.BatchPredictor",
+      "name": "BatchPredictor",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BatchPredictor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getBatchSize()",
+      "comment": "Get the batch size to use. The implementer will prefer (but not necessarily expect) this many instances to be passed in to distributionsForInstances(). Allows the preferred batch size to be encapsulated with the client.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionsForInstances(weka.core.Instances insts)",
+    "name": "distributionsForInstances",
+    "containingClass": {
+      "qualifiedName": "weka.core.BatchPredictor",
+      "name": "BatchPredictor",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BatchPredictor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "equivalence": {
+      "member": "distributionsForInstances(weka.core.Instances insts)",
+      "comment": "Batch scoring method",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "implementsMoreEfficientBatchPrediction()",
+    "name": "implementsMoreEfficientBatchPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.core.BatchPredictor",
+      "name": "BatchPredictor",
+      "isArray": false
+    },
+    "targetClass": "weka.core.BatchPredictor",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "implementsMoreEfficientBatchPrediction()",
+      "comment": "Returns true if this BatchPredictor can generate batch predictions in an efficient manner.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

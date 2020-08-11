@@ -718,7 +718,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call #compose(Rotation, RotationConvention) compose(r, RotationConvention.VECTOR_OPERATOR).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.compose(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+      "condition": "methodResultID.equals(receiverObjectClone.compose(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
     }
   },
   {
@@ -807,7 +807,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call #getAngles(RotationOrder, RotationConvention) getAngles(order, RotationConvention.VECTOR_OPERATOR)",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getAngles(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.getAngles(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
     }
   },
   {
@@ -908,7 +908,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call #composeInverse(Rotation, RotationConvention) composeInverse(r, RotationConvention.VECTOR_OPERATOR).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.composeInverse(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+      "condition": "methodResultID.equals(receiverObjectClone.composeInverse(args[0],org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
     }
   },
   {
@@ -952,7 +952,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call #getAxis(RotationConvention) getAxis(RotationConvention.VECTOR_OPERATOR)",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getAxis(org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
+      "condition": "methodResultID.equals(receiverObjectClone.getAxis(org.apache.commons.math3.geometry.euclidean.threed.RotationConvention.VECTOR_OPERATOR))"
     }
   }
 ]

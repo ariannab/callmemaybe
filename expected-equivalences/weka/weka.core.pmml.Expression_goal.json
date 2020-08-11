@@ -1,0 +1,450 @@
+[
+  {
+    "signature": "weka.core.pmml.Expression(weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs)",
+    "name": "weka.core.pmml.Expression",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.FieldMetaInfo$Optype",
+          "name": "Optype",
+          "isArray": false
+        },
+        "name": "opType"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "fieldDefs"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.pmml.Expression(weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFieldDefs(java.util.ArrayList<weka.core.Attribute> fieldDefs)",
+    "name": "setFieldDefs",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "fieldDefs"
+      }
+    ],
+    "equivalence": {
+      "member": "setFieldDefs(java.util.ArrayList<weka.core.Attribute> fieldDefs)",
+      "comment": "Set the field definitions for this Expression to use",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResult(double[] incoming)",
+    "name": "getResult",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "incoming"
+      }
+    ],
+    "equivalence": {
+      "member": "getResult(double[] incoming)",
+      "comment": "Get the result of evaluating the expression. In the case of a continuous optype, a real number is returned; in the case of a categorical/ordinal optype, the index of the nominal value is returned as a double.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResultContinuous(double[] incoming)",
+    "name": "getResultContinuous",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "incoming"
+      }
+    ],
+    "equivalence": {
+      "member": "getResultContinuous(double[] incoming)",
+      "comment": "Get the result of evaluating the expression for continuous optype. Is the same as calling getResult() when the optype is continuous.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResultCategorical(double[] incoming)",
+    "name": "getResultCategorical",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "incoming"
+      }
+    ],
+    "equivalence": {
+      "member": "getResultCategorical(double[] incoming)",
+      "comment": "Gets the result of evaluating the expression when the optype is categorical or ordinal as the actual String value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutputDef()",
+    "name": "getOutputDef",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOutputDef()",
+      "comment": "Return the structure of the result of applying this Expression as an Attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExpression(org.w3c.dom.Node container, weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs, weka.core.pmml.TransformationDictionary transDict)",
+    "name": "getExpression",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "weka.core.pmml.Expression",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "container"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.FieldMetaInfo$Optype",
+          "name": "Optype",
+          "isArray": false
+        },
+        "name": "opType"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "fieldDefs"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.TransformationDictionary",
+          "name": "TransformationDictionary",
+          "isArray": false
+        },
+        "name": "transDict"
+      }
+    ],
+    "equivalence": {
+      "member": "getExpression(org.w3c.dom.Node container, weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs, weka.core.pmml.TransformationDictionary transDict)",
+      "comment": "Static factory method that returns a subclass of Expression that encapsulates the type of expression contained in the Element supplied. Assumes that there is just one expression contained in the supplied Element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExpression(java.lang.String name, org.w3c.dom.Node expression, weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs, weka.core.pmml.TransformationDictionary transDict)",
+    "name": "getExpression",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "weka.core.pmml.Expression",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "expression"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.FieldMetaInfo$Optype",
+          "name": "Optype",
+          "isArray": false
+        },
+        "name": "opType"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "fieldDefs"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.TransformationDictionary",
+          "name": "TransformationDictionary",
+          "isArray": false
+        },
+        "name": "transDict"
+      }
+    ],
+    "equivalence": {
+      "member": "getExpression(java.lang.String name, org.w3c.dom.Node expression, weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs, weka.core.pmml.TransformationDictionary transDict)",
+      "comment": "Static factory method that returns a subclass of Expression that encapsulates the type of expression supplied as an argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFieldDef(java.lang.String attName)",
+    "name": "getFieldDef",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "attName"
+      }
+    ],
+    "equivalence": {
+      "member": "getFieldDef(java.lang.String attName)",
+      "comment": "Return the named attribute from the list of reference fields.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFieldDefIndex(java.lang.String attName)",
+    "name": "getFieldDefIndex",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "attName"
+      }
+    ],
+    "equivalence": {
+      "member": "getFieldDefIndex(java.lang.String attName)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptype()",
+    "name": "getOptype",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.pmml.FieldMetaInfo$Optype",
+      "name": "weka.core.pmml.FieldMetaInfo$Optype",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOptype()",
+      "comment": "Get the optype of the result of applying this Expression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(java.lang.String pad)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Expression",
+      "name": "Expression",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Expression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "pad"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(java.lang.String pad)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

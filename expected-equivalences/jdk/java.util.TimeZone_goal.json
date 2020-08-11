@@ -1,0 +1,793 @@
+[
+  {
+    "signature": "java.util.TimeZone()",
+    "name": "java.util.TimeZone",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "java.util.TimeZone()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOffset(int era, int year, int month, int day, int dayOfWeek, int milliseconds)",
+    "name": "getOffset",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "era"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "year"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "month"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "day"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfWeek"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "milliseconds"
+      }
+    ],
+    "equivalence": {
+      "member": "getOffset(int era, int year, int month, int day, int dayOfWeek, int milliseconds)",
+      "comment": "Gets the time zone offset, for current date, modified in case of daylight savings. This is the offset to add to UTC to get local time.  This method returns a historically correct offset if an underlying TimeZone implementation subclass supports historical Daylight Saving Time schedule and GMT offset changes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOffset(long date)",
+    "name": "getOffset",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "date"
+      }
+    ],
+    "equivalence": {
+      "member": "getOffset(long date)",
+      "comment": "Returns the offset of this time zone from UTC at the specified date. If Daylight Saving Time is in effect at the specified date, the offset value is adjusted with the amount of daylight saving.  This method returns a historically correct offset value if an underlying TimeZone implementation subclass supports historical Daylight Saving Time schedule and GMT offset changes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOffsets(long date, int[] offsets)",
+    "name": "getOffsets",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "date"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "offsets"
+      }
+    ],
+    "equivalence": {
+      "member": "getOffsets(long date, int[] offsets)",
+      "comment": "Gets the raw GMT offset and the amount of daylight saving of this time zone at the given time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRawOffset(int offsetMillis)",
+    "name": "setRawOffset",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offsetMillis"
+      }
+    ],
+    "equivalence": {
+      "member": "setRawOffset(int offsetMillis)",
+      "comment": "Sets the base time zone offset to GMT. This is the offset to add to UTC to get local time.  If an underlying TimeZone implementation subclass supports historical GMT offset changes, the specified GMT offset is set as the latest GMT offset and the difference from the known latest GMT offset value is used to adjust all historical GMT offset values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRawOffset()",
+    "name": "getRawOffset",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRawOffset()",
+      "comment": "Returns the amount of time in milliseconds to add to UTC to get standard time in this time zone. Because this value is not affected by daylight saving time, it is called raw offset.  If an underlying TimeZone implementation subclass supports historical GMT offset changes, the method returns the raw offset value of the current date. In Honolulu, for example, its raw offset changed from GMT-10:30 to GMT-10:00 in 1947, and this method always returns -36000000 milliseconds (i.e., -10 hours).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getID()",
+    "name": "getID",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getID()",
+      "comment": "Gets the ID of this time zone.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setID(java.lang.String ID)",
+    "name": "setID",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "ID"
+      }
+    ],
+    "equivalence": {
+      "member": "setID(java.lang.String ID)",
+      "comment": "Sets the time zone ID. This does not change any other data in the time zone object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayName()",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDisplayName()",
+      "comment": "Returns a long standard time name of this TimeZone suitable for presentation to the user in the default locale. This method is equivalent to: <pre> getDisplayName(false, #LONG, Locale.getDefault(Locale.Category#DISPLAY)) </pre>",
+      "kind": "FreeText",
+      "condition": "methodResultID == getDisplayName(false, java.util.TimeZone.LONG, Locale.getDefault(Locale.Category#DISPLAY))"
+    }
+  },
+  {
+    "signature": "getDisplayName(java.util.Locale locale)",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "getDisplayName(java.util.Locale locale)",
+      "comment": "Returns a long standard time name of this TimeZone suitable for presentation to the user in the specified locale. This method is equivalent to: <pre> getDisplayName(false, #LONG, locale) </pre>",
+      "kind": "FreeText",
+      "condition": "methodResultID == getDisplayName(false, java.util.TimeZone.LONG, args[0])"
+    }
+  },
+  {
+    "signature": "getDisplayName(boolean daylight, int style)",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "daylight"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "style"
+      }
+    ],
+    "equivalence": {
+      "member": "getDisplayName(boolean daylight, int style)",
+      "comment": "Returns a name in the specified style of this TimeZone suitable for presentation to the user in the default locale. If the specified daylight is true, a Daylight Saving Time name is returned (even if this TimeZone doesn't observe Daylight Saving Time). Otherwise, a Standard Time name is returned. This method is equivalent to: <pre> getDisplayName(daylight, style, Locale.getDefault(Locale.Category#DISPLAY)) </pre>",
+      "kind": "FreeText",
+      "condition": "methodResultID == getDisplayName(args[0], args[1], Locale.getDefault(Locale.Category#DISPLAY)) "
+    }
+  },
+  {
+    "signature": "getDisplayName(boolean daylight, int style, java.util.Locale locale)",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "daylight"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "style"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "getDisplayName(boolean daylight, int style, java.util.Locale locale)",
+      "comment": "Returns a name in the specified style of this TimeZone suitable for presentation to the user in the specified locale. If the specified daylight is true, a Daylight Saving Time name is returned (even if this TimeZone doesn't observe Daylight Saving Time). Otherwise, a Standard Time name is returned. When looking up a time zone name, the ResourceBundle.Control#getCandidateLocales(String,Locale) default Locale search path of ResourceBundle derived from the specified locale is used. (No ResourceBundle.Control#getFallbackLocale(String,Locale) fallback Locale search is performed.) If a time zone name in any Locale of the search path, including Locale#ROOT, is found, the name is returned. Otherwise, a string in the normalized custom ID format is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDSTSavings()",
+    "name": "getDSTSavings",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDSTSavings()",
+      "comment": "Returns the amount of time to be added to local standard time to get local wall clock time. The default implementation returns 3600000 milliseconds (i.e., one hour) if a call to #useDaylightTime() returns true. Otherwise, 0 (zero) is returned. If an underlying TimeZone implementation subclass supports historical and future Daylight Saving Time schedule changes, this method returns the amount of saving time of the last known Daylight Saving Time rule that can be a future prediction. If the amount of saving time at any given time stamp is required, construct a Calendar with this TimeZone and the time stamp, and call Calendar#get(int) Calendar.get(}Calendar#DST_OFFSET{@code ).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useDaylightTime()",
+    "name": "useDaylightTime",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "useDaylightTime()",
+      "comment": "Queries if this TimeZone uses Daylight Saving Time. If an underlying TimeZone implementation subclass supports historical and future Daylight Saving Time schedule changes, this method refers to the last known Daylight Saving Time rule that can be a future prediction and may not be the same as the current rule. Consider calling #observesDaylightTime() if the current rule should also be taken into account.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "observesDaylightTime()",
+    "name": "observesDaylightTime",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "observesDaylightTime()",
+      "comment": "Returns true if this TimeZone is currently in Daylight Saving Time, or if a transition from Standard Time to Daylight Saving Time occurs at any future time. The default implementation returns true if useDaylightTime() or inDaylightTime(new Date()) returns true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inDaylightTime(java.util.Date date)",
+    "name": "inDaylightTime",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Date",
+          "name": "Date",
+          "isArray": false
+        },
+        "name": "date"
+      }
+    ],
+    "equivalence": {
+      "member": "inDaylightTime(java.util.Date date)",
+      "comment": "Queries if the given date is in Daylight Saving Time in this time zone.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTimeZone(java.lang.String ID)",
+    "name": "getTimeZone",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "java.util.TimeZone",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "ID"
+      }
+    ],
+    "equivalence": {
+      "member": "getTimeZone(java.lang.String ID)",
+      "comment": "Gets the TimeZone for the given ID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTimeZone(java.time.ZoneId zoneId)",
+    "name": "getTimeZone",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "java.util.TimeZone",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zoneId"
+      }
+    ],
+    "equivalence": {
+      "member": "getTimeZone(java.time.ZoneId zoneId)",
+      "comment": "Gets the TimeZone for the given zoneId.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toZoneId()",
+    "name": "toZoneId",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.ZoneId",
+      "name": "java.time.ZoneId",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toZoneId()",
+      "comment": "Converts this TimeZone object to a ZoneId.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAvailableIDs(int rawOffset)",
+    "name": "getAvailableIDs",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rawOffset"
+      }
+    ],
+    "equivalence": {
+      "member": "getAvailableIDs(int rawOffset)",
+      "comment": "Gets the available IDs according to the given time zone offset in milliseconds.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAvailableIDs()",
+    "name": "getAvailableIDs",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAvailableIDs()",
+      "comment": "Gets all the available IDs supported.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefault()",
+    "name": "getDefault",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "java.util.TimeZone",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDefault()",
+      "comment": "Gets the default TimeZone of the Java virtual machine. If the cached default TimeZone is available, its clone is returned. Otherwise, the method takes the following steps to determine the default time zone.  <li>Use the user.timezone property value as the default time zone ID if it's available.</li> <li>Detect the platform time zone ID. The source of the platform time zone and ID mapping may vary with implementation.</li> <li>Use GMT as the last resort if the given or detected time zone ID is unknown.</li>  The default TimeZone created from the ID is cached, and its clone is returned. The user.timezone property value is set to the ID upon return.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultRef()",
+    "name": "getDefaultRef",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "java.util.TimeZone",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDefaultRef()",
+      "comment": "Returns the reference to the default TimeZone object. This method doesn't create a clone.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDefault(java.util.TimeZone zone)",
+    "name": "setDefault",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TimeZone",
+          "name": "TimeZone",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "setDefault(java.util.TimeZone zone)",
+      "comment": "Sets the TimeZone that is returned by the getDefault method. zone is cached. If zone is null, the cached default TimeZone is cleared. This method doesn't change the value of the user.timezone property.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasSameRules(java.util.TimeZone other)",
+    "name": "hasSameRules",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TimeZone",
+          "name": "TimeZone",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "hasSameRules(java.util.TimeZone other)",
+      "comment": "Returns true if this zone has the same rule and offset as another zone. That is, if this zone differs only in ID, if at all. Returns false if the other zone is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.TimeZone",
+      "name": "TimeZone",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimeZone",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "clone()",
+      "comment": "Creates a copy of this TimeZone.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

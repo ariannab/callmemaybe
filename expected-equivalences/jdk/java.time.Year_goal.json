@@ -1,0 +1,1300 @@
+[
+  {
+    "signature": "now()",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "now()",
+      "comment": "Obtains the current year from the system clock in the default time-zone.  This will query the java.time.Clock#systemDefaultZone() system clock in the default time-zone to obtain the current year.  Using this method will prevent the ability to use an alternate clock for testing because the clock is hard-coded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now(java.time.ZoneId zone)",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "now(java.time.ZoneId zone)",
+      "comment": "Obtains the current year from the system clock in the specified time-zone.  This will query the Clock#system(java.time.ZoneId) system clock to obtain the current year. Specifying the time-zone avoids dependence on the default time-zone.  Using this method will prevent the ability to use an alternate clock for testing because the clock is hard-coded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now(java.time.Clock clock)",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Clock",
+          "name": "Clock",
+          "isArray": false
+        },
+        "name": "clock"
+      }
+    ],
+    "equivalence": {
+      "member": "now(java.time.Clock clock)",
+      "comment": "Obtains the current year from the specified clock.  This will query the specified clock to obtain the current year. Using this method allows the use of an alternate clock for testing. The alternate clock may be introduced using Clock dependency injection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(int isoYear)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "isoYear"
+      }
+    ],
+    "equivalence": {
+      "member": "of(int isoYear)",
+      "comment": "Obtains an instance of Year.  This method accepts a year value from the proleptic ISO calendar system.  The year 2AD/CE is represented by 2.<br> The year 1AD/CE is represented by 1.<br> The year 1BC/BCE is represented by 0.<br> The year 2BC/BCE is represented by -1.<br>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "from(java.time.temporal.TemporalAccessor temporal)",
+    "name": "from",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAccessor",
+          "name": "TemporalAccessor",
+          "isArray": false
+        },
+        "name": "temporal"
+      }
+    ],
+    "equivalence": {
+      "member": "from(java.time.temporal.TemporalAccessor temporal)",
+      "comment": "Obtains an instance of Year from a temporal object.  This obtains a year based on the specified temporal. A TemporalAccessor represents an arbitrary set of date and time information, which this factory converts to an instance of Year.  The conversion extracts the ChronoField#YEAR year field. The extraction is only permitted if the temporal object has an ISO chronology, or can be converted to a LocalDate.  This method matches the signature of the functional interface TemporalQuery allowing it to be used in queries via method reference, Year::from.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parse(java.lang.CharSequence text)",
+    "name": "parse",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "equivalence": {
+      "member": "parse(java.lang.CharSequence text)",
+      "comment": "Obtains an instance of Year from a text string such as 2007.  The string must represent a valid year. Years outside the range 0000 to 9999 must be prefixed by the plus or minus symbol.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parse(java.lang.CharSequence text, java.time.format.DateTimeFormatter formatter)",
+    "name": "parse",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.format.DateTimeFormatter",
+          "name": "DateTimeFormatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "equivalence": {
+      "member": "parse(java.lang.CharSequence text, java.time.format.DateTimeFormatter formatter)",
+      "comment": "Obtains an instance of Year from a text string using a specific formatter.  The text is parsed using the formatter, returning a year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLeap(long year)",
+    "name": "isLeap",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "year"
+      }
+    ],
+    "equivalence": {
+      "member": "isLeap(long year)",
+      "comment": "Checks if the year is a leap year, according to the ISO proleptic calendar system rules.  This method applies the current rules for leap years across the whole time-line. In general, a year is a leap year if it is divisible by four without remainder. However, years divisible by 100, are not leap years, with the exception of years divisible by 400 which are.  For example, 1904 is a leap year it is divisible by 4. 1900 was not a leap year as it is divisible by 100, however 2000 was a leap year as it is divisible by 400.  The calculation is proleptic - applying the same rules into the far future and far past. This is historically inaccurate, but is correct for the ISO-8601 standard.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValue()",
+    "name": "getValue",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getValue()",
+      "comment": "Gets the year value.  The year returned by this method is proleptic as per get(YEAR).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSupported(java.time.temporal.TemporalField field)",
+    "name": "isSupported",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "isSupported(java.time.temporal.TemporalField field)",
+      "comment": "Checks if the specified field is supported.  This checks if this year can be queried for the specified field. If false, then calling the #range(TemporalField) range, #get(TemporalField) get and #with(TemporalField, long) methods will throw an exception.  If the field is a ChronoField then the query is implemented here. The supported fields are:  <li>YEAR_OF_ERA <li>YEAR <li>ERA  All other ChronoField instances will return false.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.isSupportedBy(TemporalAccessor) passing this as the argument. Whether the field is supported is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSupported(java.time.temporal.TemporalUnit unit)",
+    "name": "isSupported",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "isSupported(java.time.temporal.TemporalUnit unit)",
+      "comment": "Checks if the specified unit is supported.  This checks if the specified unit can be added to, or subtracted from, this date-time. If false, then calling the #plus(long, TemporalUnit) and #minus(long, TemporalUnit) minus methods will throw an exception.  If the unit is a ChronoUnit then the query is implemented here. The supported units are:  <li>YEARS <li>DECADES <li>CENTURIES <li>MILLENNIA <li>ERAS  All other ChronoUnit instances will return false.  If the unit is not a ChronoUnit, then the result of this method is obtained by invoking TemporalUnit.isSupportedBy(Temporal) passing this as the argument. Whether the unit is supported is determined by the unit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range(java.time.temporal.TemporalField field)",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.temporal.ValueRange",
+      "name": "java.time.temporal.ValueRange",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "range(java.time.temporal.TemporalField field)",
+      "comment": "Gets the range of valid values for the specified field.  The range object expresses the minimum and maximum valid values for a field. This year is used to enhance the accuracy of the returned range. If it is not possible to return the range, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return appropriate range instances. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.rangeRefinedBy(TemporalAccessor) passing this as the argument. Whether the range can be obtained is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.time.temporal.TemporalField field)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "get(java.time.temporal.TemporalField field)",
+      "comment": "Gets the value of the specified field from this year as an int.  This queries this year for the value for the specified field. The returned value will always be within the valid range of values for the field. If it is not possible to return the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return valid values based on this year. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.getFrom(TemporalAccessor) passing this as the argument. Whether the value can be obtained, and what the value represents, is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLong(java.time.temporal.TemporalField field)",
+    "name": "getLong",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "getLong(java.time.temporal.TemporalField field)",
+      "comment": "Gets the value of the specified field from this year as a long.  This queries this year for the value for the specified field. If it is not possible to return the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return valid values based on this year. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.getFrom(TemporalAccessor) passing this as the argument. Whether the value can be obtained, and what the value represents, is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLeap()",
+    "name": "isLeap",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isLeap()",
+      "comment": "Checks if the year is a leap year, according to the ISO proleptic calendar system rules.  This method applies the current rules for leap years across the whole time-line. In general, a year is a leap year if it is divisible by four without remainder. However, years divisible by 100, are not leap years, with the exception of years divisible by 400 which are.  For example, 1904 is a leap year it is divisible by 4. 1900 was not a leap year as it is divisible by 100, however 2000 was a leap year as it is divisible by 400.  The calculation is proleptic - applying the same rules into the far future and far past. This is historically inaccurate, but is correct for the ISO-8601 standard.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isValidMonthDay(java.time.MonthDay monthDay)",
+    "name": "isValidMonthDay",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.MonthDay",
+          "name": "MonthDay",
+          "isArray": false
+        },
+        "name": "monthDay"
+      }
+    ],
+    "equivalence": {
+      "member": "isValidMonthDay(java.time.MonthDay monthDay)",
+      "comment": "Checks if the month-day is valid for this year.  This method checks whether this year and the input month and day form a valid date.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "length()",
+    "name": "length",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "length()",
+      "comment": "Gets the length of this year in days.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "with(java.time.temporal.TemporalAdjuster adjuster)",
+    "name": "with",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAdjuster",
+          "name": "TemporalAdjuster",
+          "isArray": false
+        },
+        "name": "adjuster"
+      }
+    ],
+    "equivalence": {
+      "member": "with(java.time.temporal.TemporalAdjuster adjuster)",
+      "comment": "Returns an adjusted copy of this year.  This returns a Year, based on this one, with the year adjusted. The adjustment takes place using the specified adjuster strategy object. Read the documentation of the adjuster to understand what adjustment will be made.  The result of this method is obtained by invoking the TemporalAdjuster#adjustInto(Temporal) method on the specified adjuster passing this as the argument.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "with(java.time.temporal.TemporalField field, long newValue)",
+    "name": "with",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "equivalence": {
+      "member": "with(java.time.temporal.TemporalField field, long newValue)",
+      "comment": "Returns a copy of this year with the specified field set to a new value.  This returns a Year, based on this one, with the value for the specified field changed. If it is not possible to set the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the adjustment is implemented here. The supported fields behave as follows:  <li>YEAR_OF_ERA - Returns a Year with the specified year-of-era The era will be unchanged. <li>YEAR - Returns a Year with the specified year. This completely replaces the date and is equivalent to #of(int). <li>ERA - Returns a Year with the specified era. The year-of-era will be unchanged.   In all cases, if the new value is outside the valid range of values for the field then a DateTimeException will be thrown.  All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.adjustInto(Temporal, long) passing this as the argument. In this case, the field determines whether and how to adjust the instant.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plus(java.time.temporal.TemporalAmount amountToAdd)",
+    "name": "plus",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAmount",
+          "name": "TemporalAmount",
+          "isArray": false
+        },
+        "name": "amountToAdd"
+      }
+    ],
+    "equivalence": {
+      "member": "plus(java.time.temporal.TemporalAmount amountToAdd)",
+      "comment": "Returns a copy of this year with the specified amount added.  This returns a Year, based on this one, with the specified amount added. The amount is typically Period but may be any other type implementing the TemporalAmount interface.  The calculation is delegated to the amount object by calling TemporalAmount#addTo(Temporal). The amount implementation is free to implement the addition in any way it wishes, however it typically calls back to #plus(long, TemporalUnit). Consult the documentation of the amount implementation to determine if it can be successfully added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plus(long amountToAdd, java.time.temporal.TemporalUnit unit)",
+    "name": "plus",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "amountToAdd"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "plus(long amountToAdd, java.time.temporal.TemporalUnit unit)",
+      "comment": "Returns a copy of this year with the specified amount added.  This returns a Year, based on this one, with the amount in terms of the unit added. If it is not possible to add the amount, because the unit is not supported or for some other reason, an exception is thrown.  If the field is a ChronoUnit then the addition is implemented here. The supported fields behave as follows:  <li>YEARS - Returns a Year with the specified number of years added. This is equivalent to #plusYears(long). <li>DECADES - Returns a Year with the specified number of decades added. This is equivalent to calling #plusYears(long) with the amount multiplied by 10. <li>CENTURIES - Returns a Year with the specified number of centuries added. This is equivalent to calling #plusYears(long) with the amount multiplied by 100. <li>MILLENNIA - Returns a Year with the specified number of millennia added. This is equivalent to calling #plusYears(long) with the amount multiplied by 1,000. <li>ERAS - Returns a Year with the specified number of eras added. Only two eras are supported so the amount must be one, zero or minus one. If the amount is non-zero then the year is changed such that the year-of-era is unchanged.   All other ChronoUnit instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoUnit, then the result of this method is obtained by invoking TemporalUnit.addTo(Temporal, long) passing this as the argument. In this case, the unit determines whether and how to perform the addition.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusYears(long yearsToAdd)",
+    "name": "plusYears",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "yearsToAdd"
+      }
+    ],
+    "equivalence": {
+      "member": "plusYears(long yearsToAdd)",
+      "comment": "Returns a copy of this year with the specified number of years added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minus(java.time.temporal.TemporalAmount amountToSubtract)",
+    "name": "minus",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAmount",
+          "name": "TemporalAmount",
+          "isArray": false
+        },
+        "name": "amountToSubtract"
+      }
+    ],
+    "equivalence": {
+      "member": "minus(java.time.temporal.TemporalAmount amountToSubtract)",
+      "comment": "Returns a copy of this year with the specified amount subtracted.  This returns a Year, based on this one, with the specified amount subtracted. The amount is typically Period but may be any other type implementing the TemporalAmount interface.  The calculation is delegated to the amount object by calling TemporalAmount#subtractFrom(Temporal). The amount implementation is free to implement the subtraction in any way it wishes, however it typically calls back to #minus(long, TemporalUnit). Consult the documentation of the amount implementation to determine if it can be successfully subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minus(long amountToSubtract, java.time.temporal.TemporalUnit unit)",
+    "name": "minus",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "amountToSubtract"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "minus(long amountToSubtract, java.time.temporal.TemporalUnit unit)",
+      "comment": "Returns a copy of this year with the specified amount subtracted.  This returns a Year, based on this one, with the amount in terms of the unit subtracted. If it is not possible to subtract the amount, because the unit is not supported or for some other reason, an exception is thrown.  This method is equivalent to #plus(long, TemporalUnit) with the amount negated. See that method for a full description of how addition, and thus subtraction, works.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectClone.plus(args[0],args[1]))"
+    }
+  },
+  {
+    "signature": "minusYears(long yearsToSubtract)",
+    "name": "minusYears",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "yearsToSubtract"
+      }
+    ],
+    "equivalence": {
+      "member": "minusYears(long yearsToSubtract)",
+      "comment": "Returns a copy of this year with the specified number of years subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "query(java.time.temporal.TemporalQuery<R> query)",
+    "name": "query",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalQuery",
+          "name": "TemporalQuery",
+          "isArray": false
+        },
+        "name": "query"
+      }
+    ],
+    "equivalence": {
+      "member": "query(java.time.temporal.TemporalQuery<R> query)",
+      "comment": "Queries this year using the specified query.  This queries this year using the specified query strategy object. The TemporalQuery object defines the logic to be used to obtain the result. Read the documentation of the query to understand what the result of this method will be.  The result of this method is obtained by invoking the TemporalQuery#queryFrom(TemporalAccessor) method on the specified query passing this as the argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "adjustInto(java.time.temporal.Temporal temporal)",
+    "name": "adjustInto",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.temporal.Temporal",
+      "name": "java.time.temporal.Temporal",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.Temporal",
+          "name": "Temporal",
+          "isArray": false
+        },
+        "name": "temporal"
+      }
+    ],
+    "equivalence": {
+      "member": "adjustInto(java.time.temporal.Temporal temporal)",
+      "comment": "Adjusts the specified temporal object to have this year.  This returns a temporal object of the same observable type as the input with the year changed to be the same as this.  The adjustment is equivalent to using Temporal#with(TemporalField, long) passing ChronoField#YEAR as the field. If the specified temporal object does not use the ISO calendar system then a DateTimeException is thrown.  In most cases, it is clearer to reverse the calling pattern by using Temporal#with(TemporalAdjuster):  // these two lines are equivalent, but the second approach is recommended temporal = thisYear.adjustInto(temporal); temporal = temporal.with(thisYear);   This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "until(java.time.temporal.Temporal endExclusive, java.time.temporal.TemporalUnit unit)",
+    "name": "until",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.Temporal",
+          "name": "Temporal",
+          "isArray": false
+        },
+        "name": "endExclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "until(java.time.temporal.Temporal endExclusive, java.time.temporal.TemporalUnit unit)",
+      "comment": "Calculates the amount of time until another year in terms of the specified unit.  This calculates the amount of time between two Year objects in terms of a single TemporalUnit. The start and end points are this and the specified year. The result will be negative if the end is before the start. The Temporal passed to this method is converted to a Year using #from(TemporalAccessor). For example, the period in decades between two year can be calculated using startYear.until(endYear, DECADES).  The calculation returns a whole number, representing the number of complete units between the two years. For example, the period in decades between 2012 and 2031 will only be one decade as it is one year short of two decades.  There are two equivalent ways of using this method. The first is to invoke this method. The second is to use TemporalUnit#between(Temporal, Temporal):  // these two lines are equivalent amount = start.until(end, YEARS); amount = YEARS.between(start, end);  The choice should be made based on which makes the code more readable.  The calculation is implemented in this method for ChronoUnit. The units YEARS, DECADES, CENTURIES, MILLENNIA and ERAS are supported. Other ChronoUnit values will throw an exception.  If the unit is not a ChronoUnit, then the result of this method is obtained by invoking TemporalUnit.between(Temporal, Temporal) passing this as the first argument and the converted input temporal as the second argument.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "format(java.time.format.DateTimeFormatter formatter)",
+    "name": "format",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.format.DateTimeFormatter",
+          "name": "DateTimeFormatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "equivalence": {
+      "member": "format(java.time.format.DateTimeFormatter formatter)",
+      "comment": "Formats this year using the specified formatter.  This year will be passed to the formatter to produce a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atDay(int dayOfYear)",
+    "name": "atDay",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.LocalDate",
+      "name": "java.time.LocalDate",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfYear"
+      }
+    ],
+    "equivalence": {
+      "member": "atDay(int dayOfYear)",
+      "comment": "Combines this year with a day-of-year to create a LocalDate.  This returns a LocalDate formed from this year and the specified day-of-year.  The day-of-year value 366 is only valid in a leap year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atMonth(java.time.Month month)",
+    "name": "atMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.YearMonth",
+      "name": "java.time.YearMonth",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Month",
+          "name": "Month",
+          "isArray": false
+        },
+        "name": "month"
+      }
+    ],
+    "equivalence": {
+      "member": "atMonth(java.time.Month month)",
+      "comment": "Combines this year with a month to create a YearMonth.  This returns a YearMonth formed from this year and the specified month. All possible combinations of year and month are valid.  This method can be used as part of a chain to produce a date:  LocalDate date = year.atMonth(month).atDay(day);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atMonth(int month)",
+    "name": "atMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.YearMonth",
+      "name": "java.time.YearMonth",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "month"
+      }
+    ],
+    "equivalence": {
+      "member": "atMonth(int month)",
+      "comment": "Combines this year with a month to create a YearMonth.  This returns a YearMonth formed from this year and the specified month. All possible combinations of year and month are valid.  This method can be used as part of a chain to produce a date:  LocalDate date = year.atMonth(month).atDay(day);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atMonthDay(java.time.MonthDay monthDay)",
+    "name": "atMonthDay",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.LocalDate",
+      "name": "java.time.LocalDate",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.MonthDay",
+          "name": "MonthDay",
+          "isArray": false
+        },
+        "name": "monthDay"
+      }
+    ],
+    "equivalence": {
+      "member": "atMonthDay(java.time.MonthDay monthDay)",
+      "comment": "Combines this year with a month-day to create a LocalDate.  This returns a LocalDate formed from this year and the specified month-day.  A month-day of February 29th will be adjusted to February 28th in the resulting date if the year is not a leap year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareTo(java.time.Year other)",
+    "name": "compareTo",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Year",
+          "name": "Year",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "compareTo(java.time.Year other)",
+      "comment": "Compares this year to another year.  The comparison is based on the value of the year. It is \"consistent with equals\", as defined by Comparable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isAfter(java.time.Year other)",
+    "name": "isAfter",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Year",
+          "name": "Year",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isAfter(java.time.Year other)",
+      "comment": "Is this year after the specified year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isBefore(java.time.Year other)",
+    "name": "isBefore",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Year",
+          "name": "Year",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isBefore(java.time.Year other)",
+      "comment": "Is this year before the specified year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Checks if this year is equal to another year.  The comparison is based on the time-line position of the years.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hashCode()",
+      "comment": "A hash code for this year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Outputs this year as a String.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeExternal(java.io.DataOutput out)",
+    "name": "writeExternal",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.DataOutput",
+          "name": "DataOutput",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "member": "writeExternal(java.io.DataOutput out)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readExternal(java.io.DataInput in)",
+    "name": "readExternal",
+    "containingClass": {
+      "qualifiedName": "java.time.Year",
+      "name": "Year",
+      "isArray": false
+    },
+    "targetClass": "java.time.Year",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Year",
+      "name": "java.time.Year",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.DataInput",
+          "name": "DataInput",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "member": "readExternal(java.io.DataInput in)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

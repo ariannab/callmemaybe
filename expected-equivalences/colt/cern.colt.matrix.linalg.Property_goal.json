@@ -1,0 +1,1356 @@
+[
+  {
+    "signature": "cern.colt.matrix.linalg.Property(double newTolerance)",
+    "name": "cern.colt.matrix.linalg.Property",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "newTolerance"
+      }
+    ],
+    "equivalence": {
+      "member": "cern.colt.matrix.linalg.Property(double newTolerance)",
+      "comment": "Constructs an instance with a tolerance of Math.abs(newTolerance).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "blanks(int length)",
+    "name": "blanks",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "equivalence": {
+      "member": "blanks(int length)",
+      "comment": "Returns a String with length blanks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkRectangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "checkRectangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "checkRectangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "Checks whether the given matrix A is rectangular.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkSquare(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "checkSquare",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "checkSquare(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "Checks whether the given matrix A is square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "density(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "density",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "density(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "Returns the matrix's fraction of non-zero cells; A.cardinality() / A.size().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(cern.colt.matrix.DoubleMatrix1D A, double value)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix1D",
+          "name": "DoubleMatrix1D",
+          "isArray": false
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(cern.colt.matrix.DoubleMatrix1D A, double value)",
+      "comment": "Returns whether all cells of the given matrix A are equal to the given value. The result is true if and only if A != null and ! (Math.abs(value - A[i]) > tolerance()) holds for all coordinates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(cern.colt.matrix.DoubleMatrix1D A, cern.colt.matrix.DoubleMatrix1D B)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix1D",
+          "name": "DoubleMatrix1D",
+          "isArray": false
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix1D",
+          "name": "DoubleMatrix1D",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(cern.colt.matrix.DoubleMatrix1D A, cern.colt.matrix.DoubleMatrix1D B)",
+      "comment": "Returns whether both given matrices A and B are equal. The result is true if A==B. Otherwise, the result is true if and only if both arguments are != null, have the same size and ! (Math.abs(A[i] - B[i]) > tolerance()) holds for all indexes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(cern.colt.matrix.DoubleMatrix2D A, double value)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(cern.colt.matrix.DoubleMatrix2D A, double value)",
+      "comment": "Returns whether all cells of the given matrix A are equal to the given value. The result is true if and only if A != null and ! (Math.abs(value - A[row,col]) > tolerance()) holds for all coordinates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(cern.colt.matrix.DoubleMatrix2D A, cern.colt.matrix.DoubleMatrix2D B)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(cern.colt.matrix.DoubleMatrix2D A, cern.colt.matrix.DoubleMatrix2D B)",
+      "comment": "Returns whether both given matrices A and B are equal. The result is true if A==B. Otherwise, the result is true if and only if both arguments are != null, have the same number of columns and rows and ! (Math.abs(A[row,col] - B[row,col]) > tolerance()) holds for all coordinates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(cern.colt.matrix.DoubleMatrix3D A, double value)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix3D",
+          "name": "DoubleMatrix3D",
+          "isArray": false
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(cern.colt.matrix.DoubleMatrix3D A, double value)",
+      "comment": "Returns whether all cells of the given matrix A are equal to the given value. The result is true if and only if A != null and ! (Math.abs(value - A[slice,row,col]) > tolerance()) holds for all coordinates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(cern.colt.matrix.DoubleMatrix3D A, cern.colt.matrix.DoubleMatrix3D B)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix3D",
+          "name": "DoubleMatrix3D",
+          "isArray": false
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix3D",
+          "name": "DoubleMatrix3D",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(cern.colt.matrix.DoubleMatrix3D A, cern.colt.matrix.DoubleMatrix3D B)",
+      "comment": "Returns whether both given matrices A and B are equal. The result is true if A==B. Otherwise, the result is true if and only if both arguments are != null, have the same number of columns, rows and slices, and ! (Math.abs(A[slice,row,col] - B[slice,row,col]) > tolerance()) holds for all coordinates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateNonSingular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "generateNonSingular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "generateNonSingular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(cern.colt.list.ObjectArrayList list, int index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.ObjectArrayList",
+          "name": "ObjectArrayList",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "get(cern.colt.list.ObjectArrayList list, int index)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isDiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isDiagonal",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isDiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is diagonal if A[i,j] == 0 whenever i != j. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isDiagonallyDominantByColumn(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isDiagonallyDominantByColumn",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isDiagonallyDominantByColumn(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is diagonally dominant by column if the absolute value of each diagonal element is larger than the sum of the absolute values of the off-diagonal elements in the corresponding column. returns true if for all i: abs(A[i,i]) > Sum(abs(A[j,i])); j != i. Matrix may but need not be square.  Note: Ignores tolerance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isDiagonallyDominantByRow(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isDiagonallyDominantByRow",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isDiagonallyDominantByRow(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is diagonally dominant by row if the absolute value of each diagonal element is larger than the sum of the absolute values of the off-diagonal elements in the corresponding row. returns true if for all i: abs(A[i,i]) > Sum(abs(A[i,j])); j != i. Matrix may but need not be square.  Note: Ignores tolerance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isIdentity(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isIdentity",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isIdentity(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is an identity matrix if A[i,i] == 1 and all other cells are zero. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLowerBidiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isLowerBidiagonal",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isLowerBidiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is lower bidiagonal if A[i,j]==0 unless i==j || i==j+1. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLowerTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isLowerTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isLowerTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is lower triangular if A[i,j]==0 whenever i < j. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isNonNegative(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isNonNegative",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isNonNegative(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is non-negative if A[i,j] >= 0 holds for all cells.  Note: Ignores tolerance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isOrthogonal(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isOrthogonal",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isOrthogonal(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A square matrix A is orthogonal if A*transpose(A) = I.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPositive(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isPositive",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isPositive(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is positive if A[i,j] > 0 holds for all cells.  Note: Ignores tolerance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSingular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isSingular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isSingular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is singular if it has no inverse, that is, iff det(A)==0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSkewSymmetric(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isSkewSymmetric",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isSkewSymmetric(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A square matrix A is skew-symmetric if A = -transpose(A), that is A[i,j] == -A[j,i].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSquare(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isSquare",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isSquare(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is square if it has the same number of rows and columns.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isStrictlyLowerTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isStrictlyLowerTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isStrictlyLowerTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is strictly lower triangular if A[i,j]==0 whenever i <= j. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isStrictlyTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isStrictlyTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isStrictlyTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is strictly triangular if it is triangular and its diagonal elements all equal 0. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isStrictlyUpperTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isStrictlyUpperTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isStrictlyUpperTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is strictly upper triangular if A[i,j]==0 whenever i >= j. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSymmetric(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isSymmetric",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isSymmetric(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is symmetric if A = tranpose(A), that is A[i,j] == A[j,i].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is triangular iff it is either upper or lower triangular. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isTridiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isTridiagonal",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isTridiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is tridiagonal if A[i,j]==0 whenever Math.abs(i-j) > 1. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUnitTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isUnitTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isUnitTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is unit triangular if it is triangular and its diagonal elements all equal 1. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUpperBidiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isUpperBidiagonal",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isUpperBidiagonal(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is upper bidiagonal if A[i,j]==0 unless i==j || i==j-1. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUpperTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isUpperTriangular",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isUpperTriangular(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is upper triangular if A[i,j]==0 whenever i > j. Matrix may but need not be square.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isZero(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "isZero",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "isZero(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "A matrix A is zero if all its cells are zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerBandwidth(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "lowerBandwidth",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "lowerBandwidth(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "semiBandwidth(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "semiBandwidth",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "semiBandwidth(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTolerance(double newTolerance)",
+    "name": "setTolerance",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "newTolerance"
+      }
+    ],
+    "equivalence": {
+      "member": "setTolerance(double newTolerance)",
+      "comment": "Sets the tolerance to Math.abs(newTolerance).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tolerance()",
+    "name": "tolerance",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "tolerance()",
+      "comment": "Returns the current tolerance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "upperBandwidth(cern.colt.matrix.DoubleMatrix2D A)",
+    "name": "upperBandwidth",
+    "containingClass": {
+      "qualifiedName": "cern.colt.matrix.linalg.Property",
+      "name": "Property",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.matrix.linalg.Property",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.matrix.DoubleMatrix2D",
+          "name": "DoubleMatrix2D",
+          "isArray": false
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "upperBandwidth(cern.colt.matrix.DoubleMatrix2D A)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

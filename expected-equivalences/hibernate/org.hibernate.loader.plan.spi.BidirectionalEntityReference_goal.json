@@ -1,0 +1,48 @@
+[
+  {
+    "signature": "getTargetEntityReference()",
+    "name": "getTargetEntityReference",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.loader.plan.spi.BidirectionalEntityReference",
+      "name": "BidirectionalEntityReference",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.loader.plan.spi.BidirectionalEntityReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.loader.plan.spi.EntityReference",
+      "name": "org.hibernate.loader.plan.spi.EntityReference",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTargetEntityReference()",
+      "comment": "Get the targeted EntityReference",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQuerySpaceUid()",
+    "name": "getQuerySpaceUid",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.loader.plan.spi.BidirectionalEntityReference",
+      "name": "BidirectionalEntityReference",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.loader.plan.spi.BidirectionalEntityReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getQuerySpaceUid()",
+      "comment": "The query space UID returned using #getQuerySpaceUid() must be the same as returned by #getTargetEntityReference()#getQuerySpaceUid()",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectClone.getTargetEntityReference())"
+    }
+  }
+]

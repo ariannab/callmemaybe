@@ -1,0 +1,1564 @@
+[
+  {
+    "signature": "attribute(int index)",
+    "name": "attribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "attribute(int index)",
+      "comment": "Returns the attribute with the given index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attributeSparse(int indexOfIndex)",
+    "name": "attributeSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "attributeSparse(int indexOfIndex)",
+      "comment": "Returns the attribute with the given index in the sparse representation. Same as attribute(int) for a DenseInstance.",
+      "kind": "FreeText",
+      "condition": "if(receiverObjectID instanceof DenseInstance){methodResultID.equals(receiverObjectClone.attribute(args[0]))}"
+    }
+  },
+  {
+    "signature": "classAttribute()",
+    "name": "classAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classAttribute()",
+      "comment": "Returns class attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classIndex()",
+    "name": "classIndex",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classIndex()",
+      "comment": "Returns the class attribute's index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classIsMissing()",
+    "name": "classIsMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classIsMissing()",
+      "comment": "Tests if an instance's class is missing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classValue()",
+    "name": "classValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classValue()",
+      "comment": "Returns an instance's class value as a floating-point number.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy(double[] values)",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "copy(double[] values)",
+      "comment": "Copies the instance but fills up its values based on the given array of doubles. The copy has access to the same dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dataset()",
+    "name": "dataset",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "dataset()",
+      "comment": "Returns the dataset this instance has access to. (ie. obtains information about attribute types from) Null if the instance doesn't have access to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteAttributeAt(int position)",
+    "name": "deleteAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "deleteAttributeAt(int position)",
+      "comment": "Deletes an attribute at the given position (0 to numAttributes() - 1). Only succeeds if the instance does not have access to any dataset because otherwise inconsistencies could be introduced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateAttributes()",
+    "name": "enumerateAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Attribute>",
+      "name": "java.util.Enumeration<weka.core.Attribute>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "enumerateAttributes()",
+      "comment": "Returns an enumeration of all the attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalHeaders(weka.core.Instance inst)",
+    "name": "equalHeaders",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "equivalence": {
+      "member": "equalHeaders(weka.core.Instance inst)",
+      "comment": "Tests if the headers of two instances are equivalent.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalHeadersMsg(weka.core.Instance inst)",
+    "name": "equalHeadersMsg",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "equivalence": {
+      "member": "equalHeadersMsg(weka.core.Instance inst)",
+      "comment": "Checks if the headers of two instances are equivalent. If not, then returns a message why they differ.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasMissingValue()",
+    "name": "hasMissingValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hasMissingValue()",
+      "comment": "Tests whether an instance has a missing value. Skips the class attribute if set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "index(int position)",
+    "name": "index",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "index(int position)",
+      "comment": "Returns the index of the attribute stored at the given position in the sparse representation. Identify function for an instance of type DenseInstance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "insertAttributeAt(int position)",
+    "name": "insertAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "insertAttributeAt(int position)",
+      "comment": "Inserts an attribute at the given position (0 to numAttributes()). Only succeeds if the instance does not have access to any dataset because otherwise inconsistencies could be introduced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isMissing(int attIndex)",
+    "name": "isMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "isMissing(int attIndex)",
+      "comment": "Tests if a specific value is \"missing\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isMissingSparse(int indexOfIndex)",
+    "name": "isMissingSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "isMissingSparse(int indexOfIndex)",
+      "comment": "Tests if a specific value is \"missing\" in the sparse representation. Samse as isMissing(int) for a DenseInstance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isMissing(weka.core.Attribute att)",
+    "name": "isMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "isMissing(weka.core.Attribute att)",
+      "comment": "Tests if a specific value is \"missing\". The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeInstance(weka.core.Instance inst)",
+    "name": "mergeInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "equivalence": {
+      "member": "mergeInstance(weka.core.Instance inst)",
+      "comment": "Merges this instance with the given instance and returns the result. Dataset is set to null. The returned instance is of the same type as this instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numAttributes()",
+    "name": "numAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numAttributes()",
+      "comment": "Returns the number of attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numClasses()",
+    "name": "numClasses",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numClasses()",
+      "comment": "Returns the number of class labels.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numValues()",
+    "name": "numValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numValues()",
+      "comment": "Returns the number of values present in a sparse representation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceMissingValues(double[] array)",
+    "name": "replaceMissingValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceMissingValues(double[] array)",
+      "comment": "Replaces all missing values in the instance with the values contained in the given array. A deep copy of the vector of attribute values is performed before the values are replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassMissing()",
+    "name": "setClassMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "setClassMissing()",
+      "comment": "Sets the class value of an instance to be \"missing\". A deep copy of the vector of attribute values is performed before the value is set to be missing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassValue(double value)",
+    "name": "setClassValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setClassValue(double value)",
+      "comment": "Sets the class value of an instance to the given value (internal floating-point format). A deep copy of the vector of attribute values is performed before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassValue(java.lang.String value)",
+    "name": "setClassValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setClassValue(java.lang.String value)",
+      "comment": "Sets the class value of an instance to the given value. A deep copy of the vector of attribute values is performed before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDataset(weka.core.Instances instances)",
+    "name": "setDataset",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "equivalence": {
+      "member": "setDataset(weka.core.Instances instances)",
+      "comment": "Sets the reference to the dataset. Does not check if the instance is compatible with the dataset. Note: the dataset does not know about this instance. If the structure of the dataset's header gets changed, this instance will not be adjusted automatically.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMissing(int attIndex)",
+    "name": "setMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "setMissing(int attIndex)",
+      "comment": "Sets a specific value to be \"missing\". Performs a deep copy of the vector of attribute values before the value is set to be missing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMissing(weka.core.Attribute att)",
+    "name": "setMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "setMissing(weka.core.Attribute att)",
+      "comment": "Sets a specific value to be \"missing\". Performs a deep copy of the vector of attribute values before the value is set to be missing. The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(int attIndex, double value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValue(int attIndex, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format). Performs a deep copy of the vector of attribute values before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValueSparse(int indexOfIndex, double value)",
+    "name": "setValueSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValueSparse(int indexOfIndex, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format), given an index into the sparse representation. Performs a deep copy of the vector of attribute values before the value is set. Same as setValue(int, double) for a DenseInstance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(int attIndex, java.lang.String value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValue(int attIndex, java.lang.String value)",
+      "comment": "Sets a value of a nominal or string attribute to the given value. Performs a deep copy of the vector of attribute values before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(weka.core.Attribute att, double value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValue(weka.core.Attribute att, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format). Performs a deep copy of the vector of attribute values before the value is set, so if you are planning on calling setValue many times it may be faster to create a new instance using toDoubleArray. The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(weka.core.Attribute att, java.lang.String value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValue(weka.core.Attribute att, java.lang.String value)",
+      "comment": "Sets a value of an nominal or string attribute to the given value. Performs a deep copy of the vector of attribute values before the value is set, so if you are planning on calling setValue many times it may be faster to create a new instance using toDoubleArray. The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeight(double weight)",
+    "name": "setWeight",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "equivalence": {
+      "member": "setWeight(double weight)",
+      "comment": "Sets the weight of an instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "relationalValue(int attIndex)",
+    "name": "relationalValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "relationalValue(int attIndex)",
+      "comment": "Returns the relational value of a relational attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "relationalValue(weka.core.Attribute att)",
+    "name": "relationalValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "relationalValue(weka.core.Attribute att)",
+      "comment": "Returns the relational value of a relational attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stringValue(int attIndex)",
+    "name": "stringValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "stringValue(int attIndex)",
+      "comment": "Returns the value of a nominal, string, date, or relational attribute for the instance as a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stringValue(weka.core.Attribute att)",
+    "name": "stringValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "stringValue(weka.core.Attribute att)",
+      "comment": "Returns the value of a nominal, string, date, or relational attribute for the instance as a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toDoubleArray()",
+    "name": "toDoubleArray",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toDoubleArray()",
+      "comment": "Returns the values of each attribute as an array of doubles.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStringNoWeight(int afterDecimalPoint)",
+    "name": "toStringNoWeight",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "afterDecimalPoint"
+      }
+    ],
+    "equivalence": {
+      "member": "toStringNoWeight(int afterDecimalPoint)",
+      "comment": "Returns the description of one instance (without weight appended). If the instance doesn't have access to a dataset, it returns the internal floating-point values. Quotes string values that contain whitespace characters. This method is used by getRandomNumberGenerator() in Instances.java in order to maintain backwards compatibility with weka 3.4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStringNoWeight()",
+    "name": "toStringNoWeight",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toStringNoWeight()",
+      "comment": "Returns the description of one instance (without weight appended). If the instance doesn't have access to a dataset, it returns the internal floating-point values. Quotes string values that contain whitespace characters. This method is used by getRandomNumberGenerator() in Instances.java in order to maintain backwards compatibility with weka 3.4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStringMaxDecimalDigits(int afterDecimalPoint)",
+    "name": "toStringMaxDecimalDigits",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "afterDecimalPoint"
+      }
+    ],
+    "equivalence": {
+      "member": "toStringMaxDecimalDigits(int afterDecimalPoint)",
+      "comment": "Returns the description of one instance with any numeric values printed at the supplied maximum number of decimal places. If the instance doesn't have access to a dataset, it returns the internal floating-point values. Quotes string values that contain whitespace characters.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(int attIndex, int afterDecimalPoint)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "afterDecimalPoint"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(int attIndex, int afterDecimalPoint)",
+      "comment": "Returns the description of one value of the instance as a string. If the instance doesn't have access to a dataset, it returns the internal floating-point value. Quotes string values that contain whitespace characters, or if they are a question mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(int attIndex)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(int attIndex)",
+      "comment": "Returns the description of one value of the instance as a string. If the instance doesn't have access to a dataset, it returns the internal floating-point value. Quotes string values that contain whitespace characters, or if they are a question mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(weka.core.Attribute att, int afterDecimalPoint)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "afterDecimalPoint"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(weka.core.Attribute att, int afterDecimalPoint)",
+      "comment": "Returns the description of one value of the instance as a string. If the instance doesn't have access to a dataset it returns the internal floating-point value. Quotes string values that contain whitespace characters, or if they are a question mark. The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(weka.core.Attribute att)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(weka.core.Attribute att)",
+      "comment": "Returns the description of one value of the instance as a string. If the instance doesn't have access to a dataset it returns the internal floating-point value. Quotes string values that contain whitespace characters, or if they are a question mark. The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "value(int attIndex)",
+    "name": "value",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "value(int attIndex)",
+      "comment": "Returns an instance's attribute value in internal format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueSparse(int indexOfIndex)",
+    "name": "valueSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "valueSparse(int indexOfIndex)",
+      "comment": "Returns an instance's attribute value in internal format, given an index in the sparse representation. Same as value(int) for a DenseInstance.",
+      "kind": "FreeText",
+      "condition": "if(receiverObjectID instanceof DenseInstance){methodResultID==(receiverObjectClone.value(args[0]));}"
+    }
+  },
+  {
+    "signature": "value(weka.core.Attribute att)",
+    "name": "value",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "value(weka.core.Attribute att)",
+      "comment": "Returns an instance's attribute value in internal format. The given attribute has to belong to a dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weight()",
+    "name": "weight",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "Instance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "weight()",
+      "comment": "Returns the instance's weight.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

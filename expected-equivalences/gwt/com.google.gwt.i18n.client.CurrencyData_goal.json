@@ -84,7 +84,7 @@
     "equivalence": {
       "comment": "Returns the default symbol to use for this currency, intended to be recognizable in most locales. If such a symbol is not available, it is acceptable to return the same value as #getCurrencySymbol().",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getCurrencySymbol())"
+      "condition": "methodResultID.equals(receiverObjectClone.getCurrencySymbol())"
     }
   },
   {
@@ -150,7 +150,7 @@
     "equivalence": {
       "comment": "Returns the simplest symbol to use for this currency, which is not guaranteed to be unique -- for example, this might return \"$\" for both USD and CAD. It is acceptable to return the same value as #getCurrencySymbol().",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getCurrencySymbol())"
+      "condition": "methodResultID.equals(receiverObjectClone.getCurrencySymbol())"
     }
   },
   {

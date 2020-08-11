@@ -339,7 +339,7 @@
     "equivalence": {
       "comment": "Compares a and b \"fuzzily,\" with a tolerance for nearly-equal values. <p>This method is equivalent to fuzzyEquals(a, b, tolerance) ? 0 : Double.compare(a, b). In particular, like double), it treats all NaN values as equal and greater than all other values (including Double#POSITIVE_INFINITY). <p>This is not a total ordering and is not suitable for use in Comparable#compareTo implementations. In particular, it is not transitive.",
       "kind": "FreeText",
-      "condition": "methodResultID==[ com.google.common.math.DoubleMath.fuzzyEquals(args[0], args[1], args[2]) ? 0 : Double.compare(args[0], args[1]) ]"
+      "condition": "methodResultID==(com.google.common.math.DoubleMath.fuzzyEquals(args[0], args[1], args[2]) ? 0 : Double.compare(args[0], args[1]))"
     }
   },
   {

@@ -1,0 +1,765 @@
+[
+  {
+    "signature": "binEntries(int indexX, int indexY, int indexZ)",
+    "name": "binEntries",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexX"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexY"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexZ"
+      }
+    ],
+    "equivalence": {
+      "member": "binEntries(int indexX, int indexY, int indexZ)",
+      "comment": "The number of entries (ie the number of times fill was called for this bin).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "binError(int indexX, int indexY, int indexZ)",
+    "name": "binError",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexX"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexY"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexZ"
+      }
+    ],
+    "equivalence": {
+      "member": "binError(int indexX, int indexY, int indexZ)",
+      "comment": "The error on this bin.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "binHeight(int indexX, int indexY, int indexZ)",
+    "name": "binHeight",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexX"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexY"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexZ"
+      }
+    ],
+    "equivalence": {
+      "member": "binHeight(int indexX, int indexY, int indexZ)",
+      "comment": "Total height of the corresponding bin (ie the sum of the weights in this bin).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fill(double x, double y, double z)",
+    "name": "fill",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "z"
+      }
+    ],
+    "equivalence": {
+      "member": "fill(double x, double y, double z)",
+      "comment": "Fill the histogram with weight 1; equivalent to fill(x,y,z,1)..",
+      "kind": "FreeText",
+      "condition": "receiverObjectClone.fill(args[0],args[1],args[2],1);\nreceiverObjectClone.equals(receiverObjectID)"
+    }
+  },
+  {
+    "signature": "fill(double x, double y, double z, double weight)",
+    "name": "fill",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "z"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "equivalence": {
+      "member": "fill(double x, double y, double z, double weight)",
+      "comment": "Fill the histogram with specified weight.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanX()",
+    "name": "meanX",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "meanX()",
+      "comment": "Returns the mean of the histogram, as calculated on filling-time projected on the X axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanY()",
+    "name": "meanY",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "meanY()",
+      "comment": "Returns the mean of the histogram, as calculated on filling-time projected on the Y axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanZ()",
+    "name": "meanZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "meanZ()",
+      "comment": "Returns the mean of the histogram, as calculated on filling-time projected on the Z axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minMaxBins()",
+    "name": "minMaxBins",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[]",
+      "name": "int[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "minMaxBins()",
+      "comment": "Indexes of the in-range bins containing the smallest and largest binHeight(), respectively.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "projectionXY()",
+    "name": "projectionXY",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "projectionXY()",
+      "comment": "Create a projection parallel to the XY plane. Equivalent to sliceXY(UNDERFLOW,OVERFLOW).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "projectionXZ()",
+    "name": "projectionXZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "projectionXZ()",
+      "comment": "Create a projection parallel to the XZ plane. Equivalent to sliceXZ(UNDERFLOW,OVERFLOW).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "projectionYZ()",
+    "name": "projectionYZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "projectionYZ()",
+      "comment": "Create a projection parallel to the YZ plane. Equivalent to sliceYZ(UNDERFLOW,OVERFLOW).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rmsX()",
+    "name": "rmsX",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rmsX()",
+      "comment": "Returns the rms of the histogram as calculated on filling-time projected on the X axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rmsY()",
+    "name": "rmsY",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rmsY()",
+      "comment": "Returns the rms of the histogram as calculated on filling-time projected on the Y axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rmsZ()",
+    "name": "rmsZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rmsZ()",
+      "comment": "Returns the rms of the histogram as calculated on filling-time projected on the Z axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sliceXY(int indexZ)",
+    "name": "sliceXY",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexZ"
+      }
+    ],
+    "equivalence": {
+      "member": "sliceXY(int indexZ)",
+      "comment": "Create a slice parallel to the XY plane at bin indexZ and one bin wide. Equivalent to sliceXY(indexZ,indexZ).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sliceXY(int indexZ1, int indexZ2)",
+    "name": "sliceXY",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexZ1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexZ2"
+      }
+    ],
+    "equivalence": {
+      "member": "sliceXY(int indexZ1, int indexZ2)",
+      "comment": "Create a slice parallel to the XY plane, between \"indexZ1\" and \"indexZ2\" (inclusive). The returned IHistogram2D represents an instantaneous snapshot of the histogram at the time the slice was created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sliceXZ(int indexY)",
+    "name": "sliceXZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexY"
+      }
+    ],
+    "equivalence": {
+      "member": "sliceXZ(int indexY)",
+      "comment": "Create a slice parallel to the XZ plane at bin indexY and one bin wide. Equivalent to sliceXZ(indexY,indexY).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sliceXZ(int indexY1, int indexY2)",
+    "name": "sliceXZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexY1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexY2"
+      }
+    ],
+    "equivalence": {
+      "member": "sliceXZ(int indexY1, int indexY2)",
+      "comment": "Create a slice parallel to the XZ plane, between \"indexY1\" and \"indexY2\" (inclusive). The returned IHistogram2D represents an instantaneous snapshot of the histogram at the time the slice was created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sliceYZ(int indexX)",
+    "name": "sliceYZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexX"
+      }
+    ],
+    "equivalence": {
+      "member": "sliceYZ(int indexX)",
+      "comment": "Create a slice parallel to the YZ plane at bin indexX and one bin wide. Equivalent to sliceYZ(indexX,indexX).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sliceYZ(int indexX1, int indexX2)",
+    "name": "sliceYZ",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IHistogram2D",
+      "name": "hep.aida.IHistogram2D",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexX1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexX2"
+      }
+    ],
+    "equivalence": {
+      "member": "sliceYZ(int indexX1, int indexX2)",
+      "comment": "Create a slice parallel to the YZ plane, between \"indexX1\" and \"indexX2\" (inclusive). The returned IHistogram2D represents an instantaneous snapshot of the histogram at the time the slice was created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "xAxis()",
+    "name": "xAxis",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IAxis",
+      "name": "hep.aida.IAxis",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "xAxis()",
+      "comment": "Return the X axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "yAxis()",
+    "name": "yAxis",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IAxis",
+      "name": "hep.aida.IAxis",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "yAxis()",
+      "comment": "Return the Y axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "zAxis()",
+    "name": "zAxis",
+    "containingClass": {
+      "qualifiedName": "hep.aida.IHistogram3D",
+      "name": "IHistogram3D",
+      "isArray": false
+    },
+    "targetClass": "hep.aida.IHistogram3D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "hep.aida.IAxis",
+      "name": "hep.aida.IAxis",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "zAxis()",
+      "comment": "Return the Z axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

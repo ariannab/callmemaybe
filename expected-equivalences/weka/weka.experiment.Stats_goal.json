@@ -1,0 +1,247 @@
+[
+  {
+    "signature": "add(double value)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "add(double value)",
+      "comment": "Adds a value to the observed values It's equivalent to add(value, 1)",
+      "kind": "FreeText",
+      "condition": "receiverObjectClone.add(args[0],1);\nreceiverObjectClone.equals(receiverObjectID)"
+    }
+  },
+  {
+    "signature": "add(double value, double weight)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "equivalence": {
+      "member": "add(double value, double weight)",
+      "comment": "Adds a weighted value to the observed values",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(double value)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "subtract(double value)",
+      "comment": "Removes a value to the observed values (no checking is done that the value being removed was actually added). It's equivalent to subtract(value, 1)",
+      "kind": "FreeText",
+      "condition": "receiverObjectClone.subtract(args[0],1);\nreceiverObjectClone.equals(receiverObjectID)"
+    }
+  },
+  {
+    "signature": "subtract(double value, double weight)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "equivalence": {
+      "member": "subtract(double value, double weight)",
+      "comment": "Subtracts a weighted value from the observed values",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateDerived()",
+    "name": "calculateDerived",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "calculateDerived()",
+      "comment": "Tells the object to calculate any statistics that don't have their values automatically updated during add. Currently updates the mean and standard deviation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Returns a string summarising the stats so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.experiment.Stats",
+      "name": "Stats",
+      "isArray": false
+    },
+    "targetClass": "weka.experiment.Stats",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Tests the paired stats object from the command line. reads line from stdin, expecting two values per line.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

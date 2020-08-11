@@ -1,0 +1,152 @@
+[
+  {
+    "signature": "getAnyConnection()",
+    "name": "getAnyConnection",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+      "name": "MultiTenantConnectionProvider",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.Connection",
+      "name": "java.sql.Connection",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAnyConnection()",
+      "comment": "Allows access to the database metadata of the underlying database(s) in situations where we do not have a tenant id (like startup processing, for example).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "releaseAnyConnection(java.sql.Connection connection)",
+    "name": "releaseAnyConnection",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+      "name": "MultiTenantConnectionProvider",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Connection",
+          "name": "Connection",
+          "isArray": false
+        },
+        "name": "connection"
+      }
+    ],
+    "equivalence": {
+      "member": "releaseAnyConnection(java.sql.Connection connection)",
+      "comment": "Release a connection obtained from #getAnyConnection",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getConnection(java.lang.String tenantIdentifier)",
+    "name": "getConnection",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+      "name": "MultiTenantConnectionProvider",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.Connection",
+      "name": "java.sql.Connection",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "tenantIdentifier"
+      }
+    ],
+    "equivalence": {
+      "member": "getConnection(java.lang.String tenantIdentifier)",
+      "comment": "Obtains a connection for Hibernate use according to the underlying strategy of this provider.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "releaseConnection(java.lang.String tenantIdentifier, java.sql.Connection connection)",
+    "name": "releaseConnection",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+      "name": "MultiTenantConnectionProvider",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "tenantIdentifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.sql.Connection",
+          "name": "Connection",
+          "isArray": false
+        },
+        "name": "connection"
+      }
+    ],
+    "equivalence": {
+      "member": "releaseConnection(java.lang.String tenantIdentifier, java.sql.Connection connection)",
+      "comment": "Release a connection from Hibernate use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "supportsAggressiveRelease()",
+    "name": "supportsAggressiveRelease",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+      "name": "MultiTenantConnectionProvider",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.connections.spi.MultiTenantConnectionProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "supportsAggressiveRelease()",
+      "comment": "Does this connection provider support aggressive release of JDBC connections and re-acquisition of those connections (if need be) later?  Typically, this is only true in managed environments where a container tracks connections by transaction or thread. Note that JTA semantic depends on the fact that the underlying connection provider does support aggressive release.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

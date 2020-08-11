@@ -1,0 +1,204 @@
+[
+  {
+    "signature": "weka.core.pmml.Apply(org.w3c.dom.Element apply, weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs, weka.core.pmml.TransformationDictionary transDict)",
+    "name": "weka.core.pmml.Apply",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Apply",
+      "name": "Apply",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Apply",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "apply"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.FieldMetaInfo$Optype",
+          "name": "Optype",
+          "isArray": false
+        },
+        "name": "opType"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "fieldDefs"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.TransformationDictionary",
+          "name": "TransformationDictionary",
+          "isArray": false
+        },
+        "name": "transDict"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.pmml.Apply(org.w3c.dom.Element apply, weka.core.pmml.FieldMetaInfo$Optype opType, java.util.ArrayList<weka.core.Attribute> fieldDefs, weka.core.pmml.TransformationDictionary transDict)",
+      "comment": "Constructor. Reads the function name and argument Expressions for this Apply Expression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFieldDefs(java.util.ArrayList<weka.core.Attribute> fieldDefs)",
+    "name": "setFieldDefs",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Apply",
+      "name": "Apply",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Apply",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "fieldDefs"
+      }
+    ],
+    "equivalence": {
+      "member": "setFieldDefs(java.util.ArrayList<weka.core.Attribute> fieldDefs)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResult(double[] incoming)",
+    "name": "getResult",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Apply",
+      "name": "Apply",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Apply",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "incoming"
+      }
+    ],
+    "equivalence": {
+      "member": "getResult(double[] incoming)",
+      "comment": "Get the result of evaluating the expression. In the case of a continuous optype, a real number is returned; in the case of a categorical/ordinal optype, the index of the nominal value is returned as a double.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResultCategorical(double[] incoming)",
+    "name": "getResultCategorical",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Apply",
+      "name": "Apply",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Apply",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "incoming"
+      }
+    ],
+    "equivalence": {
+      "member": "getResultCategorical(double[] incoming)",
+      "comment": "Get the result of evaluating the expression for continuous optype. Is the same as calling getResult() when the optype is continuous.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutputDef()",
+    "name": "getOutputDef",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Apply",
+      "name": "Apply",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Apply",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOutputDef()",
+      "comment": "Return the structure of the result of applying this Expression as an Attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(java.lang.String pad)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.Apply",
+      "name": "Apply",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.Apply",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "pad"
+      }
+    ],
+    "equivalence": {
+      "member": "toString(java.lang.String pad)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

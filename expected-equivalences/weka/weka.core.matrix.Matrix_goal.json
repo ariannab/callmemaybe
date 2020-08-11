@@ -1,0 +1,2390 @@
+[
+  {
+    "signature": "weka.core.matrix.Matrix(int m, int n)",
+    "name": "weka.core.matrix.Matrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.matrix.Matrix(int m, int n)",
+      "comment": "Construct an m-by-n matrix of zeros.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.matrix.Matrix(int m, int n, double s)",
+    "name": "weka.core.matrix.Matrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.matrix.Matrix(int m, int n, double s)",
+      "comment": "Construct an m-by-n constant matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.matrix.Matrix(double[][] A)",
+    "name": "weka.core.matrix.Matrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.matrix.Matrix(double[][] A)",
+      "comment": "Construct a matrix from a 2-D array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.matrix.Matrix(double[][] A, int m, int n)",
+    "name": "weka.core.matrix.Matrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "A"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.matrix.Matrix(double[][] A, int m, int n)",
+      "comment": "Construct a matrix quickly without checking arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.matrix.Matrix(double[] vals, int m)",
+    "name": "weka.core.matrix.Matrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "vals"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.matrix.Matrix(double[] vals, int m)",
+      "comment": "Construct a matrix from a one-dimensional packed array",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.matrix.Matrix(java.io.Reader r)",
+    "name": "weka.core.matrix.Matrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Reader",
+          "name": "Reader",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.matrix.Matrix(java.io.Reader r)",
+      "comment": "Reads a matrix from a reader. The first line in the file should contain the number of rows and columns. Subsequent lines contain elements of the matrix. (FracPete: taken from old weka.core.Matrix class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "constructWithCopy(double[][] A)",
+    "name": "constructWithCopy",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "A"
+      }
+    ],
+    "equivalence": {
+      "member": "constructWithCopy(double[][] A)",
+      "comment": "Construct a matrix from a copy of a 2-D array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "copy()",
+      "comment": "Make a deep copy of a matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "clone()",
+      "comment": "Clone the Matrix object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getArray()",
+    "name": "getArray",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getArray()",
+      "comment": "Access the internal two-dimensional array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getArrayCopy()",
+    "name": "getArrayCopy",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getArrayCopy()",
+      "comment": "Copy the internal two-dimensional array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getColumnPackedCopy()",
+    "name": "getColumnPackedCopy",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getColumnPackedCopy()",
+      "comment": "Make a one-dimensional column packed copy of the internal array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRowPackedCopy()",
+    "name": "getRowPackedCopy",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRowPackedCopy()",
+      "comment": "Make a one-dimensional row packed copy of the internal array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRowDimension()",
+    "name": "getRowDimension",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRowDimension()",
+      "comment": "Get row dimension.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getColumnDimension()",
+    "name": "getColumnDimension",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getColumnDimension()",
+      "comment": "Get column dimension.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int i, int j)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j"
+      }
+    ],
+    "equivalence": {
+      "member": "get(int i, int j)",
+      "comment": "Get a single element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMatrix(int i0, int i1, int j0, int j1)",
+    "name": "getMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j1"
+      }
+    ],
+    "equivalence": {
+      "member": "getMatrix(int i0, int i1, int j0, int j1)",
+      "comment": "Get a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMatrix(int[] r, int[] c)",
+    "name": "getMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "member": "getMatrix(int[] r, int[] c)",
+      "comment": "Get a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMatrix(int i0, int i1, int[] c)",
+    "name": "getMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i1"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "c"
+      }
+    ],
+    "equivalence": {
+      "member": "getMatrix(int i0, int i1, int[] c)",
+      "comment": "Get a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMatrix(int[] r, int j0, int j1)",
+    "name": "getMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j1"
+      }
+    ],
+    "equivalence": {
+      "member": "getMatrix(int[] r, int j0, int j1)",
+      "comment": "Get a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int i, int j, double s)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "set(int i, int j, double s)",
+      "comment": "Set a single element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMatrix(int i0, int i1, int j0, int j1, weka.core.matrix.Matrix X)",
+    "name": "setMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j1"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "X"
+      }
+    ],
+    "equivalence": {
+      "member": "setMatrix(int i0, int i1, int j0, int j1, weka.core.matrix.Matrix X)",
+      "comment": "Set a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMatrix(int[] r, int[] c, weka.core.matrix.Matrix X)",
+    "name": "setMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "X"
+      }
+    ],
+    "equivalence": {
+      "member": "setMatrix(int[] r, int[] c, weka.core.matrix.Matrix X)",
+      "comment": "Set a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMatrix(int[] r, int j0, int j1, weka.core.matrix.Matrix X)",
+    "name": "setMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j1"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "X"
+      }
+    ],
+    "equivalence": {
+      "member": "setMatrix(int[] r, int j0, int j1, weka.core.matrix.Matrix X)",
+      "comment": "Set a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMatrix(int i0, int i1, int[] c, weka.core.matrix.Matrix X)",
+    "name": "setMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i0"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i1"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "X"
+      }
+    ],
+    "equivalence": {
+      "member": "setMatrix(int i0, int i1, int[] c, weka.core.matrix.Matrix X)",
+      "comment": "Set a submatrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSymmetric()",
+    "name": "isSymmetric",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isSymmetric()",
+      "comment": "Returns true if the matrix is symmetric. (FracPete: taken from old weka.core.Matrix class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSquare()",
+    "name": "isSquare",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isSquare()",
+      "comment": "returns whether the matrix is a square matrix or not.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transpose()",
+    "name": "transpose",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "transpose()",
+      "comment": "Matrix transpose.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "norm1()",
+    "name": "norm1",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "norm1()",
+      "comment": "One norm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "norm2()",
+    "name": "norm2",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "norm2()",
+      "comment": "Two norm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normInf()",
+    "name": "normInf",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "normInf()",
+      "comment": "Infinity norm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normF()",
+    "name": "normF",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "normF()",
+      "comment": "Frobenius norm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "uminus()",
+    "name": "uminus",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "uminus()",
+      "comment": "Unary minus",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plus(weka.core.matrix.Matrix B)",
+    "name": "plus",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "plus(weka.core.matrix.Matrix B)",
+      "comment": "C = A + B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusEquals(weka.core.matrix.Matrix B)",
+    "name": "plusEquals",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "plusEquals(weka.core.matrix.Matrix B)",
+      "comment": "A = A + B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minus(weka.core.matrix.Matrix B)",
+    "name": "minus",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "minus(weka.core.matrix.Matrix B)",
+      "comment": "C = A - B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusEquals(weka.core.matrix.Matrix B)",
+    "name": "minusEquals",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "minusEquals(weka.core.matrix.Matrix B)",
+      "comment": "A = A - B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arrayTimes(weka.core.matrix.Matrix B)",
+    "name": "arrayTimes",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "arrayTimes(weka.core.matrix.Matrix B)",
+      "comment": "Element-by-element multiplication, C = A.*B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arrayTimesEquals(weka.core.matrix.Matrix B)",
+    "name": "arrayTimesEquals",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "arrayTimesEquals(weka.core.matrix.Matrix B)",
+      "comment": "Element-by-element multiplication in place, A = A.*B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arrayRightDivide(weka.core.matrix.Matrix B)",
+    "name": "arrayRightDivide",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "arrayRightDivide(weka.core.matrix.Matrix B)",
+      "comment": "Element-by-element right division, C = A./B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arrayRightDivideEquals(weka.core.matrix.Matrix B)",
+    "name": "arrayRightDivideEquals",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "arrayRightDivideEquals(weka.core.matrix.Matrix B)",
+      "comment": "Element-by-element right division in place, A = A./B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arrayLeftDivide(weka.core.matrix.Matrix B)",
+    "name": "arrayLeftDivide",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "arrayLeftDivide(weka.core.matrix.Matrix B)",
+      "comment": "Element-by-element left division, C = A.\\B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "arrayLeftDivideEquals(weka.core.matrix.Matrix B)",
+    "name": "arrayLeftDivideEquals",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "arrayLeftDivideEquals(weka.core.matrix.Matrix B)",
+      "comment": "Element-by-element left division in place, A = A.\\B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "times(double s)",
+    "name": "times",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "times(double s)",
+      "comment": "Multiply a matrix by a scalar, C = s*A",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "timesEquals(double s)",
+    "name": "timesEquals",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "timesEquals(double s)",
+      "comment": "Multiply a matrix by a scalar in place, A = s*A",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "times(weka.core.matrix.Matrix B)",
+    "name": "times",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "times(weka.core.matrix.Matrix B)",
+      "comment": "Linear algebraic matrix multiplication, A * B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lu()",
+    "name": "lu",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.LUDecomposition",
+      "name": "weka.core.matrix.LUDecomposition",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "lu()",
+      "comment": "LU Decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "qr()",
+    "name": "qr",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.QRDecomposition",
+      "name": "weka.core.matrix.QRDecomposition",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "qr()",
+      "comment": "QR Decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "chol()",
+    "name": "chol",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.CholeskyDecomposition",
+      "name": "weka.core.matrix.CholeskyDecomposition",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "chol()",
+      "comment": "Cholesky Decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "svd()",
+    "name": "svd",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.SingularValueDecomposition",
+      "name": "weka.core.matrix.SingularValueDecomposition",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "svd()",
+      "comment": "Singular Value Decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "eig()",
+    "name": "eig",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.EigenvalueDecomposition",
+      "name": "weka.core.matrix.EigenvalueDecomposition",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "eig()",
+      "comment": "Eigenvalue Decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "solve(weka.core.matrix.Matrix B)",
+    "name": "solve",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "solve(weka.core.matrix.Matrix B)",
+      "comment": "Solve A*X = B",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "solveTranspose(weka.core.matrix.Matrix B)",
+    "name": "solveTranspose",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "B"
+      }
+    ],
+    "equivalence": {
+      "member": "solveTranspose(weka.core.matrix.Matrix B)",
+      "comment": "Solve X*A = B, which is also A'*X' = B'",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inverse()",
+    "name": "inverse",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "inverse()",
+      "comment": "Matrix inverse or pseudoinverse",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sqrt()",
+    "name": "sqrt",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "sqrt()",
+      "comment": "returns the square root of the matrix, i.e., X from the equation X*X = A. Examples:  <li> <pre> X = 5 -4 1 0 0 -4 6 -4 1 0 1 -4 6 -4 1 0 1 -4 6 -4 0 0 1 -4 5 sqrt(X) = 2 -1 -0 -0 -0 -1 2 -1 0 -0 0 -1 2 -1 0 -0 0 -1 2 -1 -0 -0 -0 -1 2 Matrix m = new Matrix(new double[][]{{5,-4,1,0,0},{-4,6,-4,1,0},{1,-4,6,-4,1},{0,1,-4,6,-4},{0,0,1,-4,5}}); </pre> </li> <li> <pre> X = 7 10 15 22 sqrt(X) = 1.5667 1.7408 2.6112 4.1779 Matrix m = new Matrix(new double[][]{{7, 10},{15, 22}}); </pre> </li>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regression(weka.core.matrix.Matrix y, double ridge)",
+    "name": "regression",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.LinearRegression",
+      "name": "weka.core.matrix.LinearRegression",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "ridge"
+      }
+    ],
+    "equivalence": {
+      "member": "regression(weka.core.matrix.Matrix y, double ridge)",
+      "comment": "Performs a (ridged) linear regression. (FracPete: taken from old weka.core.Matrix class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regression(weka.core.matrix.Matrix y, double[] w, double ridge)",
+    "name": "regression",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.LinearRegression",
+      "name": "weka.core.matrix.LinearRegression",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.matrix.Matrix",
+          "name": "Matrix",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "w"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "ridge"
+      }
+    ],
+    "equivalence": {
+      "member": "regression(weka.core.matrix.Matrix y, double[] w, double ridge)",
+      "comment": "Performs a weighted (ridged) linear regression. (FracPete: taken from old weka.core.Matrix class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "det()",
+    "name": "det",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "det()",
+      "comment": "Matrix determinant",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rank()",
+    "name": "rank",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rank()",
+      "comment": "Matrix rank",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cond()",
+    "name": "cond",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "cond()",
+      "comment": "Matrix condition (2 norm)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trace()",
+    "name": "trace",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "trace()",
+      "comment": "Matrix trace.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "random(int m, int n)",
+    "name": "random",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "member": "random(int m, int n)",
+      "comment": "Generate matrix with random elements",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "identity(int m, int n)",
+    "name": "identity",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "member": "identity(int m, int n)",
+      "comment": "Generate identity matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(int w, int d)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "w"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "member": "print(int w, int d)",
+      "comment": "Print the matrix to stdout. Line the elements up in columns with a Fortran-like 'Fw.d' style format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(java.io.PrintWriter output, int w, int d)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.PrintWriter",
+          "name": "PrintWriter",
+          "isArray": false
+        },
+        "name": "output"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "w"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "member": "print(java.io.PrintWriter output, int w, int d)",
+      "comment": "Print the matrix to the output stream. Line the elements up in columns with a Fortran-like 'Fw.d' style format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(java.text.NumberFormat format, int width)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.text.NumberFormat",
+          "name": "NumberFormat",
+          "isArray": false
+        },
+        "name": "format"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "width"
+      }
+    ],
+    "equivalence": {
+      "member": "print(java.text.NumberFormat format, int width)",
+      "comment": "Print the matrix to stdout. Line the elements up in columns. Use the format object, and right justify within columns of width characters. Note that is the matrix is to be read back in, you probably will want to use a NumberFormat that is set to US Locale.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(java.io.PrintWriter output, java.text.NumberFormat format, int width)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.PrintWriter",
+          "name": "PrintWriter",
+          "isArray": false
+        },
+        "name": "output"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.text.NumberFormat",
+          "name": "NumberFormat",
+          "isArray": false
+        },
+        "name": "format"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "width"
+      }
+    ],
+    "equivalence": {
+      "member": "print(java.io.PrintWriter output, java.text.NumberFormat format, int width)",
+      "comment": "Print the matrix to the output stream. Line the elements up in columns. Use the format object, and right justify within columns of width characters. Note that is the matrix is to be read back in, you probably will want to use a NumberFormat that is set to US Locale.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read(java.io.BufferedReader input)",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.BufferedReader",
+          "name": "BufferedReader",
+          "isArray": false
+        },
+        "name": "input"
+      }
+    ],
+    "equivalence": {
+      "member": "read(java.io.BufferedReader input)",
+      "comment": "Read a matrix from a stream. The format is the same the print method, so printed matrices can be read back in (provided they were printed using US Locale). Elements are separated by whitespace, all the elements for each row appear on a single line, the last row is followed by a blank line.  Note: This format differs from the one that can be read via the Matrix(Reader) constructor! For that format, the write(Writer) method is used (from the original weka.core.Matrix class).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write(java.io.Writer w)",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Writer",
+          "name": "Writer",
+          "isArray": false
+        },
+        "name": "w"
+      }
+    ],
+    "equivalence": {
+      "member": "write(java.io.Writer w)",
+      "comment": "Writes out a matrix. The format can be read via the Matrix(Reader) constructor. (FracPete: taken from old weka.core.Matrix class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Converts a matrix to a string. (FracPete: taken from old weka.core.Matrix class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMatlab()",
+    "name": "toMatlab",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toMatlab()",
+      "comment": "converts the Matrix into a single line Matlab string: matrix is enclosed by parentheses, rows are separated by semicolon and single cells by blanks, e.g., [1 2; 3 4].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parseMatlab(java.lang.String matlab)",
+    "name": "parseMatlab",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "weka.core.matrix.Matrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "matlab"
+      }
+    ],
+    "equivalence": {
+      "member": "parseMatlab(java.lang.String matlab)",
+      "comment": "creates a matrix from the given Matlab string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.core.matrix.Matrix",
+      "name": "Matrix",
+      "isArray": false
+    },
+    "targetClass": "weka.core.matrix.Matrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

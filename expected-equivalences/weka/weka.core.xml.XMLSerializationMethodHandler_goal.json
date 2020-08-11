@@ -1,0 +1,343 @@
+[
+  {
+    "signature": "weka.core.xml.XMLSerializationMethodHandler(java.lang.Object owner)",
+    "name": "weka.core.xml.XMLSerializationMethodHandler",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "owner"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.xml.XMLSerializationMethodHandler(java.lang.Object owner)",
+      "comment": "initializes the method handling, executes also clear(), which adds initial methods automatically.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addMethods(weka.core.xml.MethodHandler handler, java.lang.reflect.Method template, java.lang.reflect.Method[] methods)",
+    "name": "addMethods",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.xml.MethodHandler",
+          "name": "MethodHandler",
+          "isArray": false
+        },
+        "name": "handler"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.reflect.Method",
+          "name": "Method",
+          "isArray": false
+        },
+        "name": "template"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.reflect.Method;",
+          "name": "Method[]",
+          "isArray": true
+        },
+        "name": "methods"
+      }
+    ],
+    "equivalence": {
+      "member": "addMethods(weka.core.xml.MethodHandler handler, java.lang.reflect.Method template, java.lang.reflect.Method[] methods)",
+      "comment": "adds all methods that are like template to the method list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addMethods()",
+    "name": "addMethods",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "addMethods()",
+      "comment": "automatically adds all fitting methods to the custom read/write lists, it excludes only the generic ones. it is automatically called in clear() It only work with methods that apply to the naming rule \"read\" + property name (same for \"write\")",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findReadMethod(java.lang.Object o, java.lang.String name)",
+    "name": "findReadMethod",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.reflect.Method",
+      "name": "java.lang.reflect.Method",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "findReadMethod(java.lang.Object o, java.lang.String name)",
+      "comment": "returns the method with the given name that has the same signature as readFromXML() of the XMLSerialiation class. simplifies the adding of custom methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findWriteMethod(java.lang.Object o, java.lang.String name)",
+    "name": "findWriteMethod",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.reflect.Method",
+      "name": "java.lang.reflect.Method",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "findWriteMethod(java.lang.Object o, java.lang.String name)",
+      "comment": "returns the method with the given name that has the same signature as writeToXML() of the XMLSerialiation class. simplifies the adding of custom methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "clear()",
+      "comment": "removes all current methods and adds the methods according to the",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read()",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.xml.MethodHandler",
+      "name": "weka.core.xml.MethodHandler",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "read()",
+      "comment": "returns the handler for read methods",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write()",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.xml.MethodHandler",
+      "name": "weka.core.xml.MethodHandler",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "write()",
+      "comment": "returns the handler for write methods",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.lang.Object handler, java.lang.Class<?> cls, java.lang.String name)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "handler"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "cls"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "register(java.lang.Object handler, java.lang.Class<?> cls, java.lang.String name)",
+      "comment": "adds read and write methods for the given class, i.e., read&;lt;name> and write<name> (\"name\" is prefixed by read and write)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "returns the read and write method handlers as string",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.core.xml.XMLSerializationMethodHandler",
+      "name": "XMLSerializationMethodHandler",
+      "isArray": false
+    },
+    "targetClass": "weka.core.xml.XMLSerializationMethodHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

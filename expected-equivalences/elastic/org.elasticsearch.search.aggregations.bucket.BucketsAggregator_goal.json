@@ -315,7 +315,7 @@
     "equivalence": {
       "comment": "Same as #collectBucket(LeafBucketCollector, int, long), but doesn't check if the docCounts needs to be re-sized.",
       "kind": "FreeText",
-      "condition": "receiverObjectID.collectBucket(args[0],args[1],args[2]); receiverObjectClone.collectExistingBucket(args[0],args[1],args[2]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.collectBucket(args[0],args[1],args[2]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {

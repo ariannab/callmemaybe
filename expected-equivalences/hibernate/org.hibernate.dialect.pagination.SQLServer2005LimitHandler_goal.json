@@ -1,0 +1,400 @@
+[
+  {
+    "signature": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler()",
+    "name": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler()",
+      "comment": "Constructs a SQLServer2005LimitHandler",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "supportsLimit()",
+    "name": "supportsLimit",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "supportsLimit()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useMaxForLimit()",
+    "name": "useMaxForLimit",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "useMaxForLimit()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "supportsLimitOffset()",
+    "name": "supportsLimitOffset",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "supportsLimitOffset()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "supportsVariableLimit()",
+    "name": "supportsVariableLimit",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "supportsVariableLimit()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convertToFirstRowValue(int zeroBasedFirstResult)",
+    "name": "convertToFirstRowValue",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "zeroBasedFirstResult"
+      }
+    ],
+    "equivalence": {
+      "member": "convertToFirstRowValue(int zeroBasedFirstResult)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "processSql(java.lang.String sql, org.hibernate.engine.spi.RowSelection selection)",
+    "name": "processSql",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sql"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.hibernate.engine.spi.RowSelection",
+          "name": "RowSelection",
+          "isArray": false
+        },
+        "name": "selection"
+      }
+    ],
+    "equivalence": {
+      "member": "processSql(java.lang.String sql, org.hibernate.engine.spi.RowSelection selection)",
+      "comment": "Add a LIMIT clause to the given SQL SELECT (HHH-2655: ROW_NUMBER for Paging) The LIMIT SQL will look like:  WITH query AS ( SELECT inner_query.* , ROW_NUMBER() OVER (ORDER BY CURRENT_TIMESTAMP) as __hibernate_row_nr__ FROM ( original_query_with_top_if_order_by_present_and_all_aliased_columns ) inner_query ) SELECT alias_list FROM query WHERE __hibernate_row_nr__ >= offset AND __hibernate_row_nr__ < offset + last  When offset equals {@literal 0}, only TOP(?) expression is added to the original query.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "bindLimitParametersAtStartOfQuery(org.hibernate.engine.spi.RowSelection selection, java.sql.PreparedStatement statement, int index)",
+    "name": "bindLimitParametersAtStartOfQuery",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.hibernate.engine.spi.RowSelection",
+          "name": "RowSelection",
+          "isArray": false
+        },
+        "name": "selection"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.sql.PreparedStatement",
+          "name": "PreparedStatement",
+          "isArray": false
+        },
+        "name": "statement"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "bindLimitParametersAtStartOfQuery(org.hibernate.engine.spi.RowSelection selection, java.sql.PreparedStatement statement, int index)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "bindLimitParametersAtEndOfQuery(org.hibernate.engine.spi.RowSelection selection, java.sql.PreparedStatement statement, int index)",
+    "name": "bindLimitParametersAtEndOfQuery",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.hibernate.engine.spi.RowSelection",
+          "name": "RowSelection",
+          "isArray": false
+        },
+        "name": "selection"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.sql.PreparedStatement",
+          "name": "PreparedStatement",
+          "isArray": false
+        },
+        "name": "statement"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "bindLimitParametersAtEndOfQuery(org.hibernate.engine.spi.RowSelection selection, java.sql.PreparedStatement statement, int index)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fillAliasInSelectClause(java.lang.StringBuilder sb, int offset)",
+    "name": "fillAliasInSelectClause",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuilder",
+          "name": "StringBuilder",
+          "isArray": false
+        },
+        "name": "sb"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "fillAliasInSelectClause(java.lang.StringBuilder sb, int offset)",
+      "comment": "Adds missing aliases in provided SELECT clause and returns coma-separated list of them. If query takes advantage of expressions like {@literal *} or {@literal {table}.*} inside SELECT clause, method returns {@literal *}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encloseWithOuterQuery(java.lang.StringBuilder sql, int offset)",
+    "name": "encloseWithOuterQuery",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuilder",
+          "name": "StringBuilder",
+          "isArray": false
+        },
+        "name": "sql"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "encloseWithOuterQuery(java.lang.StringBuilder sql, int offset)",
+      "comment": "Encloses original SQL statement with outer query that provides {@literal __hibernate_row_nr__} column.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addTopExpression(java.lang.StringBuilder sql, int offset)",
+    "name": "addTopExpression",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+      "name": "SQLServer2005LimitHandler",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.dialect.pagination.SQLServer2005LimitHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuilder",
+          "name": "StringBuilder",
+          "isArray": false
+        },
+        "name": "sql"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "addTopExpression(java.lang.StringBuilder sql, int offset)",
+      "comment": "Adds TOP expression. Parameter value is bind in #bindLimitParametersAtStartOfQuery(RowSelection, PreparedStatement, int) method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

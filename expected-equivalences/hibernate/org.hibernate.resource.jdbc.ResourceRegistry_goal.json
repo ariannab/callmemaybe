@@ -1,0 +1,415 @@
+[
+  {
+    "signature": "hasRegisteredResources()",
+    "name": "hasRegisteredResources",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hasRegisteredResources()",
+      "comment": "Does this registry currently have any registered resources?",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "releaseResources()",
+    "name": "releaseResources",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "releaseResources()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.sql.Statement statement, boolean cancelable)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "cancelable"
+      }
+    ],
+    "equivalence": {
+      "member": "register(java.sql.Statement statement, boolean cancelable)",
+      "comment": "Register a JDBC statement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release(java.sql.Statement statement)",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      }
+    ],
+    "equivalence": {
+      "member": "release(java.sql.Statement statement)",
+      "comment": "Release a previously registered statement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.sql.ResultSet resultSet, java.sql.Statement statement)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.ResultSet",
+          "name": "ResultSet",
+          "isArray": false
+        },
+        "name": "resultSet"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      }
+    ],
+    "equivalence": {
+      "member": "register(java.sql.ResultSet resultSet, java.sql.Statement statement)",
+      "comment": "Register a JDBC result set.  Implementation note: Second parameter has been introduced to prevent multiple registrations of the same statement in case java.sql.ResultSet#getStatement() does not return original java.sql.Statement object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release(java.sql.ResultSet resultSet, java.sql.Statement statement)",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.ResultSet",
+          "name": "ResultSet",
+          "isArray": false
+        },
+        "name": "resultSet"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      }
+    ],
+    "equivalence": {
+      "member": "release(java.sql.ResultSet resultSet, java.sql.Statement statement)",
+      "comment": "Release a previously registered result set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.sql.Blob blob)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Blob",
+          "name": "Blob",
+          "isArray": false
+        },
+        "name": "blob"
+      }
+    ],
+    "equivalence": {
+      "member": "register(java.sql.Blob blob)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release(java.sql.Blob blob)",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Blob",
+          "name": "Blob",
+          "isArray": false
+        },
+        "name": "blob"
+      }
+    ],
+    "equivalence": {
+      "member": "release(java.sql.Blob blob)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.sql.Clob clob)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Clob",
+          "name": "Clob",
+          "isArray": false
+        },
+        "name": "clob"
+      }
+    ],
+    "equivalence": {
+      "member": "register(java.sql.Clob clob)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release(java.sql.Clob clob)",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Clob",
+          "name": "Clob",
+          "isArray": false
+        },
+        "name": "clob"
+      }
+    ],
+    "equivalence": {
+      "member": "release(java.sql.Clob clob)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.sql.NClob nclob)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.NClob",
+          "name": "NClob",
+          "isArray": false
+        },
+        "name": "nclob"
+      }
+    ],
+    "equivalence": {
+      "member": "register(java.sql.NClob nclob)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release(java.sql.NClob nclob)",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.NClob",
+          "name": "NClob",
+          "isArray": false
+        },
+        "name": "nclob"
+      }
+    ],
+    "equivalence": {
+      "member": "release(java.sql.NClob nclob)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cancelLastQuery()",
+    "name": "cancelLastQuery",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.resource.jdbc.ResourceRegistry",
+      "name": "ResourceRegistry",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.resource.jdbc.ResourceRegistry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "cancelLastQuery()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

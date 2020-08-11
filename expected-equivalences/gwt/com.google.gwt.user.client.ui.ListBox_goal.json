@@ -65,7 +65,7 @@
     "equivalence": {
       "comment": "Inserts an item into the list box, specifying its direction. Has the same effect as  insertItem(item, dir, item, index)",
       "kind": "FreeText",
-      "condition": "receiverObjectID.insertItem(args[0],args[1],args[0], args[2]); receiverObjectClone.insertItem(args[0],args[1],args[2]);assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.insertItem(args[0],args[1],args[0], args[2]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -589,7 +589,7 @@
     "equivalence": {
       "comment": "Inserts an item into the list box, specifying an initial value for the item. Has the same effect as  insertItem(item, null, value, index)",
       "kind": "FreeText",
-      "condition": "receiverObjectID.insertItem(args[0],null,args[1],args[2]); receiverObjectClone.insertItem(args[0],args[1],args[2]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.insertItem(args[0],null,args[1],args[2]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -721,7 +721,7 @@
     "equivalence": {
       "comment": "Adds an item to the list box. This method has the same effect as  addItem(item, item)",
       "kind": "FreeText",
-      "condition": "receiverObjectID.addItem(args[0], args[0]); receiverObjectClone.addItem(args[0]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.addItem(args[0], args[0]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -945,7 +945,7 @@
     "equivalence": {
       "comment": "Inserts an item into the list box. Has the same effect as  insertItem(item, item, index)",
       "kind": "FreeText",
-      "condition": "receiverObjectID.insertItem(args[0],args[0],args[1]); receiverObjectClone.insertItem(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.insertItem(args[0],args[0],args[1]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -1146,7 +1146,7 @@
     "equivalence": {
       "comment": "Adds an item to the list box, specifying its direction. This method has the same effect as  addItem(item, dir, item)",
       "kind": "FreeText",
-      "condition": "receiverObjectID.addItem(args[0],args[1],args[0]); receiverObjectClone.insertItem(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.addItem(args[0],args[1],args[0]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {

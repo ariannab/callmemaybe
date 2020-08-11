@@ -1,0 +1,1468 @@
+[
+  {
+    "signature": "java.awt.Graphics2D()",
+    "name": "java.awt.Graphics2D",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "java.awt.Graphics2D()",
+      "comment": "Constructs a new Graphics2D object. Since Graphics2D is an abstract class, and since it must be customized by subclasses for different output devices, Graphics2D objects cannot be created directly. Instead, Graphics2D objects must be obtained from another Graphics2D object, created by a Component, or obtained from images such as BufferedImage objects. @see java.awt.Component#getGraphics @see java.awt.Graphics#create",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "draw3DRect(int x, int y, int width, int height, boolean raised)",
+    "name": "draw3DRect",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "width"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "height"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "raised"
+      }
+    ],
+    "equivalence": {
+      "member": "draw3DRect(int x, int y, int width, int height, boolean raised)",
+      "comment": "Draws a 3-D highlighted outline of the specified rectangle. The edges of the rectangle are highlighted so that they appear to be beveled and lit from the upper left corner.  The colors used for the highlighting effect are determined based on the current color. The resulting rectangle covers an area that is width&nbsp;+&nbsp;1 pixels wide by height&nbsp;+&nbsp;1 pixels tall. This method uses the current Color exclusively and ignores the current Paint.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fill3DRect(int x, int y, int width, int height, boolean raised)",
+    "name": "fill3DRect",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "width"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "height"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "raised"
+      }
+    ],
+    "equivalence": {
+      "member": "fill3DRect(int x, int y, int width, int height, boolean raised)",
+      "comment": "Paints a 3-D highlighted rectangle filled with the current color. The edges of the rectangle are highlighted so that it appears as if the edges were beveled and lit from the upper left corner. The colors used for the highlighting effect and for filling are determined from the current Color. This method uses the current Color exclusively and ignores the current Paint.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "draw(java.awt.Shape s)",
+    "name": "draw",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Shape",
+          "name": "Shape",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "draw(java.awt.Shape s)",
+      "comment": "Strokes the outline of a Shape using the settings of the current Graphics2D context. The rendering attributes applied include the Clip, Transform, Paint, Composite and Stroke attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawImage(java.awt.Image img, java.awt.geom.AffineTransform xform, java.awt.image.ImageObserver obs)",
+    "name": "drawImage",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Image",
+          "name": "Image",
+          "isArray": false
+        },
+        "name": "img"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.geom.AffineTransform",
+          "name": "AffineTransform",
+          "isArray": false
+        },
+        "name": "xform"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.image.ImageObserver",
+          "name": "ImageObserver",
+          "isArray": false
+        },
+        "name": "obs"
+      }
+    ],
+    "equivalence": {
+      "member": "drawImage(java.awt.Image img, java.awt.geom.AffineTransform xform, java.awt.image.ImageObserver obs)",
+      "comment": "Renders an image, applying a transform from image space into user space before drawing. The transformation from user space into device space is done with the current Transform in the Graphics2D. The specified transformation is applied to the image before the transform attribute in the Graphics2D context is applied. The rendering attributes applied include the Clip, Transform, and Composite attributes. Note that no rendering is done if the specified transform is noninvertible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawImage(java.awt.image.BufferedImage img, java.awt.image.BufferedImageOp op, int x, int y)",
+    "name": "drawImage",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.image.BufferedImage",
+          "name": "BufferedImage",
+          "isArray": false
+        },
+        "name": "img"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.image.BufferedImageOp",
+          "name": "BufferedImageOp",
+          "isArray": false
+        },
+        "name": "op"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "drawImage(java.awt.image.BufferedImage img, java.awt.image.BufferedImageOp op, int x, int y)",
+      "comment": "Renders a BufferedImage that is filtered with a BufferedImageOp. The rendering attributes applied include the Clip, Transform and Composite attributes. This is equivalent to:  img1 = op.filter(img, null); drawImage(img1, new AffineTransform(1f,0f,0f,1f,x,y), null);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawRenderedImage(java.awt.image.RenderedImage img, java.awt.geom.AffineTransform xform)",
+    "name": "drawRenderedImage",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.image.RenderedImage",
+          "name": "RenderedImage",
+          "isArray": false
+        },
+        "name": "img"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.geom.AffineTransform",
+          "name": "AffineTransform",
+          "isArray": false
+        },
+        "name": "xform"
+      }
+    ],
+    "equivalence": {
+      "member": "drawRenderedImage(java.awt.image.RenderedImage img, java.awt.geom.AffineTransform xform)",
+      "comment": "Renders a RenderedImage, applying a transform from image space into user space before drawing. The transformation from user space into device space is done with the current Transform in the Graphics2D. The specified transformation is applied to the image before the transform attribute in the Graphics2D context is applied. The rendering attributes applied include the Clip, Transform, and Composite attributes. Note that no rendering is done if the specified transform is noninvertible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawRenderableImage(java.awt.image.renderable.RenderableImage img, java.awt.geom.AffineTransform xform)",
+    "name": "drawRenderableImage",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.image.renderable.RenderableImage",
+          "name": "RenderableImage",
+          "isArray": false
+        },
+        "name": "img"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.geom.AffineTransform",
+          "name": "AffineTransform",
+          "isArray": false
+        },
+        "name": "xform"
+      }
+    ],
+    "equivalence": {
+      "member": "drawRenderableImage(java.awt.image.renderable.RenderableImage img, java.awt.geom.AffineTransform xform)",
+      "comment": "Renders a RenderableImage, applying a transform from image space into user space before drawing. The transformation from user space into device space is done with the current Transform in the Graphics2D. The specified transformation is applied to the image before the transform attribute in the Graphics2D context is applied. The rendering attributes applied include the Clip, Transform, and Composite attributes. Note that no rendering is done if the specified transform is noninvertible. Rendering hints set on the Graphics2D object might be used in rendering the RenderableImage. If explicit control is required over specific hints recognized by a specific RenderableImage, or if knowledge of which hints are used is required, then a RenderedImage should be obtained directly from the RenderableImage and rendered using",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawString(java.lang.String str, int x, int y)",
+    "name": "drawString",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "drawString(java.lang.String str, int x, int y)",
+      "comment": "Renders the text of the specified String, using the current text attribute state in the Graphics2D context. The baseline of the first character is at position (x,&nbsp;y) in the User Space. The rendering attributes applied include the Clip, Transform, Paint, Font and Composite attributes. For characters in script systems such as Hebrew and Arabic, the glyphs can be rendered from right to left, in which case the coordinate supplied is the location of the leftmost character on the baseline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawString(java.lang.String str, float x, float y)",
+    "name": "drawString",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "str"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "drawString(java.lang.String str, float x, float y)",
+      "comment": "Renders the text specified by the specified String, using the current text attribute state in the Graphics2D context. The baseline of the first character is at position (x,&nbsp;y) in the User Space. The rendering attributes applied include the Clip, Transform, Paint, Font and Composite attributes. For characters in script systems such as Hebrew and Arabic, the glyphs can be rendered from right to left, in which case the coordinate supplied is the location of the leftmost character on the baseline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawString(java.text.AttributedCharacterIterator iterator, int x, int y)",
+    "name": "drawString",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.text.AttributedCharacterIterator",
+          "name": "AttributedCharacterIterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "drawString(java.text.AttributedCharacterIterator iterator, int x, int y)",
+      "comment": "Renders the text of the specified iterator applying its attributes in accordance with the specification of the TextAttribute class.  The baseline of the first character is at position (x,&nbsp;y) in User Space. For characters in script systems such as Hebrew and Arabic, the glyphs can be rendered from right to left, in which case the coordinate supplied is the location of the leftmost character on the baseline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawString(java.text.AttributedCharacterIterator iterator, float x, float y)",
+    "name": "drawString",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.text.AttributedCharacterIterator",
+          "name": "AttributedCharacterIterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "drawString(java.text.AttributedCharacterIterator iterator, float x, float y)",
+      "comment": "Renders the text of the specified iterator applying its attributes in accordance with the specification of the TextAttribute class.  The baseline of the first character is at position (x,&nbsp;y) in User Space. For characters in script systems such as Hebrew and Arabic, the glyphs can be rendered from right to left, in which case the coordinate supplied is the location of the leftmost character on the baseline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drawGlyphVector(java.awt.font.GlyphVector g, float x, float y)",
+    "name": "drawGlyphVector",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.font.GlyphVector",
+          "name": "GlyphVector",
+          "isArray": false
+        },
+        "name": "g"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "drawGlyphVector(java.awt.font.GlyphVector g, float x, float y)",
+      "comment": "Renders the text of the specified GlyphVector using the Graphics2D context's rendering attributes. The rendering attributes applied include the Clip, Transform, Paint, and Composite attributes. The GlyphVector specifies individual glyphs from a Font. The GlyphVector can also contain the glyph positions. This is the fastest way to render a set of characters to the screen.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fill(java.awt.Shape s)",
+    "name": "fill",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Shape",
+          "name": "Shape",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "fill(java.awt.Shape s)",
+      "comment": "Fills the interior of a Shape using the settings of the Graphics2D context. The rendering attributes applied include the Clip, Transform, Paint, and Composite.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hit(java.awt.Rectangle rect, java.awt.Shape s, boolean onStroke)",
+    "name": "hit",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Rectangle",
+          "name": "Rectangle",
+          "isArray": false
+        },
+        "name": "rect"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.Shape",
+          "name": "Shape",
+          "isArray": false
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "onStroke"
+      }
+    ],
+    "equivalence": {
+      "member": "hit(java.awt.Rectangle rect, java.awt.Shape s, boolean onStroke)",
+      "comment": "Checks whether or not the specified Shape intersects the specified Rectangle, which is in device space. If onStroke is false, this method checks whether or not the interior of the specified Shape intersects the specified Rectangle. If onStroke is true, this method checks whether or not the Stroke of the specified Shape outline intersects the specified Rectangle. The rendering attributes taken into account include the Clip, Transform, and Stroke attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDeviceConfiguration()",
+    "name": "getDeviceConfiguration",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.GraphicsConfiguration",
+      "name": "java.awt.GraphicsConfiguration",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDeviceConfiguration()",
+      "comment": "Returns the device configuration associated with this Graphics2D.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setComposite(java.awt.Composite comp)",
+    "name": "setComposite",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Composite",
+          "name": "Composite",
+          "isArray": false
+        },
+        "name": "comp"
+      }
+    ],
+    "equivalence": {
+      "member": "setComposite(java.awt.Composite comp)",
+      "comment": "Sets the Composite for the Graphics2D context. The Composite is used in all drawing methods such as drawImage, drawString, draw, and fill. It specifies how new pixels are to be combined with the existing pixels on the graphics device during the rendering process. If this Graphics2D context is drawing to a Component on the display screen and the Composite is a custom object rather than an instance of the AlphaComposite class, and if there is a security manager, its checkPermission method is called with an AWTPermission(\"readDisplayPixels\") permission.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPaint(java.awt.Paint paint)",
+    "name": "setPaint",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Paint",
+          "name": "Paint",
+          "isArray": false
+        },
+        "name": "paint"
+      }
+    ],
+    "equivalence": {
+      "member": "setPaint(java.awt.Paint paint)",
+      "comment": "Sets the Paint attribute for the Graphics2D context. Calling this method with a null Paint object does not have any effect on the current Paint attribute of this Graphics2D.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setStroke(java.awt.Stroke s)",
+    "name": "setStroke",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Stroke",
+          "name": "Stroke",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "setStroke(java.awt.Stroke s)",
+      "comment": "Sets the Stroke for the Graphics2D context.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRenderingHint(java.awt.RenderingHints$Key hintKey, java.lang.Object hintValue)",
+    "name": "setRenderingHint",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.RenderingHints$Key",
+          "name": "Key",
+          "isArray": false
+        },
+        "name": "hintKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "hintValue"
+      }
+    ],
+    "equivalence": {
+      "member": "setRenderingHint(java.awt.RenderingHints$Key hintKey, java.lang.Object hintValue)",
+      "comment": "Sets the value of a single preference for the rendering algorithms. Hint categories include controls for rendering quality and overall time/quality trade-off in the rendering process. Refer to the RenderingHints class for definitions of some common keys and values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRenderingHint(java.awt.RenderingHints$Key hintKey)",
+    "name": "getRenderingHint",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.RenderingHints$Key",
+          "name": "Key",
+          "isArray": false
+        },
+        "name": "hintKey"
+      }
+    ],
+    "equivalence": {
+      "member": "getRenderingHint(java.awt.RenderingHints$Key hintKey)",
+      "comment": "Returns the value of a single preference for the rendering algorithms. Hint categories include controls for rendering quality and overall time/quality trade-off in the rendering process. Refer to the RenderingHints class for definitions of some common keys and values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRenderingHints(java.util.Map<?, ?> hints)",
+    "name": "setRenderingHints",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "hints"
+      }
+    ],
+    "equivalence": {
+      "member": "setRenderingHints(java.util.Map<?, ?> hints)",
+      "comment": "Replaces the values of all preferences for the rendering algorithms with the specified hints. The existing values for all rendering hints are discarded and the new set of known hints and values are initialized from the specified Map object. Hint categories include controls for rendering quality and overall time/quality trade-off in the rendering process. Refer to the RenderingHints class for definitions of some common keys and values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addRenderingHints(java.util.Map<?, ?> hints)",
+    "name": "addRenderingHints",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "hints"
+      }
+    ],
+    "equivalence": {
+      "member": "addRenderingHints(java.util.Map<?, ?> hints)",
+      "comment": "Sets the values of an arbitrary number of preferences for the rendering algorithms. Only values for the rendering hints that are present in the specified Map object are modified. All other preferences not present in the specified object are left unmodified. Hint categories include controls for rendering quality and overall time/quality trade-off in the rendering process. Refer to the RenderingHints class for definitions of some common keys and values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRenderingHints()",
+    "name": "getRenderingHints",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.RenderingHints",
+      "name": "java.awt.RenderingHints",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRenderingHints()",
+      "comment": "Gets the preferences for the rendering algorithms. Hint categories include controls for rendering quality and overall time/quality trade-off in the rendering process. Returns all of the hint key/value pairs that were ever specified in one operation. Refer to the RenderingHints class for definitions of some common keys and values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "translate(int x, int y)",
+    "name": "translate",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "translate(int x, int y)",
+      "comment": "Translates the origin of the Graphics2D context to the point (x,&nbsp;y) in the current coordinate system. Modifies the Graphics2D context so that its new origin corresponds to the point (x,&nbsp;y) in the Graphics2D context's former coordinate system. All coordinates used in subsequent rendering operations on this graphics context are relative to this new origin.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "translate(double tx, double ty)",
+    "name": "translate",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "tx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "ty"
+      }
+    ],
+    "equivalence": {
+      "member": "translate(double tx, double ty)",
+      "comment": "Concatenates the current Graphics2D Transform with a translation transform. Subsequent rendering is translated by the specified distance relative to the previous position. This is equivalent to calling transform(T), where T is an AffineTransform represented by the following matrix:  [ 1 0 tx ] [ 0 1 ty ] [ 0 0 1 ]",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rotate(double theta)",
+    "name": "rotate",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "theta"
+      }
+    ],
+    "equivalence": {
+      "member": "rotate(double theta)",
+      "comment": "Concatenates the current Graphics2D Transform with a rotation transform. Subsequent rendering is rotated by the specified radians relative to the previous origin. This is equivalent to calling transform(R), where R is an AffineTransform represented by the following matrix:  [ cos(theta) -sin(theta) 0 ] [ sin(theta) cos(theta) 0 ] [ 0 0 1 ]  Rotating with a positive angle theta rotates points on the positive x axis toward the positive y axis.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rotate(double theta, double x, double y)",
+    "name": "rotate",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "theta"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "equivalence": {
+      "member": "rotate(double theta, double x, double y)",
+      "comment": "Concatenates the current Graphics2D Transform with a translated rotation transform. Subsequent rendering is transformed by a transform which is constructed by translating to the specified location, rotating by the specified radians, and translating back by the same amount as the original translation. This is equivalent to the following sequence of calls:  translate(x, y); rotate(theta); translate(-x, -y);  Rotating with a positive angle theta rotates points on the positive x axis toward the positive y axis.",
+      "kind": "FreeText",
+      "condition": "receiverObjectClone.translate(args[1],args[2]);\nreceiverObjectClone.equals(receiverObjectID)"
+    }
+  },
+  {
+    "signature": "scale(double sx, double sy)",
+    "name": "scale",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "sx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "sy"
+      }
+    ],
+    "equivalence": {
+      "member": "scale(double sx, double sy)",
+      "comment": "Concatenates the current Graphics2D Transform with a scaling transformation Subsequent rendering is resized according to the specified scaling factors relative to the previous scaling. This is equivalent to calling transform(S), where S is an AffineTransform represented by the following matrix:  [ sx 0 0 ] [ 0 sy 0 ] [ 0 0 1 ]",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shear(double shx, double shy)",
+    "name": "shear",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "shx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "shy"
+      }
+    ],
+    "equivalence": {
+      "member": "shear(double shx, double shy)",
+      "comment": "Concatenates the current Graphics2D Transform with a shearing transform. Subsequent renderings are sheared by the specified multiplier relative to the previous position. This is equivalent to calling transform(SH), where SH is an AffineTransform represented by the following matrix:  [ 1 shx 0 ] [ shy 1 0 ] [ 0 0 1 ]",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transform(java.awt.geom.AffineTransform Tx)",
+    "name": "transform",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.geom.AffineTransform",
+          "name": "AffineTransform",
+          "isArray": false
+        },
+        "name": "Tx"
+      }
+    ],
+    "equivalence": {
+      "member": "transform(java.awt.geom.AffineTransform Tx)",
+      "comment": "Composes an AffineTransform object with the Transform in this Graphics2D according to the rule last-specified-first-applied. If the current Transform is Cx, the result of composition with Tx is a new Transform Cx'. Cx' becomes the current Transform for this Graphics2D. Transforming a point p by the updated Transform Cx' is equivalent to first transforming p by Tx and then transforming the result by the original Transform Cx. In other words, Cx'(p) = Cx(Tx(p)). A copy of the Tx is made, if necessary, so further modifications to Tx do not affect rendering.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTransform(java.awt.geom.AffineTransform Tx)",
+    "name": "setTransform",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.geom.AffineTransform",
+          "name": "AffineTransform",
+          "isArray": false
+        },
+        "name": "Tx"
+      }
+    ],
+    "equivalence": {
+      "member": "setTransform(java.awt.geom.AffineTransform Tx)",
+      "comment": "Overwrites the Transform in the Graphics2D context. WARNING: This method should never be used to apply a new coordinate transform on top of an existing transform because the Graphics2D might already have a transform that is needed for other purposes, such as rendering Swing components or applying a scaling transformation to adjust for the resolution of a printer. To add a coordinate transform, use the transform, rotate, scale, or shear methods. The setTransform method is intended only for restoring the original Graphics2D transform after rendering, as shown in this example:  // Get the current transform AffineTransform saveAT = g2.getTransform(); // Perform transformation g2d.transform(...); // Render g2d.draw(...); // Restore original transform g2d.setTransform(saveAT);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTransform()",
+    "name": "getTransform",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.geom.AffineTransform",
+      "name": "java.awt.geom.AffineTransform",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTransform()",
+      "comment": "Returns a copy of the current Transform in the Graphics2D context.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPaint()",
+    "name": "getPaint",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Paint",
+      "name": "java.awt.Paint",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getPaint()",
+      "comment": "Returns the current Paint of the Graphics2D context.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getComposite()",
+    "name": "getComposite",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Composite",
+      "name": "java.awt.Composite",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getComposite()",
+      "comment": "Returns the current Composite in the Graphics2D context.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBackground(java.awt.Color color)",
+    "name": "setBackground",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Color",
+          "name": "Color",
+          "isArray": false
+        },
+        "name": "color"
+      }
+    ],
+    "equivalence": {
+      "member": "setBackground(java.awt.Color color)",
+      "comment": "Sets the background color for the Graphics2D context. The background color is used for clearing a region. When a Graphics2D is constructed for a Component, the background color is inherited from the Component. Setting the background color in the Graphics2D context only affects the subsequent clearRect calls and not the background color of the Component. To change the background of the Component, use appropriate methods of the Component.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBackground()",
+    "name": "getBackground",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getBackground()",
+      "comment": "Returns the background color used for clearing a region.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStroke()",
+    "name": "getStroke",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Stroke",
+      "name": "java.awt.Stroke",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getStroke()",
+      "comment": "Returns the current Stroke in the Graphics2D context.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clip(java.awt.Shape s)",
+    "name": "clip",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Shape",
+          "name": "Shape",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "clip(java.awt.Shape s)",
+      "comment": "Intersects the current Clip with the interior of the specified Shape and sets the Clip to the resulting intersection. The specified Shape is transformed with the current Graphics2D Transform before being intersected with the current Clip. This method is used to make the current Clip smaller. To make the Clip larger, use setClip. The user clip modified by this method is independent of the clipping associated with device bounds and visibility. If no clip has previously been set, or if the clip has been cleared using Graphics#setClip(Shape) setClip with a null argument, the specified Shape becomes the new user clip.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFontRenderContext()",
+    "name": "getFontRenderContext",
+    "containingClass": {
+      "qualifiedName": "java.awt.Graphics2D",
+      "name": "Graphics2D",
+      "isArray": false
+    },
+    "targetClass": "java.awt.Graphics2D",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.font.FontRenderContext",
+      "name": "java.awt.font.FontRenderContext",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getFontRenderContext()",
+      "comment": "Get the rendering context of the Font within this Graphics2D context. The FontRenderContext encapsulates application hints such as anti-aliasing and fractional metrics, as well as target device specific information such as dots-per-inch. This information should be provided by the application when using objects that perform typographical formatting, such as Font and TextLayout. This information should also be provided by applications that perform their own layout and need accurate measurements of various characteristics of glyphs such as advance and line height when various rendering hints have been applied to the text rendering.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

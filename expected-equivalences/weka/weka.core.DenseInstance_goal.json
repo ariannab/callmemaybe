@@ -1,0 +1,597 @@
+[
+  {
+    "signature": "weka.core.DenseInstance(weka.core.Instance instance)",
+    "name": "weka.core.DenseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.DenseInstance(weka.core.Instance instance)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.DenseInstance(double weight, double[] attValues)",
+    "name": "weka.core.DenseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "attValues"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.DenseInstance(double weight, double[] attValues)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.DenseInstance(int numAttributes)",
+    "name": "weka.core.DenseInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numAttributes"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.DenseInstance(int numAttributes)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "copy()",
+      "comment": "Produces a shallow copy of this instance. The copy has access to the same dataset. (if you want to make a copy that doesn't have access to the dataset, use new DenseInstance(instance)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy(double[] values)",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "equivalence": {
+      "member": "copy(double[] values)",
+      "comment": "Copies the instance but fills up its values based on the given array of doubles. The copy has access to the same dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "index(int position)",
+    "name": "index",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "index(int position)",
+      "comment": "Returns the index of the attribute stored at the given position. Just returns the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeInstance(weka.core.Instance inst)",
+    "name": "mergeInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "equivalence": {
+      "member": "mergeInstance(weka.core.Instance inst)",
+      "comment": "Merges this instance with the given instance and returns the result. Dataset is set to null. The returned instance is of the same type as this instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numAttributes()",
+    "name": "numAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numAttributes()",
+      "comment": "Returns the number of attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numValues()",
+    "name": "numValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numValues()",
+      "comment": "Returns the number of values present. Always the same as numAttributes().",
+      "kind": "FreeText",
+      "condition": "methodResultID==(receiverObjectClone.numAttributes())"
+    }
+  },
+  {
+    "signature": "replaceMissingValues(double[] array)",
+    "name": "replaceMissingValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceMissingValues(double[] array)",
+      "comment": "Replaces all missing values in the instance with the values contained in the given array. A deep copy of the vector of attribute values is performed before the values are replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(int attIndex, double value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValue(int attIndex, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format). Performs a deep copy of the vector of attribute values before the value is set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValueSparse(int indexOfIndex, double value)",
+    "name": "setValueSparse",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "indexOfIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setValueSparse(int indexOfIndex, double value)",
+      "comment": "Sets a specific value in the instance to the given value (internal floating-point format). Performs a deep copy of the vector of attribute values before the value is set. Does exactly the same thing as setValue().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toDoubleArray()",
+    "name": "toDoubleArray",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toDoubleArray()",
+      "comment": "Returns the values of each attribute as an array of doubles.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStringNoWeight()",
+    "name": "toStringNoWeight",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toStringNoWeight()",
+      "comment": "Returns the description of one instance (without weight appended). If the instance doesn't have access to a dataset, it returns the internal floating-point values. Quotes string values that contain whitespace characters. This method is used by getRandomNumberGenerator() in Instances.java in order to maintain backwards compatibility with weka 3.4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStringNoWeight(int afterDecimalPoint)",
+    "name": "toStringNoWeight",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "afterDecimalPoint"
+      }
+    ],
+    "equivalence": {
+      "member": "toStringNoWeight(int afterDecimalPoint)",
+      "comment": "Returns the description of one instance (without weight appended). If the instance doesn't have access to a dataset, it returns the internal floating-point values. Quotes string values that contain whitespace characters. This method is used by getRandomNumberGenerator() in Instances.java in order to maintain backwards compatibility with weka 3.4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "value(int attIndex)",
+    "name": "value",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "value(int attIndex)",
+      "comment": "Returns an instance's attribute value in internal format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forceDeleteAttributeAt(int position)",
+    "name": "forceDeleteAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "forceDeleteAttributeAt(int position)",
+      "comment": "Deletes an attribute at the given position (0 to numAttributes() - 1).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forceInsertAttributeAt(int position)",
+    "name": "forceInsertAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "forceInsertAttributeAt(int position)",
+      "comment": "Inserts an attribute at the given position (0 to numAttributes()) and sets its value to be missing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] options)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] options)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.core.DenseInstance",
+      "name": "DenseInstance",
+      "isArray": false
+    },
+    "targetClass": "weka.core.DenseInstance",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

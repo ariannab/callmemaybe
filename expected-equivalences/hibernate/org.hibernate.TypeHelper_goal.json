@@ -1,0 +1,274 @@
+[
+  {
+    "signature": "basic(java.lang.String name)",
+    "name": "basic",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.BasicType",
+      "name": "org.hibernate.type.BasicType",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "basic(java.lang.String name)",
+      "comment": "Retrieve the basic type registered against the given name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "basic(java.lang.Class javaType)",
+    "name": "basic",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.BasicType",
+      "name": "org.hibernate.type.BasicType",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "javaType"
+      }
+    ],
+    "equivalence": {
+      "member": "basic(java.lang.Class javaType)",
+      "comment": "Convenience form of #basic(String). The intended use of this is something like basic(Integer.class) or basic(int.class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "heuristicType(java.lang.String name)",
+    "name": "heuristicType",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.Type",
+      "name": "org.hibernate.type.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "heuristicType(java.lang.String name)",
+      "comment": "Uses heuristics to deduce the proper Type given a string naming the type or Java class.  See org.hibernate.type.TypeResolver#heuristicType(java.lang.String) for a discussion of the heuristic algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entity(java.lang.Class entityClass)",
+    "name": "entity",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.Type",
+      "name": "org.hibernate.type.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "entityClass"
+      }
+    ],
+    "equivalence": {
+      "member": "entity(java.lang.Class entityClass)",
+      "comment": "Retrieve a type representing the given entity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entity(java.lang.String entityName)",
+    "name": "entity",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.Type",
+      "name": "org.hibernate.type.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "entityName"
+      }
+    ],
+    "equivalence": {
+      "member": "entity(java.lang.String entityName)",
+      "comment": "Retrieve a type representing the given entity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "custom(java.lang.Class userTypeClass)",
+    "name": "custom",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.Type",
+      "name": "org.hibernate.type.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "userTypeClass"
+      }
+    ],
+    "equivalence": {
+      "member": "custom(java.lang.Class userTypeClass)",
+      "comment": "Retrieve the type for the given user-type class (org.hibernate.usertype.UserType or org.hibernate.usertype.CompositeUserType).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "custom(java.lang.Class userTypeClass, java.util.Properties properties)",
+    "name": "custom",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.Type",
+      "name": "org.hibernate.type.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "userTypeClass"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Properties",
+          "name": "Properties",
+          "isArray": false
+        },
+        "name": "properties"
+      }
+    ],
+    "equivalence": {
+      "member": "custom(java.lang.Class userTypeClass, java.util.Properties properties)",
+      "comment": "Retrieve the type for the given user-type class (org.hibernate.usertype.UserType or org.hibernate.usertype.CompositeUserType).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "any(org.hibernate.type.Type metaType, org.hibernate.type.Type identifierType)",
+    "name": "any",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.TypeHelper",
+      "name": "TypeHelper",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.TypeHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.type.Type",
+      "name": "org.hibernate.type.Type",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.hibernate.type.Type",
+          "name": "Type",
+          "isArray": false
+        },
+        "name": "metaType"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.hibernate.type.Type",
+          "name": "Type",
+          "isArray": false
+        },
+        "name": "identifierType"
+      }
+    ],
+    "equivalence": {
+      "member": "any(org.hibernate.type.Type metaType, org.hibernate.type.Type identifierType)",
+      "comment": "Retrieve the type representing an ANY mapping.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

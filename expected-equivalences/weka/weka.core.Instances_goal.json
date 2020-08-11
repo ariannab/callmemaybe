@@ -1,0 +1,3028 @@
+[
+  {
+    "signature": "weka.core.Instances(java.io.Reader reader)",
+    "name": "weka.core.Instances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Reader",
+          "name": "Reader",
+          "isArray": false
+        },
+        "name": "reader"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.Instances(java.io.Reader reader)",
+      "comment": "Reads an ARFF file from a reader, and assigns a weight of one to each instance. Lets the index of the class attribute be undefined (negative).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.Instances(java.io.Reader reader, int capacity)",
+    "name": "weka.core.Instances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Reader",
+          "name": "Reader",
+          "isArray": false
+        },
+        "name": "reader"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.Instances(java.io.Reader reader, int capacity)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.Instances(weka.core.Instances dataset)",
+    "name": "weka.core.Instances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "dataset"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.Instances(weka.core.Instances dataset)",
+      "comment": "Constructor copying all instances and references to the header information from the given set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.Instances(weka.core.Instances dataset, int capacity)",
+    "name": "weka.core.Instances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "dataset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.Instances(weka.core.Instances dataset, int capacity)",
+      "comment": "Constructor creating an empty set of instances. Copies references to the header information from the given set of instances. Sets the capacity of the set of instances to 0 if its negative.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.Instances(weka.core.Instances source, int first, int toCopy)",
+    "name": "weka.core.Instances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toCopy"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.Instances(weka.core.Instances source, int first, int toCopy)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.core.Instances(java.lang.String name, java.util.ArrayList<weka.core.Attribute> attInfo, int capacity)",
+    "name": "weka.core.Instances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "attInfo"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      }
+    ],
+    "equivalence": {
+      "member": "weka.core.Instances(java.lang.String name, java.util.ArrayList<weka.core.Attribute> attInfo, int capacity)",
+      "comment": "Creates an empty set of instances. Uses the given attribute information. Sets the capacity of the set of instances to 0 if its negative. Given attribute information must not be changed after this constructor has been used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initialize(weka.core.Instances dataset, int capacity)",
+    "name": "initialize",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "dataset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      }
+    ],
+    "equivalence": {
+      "member": "initialize(weka.core.Instances dataset, int capacity)",
+      "comment": "initializes with the header information of the given dataset and sets the capacity of the set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stringFreeStructure()",
+    "name": "stringFreeStructure",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "stringFreeStructure()",
+      "comment": "Create a copy of the structure. If the data has string or relational attributes, theses are replaced by empty copies. Other attributes are left unmodified, but the underlying list structure holding references to the attributes is shallow-copied, so that other Instances objects with a reference to this list are not affected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(weka.core.Instance instance)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "add(weka.core.Instance instance)",
+      "comment": "Adds one instance to the end of the set. Shallow copies instance before it is added. Increases the size of the dataset if it is not large enough. Does not check if the instance is compatible with the dataset. Note: String or relational values are not transferred.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int index, weka.core.Instance instance)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "add(int index, weka.core.Instance instance)",
+      "comment": "Adds one instance at the given position in the list. Shallow copies instance before it is added. Increases the size of the dataset if it is not large enough. Does not check if the instance is compatible with the dataset. Note: String or relational values are not transferred.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attribute(int index)",
+    "name": "attribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "attribute(int index)",
+      "comment": "Returns an attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attribute(java.lang.String name)",
+    "name": "attribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "attribute(java.lang.String name)",
+      "comment": "Returns an attribute given its name. If there is more than one attribute with the same name, it returns the first one. Returns null if the attribute can't be found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkForAttributeType(int attType)",
+    "name": "checkForAttributeType",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attType"
+      }
+    ],
+    "equivalence": {
+      "member": "checkForAttributeType(int attType)",
+      "comment": "Checks for attributes of the given type in the dataset",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkForStringAttributes()",
+    "name": "checkForStringAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "checkForStringAttributes()",
+      "comment": "Checks for string attributes in the dataset",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkInstance(weka.core.Instance instance)",
+    "name": "checkInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "checkInstance(weka.core.Instance instance)",
+      "comment": "Checks if the given instance is compatible with this dataset. Only looks at the size of the instance and the ranges of the values for nominal and string attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classAttribute()",
+    "name": "classAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classAttribute()",
+      "comment": "Returns the class attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classIndex()",
+    "name": "classIndex",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classIndex()",
+      "comment": "Returns the class attribute's index. Returns negative number if it's undefined.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compactify()",
+    "name": "compactify",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "compactify()",
+      "comment": "Compactifies the set of instances. Decreases the capacity of the set so that it matches the number of instances in the set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "delete()",
+    "name": "delete",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "delete()",
+      "comment": "Removes all instances from the set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "delete(int index)",
+    "name": "delete",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "delete(int index)",
+      "comment": "Removes an instance at the given position from the set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteAttributeAt(int position)",
+    "name": "deleteAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "deleteAttributeAt(int position)",
+      "comment": "Deletes an attribute at the given position (0 to numAttributes() - 1). Attribute objects after the deletion point are copied so that their indices can be decremented. Creates a fresh list to hold the old and new attribute objects.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteAttributeType(int attType)",
+    "name": "deleteAttributeType",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attType"
+      }
+    ],
+    "equivalence": {
+      "member": "deleteAttributeType(int attType)",
+      "comment": "Deletes all attributes of the given type in the dataset. A deep copy of the attribute information is performed before an attribute is deleted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteStringAttributes()",
+    "name": "deleteStringAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "deleteStringAttributes()",
+      "comment": "Deletes all string attributes in the dataset. A deep copy of the attribute information is performed before an attribute is deleted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteWithMissing(int attIndex)",
+    "name": "deleteWithMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "deleteWithMissing(int attIndex)",
+      "comment": "Removes all instances with missing values for a particular attribute from the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteWithMissing(weka.core.Attribute att)",
+    "name": "deleteWithMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "deleteWithMissing(weka.core.Attribute att)",
+      "comment": "Removes all instances with missing values for a particular attribute from the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteWithMissingClass()",
+    "name": "deleteWithMissingClass",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "deleteWithMissingClass()",
+      "comment": "Removes all instances with a missing class value from the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateAttributes()",
+    "name": "enumerateAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Attribute>",
+      "name": "java.util.Enumeration<weka.core.Attribute>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "enumerateAttributes()",
+      "comment": "Returns an enumeration of all the attributes. The class attribute (if set) is skipped by this enumeration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateInstances()",
+    "name": "enumerateInstances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Instance>",
+      "name": "java.util.Enumeration<weka.core.Instance>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "enumerateInstances()",
+      "comment": "Returns an enumeration of all instances in the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalHeadersMsg(weka.core.Instances dataset)",
+    "name": "equalHeadersMsg",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "dataset"
+      }
+    ],
+    "equivalence": {
+      "member": "equalHeadersMsg(weka.core.Instances dataset)",
+      "comment": "Checks if two headers are equivalent. If not, then returns a message why they differ.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equalHeaders(weka.core.Instances dataset)",
+    "name": "equalHeaders",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "dataset"
+      }
+    ],
+    "equivalence": {
+      "member": "equalHeaders(weka.core.Instances dataset)",
+      "comment": "Checks if two headers are equivalent.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstInstance()",
+    "name": "firstInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "firstInstance()",
+      "comment": "Returns the first instance in the set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRandomNumberGenerator(long seed)",
+    "name": "getRandomNumberGenerator",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Random",
+      "name": "java.util.Random",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "seed"
+      }
+    ],
+    "equivalence": {
+      "member": "getRandomNumberGenerator(long seed)",
+      "comment": "Returns a random number generator. The initial seed of the random number generator depends on the given seed and the hash code of a string representation of a instances chosen based on the given seed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "insertAttributeAt(weka.core.Attribute att, int position)",
+    "name": "insertAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "insertAttributeAt(weka.core.Attribute att, int position)",
+      "comment": "Inserts an attribute at the given position (0 to numAttributes()) and sets all values to be missing. Shallow copies the attribute before it is inserted. Existing attribute objects at and after the insertion point are also copied so that their indices can be incremented. Creates a fresh list to hold the old and new attribute objects.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "instance(int index)",
+    "name": "instance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "instance(int index)",
+      "comment": "Returns the instance at the given position.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "get(int index)",
+      "comment": "Returns the instance at the given position.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kthSmallestValue(weka.core.Attribute att, int k)",
+    "name": "kthSmallestValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "equivalence": {
+      "member": "kthSmallestValue(weka.core.Attribute att, int k)",
+      "comment": "Returns the kth-smallest attribute value of a numeric attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kthSmallestValue(int attIndex, int k)",
+    "name": "kthSmallestValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "equivalence": {
+      "member": "kthSmallestValue(int attIndex, int k)",
+      "comment": "Returns the kth-smallest attribute value of a numeric attribute. NOTE CHANGE: Missing values (NaN values) are now treated as Double.MAX_VALUE. Also, the order of the instances in the data is no longer affected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastInstance()",
+    "name": "lastInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "lastInstance()",
+      "comment": "Returns the last instance in the set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanOrMode(int attIndex)",
+    "name": "meanOrMode",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "meanOrMode(int attIndex)",
+      "comment": "Returns the mean (mode) for a numeric (nominal) attribute as a floating-point value. Returns 0 if the attribute is neither nominal nor numeric. If all values are missing it returns zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanOrMode(weka.core.Attribute att)",
+    "name": "meanOrMode",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "meanOrMode(weka.core.Attribute att)",
+      "comment": "Returns the mean (mode) for a numeric (nominal) attribute as a floating-point value. Returns 0 if the attribute is neither nominal nor numeric. If all values are missing it returns zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numAttributes()",
+    "name": "numAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numAttributes()",
+      "comment": "Returns the number of attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numClasses()",
+    "name": "numClasses",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numClasses()",
+      "comment": "Returns the number of class labels.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numDistinctValues(int attIndex)",
+    "name": "numDistinctValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "numDistinctValues(int attIndex)",
+      "comment": "Returns the number of distinct values of a given attribute. The value 'missing' is not counted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numDistinctValues(weka.core.Attribute att)",
+    "name": "numDistinctValues",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "numDistinctValues(weka.core.Attribute att)",
+      "comment": "Returns the number of distinct values of a given attribute. The value 'missing' is not counted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numInstances()",
+    "name": "numInstances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numInstances()",
+      "comment": "Returns the number of instances in the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "size()",
+      "comment": "Returns the number of instances in the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "randomize(java.util.Random random)",
+    "name": "randomize",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "equivalence": {
+      "member": "randomize(java.util.Random random)",
+      "comment": "Shuffles the instances in the set so that they are ordered randomly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readInstance(java.io.Reader reader)",
+    "name": "readInstance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Reader",
+          "name": "Reader",
+          "isArray": false
+        },
+        "name": "reader"
+      }
+    ],
+    "equivalence": {
+      "member": "readInstance(java.io.Reader reader)",
+      "comment": "Reads a single instance from the reader and appends it to the dataset. Automatically expands the dataset if it is not large enough to hold the instance. This method does not check for carriage return at the end of the line.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAttributeAt(weka.core.Attribute att, int position)",
+    "name": "replaceAttributeAt",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "position"
+      }
+    ],
+    "equivalence": {
+      "member": "replaceAttributeAt(weka.core.Attribute att, int position)",
+      "comment": "Replaces the attribute at the given position (0 to numAttributes()) with the given attribute and sets all its values to be missing. Shallow copies the given attribute before it is inserted. Creates a fresh list to hold the old and new attribute objects.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "relationName()",
+    "name": "relationName",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "relationName()",
+      "comment": "Returns the relation's name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(int index)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "remove(int index)",
+      "comment": "Removes the instance at the given position.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameAttribute(int att, java.lang.String name)",
+    "name": "renameAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "renameAttribute(int att, java.lang.String name)",
+      "comment": "Renames an attribute. This change only affects this dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameAttribute(weka.core.Attribute att, java.lang.String name)",
+    "name": "renameAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "renameAttribute(weka.core.Attribute att, java.lang.String name)",
+      "comment": "Renames an attribute. This change only affects this dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameAttributeValue(int att, int val, java.lang.String name)",
+    "name": "renameAttributeValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "val"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "renameAttributeValue(int att, int val, java.lang.String name)",
+      "comment": "Renames the value of a nominal (or string) attribute value. This change only affects this dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameAttributeValue(weka.core.Attribute att, java.lang.String val, java.lang.String name)",
+    "name": "renameAttributeValue",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "val"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "equivalence": {
+      "member": "renameAttributeValue(weka.core.Attribute att, java.lang.String val, java.lang.String name)",
+      "comment": "Renames the value of a nominal (or string) attribute value. This change only affects this dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resample(java.util.Random random)",
+    "name": "resample",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "equivalence": {
+      "member": "resample(java.util.Random random)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the current instance weights. The weights of the instances in the new dataset are set to one. See also resampleWithWeights(Random, double[], boolean[]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random, boolean[] sampled)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Z",
+          "name": "boolean[]",
+          "isArray": true
+        },
+        "name": "sampled"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random, boolean[] sampled)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the current instance weights. The weights of the instances in the new dataset are set to one. See also resampleWithWeights(Random, double[], boolean[]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random, boolean representUsingWeights)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "representUsingWeights"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random, boolean representUsingWeights)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the current instance weights. The weights of the instances in the new dataset are set to one. See also resampleWithWeights(Random, double[], boolean[]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random, boolean[] sampled, boolean representUsingWeights)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Z",
+          "name": "boolean[]",
+          "isArray": true
+        },
+        "name": "sampled"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "representUsingWeights"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random, boolean[] sampled, boolean representUsingWeights)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the current instance weights. The weights of the instances in the new dataset are set to one. See also resampleWithWeights(Random, double[], boolean[]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random, double[] weights)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "weights"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random, double[] weights)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the given weight vector. See also resampleWithWeights(Random, double[], boolean[]).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random, double[] weights, boolean[] sampled)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "weights"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Z",
+          "name": "boolean[]",
+          "isArray": true
+        },
+        "name": "sampled"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random, double[] weights, boolean[] sampled)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the given weight vector. The weights of the instances in the new dataset are set to one. The length of the weight vector has to be the same as the number of instances in the dataset, and all weights have to be positive. Uses Walker's method, see pp. 232 of \"Stochastic Simulation\" by B.D. Ripley (1987).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resampleWithWeights(java.util.Random random, double[] weights, boolean[] sampled, boolean representUsingWeights)",
+    "name": "resampleWithWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "weights"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Z",
+          "name": "boolean[]",
+          "isArray": true
+        },
+        "name": "sampled"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "representUsingWeights"
+      }
+    ],
+    "equivalence": {
+      "member": "resampleWithWeights(java.util.Random random, double[] weights, boolean[] sampled, boolean representUsingWeights)",
+      "comment": "Creates a new dataset of the same size using random sampling with replacement according to the given weight vector. The weights of the instances in the new dataset are set to one. The length of the weight vector has to be the same as the number of instances in the dataset, and all weights have to be positive. Uses Walker's method, see pp. 232 of \"Stochastic Simulation\" by B.D. Ripley (1987).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int index, weka.core.Instance instance)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "equivalence": {
+      "member": "set(int index, weka.core.Instance instance)",
+      "comment": "Replaces the instance at the given position. Shallow copies instance before it is added. Does not check if the instance is compatible with the dataset. Note: String or relational values are not transferred.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClass(weka.core.Attribute att)",
+    "name": "setClass",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "setClass(weka.core.Attribute att)",
+      "comment": "Sets the class attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassIndex(int classIndex)",
+    "name": "setClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "setClassIndex(int classIndex)",
+      "comment": "Sets the class index of the set. If the class index is negative there is assumed to be no class. (ie. it is undefined)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRelationName(java.lang.String newName)",
+    "name": "setRelationName",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "newName"
+      }
+    ],
+    "equivalence": {
+      "member": "setRelationName(java.lang.String newName)",
+      "comment": "Sets the relation's name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sortBasedOnNominalAttribute(int attIndex)",
+    "name": "sortBasedOnNominalAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "sortBasedOnNominalAttribute(int attIndex)",
+      "comment": "Sorts a nominal attribute (stable, linear-time sort). Instances are sorted based on the attribute label ordering specified in the header.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sort(int attIndex)",
+    "name": "sort",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "sort(int attIndex)",
+      "comment": "Sorts the instances based on an attribute. For numeric attributes, instances are sorted in ascending order. For nominal attributes, instances are sorted based on the attribute label ordering specified in the header. Instances with missing values for the attribute are placed at the end of the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sort(weka.core.Attribute att)",
+    "name": "sort",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "sort(weka.core.Attribute att)",
+      "comment": "Sorts the instances based on an attribute. For numeric attributes, instances are sorted into ascending order. For nominal attributes, instances are sorted based on the attribute label ordering specified in the header. Instances with missing values for the attribute are placed at the end of the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stableSort(int attIndex)",
+    "name": "stableSort",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "stableSort(int attIndex)",
+      "comment": "Sorts the instances based on an attribute, using a stable sort. For numeric attributes, instances are sorted in ascending order. For nominal attributes, instances are sorted based on the attribute label ordering specified in the header. Instances with missing values for the attribute are placed at the end of the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stableSort(weka.core.Attribute att)",
+    "name": "stableSort",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "stableSort(weka.core.Attribute att)",
+      "comment": "Sorts the instances based on an attribute, using a stable sort. For numeric attributes, instances are sorted into ascending order. For nominal attributes, instances are sorted based on the attribute label ordering specified in the header. Instances with missing values for the attribute are placed at the end of the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stratify(int numFolds)",
+    "name": "stratify",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      }
+    ],
+    "equivalence": {
+      "member": "stratify(int numFolds)",
+      "comment": "Stratifies a set of instances according to its class values if the class attribute is nominal (so that afterwards a stratified cross-validation can be performed).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumOfWeights()",
+    "name": "sumOfWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "sumOfWeights()",
+      "comment": "Computes the sum of all the instances' weights.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "testCV(int numFolds, int numFold)",
+    "name": "testCV",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFold"
+      }
+    ],
+    "equivalence": {
+      "member": "testCV(int numFolds, int numFold)",
+      "comment": "Creates the test set for one fold of a cross-validation on the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Returns the dataset as a string in ARFF format. Strings are quoted if they contain whitespace characters, or if they are a question mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stringWithoutHeader()",
+    "name": "stringWithoutHeader",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "stringWithoutHeader()",
+      "comment": "Returns the instances in the dataset as a string in ARFF format. Strings are quoted if they contain whitespace characters, or if they are a question mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trainCV(int numFolds, int numFold)",
+    "name": "trainCV",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFold"
+      }
+    ],
+    "equivalence": {
+      "member": "trainCV(int numFolds, int numFold)",
+      "comment": "Creates the training set for one fold of a cross-validation on the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trainCV(int numFolds, int numFold, java.util.Random random)",
+    "name": "trainCV",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "equivalence": {
+      "member": "trainCV(int numFolds, int numFold, java.util.Random random)",
+      "comment": "Creates the training set for one fold of a cross-validation on the dataset. The data is subsequently randomized based on the given random number generator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variances()",
+    "name": "variances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "variances()",
+      "comment": "Computes the variance for all numeric attributes simultaneously. This is faster than calling variance() for each attribute. The resulting array has as many dimensions as there are attributes. Array elements corresponding to non-numeric attributes are set to 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variance(int attIndex)",
+    "name": "variance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "equivalence": {
+      "member": "variance(int attIndex)",
+      "comment": "Computes the variance for a numeric attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variance(weka.core.Attribute att)",
+    "name": "variance",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "att"
+      }
+    ],
+    "equivalence": {
+      "member": "variance(weka.core.Attribute att)",
+      "comment": "Computes the variance for a numeric attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attributeStats(int index)",
+    "name": "attributeStats",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.AttributeStats",
+      "name": "weka.core.AttributeStats",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "attributeStats(int index)",
+      "comment": "Calculates summary statistics on the values that appear in this set of instances for a specified attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attributeToDoubleArray(int index)",
+    "name": "attributeToDoubleArray",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "attributeToDoubleArray(int index)",
+      "comment": "Gets the value of all instances in this dataset for a particular attribute. Useful in conjunction with Utils.sort to allow iterating through the dataset in sorted order for some attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSummaryString()",
+    "name": "toSummaryString",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toSummaryString()",
+      "comment": "Generates a string summarizing the set of instances. Gives a breakdown for each attribute indicating the number of missing/discrete/unique values and other information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInstances(int from, weka.core.Instances dest, int num)",
+    "name": "copyInstances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "dest"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "num"
+      }
+    ],
+    "equivalence": {
+      "member": "copyInstances(int from, weka.core.Instances dest, int num)",
+      "comment": "Copies instances from one set to the end of another one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "instancesAndWeights()",
+    "name": "instancesAndWeights",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "instancesAndWeights()",
+      "comment": "Returns string including all instances, their weights and their indices in the original dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stratStep(int numFolds)",
+    "name": "stratStep",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      }
+    ],
+    "equivalence": {
+      "member": "stratStep(int numFolds)",
+      "comment": "Help function needed for stratification of set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "swap(int i, int j)",
+    "name": "swap",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "j"
+      }
+    ],
+    "equivalence": {
+      "member": "swap(int i, int j)",
+      "comment": "Swaps two instances in the set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeInstances(weka.core.Instances first, weka.core.Instances second)",
+    "name": "mergeInstances",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "second"
+      }
+    ],
+    "equivalence": {
+      "member": "mergeInstances(weka.core.Instances first, weka.core.Instances second)",
+      "comment": "Merges two sets of Instances together. The resulting set will have all the attributes of the first set plus all the attributes of the second set. The number of instances in both sets must be the same.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "test(java.lang.String[] argv)",
+    "name": "test",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "equivalence": {
+      "member": "test(java.lang.String[] argv)",
+      "comment": "Method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method for this class. The following calls are possible:  <li> weka.core.Instances help<br/> prints a short list of possible commands.</li> <li> weka.core.Instances <filename><br/> prints a summary of a set of instances.</li> <li> weka.core.Instances merge <filename1> <filename2><br/> merges the two datasets (must have same number of instances) and outputs the results on stdout.</li> <li> weka.core.Instances append <filename1> <filename2> <br/> appends the second dataset to the first one (must have same headers) and outputs the results on stdout.</li> <li> weka.core.Instances headers <filename1> <filename2><br/> Compares the headers of the two datasets and prints whether they match or not.</li> <li> weka.core.Instances randomize <seed> <filename><br/> randomizes the dataset with the given seed and outputs the result on stdout.</li>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "Instances",
+      "isArray": false
+    },
+    "targetClass": "weka.core.Instances",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

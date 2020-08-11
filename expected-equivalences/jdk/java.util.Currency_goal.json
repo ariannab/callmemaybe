@@ -1,0 +1,291 @@
+[
+  {
+    "signature": "getInstance(java.lang.String currencyCode)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Currency",
+      "name": "java.util.Currency",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "currencyCode"
+      }
+    ],
+    "equivalence": {
+      "member": "getInstance(java.lang.String currencyCode)",
+      "comment": "Returns the Currency instance for the given currency code.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstance(java.util.Locale locale)",
+    "name": "getInstance",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Currency",
+      "name": "java.util.Currency",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "getInstance(java.util.Locale locale)",
+      "comment": "Returns the Currency instance for the country of the given locale. The language and variant components of the locale are ignored. The result may vary over time, as countries change their currencies. For example, for the original member countries of the European Monetary Union, the method returns the old national currencies until December 31, 2001, and the Euro from January 1, 2002, local time of the respective countries.  The method returns null for territories that don't have a currency, such as Antarctica.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAvailableCurrencies()",
+    "name": "getAvailableCurrencies",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Currency>",
+      "name": "java.util.Set<java.util.Currency>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAvailableCurrencies()",
+      "comment": "Gets the set of available currencies. The returned set of currencies contains all of the available currencies, which may include currencies that represent obsolete ISO 4217 codes. The set can be modified without affecting the available currencies in the runtime.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCurrencyCode()",
+    "name": "getCurrencyCode",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCurrencyCode()",
+      "comment": "Gets the ISO 4217 currency code of this currency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSymbol()",
+    "name": "getSymbol",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getSymbol()",
+      "comment": "Gets the symbol of this currency for the default Locale.Category#DISPLAY DISPLAY locale. For example, for the US Dollar, the symbol is \"$\" if the default locale is the US, while for other locales it may be \"US$\". If no symbol can be determined, the ISO 4217 currency code is returned.  This is equivalent to calling getSymbol(Locale.getDefault(Locale.Category.DISPLAY)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSymbol(java.util.Locale locale)",
+    "name": "getSymbol",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "getSymbol(java.util.Locale locale)",
+      "comment": "Gets the symbol of this currency for the specified locale. For example, for the US Dollar, the symbol is \"$\" if the specified locale is the US, while for other locales it may be \"US$\". If no symbol can be determined, the ISO 4217 currency code is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultFractionDigits()",
+    "name": "getDefaultFractionDigits",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDefaultFractionDigits()",
+      "comment": "Gets the default number of fraction digits used with this currency. For example, the default number of fraction digits for the Euro is 2, while for the Japanese Yen it's 0. In the case of pseudo-currencies, such as IMF Special Drawing Rights, -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumericCode()",
+    "name": "getNumericCode",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getNumericCode()",
+      "comment": "Returns the ISO 4217 numeric code of this currency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayName()",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDisplayName()",
+      "comment": "Gets the name that is suitable for displaying this currency for the default Locale.Category#DISPLAY DISPLAY locale. If there is no suitable display name found for the default locale, the ISO 4217 currency code is returned.  This is equivalent to calling getDisplayName(Locale.getDefault(Locale.Category.DISPLAY)).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayName(java.util.Locale locale)",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "equivalence": {
+      "member": "getDisplayName(java.util.Locale locale)",
+      "comment": "Gets the name that is suitable for displaying this currency for the specified locale. If there is no suitable display name found for the specified locale, the ISO 4217 currency code is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.Currency",
+      "name": "Currency",
+      "isArray": false
+    },
+    "targetClass": "java.util.Currency",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Returns the ISO 4217 currency code of this currency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

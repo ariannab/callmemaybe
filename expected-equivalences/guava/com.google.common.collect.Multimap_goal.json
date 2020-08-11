@@ -228,7 +228,7 @@
     "equivalence": {
       "comment": "Stores a key-value pair in this multimap for each of values, all using the same key, key. Equivalent to (but expected to be more efficient than): for (V value : values) { put(key, value); } <p>In particular, this is a no-op if values is empty.",
       "kind": "FreeText",
-      "condition": "methodResultID==[ for (V value : args[1]) { receiverObjectClone.put(args[0], value);} ]"
+      "condition": "methodResultID.equals[ for (V value : args[1]) { receiverObjectClone.put(args[0], value);} ]"
     }
   },
   {

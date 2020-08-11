@@ -1,0 +1,2024 @@
+[
+  {
+    "signature": "weka.core.neighboursearch.CoverTree()",
+    "name": "weka.core.neighboursearch.CoverTree",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "weka.core.neighboursearch.CoverTree()",
+      "comment": "default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this nearest neighbour search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, e.g., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "equivalence": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -B <value> Set base of the expansion constant (default = 1.3).  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of KDtree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dist_of_scale(int s)",
+    "name": "dist_of_scale",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "dist_of_scale(int s)",
+      "comment": "Returns the distance/value of a given scale/level. I.e. the value of base^i (e.g. 2^i).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get_scale(double d)",
+    "name": "get_scale",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "member": "get_scale(double d)",
+      "comment": "Finds the scale/level of a given value. I.e. the \"i\" in base^i.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "new_node(java.lang.Integer idx)",
+    "name": "new_node",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+      "name": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Integer",
+          "name": "Integer",
+          "isArray": false
+        },
+        "name": "idx"
+      }
+    ],
+    "equivalence": {
+      "member": "new_node(java.lang.Integer idx)",
+      "comment": "Creates a new internal node for a given Instance/point p.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "new_leaf(java.lang.Integer idx)",
+    "name": "new_leaf",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+      "name": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Integer",
+          "name": "Integer",
+          "isArray": false
+        },
+        "name": "idx"
+      }
+    ],
+    "equivalence": {
+      "member": "new_leaf(java.lang.Integer idx)",
+      "comment": "Creates a new leaf node for a given Instance/point p.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "max_set(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> v)",
+    "name": "max_set",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "max_set(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> v)",
+      "comment": "Returns the max distance of the reference point p in current node to it's children nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "split(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> point_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> far_set, int max_scale)",
+    "name": "split",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "point_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "far_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      }
+    ],
+    "equivalence": {
+      "member": "split(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> point_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> far_set, int max_scale)",
+      "comment": "Splits a given point_set into near and far based on the given scale/level. All points with distance > base^max_scale would be moved to far set. In other words, all those points that are not covered by the next child ball of a point p (ball made of the same point p but of smaller radius at the next lower level) are removed from the supplied current point_set and put into far_set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dist_split(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> point_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> new_point_set, weka.core.neighboursearch.CoverTree$DistanceNode new_point, int max_scale)",
+    "name": "dist_split",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "point_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "new_point_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$DistanceNode",
+          "name": "DistanceNode",
+          "isArray": false
+        },
+        "name": "new_point"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      }
+    ],
+    "equivalence": {
+      "member": "dist_split(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> point_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> new_point_set, weka.core.neighboursearch.CoverTree$DistanceNode new_point, int max_scale)",
+      "comment": "Moves all the points in point_set covered by (the ball of) new_point into new_point_set, based on the given scale/level.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "batch_insert(java.lang.Integer p, int max_scale, int top_scale, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> point_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> consumed_set)",
+    "name": "batch_insert",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+      "name": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Integer",
+          "name": "Integer",
+          "isArray": false
+        },
+        "name": "p"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "top_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "point_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "consumed_set"
+      }
+    ],
+    "equivalence": {
+      "member": "batch_insert(java.lang.Integer p, int max_scale, int top_scale, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> point_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$DistanceNode> consumed_set)",
+      "comment": "Creates a cover tree recursively using batch insert method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildCoverTree(weka.core.Instances insts)",
+    "name": "buildCoverTree",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "equivalence": {
+      "member": "buildCoverTree(weka.core.Instances insts)",
+      "comment": "Builds the tree on the given set of instances. P.S.: For internal use only. Outside classes should call setInstances().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setter(weka.core.neighboursearch.CoverTree$MyHeap heap, double upper_bound, int k)",
+    "name": "setter",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "heap"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "upper_bound"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "equivalence": {
+      "member": "setter(weka.core.neighboursearch.CoverTree$MyHeap heap, double upper_bound, int k)",
+      "comment": "Initializes a heap with k values of the the given upper_bound.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "update(weka.core.neighboursearch.CoverTree$MyHeap upper_bound, double new_bound)",
+    "name": "update",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "upper_bound"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "new_bound"
+      }
+    ],
+    "equivalence": {
+      "member": "update(weka.core.neighboursearch.CoverTree$MyHeap upper_bound, double new_bound)",
+      "comment": "Replaces the current top/max value in the heap with the new one. The new max value should be <= the old one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCoverSet(int idx, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets)",
+    "name": "getCoverSet",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>",
+      "name": "weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "idx"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_sets"
+      }
+    ],
+    "equivalence": {
+      "member": "getCoverSet(int idx, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets)",
+      "comment": "Returns a cover set for a given level/scale. A cover set for a level consists of nodes whose Instances/centres are which are inside the query ball at that level. If no cover set exists for the given level (if it is the first time it is going to be used), than a new one is created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy_zero_set(weka.core.neighboursearch.CoverTree$CoverTreeNode query_chi, weka.core.neighboursearch.CoverTree$MyHeap new_upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> new_zero_set)",
+    "name": "copy_zero_set",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "query_chi"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "new_upper_k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "zero_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "new_zero_set"
+      }
+    ],
+    "equivalence": {
+      "member": "copy_zero_set(weka.core.neighboursearch.CoverTree$CoverTreeNode query_chi, weka.core.neighboursearch.CoverTree$MyHeap new_upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> new_zero_set)",
+      "comment": "Copies the contents of one zero set to the other. This is required if we are going to inspect child of some query node (if the queries are given in batch in the form of a cover tree). Only those nodes are copied to the new zero set that are inside the query ball of query_chi. P.S.: A zero set is a set of all leaf nodes that are found to be inside the query ball.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy_cover_sets(weka.core.neighboursearch.CoverTree$CoverTreeNode query_chi, weka.core.neighboursearch.CoverTree$MyHeap new_upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> new_cover_sets, int current_scale, int max_scale)",
+    "name": "copy_cover_sets",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "query_chi"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "new_upper_k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_sets"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "new_cover_sets"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "current_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      }
+    ],
+    "equivalence": {
+      "member": "copy_cover_sets(weka.core.neighboursearch.CoverTree$CoverTreeNode query_chi, weka.core.neighboursearch.CoverTree$MyHeap new_upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> new_cover_sets, int current_scale, int max_scale)",
+      "comment": "Copies the contents of one set of cover sets to the other. It is required if we are going to inspect child of some query node (if the queries are given in batch in the form of a cover tree). For each level, only those nodes are copied to the new set which are inside the query ball of query_chi at that level.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print_cover_sets(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, int current_scale, int max_scale)",
+    "name": "print_cover_sets",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_sets"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "zero_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "current_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      }
+    ],
+    "equivalence": {
+      "member": "print_cover_sets(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, int current_scale, int max_scale)",
+      "comment": "Prints the given cover sets and zero set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SWAP(int a, int b, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> cover_set)",
+    "name": "SWAP",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_set"
+      }
+    ],
+    "equivalence": {
+      "member": "SWAP(int a, int b, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> cover_set)",
+      "comment": "Swap two nodes in a cover set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compare(int p1, int p2, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> cover_set)",
+    "name": "compare",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "p1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "p2"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_set"
+      }
+    ],
+    "equivalence": {
+      "member": "compare(int p1, int p2, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> cover_set)",
+      "comment": "Returns the difference of two given nodes distance to the query. It is used in half-sorting a cover set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "halfsort(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> cover_set)",
+    "name": "halfsort",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_set"
+      }
+    ],
+    "equivalence": {
+      "member": "halfsort(weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> cover_set)",
+      "comment": "Half-sorts a cover set, so that nodes nearer to the query are at the front.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shell(double parent_query_dist, double child_parent_dist, double upper_bound)",
+    "name": "shell",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "parent_query_dist"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "child_parent_dist"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "upper_bound"
+      }
+    ],
+    "equivalence": {
+      "member": "shell(double parent_query_dist, double child_parent_dist, double upper_bound)",
+      "comment": "Function to check if a child node can be inside a query ball, without calculating the child node's distance to the query. This further avoids unnecessary distance calculation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descend(weka.core.neighboursearch.CoverTree$CoverTreeNode query, weka.core.neighboursearch.CoverTree$MyHeap upper_k, int current_scale, int max_scale, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set)",
+    "name": "descend",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "upper_k"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "current_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_sets"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "zero_set"
+      }
+    ],
+    "equivalence": {
+      "member": "descend(weka.core.neighboursearch.CoverTree$CoverTreeNode query, weka.core.neighboursearch.CoverTree$MyHeap upper_k, int current_scale, int max_scale, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set)",
+      "comment": "This functions adds nodes for inspection at the next level during NN search. The internal nodes are added to one of the cover sets (at the level of the child node which is added) and leaf nodes are added to the zero set. An optimization to consider: Make all distance evaluations occur in descend. Instead of passing a cover_set, pass a stack of cover sets. The last element holds d_nodes with your distance. The next lower element holds a d_node with the distance to your query parent, next = query grand parent, etc.. Compute distances in the presence of the tighter upper bound.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "brute_nearest(int k, weka.core.neighboursearch.CoverTree$CoverTreeNode query, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, weka.core.neighboursearch.CoverTree$MyHeap upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.NearestNeighbourSearch$NeighborList> results)",
+    "name": "brute_nearest",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "zero_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "upper_k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "results"
+      }
+    ],
+    "equivalence": {
+      "member": "brute_nearest(int k, weka.core.neighboursearch.CoverTree$CoverTreeNode query, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, weka.core.neighboursearch.CoverTree$MyHeap upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.NearestNeighbourSearch$NeighborList> results)",
+      "comment": "Does a brute force NN search on the nodes in the given zero set. A zero set might have some nodes added to it that were not k-NNs, so need to do a brute-force to pick only the k-NNs (without calculating distances, as each node in the zero set already had its distance calculated to the query, which is stored with the node).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internal_batch_nearest_neighbor(int k, weka.core.neighboursearch.CoverTree$CoverTreeNode query_node, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, int current_scale, int max_scale, weka.core.neighboursearch.CoverTree$MyHeap upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.NearestNeighbourSearch$NeighborList> results)",
+    "name": "internal_batch_nearest_neighbor",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "query_node"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "cover_sets"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "zero_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "current_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max_scale"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$MyHeap",
+          "name": "MyHeap",
+          "isArray": false
+        },
+        "name": "upper_k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "results"
+      }
+    ],
+    "equivalence": {
+      "member": "internal_batch_nearest_neighbor(int k, weka.core.neighboursearch.CoverTree$CoverTreeNode query_node, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node>> cover_sets, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.CoverTree$d_node> zero_set, int current_scale, int max_scale, weka.core.neighboursearch.CoverTree$MyHeap upper_k, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.NearestNeighbourSearch$NeighborList> results)",
+      "comment": "Performs a recursive k-NN search for a given batch of queries provided in the form of a cover tree. P.S.: This function should not be called from outside. Outside classes should use kNearestNeighbours() instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "batch_nearest_neighbor(int k, weka.core.neighboursearch.CoverTree$CoverTreeNode tree_root, weka.core.neighboursearch.CoverTree$CoverTreeNode query_root, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.NearestNeighbourSearch$NeighborList> results)",
+    "name": "batch_nearest_neighbor",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "tree_root"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "query_root"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.covertrees.Stack",
+          "name": "Stack",
+          "isArray": false
+        },
+        "name": "results"
+      }
+    ],
+    "equivalence": {
+      "member": "batch_nearest_neighbor(int k, weka.core.neighboursearch.CoverTree$CoverTreeNode tree_root, weka.core.neighboursearch.CoverTree$CoverTreeNode query_root, weka.core.neighboursearch.covertrees.Stack<weka.core.neighboursearch.NearestNeighbourSearch$NeighborList> results)",
+      "comment": "Performs k-NN search for a batch of queries provided in the form of a cover tree. P.S.: Outside classes should call kNearestNeighbours().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findKNearest(weka.core.Instance target, int k)",
+    "name": "findKNearest",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.neighboursearch.NearestNeighbourSearch$NeighborList",
+      "name": "weka.core.neighboursearch.NearestNeighbourSearch$NeighborList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "equivalence": {
+      "member": "findKNearest(weka.core.Instance target, int k)",
+      "comment": "Performs k-NN serach for a single given query/test Instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kNearestNeighbours(weka.core.Instance target, int k)",
+    "name": "kNearestNeighbours",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "equivalence": {
+      "member": "kNearestNeighbours(weka.core.Instance target, int k)",
+      "comment": "Returns k-NNs of a given target instance, from among the previously supplied training instances (supplied through setInstances method) P.S.: May return more than k-NNs if more one instances have the same distance to the target as the kth NN.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nearestNeighbour(weka.core.Instance target)",
+    "name": "nearestNeighbour",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "target"
+      }
+    ],
+    "equivalence": {
+      "member": "nearestNeighbour(weka.core.Instance target)",
+      "comment": "Returns the NN instance of a given target instance, from among the previously supplied training instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDistances()",
+    "name": "getDistances",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDistances()",
+      "comment": "Returns the distances of the (k)-NN(s) found earlier by kNearestNeighbours()/nearestNeighbour().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkMissing(weka.core.Instances instances)",
+    "name": "checkMissing",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "equivalence": {
+      "member": "checkMissing(weka.core.Instances instances)",
+      "comment": "Checks if there is any instance with missing values. Throws an exception if there is, as KDTree does not handle missing values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInstances(weka.core.Instances instances)",
+    "name": "setInstances",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "equivalence": {
+      "member": "setInstances(weka.core.Instances instances)",
+      "comment": "Builds the Cover Tree on the given set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "update(weka.core.Instance ins)",
+    "name": "update",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "ins"
+      }
+    ],
+    "equivalence": {
+      "member": "update(weka.core.Instance ins)",
+      "comment": "Adds an instance to the cover tree. P.S.: The current version doesn't allow addition of instances after batch construction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addInstanceInfo(weka.core.Instance ins)",
+    "name": "addInstanceInfo",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "ins"
+      }
+    ],
+    "equivalence": {
+      "member": "addInstanceInfo(weka.core.Instance ins)",
+      "comment": "Adds the given instance info. This implementation updates only the range datastructures of the EuclideanDistance. Nothing is required to be updated in the built Cover Tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDistanceFunction(weka.core.DistanceFunction df)",
+    "name": "setDistanceFunction",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.DistanceFunction",
+          "name": "DistanceFunction",
+          "isArray": false
+        },
+        "name": "df"
+      }
+    ],
+    "equivalence": {
+      "member": "setDistanceFunction(weka.core.DistanceFunction df)",
+      "comment": "Sets the distance function to use for nearest neighbour search. Currently only EuclideanDistance is supported.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "baseTipText()",
+    "name": "baseTipText",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "baseTipText()",
+      "comment": "Returns the tip text for this property.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBase()",
+    "name": "getBase",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getBase()",
+      "comment": "Returns the base in use for expansion constant.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBase(double b)",
+    "name": "setBase",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "member": "setBase(double b)",
+      "comment": "Sets the base to use for expansion constant. The 2 in 2^i in the paper.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureTreeSize()",
+    "name": "measureTreeSize",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "measureTreeSize()",
+      "comment": "Returns the size of the tree. (number of internal nodes + number of leaves)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureNumLeaves()",
+    "name": "measureNumLeaves",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "measureNumLeaves()",
+      "comment": "Returns the number of leaves.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureMaxDepth()",
+    "name": "measureMaxDepth",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "measureMaxDepth()",
+      "comment": "Returns the depth of the tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the additional measure names.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String additionalMeasureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "additionalMeasureName"
+      }
+    ],
+    "equivalence": {
+      "member": "getMeasure(java.lang.String additionalMeasureName)",
+      "comment": "Returns the value of the named measure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(java.lang.String s)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "print(java.lang.String s)",
+      "comment": "Prints a string to stdout.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "println(java.lang.String s)",
+    "name": "println",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "println(java.lang.String s)",
+      "comment": "Prints a string to stdout followed by newline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(java.lang.Object o)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "member": "print(java.lang.Object o)",
+      "comment": "Prints an object to stdout.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "println(java.lang.Object o)",
+    "name": "println",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "equivalence": {
+      "member": "println(java.lang.Object o)",
+      "comment": "Prints an object to stdout followed by newline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print_space(int s)",
+    "name": "print_space",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "print_space(int s)",
+      "comment": "Prints the specified number of spaces.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(int depth, weka.core.neighboursearch.CoverTree$CoverTreeNode top_node)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "depth"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.CoverTree$CoverTreeNode",
+          "name": "CoverTreeNode",
+          "isArray": false
+        },
+        "name": "top_node"
+      }
+    ],
+    "equivalence": {
+      "member": "print(int depth, weka.core.neighboursearch.CoverTree$CoverTreeNode top_node)",
+      "comment": "Prints a cover tree starting from the given node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.core.neighboursearch.CoverTree",
+      "name": "CoverTree",
+      "isArray": false
+    },
+    "targetClass": "weka.core.neighboursearch.CoverTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Method for testing the class from command line.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -347,7 +347,7 @@
     "equivalence": {
       "comment": "Determines if the regular expression matches the given string. This call affects the value returned by #getLastIndex() if the global flag is set. Equivalent to: exec(input) != null",
       "kind": "FreeText",
-      "condition": "methodResultID==( receiverObjectID.exec(args[0]) != null )"
+      "condition": "methodResultID==( receiverObjectClone.exec(args[0]) != null )"
     }
   },
   {

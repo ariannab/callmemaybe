@@ -1,0 +1,964 @@
+[
+  {
+    "signature": "now()",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "now()",
+      "comment": "Obtains the current month-day from the system clock in the default time-zone.  This will query the java.time.Clock#systemDefaultZone() system clock in the default time-zone to obtain the current month-day.  Using this method will prevent the ability to use an alternate clock for testing because the clock is hard-coded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now(java.time.ZoneId zone)",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "now(java.time.ZoneId zone)",
+      "comment": "Obtains the current month-day from the system clock in the specified time-zone.  This will query the Clock#system(java.time.ZoneId) system clock to obtain the current month-day. Specifying the time-zone avoids dependence on the default time-zone.  Using this method will prevent the ability to use an alternate clock for testing because the clock is hard-coded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now(java.time.Clock clock)",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Clock",
+          "name": "Clock",
+          "isArray": false
+        },
+        "name": "clock"
+      }
+    ],
+    "equivalence": {
+      "member": "now(java.time.Clock clock)",
+      "comment": "Obtains the current month-day from the specified clock.  This will query the specified clock to obtain the current month-day. Using this method allows the use of an alternate clock for testing. The alternate clock may be introduced using Clock dependency injection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(java.time.Month month, int dayOfMonth)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Month",
+          "name": "Month",
+          "isArray": false
+        },
+        "name": "month"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfMonth"
+      }
+    ],
+    "equivalence": {
+      "member": "of(java.time.Month month, int dayOfMonth)",
+      "comment": "Obtains an instance of MonthDay.  The day-of-month must be valid for the month within a leap year. Hence, for February, day 29 is valid.  For example, passing in April and day 31 will throw an exception, as there can never be April 31st in any year. By contrast, passing in February 29th is permitted, as that month-day can sometimes be valid.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(int month, int dayOfMonth)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "month"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfMonth"
+      }
+    ],
+    "equivalence": {
+      "member": "of(int month, int dayOfMonth)",
+      "comment": "Obtains an instance of MonthDay.  The day-of-month must be valid for the month within a leap year. Hence, for month 2 (February), day 29 is valid.  For example, passing in month 4 (April) and day 31 will throw an exception, as there can never be April 31st in any year. By contrast, passing in February 29th is permitted, as that month-day can sometimes be valid.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "from(java.time.temporal.TemporalAccessor temporal)",
+    "name": "from",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAccessor",
+          "name": "TemporalAccessor",
+          "isArray": false
+        },
+        "name": "temporal"
+      }
+    ],
+    "equivalence": {
+      "member": "from(java.time.temporal.TemporalAccessor temporal)",
+      "comment": "Obtains an instance of MonthDay from a temporal object.  This obtains a month-day based on the specified temporal. A TemporalAccessor represents an arbitrary set of date and time information, which this factory converts to an instance of MonthDay.  The conversion extracts the ChronoField#MONTH_OF_YEAR MONTH_OF_YEAR and ChronoField#DAY_OF_MONTH DAY_OF_MONTH fields. The extraction is only permitted if the temporal object has an ISO chronology, or can be converted to a LocalDate.  This method matches the signature of the functional interface TemporalQuery allowing it to be used in queries via method reference, MonthDay::from.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parse(java.lang.CharSequence text)",
+    "name": "parse",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "equivalence": {
+      "member": "parse(java.lang.CharSequence text)",
+      "comment": "Obtains an instance of MonthDay from a text string such as --12-03.  The string must represent a valid month-day. The format is --MM-dd.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parse(java.lang.CharSequence text, java.time.format.DateTimeFormatter formatter)",
+    "name": "parse",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.format.DateTimeFormatter",
+          "name": "DateTimeFormatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "equivalence": {
+      "member": "parse(java.lang.CharSequence text, java.time.format.DateTimeFormatter formatter)",
+      "comment": "Obtains an instance of MonthDay from a text string using a specific formatter.  The text is parsed using the formatter, returning a month-day.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSupported(java.time.temporal.TemporalField field)",
+    "name": "isSupported",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "isSupported(java.time.temporal.TemporalField field)",
+      "comment": "Checks if the specified field is supported.  This checks if this month-day can be queried for the specified field. If false, then calling the #range(TemporalField) range and #get(TemporalField) get methods will throw an exception.  If the field is a ChronoField then the query is implemented here. The supported fields are:  <li>MONTH_OF_YEAR <li>YEAR  All other ChronoField instances will return false.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.isSupportedBy(TemporalAccessor) passing this as the argument. Whether the field is supported is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range(java.time.temporal.TemporalField field)",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.temporal.ValueRange",
+      "name": "java.time.temporal.ValueRange",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "range(java.time.temporal.TemporalField field)",
+      "comment": "Gets the range of valid values for the specified field.  The range object expresses the minimum and maximum valid values for a field. This month-day is used to enhance the accuracy of the returned range. If it is not possible to return the range, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return appropriate range instances. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.rangeRefinedBy(TemporalAccessor) passing this as the argument. Whether the range can be obtained is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.time.temporal.TemporalField field)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "get(java.time.temporal.TemporalField field)",
+      "comment": "Gets the value of the specified field from this month-day as an int.  This queries this month-day for the value for the specified field. The returned value will always be within the valid range of values for the field. If it is not possible to return the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return valid values based on this month-day. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.getFrom(TemporalAccessor) passing this as the argument. Whether the value can be obtained, and what the value represents, is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLong(java.time.temporal.TemporalField field)",
+    "name": "getLong",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "getLong(java.time.temporal.TemporalField field)",
+      "comment": "Gets the value of the specified field from this month-day as a long.  This queries this month-day for the value for the specified field. If it is not possible to return the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return valid values based on this month-day. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.getFrom(TemporalAccessor) passing this as the argument. Whether the value can be obtained, and what the value represents, is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMonthValue()",
+    "name": "getMonthValue",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMonthValue()",
+      "comment": "Gets the month-of-year field from 1 to 12.  This method returns the month as an int from 1 to 12. Application code is frequently clearer if the enum Month is used by calling #getMonth().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMonth()",
+    "name": "getMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Month",
+      "name": "java.time.Month",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMonth()",
+      "comment": "Gets the month-of-year field using the Month enum.  This method returns the enum Month for the month. This avoids confusion as to what int values mean. If you need access to the primitive int value then the enum provides the Month#getValue() int value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDayOfMonth()",
+    "name": "getDayOfMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDayOfMonth()",
+      "comment": "Gets the day-of-month field.  This method returns the primitive int value for the day-of-month.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isValidYear(int year)",
+    "name": "isValidYear",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "year"
+      }
+    ],
+    "equivalence": {
+      "member": "isValidYear(int year)",
+      "comment": "Checks if the year is valid for this month-day.  This method checks whether this month and day and the input year form a valid date. This can only return false for February 29th.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withMonth(int month)",
+    "name": "withMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "month"
+      }
+    ],
+    "equivalence": {
+      "member": "withMonth(int month)",
+      "comment": "Returns a copy of this MonthDay with the month-of-year altered.  This returns a month-day with the specified month. If the day-of-month is invalid for the specified month, the day will be adjusted to the last valid day-of-month.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "with(java.time.Month month)",
+    "name": "with",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Month",
+          "name": "Month",
+          "isArray": false
+        },
+        "name": "month"
+      }
+    ],
+    "equivalence": {
+      "member": "with(java.time.Month month)",
+      "comment": "Returns a copy of this MonthDay with the month-of-year altered.  This returns a month-day with the specified month. If the day-of-month is invalid for the specified month, the day will be adjusted to the last valid day-of-month.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withDayOfMonth(int dayOfMonth)",
+    "name": "withDayOfMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfMonth"
+      }
+    ],
+    "equivalence": {
+      "member": "withDayOfMonth(int dayOfMonth)",
+      "comment": "Returns a copy of this MonthDay with the day-of-month altered.  This returns a month-day with the specified day-of-month. If the day-of-month is invalid for the month, an exception is thrown.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "query(java.time.temporal.TemporalQuery<R> query)",
+    "name": "query",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalQuery",
+          "name": "TemporalQuery",
+          "isArray": false
+        },
+        "name": "query"
+      }
+    ],
+    "equivalence": {
+      "member": "query(java.time.temporal.TemporalQuery<R> query)",
+      "comment": "Queries this month-day using the specified query.  This queries this month-day using the specified query strategy object. The TemporalQuery object defines the logic to be used to obtain the result. Read the documentation of the query to understand what the result of this method will be.  The result of this method is obtained by invoking the TemporalQuery#queryFrom(TemporalAccessor) method on the specified query passing this as the argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "adjustInto(java.time.temporal.Temporal temporal)",
+    "name": "adjustInto",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.temporal.Temporal",
+      "name": "java.time.temporal.Temporal",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.Temporal",
+          "name": "Temporal",
+          "isArray": false
+        },
+        "name": "temporal"
+      }
+    ],
+    "equivalence": {
+      "member": "adjustInto(java.time.temporal.Temporal temporal)",
+      "comment": "Adjusts the specified temporal object to have this month-day.  This returns a temporal object of the same observable type as the input with the month and day-of-month changed to be the same as this.  The adjustment is equivalent to using Temporal#with(TemporalField, long) twice, passing ChronoField#MONTH_OF_YEAR and ChronoField#DAY_OF_MONTH as the fields. If the specified temporal object does not use the ISO calendar system then a DateTimeException is thrown.  In most cases, it is clearer to reverse the calling pattern by using Temporal#with(TemporalAdjuster):  // these two lines are equivalent, but the second approach is recommended temporal = thisMonthDay.adjustInto(temporal); temporal = temporal.with(thisMonthDay);   This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "format(java.time.format.DateTimeFormatter formatter)",
+    "name": "format",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.format.DateTimeFormatter",
+          "name": "DateTimeFormatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "equivalence": {
+      "member": "format(java.time.format.DateTimeFormatter formatter)",
+      "comment": "Formats this month-day using the specified formatter.  This month-day will be passed to the formatter to produce a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atYear(int year)",
+    "name": "atYear",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.LocalDate",
+      "name": "java.time.LocalDate",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "year"
+      }
+    ],
+    "equivalence": {
+      "member": "atYear(int year)",
+      "comment": "Combines this month-day with a year to create a LocalDate.  This returns a LocalDate formed from this month-day and the specified year.  A month-day of February 29th will be adjusted to February 28th in the resulting date if the year is not a leap year.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareTo(java.time.MonthDay other)",
+    "name": "compareTo",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.MonthDay",
+          "name": "MonthDay",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "compareTo(java.time.MonthDay other)",
+      "comment": "Compares this month-day to another month-day.  The comparison is based first on value of the month, then on the value of the day. It is \"consistent with equals\", as defined by Comparable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isAfter(java.time.MonthDay other)",
+    "name": "isAfter",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.MonthDay",
+          "name": "MonthDay",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isAfter(java.time.MonthDay other)",
+      "comment": "Is this month-day after the specified month-day.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isBefore(java.time.MonthDay other)",
+    "name": "isBefore",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.MonthDay",
+          "name": "MonthDay",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isBefore(java.time.MonthDay other)",
+      "comment": "Is this month-day before the specified month-day.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Checks if this month-day is equal to another month-day.  The comparison is based on the time-line position of the month-day within a year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hashCode()",
+      "comment": "A hash code for this month-day.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Outputs this month-day as a String, such as --12-03.  The output will be in the format {@code --MM-dd}:",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeExternal(java.io.DataOutput out)",
+    "name": "writeExternal",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.DataOutput",
+          "name": "DataOutput",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "member": "writeExternal(java.io.DataOutput out)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readExternal(java.io.DataInput in)",
+    "name": "readExternal",
+    "containingClass": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "MonthDay",
+      "isArray": false
+    },
+    "targetClass": "java.time.MonthDay",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.MonthDay",
+      "name": "java.time.MonthDay",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.DataInput",
+          "name": "DataInput",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "member": "readExternal(java.io.DataInput in)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

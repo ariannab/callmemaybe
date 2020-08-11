@@ -816,7 +816,7 @@
     "equivalence": {
       "comment": "For each occurrence of an element e in occurrencesToRemove, removes one occurrence of e in multisetToModify. <p>Equivalently, this method modifies multisetToModify so that multisetToModify.count(e) is set to Math.max(0, multisetToModify.count(e) - Iterables.frequency(occurrencesToRemove, e)). <p>This is not the same as multisetToModify. removeAll(occurrencesToRemove), which removes all occurrences of elements that appear in occurrencesToRemove. However, this operation is equivalent to, albeit sometimes more efficient than, the following: for (E e : occurrencesToRemove) { multisetToModify.remove(e); }.",
       "kind": "FreeText",
-      "condition": "methodResultID==[ for (Object e : args[1]) { args[0].remove(e);} ]"
+      "condition": "methodResultID.equals[ for (Object e : args[1]) { args[0].remove(e);} ]"
     }
   },
   {
@@ -855,7 +855,7 @@
     "equivalence": {
       "comment": "For each occurrence of an element e in occurrencesToRemove, removes one occurrence of e in multisetToModify. <p>Equivalently, this method modifies multisetToModify so that multisetToModify.count(e) is set to Math.max(0, multisetToModify.count(e) - occurrencesToRemove.count(e)). <p>This is not the same as multisetToModify. removeAll(occurrencesToRemove), which removes all occurrences of elements that appear in occurrencesToRemove. However, this operation is equivalent to, albeit sometimes more efficient than, the following: for (E e : occurrencesToRemove) { multisetToModify.remove(e); }.",
       "kind": "FreeText",
-      "condition": "methodResultID==[ for (Object e : args[1]) { args[0].remove(e);} ]"
+      "condition": "methodResultID.equals[ for (Object e : args[1]) { args[0].remove(e);} ]"
     }
   },
   {

@@ -150,7 +150,7 @@
     "equivalence": {
       "comment": "Like #addAttribute(String, Object...) but for consistency.",
       "kind": "FreeText",
-      "condition": "receiverObjectID.addAttribute(args[0],args[1]); receiverObjectClone.setAttribute(args[0],args[1]);assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.addAttribute(args[0],args[1]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -383,7 +383,7 @@
     "equivalence": {
       "comment": "Like #getAttribute(String, Class), but returns the first existing attribute in a list of keys, instead of only one key. The key list order matters.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getAttribute(args[1][0], args[0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.getAttribute(args[1][0], args[0]))"
     }
   },
   {
@@ -445,7 +445,7 @@
     "equivalence": {
       "comment": "Like #getAttribute(String), but returns the first existing attribute in a list of keys, instead of only one key. The key list order matters.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getAttribute(args[0][0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.getAttribute(args[0][0]))"
     }
   },
   {
@@ -515,7 +515,7 @@
     "equivalence": {
       "comment": "Like #addAttribute(String, Object...) but for consistency.",
       "kind": "FreeText",
-      "condition": "receiverObjectID.addAttribute(args[0],args[1]); receiverObjectClone.changeAttribute(args[0],args[1]); assert(receiverObjectClone.equals(receiverObjectID));"
+      "condition": "receiverObjectClone.addAttribute(args[0],args[1]); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {

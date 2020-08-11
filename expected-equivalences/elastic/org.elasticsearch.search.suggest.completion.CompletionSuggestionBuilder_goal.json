@@ -319,7 +319,7 @@
     "equivalence": {
       "comment": "Same as #prefix(String) with full fuzzy options see FuzzyOptions.Builder",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.prefix(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.prefix(args[0]))"
     }
   },
   {
@@ -358,7 +358,7 @@
     "equivalence": {
       "comment": "Same as #regex(String) with full regular expression options see RegexOptions.Builder",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.regex(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.regex(args[0]))"
     }
   },
   {
@@ -543,7 +543,7 @@
     "equivalence": {
       "comment": "Same as #prefix(String) with fuzziness of fuzziness",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.prefix(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.prefix(args[0]))"
     }
   },
   {

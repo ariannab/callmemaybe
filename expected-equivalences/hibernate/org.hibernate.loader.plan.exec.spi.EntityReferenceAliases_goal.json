@@ -1,0 +1,48 @@
+[
+  {
+    "signature": "getTableAlias()",
+    "name": "getTableAlias",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.loader.plan.exec.spi.EntityReferenceAliases",
+      "name": "EntityReferenceAliases",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.loader.plan.exec.spi.EntityReferenceAliases",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTableAlias()",
+      "comment": "Obtain the table alias used for referencing the table of the EntityReference.  Note that this currently just returns the \"root alias\" whereas sometimes an entity reference covers multiple tables. todo : to help manage this, consider a solution like TableAliasRoot from the initial ANTLR re-work see http://anonsvn.jboss.org/repos/hibernate/core/branches/antlr3/src/main/java/org/hibernate/sql/ast/alias/TableAliasGenerator.java",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getColumnAliases()",
+    "name": "getColumnAliases",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.loader.plan.exec.spi.EntityReferenceAliases",
+      "name": "EntityReferenceAliases",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.loader.plan.exec.spi.EntityReferenceAliases",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.hibernate.loader.EntityAliases",
+      "name": "org.hibernate.loader.EntityAliases",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getColumnAliases()",
+      "comment": "Obtain the column aliases for the select fragment columns associated with the described entity reference. These are the column renames by which the values can be extracted from the SQL result set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

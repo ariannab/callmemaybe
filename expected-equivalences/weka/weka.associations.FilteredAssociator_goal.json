@@ -1,0 +1,525 @@
+[
+  {
+    "signature": "weka.associations.FilteredAssociator()",
+    "name": "weka.associations.FilteredAssociator",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "weka.associations.FilteredAssociator()",
+      "comment": "Default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this Associator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultAssociatorString()",
+    "name": "defaultAssociatorString",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "defaultAssociatorString()",
+      "comment": "String describing default associator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "equivalence": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -F <filter specification> Full class name of filter to use, followed by filter options. eg: \"weka.filters.unsupervised.attribute.Remove -V -R 1,2\" (default: weka.filters.MultiFilter with weka.filters.unsupervised.attribute.ReplaceMissingValues)   -c <the class index> The class index. (default: -1, i.e. unset)   -W Full name of base associator. (default: weka.associations.Apriori)   Options specific to associator weka.associations.Apriori:   -N <required number of rules output> The required number of rules. (default = 10)   -T <0=confidence | 1=lift | 2=leverage | 3=Conviction> The metric type by which to rank rules. (default = confidence)   -C <minimum metric score of a rule> The minimum confidence of a rule. (default = 0.9)   -D <delta for minimum support> The delta by which the minimum support is decreased in each iteration. (default = 0.05)   -U <upper bound for minimum support> Upper bound for minimum support. (default = 1.0)   -M <lower bound for minimum support> The lower bound for the minimum support. (default = 0.1)   -S <significance level> If used, rules are tested for significance at the given level. Slower. (default = no significance testing)   -I If set the itemsets found are also output. (default = no)   -R Remove columns that contain all missing values (default = no)   -V Report progress iteratively. (default = no)   -A If set class association rules are mined. (default = no)   -c <the class index> The class index. (default = last)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Associator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filterTipText()",
+    "name": "filterTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "filterTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFilter(weka.filters.Filter value)",
+    "name": "setFilter",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.filters.Filter",
+          "name": "Filter",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setFilter(weka.filters.Filter value)",
+      "comment": "Sets the filter",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFilter()",
+    "name": "getFilter",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.filters.Filter",
+      "name": "weka.filters.Filter",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getFilter()",
+      "comment": "Gets the filter used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classIndexTipText()",
+    "name": "classIndexTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classIndexTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassIndex(int value)",
+    "name": "setClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "equivalence": {
+      "member": "setClassIndex(int value)",
+      "comment": "Sets the class index",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassIndex()",
+    "name": "getClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getClassIndex()",
+      "comment": "Gets the class index",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFilterSpec()",
+    "name": "getFilterSpec",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getFilterSpec()",
+      "comment": "Gets the filter specification string, which contains the class name of the filter and any options to the filter",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the associator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildAssociations(weka.core.Instances data)",
+    "name": "buildAssociations",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "member": "buildAssociations(weka.core.Instances data)",
+      "comment": "Build the associator on the filtered data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAssociationRules()",
+    "name": "getAssociationRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.associations.AssociationRules",
+      "name": "weka.associations.AssociationRules",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAssociationRules()",
+      "comment": "Gets the list of mined association rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRuleMetricNames()",
+    "name": "getRuleMetricNames",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRuleMetricNames()",
+      "comment": "Gets a list of the names of the metrics output for each rule. This list should be the same (in terms of the names and order thereof) as that produced by AssociationRule.getMetricNamesForRule().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canProduceRules()",
+    "name": "canProduceRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "canProduceRules()",
+      "comment": "Returns true if this AssociationRulesProducer can actually produce rules. Most implementing classes will always return true from this method (obviously :-)). However, an implementing class that actually acts as a wrapper around things that may or may not implement AssociationRulesProducer will want to return false if the thing they wrap can't produce rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Output a representation of this associator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FilteredAssociator",
+      "name": "FilteredAssociator",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FilteredAssociator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method for running this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

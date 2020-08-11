@@ -573,7 +573,7 @@
     "equivalence": {
       "comment": "Creates an org.apache.lucene.store.IndexOutput for the given file name. Note that the IndexOutput actually point at a temporary file.  Note: You can use #getOpenIndexOutput(String) with the same filename to retrieve the same IndexOutput at a later stage",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.getOpenIndexOutput(args[0]))"
+      "condition": "methodResultID.equals(receiverObjectClone.getOpenIndexOutput(args[0]))"
     }
   },
   {

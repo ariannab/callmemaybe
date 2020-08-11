@@ -1,0 +1,729 @@
+[
+  {
+    "signature": "java.awt.print.PrinterJob()",
+    "name": "java.awt.print.PrinterJob",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "java.awt.print.PrinterJob()",
+      "comment": "A PrinterJob object should be created using the static #getPrinterJob() getPrinterJob method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPrinterJob()",
+    "name": "getPrinterJob",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "java.awt.print.PrinterJob",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getPrinterJob()",
+      "comment": "Creates and returns a PrinterJob which is initially associated with the default printer. If no printers are available on the system, a PrinterJob will still be returned from this method, but getPrintService() will return null, and calling #print() print with this PrinterJob might generate an exception. Applications that need to determine if there are suitable printers before creating a PrinterJob should ensure that the array returned from #lookupPrintServices() lookupPrintServices is not empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lookupPrintServices()",
+    "name": "lookupPrintServices",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "javax.print.PrintService[]",
+      "name": "javax.print.PrintService[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "lookupPrintServices()",
+      "comment": "A convenience method which looks up 2D print services. Services returned from this method may be installed on PrinterJobs which support print services. Calling this method is equivalent to calling javax.print.PrintServiceLookup#lookupPrintServices( DocFlavor, AttributeSet) PrintServiceLookup.lookupPrintServices() and specifying a Pageable DocFlavor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lookupStreamPrintServices(java.lang.String mimeType)",
+    "name": "lookupStreamPrintServices",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "javax.print.StreamPrintServiceFactory[]",
+      "name": "javax.print.StreamPrintServiceFactory[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "mimeType"
+      }
+    ],
+    "equivalence": {
+      "member": "lookupStreamPrintServices(java.lang.String mimeType)",
+      "comment": "A convenience method which locates factories for stream print services which can image 2D graphics. Sample usage : FileOutputStream outstream; StreamPrintService psPrinter; String psMimeType = \"application/postscript\"; PrinterJob pj = PrinterJob.getPrinterJob(); StreamPrintServiceFactory[] factories = PrinterJob.lookupStreamPrintServices(psMimeType); if (factories.length > 0) { try { outstream = new File(\"out.ps\"); psPrinter = factories[0].getPrintService(outstream); // psPrinter can now be set as the service on a PrinterJob pj.setPrintService(psPrinter)  catch (Exception e) { e.printStackTrace(); } } } Services returned from this method may be installed on PrinterJob instances which support print services. Calling this method is equivalent to calling javax.print.StreamPrintServiceFactory#lookupStreamPrintServiceFactories(DocFlavor, String) StreamPrintServiceFactory.lookupStreamPrintServiceFactories()  and specifying a Pageable DocFlavor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPrintService()",
+    "name": "getPrintService",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "javax.print.PrintService",
+      "name": "javax.print.PrintService",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getPrintService()",
+      "comment": "Returns the service (printer) for this printer job. Implementations of this class which do not support print services may return null. null will also be returned if no printers are available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPrintService(javax.print.PrintService service)",
+    "name": "setPrintService",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "javax.print.PrintService",
+          "name": "PrintService",
+          "isArray": false
+        },
+        "name": "service"
+      }
+    ],
+    "equivalence": {
+      "member": "setPrintService(javax.print.PrintService service)",
+      "comment": "Associate this PrinterJob with a new PrintService. This method is overridden by subclasses which support specifying a Print Service. Throws PrinterException if the specified service cannot support the Pageable and Printable interfaces necessary to support 2D printing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPrintable(java.awt.print.Printable painter)",
+    "name": "setPrintable",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.Printable",
+          "name": "Printable",
+          "isArray": false
+        },
+        "name": "painter"
+      }
+    ],
+    "equivalence": {
+      "member": "setPrintable(java.awt.print.Printable painter)",
+      "comment": "Calls painter to render the pages. The pages in the document to be printed by this PrinterJob are rendered by the Printable object, painter. The PageFormat for each page is the default page format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPrintable(java.awt.print.Printable painter, java.awt.print.PageFormat format)",
+    "name": "setPrintable",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.Printable",
+          "name": "Printable",
+          "isArray": false
+        },
+        "name": "painter"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.PageFormat",
+          "name": "PageFormat",
+          "isArray": false
+        },
+        "name": "format"
+      }
+    ],
+    "equivalence": {
+      "member": "setPrintable(java.awt.print.Printable painter, java.awt.print.PageFormat format)",
+      "comment": "Calls painter to render the pages in the specified format. The pages in the document to be printed by this PrinterJob are rendered by the Printable object, painter. The PageFormat of each page is format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPageable(java.awt.print.Pageable document)",
+    "name": "setPageable",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.Pageable",
+          "name": "Pageable",
+          "isArray": false
+        },
+        "name": "document"
+      }
+    ],
+    "equivalence": {
+      "member": "setPageable(java.awt.print.Pageable document)",
+      "comment": "Queries document for the number of pages and the PageFormat and Printable for each page held in the Pageable instance, document.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printDialog()",
+    "name": "printDialog",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "printDialog()",
+      "comment": "Presents a dialog to the user for changing the properties of the print job. This method will display a native dialog if a native print service is selected, and user choice of printers will be restricted to these native print services. To present the cross platform print dialog for all services, including native ones instead use printDialog(PrintRequestAttributeSet).  PrinterJob implementations which can use PrintService's will update the PrintService for this PrinterJob to reflect the new service selected by the user.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printDialog(javax.print.attribute.PrintRequestAttributeSet attributes)",
+    "name": "printDialog",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "javax.print.attribute.PrintRequestAttributeSet",
+          "name": "PrintRequestAttributeSet",
+          "isArray": false
+        },
+        "name": "attributes"
+      }
+    ],
+    "equivalence": {
+      "member": "printDialog(javax.print.attribute.PrintRequestAttributeSet attributes)",
+      "comment": "A convenience method which displays a cross-platform print dialog for all services which are capable of printing 2D graphics using the Pageable interface. The selected printer when the dialog is initially displayed will reflect the print service currently attached to this print job. If the user changes the print service, the PrinterJob will be updated to reflect this, unless the user cancels the dialog. As well as allowing the user to select the destination printer, the user can also select values of various print request attributes.  The attributes parameter on input will reflect the applications required initial selections in the user dialog. Attributes not specified display using the default for the service. On return it will reflect the user's choices. Selections may be updated by the implementation to be consistent with the supported values for the currently selected print service.  As the user scrolls to a new print service selection, the values copied are based on the settings for the previous service, together with any user changes. The values are not based on the original settings supplied by the client.  With the exception of selected printer, the PrinterJob state is not updated to reflect the user's changes. For the selections to affect a printer job, the attributes must be specified in the call to the print(PrintRequestAttributeSet) method. If using the Pageable interface, clients which intend to use media selected by the user must create a PageFormat derived from the user's selections. If the user cancels the dialog, the attributes will not reflect any changes made by the user.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pageDialog(java.awt.print.PageFormat page)",
+    "name": "pageDialog",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PageFormat",
+      "name": "java.awt.print.PageFormat",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.PageFormat",
+          "name": "PageFormat",
+          "isArray": false
+        },
+        "name": "page"
+      }
+    ],
+    "equivalence": {
+      "member": "pageDialog(java.awt.print.PageFormat page)",
+      "comment": "Displays a dialog that allows modification of a PageFormat instance. The page argument is used to initialize controls in the page setup dialog. If the user cancels the dialog then this method returns the original page object unmodified. If the user okays the dialog then this method returns a new PageFormat object with the indicated changes. In either case, the original page object is not modified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pageDialog(javax.print.attribute.PrintRequestAttributeSet attributes)",
+    "name": "pageDialog",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PageFormat",
+      "name": "java.awt.print.PageFormat",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "javax.print.attribute.PrintRequestAttributeSet",
+          "name": "PrintRequestAttributeSet",
+          "isArray": false
+        },
+        "name": "attributes"
+      }
+    ],
+    "equivalence": {
+      "member": "pageDialog(javax.print.attribute.PrintRequestAttributeSet attributes)",
+      "comment": "A convenience method which displays a cross-platform page setup dialog. The choices available will reflect the print service currently set on this PrinterJob.  The attributes parameter on input will reflect the client's required initial selections in the user dialog. Attributes which are not specified display using the default for the service. On return it will reflect the user's choices. Selections may be updated by the implementation to be consistent with the supported values for the currently selected print service.  The return value will be a PageFormat equivalent to the selections in the PrintRequestAttributeSet. If the user cancels the dialog, the attributes will not reflect any changes made by the user, and the return value will be null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultPage(java.awt.print.PageFormat page)",
+    "name": "defaultPage",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PageFormat",
+      "name": "java.awt.print.PageFormat",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.PageFormat",
+          "name": "PageFormat",
+          "isArray": false
+        },
+        "name": "page"
+      }
+    ],
+    "equivalence": {
+      "member": "defaultPage(java.awt.print.PageFormat page)",
+      "comment": "Clones the PageFormat argument and alters the clone to describe a default page size and orientation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultPage()",
+    "name": "defaultPage",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PageFormat",
+      "name": "java.awt.print.PageFormat",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "defaultPage()",
+      "comment": "Creates a new PageFormat instance and sets it to a default size and orientation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPageFormat(javax.print.attribute.PrintRequestAttributeSet attributes)",
+    "name": "getPageFormat",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PageFormat",
+      "name": "java.awt.print.PageFormat",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "javax.print.attribute.PrintRequestAttributeSet",
+          "name": "PrintRequestAttributeSet",
+          "isArray": false
+        },
+        "name": "attributes"
+      }
+    ],
+    "equivalence": {
+      "member": "getPageFormat(javax.print.attribute.PrintRequestAttributeSet attributes)",
+      "comment": "Calculates a PageFormat with values consistent with those supported by the current PrintService for this job (ie the value returned by getPrintService()) and media, printable area and orientation contained in attributes.  Calling this method does not update the job. It is useful for clients that have a set of attributes obtained from printDialog(PrintRequestAttributeSet attributes) and need a PageFormat to print a Pageable object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "validatePage(java.awt.print.PageFormat page)",
+    "name": "validatePage",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.print.PageFormat",
+      "name": "java.awt.print.PageFormat",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.print.PageFormat",
+          "name": "PageFormat",
+          "isArray": false
+        },
+        "name": "page"
+      }
+    ],
+    "equivalence": {
+      "member": "validatePage(java.awt.print.PageFormat page)",
+      "comment": "Returns the clone of page with its settings adjusted to be compatible with the current printer of this PrinterJob. For example, the returned PageFormat could have its imageable area adjusted to fit within the physical area of the paper that is used by the current printer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print()",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "print()",
+      "comment": "Prints a set of pages. @exception PrinterException an error in the print system caused the job to be aborted. @see Book @see Pageable @see Printable",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "print(javax.print.attribute.PrintRequestAttributeSet attributes)",
+    "name": "print",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "javax.print.attribute.PrintRequestAttributeSet",
+          "name": "PrintRequestAttributeSet",
+          "isArray": false
+        },
+        "name": "attributes"
+      }
+    ],
+    "equivalence": {
+      "member": "print(javax.print.attribute.PrintRequestAttributeSet attributes)",
+      "comment": "Prints a set of pages using the settings in the attribute set. The default implementation ignores the attribute set.  Note that some attributes may be set directly on the PrinterJob by equivalent method calls, (for example), copies: setcopies(int), job name: setJobName(String) and specifying media size and orientation though the PageFormat object.  If a supported attribute-value is specified in this attribute set, it will take precedence over the API settings for this print() operation only. The following behaviour is specified for PageFormat: If a client uses the Printable interface, then the attributes parameter to this method is examined for attributes which specify media (by size), orientation, and imageable area, and those are used to construct a new PageFormat which is passed to the Printable object's print() method. See Printable for an explanation of the required behaviour of a Printable to ensure optimal printing via PrinterJob. For clients of the Pageable interface, the PageFormat will always be as supplied by that interface, on a per page basis.  These behaviours allow an application to directly pass the user settings returned from printDialog(PrintRequestAttributeSet attributes to this print() method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCopies(int copies)",
+    "name": "setCopies",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "copies"
+      }
+    ],
+    "equivalence": {
+      "member": "setCopies(int copies)",
+      "comment": "Sets the number of copies to be printed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCopies()",
+    "name": "getCopies",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCopies()",
+      "comment": "Gets the number of copies to be printed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUserName()",
+    "name": "getUserName",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getUserName()",
+      "comment": "Gets the name of the printing user.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setJobName(java.lang.String jobName)",
+    "name": "setJobName",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "jobName"
+      }
+    ],
+    "equivalence": {
+      "member": "setJobName(java.lang.String jobName)",
+      "comment": "Sets the name of the document to be printed. The document name can not be null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getJobName()",
+    "name": "getJobName",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getJobName()",
+      "comment": "Gets the name of the document to be printed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cancel()",
+    "name": "cancel",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "cancel()",
+      "comment": "Cancels a print job that is in progress. If #print() print has been called but has not returned then this method signals that the job should be cancelled at the next chance. If there is no print job in progress then this call does nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isCancelled()",
+    "name": "isCancelled",
+    "containingClass": {
+      "qualifiedName": "java.awt.print.PrinterJob",
+      "name": "PrinterJob",
+      "isArray": false
+    },
+    "targetClass": "java.awt.print.PrinterJob",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "isCancelled()",
+      "comment": "Returns true if a print job is in progress, but is going to be cancelled at the next opportunity; otherwise returns false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

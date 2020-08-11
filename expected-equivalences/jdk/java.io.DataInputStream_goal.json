@@ -1,0 +1,529 @@
+[
+  {
+    "signature": "java.io.DataInputStream(java.io.InputStream in)",
+    "name": "java.io.DataInputStream",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "member": "java.io.DataInputStream(java.io.InputStream in)",
+      "comment": "Creates a DataInputStream that uses the specified underlying InputStream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read(byte[] b)",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "member": "read(byte[] b)",
+      "comment": "Reads some number of bytes from the contained input stream and stores them into the buffer array b. The number of bytes actually read is returned as an integer. This method blocks until input data is available, end of file is detected, or an exception is thrown. If b is null, a NullPointerException is thrown. If the length of b is zero, then no bytes are read and 0 is returned; otherwise, there is an attempt to read at least one byte. If no byte is available because the stream is at end of file, the value -1 is returned; otherwise, at least one byte is read and stored into b. The first byte read is stored into element b[0], the next one into b[1], and so on. The number of bytes read is, at most, equal to the length of b. Let k be the number of bytes actually read; these bytes will be stored in elements b[0] through b[k-1], leaving elements b[k] through b[b.length-1] unaffected. The read(b) method has the same effect as: <pre> read(b, 0, b.length) </pre>",
+      "kind": "FreeText",
+      "condition": "methodResultID == read(args[0], 0, args[0].length)"
+    }
+  },
+  {
+    "signature": "read(byte[] b, int off, int len)",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "member": "read(byte[] b, int off, int len)",
+      "comment": "Reads up to len bytes of data from the contained input stream into an array of bytes. An attempt is made to read as many as len bytes, but a smaller number may be read, possibly zero. The number of bytes actually read is returned as an integer.  This method blocks until input data is available, end of file is detected, or an exception is thrown.  If len is zero, then no bytes are read and 0 is returned; otherwise, there is an attempt to read at least one byte. If no byte is available because the stream is at end of file, the value -1 is returned; otherwise, at least one byte is read and stored into b.  The first byte read is stored into element b[off], the next one into b[off+1], and so on. The number of bytes read is, at most, equal to len. Let k be the number of bytes actually read; these bytes will be stored in elements b[off] through b[off+k-1], leaving elements b[off+k] through b[off+len-1] unaffected.  In every case, elements b[0] through b[off] and elements b[off+len] through b[b.length-1] are unaffected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readFully(byte[] b)",
+    "name": "readFully",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "member": "readFully(byte[] b)",
+      "comment": "See the general contract of the readFully method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readFully(byte[] b, int off, int len)",
+    "name": "readFully",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "equivalence": {
+      "member": "readFully(byte[] b, int off, int len)",
+      "comment": "See the general contract of the readFully method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skipBytes(int n)",
+    "name": "skipBytes",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "equivalence": {
+      "member": "skipBytes(int n)",
+      "comment": "See the general contract of the skipBytes method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readBoolean()",
+    "name": "readBoolean",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readBoolean()",
+      "comment": "See the general contract of the readBoolean method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readByte()",
+    "name": "readByte",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte",
+      "name": "byte",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readByte()",
+      "comment": "See the general contract of the readByte method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readUnsignedByte()",
+    "name": "readUnsignedByte",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readUnsignedByte()",
+      "comment": "See the general contract of the readUnsignedByte method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readShort()",
+    "name": "readShort",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "short",
+      "name": "short",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readShort()",
+      "comment": "See the general contract of the readShort method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readUnsignedShort()",
+    "name": "readUnsignedShort",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readUnsignedShort()",
+      "comment": "See the general contract of the readUnsignedShort method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readChar()",
+    "name": "readChar",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readChar()",
+      "comment": "See the general contract of the readChar method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readInt()",
+    "name": "readInt",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readInt()",
+      "comment": "See the general contract of the readInt method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readLong()",
+    "name": "readLong",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readLong()",
+      "comment": "See the general contract of the readLong method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readFloat()",
+    "name": "readFloat",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readFloat()",
+      "comment": "See the general contract of the readFloat method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readDouble()",
+    "name": "readDouble",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readDouble()",
+      "comment": "See the general contract of the readDouble method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readLine()",
+    "name": "readLine",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readLine()",
+      "comment": "See the general contract of the readLine method of DataInput.  Bytes for this operation are read from the contained input stream. @deprecated This method does not properly convert bytes to characters. As of JDK&nbsp;1.1, the preferred way to read lines of text is via the BufferedReader.readLine() method. Programs that use the DataInputStream class to read lines can be converted to use the BufferedReader class by replacing code of the form: <pre> DataInputStream d =&nbsp;new&nbsp;DataInputStream(in); </pre> with: <pre> BufferedReader d =&nbsp;new&nbsp;BufferedReader(new&nbsp;InputStreamReader(in)); </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readUTF()",
+    "name": "readUTF",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "readUTF()",
+      "comment": "See the general contract of the readUTF method of DataInput.  Bytes for this operation are read from the contained input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readUTF(java.io.DataInput in)",
+    "name": "readUTF",
+    "containingClass": {
+      "qualifiedName": "java.io.DataInputStream",
+      "name": "DataInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.io.DataInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.DataInput",
+          "name": "DataInput",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "member": "readUTF(java.io.DataInput in)",
+      "comment": "Reads from the stream in a representation of a Unicode character string encoded in modified UTF-8 format; this string of characters is then returned as a String. The details of the modified UTF-8 representation are exactly the same as for the readUTF method of DataInput.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

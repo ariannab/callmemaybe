@@ -1,0 +1,1308 @@
+[
+  {
+    "signature": "cern.colt.Partitioning()",
+    "name": "cern.colt.Partitioning",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "cern.colt.Partitioning()",
+      "comment": "Makes this class non instantiable, but still let's others inherit from it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dualPartition(double[] list, double[] secondary, int from, int to, double[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+    "name": "dualPartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "dualPartition(double[] list, double[] secondary, int from, int to, double[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+      "comment": "Same as #dualPartition(int[],int[],int,int,int[],int,int,int[]) except that it synchronously partitions double[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dualPartition(double[] list, double[] secondary, int from, int to, double splitter)",
+    "name": "dualPartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "splitter"
+      }
+    ],
+    "equivalence": {
+      "member": "dualPartition(double[] list, double[] secondary, int from, int to, double splitter)",
+      "comment": "Same as #dualPartition(int[],int[],int,int,int) except that it synchronously partitions double[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dualPartition(int[] list, int[] secondary, int from, int to, int[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+    "name": "dualPartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "dualPartition(int[] list, int[] secondary, int from, int to, int[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+      "comment": "Same as #partition(int[],int,int,int[],int,int,int[]) except that this method synchronously partitions two arrays at the same time; both arrays are partially sorted according to the elements of the primary array. In other words, each time an element in the primary array is moved from index A to B, the correspoding element within the secondary array is also moved from index A to B.  Use cases:  Image having a large list of 2-dimensional points. If memory consumption and performance matter, it is a good idea to physically lay them out as two 1-dimensional arrays (using something like Point2D objects would be prohibitively expensive, both in terms of time and space). Now imagine wanting to histogram the points. We may want to partially sort the points by x-coordinate into intervals. This method efficiently does the job.  Performance:  Same as for single-partition methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dualPartition(int[] list, int[] secondary, int from, int to, int splitter)",
+    "name": "dualPartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitter"
+      }
+    ],
+    "equivalence": {
+      "member": "dualPartition(int[] list, int[] secondary, int from, int to, int splitter)",
+      "comment": "Same as #partition(int[],int,int,int) except that this method synchronously partitions two arrays at the same time; both arrays are partially sorted according to the elements of the primary array. In other words, each time an element in the primary array is moved from index A to B, the correspoding element within the secondary array is also moved from index A to B.  Performance:  Same as for single-partition methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "genericPartition(int from, int to, int splitFrom, int splitTo, int[] splitIndexes, cern.colt.function.IntComparator comp, cern.colt.function.IntComparator comp2, cern.colt.function.IntComparator comp3, cern.colt.Swapper swapper)",
+    "name": "genericPartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.function.IntComparator",
+          "name": "IntComparator",
+          "isArray": false
+        },
+        "name": "comp"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.function.IntComparator",
+          "name": "IntComparator",
+          "isArray": false
+        },
+        "name": "comp2"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.function.IntComparator",
+          "name": "IntComparator",
+          "isArray": false
+        },
+        "name": "comp3"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.Swapper",
+          "name": "Swapper",
+          "isArray": false
+        },
+        "name": "swapper"
+      }
+    ],
+    "equivalence": {
+      "member": "genericPartition(int from, int to, int splitFrom, int splitTo, int[] splitIndexes, cern.colt.function.IntComparator comp, cern.colt.function.IntComparator comp2, cern.colt.function.IntComparator comp3, cern.colt.Swapper swapper)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(double[] list, int from, int to, double[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(double[] list, int from, int to, double[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+      "comment": "Same as #partition(int[],int,int,int[],int,int,int[]) except that it partitions double[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(double[] list, int from, int to, double splitter)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "splitter"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(double[] list, int from, int to, double splitter)",
+      "comment": "Same as #partition(int[],int,int,int) except that it partitions double[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(int[] list, int from, int to, int[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(int[] list, int from, int to, int[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+      "comment": "Partitions (partially sorts) the given list such that all elements falling into some intervals are placed next to each other. Returns the indexes of elements delimiting intervals.  Example:  list = (7, 4, 5, 50, 6, 4, 3, 6), splitters = (5, 10, 30) defines the three intervals [-infinity,5), [5,10), [10,30). Lets define to sort the entire list (from=0, to=7) using all splitters (splitFrom==0, splitTo=2).  The method modifies the list to be list = (4, 4, 3, 6, 7, 5, 6, 50) and returns the splitIndexes = (2, 6, 6). In other words,  <li>All values <tt>list[0..2]</tt> fall into <tt>[-infinity,5)</tt>. <li>All values <tt>list[3..6]</tt> fall into <tt>[5,10)</tt>. <li>All values <tt>list[7..6]</tt> fall into <tt>[10,30)</tt>, i.e. no elements, since <tt>7>6</tt>. <li>All values <tt>list[7 .. 7=list.length-1]</tt> fall into <tt>[30,infinity]</tt>. <li>In general, all values <tt>list[splitIndexes[j-1]+1 .. splitIndexes[j]]</tt> fall into interval <tt>j</tt>.  As can be seen, the list is partially sorted such that values falling into a certain interval are placed next to each other. Note that within an interval, elements are entirelly unsorted. They are only sorted across interval boundaries. In particular, this partitioning algorithm is not stable: the relative order of elements is not preserved (Producing a stable algorithm would require no more than minor modifications to method partition(int[],int,int,int)).  More formally, this method guarantees that upon return for all j = splitFrom .. splitTo there holds: <br>for all i = splitIndexes[j-1]+1 .. splitIndexes[j]: splitters[j-1] <= list[i] < splitters[j].  Performance:  Let N=to-from+1 be the number of elements to be partitioned. Let k=splitTo-splitFrom+1 be the number of splitter elements. Then we have the following time complexities  <li>Worst case: <tt>O( N * log(k) )</tt>. <li>Average case: <tt>O( N * log(k) )</tt>. <li>Best case: <tt>O( N )</tt>. In general, the more uniform (skewed) the data is spread across intervals, the more performance approaches the worst (best) case. If no elements fall into the given intervals, running time is linear.  No temporary memory is allocated; the sort is in-place.  Implementation:  The algorithm can be seen as a Bentley/McIlroy quicksort where swapping and insertion sort are omitted. It is designed to detect and take advantage of skew while maintaining good performance in the uniform case.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(int[] list, int from, int to, int splitter)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitter"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(int[] list, int from, int to, int splitter)",
+      "comment": "Partitions (partially sorts) the given list such that all elements falling into the given interval are placed next to each other. Returns the index of the element delimiting the interval.  Example:  list = (7, 4, 5, 50, 6, 4, 3, 6), splitter = 5 defines the two intervals [-infinity,5), [5,+infinity].  The method modifies the list to be list = (4, 4, 3, 50, 6, 7, 5, 6) and returns the split index 2. In other words,  <li>All values <tt>list[0..2]</tt> fall into <tt>[-infinity,5)</tt>. <li>All values <tt>list[3=2+1 .. 7=list.length-1]</tt> fall into <tt>[5,+infinity]</tt>.  As can be seen, the list is partially sorted such that values falling into a certain interval are placed next to each other. Note that within an interval, elements are entirelly unsorted. They are only sorted across interval boundaries. In particular, this partitioning algorithm is not stable.  More formally, this method guarantees that upon return there holds:  <li>for all <tt>i = from .. returnValue: list[i] < splitter</tt> and <li>for all <tt>i = returnValue+1 .. list.length-1: !(list[i] < splitter)</tt>.   Performance:  Let N=to-from+1 be the number of elements to be partially sorted. Then the time complexity is O( N ). No temporary memory is allocated; the sort is in-place.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(java.lang.Object[] list, int from, int to, java.lang.Object[] splitters, int splitFrom, int splitTo, int[] splitIndexes, java.util.Comparator comp)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comp"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(java.lang.Object[] list, int from, int to, java.lang.Object[] splitters, int splitFrom, int splitTo, int[] splitIndexes, java.util.Comparator comp)",
+      "comment": "Same as #partition(int[],int,int,int[],int,int,int[]) except that it partitions Object[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(java.lang.Object[] list, int from, int to, java.lang.Object splitter, java.util.Comparator comp)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "splitter"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comp"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(java.lang.Object[] list, int from, int to, java.lang.Object splitter, java.util.Comparator comp)",
+      "comment": "Same as #partition(int[],int,int,int) except that it synchronously partitions the objects of the given list by the order of the given comparator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partition(cern.colt.list.DoubleArrayList list, int from, int to, cern.colt.list.DoubleArrayList splitters, cern.colt.list.IntArrayList splitIndexes)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.DoubleArrayList",
+          "name": "DoubleArrayList",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.DoubleArrayList",
+          "name": "DoubleArrayList",
+          "isArray": false
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.IntArrayList",
+          "name": "IntArrayList",
+          "isArray": false
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(cern.colt.list.DoubleArrayList list, int from, int to, cern.colt.list.DoubleArrayList splitters, cern.colt.list.IntArrayList splitIndexes)",
+      "comment": "Equivalent to partition(list.elements(), from, to, splitters.elements(), 0, splitters.size()-1, splitIndexes.elements()).",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.partition(args[0], args[1], args[2], args[3], args[4]); receiverObjectClone.partition(args[0].elements(), args[1], args[2], args[3].elements(), 0, args[3].size()-1, args[4].elements())"
+    }
+  },
+  {
+    "signature": "partition(cern.colt.list.IntArrayList list, int from, int to, cern.colt.list.IntArrayList splitters, cern.colt.list.IntArrayList splitIndexes)",
+    "name": "partition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.IntArrayList",
+          "name": "IntArrayList",
+          "isArray": false
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.IntArrayList",
+          "name": "IntArrayList",
+          "isArray": false
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.IntArrayList",
+          "name": "IntArrayList",
+          "isArray": false
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "partition(cern.colt.list.IntArrayList list, int from, int to, cern.colt.list.IntArrayList splitters, cern.colt.list.IntArrayList splitIndexes)",
+      "comment": "Equivalent to partition(list.elements(), from, to, splitters.elements(), 0, splitters.size()-1, splitIndexes.elements()).",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.partition(args[0], args[1], args[2], args[3], args[4]); receiverObjectClone.partition(args[0].elements(), args[1], args[2], args[3].elements(), 0, args[3].size()-1, args[4].elements())"
+    }
+  },
+  {
+    "signature": "triplePartition(double[] list, double[] secondary, double[] tertiary, int from, int to, double[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+    "name": "triplePartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "tertiary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "triplePartition(double[] list, double[] secondary, double[] tertiary, int from, int to, double[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+      "comment": "Same as #triplePartition(int[],int[],int[],int,int,int[],int,int,int[]) except that it synchronously partitions double[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "triplePartition(double[] list, double[] secondary, double[] tertiary, int from, int to, double splitter)",
+    "name": "triplePartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "tertiary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "splitter"
+      }
+    ],
+    "equivalence": {
+      "member": "triplePartition(double[] list, double[] secondary, double[] tertiary, int from, int to, double splitter)",
+      "comment": "Same as #triplePartition(int[],int[],int[],int,int,int) except that it synchronously partitions double[] rather than int[] arrays.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "triplePartition(int[] list, int[] secondary, int[] tertiary, int from, int to, int[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+    "name": "triplePartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "tertiary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitters"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitTo"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "splitIndexes"
+      }
+    ],
+    "equivalence": {
+      "member": "triplePartition(int[] list, int[] secondary, int[] tertiary, int from, int to, int[] splitters, int splitFrom, int splitTo, int[] splitIndexes)",
+      "comment": "Same as #partition(int[],int,int,int[],int,int,int[]) except that this method synchronously partitions three arrays at the same time; all three arrays are partially sorted according to the elements of the primary array. In other words, each time an element in the primary array is moved from index A to B, the correspoding element within the secondary array as well as the corresponding element within the tertiary array are also moved from index A to B.  Use cases:  Image having a large list of 3-dimensional points. If memory consumption and performance matter, it is a good idea to physically lay them out as three 1-dimensional arrays (using something like Point3D objects would be prohibitively expensive, both in terms of time and space). Now imagine wanting to histogram the points. We may want to partially sort the points by x-coordinate into intervals. This method efficiently does the job.  Performance:  Same as for single-partition methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "triplePartition(int[] list, int[] secondary, int[] tertiary, int from, int to, int splitter)",
+    "name": "triplePartition",
+    "containingClass": {
+      "qualifiedName": "cern.colt.Partitioning",
+      "name": "Partitioning",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.Partitioning",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "list"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "secondary"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "tertiary"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "splitter"
+      }
+    ],
+    "equivalence": {
+      "member": "triplePartition(int[] list, int[] secondary, int[] tertiary, int from, int to, int splitter)",
+      "comment": "Same as #partition(int[],int,int,int) except that this method synchronously partitions three arrays at the same time; all three arrays are partially sorted according to the elements of the primary array. In other words, each time an element in the primary array is moved from index A to B, the correspoding element within the secondary array as well as the corresponding element within the tertiary array are also moved from index A to B.  Performance:  Same as for single-partition methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

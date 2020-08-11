@@ -1,0 +1,1665 @@
+[
+  {
+    "signature": "weka.associations.FPGrowth()",
+    "name": "weka.associations.FPGrowth",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "weka.associations.FPGrowth()",
+      "comment": "Construct a new FPGrowth object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateRulesBruteForce(weka.associations.FPGrowth$FrequentItemSets largeItemSets, weka.associations.DefaultAssociationRule$METRIC_TYPE metricToUse, double metricThreshold, int upperBoundMinSuppAsInstances, int lowerBoundMinSuppAsInstances, int totalTransactions)",
+    "name": "generateRulesBruteForce",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<weka.associations.AssociationRule>",
+      "name": "java.util.List<weka.associations.AssociationRule>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.associations.FPGrowth$FrequentItemSets",
+          "name": "FrequentItemSets",
+          "isArray": false
+        },
+        "name": "largeItemSets"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.associations.DefaultAssociationRule$METRIC_TYPE",
+          "name": "METRIC_TYPE",
+          "isArray": false
+        },
+        "name": "metricToUse"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "metricThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "upperBoundMinSuppAsInstances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lowerBoundMinSuppAsInstances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "totalTransactions"
+      }
+    ],
+    "equivalence": {
+      "member": "generateRulesBruteForce(weka.associations.FPGrowth$FrequentItemSets largeItemSets, weka.associations.DefaultAssociationRule$METRIC_TYPE metricToUse, double metricThreshold, int upperBoundMinSuppAsInstances, int lowerBoundMinSuppAsInstances, int totalTransactions)",
+      "comment": "Generate all association rules, from the supplied frequet item sets, that meet a given minimum metric threshold. Uses a brute force approach.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pruneRules(java.util.List<weka.associations.AssociationRule> rulesToPrune, java.util.ArrayList<weka.associations.Item> itemsToConsider, boolean useOr)",
+    "name": "pruneRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<weka.associations.AssociationRule>",
+      "name": "java.util.List<weka.associations.AssociationRule>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "rulesToPrune"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "itemsToConsider"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "useOr"
+      }
+    ],
+    "equivalence": {
+      "member": "pruneRules(java.util.List<weka.associations.AssociationRule> rulesToPrune, java.util.ArrayList<weka.associations.Item> itemsToConsider, boolean useOr)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this associator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, e.g., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSingletons(java.lang.Object source)",
+    "name": "getSingletons",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.associations.BinaryItem>",
+      "name": "java.util.ArrayList<weka.associations.BinaryItem>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "source"
+      }
+    ],
+    "equivalence": {
+      "member": "getSingletons(java.lang.Object source)",
+      "comment": "Get the singleton items in the data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSingletons(weka.core.Instances data)",
+    "name": "getSingletons",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.associations.BinaryItem>",
+      "name": "java.util.ArrayList<weka.associations.BinaryItem>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "member": "getSingletons(weka.core.Instances data)",
+      "comment": "Get the singleton items in the data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildFPTree(java.util.ArrayList<weka.associations.BinaryItem> singletons, java.lang.Object dataSource, int minSupport)",
+    "name": "buildFPTree",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.associations.FPGrowth$FPTreeRoot",
+      "name": "weka.associations.FPGrowth$FPTreeRoot",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "singletons"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "dataSource"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minSupport"
+      }
+    ],
+    "equivalence": {
+      "member": "buildFPTree(java.util.ArrayList<weka.associations.BinaryItem> singletons, java.lang.Object dataSource, int minSupport)",
+      "comment": "Construct the frequent pattern tree by inserting each transaction in the data into the tree. Only those items from each transaction that meet the minimum support threshold are inserted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mineTree(weka.associations.FPGrowth$FPTreeRoot tree, weka.associations.FPGrowth$FrequentItemSets largeItemSets, int recursionLevel, weka.associations.FPGrowth$FrequentBinaryItemSet conditionalItems, int minSupport)",
+    "name": "mineTree",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.associations.FPGrowth$FPTreeRoot",
+          "name": "FPTreeRoot",
+          "isArray": false
+        },
+        "name": "tree"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.associations.FPGrowth$FrequentItemSets",
+          "name": "FrequentItemSets",
+          "isArray": false
+        },
+        "name": "largeItemSets"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "recursionLevel"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.associations.FPGrowth$FrequentBinaryItemSet",
+          "name": "FrequentBinaryItemSet",
+          "isArray": false
+        },
+        "name": "conditionalItems"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minSupport"
+      }
+    ],
+    "equivalence": {
+      "member": "mineTree(weka.associations.FPGrowth$FPTreeRoot tree, weka.associations.FPGrowth$FrequentItemSets largeItemSets, int recursionLevel, weka.associations.FPGrowth$FrequentBinaryItemSet conditionalItems, int minSupport)",
+      "comment": "Find large item sets in the FP-tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resetOptions()",
+    "name": "resetOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "resetOptions()",
+      "comment": "Reset all options to their default values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "positiveIndexTipText()",
+    "name": "positiveIndexTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "positiveIndexTipText()",
+      "comment": "Tip text for this property suitable for displaying in the GUI.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPositiveIndex(int index)",
+    "name": "setPositiveIndex",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "setPositiveIndex(int index)",
+      "comment": "Set the index of the attribute value to consider as positive for binary attributes in normal dense instances. Index 1 is always used for sparse instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPositiveIndex()",
+    "name": "getPositiveIndex",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getPositiveIndex()",
+      "comment": "Get the index of the attribute value to consider as positive for binary attributes in normal dense instances. Index 1 is always used for sparse instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumRulesToFind(int numR)",
+    "name": "setNumRulesToFind",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numR"
+      }
+    ],
+    "equivalence": {
+      "member": "setNumRulesToFind(int numR)",
+      "comment": "Set the desired number of rules to find.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumRulesToFind()",
+    "name": "getNumRulesToFind",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getNumRulesToFind()",
+      "comment": "Get the number of rules to find.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numRulesToFindTipText()",
+    "name": "numRulesToFindTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numRulesToFindTipText()",
+      "comment": "Tip text for this property suitable for displaying in the GUI.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMetricType(weka.core.SelectedTag d)",
+    "name": "setMetricType",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "member": "setMetricType(weka.core.SelectedTag d)",
+      "comment": "Set the metric type to use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMaxNumberOfItems(int max)",
+    "name": "setMaxNumberOfItems",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max"
+      }
+    ],
+    "equivalence": {
+      "member": "setMaxNumberOfItems(int max)",
+      "comment": "Set the maximum number of items to include in large items sets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxNumberOfItems()",
+    "name": "getMaxNumberOfItems",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMaxNumberOfItems()",
+      "comment": "Gets the maximum number of items to be included in large item sets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxNumberOfItemsTipText()",
+    "name": "maxNumberOfItemsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "maxNumberOfItemsTipText()",
+      "comment": "Tip text for this property suitable for displaying in the GUI.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetricType()",
+    "name": "getMetricType",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMetricType()",
+      "comment": "Get the metric type to use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metricTypeTipText()",
+    "name": "metricTypeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "metricTypeTipText()",
+      "comment": "Tip text for this property suitable for displaying in the GUI.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minMetricTipText()",
+    "name": "minMetricTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "minMetricTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinMetric()",
+    "name": "getMinMetric",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMinMetric()",
+      "comment": "Get the value of minConfidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinMetric(double v)",
+    "name": "setMinMetric",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setMinMetric(double v)",
+      "comment": "Set the value of minConfidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transactionsMustContainTipText()",
+    "name": "transactionsMustContainTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "transactionsMustContainTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTransactionsMustContain(java.lang.String list)",
+    "name": "setTransactionsMustContain",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "list"
+      }
+    ],
+    "equivalence": {
+      "member": "setTransactionsMustContain(java.lang.String list)",
+      "comment": "Set the comma separated list of items that transactions must contain in order to be considered for large item sets and rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTransactionsMustContain()",
+    "name": "getTransactionsMustContain",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTransactionsMustContain()",
+      "comment": "Gets the comma separated list of items that transactions must contain in order to be considered for large item sets and rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rulesMustContainTipText()",
+    "name": "rulesMustContainTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "rulesMustContainTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRulesMustContain(java.lang.String list)",
+    "name": "setRulesMustContain",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "list"
+      }
+    ],
+    "equivalence": {
+      "member": "setRulesMustContain(java.lang.String list)",
+      "comment": "Set the comma separated list of items that rules must contain in order to be output.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRulesMustContain()",
+    "name": "getRulesMustContain",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRulesMustContain()",
+      "comment": "Get the comma separated list of items that rules must contain in order to be output.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useORForMustContainListTipText()",
+    "name": "useORForMustContainListTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "useORForMustContainListTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseORForMustContainList(boolean b)",
+    "name": "setUseORForMustContainList",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "equivalence": {
+      "member": "setUseORForMustContainList(boolean b)",
+      "comment": "Set whether to use OR rather than AND when considering must contain lists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseORForMustContainList()",
+    "name": "getUseORForMustContainList",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getUseORForMustContainList()",
+      "comment": "Gets whether OR is to be used rather than AND when considering must contain lists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deltaTipText()",
+    "name": "deltaTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "deltaTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDelta()",
+    "name": "getDelta",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDelta()",
+      "comment": "Get the value of delta.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDelta(double v)",
+    "name": "setDelta",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setDelta(double v)",
+      "comment": "Set the value of delta.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerBoundMinSupportTipText()",
+    "name": "lowerBoundMinSupportTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "lowerBoundMinSupportTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLowerBoundMinSupport()",
+    "name": "getLowerBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getLowerBoundMinSupport()",
+      "comment": "Get the value of lowerBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLowerBoundMinSupport(double v)",
+    "name": "setLowerBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setLowerBoundMinSupport(double v)",
+      "comment": "Set the value of lowerBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "upperBoundMinSupportTipText()",
+    "name": "upperBoundMinSupportTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "upperBoundMinSupportTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUpperBoundMinSupport()",
+    "name": "getUpperBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getUpperBoundMinSupport()",
+      "comment": "Get the value of upperBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUpperBoundMinSupport(double v)",
+    "name": "setUpperBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setUpperBoundMinSupport(double v)",
+      "comment": "Set the value of upperBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findAllRulesForSupportLevelTipText()",
+    "name": "findAllRulesForSupportLevelTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "findAllRulesForSupportLevelTipText()",
+      "comment": "Tip text for this property suitable for displaying in the GUI.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFindAllRulesForSupportLevel(boolean s)",
+    "name": "setFindAllRulesForSupportLevel",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "equivalence": {
+      "member": "setFindAllRulesForSupportLevel(boolean s)",
+      "comment": "If true then turn off the iterative support reduction method of finding x rules that meet the minimum support and metric thresholds and just return all the rules that meet the lower bound on minimum support and the minimum metric.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFindAllRulesForSupportLevel()",
+    "name": "getFindAllRulesForSupportLevel",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getFindAllRulesForSupportLevel()",
+      "comment": "Get whether all rules meeting the lower bound on min support and the minimum metric threshold are to be found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOffDiskReportingFrequency(int freq)",
+    "name": "setOffDiskReportingFrequency",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "freq"
+      }
+    ],
+    "equivalence": {
+      "member": "setOffDiskReportingFrequency(int freq)",
+      "comment": "Set how often to report some progress when the data is being read incrementally off of the disk rather than loaded into memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAssociationRules()",
+    "name": "getAssociationRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.associations.AssociationRules",
+      "name": "weka.associations.AssociationRules",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAssociationRules()",
+      "comment": "Gets the list of mined association rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRuleMetricNames()",
+    "name": "getRuleMetricNames",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRuleMetricNames()",
+      "comment": "Gets a list of the names of the metrics output for each rule. This list should be the same (in terms of the names and order thereof) as that produced by AssociationRule.getMetricNamesForRule().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canProduceRules()",
+    "name": "canProduceRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "canProduceRules()",
+      "comment": "Returns true if this AssociationRulesProducer can actually produce rules. Most implementing classes will always return true from this method (obviously :-)). However, an implementing class that actually acts as a wrapper around things that may or may not implement AssociationRulesProducer will want to return false if the thing they wrap can't produce rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "equivalence": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -P <attribute index of positive value> Set the index of the attribute value to consider as 'positive' for binary attributes in normal dense instances. Index 2 is always used for sparse instances. (default = 2)   -I <max items> The maximum number of items to include in large items sets (and rules). (default = -1, i.e. no limit.)   -N <require number of rules> The required number of rules. (default = 10)   -T <0=confidence | 1=lift | 2=leverage | 3=Conviction> The metric by which to rank rules. (default = confidence)   -C <minimum metric score of a rule> The minimum metric score of a rule. (default = 0.9)   -U <upper bound for minimum support> Upper bound for minimum support. (default = 1.0)   -M <lower bound for minimum support> The lower bound for the minimum support. (default = 0.1)   -D <delta for minimum support> The delta by which the minimum support is decreased in each iteration. (default = 0.05)   -S Find all rules that meet the lower bound on minimum support and the minimum metric constraint. Turning this mode on will disable the iterative support reduction procedure to find the specified number of rules.   -transactions <comma separated list of attribute names> Only consider transactions that contain these items (default = no restriction)   -rules <comma separated list of attribute names> Only print rules that contain these items. (default = no restriction)   -use-or Use OR instead of AND for must contain list(s). Use in conjunction with -transactions and/or -rules  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildAssociations(weka.core.Instances data)",
+    "name": "buildAssociations",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "member": "buildAssociations(weka.core.Instances data)",
+      "comment": "Method that generates all large item sets with a minimum support, and from these all association rules with a minimum metric (i.e. confidence, lift etc.).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Output the association rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph(weka.associations.FPGrowth$FPTreeRoot tree)",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.associations.FPGrowth$FPTreeRoot",
+          "name": "FPTreeRoot",
+          "isArray": false
+        },
+        "name": "tree"
+      }
+    ],
+    "equivalence": {
+      "member": "graph(weka.associations.FPGrowth$FPTreeRoot tree)",
+      "comment": "Assemble a dot graph representation of the FP-tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.associations.FPGrowth",
+      "name": "FPGrowth",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.FPGrowth",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

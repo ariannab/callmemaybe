@@ -283,7 +283,7 @@
     "equivalence": {
       "comment": "Returns a view of this multiset restricted to the range between lowerBound and upperBound. The returned multiset is a view of this multiset, so changes to one will be reflected in the other. The returned multiset supports all operations that this multiset supports. <p>The returned multiset will throw an IllegalArgumentException on attempts to add elements outside its range. <p>This method is equivalent to tailMultiset(lowerBound, lowerBoundType).headMultiset(upperBound, upperBoundType).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectClone.tailMultiset(args[0],args[1]).headMultiset(args[2],args[3]))"
+      "condition": "methodResultID.equals[receiverObjectClone.tailMultiset(args[0],args[1]).headMultiset(args[2],args[3]);]"
     }
   },
   {

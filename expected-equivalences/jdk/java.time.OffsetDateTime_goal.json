@@ -1,0 +1,2556 @@
+[
+  {
+    "signature": "timeLineOrder()",
+    "name": "timeLineOrder",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<java.time.OffsetDateTime>",
+      "name": "java.util.Comparator<java.time.OffsetDateTime>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "timeLineOrder()",
+      "comment": "Gets a comparator that compares two OffsetDateTime instances based solely on the instant.  This method differs from the comparison in #compareTo in that it only compares the underlying instant.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now()",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "now()",
+      "comment": "Obtains the current date-time from the system clock in the default time-zone.  This will query the java.time.Clock#systemDefaultZone() system clock in the default time-zone to obtain the current date-time. The offset will be calculated from the time-zone in the clock.  Using this method will prevent the ability to use an alternate clock for testing because the clock is hard-coded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now(java.time.ZoneId zone)",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "now(java.time.ZoneId zone)",
+      "comment": "Obtains the current date-time from the system clock in the specified time-zone.  This will query the Clock#system(java.time.ZoneId) system clock to obtain the current date-time. Specifying the time-zone avoids dependence on the default time-zone. The offset will be calculated from the specified time-zone.  Using this method will prevent the ability to use an alternate clock for testing because the clock is hard-coded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "now(java.time.Clock clock)",
+    "name": "now",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Clock",
+          "name": "Clock",
+          "isArray": false
+        },
+        "name": "clock"
+      }
+    ],
+    "equivalence": {
+      "member": "now(java.time.Clock clock)",
+      "comment": "Obtains the current date-time from the specified clock.  This will query the specified clock to obtain the current date-time. The offset will be calculated from the time-zone in the clock.  Using this method allows the use of an alternate clock for testing. The alternate clock may be introduced using Clock dependency injection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(java.time.LocalDate date, java.time.LocalTime time, java.time.ZoneOffset offset)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.LocalDate",
+          "name": "LocalDate",
+          "isArray": false
+        },
+        "name": "date"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.LocalTime",
+          "name": "LocalTime",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneOffset",
+          "name": "ZoneOffset",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "of(java.time.LocalDate date, java.time.LocalTime time, java.time.ZoneOffset offset)",
+      "comment": "Obtains an instance of OffsetDateTime from a date, time and offset.  This creates an offset date-time with the specified local date, time and offset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(java.time.LocalDateTime dateTime, java.time.ZoneOffset offset)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.LocalDateTime",
+          "name": "LocalDateTime",
+          "isArray": false
+        },
+        "name": "dateTime"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneOffset",
+          "name": "ZoneOffset",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "of(java.time.LocalDateTime dateTime, java.time.ZoneOffset offset)",
+      "comment": "Obtains an instance of OffsetDateTime from a date-time and offset.  This creates an offset date-time with the specified local date-time and offset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(int year, int month, int dayOfMonth, int hour, int minute, int second, int nanoOfSecond, java.time.ZoneOffset offset)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "year"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "month"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfMonth"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hour"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minute"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "second"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nanoOfSecond"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneOffset",
+          "name": "ZoneOffset",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "of(int year, int month, int dayOfMonth, int hour, int minute, int second, int nanoOfSecond, java.time.ZoneOffset offset)",
+      "comment": "Obtains an instance of OffsetDateTime from a year, month, day, hour, minute, second, nanosecond and offset.  This creates an offset date-time with the seven specified fields.  This method exists primarily for writing test cases. Non test-code will typically use other methods to create an offset time. LocalDateTime has five additional convenience variants of the equivalent factory method taking fewer arguments. They are not provided here to reduce the footprint of the API.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ofInstant(java.time.Instant instant, java.time.ZoneId zone)",
+    "name": "ofInstant",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.Instant",
+          "name": "Instant",
+          "isArray": false
+        },
+        "name": "instant"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "ofInstant(java.time.Instant instant, java.time.ZoneId zone)",
+      "comment": "Obtains an instance of OffsetDateTime from an Instant and zone ID.  This creates an offset date-time with the same instant as that specified. Finding the offset from UTC/Greenwich is simple as there is only one valid offset for each instant.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "from(java.time.temporal.TemporalAccessor temporal)",
+    "name": "from",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAccessor",
+          "name": "TemporalAccessor",
+          "isArray": false
+        },
+        "name": "temporal"
+      }
+    ],
+    "equivalence": {
+      "member": "from(java.time.temporal.TemporalAccessor temporal)",
+      "comment": "Obtains an instance of OffsetDateTime from a temporal object.  This obtains an offset date-time based on the specified temporal. A TemporalAccessor represents an arbitrary set of date and time information, which this factory converts to an instance of OffsetDateTime.  The conversion will first obtain a ZoneOffset from the temporal object. It will then try to obtain a LocalDateTime, falling back to an Instant if necessary. The result will be the combination of ZoneOffset with either with LocalDateTime or Instant. Implementations are permitted to perform optimizations such as accessing those fields that are equivalent to the relevant objects.  This method matches the signature of the functional interface TemporalQuery allowing it to be used in queries via method reference, OffsetDateTime::from.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parse(java.lang.CharSequence text)",
+    "name": "parse",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "equivalence": {
+      "member": "parse(java.lang.CharSequence text)",
+      "comment": "Obtains an instance of OffsetDateTime from a text string such as 2007-12-03T10:15:30+01:00.  The string must represent a valid date-time and is parsed using java.time.format.DateTimeFormatter#ISO_OFFSET_DATE_TIME.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parse(java.lang.CharSequence text, java.time.format.DateTimeFormatter formatter)",
+    "name": "parse",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.format.DateTimeFormatter",
+          "name": "DateTimeFormatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "equivalence": {
+      "member": "parse(java.lang.CharSequence text, java.time.format.DateTimeFormatter formatter)",
+      "comment": "Obtains an instance of OffsetDateTime from a text string using a specific formatter.  The text is parsed using the formatter, returning a date-time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSupported(java.time.temporal.TemporalField field)",
+    "name": "isSupported",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "isSupported(java.time.temporal.TemporalField field)",
+      "comment": "Checks if the specified field is supported.  This checks if this date-time can be queried for the specified field. If false, then calling the #range(TemporalField) range, #get(TemporalField) get and #with(TemporalField, long) methods will throw an exception.  If the field is a ChronoField then the query is implemented here. The supported fields are:  <li>NANO_OF_SECOND <li>NANO_OF_DAY <li>MICRO_OF_SECOND <li>MICRO_OF_DAY <li>MILLI_OF_SECOND <li>MILLI_OF_DAY <li>SECOND_OF_MINUTE <li>SECOND_OF_DAY <li>MINUTE_OF_HOUR <li>MINUTE_OF_DAY <li>HOUR_OF_AMPM <li>CLOCK_HOUR_OF_AMPM <li>HOUR_OF_DAY <li>CLOCK_HOUR_OF_DAY <li>AMPM_OF_DAY <li>DAY_OF_WEEK <li>ALIGNED_DAY_OF_WEEK_IN_MONTH <li>ALIGNED_DAY_OF_WEEK_IN_YEAR <li>DAY_OF_MONTH <li>DAY_OF_YEAR <li>EPOCH_DAY <li>ALIGNED_WEEK_OF_MONTH <li>ALIGNED_WEEK_OF_YEAR <li>MONTH_OF_YEAR <li>PROLEPTIC_MONTH <li>YEAR_OF_ERA <li>YEAR <li>ERA <li>INSTANT_SECONDS <li>OFFSET_SECONDS  All other ChronoField instances will return false.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.isSupportedBy(TemporalAccessor) passing this as the argument. Whether the field is supported is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSupported(java.time.temporal.TemporalUnit unit)",
+    "name": "isSupported",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "isSupported(java.time.temporal.TemporalUnit unit)",
+      "comment": "Checks if the specified unit is supported.  This checks if the specified unit can be added to, or subtracted from, this date-time. If false, then calling the #plus(long, TemporalUnit) and #minus(long, TemporalUnit) minus methods will throw an exception.  If the unit is a ChronoUnit then the query is implemented here. The supported units are:  <li>NANOS <li>MICROS <li>MILLIS <li>SECONDS <li>MINUTES <li>HOURS <li>HALF_DAYS <li>DAYS <li>WEEKS <li>MONTHS <li>YEARS <li>DECADES <li>CENTURIES <li>MILLENNIA <li>ERAS  All other ChronoUnit instances will return false.  If the unit is not a ChronoUnit, then the result of this method is obtained by invoking TemporalUnit.isSupportedBy(Temporal) passing this as the argument. Whether the unit is supported is determined by the unit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range(java.time.temporal.TemporalField field)",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.temporal.ValueRange",
+      "name": "java.time.temporal.ValueRange",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "range(java.time.temporal.TemporalField field)",
+      "comment": "Gets the range of valid values for the specified field.  The range object expresses the minimum and maximum valid values for a field. This date-time is used to enhance the accuracy of the returned range. If it is not possible to return the range, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return appropriate range instances. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.rangeRefinedBy(TemporalAccessor) passing this as the argument. Whether the range can be obtained is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.time.temporal.TemporalField field)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "get(java.time.temporal.TemporalField field)",
+      "comment": "Gets the value of the specified field from this date-time as an int.  This queries this date-time for the value for the specified field. The returned value will always be within the valid range of values for the field. If it is not possible to return the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return valid values based on this date-time, except NANO_OF_DAY, MICRO_OF_DAY, EPOCH_DAY, PROLEPTIC_MONTH and INSTANT_SECONDS which are too large to fit in an int and throw a DateTimeException. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.getFrom(TemporalAccessor) passing this as the argument. Whether the value can be obtained, and what the value represents, is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLong(java.time.temporal.TemporalField field)",
+    "name": "getLong",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "equivalence": {
+      "member": "getLong(java.time.temporal.TemporalField field)",
+      "comment": "Gets the value of the specified field from this date-time as a long.  This queries this date-time for the value for the specified field. If it is not possible to return the value, because the field is not supported or for some other reason, an exception is thrown.  If the field is a ChronoField then the query is implemented here. The #isSupported(TemporalField) supported fields will return valid values based on this date-time. All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.getFrom(TemporalAccessor) passing this as the argument. Whether the value can be obtained, and what the value represents, is determined by the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOffset()",
+    "name": "getOffset",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.ZoneOffset",
+      "name": "java.time.ZoneOffset",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOffset()",
+      "comment": "Gets the zone offset, such as '+01:00'.  This is the offset of the local date-time from UTC/Greenwich.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withOffsetSameLocal(java.time.ZoneOffset offset)",
+    "name": "withOffsetSameLocal",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneOffset",
+          "name": "ZoneOffset",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "withOffsetSameLocal(java.time.ZoneOffset offset)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified offset ensuring that the result has the same local date-time.  This method returns an object with the same LocalDateTime and the specified ZoneOffset. No calculation is needed or performed. For example, if this time represents 2007-12-03T10:30+02:00 and the offset specified is +03:00, then this method will return 2007-12-03T10:30+03:00.  To take into account the difference between the offsets, and adjust the time fields, use #withOffsetSameInstant.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withOffsetSameInstant(java.time.ZoneOffset offset)",
+    "name": "withOffsetSameInstant",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneOffset",
+          "name": "ZoneOffset",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "equivalence": {
+      "member": "withOffsetSameInstant(java.time.ZoneOffset offset)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified offset ensuring that the result is at the same instant.  This method returns an object with the specified ZoneOffset and a LocalDateTime adjusted by the difference between the two offsets. This will result in the old and new objects representing the same instant. This is useful for finding the local time in a different offset. For example, if this time represents 2007-12-03T10:30+02:00 and the offset specified is +03:00, then this method will return 2007-12-03T11:30+03:00.  To change the offset without adjusting the local time use #withOffsetSameLocal.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toLocalDateTime()",
+    "name": "toLocalDateTime",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.LocalDateTime",
+      "name": "java.time.LocalDateTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toLocalDateTime()",
+      "comment": "Gets the LocalDateTime part of this offset date-time.  This returns a LocalDateTime with the same year, month, day and time as this date-time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toLocalDate()",
+    "name": "toLocalDate",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.LocalDate",
+      "name": "java.time.LocalDate",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toLocalDate()",
+      "comment": "Gets the LocalDate part of this date-time.  This returns a LocalDate with the same year, month and day as this date-time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getYear()",
+    "name": "getYear",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getYear()",
+      "comment": "Gets the year field.  This method returns the primitive int value for the year.  The year returned by this method is proleptic as per get(YEAR). To obtain the year-of-era, use get(YEAR_OF_ERA).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMonthValue()",
+    "name": "getMonthValue",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMonthValue()",
+      "comment": "Gets the month-of-year field from 1 to 12.  This method returns the month as an int from 1 to 12. Application code is frequently clearer if the enum Month is used by calling #getMonth().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMonth()",
+    "name": "getMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Month",
+      "name": "java.time.Month",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMonth()",
+      "comment": "Gets the month-of-year field using the Month enum.  This method returns the enum Month for the month. This avoids confusion as to what int values mean. If you need access to the primitive int value then the enum provides the Month#getValue() int value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDayOfMonth()",
+    "name": "getDayOfMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDayOfMonth()",
+      "comment": "Gets the day-of-month field.  This method returns the primitive int value for the day-of-month.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDayOfYear()",
+    "name": "getDayOfYear",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDayOfYear()",
+      "comment": "Gets the day-of-year field.  This method returns the primitive int value for the day-of-year.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDayOfWeek()",
+    "name": "getDayOfWeek",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.DayOfWeek",
+      "name": "java.time.DayOfWeek",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDayOfWeek()",
+      "comment": "Gets the day-of-week field, which is an enum DayOfWeek.  This method returns the enum java.time.DayOfWeek for the day-of-week. This avoids confusion as to what int values mean. If you need access to the primitive int value then the enum provides the java.time.DayOfWeek#getValue() int value.  Additional information can be obtained from the DayOfWeek. This includes textual names of the values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toLocalTime()",
+    "name": "toLocalTime",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.LocalTime",
+      "name": "java.time.LocalTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toLocalTime()",
+      "comment": "Gets the LocalTime part of this date-time.  This returns a LocalTime with the same hour, minute, second and nanosecond as this date-time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHour()",
+    "name": "getHour",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getHour()",
+      "comment": "Gets the hour-of-day field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinute()",
+    "name": "getMinute",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMinute()",
+      "comment": "Gets the minute-of-hour field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSecond()",
+    "name": "getSecond",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getSecond()",
+      "comment": "Gets the second-of-minute field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNano()",
+    "name": "getNano",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getNano()",
+      "comment": "Gets the nano-of-second field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "with(java.time.temporal.TemporalAdjuster adjuster)",
+    "name": "with",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAdjuster",
+          "name": "TemporalAdjuster",
+          "isArray": false
+        },
+        "name": "adjuster"
+      }
+    ],
+    "equivalence": {
+      "member": "with(java.time.temporal.TemporalAdjuster adjuster)",
+      "comment": "Returns an adjusted copy of this date-time.  This returns an OffsetDateTime, based on this one, with the date-time adjusted. The adjustment takes place using the specified adjuster strategy object. Read the documentation of the adjuster to understand what adjustment will be made.  A simple adjuster might simply set the one of the fields, such as the year field. A more complex adjuster might set the date to the last day of the month. A selection of common adjustments is provided in TemporalAdjuster. These include finding the \"last day of the month\" and \"next Wednesday\". Key date-time classes also implement the TemporalAdjuster interface, such as Month and java.time.MonthDay MonthDay. The adjuster is responsible for handling special cases, such as the varying lengths of month and leap years.  For example this code returns a date on the last day of July:  import static java.time.Month.*; import static java.time.temporal.Adjusters.*; result = offsetDateTime.with(JULY).with(lastDayOfMonth());   The classes LocalDate, LocalTime and ZoneOffset implement TemporalAdjuster, thus this method can be used to change the date, time or offset:  result = offsetDateTime.with(date); result = offsetDateTime.with(time); result = offsetDateTime.with(offset);   The result of this method is obtained by invoking the TemporalAdjuster#adjustInto(Temporal) method on the specified adjuster passing this as the argument.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "with(java.time.temporal.TemporalField field, long newValue)",
+    "name": "with",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalField",
+          "name": "TemporalField",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "equivalence": {
+      "member": "with(java.time.temporal.TemporalField field, long newValue)",
+      "comment": "Returns a copy of this date-time with the specified field set to a new value.  TThis returns an OffsetDateTime, based on this one, with the value for the specified field changed. This can be used to change any supported field, such as the year, month or day-of-month. If it is not possible to set the value, because the field is not supported or for some other reason, an exception is thrown.  In some cases, changing the specified field can cause the resulting date-time to become invalid, such as changing the month from 31st January to February would make the day-of-month invalid. In cases like this, the field is responsible for resolving the date. Typically it will choose the previous valid date, which would be the last valid day of February in this example.  If the field is a ChronoField then the adjustment is implemented here.  The INSTANT_SECONDS field will return a date-time with the specified instant. The offset and nano-of-second are unchanged. If the new instant value is outside the valid range then a DateTimeException will be thrown.  The OFFSET_SECONDS field will return a date-time with the specified offset. The local date-time is unaltered. If the new offset value is outside the valid range then a DateTimeException will be thrown.  The other #isSupported(TemporalField) supported fields will behave as per the matching method on LocalDateTime#with(TemporalField, long) LocalDateTime. In this case, the offset is not part of the calculation and will be unchanged.  All other ChronoField instances will throw an UnsupportedTemporalTypeException.  If the field is not a ChronoField, then the result of this method is obtained by invoking TemporalField.adjustInto(Temporal, long) passing this as the argument. In this case, the field determines whether and how to adjust the instant.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withYear(int year)",
+    "name": "withYear",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "year"
+      }
+    ],
+    "equivalence": {
+      "member": "withYear(int year)",
+      "comment": "Returns a copy of this OffsetDateTime with the year altered. The offset does not affect the calculation and will be the same in the result. If the day-of-month is invalid for the year, it will be changed to the last valid day of the month.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withMonth(int month)",
+    "name": "withMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "month"
+      }
+    ],
+    "equivalence": {
+      "member": "withMonth(int month)",
+      "comment": "Returns a copy of this OffsetDateTime with the month-of-year altered. The offset does not affect the calculation and will be the same in the result. If the day-of-month is invalid for the year, it will be changed to the last valid day of the month.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withDayOfMonth(int dayOfMonth)",
+    "name": "withDayOfMonth",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfMonth"
+      }
+    ],
+    "equivalence": {
+      "member": "withDayOfMonth(int dayOfMonth)",
+      "comment": "Returns a copy of this OffsetDateTime with the day-of-month altered. If the resulting OffsetDateTime is invalid, an exception is thrown. The offset does not affect the calculation and will be the same in the result.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withDayOfYear(int dayOfYear)",
+    "name": "withDayOfYear",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "dayOfYear"
+      }
+    ],
+    "equivalence": {
+      "member": "withDayOfYear(int dayOfYear)",
+      "comment": "Returns a copy of this OffsetDateTime with the day-of-year altered. If the resulting OffsetDateTime is invalid, an exception is thrown.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withHour(int hour)",
+    "name": "withHour",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hour"
+      }
+    ],
+    "equivalence": {
+      "member": "withHour(int hour)",
+      "comment": "Returns a copy of this OffsetDateTime with the hour-of-day value altered.  The offset does not affect the calculation and will be the same in the result.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withMinute(int minute)",
+    "name": "withMinute",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minute"
+      }
+    ],
+    "equivalence": {
+      "member": "withMinute(int minute)",
+      "comment": "Returns a copy of this OffsetDateTime with the minute-of-hour value altered.  The offset does not affect the calculation and will be the same in the result.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withSecond(int second)",
+    "name": "withSecond",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "second"
+      }
+    ],
+    "equivalence": {
+      "member": "withSecond(int second)",
+      "comment": "Returns a copy of this OffsetDateTime with the second-of-minute value altered.  The offset does not affect the calculation and will be the same in the result.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "withNano(int nanoOfSecond)",
+    "name": "withNano",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nanoOfSecond"
+      }
+    ],
+    "equivalence": {
+      "member": "withNano(int nanoOfSecond)",
+      "comment": "Returns a copy of this OffsetDateTime with the nano-of-second value altered.  The offset does not affect the calculation and will be the same in the result.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "truncatedTo(java.time.temporal.TemporalUnit unit)",
+    "name": "truncatedTo",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "truncatedTo(java.time.temporal.TemporalUnit unit)",
+      "comment": "Returns a copy of this OffsetDateTime with the time truncated.  Truncation returns a copy of the original date-time with fields smaller than the specified unit set to zero. For example, truncating with the ChronoUnit#MINUTES minutes unit will set the second-of-minute and nano-of-second field to zero.  The unit must have a TemporalUnit#getDuration() duration that divides into the length of a standard day without remainder. This includes all supplied time units on ChronoUnit and ChronoUnit#DAYS DAYS. Other units throw an exception.  The offset does not affect the calculation and will be the same in the result.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plus(java.time.temporal.TemporalAmount amountToAdd)",
+    "name": "plus",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAmount",
+          "name": "TemporalAmount",
+          "isArray": false
+        },
+        "name": "amountToAdd"
+      }
+    ],
+    "equivalence": {
+      "member": "plus(java.time.temporal.TemporalAmount amountToAdd)",
+      "comment": "Returns a copy of this date-time with the specified amount added.  This returns an OffsetDateTime, based on this one, with the specified amount added. The amount is typically Period or Duration but may be any other type implementing the TemporalAmount interface.  The calculation is delegated to the amount object by calling TemporalAmount#addTo(Temporal). The amount implementation is free to implement the addition in any way it wishes, however it typically calls back to #plus(long, TemporalUnit). Consult the documentation of the amount implementation to determine if it can be successfully added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plus(long amountToAdd, java.time.temporal.TemporalUnit unit)",
+    "name": "plus",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "amountToAdd"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "plus(long amountToAdd, java.time.temporal.TemporalUnit unit)",
+      "comment": "Returns a copy of this date-time with the specified amount added.  This returns an OffsetDateTime, based on this one, with the amount in terms of the unit added. If it is not possible to add the amount, because the unit is not supported or for some other reason, an exception is thrown.  If the field is a ChronoUnit then the addition is implemented by LocalDateTime#plus(long, TemporalUnit). The offset is not part of the calculation and will be unchanged in the result.  If the field is not a ChronoUnit, then the result of this method is obtained by invoking TemporalUnit.addTo(Temporal, long) passing this as the argument. In this case, the unit determines whether and how to perform the addition.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusYears(long years)",
+    "name": "plusYears",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "years"
+      }
+    ],
+    "equivalence": {
+      "member": "plusYears(long years)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in years added.  This method adds the specified amount to the years field in three steps:  <li>Add the input years to the year field</li> <li>Check if the resulting date would be invalid</li> <li>Adjust the day-of-month to the last valid day if necessary</li>   For example, 2008-02-29 (leap year) plus one year would result in the invalid date 2009-02-29 (standard year). Instead of returning an invalid result, the last valid day of the month, 2009-02-28, is selected instead.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusMonths(long months)",
+    "name": "plusMonths",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "months"
+      }
+    ],
+    "equivalence": {
+      "member": "plusMonths(long months)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in months added.  This method adds the specified amount to the months field in three steps:  <li>Add the input months to the month-of-year field</li> <li>Check if the resulting date would be invalid</li> <li>Adjust the day-of-month to the last valid day if necessary</li>   For example, 2007-03-31 plus one month would result in the invalid date 2007-04-31. Instead of returning an invalid result, the last valid day of the month, 2007-04-30, is selected instead.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusWeeks(long weeks)",
+    "name": "plusWeeks",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "weeks"
+      }
+    ],
+    "equivalence": {
+      "member": "plusWeeks(long weeks)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in weeks added.  This method adds the specified amount in weeks to the days field incrementing the month and year fields as necessary to ensure the result remains valid. The result is only invalid if the maximum/minimum year is exceeded.  For example, 2008-12-31 plus one week would result in the 2009-01-07.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusDays(long days)",
+    "name": "plusDays",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "days"
+      }
+    ],
+    "equivalence": {
+      "member": "plusDays(long days)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in days added.  This method adds the specified amount to the days field incrementing the month and year fields as necessary to ensure the result remains valid. The result is only invalid if the maximum/minimum year is exceeded.  For example, 2008-12-31 plus one day would result in the 2009-01-01.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusHours(long hours)",
+    "name": "plusHours",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "hours"
+      }
+    ],
+    "equivalence": {
+      "member": "plusHours(long hours)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in hours added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusMinutes(long minutes)",
+    "name": "plusMinutes",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "minutes"
+      }
+    ],
+    "equivalence": {
+      "member": "plusMinutes(long minutes)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in minutes added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusSeconds(long seconds)",
+    "name": "plusSeconds",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "seconds"
+      }
+    ],
+    "equivalence": {
+      "member": "plusSeconds(long seconds)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in seconds added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "plusNanos(long nanos)",
+    "name": "plusNanos",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "nanos"
+      }
+    ],
+    "equivalence": {
+      "member": "plusNanos(long nanos)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in nanoseconds added.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minus(java.time.temporal.TemporalAmount amountToSubtract)",
+    "name": "minus",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalAmount",
+          "name": "TemporalAmount",
+          "isArray": false
+        },
+        "name": "amountToSubtract"
+      }
+    ],
+    "equivalence": {
+      "member": "minus(java.time.temporal.TemporalAmount amountToSubtract)",
+      "comment": "Returns a copy of this date-time with the specified amount subtracted.  This returns an OffsetDateTime, based on this one, with the specified amount subtracted. The amount is typically Period or Duration but may be any other type implementing the TemporalAmount interface.  The calculation is delegated to the amount object by calling TemporalAmount#subtractFrom(Temporal). The amount implementation is free to implement the subtraction in any way it wishes, however it typically calls back to #minus(long, TemporalUnit). Consult the documentation of the amount implementation to determine if it can be successfully subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minus(long amountToSubtract, java.time.temporal.TemporalUnit unit)",
+    "name": "minus",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "amountToSubtract"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "minus(long amountToSubtract, java.time.temporal.TemporalUnit unit)",
+      "comment": "Returns a copy of this date-time with the specified amount subtracted.  This returns an OffsetDateTime, based on this one, with the amount in terms of the unit subtracted. If it is not possible to subtract the amount, because the unit is not supported or for some other reason, an exception is thrown.  This method is equivalent to #plus(long, TemporalUnit) with the amount negated. See that method for a full description of how addition, and thus subtraction, works.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": "methodResultID.equals(receiverObjectClone.plus(args[0],args[1]))"
+    }
+  },
+  {
+    "signature": "minusYears(long years)",
+    "name": "minusYears",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "years"
+      }
+    ],
+    "equivalence": {
+      "member": "minusYears(long years)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in years subtracted.  This method subtracts the specified amount from the years field in three steps:  <li>Subtract the input years to the year field</li> <li>Check if the resulting date would be invalid</li> <li>Adjust the day-of-month to the last valid day if necessary</li>   For example, 2008-02-29 (leap year) minus one year would result in the invalid date 2009-02-29 (standard year). Instead of returning an invalid result, the last valid day of the month, 2009-02-28, is selected instead.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusMonths(long months)",
+    "name": "minusMonths",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "months"
+      }
+    ],
+    "equivalence": {
+      "member": "minusMonths(long months)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in months subtracted.  This method subtracts the specified amount from the months field in three steps:  <li>Subtract the input months to the month-of-year field</li> <li>Check if the resulting date would be invalid</li> <li>Adjust the day-of-month to the last valid day if necessary</li>   For example, 2007-03-31 minus one month would result in the invalid date 2007-04-31. Instead of returning an invalid result, the last valid day of the month, 2007-04-30, is selected instead.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusWeeks(long weeks)",
+    "name": "minusWeeks",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "weeks"
+      }
+    ],
+    "equivalence": {
+      "member": "minusWeeks(long weeks)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in weeks subtracted.  This method subtracts the specified amount in weeks from the days field decrementing the month and year fields as necessary to ensure the result remains valid. The result is only invalid if the maximum/minimum year is exceeded.  For example, 2008-12-31 minus one week would result in the 2009-01-07.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusDays(long days)",
+    "name": "minusDays",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "days"
+      }
+    ],
+    "equivalence": {
+      "member": "minusDays(long days)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in days subtracted.  This method subtracts the specified amount from the days field incrementing the month and year fields as necessary to ensure the result remains valid. The result is only invalid if the maximum/minimum year is exceeded.  For example, 2008-12-31 minus one day would result in the 2009-01-01.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusHours(long hours)",
+    "name": "minusHours",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "hours"
+      }
+    ],
+    "equivalence": {
+      "member": "minusHours(long hours)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in hours subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusMinutes(long minutes)",
+    "name": "minusMinutes",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "minutes"
+      }
+    ],
+    "equivalence": {
+      "member": "minusMinutes(long minutes)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in minutes subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusSeconds(long seconds)",
+    "name": "minusSeconds",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "seconds"
+      }
+    ],
+    "equivalence": {
+      "member": "minusSeconds(long seconds)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in seconds subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minusNanos(long nanos)",
+    "name": "minusNanos",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "nanos"
+      }
+    ],
+    "equivalence": {
+      "member": "minusNanos(long nanos)",
+      "comment": "Returns a copy of this OffsetDateTime with the specified period in nanoseconds subtracted.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "query(java.time.temporal.TemporalQuery<R> query)",
+    "name": "query",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalQuery",
+          "name": "TemporalQuery",
+          "isArray": false
+        },
+        "name": "query"
+      }
+    ],
+    "equivalence": {
+      "member": "query(java.time.temporal.TemporalQuery<R> query)",
+      "comment": "Queries this date-time using the specified query.  This queries this date-time using the specified query strategy object. The TemporalQuery object defines the logic to be used to obtain the result. Read the documentation of the query to understand what the result of this method will be.  The result of this method is obtained by invoking the TemporalQuery#queryFrom(TemporalAccessor) method on the specified query passing this as the argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "adjustInto(java.time.temporal.Temporal temporal)",
+    "name": "adjustInto",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.temporal.Temporal",
+      "name": "java.time.temporal.Temporal",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.Temporal",
+          "name": "Temporal",
+          "isArray": false
+        },
+        "name": "temporal"
+      }
+    ],
+    "equivalence": {
+      "member": "adjustInto(java.time.temporal.Temporal temporal)",
+      "comment": "Adjusts the specified temporal object to have the same offset, date and time as this object.  This returns a temporal object of the same observable type as the input with the offset, date and time changed to be the same as this.  The adjustment is equivalent to using Temporal#with(TemporalField, long) three times, passing ChronoField#EPOCH_DAY, ChronoField#NANO_OF_DAY and ChronoField#OFFSET_SECONDS as the fields.  In most cases, it is clearer to reverse the calling pattern by using Temporal#with(TemporalAdjuster):  // these two lines are equivalent, but the second approach is recommended temporal = thisOffsetDateTime.adjustInto(temporal); temporal = temporal.with(thisOffsetDateTime);   This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "until(java.time.temporal.Temporal endExclusive, java.time.temporal.TemporalUnit unit)",
+    "name": "until",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.Temporal",
+          "name": "Temporal",
+          "isArray": false
+        },
+        "name": "endExclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.time.temporal.TemporalUnit",
+          "name": "TemporalUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "equivalence": {
+      "member": "until(java.time.temporal.Temporal endExclusive, java.time.temporal.TemporalUnit unit)",
+      "comment": "Calculates the amount of time until another date-time in terms of the specified unit.  This calculates the amount of time between two OffsetDateTime objects in terms of a single TemporalUnit. The start and end points are this and the specified date-time. The result will be negative if the end is before the start. For example, the period in days between two date-times can be calculated using startDateTime.until(endDateTime, DAYS).  The Temporal passed to this method is converted to a OffsetDateTime using #from(TemporalAccessor). If the offset differs between the two date-times, the specified end date-time is normalized to have the same offset as this date-time.  The calculation returns a whole number, representing the number of complete units between the two date-times. For example, the period in months between 2012-06-15T00:00Z and 2012-08-14T23:59Z will only be one month as it is one minute short of two months.  There are two equivalent ways of using this method. The first is to invoke this method. The second is to use TemporalUnit#between(Temporal, Temporal):  // these two lines are equivalent amount = start.until(end, MONTHS); amount = MONTHS.between(start, end);  The choice should be made based on which makes the code more readable.  The calculation is implemented in this method for ChronoUnit. The units NANOS, MICROS, MILLIS, SECONDS, MINUTES, HOURS and HALF_DAYS, DAYS, WEEKS, MONTHS, YEARS, DECADES, CENTURIES, MILLENNIA and ERAS are supported. Other ChronoUnit values will throw an exception.  If the unit is not a ChronoUnit, then the result of this method is obtained by invoking TemporalUnit.between(Temporal, Temporal) passing this as the first argument and the converted input temporal as the second argument.  This instance is immutable and unaffected by this method call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "format(java.time.format.DateTimeFormatter formatter)",
+    "name": "format",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.format.DateTimeFormatter",
+          "name": "DateTimeFormatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "equivalence": {
+      "member": "format(java.time.format.DateTimeFormatter formatter)",
+      "comment": "Formats this date-time using the specified formatter.  This date-time will be passed to the formatter to produce a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atZoneSameInstant(java.time.ZoneId zone)",
+    "name": "atZoneSameInstant",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.ZonedDateTime",
+      "name": "java.time.ZonedDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "atZoneSameInstant(java.time.ZoneId zone)",
+      "comment": "Combines this date-time with a time-zone to create a ZonedDateTime ensuring that the result has the same instant.  This returns a ZonedDateTime formed from this date-time and the specified time-zone. This conversion will ignore the visible local date-time and use the underlying instant instead. This avoids any problems with local time-line gaps or overlaps. The result might have different values for fields such as hour, minute an even day.  To attempt to retain the values of the fields, use #atZoneSimilarLocal(ZoneId). To use the offset as the zone ID, use #toZonedDateTime().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "atZoneSimilarLocal(java.time.ZoneId zone)",
+    "name": "atZoneSimilarLocal",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.ZonedDateTime",
+      "name": "java.time.ZonedDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.ZoneId",
+          "name": "ZoneId",
+          "isArray": false
+        },
+        "name": "zone"
+      }
+    ],
+    "equivalence": {
+      "member": "atZoneSimilarLocal(java.time.ZoneId zone)",
+      "comment": "Combines this date-time with a time-zone to create a ZonedDateTime trying to keep the same local date and time.  This returns a ZonedDateTime formed from this date-time and the specified time-zone. Where possible, the result will have the same local date-time as this object.  Time-zone rules, such as daylight savings, mean that not every time on the local time-line exists. If the local date-time is in a gap or overlap according to the rules then a resolver is used to determine the resultant local time and offset. This method uses ZonedDateTime#ofLocal(LocalDateTime, ZoneId, ZoneOffset) to retain the offset from this instance if possible.  Finer control over gaps and overlaps is available in two ways. If you simply want to use the later offset at overlaps then call ZonedDateTime#withLaterOffsetAtOverlap() immediately after this method.  To create a zoned date-time at the same instant irrespective of the local time-line, use #atZoneSameInstant(ZoneId). To use the offset as the zone ID, use #toZonedDateTime().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toOffsetTime()",
+    "name": "toOffsetTime",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetTime",
+      "name": "java.time.OffsetTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toOffsetTime()",
+      "comment": "Converts this date-time to an OffsetTime.  This returns an offset time with the same local time and offset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toZonedDateTime()",
+    "name": "toZonedDateTime",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.ZonedDateTime",
+      "name": "java.time.ZonedDateTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toZonedDateTime()",
+      "comment": "Converts this date-time to a ZonedDateTime using the offset as the zone ID.  This creates the simplest possible ZonedDateTime using the offset as the zone ID.  To control the time-zone used, see #atZoneSameInstant(ZoneId) and #atZoneSimilarLocal(ZoneId).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toInstant()",
+    "name": "toInstant",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.Instant",
+      "name": "java.time.Instant",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toInstant()",
+      "comment": "Converts this date-time to an Instant.  This returns an Instant representing the same point on the time-line as this date-time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toEpochSecond()",
+    "name": "toEpochSecond",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toEpochSecond()",
+      "comment": "Converts this date-time to the number of seconds from the epoch of 1970-01-01T00:00:00Z.  This allows this date-time to be converted to a value of the ChronoField#INSTANT_SECONDS epoch-seconds field. This is primarily intended for low-level conversions rather than general application usage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareTo(java.time.OffsetDateTime other)",
+    "name": "compareTo",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.OffsetDateTime",
+          "name": "OffsetDateTime",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "compareTo(java.time.OffsetDateTime other)",
+      "comment": "Compares this OffsetDateTime to another date-time.  The comparison is based on the instant then on the local date-time. It is \"consistent with equals\", as defined by Comparable.  For example, the following is the comparator order:  <li>2008-12-03T10:30+01:00</li> <li>2008-12-03T11:00+01:00</li> <li>2008-12-03T12:00+02:00</li> <li>2008-12-03T11:30+01:00</li> <li>2008-12-03T12:00+01:00</li> <li>2008-12-03T12:30+01:00</li>  Values #2 and #3 represent the same instant on the time-line. When two values represent the same instant, the local date-time is compared to distinguish them. This step is needed to make the ordering consistent with equals().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isAfter(java.time.OffsetDateTime other)",
+    "name": "isAfter",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.OffsetDateTime",
+          "name": "OffsetDateTime",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isAfter(java.time.OffsetDateTime other)",
+      "comment": "Checks if the instant of this date-time is after that of the specified date-time.  This method differs from the comparison in #compareTo and #equals in that it only compares the instant of the date-time. This is equivalent to using dateTime1.toInstant().isAfter(dateTime2.toInstant());.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isBefore(java.time.OffsetDateTime other)",
+    "name": "isBefore",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.OffsetDateTime",
+          "name": "OffsetDateTime",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isBefore(java.time.OffsetDateTime other)",
+      "comment": "Checks if the instant of this date-time is before that of the specified date-time.  This method differs from the comparison in #compareTo in that it only compares the instant of the date-time. This is equivalent to using dateTime1.toInstant().isBefore(dateTime2.toInstant());.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEqual(java.time.OffsetDateTime other)",
+    "name": "isEqual",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.time.OffsetDateTime",
+          "name": "OffsetDateTime",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "equivalence": {
+      "member": "isEqual(java.time.OffsetDateTime other)",
+      "comment": "Checks if the instant of this date-time is equal to that of the specified date-time.  This method differs from the comparison in #compareTo and #equals in that it only compares the instant of the date-time. This is equivalent to using dateTime1.toInstant().equals(dateTime2.toInstant());.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "equivalence": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Checks if this date-time is equal to another date-time.  The comparison is based on the local date-time and the offset. To compare for the same instant on the time-line, use #isEqual. Only objects of type OffsetDateTime are compared, other types return false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "hashCode()",
+      "comment": "A hash code for this date-time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Outputs this date-time as a String, such as 2007-12-03T10:15:30+01:00.  The output will be one of the following ISO-8601 formats:  <li>uuuu-MM-dd'T'HH:mmXXXXX</li> <li>uuuu-MM-dd'T'HH:mm:ssXXXXX</li> <li>uuuu-MM-dd'T'HH:mm:ss.SSSXXXXX</li> <li>uuuu-MM-dd'T'HH:mm:ss.SSSSSSXXXXX</li> <li>uuuu-MM-dd'T'HH:mm:ss.SSSSSSSSSXXXXX</li>  The format used will be the shortest that outputs the full value of the time where the omitted parts are implied to be zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeExternal(java.io.ObjectOutput out)",
+    "name": "writeExternal",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.ObjectOutput",
+          "name": "ObjectOutput",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "equivalence": {
+      "member": "writeExternal(java.io.ObjectOutput out)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readExternal(java.io.ObjectInput in)",
+    "name": "readExternal",
+    "containingClass": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "OffsetDateTime",
+      "isArray": false
+    },
+    "targetClass": "java.time.OffsetDateTime",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.time.OffsetDateTime",
+      "name": "java.time.OffsetDateTime",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.ObjectInput",
+          "name": "ObjectInput",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "equivalence": {
+      "member": "readExternal(java.io.ObjectInput in)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,1539 @@
+[
+  {
+    "signature": "weka.associations.Apriori()",
+    "name": "weka.associations.Apriori",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "parameters": [],
+    "equivalence": {
+      "member": "weka.associations.Apriori()",
+      "comment": "Constructor that allows to sets default values for the minimum confidence and the maximum number of rules the minimum confidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this associator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, e.g., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resetOptions()",
+    "name": "resetOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "resetOptions()",
+      "comment": "Resets the options to the default values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeMissingColumns(weka.core.Instances instances)",
+    "name": "removeMissingColumns",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "equivalence": {
+      "member": "removeMissingColumns(weka.core.Instances instances)",
+      "comment": "Removes columns that are all missing from the data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildAssociations(weka.core.Instances instances)",
+    "name": "buildAssociations",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "equivalence": {
+      "member": "buildAssociations(weka.core.Instances instances)",
+      "comment": "Method that generates all large itemsets with a minimum support, and from these all association rules with a minimum confidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mineCARs(weka.core.Instances data)",
+    "name": "mineCARs",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<java.lang.Object>[]",
+      "name": "java.util.ArrayList<java.lang.Object>[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "equivalence": {
+      "member": "mineCARs(weka.core.Instances data)",
+      "comment": "Method that mines all class association rules with minimum support and with a minimum confidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstancesNoClass()",
+    "name": "getInstancesNoClass",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getInstancesNoClass()",
+      "comment": "Gets the instances without the class atrribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInstancesOnlyClass()",
+    "name": "getInstancesOnlyClass",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getInstancesOnlyClass()",
+      "comment": "Gets only the class attribute of the instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "equivalence": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -N <required number of rules output> The required number of rules. (default = 10)   -T <0=confidence | 1=lift | 2=leverage | 3=Conviction> The metric type by which to rank rules. (default = confidence)   -C <minimum metric score of a rule> The minimum confidence of a rule. (default = 0.9)   -D <delta for minimum support> The delta by which the minimum support is decreased in each iteration. (default = 0.05)   -U <upper bound for minimum support> Upper bound for minimum support. (default = 1.0)   -M <lower bound for minimum support> The lower bound for the minimum support. (default = 0.1)   -S <significance level> If used, rules are tested for significance at the given level. Slower. (default = no significance testing)   -I If set the itemsets found are also output. (default = no)   -R Remove columns that contain all missing values (default = no)   -V Report progress iteratively. (default = no)   -A If set class association rules are mined. (default = no)   -Z Treat zero (i.e. first value of nominal attributes) as missing   -B <toString delimiters> If used, two characters to use as rule delimiters in the result of toString: the first to delimit fields, the second to delimit items within fields. (default = traditional toString result)   -c <the class index> The class index. (default = last)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Apriori object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "toString()",
+      "comment": "Outputs the size of all the generated sets of itemsets and the rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metricString()",
+    "name": "metricString",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "metricString()",
+      "comment": "Returns the metric string for the chosen metric type",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAllMissingColsTipText()",
+    "name": "removeAllMissingColsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "removeAllMissingColsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRemoveAllMissingCols(boolean r)",
+    "name": "setRemoveAllMissingCols",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "equivalence": {
+      "member": "setRemoveAllMissingCols(boolean r)",
+      "comment": "Remove columns containing all missing values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRemoveAllMissingCols()",
+    "name": "getRemoveAllMissingCols",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRemoveAllMissingCols()",
+      "comment": "Returns whether columns containing all missing values are to be removed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "upperBoundMinSupportTipText()",
+    "name": "upperBoundMinSupportTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "upperBoundMinSupportTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUpperBoundMinSupport()",
+    "name": "getUpperBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getUpperBoundMinSupport()",
+      "comment": "Get the value of upperBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUpperBoundMinSupport(double v)",
+    "name": "setUpperBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setUpperBoundMinSupport(double v)",
+      "comment": "Set the value of upperBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassIndex(int index)",
+    "name": "setClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "equivalence": {
+      "member": "setClassIndex(int index)",
+      "comment": "Sets the class index",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassIndex()",
+    "name": "getClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getClassIndex()",
+      "comment": "Gets the class index",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classIndexTipText()",
+    "name": "classIndexTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "classIndexTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCar(boolean flag)",
+    "name": "setCar",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flag"
+      }
+    ],
+    "equivalence": {
+      "member": "setCar(boolean flag)",
+      "comment": "Sets class association rule mining",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCar()",
+    "name": "getCar",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getCar()",
+      "comment": "Gets whether class association ruels are mined",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "carTipText()",
+    "name": "carTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "carTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerBoundMinSupportTipText()",
+    "name": "lowerBoundMinSupportTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "lowerBoundMinSupportTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLowerBoundMinSupport()",
+    "name": "getLowerBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getLowerBoundMinSupport()",
+      "comment": "Get the value of lowerBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLowerBoundMinSupport(double v)",
+    "name": "setLowerBoundMinSupport",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setLowerBoundMinSupport(double v)",
+      "comment": "Set the value of lowerBoundMinSupport.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetricType()",
+    "name": "getMetricType",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMetricType()",
+      "comment": "Get the metric type",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metricTypeTipText()",
+    "name": "metricTypeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "metricTypeTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMetricType(weka.core.SelectedTag d)",
+    "name": "setMetricType",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "equivalence": {
+      "member": "setMetricType(weka.core.SelectedTag d)",
+      "comment": "Set the metric type for ranking rules",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minMetricTipText()",
+    "name": "minMetricTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "minMetricTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinMetric()",
+    "name": "getMinMetric",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getMinMetric()",
+      "comment": "Get the value of minConfidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinMetric(double v)",
+    "name": "setMinMetric",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setMinMetric(double v)",
+      "comment": "Set the value of minConfidence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numRulesTipText()",
+    "name": "numRulesTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "numRulesTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumRules()",
+    "name": "getNumRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getNumRules()",
+      "comment": "Get the value of numRules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumRules(int v)",
+    "name": "setNumRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setNumRules(int v)",
+      "comment": "Set the value of numRules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deltaTipText()",
+    "name": "deltaTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "deltaTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDelta()",
+    "name": "getDelta",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getDelta()",
+      "comment": "Get the value of delta.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDelta(double v)",
+    "name": "setDelta",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setDelta(double v)",
+      "comment": "Set the value of delta.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "significanceLevelTipText()",
+    "name": "significanceLevelTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "significanceLevelTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSignificanceLevel()",
+    "name": "getSignificanceLevel",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getSignificanceLevel()",
+      "comment": "Get the value of significanceLevel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSignificanceLevel(double v)",
+    "name": "setSignificanceLevel",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "equivalence": {
+      "member": "setSignificanceLevel(double v)",
+      "comment": "Set the value of significanceLevel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOutputItemSets(boolean flag)",
+    "name": "setOutputItemSets",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flag"
+      }
+    ],
+    "equivalence": {
+      "member": "setOutputItemSets(boolean flag)",
+      "comment": "Sets whether itemsets are output as well",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutputItemSets()",
+    "name": "getOutputItemSets",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getOutputItemSets()",
+      "comment": "Gets whether itemsets are output as well",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "outputItemSetsTipText()",
+    "name": "outputItemSetsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "outputItemSetsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setVerbose(boolean flag)",
+    "name": "setVerbose",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flag"
+      }
+    ],
+    "equivalence": {
+      "member": "setVerbose(boolean flag)",
+      "comment": "Sets verbose mode",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getVerbose()",
+    "name": "getVerbose",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getVerbose()",
+      "comment": "Gets whether algorithm is run in verbose mode",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "verboseTipText()",
+    "name": "verboseTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "verboseTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "treatZeroAsMissingTipText()",
+    "name": "treatZeroAsMissingTipText",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "treatZeroAsMissingTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTreatZeroAsMissing(boolean z)",
+    "name": "setTreatZeroAsMissing",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "z"
+      }
+    ],
+    "equivalence": {
+      "member": "setTreatZeroAsMissing(boolean z)",
+      "comment": "Sets whether zeros (i.e. the first value of a nominal attribute) should be treated as missing values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTreatZeroAsMissing()",
+    "name": "getTreatZeroAsMissing",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getTreatZeroAsMissing()",
+      "comment": "Gets whether zeros (i.e. the first value of a nominal attribute) is to be treated int he same way as missing values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAllTheRules()",
+    "name": "getAllTheRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<java.lang.Object>[]",
+      "name": "java.util.ArrayList<java.lang.Object>[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAllTheRules()",
+      "comment": "returns all the rules",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAssociationRules()",
+    "name": "getAssociationRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.associations.AssociationRules",
+      "name": "weka.associations.AssociationRules",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getAssociationRules()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRuleMetricNames()",
+    "name": "getRuleMetricNames",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRuleMetricNames()",
+      "comment": "Gets a list of the names of the metrics output for each rule. This list should be the same (in terms of the names and order thereof) as that produced by AssociationRule.getMetricNamesForRule().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canProduceRules()",
+    "name": "canProduceRules",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "canProduceRules()",
+      "comment": "Returns true if this AssociationRulesProducer can actually produce rules. Most implementing classes will always return true from this method (obviously :-)). However, an implementing class that actually acts as a wrapper around things that may or may not implement AssociationRulesProducer will want to return false if the thing they wrap can't produce rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "equivalence": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.associations.Apriori",
+      "name": "Apriori",
+      "isArray": false
+    },
+    "targetClass": "weka.associations.Apriori",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "equivalence": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

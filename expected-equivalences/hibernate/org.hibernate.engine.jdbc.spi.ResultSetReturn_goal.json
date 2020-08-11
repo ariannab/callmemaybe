@@ -1,0 +1,250 @@
+[
+  {
+    "signature": "extract(java.sql.PreparedStatement statement)",
+    "name": "extract",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.ResultSet",
+      "name": "java.sql.ResultSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.PreparedStatement",
+          "name": "PreparedStatement",
+          "isArray": false
+        },
+        "name": "statement"
+      }
+    ],
+    "equivalence": {
+      "member": "extract(java.sql.PreparedStatement statement)",
+      "comment": "Extract the ResultSet from the PreparedStatement.  If user passes CallableStatement reference, this method calls #extract(CallableStatement) internally. Otherwise, generally speaking, java.sql.PreparedStatement#executeQuery() is called",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "extract(java.sql.CallableStatement callableStatement)",
+    "name": "extract",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.ResultSet",
+      "name": "java.sql.ResultSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.CallableStatement",
+          "name": "CallableStatement",
+          "isArray": false
+        },
+        "name": "callableStatement"
+      }
+    ],
+    "equivalence": {
+      "member": "extract(java.sql.CallableStatement callableStatement)",
+      "comment": "Extract the ResultSet from the CallableStatement. Note that this is the limited legacy form which delegates to org.hibernate.dialect.Dialect#getResultSet. Better option is to integrate org.hibernate.procedure.ProcedureCall-like hooks",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "extract(java.sql.Statement statement, java.lang.String sql)",
+    "name": "extract",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.ResultSet",
+      "name": "java.sql.ResultSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sql"
+      }
+    ],
+    "equivalence": {
+      "member": "extract(java.sql.Statement statement, java.lang.String sql)",
+      "comment": "Performs the given SQL statement, expecting a ResultSet in return",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "execute(java.sql.PreparedStatement statement)",
+    "name": "execute",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.ResultSet",
+      "name": "java.sql.ResultSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.PreparedStatement",
+          "name": "PreparedStatement",
+          "isArray": false
+        },
+        "name": "statement"
+      }
+    ],
+    "equivalence": {
+      "member": "execute(java.sql.PreparedStatement statement)",
+      "comment": "Execute the PreparedStatement return its first ResultSet, if any. If there is no ResultSet, returns null",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "execute(java.sql.Statement statement, java.lang.String sql)",
+    "name": "execute",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.sql.ResultSet",
+      "name": "java.sql.ResultSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sql"
+      }
+    ],
+    "equivalence": {
+      "member": "execute(java.sql.Statement statement, java.lang.String sql)",
+      "comment": "Performs the given SQL statement, returning its first ResultSet, if any. If there is no ResultSet, returns null",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "executeUpdate(java.sql.PreparedStatement statement)",
+    "name": "executeUpdate",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.PreparedStatement",
+          "name": "PreparedStatement",
+          "isArray": false
+        },
+        "name": "statement"
+      }
+    ],
+    "equivalence": {
+      "member": "executeUpdate(java.sql.PreparedStatement statement)",
+      "comment": "Execute the PreparedStatement, returning its \"affected row count\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "executeUpdate(java.sql.Statement statement, java.lang.String sql)",
+    "name": "executeUpdate",
+    "containingClass": {
+      "qualifiedName": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+      "name": "ResultSetReturn",
+      "isArray": false
+    },
+    "targetClass": "org.hibernate.engine.jdbc.spi.ResultSetReturn",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.sql.Statement",
+          "name": "Statement",
+          "isArray": false
+        },
+        "name": "statement"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sql"
+      }
+    ],
+    "equivalence": {
+      "member": "executeUpdate(java.sql.Statement statement, java.lang.String sql)",
+      "comment": "Execute the given SQL statement returning its \"affected row count\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]
