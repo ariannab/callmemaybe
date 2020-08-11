@@ -5,7 +5,10 @@ import static org.toradocu.translator.CommentTranslator.processCondition;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.ParameterException;
 import com.google.gson.reflect.TypeToken;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -22,21 +25,21 @@ import org.slf4j.impl.SimpleLogger;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedType;
-import org.toradocu.extractor.EquivalentMatch;
 import org.toradocu.extractor.JavadocExtractor;
 import org.toradocu.extractor.ParameterNotFoundException;
 import org.toradocu.generator.OracleGenerator;
 import org.toradocu.output.util.JsonOutput;
 import org.toradocu.translator.CommentTranslator;
 import org.toradocu.translator.semantic.SemanticMatcher;
+import org.toradocu.translator.spec.EqOperationSpecification;
 import org.toradocu.util.GsonInstance;
 import org.toradocu.util.Stats;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.OperationSpecification;
-import randoop.condition.specification.PostSpecification;
-import randoop.condition.specification.PreSpecification;
+import randoop.condition.specification.Postcondition;
+import randoop.condition.specification.Precondition;
 import randoop.condition.specification.Property;
-import randoop.condition.specification.ThrowsSpecification;
+import randoop.condition.specification.ThrowsCondition;
 
 /**
  * Entry point of Toradocu. {@code Toradocu.main} is automatically executed running the command:
@@ -137,39 +140,36 @@ public class Toradocu {
     // === Condition Translator ===
 
     // Enable or disable semantic matching
-    SemanticMatcher.setEnabled(configuration.isSemanticMatcherEnabled());
+    SemanticMatcher.setEnabled(
+        configuration.isSemanticMatcherEnabled() && !configuration.mustGenerateCrossOracles());
 
     if (configuration.isConditionTranslationEnabled()) {
       Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
-      Map<DocumentedExecutable, ArrayList<EquivalentMatch>> equivalenceSpecs = new HashMap<>();
+      Map<DocumentedExecutable, EqOperationSpecification> eqSpecifications = new HashMap<>();
 
       List<JsonOutput> jsonOutputs = new ArrayList<>();
-      // Use @tComment or the standard condition translator to translate comments.
       if (configuration.mustGenerateCrossOracles()) {
-        equivalenceSpecs = CommentTranslator.createCrossOracles(documentedType);
-      } else if (configuration.useTComment()) {
-        specifications = tcomment.TcommentKt.translate(members);
+        eqSpecifications = CommentTranslator.createCrossOracles(documentedType);
+        // Use @tComment or the standard condition translator to translate comments.
+        //      } else if (configuration.useTComment()) {
+        //        specifications = tcomment.TcommentKt.translate(members);
       } else {
         specifications = CommentTranslator.createSpecifications(members);
       }
 
       // Output the result on a file or on the standard output, if silent mode is disabled.
       if (!configuration.isSilent()) {
-        if (!equivalenceSpecs.isEmpty()) {
+        if (configuration.mustGenerateCrossOracles() && !eqSpecifications.isEmpty()) {
+          // Cross-oracles goal output
           if (configuration.getConditionTranslatorOutput() != null) {
             try (BufferedWriter writer =
                 Files.newBufferedWriter(
                     configuration.getConditionTranslatorOutput().toPath(),
                     StandardCharsets.UTF_8)) {
-
-              List<List<EquivalentMatch>> equivalences = new ArrayList<>(equivalenceSpecs.values());
-              for (List<EquivalentMatch> subMatches : equivalences) {
-                subMatches.removeIf(e -> !e.isEquivalence() && !e.isSimilarity());
-              }
-              // equivalences.removeIf(List::isEmpty);
+              Collection<EqOperationSpecification> equivalences = eqSpecifications.values();
               if (!equivalences.isEmpty()) {
-                for (DocumentedExecutable executable : equivalenceSpecs.keySet()) {
-                  jsonOutputs.add(new JsonOutput(executable, equivalenceSpecs.get(executable)));
+                for (DocumentedExecutable executable : members) {
+                  jsonOutputs.add(new JsonOutput(executable, eqSpecifications.get(executable)));
                 }
                 String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
                 writer.write(jsonOutput);
@@ -213,49 +213,73 @@ public class Toradocu {
         }
       }
       // Create statistics.
-      File expectedResultFile = configuration.getExpectedOutput();
-      if (expectedResultFile != null) {
-        Type collectionType = new TypeToken<List<JsonOutput>>() {}.getType();
-        try (BufferedReader reader = Files.newBufferedReader(expectedResultFile.toPath());
-            BufferedWriter resultsFile =
-                Files.newBufferedWriter(
-                    configuration.getStatsFile().toPath(),
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.APPEND)) {
-          List<JsonOutput> expectedResult = GsonInstance.gson().fromJson(reader, collectionType);
-          List<Stats> targetClassResults = null;
-          if (!jsonOutputs.isEmpty()) {
-            targetClassResults = Stats.getEqStats(jsonOutputs, expectedResult);
-          } else if (!configuration.mustGenerateCrossOracles()) {
-            targetClassResults = Stats.getStats(jsonOutputs, expectedResult);
-          }
-          if (targetClassResults != null) {
-            for (Stats result : targetClassResults) {
-              if (result.numberOfConditions() != 0) { // Ignore methods with no tags.
-                resultsFile.write(result.asCSV());
-                resultsFile.newLine();
-              }
-            }
-          }
-        } catch (IOException e) {
-          log.error("Unable to read the file: " + configuration.getConditionTranslatorInput(), e);
-        }
-      }
+      createStatistics(jsonOutputs);
 
+      // FIXME Randoop specs do not work for eq currently
       // Export generated specifications as Randoop specifications if requested.
-      generateRandoopSpecs(specifications);
+      // generateRandoopSpecs(specifications);
 
       // === Oracle Generator ===
       // Note that aspect generation is enabled only when translation is enabled.
       if (configuration.isOracleGenerationEnabled()) {
-        try {
-          OracleGenerator.createAspects(specifications);
-        } catch (IOException e) {
-          e.printStackTrace();
-          log.error("Error during aspects creation.", e);
+        if (configuration.mustGenerateCrossOracles()) {
+          try {
+            OracleGenerator.createAspects(eqSpecifications);
+          } catch (IOException e) {
+            e.printStackTrace();
+            log.error("Error during aspects creation.", e);
+          }
+        } else {
+          try {
+            OracleGenerator.createAspects(specifications);
+          } catch (IOException e) {
+            e.printStackTrace();
+            log.error("Error during aspects creation.", e);
+          }
         }
       } else {
         log.info("Oracle generator disabled: aspect generation skipped.");
+      }
+    }
+  }
+
+  private static void createStatistics(List<JsonOutput> translatorJsonOutputs) {
+    File expectedResultFile = configuration.getExpectedOutput();
+    if (expectedResultFile != null) {
+      Type collectionType = new TypeToken<List<JsonOutput>>() {}.getType();
+      try (BufferedReader reader = Files.newBufferedReader(expectedResultFile.toPath());
+          BufferedWriter resultsFile =
+              Files.newBufferedWriter(
+                  configuration.getStatsFile().toPath(),
+                  StandardOpenOption.CREATE,
+                  StandardOpenOption.APPEND)) {
+
+        List<JsonOutput> expectedResultList = GsonInstance.gson().fromJson(reader, collectionType);
+        Map<String, JsonOutput> expectedMap = new HashMap<>();
+        Map<String, JsonOutput> actualMap = new HashMap<>();
+        for (JsonOutput jo : expectedResultList) {
+          expectedMap.put(jo.signature, jo);
+        }
+        for (JsonOutput jo : translatorJsonOutputs) {
+          actualMap.put(jo.signature, jo);
+        }
+
+        List<Stats> targetClassResults = null;
+        if (!translatorJsonOutputs.isEmpty()) {
+          targetClassResults = Stats.getEqStats(actualMap, expectedMap);
+        } else if (!configuration.mustGenerateCrossOracles()) {
+          targetClassResults = Stats.getStats(translatorJsonOutputs, expectedResultList);
+        }
+        if (targetClassResults != null) {
+          for (Stats result : targetClassResults) {
+            if (result.numberOfConditions() != 0) { // Ignore methods with no tags.
+              resultsFile.write(result.asCSV());
+              resultsFile.newLine();
+            }
+          }
+        }
+      } catch (IOException e) {
+        log.error("Unable to read the file: " + configuration.getConditionTranslatorInput(), e);
       }
     }
   }
@@ -276,12 +300,12 @@ public class Toradocu {
         final OperationSpecification spec = specsMap.get(documentedExecutable);
 
         // Get rid of empty specifications.
-        final List<PreSpecification> preSpecifications = spec.getPreSpecifications();
-        preSpecifications.removeIf(s -> s.getGuard().getConditionText().isEmpty());
-        final List<PostSpecification> postSpecifications = spec.getPostSpecifications();
-        postSpecifications.removeIf(s -> s.getGuard().getConditionText().isEmpty());
-        final List<ThrowsSpecification> throwsSpecifications = spec.getThrowsSpecifications();
-        throwsSpecifications.removeIf(s -> s.getGuard().getConditionText().isEmpty());
+        final List<Precondition> preSpecifications = spec.getPreconditions();
+        preSpecifications.removeIf(s -> s.getGuard().getConditionSource().isEmpty());
+        final List<Postcondition> postSpecifications = spec.getPostconditions();
+        postSpecifications.removeIf(s -> s.getGuard().getConditionSource().isEmpty());
+        final List<ThrowsCondition> throwsSpecifications = spec.getThrowsConditions();
+        throwsSpecifications.removeIf(s -> s.getGuard().getConditionSource().isEmpty());
         if (spec.isEmpty()
             || (preSpecifications.isEmpty()
                 && postSpecifications.isEmpty()
@@ -290,53 +314,52 @@ public class Toradocu {
         }
 
         // Convert specifications to Randoop format: args -> actual param name.
-        final List<PreSpecification> randoopPreSpecs =
+        final List<Precondition> randoopPreSpecs =
             convertPreSpecifications(documentedExecutable, preSpecifications);
-        final List<PostSpecification> randoopPostSpecs =
+        final List<Postcondition> randoopPostSpecs =
             convertPostSpecifications(documentedExecutable, postSpecifications);
-        final List<ThrowsSpecification> randoopThrowsSpecs =
+        final List<ThrowsCondition> randoopThrowsSpecs =
             convertThrowsSpecifications(documentedExecutable, throwsSpecifications);
 
         final OperationSpecification newOperationSpec =
             new OperationSpecification(
                 spec.getOperation(),
                 spec.getIdentifiers(),
-                randoopThrowsSpecs,
+                randoopPreSpecs,
                 randoopPostSpecs,
-                randoopPreSpecs);
+                randoopThrowsSpecs);
         randoopSpecs.add(newOperationSpec);
       }
       writeRandoopSpecsFile(randoopSpecsFile, randoopSpecs);
     }
   }
 
-  private static List<PreSpecification> convertPreSpecifications(
-      DocumentedExecutable documentedExecutable, List<PreSpecification> preSpecifications) {
-    List<PreSpecification> newPreSpecifications = new ArrayList<>(preSpecifications.size());
-    for (PreSpecification preSpecification : preSpecifications) {
+  private static List<Precondition> convertPreSpecifications(
+      DocumentedExecutable documentedExecutable, List<Precondition> preSpecifications) {
+    List<Precondition> newPreSpecifications = new ArrayList<>(preSpecifications.size());
+    for (Precondition preSpecification : preSpecifications) {
       final Guard oldGuard = preSpecification.getGuard();
       Guard newGuard =
           new Guard(
               oldGuard.getDescription(),
-              processCondition(oldGuard.getConditionText(), documentedExecutable));
-      PreSpecification newSpec = new PreSpecification(preSpecification.getDescription(), newGuard);
+              processCondition(oldGuard.getConditionSource(), documentedExecutable));
+      Precondition newSpec = new Precondition(preSpecification.getDescription(), newGuard);
       newPreSpecifications.add(newSpec);
     }
     return newPreSpecifications;
   }
 
-  private static List<ThrowsSpecification> convertThrowsSpecifications(
-      DocumentedExecutable documentedExecutable, List<ThrowsSpecification> throwsSpecifications) {
-    List<ThrowsSpecification> newThrowsSpecifications =
-        new ArrayList<>(throwsSpecifications.size());
-    for (ThrowsSpecification throwsSpecification : throwsSpecifications) {
+  private static List<ThrowsCondition> convertThrowsSpecifications(
+      DocumentedExecutable documentedExecutable, List<ThrowsCondition> throwsSpecifications) {
+    List<ThrowsCondition> newThrowsSpecifications = new ArrayList<>(throwsSpecifications.size());
+    for (ThrowsCondition throwsSpecification : throwsSpecifications) {
       final Guard oldGuard = throwsSpecification.getGuard();
       Guard newGuard =
           new Guard(
               oldGuard.getDescription(),
-              processCondition(oldGuard.getConditionText(), documentedExecutable));
-      ThrowsSpecification newSpec =
-          new ThrowsSpecification(
+              processCondition(oldGuard.getConditionSource(), documentedExecutable));
+      ThrowsCondition newSpec =
+          new ThrowsCondition(
               throwsSpecification.getDescription(),
               newGuard,
               throwsSpecification.getExceptionTypeName());
@@ -345,22 +368,21 @@ public class Toradocu {
     return newThrowsSpecifications;
   }
 
-  private static List<PostSpecification> convertPostSpecifications(
-      DocumentedExecutable documentedExecutable, List<PostSpecification> postSpecifications) {
-    List<PostSpecification> newPostSpecifications = new ArrayList<>(postSpecifications.size());
-    for (PostSpecification postSpec : postSpecifications) {
+  private static List<Postcondition> convertPostSpecifications(
+      DocumentedExecutable documentedExecutable, List<Postcondition> postSpecifications) {
+    List<Postcondition> newPostSpecifications = new ArrayList<>(postSpecifications.size());
+    for (Postcondition postSpec : postSpecifications) {
       final Guard oldGuard = postSpec.getGuard();
       Guard newGuard =
           new Guard(
               oldGuard.getDescription(),
-              processCondition(oldGuard.getConditionText(), documentedExecutable));
+              processCondition(oldGuard.getConditionSource(), documentedExecutable));
       final Property oldProperty = postSpec.getProperty();
       Property newProperty =
           new Property(
               oldProperty.getDescription(),
-              processCondition(oldProperty.getConditionText(), documentedExecutable));
-      PostSpecification newSpec =
-          new PostSpecification(postSpec.getDescription(), newGuard, newProperty);
+              processCondition(oldProperty.getConditionSource(), documentedExecutable));
+      Postcondition newSpec = new Postcondition(postSpec.getDescription(), newGuard, newProperty);
       newPostSpecifications.add(newSpec);
     }
     return newPostSpecifications;

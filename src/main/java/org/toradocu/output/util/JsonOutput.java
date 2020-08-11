@@ -33,13 +33,28 @@ public class JsonOutput {
       DocumentedExecutable member, EqOperationSpecification specification) {
     StringBuilder oracle = new StringBuilder();
     int i = 0;
+    boolean moreThanOne = false;
     for (EquivalenceSpec m : specification.getEquivalenceSpecs()) {
-      if (i > 1) {
-        oracle.append(" && ");
+      // We have more than one equivalence spec: add them all in the oracle, they all must hold!
+      if (i > 0) {
+        moreThanOne = true;
+      }
+      boolean closingCurly = false;
+      if (!m.getGuard().getConditionSource().equals("true")) {
+        if (moreThanOne) {
+          oracle.append(" && ");
+          moreThanOne = false;
+        }
+        oracle.append("if(").append(m.getGuard().getConditionSource()).append(")").append("{");
+        closingCurly = true;
       }
       if (!m.getPostAssertion().toString().isEmpty()) {
+        if (moreThanOne) oracle.append(" && ");
         oracle.append(m.getPostAssertion().toString());
         i++;
+        if (closingCurly) {
+          oracle.append("}");
+        }
       }
     }
     this.equivalence =

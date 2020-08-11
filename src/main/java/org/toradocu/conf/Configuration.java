@@ -20,6 +20,8 @@ public enum Configuration {
   /** Keyword that identifies receiver object clone in generated specifications. */
   public static final String RECEIVER_CLONE = "receiverObjectClone";
 
+  public int ALL_SENTENCES = 0;
+
   // General options
 
   @Parameter(
@@ -171,7 +173,8 @@ public enum Configuration {
   private String aspectsOutputDir = "aspects";
 
   /** File used as template for generated aspects. */
-  private static final String ASPECT_TEMPLATE = "AspectTemplate.java";
+  // FIXME only for equivalence
+  private static final String ASPECT_TEMPLATE = "EqAspectTemplate.java";
 
   /** Aspect to instrument JUnit test cases. */
   private static final String JUNIT_TC_ASPECT = "TestCaseAspect.java";
