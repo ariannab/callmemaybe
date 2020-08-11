@@ -115,7 +115,7 @@ public class ComplianceChecks {
       // if the target class is private we cannot apply compliance check.
       return true;
     }
-    // FIXME when receiving in input a condition, it goes as an IF inside the oracle's if.
+    // FIXME when receiving in input a condition, it goes as an IF  inside the oracle's if.
     // FIXME this should be checked also for returns translation
     SourceCodeBuilder sourceCodeBuilder = addCommonInfo(method);
     sourceCodeBuilder.addImport(equivalentMethodMatch.getImportsNeeded());
@@ -125,7 +125,7 @@ public class ComplianceChecks {
     int attempts = 0;
     while (!compilable && attempts < 3) {
       String sourceCode = sourceCodeBuilder.buildSource();
-      log.info("attempting to compile:\n" + sourceCode);
+      //      log.info("attempting to compile:\n" + sourceCode);
       try {
         compileSource(sourceCode);
       } catch (CompilationException e) {
@@ -255,6 +255,29 @@ public class ComplianceChecks {
     return primitives;
   }
 
+  public static String fromPrimitiveToObject(String primitive) {
+    switch (primitive) {
+      case ("int"):
+        return "Integer";
+      case ("boolean"):
+        return "Boolean";
+      case ("char"):
+        return "Character";
+      case ("byte"):
+        return "Byte";
+      case ("short"):
+        return "Short";
+      case ("long"):
+        return "Long";
+      case ("float"):
+        return "Float";
+      case ("double"):
+        return "Double";
+      default:
+        return "";
+    }
+  }
+
   /**
    * Invokes the in-memory compiler on the given source code.
    *
@@ -270,7 +293,7 @@ public class ComplianceChecks {
     }
     compiler.useOptions("-cp", String.join(":", classpath));
     compiler.compile("GeneratedSpecs", sourceCode);
-    System.out.println(sourceCode);
+    //    System.out.println(sourceCode);
   }
 
   /**
@@ -370,6 +393,7 @@ public class ComplianceChecks {
           sourceCodeBuilder.addArgument(
               method.getDeclaringClass().getTypeName(), Configuration.RECEIVER_CLONE);
         }
+        substitutedText = substitutedText + ";";
       } else if (!method.getReturnType().getType().getTypeName().equals("void")) {
         String equality;
         String end = "";
@@ -407,13 +431,19 @@ public class ComplianceChecks {
       if (!substitutedText.contains("\n")) {
         substitutedText = premises + "assert(" + substitutedText + ")" + ";" + conclusion;
       } else {
+        String lastStatement = substitutedText.substring(substitutedText.lastIndexOf("\n") + 1);
+        String assertion = "assert(" + lastStatement + ")" + ";";
+        substitutedText =
+            substitutedText.substring(0, substitutedText.lastIndexOf("\n")) + assertion;
         substitutedText = premises + substitutedText + conclusion;
       }
       substitutedText = substituteArgs(sourceCodeBuilder, method, substitutedText);
     } else if (!oracle.contains("\n")) {
-      // FIXME Oracle on more than one statement means comparison between object states. Though I
-      // don't like this
       substitutedText = "assert(" + substitutedText + ")" + ";";
+    } else {
+      String lastStatement = substitutedText.substring(substitutedText.lastIndexOf("\n") + 1);
+      String assertion = "assert(" + lastStatement + ")" + ";";
+      substitutedText = substitutedText.substring(0, substitutedText.lastIndexOf("\n")) + assertion;
     }
     sourceCodeBuilder.addCondition(substitutedText);
     importClassesInInstanceOf(method, sourceCodeBuilder, substitutedText);

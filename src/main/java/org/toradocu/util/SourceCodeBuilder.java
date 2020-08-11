@@ -67,15 +67,17 @@ public class SourceCodeBuilder {
     }
     fakeSource.append(CLASS_DECLARATION);
     fakeSource.append(BLANK);
+    fakeSource.append("{");
+    fakeSource.append("\n");
+    fakeSource.append("public ");
+
     if (!classTypeParameters.isEmpty()) {
       fakeSource.append("<");
       fakeSource.append(String.join(",", classTypeParameters));
       fakeSource.append("> ");
     }
-    fakeSource.append("{");
-    fakeSource.append("\n");
-    fakeSource.append("public ");
-    if (!methodTypeParameters.isEmpty()) {
+
+    if (!methodTypeParameters.isEmpty() && !methodTypeParameters.equals(classTypeParameters)) {
       fakeSource.append("<");
       fakeSource.append(String.join(",", methodTypeParameters));
       fakeSource.append("> ");

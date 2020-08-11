@@ -3,6 +3,7 @@ package org.toradocu.util;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import org.toradocu.Toradocu;
 import org.toradocu.extractor.JavadocComment;
 import org.toradocu.output.util.EquivalenceOutput;
@@ -393,7 +394,7 @@ public class Stats {
    *     not of the same size
    */
   public static List<Stats> getEqStats(
-      List<JsonOutput> actualMethodList, List<JsonOutput> expectedMethodList) {
+      Map<String, JsonOutput> actualMethodList, Map<String, JsonOutput> expectedMethodList) {
 
     if (actualMethodList.size() != expectedMethodList.size()) {
       throw new IllegalArgumentException(
@@ -401,9 +402,11 @@ public class Stats {
     }
 
     List<Stats> stats = new ArrayList<>();
-    for (int methodIndex = 0; methodIndex < expectedMethodList.size(); methodIndex++) {
-      JsonOutput actualMethod = actualMethodList.get(methodIndex);
-      JsonOutput expectedMethod = expectedMethodList.get(methodIndex);
+    // for (int methodIndex = 0; methodIndex < expectedMethodList.size(); methodIndex++) {
+    for (String signature : actualMethodList.keySet()) {
+
+      JsonOutput actualMethod = actualMethodList.get(signature);
+      JsonOutput expectedMethod = expectedMethodList.get(signature);
 
       Stats methodStats =
           new Stats(actualMethod.containingClass.getQualifiedName() + "." + actualMethod.signature);
