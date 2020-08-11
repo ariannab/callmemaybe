@@ -172,7 +172,7 @@ public final class CommentContent {
             } else if (anyTernaryOperator(codeSubsets[i])) {
               CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, true, false);
               this.commentSnippets.add(snippet);
-            } else if (codeSubsets[i].contains("new")) {
+            } else if (codeSubsets[i].contains("new ")) {
               CodeSnippet snippet = new CodeSnippet(codeSubsets[i], false, false, true);
               this.commentSnippets.add(snippet);
             } else if (methodMatcher.find() && methodMatcher.group(5).contains(".")) {

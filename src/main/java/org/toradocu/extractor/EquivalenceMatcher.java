@@ -1,5 +1,7 @@
 package org.toradocu.extractor;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,8 +14,8 @@ import java.util.regex.Pattern;
 public class EquivalenceMatcher {
 
   /**
-   * This method answers to the question "does the comment express an equivalence?". Basically a man
-   * in the middle
+   * This method answers to the question "does the comment express an equivalence?". Entry point of
+   * free-text CLASSIFICATION.
    *
    * @param comment comment to parse
    * @param codeSnippet
@@ -50,6 +52,71 @@ public class EquivalenceMatcher {
               KeywordsSet.Category.SIMILARITY);
       methodMatch = classifyEquivalenceComment(comment, codeSnippet, similarityKw);
       if (methodMatch != null) {
+        FileWriter writer;
+        try {
+          writer = new FileWriter("classifier-matches.csv", true);
+          writer.append(comment);
+          writer.append(";");
+          writer.append("\n");
+          writer.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        return methodMatch;
+      }
+    }
+    return new EquivalentMatch(new HashMap<>(), false, false, new HashMap<>(), false);
+  }
+
+  /**
+   * This method answers to the question "does the comment express an equivalence?". Entry point of
+   * free-text CLASSIFICATION.
+   *
+   * @param comment comment to parse
+   * @param codeSnippet
+   * @return the signature of the (supposedly) equivalent method
+   */
+  public static EquivalentMatch findEquivalencesInComment(String comment, CodeSnippet codeSnippet) {
+    // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
+    // TODO consider also: behaves (as?), like, SYNONYM
+    KeywordsSet equivalenceKw =
+        new KeywordsSet(
+            Arrays.asList(
+                "equivalent",
+                "similar",
+                "analog",
+                "like",
+                "identical",
+                "behaves exactly",
+                "behaves identically",
+                "equal to",
+                "same"
+                // "same as",
+                // "same value",
+                ),
+            KeywordsSet.Category.EQUIVALENCE);
+    EquivalentMatch methodMatch = classifyEquivalenceComment(comment, codeSnippet, equivalenceKw);
+    if (methodMatch != null) {
+      return methodMatch;
+    } else {
+      // TODO add "instead of" (comments like "this method should be used instead of the other
+      // TODO method"
+      KeywordsSet similarityKw =
+          new KeywordsSet(
+              Arrays.asList("prefer", "alternative", "replacement for"),
+              KeywordsSet.Category.SIMILARITY);
+      methodMatch = classifyEquivalenceComment(comment, codeSnippet, similarityKw);
+      if (methodMatch != null) {
+        FileWriter writer;
+        try {
+          writer = new FileWriter("classifier-matches.csv", true);
+          writer.append(comment);
+          writer.append(";");
+          writer.append("\n");
+          writer.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
         return methodMatch;
       }
     }
