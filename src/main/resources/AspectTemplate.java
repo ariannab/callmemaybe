@@ -60,7 +60,7 @@ public class Aspect_Template {
 
   private boolean equivalenceHolds(Object result, Object target, Object clonedTarget, Object[] args) {}
 
-  private void snippetWrapper(Object clonedTarget) {}
+  private void snippetWrapper(Object clonedTarget, Object[] args) {}
 
   private List<Class<?>> getExpectedExceptions(Object target, Object[] args) {
     List<Class<?>> expectedExceptions = new ArrayList<Class<?>>();
