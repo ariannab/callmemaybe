@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.toradocu.Toradocu;
 import org.toradocu.extractor.JavadocComment;
 import org.toradocu.util.Stats;
 
@@ -67,6 +68,10 @@ public abstract class AbstractPrecisionRecallTestSuite {
   /** Prints the results (i.e. statistics) of the test suite. */
   @AfterClass
   public static void tearDown() {
+
+    System.out.println(
+        "Classifier classified: " + Toradocu.configuration.ALL_SENTENCES + " sentences");
+
     System.out.println(
         "=== Test Suite ==="
             + "\nNumber of conditions: "

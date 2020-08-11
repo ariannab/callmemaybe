@@ -117,14 +117,18 @@ class PrecisionRecallTest {
 
     final String oracleGeneration = System.getProperty("org.toradocu.generator");
     // Disable oracle generation unless the specific system property is set.
-    if (oracleGeneration != null && oracleGeneration.equals("true")) {
-      argsList.add("--aspects-output-dir");
-      argsList.add("aspects" + File.separator + targetClass);
-    } else {
-      argsList.add("--oracle-generation");
-      argsList.add("false");
-    }
+    //    if (oracleGeneration != null && oracleGeneration.equals("true")) {
+    //      argsList.add("--aspects-output-dir");
+    //      argsList.add("aspects" + File.separator + targetClass);
+    //    } else {
+    //      argsList.add("--oracle-generation");
+    //      argsList.add("false");
+    //    }
 
+    argsList.add("--aspects-output-dir");
+    argsList.add("aspects" + File.separator + targetClass);
+    argsList.add("--oracle-generation");
+    argsList.add("true");
     argsList.add("--cross-oracles");
     argsList.add("true");
     argsList.add("--disable-semantics");

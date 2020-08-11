@@ -7,9 +7,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.fail;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -83,8 +81,7 @@ public class JavadocExtractorOnEnumTest {
     assertThat(member.getDeclaringClass().getName(), is("example.AnEnum"));
   }
 
-  private static DocumentedType runJavadocExtractor()
-      throws ClassNotFoundException, FileNotFoundException, MalformedURLException {
+  private static DocumentedType runJavadocExtractor() throws ClassNotFoundException, IOException {
     final URL url = Paths.get(EXAMPLE_SRC).toUri().toURL();
     Configuration.INSTANCE.classDirs = Collections.singletonList(url);
     final JavadocExtractor javadocExtractor = new JavadocExtractor();
