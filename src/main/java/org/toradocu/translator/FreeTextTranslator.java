@@ -1,6 +1,8 @@
 package org.toradocu.translator;
 
 import com.github.javaparser.ast.ImportDeclaration;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Executable;
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.toradocu.Toradocu;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CodeSnippet;
 import org.toradocu.extractor.CommentContent;
@@ -45,14 +48,17 @@ public class FreeTextTranslator {
 
     // FIXME IF != SENTENCES HAVE != EQUIVALENCES WHAT HAPPENS HERE???
     for (String sentence : sentences) {
+      Toradocu.configuration.ALL_SENTENCES = Toradocu.configuration.ALL_SENTENCES + 1;
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
         // Verify if there is a snippet in the sentence...
         CodeSnippet sentenceSnippet = determineSnippet(commentContent, sentence);
-        // Verify sentence contains an equivalence declaration...
+        // Classifier entry point: Verify sentence contains an equivalence declaration...
         equivalenceMatch = EquivalenceMatcher.findEquivalencesInComment(sentence, sentenceSnippet);
 
         if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
+          //          Toradocu.configuration.ALL_SENTENCES = Toradocu.configuration.ALL_SENTENCES +
+          // 1;
           String translatedCondition = "";
           String condition = extractCondition(sentence);
           if (equivalenceMatch.isSimilarity()
@@ -85,6 +91,16 @@ public class FreeTextTranslator {
             matchEquivalentMethod(excMember, equivalenceMatch, translatedCondition, documentedType);
           }
           matches.add(equivalenceMatch);
+        } else {
+          FileWriter writer;
+          try {
+            writer = new FileWriter("classifier-discarded.txt", true);
+            writer.append(sentence);
+            writer.append("\n");
+            writer.close();
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
         }
       }
     }
@@ -247,97 +263,106 @@ public class FreeTextTranslator {
           return;
         }
         receiver = "args[" + receiverIndex + "]";
+        // FIXME you may find no candidate here because you should check in the receiver's code
+        // elements
+        // FIXME via JavaElementsCollector#allMethodsOf. You first need to infer the receiver's
+        // FIXME class (hint - it's a parameter of the documented method)
         codeElements = extractMethodCodeElements(excMember, receiver);
       }
       Set<CodeElement<?>> matchingCodeElem =
           matcher.subjectMatch(methodNameForSubjectMatch, codeElements);
 
       String className = "";
-      if (previousReturnType != null) {
-        try {
-          className = previousReturnType.getType().getTypeName();
-          matchedType = Reflection.getClass(className);
-        } catch (ClassNotFoundException e) {
-          // Intentionally empty: Apply other heuristics to load the exception type.
+      if (matchingCodeElem.isEmpty()) {
+        if (previousReturnType != null) {
+          try {
+            className = previousReturnType.getType().getTypeName();
+            matchedType = Reflection.getClass(className);
+          } catch (ClassNotFoundException e) {
+            // Intentionally empty: Apply other heuristics to load the exception type.
+          }
+          if (matchedType != null) {
+            matchingCodeElem =
+                extractMatchingCodeElementFromType(
+                    excMember, matchedType, simpleMethodName, className);
+          }
+        } else if (!equivalenceMatch.getClassesInSignatures().get(methodSignature).isEmpty()) {
+          // FIXME it is not necessarily true that we need an external class here.
+          String externalClass = equivalenceMatch.getClassesInSignatures().get(methodSignature);
+
+          String[] javaPackages = {"java.lang.", "java.util."};
+          for (String p : javaPackages) {
+            try {
+              className = p + externalClass;
+              matchedType = Reflection.getClass(className);
+            } catch (ClassNotFoundException e) {
+            }
+            if (matchedType != null) {
+              equivalenceMatch.setImportsNeeded(className);
+            }
+          }
         }
+        if (matchedType == null
+            && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
+          List<String> links = excMember.getLinksContent();
+          String[] javaPackages = {"java.lang.", "java.util."};
+          for (String link : links) {
+            if (matchedType != null) {
+              break;
+            }
+            if (link.contains("#")) {
+              link = link.substring(0, link.indexOf("#"));
+            }
+            if (!link.isEmpty()) {
+              if (!link.contains(".")) {
+                for (String javaP : javaPackages) {
+                  String newlink = javaP + link;
+                  try {
+                    matchedType = Reflection.getClass(newlink);
+                  } catch (ClassNotFoundException e) {
+                  }
+                  if (matchedType != null) {
+                    link = newlink;
+                    break;
+                  }
+                }
+              } else {
+                try {
+                  matchedType = Reflection.getClass(link);
+                } catch (ClassNotFoundException e) {
+                }
+              }
+              if (matchedType != null) {
+                className = link;
+                // FIXME this will prevent to iterate the other links, and the current one might not
+                // be the right one
+                break;
+              } else {
+                for (int j = 0; j < documentedType.getImports().size(); j++) {
+                  ImportDeclaration anImport = documentedType.getImports().get(j);
+                  String importedClass = anImport.getNameAsString().replace("import", "").trim();
+                  if (importedClass.endsWith(link)) {
+                    try {
+                      matchedType = Reflection.getClass(importedClass);
+                    } catch (ClassNotFoundException e) {
+                    }
+                    if (matchedType != null) {
+                      className = importedClass;
+                      equivalenceMatch.setImportsNeeded(className);
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
         if (matchedType != null) {
           matchingCodeElem =
               extractMatchingCodeElementFromType(
                   excMember, matchedType, simpleMethodName, className);
         }
-      } else if (!equivalenceMatch.getClassesInSignatures().get(methodSignature).isEmpty()) {
-        String externalClass = equivalenceMatch.getClassesInSignatures().get(methodSignature);
-
-        String[] javaPackages = {"java.lang.", "java.util."};
-        for (String p : javaPackages) {
-          try {
-            className = p + externalClass;
-            matchedType = Reflection.getClass(className);
-          } catch (ClassNotFoundException e) {
-          }
-          if (matchedType != null) {
-            equivalenceMatch.setImportsNeeded(className);
-          }
-        }
-      }
-      if (matchedType == null
-          && (!excMember.getLinksContent().isEmpty() || !documentedType.getImports().isEmpty())) {
-        List<String> links = excMember.getLinksContent();
-        String[] javaPackages = {"java.lang.", "java.util."};
-        for (String link : links) {
-          if (matchedType != null) {
-            break;
-          }
-          if (link.contains("#")) {
-            link = link.substring(0, link.indexOf("#"));
-          }
-          if (!link.isEmpty()) {
-            if (!link.contains(".")) {
-              for (String javaP : javaPackages) {
-                String newlink = javaP + link;
-                try {
-                  matchedType = Reflection.getClass(newlink);
-                } catch (ClassNotFoundException e) {
-                }
-                if (matchedType != null) {
-                  link = newlink;
-                  break;
-                }
-              }
-            } else {
-              try {
-                matchedType = Reflection.getClass(link);
-              } catch (ClassNotFoundException e) {
-              }
-            }
-            if (matchedType != null) {
-              className = link;
-              // FIXME this will prevent to iterate the other links, and the current one might not
-              // be the right one
-              break;
-            } else {
-              for (int j = 0; j < documentedType.getImports().size(); j++) {
-                ImportDeclaration anImport = documentedType.getImports().get(j);
-                String importedClass = anImport.getNameAsString().replace("import", "").trim();
-                if (importedClass.endsWith(link)) {
-                  try {
-                    matchedType = Reflection.getClass(importedClass);
-                  } catch (ClassNotFoundException e) {
-                  }
-                  if (matchedType != null) {
-                    className = importedClass;
-                    equivalenceMatch.setImportsNeeded(className);
-                    break;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      if (matchedType != null) {
-        matchingCodeElem =
-            extractMatchingCodeElementFromType(excMember, matchedType, simpleMethodName, className);
       }
 
       if (matchingCodeElem != null && !matchingCodeElem.isEmpty()) {
@@ -643,6 +668,7 @@ public class FreeTextTranslator {
         ComplianceChecks.primitiveTypes().contains(otherReturnType)
             && ComplianceChecks.primitiveTypes().contains(execMemberReturnType);
     if (execMemberReturnType.equals("void")
+        || otherReturnType.equals("void")
         || (primitives && !execMemberReturnType.equals(otherReturnType))) {
       oracle = manageVoidAndUncompatibleMethods(excMember, previousOracle);
     } else if (ComplianceChecks.primitiveTypes()
@@ -695,7 +721,11 @@ public class FreeTextTranslator {
     String oracle;
     String separator1;
     String separator2;
-    if (codeSnippet.isExpression() || codeSnippet.isComplexSignature() || codeSnippet.isTernary()) {
+    if (codeSnippet.isExpression()
+        || codeSnippet.isTernary()
+        || (codeSnippet.isComplexSignature()
+            && !codeSnippet.getSnippet().contains(Configuration.RECEIVER_CLONE))) {
+      // FIXME not necessarily correct, might be uncompatible types.
       String previousOracle = codeSnippet.getSnippet();
       separator1 = "(";
       separator2 = ")";
@@ -706,6 +736,7 @@ public class FreeTextTranslator {
       //    }
       if (ComplianceChecks.primitiveTypes()
           .contains(excMember.getReturnType().getType().getTypeName())) {
+        // FIXME this does not look effective.s
         oracle =
             Configuration.RETURN_VALUE
                 + "=="
@@ -733,6 +764,11 @@ public class FreeTextTranslator {
       String declaration = previousOracle.substring(0, previousOracle.indexOf("{") + 1);
 
       String snippet = em.getCodeSnippet().getSnippet();
+
+      if (!snippet.endsWith("{") && !snippet.endsWith("}") && !snippet.endsWith(";")) {
+        // FIXME WHY DOES THIS HAPPEN, FIND ROOT CAUSE
+        snippet += ";";
+      }
 
       previousOracle = declaration + "\n" + snippet + "\n" + "}";
 

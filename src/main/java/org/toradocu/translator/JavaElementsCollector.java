@@ -9,7 +9,14 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Parameter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 import org.jetbrains.annotations.NotNull;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.CommentContent;
@@ -61,6 +68,13 @@ public class JavaElementsCollector {
     return codeElements;
   }
 
+  // All methods of a class.
+  private static List<CodeElement<?>> allMethodsOf(Class<?> containingClass, String receiver) {
+    final List<Executable> methods = collectAllRawMethods(containingClass);
+    List<CodeElement<?>> codeElements = getCodeElementsFromRawMethods(methods, receiver);
+    return codeElements;
+  }
+
   @NotNull
   public static List<CodeElement<?>> getCodeElementsFromRawMethods(
       List<Executable> methods, String receiver) {
@@ -80,6 +94,7 @@ public class JavaElementsCollector {
     return codeElements;
   }
 
+  // Exclude docExecutable.
   @NotNull
   public static List<Executable> collectRawMethods(
       Class<?> containingClass, DocumentedExecutable documentedExecutable) {
@@ -91,6 +106,14 @@ public class JavaElementsCollector {
       Method method = (Method) executable;
       methods.remove(method);
     }
+    return methods;
+  }
+
+  // All raw methods in one class.
+  public static List<Executable> collectAllRawMethods(Class<?> containingClass) {
+    final List<Executable> methods = new ArrayList<>();
+    Collections.addAll(methods, containingClass.getMethods());
+    Collections.addAll(methods, containingClass.getConstructors());
     return methods;
   }
 

@@ -584,6 +584,9 @@ class Matcher {
         // Filled sequence refers to the sequence of parameters of the eq. method to be matched,
         // thus is a placeholder to tell at what point are we in completing the match String
         for (int index : rightIndexes) {
+          if (filledSequence >= currentMatchParamTypes.length) {
+            break;
+          }
           boolean filled = false;
           String currentMatchParam = currentMatchParamTypes[filledSequence];
           if (index != -1
