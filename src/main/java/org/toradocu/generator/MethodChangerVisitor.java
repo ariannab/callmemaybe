@@ -1,6 +1,7 @@
 package org.toradocu.generator;
 
 import com.github.javaparser.JavaParser;
+import com.github.javaparser.ParseProblemException;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -21,6 +22,8 @@ import com.github.javaparser.ast.stmt.Statement;
 import com.github.javaparser.ast.stmt.TryStmt;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.visitor.ModifierVisitor;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -33,7 +36,6 @@ import org.toradocu.Toradocu;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
-import org.toradocu.translator.spec.EqOperationSpecification;
 import org.toradocu.translator.spec.EquivalenceSpec;
 import org.toradocu.translator.spec.PostAssertion;
 import org.toradocu.util.Checks;
@@ -43,15 +45,69 @@ import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Precondition;
 import randoop.condition.specification.ThrowsCondition;
 
+// FIXME CURRENTLY DESIGNED TO WORK ON EQ-ONLY
+
 /**
  * Visitor that modifies the aspect template (see method {@code visit}) to generate an aspect
  * (oracle) for a {@code ExecutableMember}.
  */
 public class MethodChangerVisitor
-    extends ModifierVisitor<Pair<DocumentedExecutable, ? extends OperationSpecification>> {
+    extends ModifierVisitor<Pair<DocumentedExecutable, EquivalenceSpec>> {
 
   /** Holds Toradocu configuration options. */
   private final Configuration conf = Toradocu.configuration;
+
+  //  /**
+  //   * Modifies the methods {@code advice} and {@code getExpectedExceptions}, {@code
+  //   * paramTagsSatisfied}, {@code checkResult} of the aspect template, injecting the appropriate
+  //   * source code to get an aspect (oracle) for the method arg.
+  //   *
+  //   * @param methodDeclaration the method declaration of the method to visit
+  //   * @param spec the {@code ExecutableMember} for which to generate the aspect (oracle)
+  //   * @return the {@code methodDeclaration} modified as and when needed
+  //   * @throws NullPointerException if {@code methodDeclaration} or {@code executableMember} is
+  // null
+  //   */
+  //  @Override
+  //  public Node visit(
+  //      MethodDeclaration methodDeclaration,
+  //      Pair<DocumentedExecutable, ? extends OperationSpecification> spec) {
+  //    Checks.nonNullParameter(methodDeclaration, "methodDeclaration");
+  //    Checks.nonNullParameter(spec, "spec");
+  //
+  //    DocumentedExecutable documentedExecutable = spec.getKey();
+  //    OperationSpecification operationSpec = spec.getValue();
+  //
+  //    switch (methodDeclaration.getName().asString()) {
+  //      case "advice":
+  //        adviceChanger(methodDeclaration, documentedExecutable);
+  //        break;
+  //      case "getExpectedExceptions":
+  //        getExpectedExceptionChanger(methodDeclaration, documentedExecutable, operationSpec);
+  //        break;
+  //      case "paramTagsSatisfied":
+  //        paramTagSatisfiedChanger(methodDeclaration, documentedExecutable, operationSpec);
+  //        break;
+  //      case "checkResult":
+  //        checkResultChanger(methodDeclaration, documentedExecutable, operationSpec);
+  //        break;
+  //      case "equivalenceHolds":
+  //        if (operationSpec instanceof EqOperationSpecification) {
+  //          equivalenceHoldsChanger(
+  //              methodDeclaration, documentedExecutable, (EqOperationSpecification)
+  // operationSpec);
+  //        }
+  //        break;
+  //      case "snippetWrapper":
+  //        if (operationSpec instanceof EqOperationSpecification) {
+  //          snippetWrapperChanger(
+  //              methodDeclaration, documentedExecutable, (EqOperationSpecification)
+  // operationSpec);
+  //        }
+  //        break;
+  //    }
+  //    return methodDeclaration;
+  //  }
 
   /**
    * Modifies the methods {@code advice} and {@code getExpectedExceptions}, {@code
@@ -65,38 +121,26 @@ public class MethodChangerVisitor
    */
   @Override
   public Node visit(
-      MethodDeclaration methodDeclaration,
-      Pair<DocumentedExecutable, ? extends OperationSpecification> spec) {
+      MethodDeclaration methodDeclaration, Pair<DocumentedExecutable, EquivalenceSpec> spec) {
     Checks.nonNullParameter(methodDeclaration, "methodDeclaration");
     Checks.nonNullParameter(spec, "spec");
 
     DocumentedExecutable documentedExecutable = spec.getKey();
-    OperationSpecification operationSpec = spec.getValue();
+    EquivalenceSpec operationSpec = spec.getValue();
 
     switch (methodDeclaration.getName().asString()) {
       case "advice":
-        adviceChanger(methodDeclaration, documentedExecutable);
-        break;
-      case "getExpectedExceptions":
-        getExpectedExceptionChanger(methodDeclaration, documentedExecutable, operationSpec);
-        break;
-      case "paramTagsSatisfied":
-        paramTagSatisfiedChanger(methodDeclaration, documentedExecutable, operationSpec);
-        break;
-      case "checkResult":
-        checkResultChanger(methodDeclaration, documentedExecutable, operationSpec);
+        try {
+          adviceChanger(methodDeclaration, documentedExecutable);
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
         break;
       case "equivalenceHolds":
-        if (operationSpec instanceof EqOperationSpecification) {
-          equivalenceHoldsChanger(
-              methodDeclaration, documentedExecutable, (EqOperationSpecification) operationSpec);
-        }
+        equivalenceHoldsChanger(methodDeclaration, documentedExecutable, operationSpec);
         break;
       case "snippetWrapper":
-        if (operationSpec instanceof EqOperationSpecification) {
-          snippetWrapperChanger(
-              methodDeclaration, documentedExecutable, (EqOperationSpecification) operationSpec);
-        }
+        snippetWrapperChanger(methodDeclaration, documentedExecutable, operationSpec);
         break;
     }
     return methodDeclaration;
@@ -105,7 +149,7 @@ public class MethodChangerVisitor
   private void equivalenceHoldsChanger(
       MethodDeclaration methodDeclaration,
       DocumentedExecutable executableMember,
-      EqOperationSpecification spec) {
+      EquivalenceSpec eqSpec) {
     // Replace first parameter name ("result") with specific name from configuration.
     methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RETURN_VALUE));
     // Replace second parameter name ("target") with specific name from configuration.
@@ -114,27 +158,91 @@ public class MethodChangerVisitor
     methodDeclaration.getParameter(2).setName(new SimpleName(Configuration.RECEIVER_CLONE));
     // Check equivalences.
 
-    for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
-      String guard = addCasting(eqSpec.getGuard().getConditionSource(), executableMember, false);
-      PostAssertion postAssertion = eqSpec.getPostAssertion();
-      String property = addCasting(postAssertion.getAssertionContent(), executableMember, false);
-      if (property.isEmpty()) {
-        // TODO why does this happen and how can we avoid it
-        continue;
-      }
+    //    for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
+    String guard = addCasting(eqSpec.getGuard().getConditionSource(), executableMember, false);
+    PostAssertion postAssertion = eqSpec.getPostAssertion();
+    String property = addCasting(postAssertion.getAssertionContent(), executableMember, false);
+    if (property.isEmpty()) {
+      // TODO why does this happen and how can we avoid it
+      return;
+    }
 
-      ReturnStmt returnResultStmt = new ReturnStmt(new NameExpr("false"));
+    ReturnStmt returnResultStmt = new ReturnStmt(new NameExpr("false"));
 
-      String check = createBlock("if ((" + property + ")==false) { " + returnResultStmt + " }");
+    String checkThenBlock = "if ((" + property + ")==false) { " + returnResultStmt + " }";
 
-      IfStmt ifStmt = createIfStmt(guard, eqSpec.getDescription(), check);
-      if (!postAssertion.getBody().isEmpty()) {
-        LinkedList<String> statements = postAssertion.getBodyContent();
+    String thenBlock = "";
+    if (!postAssertion.getPreceedingStatements().isEmpty()) {
+      LinkedList<String> statements = postAssertion.getBodyContent();
 
-        // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
-        List<String> restOfStatements =
+      List<String> restOfStatements;
+      // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
+      if (statements.indexOf("//END OF METHOD") != -1) {
+        restOfStatements =
             statements.subList(statements.indexOf("//END OF METHOD") + 1, statements.size());
-        for (String stm : restOfStatements) {
+      } else {
+        restOfStatements = statements;
+      }
+      for (String stm : restOfStatements) {
+        Statement parse = JavaParser.parseStatement(addCasting(stm, executableMember, true));
+        thenBlock += parse.toString();
+      }
+    }
+
+    IfStmt ifStmt =
+        createIfStmt(
+            guard, eqSpec.getDescription(), createBlock(thenBlock + "\n" + checkThenBlock));
+
+    methodDeclaration.getBody().ifPresent(body -> body.addStatement(ifStmt));
+    //  }
+
+    ReturnStmt finalRetStm = new ReturnStmt(new NameExpr("true"));
+    methodDeclaration.getBody().ifPresent(body -> body.addStatement(finalRetStm));
+  }
+
+  private void snippetWrapperChanger(
+      MethodDeclaration methodDeclaration,
+      DocumentedExecutable executableMember,
+      EquivalenceSpec eqSpec) {
+
+    // Replace first parameter name ("target") with specific name from configuration.
+    methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RECEIVER_CLONE));
+
+    // Check postconditions.
+    //   for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
+    PostAssertion postAssertion = eqSpec.getPostAssertion();
+    if (!postAssertion.getPreceedingStatements().isEmpty()) {
+      //        LinkedList<String> statements = postAssertion.getBodyContent();
+
+      // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
+      //        if (statements.indexOf("//END OF METHOD") == -1) {
+      //          return;
+      //        }
+
+      // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
+      //        List<String> dummyMethod = statements.subList(1, statements.indexOf("//END OF
+      // METHOD") - 1);
+
+      LinkedList<String> dummyMethod = postAssertion.getSnippetWrapper().getStatements();
+      if (!dummyMethod.isEmpty()) {
+        String dummyMethodDeclaration = dummyMethod.pop();
+        // TODO could be managed better
+        if (dummyMethodDeclaration.contains("public <")) {
+          String parametrization =
+              dummyMethodDeclaration.substring(
+                  dummyMethodDeclaration.indexOf("<") + 1, dummyMethodDeclaration.indexOf(">"));
+          String[] allTypeParam = parametrization.split(",");
+          for (String p : allTypeParam) {
+            methodDeclaration.addTypeParameter(p);
+          }
+        }
+
+        // TODO could be managed better
+        if (dummyMethod.getLast().equals("}")) {
+          dummyMethod.removeLast();
+        }
+
+        for (String stm : dummyMethod) {
           methodDeclaration
               .getBody()
               .ifPresent(
@@ -143,66 +251,8 @@ public class MethodChangerVisitor
                           JavaParser.parseStatement(addCasting(stm, executableMember, true))));
         }
       }
-      methodDeclaration.getBody().ifPresent(body -> body.addStatement(ifStmt));
     }
-
-    ReturnStmt returnResultStmt = new ReturnStmt(new NameExpr("true"));
-    methodDeclaration.getBody().ifPresent(body -> body.addStatement(returnResultStmt));
-  }
-
-  private void snippetWrapperChanger(
-      MethodDeclaration methodDeclaration,
-      DocumentedExecutable executableMember,
-      EqOperationSpecification spec) {
-
-    // Replace first parameter name ("target") with specific name from configuration.
-    methodDeclaration.getParameter(0).setName(new SimpleName(Configuration.RECEIVER_CLONE));
-
-    // Check postconditions.
-    for (EquivalenceSpec eqSpec : spec.getEquivalenceSpecs()) {
-      PostAssertion postAssertion = eqSpec.getPostAssertion();
-      if (!postAssertion.getBody().isEmpty()) {
-        //        LinkedList<String> statements = postAssertion.getBodyContent();
-
-        // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
-        //        if (statements.indexOf("//END OF METHOD") == -1) {
-        //          return;
-        //        }
-
-        // FIXME manage the snippet smartly, PostAssertion should have the dummyMethod filled.
-        //        List<String> dummyMethod = statements.subList(1, statements.indexOf("//END OF
-        // METHOD") - 1);
-
-        LinkedList<String> dummyMethod = postAssertion.getDummyMethod().getStatements();
-        if (!dummyMethod.isEmpty()) {
-          String dummyMethodDeclaration = dummyMethod.pop();
-          // TODO could be managed better
-          if (dummyMethodDeclaration.contains("public <")) {
-            String parametrization =
-                dummyMethodDeclaration.substring(
-                    dummyMethodDeclaration.indexOf("<") + 1, dummyMethodDeclaration.indexOf(">"));
-            String[] allTypeParam = parametrization.split(",");
-            for (String p : allTypeParam) {
-              methodDeclaration.addTypeParameter(p);
-            }
-          }
-
-          // TODO could be managed better
-          if (dummyMethod.getLast().equals("}")) {
-            dummyMethod.removeLast();
-          }
-
-          for (String stm : dummyMethod) {
-            methodDeclaration
-                .getBody()
-                .ifPresent(
-                    body ->
-                        body.addStatement(
-                            JavaParser.parseStatement(addCasting(stm, executableMember, true))));
-          }
-        }
-      }
-    }
+    //    }
 
     //    String signature = dummyMethod.get(0);
     //    String parameterList = signature.substring(signature.indexOf("("),
@@ -333,7 +383,8 @@ public class MethodChangerVisitor
   }
 
   private void adviceChanger(
-      MethodDeclaration methodDeclaration, DocumentedExecutable executableMember) {
+      MethodDeclaration methodDeclaration, DocumentedExecutable executableMember)
+      throws IOException {
     StringBuilder pointcut = new StringBuilder();
     if (executableMember.isConstructor()) {
       pointcut.append(
@@ -358,6 +409,18 @@ public class MethodChangerVisitor
             .append(getPointcut(executableMember, st.getName()))
             .append(")");
       }
+      // TODO print csv for subclasses
+      FileWriter csvInterfaces = new FileWriter("interfaces.csv", true);
+      csvInterfaces.append(executableMember.getDeclaringClass().getName());
+      for (Class st : subTypes) {
+        if (!st.getName().contains("$")) {
+          csvInterfaces.append(";");
+          csvInterfaces.append(st.getName());
+        }
+      }
+      csvInterfaces.append("\n");
+      csvInterfaces.close();
+
       String testClassName = conf.getTestClass();
       if (testClassName != null) {
         pointcut.append(" && within(").append(testClassName).append(")");
@@ -386,7 +449,11 @@ public class MethodChangerVisitor
     Expression conditionExpression;
     conditionExpression = JavaParser.parseExpression(condition);
     ifStmt.setCondition(conditionExpression);
-    ifStmt.setThenStmt(JavaParser.parseBlock(thenBlock));
+    try {
+      ifStmt.setThenStmt(JavaParser.parseBlock(thenBlock));
+    } catch (ParseProblemException e) {
+      System.err.println(e.getMessage());
+    }
     if (!elseBlock.isEmpty()) {
       ifStmt.setElseStmt(JavaParser.parseBlock(elseBlock));
     }
@@ -447,7 +514,9 @@ public class MethodChangerVisitor
     for (DocumentedParameter parameter : method.getParameters()) {
       String type = parameter.getType().getTypeName();
       type = removeParametersFromType(type);
-      if (inSnippet && parameter.toString().contains(">")) {
+      if (ComplianceChecks.primitiveTypes().contains(type)) {
+        type = ComplianceChecks.fromPrimitiveToObject(type);
+      } else if (inSnippet && parameter.toString().contains(">")) {
         // TODO could be managed better
         type = parameter.toString().substring(0, parameter.toString().indexOf(">") + 1);
       }
@@ -457,11 +526,13 @@ public class MethodChangerVisitor
 
     // Casting of result object in condition.
     String returnType = method.getReturnType().getType().getTypeName();
+    returnType = removeParametersFromType(returnType);
     if (ComplianceChecks.isGenericType(returnType)) {
       // FIXME this might be wrong, since the check in ComplianceChecks is naive - improve it
       returnType = "java.lang.Object";
+    } else if (ComplianceChecks.primitiveTypes().contains(returnType)) {
+      returnType = ComplianceChecks.fromPrimitiveToObject(returnType);
     }
-    returnType = removeParametersFromType(returnType);
     if (!returnType.equals("void")) {
       condition =
           condition.replace(

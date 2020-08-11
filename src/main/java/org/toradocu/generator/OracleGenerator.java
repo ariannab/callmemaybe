@@ -18,6 +18,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.toradocu.Toradocu;
 import org.toradocu.extractor.DocumentedExecutable;
+import org.toradocu.translator.spec.EqOperationSpecification;
+import org.toradocu.translator.spec.EquivalenceSpec;
 import org.toradocu.util.Checks;
 import randoop.condition.specification.OperationSpecification;
 
@@ -67,9 +69,19 @@ public class OracleGenerator {
     for (DocumentedExecutable method : specifications.keySet()) {
       OperationSpecification specification = specifications.get(method);
       if (!specification.isEmpty()) {
-        String aspectName = "Aspect_" + aspectNumber++;
-        createAspect(method, specification, aspectName);
-        createdAspectNames.add(aspectName);
+        if (specification instanceof EqOperationSpecification) {
+          for (EquivalenceSpec e :
+              ((EqOperationSpecification) specification).getEquivalenceSpecs()) {
+            String aspectName = "Aspect_" + aspectNumber++;
+            createEqAspect(method, e, aspectName);
+            createdAspectNames.add(aspectName);
+          }
+        }
+        //        else {
+        //          String aspectName = "Aspect_" + aspectNumber++;
+        //          createAspect(method, specification, aspectName);
+        //          createdAspectNames.add(aspectName);
+        //        }
       }
     }
 
@@ -124,8 +136,8 @@ public class OracleGenerator {
    * @param specification the specs the created aspect has to check, must not be null
    * @param aspectName name of the file where the newly created aspect is saved, must not be null
    */
-  private static void createAspect(
-      DocumentedExecutable method, OperationSpecification specification, String aspectName) {
+  private static void createEqAspect(
+      DocumentedExecutable method, EquivalenceSpec specification, String aspectName) {
     Checks.nonNullParameter(method, "method");
     Checks.nonNullParameter(specification, "specification");
     Checks.nonNullParameter(aspectName, "aspectName");
@@ -151,6 +163,44 @@ public class OracleGenerator {
       log.error("Error during aspect creation.", e);
     }
   }
+
+  /**
+   * Creates a new aspect for the given {@code method}.
+   *
+   * @param method method for which an aspect will be created, must not be null
+   * @param specification the specs the created aspect has to check, must not be null
+   * @param aspectName name of the file where the newly created aspect is saved, must not be null
+   */
+  //  private static void createAspect(
+  //      DocumentedExecutable method, OperationSpecification specification, String aspectName) {
+  //    Checks.nonNullParameter(method, "method");
+  //    Checks.nonNullParameter(specification, "specification");
+  //    Checks.nonNullParameter(aspectName, "aspectName");
+  //
+  //    final InputStream aspectTemplate =
+  //        Object.class.getResourceAsStream("/" + configuration.getAspectTemplate());
+  //    CompilationUnit cu = JavaParser.parse(aspectTemplate);
+  //
+  //    // Set the correct name to the newly created aspect class. Default name is
+  // "Aspect_Template".
+  //    cu.findFirst(
+  //            ClassOrInterfaceDeclaration.class, c ->
+  // c.getNameAsString().equals("Aspect_Template"))
+  //        .ifPresent(c -> c.setName(aspectName));
+  //
+  //    cu.addImport(JavaParser.parseImport("import " + method.getDeclaringClass().getName() +
+  // ";"));
+  //
+  //    new MethodChangerVisitor().visit(cu, Pair.of(method, specification));
+  //
+  //    final String aspectPath =
+  //        configuration.getAspectsOutputDir() + File.separator + aspectName + ".java";
+  //    try (FileOutputStream output = new FileOutputStream(new File(aspectPath))) {
+  //      output.write(cu.toString().getBytes());
+  //    } catch (IOException e) {
+  //      log.error("Error during aspect creation.", e);
+  //    }
+  //  }
 
   /**
    * Creates the file aop.xml needed by AspectJ compiler for the instrumentation. The file aop.xml
