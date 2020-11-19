@@ -1,4 +1,4 @@
-package org.toradocu.accuracy.equivalences.dataset.executions;
+package org.toradocu.accuracy.equivalences.dataset;
 
 import org.junit.Test;
 import org.toradocu.testlib.AbstractPrecisionRecallTestSuite;
