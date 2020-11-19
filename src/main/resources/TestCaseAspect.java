@@ -5,7 +5,18 @@ import org.aspectj.lang.annotation.Aspect;
 @Aspect
 public class TestCaseAspect {
 
-  @Around("execution(@org.junit.Test * *(..))")
+  // +++++++++ NOTES ABOUT EXECUTION POINTCTUS: +++++++++
+  //
+  // execution(@org.junit.Test * *(..))
+  // matches all the annotated test cases,
+  // but some test suites may not use such annotation.
+  //
+  // Still, if they do follow the usual naming conventions,
+  // an alternative valid pointcut is:
+  // execution(* *.test*(..))
+  //
+  //  +++++++++++++++++++++++++++++++++++++++++++++++++++
+  @Around("execution(* *.test*(..))")
   public Object advice(ProceedingJoinPoint jp) throws Throwable {
     try {
       return jp.proceed();
