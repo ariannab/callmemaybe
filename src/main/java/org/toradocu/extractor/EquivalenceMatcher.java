@@ -1,7 +1,9 @@
 package org.toradocu.extractor;
 
+import com.crtomirmajer.wmd4j.WordMovers;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.toradocu.translator.semantic.GloveModelWrapper;
 
 public class EquivalenceMatcher {
 
@@ -76,36 +79,42 @@ public class EquivalenceMatcher {
    * @param codeSnippet
    * @return the signature of the (supposedly) equivalent method
    */
-  public static EquivalentMatch findEquivalencesInComment(String comment, CodeSnippet codeSnippet) {
+  // FIXME enable semantic alternative
+  public static EquivalentMatch findEquivalencesSemantic(String comment, CodeSnippet codeSnippet) {
     // TODO maybe a more comprehensive list (e.g. consider an external dictionary) would be better
     // TODO consider also: behaves (as?), like, SYNONYM
-    KeywordsSet equivalenceKw =
+    KeywordsSet equivalenceBigrams =
         new KeywordsSet(
             Arrays.asList(
-                "equivalent",
-                "similar",
-                "analog",
-                "like",
-                "identical",
-                "behaves exactly",
-                "behaves identically",
-                "equal to",
-                "same"
+                "is equivalent to",
+                "is similar to",
+                "is analog to",
+                "is like",
+                "is identical to",
+                "behaves exactly as",
+                "behaves identically to",
+                "is equal to",
+                "is same as"
                 // "same as",
                 // "same value",
                 ),
             KeywordsSet.Category.EQUIVALENCE);
-    EquivalentMatch methodMatch = classifyEquivalenceComment(comment, codeSnippet, equivalenceKw);
+
+    EquivalentMatch methodMatch =
+        classifyEquivalenceSemantic(comment, codeSnippet, equivalenceBigrams);
     if (methodMatch != null) {
       return methodMatch;
     } else {
-      // TODO add "instead of" (comments like "this method should be used instead of the other
-      // TODO method"
-      KeywordsSet similarityKw =
-          new KeywordsSet(
-              Arrays.asList("prefer", "alternative", "replacement for"),
-              KeywordsSet.Category.SIMILARITY);
-      methodMatch = classifyEquivalenceComment(comment, codeSnippet, similarityKw);
+      //      // TODO add "instead of" (comments like "this method should be used instead of the
+      // other
+      //      // TODO method"
+      //      KeywordsSet similarityKw =
+      //          new KeywordsSet(
+      //              Arrays.asList("prefer", "alternative", "replacement for"),
+      //              KeywordsSet.Category.SIMILARITY);
+      //      methodMatch = classifyEquivalenceComment(comment, codeSnippet, similarityKw);
+      // FIXME ignore similarities for now.
+
       if (methodMatch != null) {
         FileWriter writer;
         try {
@@ -151,6 +160,162 @@ public class EquivalenceMatcher {
       }
     }
     return match;
+  }
+
+  /**
+   * Parses a comment searching for a) presence of one of the keywords b) a method signature (a. and
+   * b. in the same sentence).
+   *
+   * @param comment the comment to parse
+   * @param codeSnippet
+   * @param biGrams the keywords to search for
+   * @return the signature of the (supposedly) equivalent method
+   */
+
+  // FIXME THIS METHOD TAKES FOR GRANTED THAT THERE IS JUST ONE MATCH?
+  private static EquivalentMatch classifyEquivalenceSemantic(
+      String comment, CodeSnippet codeSnippet, KeywordsSet biGrams) {
+    EquivalentMatch match = null;
+
+    String methodRegex =
+        "(new )?(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+    // "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?)\\)$)+)(\\)+)?\\.?";
+    String partialMethodRegex = "(!)?([A-Z]\\w+)?[.#]\\w+";
+    Map<String, List<String>> argumentsMap = new HashMap<>();
+    Map<String, String> signaturesFound = new LinkedHashMap<>();
+    java.util.regex.Matcher signatureMatch;
+    boolean partial = false;
+
+    int signatureGroup = 0;
+
+    signatureMatch = Pattern.compile(methodRegex).matcher(comment);
+
+    boolean matchFound = signatureMatch.find();
+    String puppyComment = "";
+    if (!matchFound) {
+      signatureMatch = Pattern.compile(partialMethodRegex).matcher(comment);
+      partial = signatureMatch.find();
+    }
+    signatureMatch.reset();
+    while (signatureMatch.find()) {
+      puppyComment = comment.replace(signatureMatch.group(0), "that method");
+    }
+
+    for (String biGram : biGrams.getKw()) {
+
+      double dist = 10;
+      String puppySentence = "method " + biGram + " that method";
+      try {
+        WordMovers wm =
+            WordMovers.Builder()
+                .wordVectors(GloveModelWrapper.getInstance().getGloveTxtVectors())
+                .build();
+
+        try {
+          // FIXME probably, here you already should check if there is a signature in the comment,
+          // FIXME and add placeholders for it.
+          dist = wm.distance(puppySentence, puppyComment);
+        } catch (Exception e) {
+          // do nothing
+        }
+      } catch (URISyntaxException e) {
+        e.printStackTrace();
+      }
+
+      if (dist < 3.0) {
+        //        boolean similarity = isSimilarity(comment, biGrams);
+        //        boolean equivalence = !similarity;
+        //        match = buildMatchWithSignatures(comment, keywordMatcher, equivalence);
+        //        if (codeSnippet != null) {
+        //          match.setCodeSnippet(codeSnippet);
+        //        }
+
+        //        boolean similarity = isSimilarity(comment, keywordsSet);
+        boolean equivalence = true;
+        match = buildMatchWithSignatures(comment, equivalence);
+        if (codeSnippet != null) {
+          match.setCodeSnippet(codeSnippet);
+        }
+
+        FileWriter writer;
+        try {
+          writer = new FileWriter("semantic-class-match.csv", true);
+          writer.append(comment);
+          writer.append(";");
+          writer.append(String.valueOf(dist));
+          writer.append(";");
+          writer.append(puppySentence);
+          writer.append("\n");
+          writer.close();
+          break;
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+    return match;
+  }
+
+  private static EquivalentMatch buildMatchWithSignatures(String comment, boolean equivalence) {
+    boolean negation = false;
+    String receiver;
+    String methodRegex =
+        "(new )?(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+    // "(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?)\\)$)+)(\\)+)?\\.?";
+    String partialMethodRegex = "(!)?([A-Z]\\w+)?[.#]\\w+";
+    Map<String, List<String>> argumentsMap = new HashMap<>();
+    Map<String, String> signaturesFound = new LinkedHashMap<>();
+    java.util.regex.Matcher signatureMatch;
+    boolean partial = false;
+
+    int signatureGroup = 0;
+    //    if (word.contains("as")) {
+    //      signatureMatch = Pattern.compile("( as )" + methodRegex).matcher(comment);
+    //      if (!signatureMatch.find()) {
+    //        return new EquivalentMatch(signaturesFound, false, false, argumentsMap, negation);
+    //      }
+    //    }
+
+    signatureMatch = Pattern.compile(methodRegex).matcher(comment);
+
+    boolean matchFound = signatureMatch.find();
+    if (!matchFound) {
+      signatureMatch = Pattern.compile(partialMethodRegex).matcher(comment);
+      partial = signatureMatch.find();
+    }
+    signatureMatch.reset();
+    while (signatureMatch.find()) {
+      if (signatureMatch.group(1) != null) {
+        // FIXME Not supporting "new"
+        break;
+      }
+      receiver = "";
+      if (signatureMatch.groupCount() > 3 && signatureMatch.group(4) != null) {
+        receiver = signatureMatch.group(4);
+      }
+      String signatureFound = signatureMatch.group(signatureGroup);
+      if (!signatureIsEqualMethod(signatureFound)) {
+        if (signatureFound.endsWith(".")) {
+          signatureFound = signatureFound.substring(0, signatureFound.length() - 1);
+        }
+        if (!receiver.isEmpty()) {
+          signatureFound = signatureFound.replace(receiver + ".", "");
+        }
+        signaturesFound.put(signatureFound, receiver);
+        if (partial) {
+          // FIXME not very nice, and in general this group-management should be improved
+          negation = signatureMatch.group(1) != null;
+        } else {
+          negation = signatureMatch.group(2) != null;
+        }
+        List<String> arguments = new ArrayList<>();
+        if (!partial) {
+          arguments = extractArguments(signatureMatch, 8);
+        }
+        argumentsMap.put(signatureFound, arguments);
+      }
+    }
+    return new EquivalentMatch(signaturesFound, equivalence, !equivalence, argumentsMap, negation);
   }
 
   private static EquivalentMatch buildMatchWithSignatures(
