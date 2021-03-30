@@ -393,7 +393,7 @@ public class MethodChangerVisitor
               + ")");
     } else {
       pointcut
-          .append("call(")
+          .append("(call(")
           .append(getPointcut(executableMember, executableMember.getDeclaringClass().getName()))
           .append(")");
 
@@ -423,7 +423,7 @@ public class MethodChangerVisitor
 
       String testClassName = conf.getTestClass();
       if (testClassName != null) {
-        pointcut.append(" && within(").append(testClassName).append(")");
+        pointcut.append(") && within(").append(testClassName).append(")");
       }
     }
 
