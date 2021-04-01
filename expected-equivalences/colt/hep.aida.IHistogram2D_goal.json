@@ -525,7 +525,7 @@
       "member": "sliceX(int indexY)",
       "comment": "Slice parallel to the Y axis at bin indexY and one bin wide. Equivalent to sliceX(indexY,indexY).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.sliceX(args[0],args[0]))"
     }
   },
   {
@@ -597,7 +597,7 @@
       "member": "sliceY(int indexX)",
       "comment": "Slice parallel to the X axis at bin indexX and one bin wide. Equivalent to sliceY(indexX,indexX).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.sliceY(args[0],args[0]))"
     }
   },
   {

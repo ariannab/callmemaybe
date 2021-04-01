@@ -146,7 +146,7 @@
     "equivalence": {
       "comment": "Sets a two-digit year. @deprecated Use #setFullYear(int).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "receiverObjectClone.setFullYear(args[0])); receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -563,7 +563,7 @@
     "equivalence": {
       "comment": "Returns the year minus 1900. @deprecated Use #getFullYear().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(receiverObjectClone.getFullYear())"
     }
   },
   {
@@ -2099,7 +2099,7 @@
     "equivalence": {
       "comment": "Returns a date and time string in GMT. @deprecated Use #toUTCString().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.toUTCString())"
     }
   },
   {

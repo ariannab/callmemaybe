@@ -134,7 +134,7 @@ public class AccuracyGWT2 extends AbstractPrecisionRecallTestSuite {
   // voids...
   @Test
   public void testUi_ListBox() {
-    test("com.google.gwt.user.client.ui.ListBox", 1, 0.2);
+    test("com.google.gwt.user.client.ui.ListBox", 1, 0.6);
   }
 
   // This recall used to be slightly higher: check.

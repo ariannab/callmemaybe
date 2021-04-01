@@ -26,7 +26,7 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testUtil_ArrayDeque() {
-    test("java.util.ArrayDeque", 0.9, 1);
+    test("java.util.ArrayDeque", 1, 1);
   }
 
   @Test
@@ -41,7 +41,7 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testUtil_Deque() {
-    test("java.util.Deque", 0.9, 1);
+    test("java.util.Deque", 1, 1);
   }
 
   @Test
@@ -101,12 +101,12 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testTime_OffsetDateTime() {
-    test("java.time.OffsetDateTime", 0.5, 1);
+    test("java.time.OffsetDateTime", 1, 1);
   }
 
   @Test
   public void testFormat_DateTimeFormatterBuilder() {
-    test("java.time.format.DateTimeFormatterBuilder", 0, 0);
+    test("java.time.format.DateTimeFormatterBuilder", 1, 0);
   }
 
   @Test

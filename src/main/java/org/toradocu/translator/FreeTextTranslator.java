@@ -32,9 +32,11 @@ import org.toradocu.util.Reflection;
 public class FreeTextTranslator {
 
   /**
-   * Translates a free text comment. For now only supports equivalences.
+   * Translates a free text comment if it contains a MR.
+   * This method calls the MR Finder and then the Translator.
    *
    * @param excMember the executable member the comment belongs to
+   * @param documentedType the type the member belongs to
    * @return the translation, null if failed
    */
   public List<EquivalentMatch> translate(
@@ -46,25 +48,22 @@ public class FreeTextTranslator {
     ArrayList<EquivalentMatch> matches = new ArrayList<>();
     EquivalentMatch equivalenceMatch;
 
-    // FIXME IF != SENTENCES HAVE != EQUIVALENCES WHAT HAPPENS HERE???
     for (String sentence : sentences) {
       Toradocu.configuration.ALL_SENTENCES = Toradocu.configuration.ALL_SENTENCES + 1;
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
         // Verify if there is a snippet in the sentence...
         CodeSnippet sentenceSnippet = determineSnippet(commentContent, sentence);
-        // Classifier entry point: Verify sentence contains an equivalence declaration...
+        // MR Finder entry point: Verify sentence contains an equivalence declaration...
         equivalenceMatch = EquivalenceMatcher.findEquivalencesInComment(sentence, sentenceSnippet);
 
         if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
-          //          Toradocu.configuration.ALL_SENTENCES = Toradocu.configuration.ALL_SENTENCES +
-          // 1;
           String translatedCondition = "";
           String condition = extractCondition(sentence);
-          if (equivalenceMatch.isSimilarity()
+          if (equivalenceMatch.isConditional()
               && !equivalenceMatch.getMethodSignatures().isEmpty()
               && condition != null) {
-            // Similarity, e.g. conditional equivalence: translate condition first
+            // Conditional equivalence: translate condition first
             translatedCondition =
                 translateConditionalEquivalence(
                     excMember, equivalenceMatch, condition, documentedType);

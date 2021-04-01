@@ -29,7 +29,7 @@ public class EquivalentMatch {
   private CodeSnippet codeSnippet;
   private ArrayList<String> simpleName;
   private boolean equivalence;
-  private boolean similarity;
+  private boolean conditional;
   /** Maps each String signature to a list of String arguments */
   private Map<String, List<String>> arguments;
 
@@ -55,14 +55,14 @@ public class EquivalentMatch {
   //    this.methodSignatures = new ArrayList<>();
   //    this.simpleName = new ArrayList<>();
   //    this.equivalence = false;
-  //    this.similarity = false;
+  //    this.conditional = false;
   //    this.oracle = "";
   //  }
 
   EquivalentMatch(
       Map<String, String> methodSignatures,
       boolean equivalence,
-      boolean similarity,
+      boolean conditional,
       Map<String, List<String>> arguments,
       boolean isNegated) {
 
@@ -71,7 +71,7 @@ public class EquivalentMatch {
     extractClasses();
     extractSimpleNames();
     this.equivalence = equivalence;
-    this.similarity = similarity;
+    this.conditional = conditional;
     this.arguments = arguments;
     manageArgs();
     this.importsNeeded = "";
@@ -276,8 +276,8 @@ public class EquivalentMatch {
     return methodSignatures;
   }
 
-  public boolean isSimilarity() {
-    return similarity;
+  public boolean isConditional() {
+    return conditional;
   }
 
   public boolean isEquivalence() {

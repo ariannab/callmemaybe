@@ -506,7 +506,7 @@
       "member": "sliceXY(int indexZ)",
       "comment": "Create a slice parallel to the XY plane at bin indexZ and one bin wide. Equivalent to sliceXY(indexZ,indexZ).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.sliceXY(args[0],args[0]))"
     }
   },
   {
@@ -578,7 +578,7 @@
       "member": "sliceXZ(int indexY)",
       "comment": "Create a slice parallel to the XZ plane at bin indexY and one bin wide. Equivalent to sliceXZ(indexY,indexY).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.sliceXZ(args[0],args[0]))"
     }
   },
   {
@@ -650,7 +650,7 @@
       "member": "sliceYZ(int indexX)",
       "comment": "Create a slice parallel to the YZ plane at bin indexX and one bin wide. Equivalent to sliceYZ(indexX,indexX).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.sliceYZ(args[0],args[0]))"
     }
   },
   {

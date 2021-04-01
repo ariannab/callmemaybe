@@ -476,7 +476,7 @@
       "member": "add(E e)",
       "comment": "Inserts the specified element at the end of this deque. This method is equivalent to #addLast.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "receiverObjectClone.addLast(args[0]);receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -724,7 +724,7 @@
       "member": "iterator()",
       "comment": "Returns an iterator over the elements in this deque. The elements will be ordered from first (head) to last (tail). This is the same order that elements would be dequeued (via successive calls to #remove or popped (via successive calls to #pop).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectClone.pop())"
+      "condition": ""
     }
   },
   {

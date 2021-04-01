@@ -27,7 +27,7 @@ public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testAida_IHistogram2D() {
-    test("hep.aida.IHistogram2D", 1, 0);
+    test("hep.aida.IHistogram2D", 1, 0.333);
   }
 
   @Test
@@ -108,7 +108,7 @@ public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testLinalg_Algebra() {
-    test("cern.colt.matrix.linalg.Algebra", 1, 0);
+    test("cern.colt.matrix.linalg.Algebra", 1, 0.5);
   }
 
   @Test

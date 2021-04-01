@@ -424,7 +424,7 @@
     "equivalence": {
       "comment": "Not supported. Use eraseAll instead.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "receiverObjectClone.eraseAll();receiverObjectClone.equals(receiverObjectID)"
     }
   },
   {
@@ -772,7 +772,7 @@
     "equivalence": {
       "comment": "Not supported. Use erase instead.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.erase(args[0],args[1]))"
     }
   },
   {

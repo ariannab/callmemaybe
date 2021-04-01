@@ -19,6 +19,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.jetbrains.annotations.NotNull;
 import org.toradocu.conf.Configuration;
 import org.toradocu.extractor.DocumentedExecutable;
 import org.toradocu.extractor.DocumentedParameter;
@@ -472,25 +474,15 @@ class Matcher {
       EquivalentMatch equivalentMethod,
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements) {
-    Match match = null;
-    CodeElement<?> firstCodeMatch = null;
-    List<String> paramForMatch = new ArrayList<>();
-    String receiver = "";
-    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
-    List<String> myParamTypes = new ArrayList<>();
+    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();;
 
-    match =
+    Match match =
         matchAccordingToArgs(
             methodSignature,
             equivalentMethod,
             method,
             sortedCodeElements,
-            match,
-            firstCodeMatch,
-            paramForMatch,
-            receiver,
-            myMethodParamTypes,
-            myParamTypes);
+            myMethodParamTypes);
 
     return match;
   }
@@ -500,13 +492,13 @@ class Matcher {
       EquivalentMatch equivalentMethod,
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements,
-      Match match,
-      CodeElement<?> firstCodeMatch,
-      List<String> paramForMatch,
-      String receiver,
-      Parameter[] myMethodParamTypes,
-      List<String> myParamTypes) {
+      Parameter[] myMethodParamTypes) {
+
     String[] currentMatchParamTypes;
+    List<String> myParamTypes = new ArrayList<>();
+    CodeElement<?> firstCodeMatch = null;
+    String receiver = "";
+
     for (Parameter arg : myMethodParamTypes) {
       if (arg.getType().isArray()) {
         myParamTypes.add(convertArrayTipe(arg.getType()));
@@ -522,35 +514,55 @@ class Matcher {
             .map(DocumentedParameter::getName)
             .collect(Collectors.toList());
     List<Integer> rightIndexes = new ArrayList<>();
+    Match match = null;
+
     if (eqArgs != null) {
       for (String eqArg : eqArgs) {
         // This answers the question:
-        // Which param indexes do we have to match in the equivalent method, w/ respect to the doc.
-        // method?
+        // Which param indexes do we have to match in the equivalent method, wrt the doc. method?
         // e.g., the 1st (index 0) param of the equivalent method could be the 3rd (index 2) of the
         // doc. method,
         // and thus the match will have to be equivalentMatch(args[2])
-        rightIndexes.add(docArgs.indexOf(eqArg));
+        int actualIndex = docArgs.indexOf(eqArg);
+//        if(actualIndex!=-1)
+         rightIndexes.add(actualIndex);
       }
-    } else {
-      // Else, in the equivalent signature there are no parameters! Filter candidates and pick the
-      // first one!
-      Stream<CodeElement<?>> noArgsCandidates =
-          sortedCodeElements
-              .stream()
-              .filter(
-                  x -> x instanceof MethodCodeElement && ((MethodCodeElement) x).getArgs() == null);
-      Optional<CodeElement<?>> first = noArgsCandidates.findFirst();
+    } else{
+      // FIXME sometimes documentation is naive and will write a signature with no params altough they
+      // FIXME are needed. Make a selection based on what params the doc. method has and the candidate that
+      // FIXME has EXACTLY the same params. However they must be solved, and this part is not done.
+        Stream<CodeElement<?>> sameArgsCandidate =
+                sortedCodeElements
+                        .stream()
+                        .filter(
+                                x -> x instanceof MethodCodeElement &&
+                                        Arrays.equals(((MethodCodeElement) x).getArgs(), myParamTypes.toArray()));
+      Optional<CodeElement<?>> first = sameArgsCandidate.findFirst();
       if (first.isPresent()) {
         firstCodeMatch = first.get();
-        match =
-            new Match(
-                firstCodeMatch.getJavaExpression(),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
-      }
+        for(String arg : ((MethodCodeElement) firstCodeMatch).getArgs()){
+          rightIndexes.add(docArgs.indexOf(arg));
+        }
+      }else {
+        // Else, in the equivalent signature there are no parameters! Filter candidates and pick the
+        // first one!
+        Stream<CodeElement<?>> noArgsCandidates =
+                sortedCodeElements
+                        .stream()
+                        .filter(
+                                x -> x instanceof MethodCodeElement && ((MethodCodeElement) x).getArgs() == null);
 
-      return match;
+        first = noArgsCandidates.findFirst();
+        if (first.isPresent()) {
+          firstCodeMatch = first.get();
+          match =
+                  new Match(
+                          firstCodeMatch.getJavaExpression(),
+                          ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                          firstCodeMatch);
+        }
+        return match;
+      }
     }
 
     for (CodeElement<?> currentMatch : sortedCodeElements) {
@@ -565,129 +577,46 @@ class Matcher {
         currentMatchParamTypes = ((StaticMethodCodeElement) currentMatch).getArgs();
       } else continue;
 
+      List<String> paramForMatch = new ArrayList<>();
       List<String> actualArgList = equivalentMethod.getArguments().get(methodSignature);
       Map<Integer, String> constantParamsToIgnore =
           equivalentMethod.getHardcodedParams().get(methodSignature);
       Map<Integer, String> codeElementsParams =
           equivalentMethod.getStaticFinalParams().get(methodSignature);
       Map<Integer, String> typeParams = equivalentMethod.getTypeParams().get(methodSignature);
+
       if (currentMatchParamTypes != null
           && actualArgList != null
-          && currentMatchParamTypes.length == actualArgList.size()
-          && currentMatchParamTypes.length
-              <= myMethodParamTypes.length
+          && currentMatchParamTypes.length == actualArgList.size() // FIXME what if Actual is flawed by imprecise doc.
+          && (currentMatchParamTypes.length
+              <=  rightIndexes.stream().filter(c -> c!=-1).count()
                   + constantParamsToIgnore.size()
-                  + codeElementsParams.size()) {
+                  + codeElementsParams.size() ||
+              currentMatchParamTypes.length
+              <= myMethodParamTypes.length
+              + constantParamsToIgnore.size()
+              + codeElementsParams.size())) {
 
-        int filledSequence = 0;
-        int indexCount = 0;
-        // Filled sequence refers to the sequence of parameters of the eq. method to be matched,
-        // thus is a placeholder to tell at what point are we in completing the match String
-        for (int index : rightIndexes) {
-          if (filledSequence >= currentMatchParamTypes.length) {
-            break;
-          }
-          boolean filled = false;
-          String currentMatchParam = currentMatchParamTypes[filledSequence];
-          if (index != -1
-              && (myParamTypes.get(index).equals(currentMatchParam)
-                  || areTypesAssignable(myParamTypes.get(index), currentMatchParam)
-                  || isParametricType(currentMatchParam, myParamTypes.get(index))
-                  || isGenericType(currentMatchParam, myParamTypes))) {
-            // Here we check that the type of the current arg to fill matches
-            // the type of the right index (the doc. method arg index)
-            if (!receiver.equals("args[" + index + "]")) {
-              paramForMatch.add("args[" + index + "]");
-              filledSequence++;
-              indexCount++;
-              continue;
-            }
-          }
-          for (Map.Entry<Integer, String> entry : constantParamsToIgnore.entrySet()) {
-            // If params are constants (hardcoded in doc), just fill parenthesis with the constant
-            if (entry.getKey().equals(filledSequence)) {
-              paramForMatch.add(entry.getValue());
-              filledSequence++;
-              filled = true;
-            }
-          }
-          if (!filled && !indexesToBeMatched.contains(indexCount)) {
-            indexesToBeMatched.add(indexCount);
-          }
-          indexCount++;
-        }
-        boolean sizesMatch =
-            paramForMatch.size() + codeElementsParams.size() + typeParams.size()
-                == currentMatchParamTypes.length;
-        if (sizesMatch) {
-          firstCodeMatch = currentMatch;
-        }
+        firstCodeMatch = getValidCodeMatch(
+                paramForMatch,
+                receiver,
+                myParamTypes,
+                currentMatchParamTypes,
+                rightIndexes,
+                currentMatch,
+                indexesToBeMatched,
+                constantParamsToIgnore,
+                codeElementsParams,
+                typeParams);
       }
-
       if (firstCodeMatch != null) {
-        String exp = firstCodeMatch.getJavaExpression();
-        if (firstCodeMatch instanceof MethodCodeElement) {
-          match =
-              new Match(
-                  exp.substring(0, exp.indexOf("(") + 1),
-                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                  firstCodeMatch);
-        } else {
-          match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
-        }
-        //        for (int j = 0; j < paramForMatch.size() - 1; j++) {
-        //          match.completeExpression(paramForMatch.get(j) + ",");
-        //        }
-        for (int indexToBeMatch : indexesToBeMatched) {
-          if (!codeElementsParams.isEmpty() && codeElementsParams.containsKey(indexToBeMatch)) {
-            String codeElementName = parseCodeElemName(codeElementsParams, indexToBeMatch);
-            List<FieldCodeElement> result = new ArrayList<>();
-            String className = currentMatchParamTypes[indexToBeMatch];
-            // the class name is the one of the parameters left;
-            Class<?> matchedType = null;
-            try {
-              matchedType = Reflection.getClass(className);
-            } catch (ClassNotFoundException e) {
-              // Intentionally empty: Apply other heuristics to load the exception type.
-            }
-            if (matchedType != null) {
-              List<FieldCodeElement> allFieldsInClass = JavaElementsCollector.fieldsOf(matchedType);
-              if (!allFieldsInClass.isEmpty()) {
-                result =
-                    allFieldsInClass
-                        .stream()
-                        .filter(
-                            f ->
-                                f.getJavaExpression()
-                                    .equals(Configuration.RECEIVER + "." + codeElementName))
-                        .collect(Collectors.toList());
-              }
-            }
-            if (!result.isEmpty()) {
-              // THAT'S IT! We found the right match (classes-public field).
-              paramForMatch.add(className + "." + codeElementName);
-            }
-          }
-          if (!typeParams.isEmpty()) {
-            String matchParamType = currentMatchParamTypes[indexToBeMatch];
-            for (int i = 0; i < myMethodParamTypes.length; i++) {
-              Parameter myMethodType = myMethodParamTypes[i];
-              if (isGenericType(matchParamType)
-                  && myMethodType.getType().getName().equals("java.lang.Object")) {
-                paramForMatch.add("args[" + i + "]");
-              } else if (myMethodType.getType().getName().equals(matchParamType)
-                  || (myMethodType.getType().isArray()
-                      && (matchParamType.contains("..") || matchParamType.contains("[]")))) {
-                paramForMatch.add("args[" + i + "]");
-                break;
-              }
-            }
-          }
-        }
-
-        for (int j = 0; j < paramForMatch.size() - 1; j++) {
-          match.completeExpression(paramForMatch.get(j) + ",");
-        }
+        match = buildFinalEqMatch(firstCodeMatch,
+                paramForMatch,
+                myMethodParamTypes,
+                currentMatchParamTypes,
+                indexesToBeMatched,
+                codeElementsParams,
+                typeParams);
         // We finished matching all indexes, we can close the expression
         if (!paramForMatch.isEmpty()) {
           match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
@@ -696,6 +625,140 @@ class Matcher {
       }
     }
     return match;
+  }
+
+  @NotNull
+  private Match buildFinalEqMatch(CodeElement<?> firstCodeMatch,
+                                  List<String> paramForMatch,
+                                  Parameter[] myMethodParamTypes,
+                                  String[] currentMatchParamTypes,
+                                  List<Integer> indexesToBeMatched,
+                                  Map<Integer, String> codeElementsParams,
+                                  Map<Integer, String> typeParams) {
+    Match match;
+    String exp = firstCodeMatch.getJavaExpression();
+    if (firstCodeMatch instanceof MethodCodeElement) {
+      match =
+          new Match(
+              exp.substring(0, exp.indexOf("(") + 1),
+              ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+              firstCodeMatch);
+    } else {
+      match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
+    }
+    //        for (int j = 0; j < paramForMatch.size() - 1; j++) {
+    //          match.completeExpression(paramForMatch.get(j) + ",");
+    //        }
+    for (int indexToBeMatch : indexesToBeMatched) {
+      if (!codeElementsParams.isEmpty() && codeElementsParams.containsKey(indexToBeMatch)) {
+        String codeElementName = parseCodeElemName(codeElementsParams, indexToBeMatch);
+        List<FieldCodeElement> result = new ArrayList<>();
+        String className = currentMatchParamTypes[indexToBeMatch];
+        // the class name is the one of the parameters left;
+        Class<?> matchedType = null;
+        try {
+          matchedType = Reflection.getClass(className);
+        } catch (ClassNotFoundException e) {
+          // Intentionally empty: Apply other heuristics to load the exception type.
+        }
+        if (matchedType != null) {
+          List<FieldCodeElement> allFieldsInClass = JavaElementsCollector.fieldsOf(matchedType);
+          if (!allFieldsInClass.isEmpty()) {
+            result =
+                allFieldsInClass
+                    .stream()
+                    .filter(
+                        f ->
+                            f.getJavaExpression()
+                                .equals(Configuration.RECEIVER + "." + codeElementName))
+                    .collect(Collectors.toList());
+          }
+        }
+        if (!result.isEmpty()) {
+          // THAT'S IT! We found the right match (classes-public field).
+          paramForMatch.add(className + "." + codeElementName);
+        }
+      }
+      if (!typeParams.isEmpty()) {
+        String matchParamType = currentMatchParamTypes[indexToBeMatch];
+        for (int i = 0; i < myMethodParamTypes.length; i++) {
+          Parameter myMethodType = myMethodParamTypes[i];
+          if (isGenericType(matchParamType)
+              && myMethodType.getType().getName().equals("java.lang.Object")) {
+            paramForMatch.add("args[" + i + "]");
+          } else if (myMethodType.getType().getName().equals(matchParamType)
+              || (myMethodType.getType().isArray()
+                  && (matchParamType.contains("..") || matchParamType.contains("[]")))) {
+            paramForMatch.add("args[" + i + "]");
+            break;
+          }
+        }
+      }
+    }
+
+    for (int j = 0; j < paramForMatch.size() - 1; j++) {
+      match.completeExpression(paramForMatch.get(j) + ",");
+    }
+    return match;
+  }
+
+  private CodeElement<?> getValidCodeMatch(
+          List<String> paramForMatch,
+          String receiver,
+          List<String> myParamTypes,
+          String[] currentMatchParamTypes,
+          List<Integer> rightIndexes,
+          CodeElement<?> currentMatch,
+          List<Integer> indexesToBeMatched,
+          Map<Integer, String> constantParamsToIgnore,
+          Map<Integer, String> codeElementsParams,
+          Map<Integer, String> typeParams) {
+    int filledSequence = 0;
+    int indexCount = 0;
+    CodeElement<?> firstCodeMatch = null;
+
+    // Filled sequence refers to the sequence of parameters of the eq. method to be matched,
+    // thus is a placeholder to tell at what point are we in completing the match String
+    for (int index : rightIndexes) {
+      if (filledSequence >= currentMatchParamTypes.length) {
+        break;
+      }
+      boolean filled = false;
+      String currentMatchParam = currentMatchParamTypes[filledSequence];
+      if (index != -1
+          && (myParamTypes.get(index).equals(currentMatchParam)
+              || areTypesAssignable(myParamTypes.get(index), currentMatchParam)
+              || isParametricType(currentMatchParam, myParamTypes.get(index))
+              || isGenericType(currentMatchParam, myParamTypes))) {
+        // Here we check that the type of the current arg to fill matches
+        // the type of the right index (the doc. method arg index)
+        if (!receiver.equals("args[" + index + "]")) {
+          paramForMatch.add("args[" + index + "]");
+          filledSequence++;
+          indexCount++;
+          continue;
+        }
+      }
+      for (Map.Entry<Integer, String> entry : constantParamsToIgnore.entrySet()) {
+        // If params are constants (hardcoded in doc), just fill parenthesis with the constant
+        if (entry.getKey().equals(filledSequence)) {
+          paramForMatch.add(entry.getValue());
+          filledSequence++;
+          filled = true;
+        }
+      }
+      if (!filled && !indexesToBeMatched.contains(indexCount)) {
+        indexesToBeMatched.add(indexCount);
+      }
+      indexCount++;
+    }
+    boolean sizesMatch =
+        paramForMatch.size() + codeElementsParams.size() + typeParams.size()
+            == currentMatchParamTypes.length;
+    if (sizesMatch) {
+      firstCodeMatch = currentMatch;
+    }
+    return firstCodeMatch;
   }
 
   static boolean areTypesAssignable(String myMethodParamType, String currentMatchParamType) {
