@@ -23,7 +23,7 @@ Each first-level object is the representation of a method of the class. Inside e
 
 
 > <b>Example</b>. To check class `org.apache.commons.math3.geometry.euclidean.threed.FieldRotation` of Apache Commons Math, <a href=https://github.com/ariannab/MeMo/blob/master/expected-equivalences/math/org.apache.commons.math3.geometry.euclidean.threed.FieldRotation_goal.json>reach the corresponding file</a>. 
-> <p>You will find an expected translation for method "applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r).
+> <p>You will find an expected translation for method applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r).
 
 
 To verify MeMo performances on such dataset, clone this repo and launch `./gradlew accuracyEQ`, which will show the translations produced on the present ground truth. For each method of each class, MeMo may produce exactly the translation written in the file (`Correct`), a non-empty translation that differs from the expected one (`Wrong`), an empty translation when condition is not empty (`Missing`), or a non-empty translation when no condition was expected (`Spurious`).
