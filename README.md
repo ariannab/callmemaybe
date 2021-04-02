@@ -5,9 +5,9 @@ The identified MRs are automatically translated into executable test oracles tha
 As of now the prototype works on Javadoc method summaries, and thus produces Java assertions.
 
 ### Releases
-Please find the latest working executable under <a href=https://github.com/ariannab/MeMo/releases> the releases page</a>.
+Please find the latest stable release under <a href=https://github.com/ariannab/MeMo/releases> the releases page</a>.
 
-If you wish to produce an executable yourself, clone this repo and launch `./gradlew shadowJar`. 
+To produce the executable (`MeMo-1.0-all.jar`), after cloning the repo launch `./gradlew shadowJar`. 
 
 ### Prerequisites
 Please notice that both the Gradle wrapper and the Major tool needed for the analysis explained in the next section may show inconsistent behaviour with
