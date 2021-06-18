@@ -6,9 +6,9 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 public class AccuracyGraphStream1 extends AbstractPrecisionRecallTestSuite {
 
   private static final String GRAPHSTREAM_SRC =
-      "/Users/arianna/memo/src/test/resources/gs-core-1.3-sources/";
+      "src/test/resources/src/gs-core-1.3-sources/";
   private static final String GRAPHSTREAM_BIN =
-      "/Users/arianna/memo/src/test/resources/bin/gs-core-1.3.jar";
+      "src/test/resources/bin/gs-core-1.3.jar";
   private static final String GRAPHSTREAM_GOAL_DIR = "expected-equivalences/gs";
 
   public AccuracyGraphStream1() {

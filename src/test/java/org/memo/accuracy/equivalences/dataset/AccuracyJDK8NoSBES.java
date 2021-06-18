@@ -5,9 +5,9 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
   private static final String JDK_8_SRC =
-      "/Users/arianna/memo/src/test/resources/jdk8-sources/src/share/classes";
+      "src/test/resources/src/jdk8-sources/src/share/classes";
   private static final String JDK_8_BIN =
-      "/Users/arianna/memo/src/test/resources/bin/jdk8-2.9.0.jar";
+      "src/test/resources/bin/jdk8-2.9.0.jar";
   private static final String JDK_8_GOAL_DIR = "expected-equivalences/jdk";
 
   public AccuracyJDK8NoSBES() {
@@ -26,7 +26,7 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testUtil_ArrayDeque() {
-    test("java.util.ArrayDeque", 1, 1);
+    test("java.util.ArrayDeque", 0.9, 1);
   }
 
   @Test
@@ -51,7 +51,7 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testIo_InputStream() {
-    test("java.io.InputStream", 1, 0);
+    test("java.io.InputStream", 0, 0);
   }
 
   //    @Test
@@ -101,12 +101,12 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testTime_OffsetDateTime() {
-    test("java.time.OffsetDateTime", 1, 1);
+    test("java.time.OffsetDateTime", 0.5, 1);
   }
 
   @Test
   public void testFormat_DateTimeFormatterBuilder() {
-    test("java.time.format.DateTimeFormatterBuilder", 1, 0);
+    test("java.time.format.DateTimeFormatterBuilder", 0, 0);
   }
 
   @Test

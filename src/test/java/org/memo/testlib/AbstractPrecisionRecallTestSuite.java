@@ -76,18 +76,18 @@ public abstract class AbstractPrecisionRecallTestSuite {
         "=== Test Suite ==="
             + "\nNumber of conditions: "
             + testSuiteStats.getTotalNumConditions()
-            + "\nAverage precision on @return: "
-            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.RETURN))
-            + "\nAverage recall on @return: "
-            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.RETURN))
-            + "\nAverage precision on @param: "
-            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.PARAM))
-            + "\nAverage recall on @param: "
-            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.PARAM))
-            + "\nAverage precision on @throws: "
-            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.THROWS))
-            + "\nAverage recall on @throws: "
-            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.THROWS))
+//            + "\nAverage precision on @return: "
+//            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.RETURN))
+//            + "\nAverage recall on @return: "
+//            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.RETURN))
+//            + "\nAverage precision on @param: "
+//            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.PARAM))
+//            + "\nAverage recall on @param: "
+//            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.PARAM))
+//            + "\nAverage precision on @throws: "
+//            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.THROWS))
+//            + "\nAverage recall on @throws: "
+//            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.THROWS))
             + "\nAverage precision on Eq: "
             + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.FREETEXT))
             + "\nAverage recall on Eq: "

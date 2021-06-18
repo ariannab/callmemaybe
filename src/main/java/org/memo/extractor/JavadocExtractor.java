@@ -134,10 +134,12 @@ public final class JavadocExtractor {
         String[] freeTextLines = freeTextComment.split("\n");
         for (String line : freeTextLines) {
           String trimmedLine = line.trim();
+          // FIXME use static final fields.
           if (trimmedLine.startsWith("* @since")
               || trimmedLine.startsWith("* @param")
               || trimmedLine.startsWith("* @return")
-              || trimmedLine.startsWith("* @throws")) {
+              || trimmedLine.startsWith("* @throws")
+                  || trimmedLine.startsWith("* @see")) {
             break;
           } else if (trimmedLine.startsWith("* ")) {
             parsedFreeText = parsedFreeText.concat(trimmedLine.substring(2)) + " ";

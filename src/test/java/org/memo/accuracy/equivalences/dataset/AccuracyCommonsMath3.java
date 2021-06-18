@@ -156,12 +156,12 @@ public class AccuracyCommonsMath3 extends AbstractPrecisionRecallTestSuite {
   // Few constructors and math relations!
   @Test
   public void testThreed_Rotation() {
-    test("org.apache.commons.math3.geometry.euclidean.threed.Rotation", 1, 1);
+    test("org.apache.commons.math3.geometry.euclidean.threed.Rotation", 0.571, 1);
   }
 
   @Test
   public void testThreed_FieldRotation() {
-    test("org.apache.commons.math3.geometry.euclidean.threed.FieldRotation", 1, 1);
+    test("org.apache.commons.math3.geometry.euclidean.threed.FieldRotation", 0.444, 1);
   }
 
   @Test

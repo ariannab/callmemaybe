@@ -4,9 +4,10 @@ import org.junit.Test;
 import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyHibernate5 extends AbstractPrecisionRecallTestSuite {
-  private static final String HIBERNATE_5_SRC = "src/test/resources/hibernate-core-5.4.2-sources";
+  private static final String HIBERNATE_5_SRC = "src/test/resources/src/hibernate-core-5.4.2-sources";
   private static final String HIBERNATE_5_BIN =
-      "src/test/resources/bin/hibernate-core-5.4.2.jar:/Users/arianna/memo/src/test/resources/bin/javax.persistence-api-2.2.jar";
+      "src/test/resources/bin/hibernate-core-5.4.2.jar" +
+              ":/Users/arianna/memo/src/test/resources/bin/javax.persistence-api-2.2.jar";
   private static final String HIBERNATE_5_GOAL_DIR = "expected-equivalences/hibernate";
 
   public AccuracyHibernate5() {
@@ -20,7 +21,7 @@ public class AccuracyHibernate5 extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testXml_BufferedXMLEventReader() {
-    test("org.hibernate.internal.util.xml.BufferedXMLEventReader", 1, 1);
+    test("org.hibernate.internal.util.xml.BufferedXMLEventReader", 1, 0);
   }
 
   @Test

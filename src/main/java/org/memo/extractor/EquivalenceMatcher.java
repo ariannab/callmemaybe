@@ -14,21 +14,22 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.memo.MeMo;
 import org.memo.translator.semantic.GloveModelWrapper;
 
 public class EquivalenceMatcher {
 
     private static final KeywordsSet equivBigrams = new KeywordsSet(
             Arrays.asList(
-                    "equivalent to",
-                    "similar to",
-                    "analog to",
+                    "equivalent",
+                    "similar",
+                    "analog",
                     "like",
-                    "identical to",
+                    "identical",
                     "behaves exactly as",
-                    "behaves identically to",
+                    "behaves identically",
                     "equal to",
-                    "same as",
+                    "same",
                     "prefer",
                     "alternative",
                     "replacement for"
@@ -56,10 +57,8 @@ public class EquivalenceMatcher {
         if (methodMatch != null) {
             return methodMatch;
         } else {
-//      // FIXME see field comment
-//      methodMatch = classifyEquivalenceComment(comment, codeSnippet, similarityKw);
-            if (methodMatch == null) {
-                // No match found via bigrams: try WMD
+            if (MeMo.configuration.isSemanticMatcherEnabled()) {
+                // No match found via n-grams: try WMD
                 methodMatch = findEquivalencesSemantic(comment, codeSnippet);
             }
             if (methodMatch != null) {
@@ -110,6 +109,10 @@ public class EquivalenceMatcher {
     private static EquivalentMatch classifyEquivalenceComment(
             String comment, CodeSnippet codeSnippet, KeywordsSet keywordsSet) {
         EquivalentMatch match = null;
+
+        if(comment.contains("The Iterable equivalent")){
+            System.out.println("!!!! DEBUG !!!");
+        }
 
         for (String word : keywordsSet.getKw()) {
             Matcher keywordMatcher =
@@ -182,7 +185,8 @@ public class EquivalenceMatcher {
 
             // To obtain a normalized value between 1 and 0
             double normDist = dist / 10;
-            if (normDist < 0.27) {
+            // Seek a similarity of 75% minimum
+            if (normDist < 0.26) {
                 match = buildMatchWithSignatures(comment, true);
                 if (codeSnippet != null) {
                     match.setCodeSnippet(codeSnippet);

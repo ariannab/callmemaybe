@@ -5,12 +5,13 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyElasticSearch6 extends AbstractPrecisionRecallTestSuite {
 
+  // FIXME wrong elasticsearch, where is actual one? & why paths do not work
   private static final String ELASTICSEARCH_6_SRC =
-      "/Users/arianna/comment-clones/javadoclones/src/resources/src/elasticsearch-6.1.1-sources/";
+      "src/test/resources/src/elasticsearch-6.1.1-sources/";
   private static final String ELASTICSEARCH_6_BIN =
-      "/Users/arianna/comment-clones/javadoclones/src/resources/bin/elasticsearch-6.1.1.jar:"
-          + "/Users/arianna/memo/src/test/resources/lucene-core-7.2.1.jar:"
-          + "/Users/arianna/memo/src/test/resources/joda-time-2.9.8.jar";
+      "src/test/resources/bin/elasticsearch-6.1.1.jar:"
+          + "src/test/resources/bin/lucene-core-7.2.1.jar:"
+          + "src/test/resources/bin/joda-time-2.9.8.jar";
   private static final String ELASTICSEARCH_6_GOAL_DIR = "expected-equivalences/elastic";
 
   public AccuracyElasticSearch6() {

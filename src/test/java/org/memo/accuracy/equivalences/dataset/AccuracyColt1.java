@@ -6,9 +6,9 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
 
   private static final String COLT_1_SRC =
-      "/Users/arianna/memo/src/test/resources/colt-master/src";
+      "src/test/resources/src/colt-master/src";
   private static final String COLT_1_BIN =
-      "/Users/arianna/memo/src/test/resources/bin/colt-1.2.0.jar";
+      "src/test/resources/bin/colt-1.2.0.jar";
   private static final String COLT_1_GOAL_DIR = "expected-equivalences/colt";
 
   public AccuracyColt1() {
@@ -37,7 +37,7 @@ public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testColt_Timer() {
-    test("cern.colt.Timer", 1, 1);
+    test("cern.colt.Timer", 0.5, 1);
   }
 
   // Hard to interpret "except(s)".

@@ -92,7 +92,7 @@ public class AccuracyGuava19 extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testCollect_Multiset() {
-    test("com.google.common.collect.Multiset", 1, 1);
+    test("com.google.common.collect.Multiset", 0.666, 1);
   }
 
   @Test

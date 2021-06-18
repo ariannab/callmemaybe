@@ -101,7 +101,7 @@ class PrecisionRecallTest {
     String goalOutputFile = Paths.get(goalOutputDir, targetClass + "_goal.json").toString();
     String message = "=== Test " + targetClass + " ===";
 
-    String[] toradocuArgs =
+    String[] memoArgs =
         new String[] {
           "--target-class",
           targetClass,
@@ -114,7 +114,7 @@ class PrecisionRecallTest {
           "--source-dir",
           srcPath
         };
-    final List<String> argsList = new ArrayList<>(Arrays.asList(toradocuArgs));
+    final List<String> argsList = new ArrayList<>(Arrays.asList(memoArgs));
 
     final String oracleGeneration = System.getProperty("org.memo.generator");
     // Disable oracle generation unless the specific system property is set.
@@ -133,7 +133,8 @@ class PrecisionRecallTest {
     argsList.add("--cross-oracles");
     argsList.add("true");
     argsList.add("--disable-semantics");
-    argsList.add("true");
+    // Toggle to true to try out  MeMo without WMD (only n-grams match)
+    argsList.add("false");
 
     final String translator = System.getProperty("org.memo.translator");
     if (translator != null && translator.equals("tcomment")) {

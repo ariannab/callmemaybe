@@ -146,7 +146,7 @@
     "equivalence": {
       "comment": "Sets a two-digit year. @deprecated Use #setFullYear(int).",
       "kind": "FreeText",
-      "condition": "receiverObjectClone.setFullYear(args[0])); receiverObjectClone.equals(receiverObjectID)"
+      "condition": "methodResultID==(receiverObjectClone.setFullYear(args[0]))"
     }
   },
   {
@@ -1553,7 +1553,7 @@
     "equivalence": {
       "comment": "Returns the millisecond representation, as #getTime().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(receiverObjectClone.getTime())"
     }
   },
   {

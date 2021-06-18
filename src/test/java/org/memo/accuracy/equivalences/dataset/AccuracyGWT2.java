@@ -6,9 +6,9 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 public class AccuracyGWT2 extends AbstractPrecisionRecallTestSuite {
 
   private static final String GWT_2_SRC =
-      "/Users/arianna/doc-utils/src/main/resources/gwt-2.5.1-sources/";
+      "src/test/resources/src/gwt-2.5.1-sources/";
   private static final String GWT_2_BIN =
-      "/Users/arianna/doc-utils/src/main/resources/gwt-user-2.5.1.jar";
+      "src/test/resources/bin/gwt-user-2.5.1.jar";
   private static final String GWT_GOAL_DIR = "expected-equivalences/gwt";
 
   public AccuracyGWT2() {
@@ -134,7 +134,7 @@ public class AccuracyGWT2 extends AbstractPrecisionRecallTestSuite {
   // voids...
   @Test
   public void testUi_ListBox() {
-    test("com.google.gwt.user.client.ui.ListBox", 1, 0.6);
+    test("com.google.gwt.user.client.ui.ListBox", 1, 1);
   }
 
   // This recall used to be slightly higher: check.

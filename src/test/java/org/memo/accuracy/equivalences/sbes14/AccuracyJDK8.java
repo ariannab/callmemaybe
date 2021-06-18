@@ -6,9 +6,9 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 public class AccuracyJDK8 extends AbstractPrecisionRecallTestSuite {
 
   private static final String JDK_8_SRC =
-      "/Users/arianna/memo/src/test/resources/jdk8-sources/src/share/classes";
+      "src/test/resources/src/jdk8-sources/src/share/classes";
   private static final String JDK_8_BIN =
-      "/Users/arianna/memo/src/test/resources/bin/jdk8-2.9.0.jar";
+      "src/test/resources/bin/jdk8-2.9.0.jar";
   private static final String JDK_8_GOAL_DIR = "expected-equivalences/jdk";
 
   public AccuracyJDK8() {
