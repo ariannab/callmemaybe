@@ -37,7 +37,7 @@ public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testColt_Timer() {
-    test("cern.colt.Timer", 0.5, 1);
+    test("cern.colt.Timer", 1, 1);
   }
 
   // Hard to interpret "except(s)".

@@ -51,7 +51,7 @@ public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
 
   @Test
   public void testIo_InputStream() {
-    test("java.io.InputStream", 0, 0);
+    test("java.io.InputStream", 1, 0);
   }
 
   //    @Test
