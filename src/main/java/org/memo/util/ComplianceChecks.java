@@ -11,8 +11,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.mdkt.compiler.CompilationException;
 import org.mdkt.compiler.InMemoryJavaCompiler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.memo.conf.Configuration;
 import org.memo.extractor.CodeSnippet;
 import org.memo.extractor.DocumentedExecutable;
@@ -20,6 +18,8 @@ import org.memo.extractor.DocumentedParameter;
 import org.memo.extractor.EquivalentMatch;
 import org.memo.extractor.JavadocExtractor;
 import org.memo.translator.FreeTextTranslator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Property;
 
@@ -468,8 +468,8 @@ public class ComplianceChecks {
   }
 
   /**
-   * Substitutes in the condition the actual arguments names, since MeMo-generated conditions
-   * refer to the nth argument with the {@code args[n]} notation.
+   * Substitutes in the condition the actual arguments names, since MeMo-generated conditions refer
+   * to the nth argument with the {@code args[n]} notation.
    *
    * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
    * @param method documented executable the guard belongs to

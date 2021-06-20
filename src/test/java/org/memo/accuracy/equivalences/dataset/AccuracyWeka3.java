@@ -47,10 +47,10 @@ public class AccuracyWeka3 extends AbstractPrecisionRecallTestSuite {
     test("weka.core.BinarySparseInstance", 1, 0);
   }
 
-//  @Test
-//  public void testXml_XMLSerializationMethodHandler() {
-//    test("weka.core.xml.XMLSerializationMethodHandler", 0, 1);
-//  }
+  //  @Test
+  //  public void testXml_XMLSerializationMethodHandler() {
+  //    test("weka.core.xml.XMLSerializationMethodHandler", 0, 1);
+  //  }
 
   //    @Test
   //    public void testPmml_Apply() {

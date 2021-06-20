@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
 import org.memo.MeMo;
 import org.memo.extractor.JavadocComment;
 import org.memo.output.util.EquivalenceOutput;
@@ -13,8 +12,8 @@ import org.memo.output.util.ReturnTagOutput;
 import org.memo.output.util.TagOutput;
 
 /**
- * Represents MeMo precision/recall for a given Java element (for example, it can be a class or
- * a method). The Java element is only referred by its name and is used only to output the collected
+ * Represents MeMo precision/recall for a given Java element (for example, it can be a class or a
+ * method). The Java element is only referred by its name and is used only to output the collected
  * statistics.
  */
 public class Stats {
@@ -636,5 +635,21 @@ public class Stats {
               JavadocComment.Kind.FREETEXT));
     }
     return stats;
+  }
+
+  public int getCorrectEqTranslations() {
+    return correctEqTranslations;
+  }
+
+  public int getWrongEqTranslations() {
+    return wrongEqTranslations;
+  }
+
+  public int getUnexpectedEqTranslations() {
+    return unexpectedEqTranslations;
+  }
+
+  public int getMissingEqTranslations() {
+    return missingEqTranslations;
   }
 }

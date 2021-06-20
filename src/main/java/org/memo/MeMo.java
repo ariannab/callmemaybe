@@ -19,9 +19,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.impl.SimpleLogger;
 import org.memo.conf.Configuration;
 import org.memo.extractor.DocumentedExecutable;
 import org.memo.extractor.DocumentedType;
@@ -34,6 +31,9 @@ import org.memo.translator.semantic.SemanticMatcher;
 import org.memo.translator.spec.EqOperationSpecification;
 import org.memo.util.GsonInstance;
 import org.memo.util.Stats;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.impl.SimpleLogger;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.OperationSpecification;
 import randoop.condition.specification.Postcondition;
@@ -42,8 +42,8 @@ import randoop.condition.specification.Property;
 import randoop.condition.specification.ThrowsCondition;
 
 /**
- * Entry point of MeMo. {@code MeMo.main} is automatically executed running the command:
- * {@code java -jar memo.jar}.
+ * Entry point of MeMo. {@code MeMo.main} is automatically executed running the command: {@code java
+ * -jar memo.jar}.
  */
 public class MeMo {
 

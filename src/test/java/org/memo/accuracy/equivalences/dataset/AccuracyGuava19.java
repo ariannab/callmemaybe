@@ -85,15 +85,17 @@ public class AccuracyGuava19 extends AbstractPrecisionRecallTestSuite {
     test("com.google.common.collect.Iterators", 0.666, 0.666);
   }
 
-  @Test
-  public void testCollect_Multimap() {
-    test("com.google.common.collect.Multimap", 1, 1);
-  }
+  // In SBES15 already
+  //  @Test
+  //  public void testCollect_Multimap() {
+  //    test("com.google.common.collect.Multimap", 1, 1);
+  //  }
 
-  @Test
-  public void testCollect_Multiset() {
-    test("com.google.common.collect.Multiset", 0.666, 1);
-  }
+  // In SBES15 already
+  //  @Test
+  //  public void testCollect_Multiset() {
+  //    test("com.google.common.collect.Multiset", 0.666, 1);
+  //  }
 
   @Test
   public void testCollect_Multisets() {
@@ -133,10 +135,11 @@ public class AccuracyGuava19 extends AbstractPrecisionRecallTestSuite {
   //    test("com.google.common.collect.SortedLists", 1, 1);
   //  }
 
-  @Test
-  public void testCollect_SortedMultiset() {
-    test("com.google.common.collect.SortedMultiset", 1, 1);
-  }
+  // In SBES15 already
+  //  @Test
+  //  public void testCollect_SortedMultiset() {
+  //    test("com.google.common.collect.SortedMultiset", 1, 1);
+  //  }
 
   @Test
   public void testHash_Hasher() {

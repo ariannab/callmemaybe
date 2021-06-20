@@ -179,10 +179,10 @@ public class AccuracySBESGuava19 extends AbstractPrecisionRecallTestSuite {
   //  }
 
   // Unsure if contains equiv.
-//  @Test
-//  public void testCollect_Maps() {
-//    test("com.google.common.collect.Maps", 0, 1);
-//  }
+  //  @Test
+  //  public void testCollect_Maps() {
+  //    test("com.google.common.collect.Maps", 0, 1);
+  //  }
 
   @Test
   public void testCollect_Sets() {

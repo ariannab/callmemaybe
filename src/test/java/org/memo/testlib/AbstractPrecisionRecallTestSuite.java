@@ -45,8 +45,8 @@ public abstract class AbstractPrecisionRecallTestSuite {
   private final String goalOutputDirPath;
 
   /**
-   * Constructs and initializes a precision recall test suite that will test MeMo using the
-   * files in the given directories.
+   * Constructs and initializes a precision recall test suite that will test MeMo using the files in
+   * the given directories.
    *
    * @param sourceDirPath the path to the sources of the library to test
    * @param binDirPath the path to the binaries of the library to test
@@ -69,29 +69,47 @@ public abstract class AbstractPrecisionRecallTestSuite {
   @AfterClass
   public static void tearDown() {
 
-    System.out.println(
-        "Classifier classified: " + MeMo.configuration.ALL_SENTENCES + " sentences");
+    System.out.println("Classifier classified: " + MeMo.configuration.ALL_SENTENCES + " sentences");
 
     System.out.println(
         "=== Test Suite ==="
             + "\nNumber of conditions: "
             + testSuiteStats.getTotalNumConditions()
-//            + "\nAverage precision on @return: "
-//            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.RETURN))
-//            + "\nAverage recall on @return: "
-//            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.RETURN))
-//            + "\nAverage precision on @param: "
-//            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.PARAM))
-//            + "\nAverage recall on @param: "
-//            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.PARAM))
-//            + "\nAverage precision on @throws: "
-//            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.THROWS))
-//            + "\nAverage recall on @throws: "
-//            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.THROWS))
+            //            + "\nAverage precision on @return: "
+            //            + String.format("%.2f",
+            // testSuiteStats.getAvgPrecision(JavadocComment.Kind.RETURN))
+            //            + "\nAverage recall on @return: "
+            //            + String.format("%.2f",
+            // testSuiteStats.getAvgRecall(JavadocComment.Kind.RETURN))
+            //            + "\nAverage precision on @param: "
+            //            + String.format("%.2f",
+            // testSuiteStats.getAvgPrecision(JavadocComment.Kind.PARAM))
+            //            + "\nAverage recall on @param: "
+            //            + String.format("%.2f",
+            // testSuiteStats.getAvgRecall(JavadocComment.Kind.PARAM))
+            //            + "\nAverage precision on @throws: "
+            //            + String.format("%.2f",
+            // testSuiteStats.getAvgPrecision(JavadocComment.Kind.THROWS))
+            //            + "\nAverage recall on @throws: "
+            //            + String.format("%.2f",
+            // testSuiteStats.getAvgRecall(JavadocComment.Kind.THROWS))
+            + "\nCorrect translations: "
+            + testSuiteStats.getTotalCorrectTranslation()
+            + "\nWrong translations: "
+            + testSuiteStats.getTotalWrongTranslation()
+            + "\nMissing translations: "
+            + testSuiteStats.getTotalMissingTranslation()
+            + "\nUnexpected translations: "
+            + testSuiteStats.getTotalUnexpectedTranslation()
             + "\nAverage precision on Eq: "
-            + String.format("%.2f", testSuiteStats.getPrecision(JavadocComment.Kind.FREETEXT))
+            + String.format("%.2f", testSuiteStats.getAvgPrecision(JavadocComment.Kind.FREETEXT))
             + "\nAverage recall on Eq: "
-            + String.format("%.2f", testSuiteStats.getRecall(JavadocComment.Kind.FREETEXT)));
+            + String.format("%.2f", testSuiteStats.getAvgRecall(JavadocComment.Kind.FREETEXT))
+            + "\nOverall precision on Eq: "
+            + String.format(
+                "%.2f", testSuiteStats.getOverallPrecision(JavadocComment.Kind.FREETEXT))
+            + "\nOverall recall on Eq: "
+            + String.format("%.2f", testSuiteStats.getOverallRecall(JavadocComment.Kind.FREETEXT)));
   }
 
   /**

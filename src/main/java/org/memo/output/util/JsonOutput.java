@@ -79,8 +79,7 @@ public class JsonOutput {
 
     String returnTypeName = member.getExecutable().getAnnotatedReturnType().getType().getTypeName();
     this.returnType =
-        new org.memo.output.util.Type(
-            returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
+        new org.memo.output.util.Type(returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
 
     createParameters(member);
 

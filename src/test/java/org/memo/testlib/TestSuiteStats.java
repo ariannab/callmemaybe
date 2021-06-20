@@ -30,7 +30,7 @@ class TestSuiteStats {
    *
    * @return the average precision of the testStats
    */
-  double getPrecision(JavadocComment.Kind kind) {
+  double getAvgPrecision(JavadocComment.Kind kind) {
     final double sum = testStats.stream().mapToDouble(stats -> stats.getPrecision(kind)).sum();
     return sum / testStats.size();
   }
@@ -40,11 +40,24 @@ class TestSuiteStats {
    *
    * @return the average recall of the testStats
    */
-  double getRecall(JavadocComment.Kind kind) {
+  double getAvgRecall(JavadocComment.Kind kind) {
     final double sum = testStats.stream().mapToDouble(stats -> stats.getRecall(kind)).sum();
     return sum / testStats.size();
   }
 
+  double getOverallRecall(JavadocComment.Kind kind) {
+    return testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
+            / ((testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
+            + testStats.stream().mapToDouble(Stats::getWrongEqTranslations).sum()
+            + testStats.stream().mapToDouble(Stats::getMissingEqTranslations).sum()));
+  }
+
+  double getOverallPrecision(JavadocComment.Kind kind) {
+    return testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
+            / (testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
+            + testStats.stream().mapToDouble(Stats::getWrongEqTranslations).sum()
+            + testStats.stream().mapToDouble(Stats::getUnexpectedEqTranslations).sum());
+  }
   /**
    * Returns the total number of conditions in the testStats.
    *
@@ -53,4 +66,15 @@ class TestSuiteStats {
   int getTotalNumConditions() {
     return testStats.stream().mapToInt(Stats::numberOfConditions).sum();
   }
+
+  int getTotalCorrectTranslation() { return testStats.stream().mapToInt(Stats::getCorrectEqTranslations).sum(); }
+
+
+  int getTotalMissingTranslation() { return testStats.stream().mapToInt(Stats::getMissingEqTranslations).sum(); }
+
+
+  int getTotalWrongTranslation() { return testStats.stream().mapToInt(Stats::getWrongEqTranslations).sum(); }
+
+
+  int getTotalUnexpectedTranslation() { return testStats.stream().mapToInt(Stats::getUnexpectedEqTranslations).sum(); }
 }

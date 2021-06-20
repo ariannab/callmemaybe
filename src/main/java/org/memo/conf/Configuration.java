@@ -330,11 +330,11 @@ public enum Configuration {
   }
 
   /**
-   * Returns the expected output file to compare MeMo's output against, or null if no such file
-   * is specified.
+   * Returns the expected output file to compare MeMo's output against, or null if no such file is
+   * specified.
    *
-   * @return the expected output file to compare MeMo's output against, or null if no such file
-   *     is specified
+   * @return the expected output file to compare MeMo's output against, or null if no such file is
+   *     specified
    */
   public File getExpectedOutput() {
     return expectedOutput;
@@ -350,8 +350,8 @@ public enum Configuration {
   }
 
   /**
-   * Returns whether to use @tComment translation algorithm instead of the standard MeMo
-   * condition translator.
+   * Returns whether to use @tComment translation algorithm instead of the standard MeMo condition
+   * translator.
    *
    * @return true if @tComment has to be used, false otherwise
    */

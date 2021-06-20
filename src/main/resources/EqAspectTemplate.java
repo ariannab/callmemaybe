@@ -3,7 +3,6 @@ import static org.junit.Assert.fail;
 import com.rits.cloning.Cloner;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Around;
 
 @Aspect
 public class Aspect_Template {

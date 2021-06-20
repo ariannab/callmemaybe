@@ -19,7 +19,6 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import org.jetbrains.annotations.NotNull;
 import org.memo.conf.Configuration;
 import org.memo.extractor.DocumentedExecutable;
@@ -474,15 +473,12 @@ class Matcher {
       EquivalentMatch equivalentMethod,
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements) {
-    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();;
+    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
+    ;
 
     Match match =
         matchAccordingToArgs(
-            methodSignature,
-            equivalentMethod,
-            method,
-            sortedCodeElements,
-            myMethodParamTypes);
+            methodSignature, equivalentMethod, method, sortedCodeElements, myMethodParamTypes);
 
     return match;
   }
@@ -524,42 +520,48 @@ class Matcher {
         // doc. method,
         // and thus the match will have to be equivalentMatch(args[2])
         int actualIndex = docArgs.indexOf(eqArg);
-//        if(actualIndex!=-1)
-         rightIndexes.add(actualIndex);
+        //        if(actualIndex!=-1)
+        rightIndexes.add(actualIndex);
       }
-    } else{
-      // FIXME sometimes documentation is naive and will write a signature with no params altough they
-      // FIXME are needed. Make a selection based on what params the doc. method has and the candidate that
+    } else {
+      // FIXME sometimes documentation is naive and will write a signature with no params altough
+      // they
+      // FIXME are needed. Make a selection based on what params the doc. method has and the
+      // candidate that
       // FIXME has EXACTLY the same params. However they must be solved, and this part is not done.
-        Stream<CodeElement<?>> sameArgsCandidate =
-                sortedCodeElements
-                        .stream()
-                        .filter(
-                                x -> x instanceof MethodCodeElement &&
-                                        Arrays.equals(((MethodCodeElement) x).getArgs(), myParamTypes.toArray()));
+      Stream<CodeElement<?>> sameArgsCandidate =
+          sortedCodeElements
+              .stream()
+              .filter(
+                  x ->
+                      x instanceof MethodCodeElement
+                          && Arrays.equals(
+                              ((MethodCodeElement) x).getArgs(), myParamTypes.toArray()));
       Optional<CodeElement<?>> first = sameArgsCandidate.findFirst();
       if (first.isPresent()) {
         firstCodeMatch = first.get();
-        for(String arg : ((MethodCodeElement) firstCodeMatch).getArgs()){
+        for (String arg : ((MethodCodeElement) firstCodeMatch).getArgs()) {
           rightIndexes.add(docArgs.indexOf(arg));
         }
-      }else {
+      } else {
         // Else, in the equivalent signature there are no parameters! Filter candidates and pick the
         // first one!
         Stream<CodeElement<?>> noArgsCandidates =
-                sortedCodeElements
-                        .stream()
-                        .filter(
-                                x -> x instanceof MethodCodeElement && ((MethodCodeElement) x).getArgs() == null);
+            sortedCodeElements
+                .stream()
+                .filter(
+                    x ->
+                        x instanceof MethodCodeElement
+                            && ((MethodCodeElement) x).getArgs() == null);
 
         first = noArgsCandidates.findFirst();
         if (first.isPresent()) {
           firstCodeMatch = first.get();
           match =
-                  new Match(
-                          firstCodeMatch.getJavaExpression(),
-                          ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                          firstCodeMatch);
+              new Match(
+                  firstCodeMatch.getJavaExpression(),
+                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                  firstCodeMatch);
         }
         return match;
       }
@@ -587,17 +589,19 @@ class Matcher {
 
       if (currentMatchParamTypes != null
           && actualArgList != null
-          && currentMatchParamTypes.length == actualArgList.size() // FIXME what if Actual is flawed by imprecise doc.
+          && currentMatchParamTypes.length
+              == actualArgList.size() // FIXME what if Actual is flawed by imprecise doc.
           && (currentMatchParamTypes.length
-              <=  rightIndexes.stream().filter(c -> c!=-1).count()
-                  + constantParamsToIgnore.size()
-                  + codeElementsParams.size() ||
-              currentMatchParamTypes.length
-              <= myMethodParamTypes.length
-              + constantParamsToIgnore.size()
-              + codeElementsParams.size())) {
+                  <= rightIndexes.stream().filter(c -> c != -1).count()
+                      + constantParamsToIgnore.size()
+                      + codeElementsParams.size()
+              || currentMatchParamTypes.length
+                  <= myMethodParamTypes.length
+                      + constantParamsToIgnore.size()
+                      + codeElementsParams.size())) {
 
-        firstCodeMatch = getValidCodeMatch(
+        firstCodeMatch =
+            getValidCodeMatch(
                 paramForMatch,
                 receiver,
                 myParamTypes,
@@ -610,7 +614,9 @@ class Matcher {
                 typeParams);
       }
       if (firstCodeMatch != null) {
-        match = buildFinalEqMatch(firstCodeMatch,
+        match =
+            buildFinalEqMatch(
+                firstCodeMatch,
                 paramForMatch,
                 myMethodParamTypes,
                 currentMatchParamTypes,
@@ -628,13 +634,14 @@ class Matcher {
   }
 
   @NotNull
-  private Match buildFinalEqMatch(CodeElement<?> firstCodeMatch,
-                                  List<String> paramForMatch,
-                                  Parameter[] myMethodParamTypes,
-                                  String[] currentMatchParamTypes,
-                                  List<Integer> indexesToBeMatched,
-                                  Map<Integer, String> codeElementsParams,
-                                  Map<Integer, String> typeParams) {
+  private Match buildFinalEqMatch(
+      CodeElement<?> firstCodeMatch,
+      List<String> paramForMatch,
+      Parameter[] myMethodParamTypes,
+      String[] currentMatchParamTypes,
+      List<Integer> indexesToBeMatched,
+      Map<Integer, String> codeElementsParams,
+      Map<Integer, String> typeParams) {
     Match match;
     String exp = firstCodeMatch.getJavaExpression();
     if (firstCodeMatch instanceof MethodCodeElement) {
@@ -703,16 +710,16 @@ class Matcher {
   }
 
   private CodeElement<?> getValidCodeMatch(
-          List<String> paramForMatch,
-          String receiver,
-          List<String> myParamTypes,
-          String[] currentMatchParamTypes,
-          List<Integer> rightIndexes,
-          CodeElement<?> currentMatch,
-          List<Integer> indexesToBeMatched,
-          Map<Integer, String> constantParamsToIgnore,
-          Map<Integer, String> codeElementsParams,
-          Map<Integer, String> typeParams) {
+      List<String> paramForMatch,
+      String receiver,
+      List<String> myParamTypes,
+      String[] currentMatchParamTypes,
+      List<Integer> rightIndexes,
+      CodeElement<?> currentMatch,
+      List<Integer> indexesToBeMatched,
+      Map<Integer, String> constantParamsToIgnore,
+      Map<Integer, String> codeElementsParams,
+      Map<Integer, String> typeParams) {
     int filledSequence = 0;
     int indexCount = 0;
     CodeElement<?> firstCodeMatch = null;

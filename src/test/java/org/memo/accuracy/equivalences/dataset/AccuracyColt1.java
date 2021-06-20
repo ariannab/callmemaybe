@@ -5,10 +5,8 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
 
-  private static final String COLT_1_SRC =
-      "src/test/resources/src/colt-master/src";
-  private static final String COLT_1_BIN =
-      "src/test/resources/bin/colt-1.2.0.jar";
+  private static final String COLT_1_SRC = "src/test/resources/src/colt-master/src";
+  private static final String COLT_1_BIN = "src/test/resources/bin/colt-1.2.0.jar";
   private static final String COLT_1_GOAL_DIR = "expected-equivalences/colt";
 
   public AccuracyColt1() {

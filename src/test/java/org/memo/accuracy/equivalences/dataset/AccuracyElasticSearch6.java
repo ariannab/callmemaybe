@@ -84,10 +84,10 @@ public class AccuracyElasticSearch6 extends AbstractPrecisionRecallTestSuite {
     test("org.elasticsearch.common.util.concurrent.ThreadContext", 1, 1);
   }
 
-//  @Test
-//  public void testRecovery_RecoveryTarget() {
-//    test("org.elasticsearch.indices.recovery.RecoveryTarget", 1, 1);
-//  }
+  //  @Test
+  //  public void testRecovery_RecoveryTarget() {
+  //    test("org.elasticsearch.indices.recovery.RecoveryTarget", 1, 1);
+  //  }
 
   @Test
   public void testRest_RestRequest() {

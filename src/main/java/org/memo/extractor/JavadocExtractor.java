@@ -38,10 +38,10 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.jetbrains.annotations.NotNull;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.memo.conf.Configuration;
 import org.memo.util.Reflection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * {@code JavadocExtractor} extracts {@code DocumentedExecutable}s from a Java class by means of
@@ -139,7 +139,7 @@ public final class JavadocExtractor {
               || trimmedLine.startsWith("* @param")
               || trimmedLine.startsWith("* @return")
               || trimmedLine.startsWith("* @throws")
-                  || trimmedLine.startsWith("* @see")) {
+              || trimmedLine.startsWith("* @see")) {
             break;
           } else if (trimmedLine.startsWith("* ")) {
             parsedFreeText = parsedFreeText.concat(trimmedLine.substring(2)) + " ";
@@ -149,8 +149,7 @@ public final class JavadocExtractor {
 
       FreeText freeText =
           new FreeText(
-              org.memo.extractor.JavadocComment.Kind.FREETEXT,
-              new CommentContent(parsedFreeText));
+              org.memo.extractor.JavadocComment.Kind.FREETEXT, new CommentContent(parsedFreeText));
 
       documentedExecutables.add(
           new DocumentedExecutable(

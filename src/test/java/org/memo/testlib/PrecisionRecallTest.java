@@ -13,15 +13,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-
 import org.memo.MeMo;
 import org.memo.output.util.JsonOutput;
 import org.memo.util.GsonInstance;
 import org.memo.util.Stats;
 
-/**
- * PrecisionRecallTest contains static methods to perform a precision recall test using MeMo.
- */
+/** PrecisionRecallTest contains static methods to perform a precision recall test using MeMo. */
 class PrecisionRecallTest {
 
   /**
@@ -134,7 +131,7 @@ class PrecisionRecallTest {
     argsList.add("true");
     argsList.add("--disable-semantics");
     // Toggle to true to try out  MeMo without WMD (only n-grams match)
-    argsList.add("false");
+    argsList.add("true");
 
     final String translator = System.getProperty("org.memo.translator");
     if (translator != null && translator.equals("tcomment")) {

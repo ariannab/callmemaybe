@@ -14,13 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import org.apache.commons.lang3.tuple.Pair;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.memo.MeMo;
 import org.memo.extractor.DocumentedExecutable;
 import org.memo.translator.spec.EqOperationSpecification;
 import org.memo.translator.spec.EquivalenceSpec;
 import org.memo.util.Checks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import randoop.condition.specification.OperationSpecification;
 
 /**

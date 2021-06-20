@@ -5,10 +5,8 @@ import org.memo.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyGWT2 extends AbstractPrecisionRecallTestSuite {
 
-  private static final String GWT_2_SRC =
-      "src/test/resources/src/gwt-user-2.5.1-sources/";
-  private static final String GWT_2_BIN =
-      "src/test/resources/bin/gwt-user-2.5.1.jar";
+  private static final String GWT_2_SRC = "src/test/resources/src/gwt-user-2.5.1-sources/";
+  private static final String GWT_2_BIN = "src/test/resources/bin/gwt-user-2.5.1.jar";
   private static final String GWT_GOAL_DIR = "expected-equivalences/gwt";
 
   public AccuracyGWT2() {

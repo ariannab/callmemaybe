@@ -32,8 +32,8 @@ import org.memo.util.Reflection;
 public class FreeTextTranslator {
 
   /**
-   * Translates a free text comment if it contains a MR.
-   * This method calls the MR Finder and then the Translator.
+   * Translates a free text comment if it contains a MR. This method calls the MR Finder and then
+   * the Translator.
    *
    * @param excMember the executable member the comment belongs to
    * @param documentedType the type the member belongs to
@@ -808,6 +808,10 @@ public class FreeTextTranslator {
    * @return the extracted condition, if any
    */
   private String extractCondition(String text) {
+    if (text.contains("if extension is null")) {
+      System.out.println("DEBUG");
+    }
+
     java.util.regex.Matcher matchIf =
         Pattern.compile("\\b" + "(?i)if" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
     java.util.regex.Matcher matchWhen =
