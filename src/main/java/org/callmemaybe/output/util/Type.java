@@ -1,4 +1,4 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 /** Created by arianna on 28/06/17. */
 import java.util.Objects;

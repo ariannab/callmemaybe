@@ -1,6 +1,6 @@
-package org.memo.generator;
+package org.callmemaybe.generator;
 
-import static org.memo.MeMo.configuration;
+import static org.callmemaybe.CallMeMaybe.configuration;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
@@ -14,11 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import org.apache.commons.lang3.tuple.Pair;
-import org.memo.MeMo;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.translator.spec.EqOperationSpecification;
-import org.memo.translator.spec.EquivalenceSpec;
-import org.memo.util.Checks;
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.translator.spec.EqOperationSpecification;
+import org.callmemaybe.translator.spec.EquivalenceSpec;
+import org.callmemaybe.util.Checks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import randoop.condition.specification.OperationSpecification;
@@ -57,7 +57,7 @@ public class OracleGenerator {
     final String inputAspectPath = "/" + configuration.getJUnitTestCaseAspect();
     final String junitAspect = configuration.getJUnitTestCaseAspect();
     final String outputAspectPath = aspectsOutputDir + File.separator + junitAspect;
-    final String testClass = MeMo.configuration.getTestClass();
+    final String testClass = CallMeMaybe.configuration.getTestClass();
     final String withinDeclaration = " && within(" + testClass + ")";
     createJunitTestsAspect(inputAspectPath, outputAspectPath, withinDeclaration);
 

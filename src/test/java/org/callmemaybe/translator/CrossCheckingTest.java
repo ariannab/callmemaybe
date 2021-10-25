@@ -1,13 +1,13 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import org.junit.Test;
-import org.memo.MeMo;
+import org.callmemaybe.CallMeMaybe;
 
 public class CrossCheckingTest {
 
   @Test
   public void escape_CharEscaperTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.CharEscaper",
@@ -26,7 +26,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_ArrayBasedEscaperMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.ArrayBasedEscaperMap",
@@ -45,7 +45,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_ArrayBasedUnicodeEscaperTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.ArrayBasedUnicodeEscaper",
@@ -64,7 +64,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_CharEscaperBuilderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.CharEscaperBuilder",
@@ -83,7 +83,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_EscapersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.Escapers",
@@ -102,7 +102,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_PlatformTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.Platform",
@@ -121,7 +121,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_EscaperTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.Escaper",
@@ -140,7 +140,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_UnicodeEscaperTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.UnicodeEscaper",
@@ -159,7 +159,7 @@ public class CrossCheckingTest {
 
   @Test
   public void escape_ArrayBasedCharEscaperTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.escape.ArrayBasedCharEscaper",
@@ -178,7 +178,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_DiscreteDomainTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.DiscreteDomain",
@@ -197,7 +197,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_NullsLastOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.NullsLastOrdering",
@@ -216,7 +216,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSortedMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSortedMap",
@@ -235,7 +235,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredMultimapValuesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredMultimapValues",
@@ -255,7 +255,7 @@ public class CrossCheckingTest {
   // A couple of non-compatible return type.
   @Test
   public void collect_MultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Multiset",
@@ -274,7 +274,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_WellBehavedMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.WellBehavedMap",
@@ -293,7 +293,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ClassToInstanceMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ClassToInstanceMap",
@@ -312,7 +312,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractMapBasedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractMapBasedMultiset",
@@ -331,7 +331,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_CutTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Cut",
@@ -350,7 +350,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingConcurrentMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingConcurrentMap",
@@ -369,7 +369,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractBiMap",
@@ -388,7 +388,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractSetMultimap",
@@ -409,7 +409,7 @@ public class CrossCheckingTest {
   // This is equivalent to EnumSet.complementOf(java.util.EnumSet<E>)
   @Test
   public void collect_SetsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Sets",
@@ -428,7 +428,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SerializationTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Serialization",
@@ -447,7 +447,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MapConstraintTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MapConstraint",
@@ -466,7 +466,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MapConstraintsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MapConstraints",
@@ -485,7 +485,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingImmutableListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingImmutableList",
@@ -504,7 +504,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractRangeSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractRangeSet",
@@ -523,7 +523,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableAsListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableAsList",
@@ -542,7 +542,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedMultisetsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedMultisets",
@@ -561,7 +561,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_HashBasedTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.HashBasedTable",
@@ -580,7 +580,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EmptyImmutableSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EmptyImmutableSetMultimap",
@@ -599,7 +599,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSortedSetFauxverideShimTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSortedSetFauxverideShim",
@@ -618,7 +618,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_IterablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Iterables",
@@ -639,7 +639,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void collect_IteratorsTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.collect.Iterators",
   //            "--class-dir",
@@ -656,7 +656,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ConstraintsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Constraints",
@@ -675,7 +675,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_NullsFirstOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.NullsFirstOrdering",
@@ -694,7 +694,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSetMultimap",
@@ -713,7 +713,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingImmutableCollectionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingImmutableCollection",
@@ -732,7 +732,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularContiguousSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularContiguousSet",
@@ -751,7 +751,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableEnumSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableEnumSet",
@@ -770,7 +770,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingMultiset",
@@ -789,7 +789,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TreeMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TreeMultimap",
@@ -808,7 +808,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingSortedSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingSortedSetMultimap",
@@ -827,7 +827,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SynchronizedTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Synchronized",
@@ -846,7 +846,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_UnmodifiableIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.UnmodifiableIterator",
@@ -865,7 +865,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableSet",
@@ -884,7 +884,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_BinaryTreeTraverserTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.BinaryTreeTraverser",
@@ -903,7 +903,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_HashMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.HashMultiset",
@@ -922,7 +922,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_HashingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Hashing",
@@ -941,7 +941,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_LinkedHashMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.LinkedHashMultimap",
@@ -960,7 +960,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMapValuesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMapValues",
@@ -979,7 +979,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingMap",
@@ -998,7 +998,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MultimapBuilderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MultimapBuilder",
@@ -1017,7 +1017,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMultiset",
@@ -1036,7 +1036,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableEntryTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableEntry",
@@ -1055,7 +1055,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSet",
@@ -1074,7 +1074,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MapsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Maps",
@@ -1093,7 +1093,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingSetMultimap",
@@ -1112,7 +1112,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EmptyImmutableListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EmptyImmutableListMultimap",
@@ -1131,7 +1131,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_DescendingImmutableSortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.DescendingImmutableSortedMultiset",
@@ -1150,7 +1150,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingObjectTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingObject",
@@ -1169,7 +1169,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableBiMap",
@@ -1188,7 +1188,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ComputationExceptionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ComputationException",
@@ -1207,7 +1207,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingDequeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingDeque",
@@ -1226,7 +1226,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingSortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingSortedMultiset",
@@ -1245,7 +1245,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMapKeySetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMapKeySet",
@@ -1264,7 +1264,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ArrayListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ArrayListMultimap",
@@ -1283,7 +1283,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingNavigableMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingNavigableMap",
@@ -1302,7 +1302,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingImmutableSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingImmutableSet",
@@ -1321,7 +1321,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedSetMultimap",
@@ -1340,7 +1340,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedMapDifferenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedMapDifference",
@@ -1359,7 +1359,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ContiguousSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ContiguousSet",
@@ -1380,7 +1380,7 @@ public class CrossCheckingTest {
   // void clear() is equivalent to void remove(Range.all()).
   @Test
   public void collect_RangeSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RangeSet",
@@ -1399,7 +1399,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_Collections2Test() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Collections2",
@@ -1418,7 +1418,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_UsingToStringOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.UsingToStringOrdering",
@@ -1437,7 +1437,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSortedMultisetFauxverideShimTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSortedMultisetFauxverideShim",
@@ -1456,7 +1456,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingSortedSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingSortedSet",
@@ -1475,7 +1475,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableBiMap",
@@ -1494,7 +1494,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredSetMultimap",
@@ -1513,7 +1513,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedMultiset",
@@ -1532,7 +1532,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ExplicitOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ExplicitOrdering",
@@ -1551,7 +1551,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractSortedKeySortedSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractSortedKeySortedSetMultimap",
@@ -1570,7 +1570,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_QueuesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Queues",
@@ -1589,7 +1589,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractMultiset",
@@ -1608,7 +1608,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SingletonImmutableSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SingletonImmutableSet",
@@ -1627,7 +1627,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredKeySetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredKeySetMultimap",
@@ -1646,7 +1646,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ReverseNaturalOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ReverseNaturalOrdering",
@@ -1665,7 +1665,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredEntryMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredEntryMultimap",
@@ -1684,7 +1684,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredKeyListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredKeyListMultimap",
@@ -1703,7 +1703,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Table",
@@ -1722,7 +1722,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_InternersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Interners",
@@ -1741,7 +1741,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EnumBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EnumBiMap",
@@ -1760,7 +1760,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractNavigableMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractNavigableMap",
@@ -1779,7 +1779,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_NaturalOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.NaturalOrdering",
@@ -1798,7 +1798,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableMultiset",
@@ -1817,7 +1817,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ObjectArraysTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ObjectArrays",
@@ -1838,7 +1838,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void collect_TreeRangeMapTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.collect.TreeRangeMap",
   //            "--class-dir",
@@ -1855,7 +1855,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_CountTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Count",
@@ -1874,7 +1874,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_PeekingIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.PeekingIterator",
@@ -1893,7 +1893,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredEntrySetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredEntrySetMultimap",
@@ -1912,7 +1912,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingCollectionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingCollection",
@@ -1931,7 +1931,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractSequentialIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractSequentialIterator",
@@ -1950,7 +1950,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ArrayTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ArrayTable",
@@ -1969,7 +1969,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedIterableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedIterable",
@@ -1988,7 +1988,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableRangeSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableRangeSet",
@@ -2007,7 +2007,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TransformedListIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TransformedListIterator",
@@ -2026,7 +2026,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_LinkedListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.LinkedListMultimap",
@@ -2045,7 +2045,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ListsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Lists",
@@ -2064,7 +2064,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TreeBasedTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TreeBasedTable",
@@ -2083,7 +2083,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_InternerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Interner",
@@ -2102,7 +2102,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ComparatorOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ComparatorOrdering",
@@ -2121,7 +2121,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EvictingQueueTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EvictingQueue",
@@ -2140,7 +2140,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AllEqualOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AllEqualOrdering",
@@ -2159,7 +2159,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MapMakerInternalMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MapMakerInternalMap",
@@ -2178,7 +2178,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SingletonImmutableTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SingletonImmutableTable",
@@ -2197,7 +2197,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractIndexedListIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractIndexedListIterator",
@@ -2216,7 +2216,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_GenericMapMakerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.GenericMapMaker",
@@ -2235,7 +2235,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_HashBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.HashBiMap",
@@ -2254,7 +2254,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMapEntryTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMapEntry",
@@ -2274,7 +2274,7 @@ public class CrossCheckingTest {
   // A couple of code snippets and one particular similarity.
   @Test
   public void collect_MultisetsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Multisets",
@@ -2293,7 +2293,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableTable",
@@ -2312,7 +2312,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedMultisetBridgeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedMultisetBridge",
@@ -2331,7 +2331,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingMapEntryTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingMapEntry",
@@ -2350,7 +2350,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_BoundTypeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.BoundType",
@@ -2369,7 +2369,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMapEntrySetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMapEntrySet",
@@ -2388,7 +2388,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingListMultimap",
@@ -2407,7 +2407,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Tables",
@@ -2426,7 +2426,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ByFunctionOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ByFunctionOrdering",
@@ -2445,7 +2445,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedIterablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedIterables",
@@ -2464,7 +2464,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_PlatformTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Platform",
@@ -2483,7 +2483,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredKeyMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredKeyMultimap",
@@ -2502,7 +2502,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TreeRangeSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TreeRangeSet",
@@ -2521,7 +2521,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_CartesianListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.CartesianList",
@@ -2540,7 +2540,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_DescendingImmutableSortedSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.DescendingImmutableSortedSet",
@@ -2559,7 +2559,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableRangeMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableRangeMap",
@@ -2578,7 +2578,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableSortedSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableSortedSet",
@@ -2597,7 +2597,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ListMultimap",
@@ -2616,7 +2616,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableSortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableSortedMultiset",
@@ -2635,7 +2635,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingBlockingDequeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingBlockingDeque",
@@ -2654,7 +2654,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EnumHashBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EnumHashBiMap",
@@ -2673,7 +2673,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EmptyContiguousSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EmptyContiguousSet",
@@ -2692,7 +2692,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractMultimap",
@@ -2711,7 +2711,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TreeTraverserTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TreeTraverser",
@@ -2730,7 +2730,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MultimapsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Multimaps",
@@ -2749,7 +2749,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MinMaxPriorityQueueTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MinMaxPriorityQueue",
@@ -2768,7 +2768,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_DenseImmutableTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.DenseImmutableTable",
@@ -2787,7 +2787,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSortedMapFauxverideShimTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSortedMapFauxverideShim",
@@ -2806,7 +2806,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingIterator",
@@ -2825,7 +2825,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SetMultimap",
@@ -2847,7 +2847,7 @@ public class CrossCheckingTest {
   // (in the equals() method...)
   @Test
   public void collect_RangeMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RangeMap",
@@ -2866,7 +2866,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RangeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Range",
@@ -2885,7 +2885,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_FilteredMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.FilteredMultimap",
@@ -2904,7 +2904,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableAsListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableAsList",
@@ -2923,7 +2923,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_CompoundOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.CompoundOrdering",
@@ -2942,7 +2942,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingSortedMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingSortedMap",
@@ -2961,7 +2961,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableClassToInstanceMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableClassToInstanceMap",
@@ -2982,7 +2982,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void collect_FluentIterableTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.collect.FluentIterable",
   //            "--class-dir",
@@ -2999,7 +2999,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_LexicographicalOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.LexicographicalOrdering",
@@ -3018,7 +3018,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractTable",
@@ -3037,7 +3037,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ConstraintTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Constraint",
@@ -3056,7 +3056,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TransformedIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TransformedIterator",
@@ -3075,7 +3075,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SortedListsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SortedLists",
@@ -3094,7 +3094,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableList",
@@ -3113,7 +3113,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractIterator",
@@ -3132,7 +3132,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_CollectPreconditionsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.CollectPreconditions",
@@ -3151,7 +3151,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SingletonImmutableBiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SingletonImmutableBiMap",
@@ -3170,7 +3170,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RowSortedTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RowSortedTable",
@@ -3189,7 +3189,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingImmutableMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingImmutableMap",
@@ -3208,7 +3208,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingNavigableSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingNavigableSet",
@@ -3227,7 +3227,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ComparisonChainTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ComparisonChain",
@@ -3246,7 +3246,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_UnmodifiableListIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.UnmodifiableListIterator",
@@ -3265,7 +3265,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractListMultimap",
@@ -3285,7 +3285,7 @@ public class CrossCheckingTest {
   // A couple of chain of calls and links to external systems (java.util).
   @Test
   public void collect_OrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Ordering",
@@ -3304,7 +3304,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ReverseOrderingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ReverseOrdering",
@@ -3323,7 +3323,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ConsumingQueueIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ConsumingQueueIterator",
@@ -3342,7 +3342,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractSortedSetMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractSortedSetMultimap",
@@ -3361,7 +3361,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_EnumMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.EnumMultiset",
@@ -3380,7 +3380,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingTable",
@@ -3399,7 +3399,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableEnumMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableEnumMap",
@@ -3418,7 +3418,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingMultimap",
@@ -3437,7 +3437,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SparseImmutableTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SparseImmutableTable",
@@ -3456,7 +3456,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_TreeMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.TreeMultiset",
@@ -3475,7 +3475,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingSetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingSet",
@@ -3497,7 +3497,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void collect_ImmutableListTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.collect.ImmutableList",
   //            "--class-dir",
@@ -3514,7 +3514,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_HashMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.HashMultimap",
@@ -3533,7 +3533,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableMap",
@@ -3552,7 +3552,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_LinkedHashMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.LinkedHashMultiset",
@@ -3571,7 +3571,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_DescendingMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.DescendingMultiset",
@@ -3590,7 +3590,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ConcurrentHashMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ConcurrentHashMultiset",
@@ -3609,7 +3609,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMap",
@@ -3628,7 +3628,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableCollectionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableCollection",
@@ -3647,7 +3647,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableListMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableListMultimap",
@@ -3666,7 +3666,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableMultimap",
@@ -3685,7 +3685,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MutableClassToInstanceMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MutableClassToInstanceMap",
@@ -3704,7 +3704,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_UnmodifiableSortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.UnmodifiableSortedMultiset",
@@ -3723,7 +3723,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_StandardRowSortedTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.StandardRowSortedTable",
@@ -3742,7 +3742,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingListIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingListIterator",
@@ -3761,7 +3761,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSortedAsListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSortedAsList",
@@ -3780,7 +3780,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_BiMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.BiMap",
@@ -3799,7 +3799,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingList",
@@ -3818,7 +3818,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ForwardingQueueTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ForwardingQueue",
@@ -3837,7 +3837,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ImmutableSortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ImmutableSortedMultiset",
@@ -3856,7 +3856,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_RegularImmutableTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.RegularImmutableTable",
@@ -3875,7 +3875,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_ComputingConcurrentHashMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.ComputingConcurrentHashMap",
@@ -3894,7 +3894,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Multimap",
@@ -3913,7 +3913,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MapDifferenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MapDifference",
@@ -3932,7 +3932,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_GeneralRangeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.GeneralRange",
@@ -3951,7 +3951,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractSortedMultisetTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractSortedMultiset",
@@ -3972,7 +3972,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void collect_ImmutableSortedSetTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.collect.ImmutableSortedSet",
   //            "--class-dir",
@@ -3989,7 +3989,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_SingletonImmutableListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.SingletonImmutableList",
@@ -4008,7 +4008,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_StandardTableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.StandardTable",
@@ -4027,7 +4027,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_MapMakerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.MapMaker",
@@ -4046,7 +4046,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractMapBasedMultimapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractMapBasedMultimap",
@@ -4065,7 +4065,7 @@ public class CrossCheckingTest {
 
   @Test
   public void collect_AbstractMapEntryTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.AbstractMapEntry",
@@ -4084,7 +4084,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_EventBusTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.EventBus",
@@ -4103,7 +4103,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_DeadEventTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.DeadEvent",
@@ -4122,7 +4122,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_SubscriberTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.Subscriber",
@@ -4141,7 +4141,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_SubscriberRegistryTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.SubscriberRegistry",
@@ -4160,7 +4160,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_AsyncEventBusTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.AsyncEventBus",
@@ -4179,7 +4179,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_SubscriberExceptionContextTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.SubscriberExceptionContext",
@@ -4198,7 +4198,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_SubscriberExceptionHandlerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.SubscriberExceptionHandler",
@@ -4217,7 +4217,7 @@ public class CrossCheckingTest {
 
   @Test
   public void eventbus_DispatcherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.eventbus.Dispatcher",
@@ -4236,7 +4236,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_PercentEscaperTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.PercentEscaper",
@@ -4255,7 +4255,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_UrlEscapersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.UrlEscapers",
@@ -4274,7 +4274,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_InternetDomainNameTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.InternetDomainName",
@@ -4293,7 +4293,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_HttpHeadersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.HttpHeaders",
@@ -4312,7 +4312,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_MediaTypeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.MediaType",
@@ -4331,7 +4331,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_InetAddressesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.InetAddresses",
@@ -4350,7 +4350,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_HostAndPortTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.HostAndPort",
@@ -4369,7 +4369,7 @@ public class CrossCheckingTest {
 
   @Test
   public void net_HostSpecifierTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.net.HostSpecifier",
@@ -4388,7 +4388,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_LocalCacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.LocalCache",
@@ -4407,7 +4407,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_LongAdderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.LongAdder",
@@ -4426,7 +4426,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_RemovalNotificationTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.RemovalNotification",
@@ -4445,7 +4445,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_CacheStatsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.CacheStats",
@@ -4464,7 +4464,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_CacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.Cache",
@@ -4483,7 +4483,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_WeigherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.Weigher",
@@ -4502,7 +4502,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_RemovalListenersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.RemovalListeners",
@@ -4521,7 +4521,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_LoadingCacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.LoadingCache",
@@ -4540,7 +4540,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_AbstractCacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.AbstractCache",
@@ -4559,7 +4559,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_CacheLoaderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.CacheLoader",
@@ -4578,7 +4578,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_ForwardingLoadingCacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.ForwardingLoadingCache",
@@ -4597,7 +4597,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_LongAddableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.LongAddable",
@@ -4616,7 +4616,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_CacheBuilderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.CacheBuilder",
@@ -4635,7 +4635,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_CacheBuilderSpecTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.CacheBuilderSpec",
@@ -4654,7 +4654,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_LongAddablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.LongAddables",
@@ -4673,7 +4673,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_RemovalListenerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.RemovalListener",
@@ -4692,7 +4692,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_AbstractLoadingCacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.AbstractLoadingCache",
@@ -4711,7 +4711,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_RemovalCauseTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.RemovalCause",
@@ -4730,7 +4730,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_ForwardingCacheTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.ForwardingCache",
@@ -4749,7 +4749,7 @@ public class CrossCheckingTest {
 
   @Test
   public void cache_Striped64Test() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.cache.Striped64",
@@ -4768,7 +4768,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ForwardingListenableFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ForwardingListenableFuture",
@@ -4787,7 +4787,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_RunnablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Runnables",
@@ -4806,7 +4806,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AggregateFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AggregateFuture",
@@ -4825,7 +4825,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AtomicDoubleArrayTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AtomicDoubleArray",
@@ -4844,7 +4844,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_SimpleTimeLimiterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.SimpleTimeLimiter",
@@ -4863,7 +4863,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ForwardingCheckedFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ForwardingCheckedFuture",
@@ -4883,7 +4883,7 @@ public class CrossCheckingTest {
   // Not sure how to interpret the equivalence I found here
   @Test
   public void concurrent_MoreExecutorsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.MoreExecutors",
@@ -4902,7 +4902,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ServiceManagerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ServiceManager",
@@ -4921,7 +4921,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_TimeLimiterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.TimeLimiter",
@@ -4940,7 +4940,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractScheduledServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractScheduledService",
@@ -4959,7 +4959,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_FakeTimeLimiterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.FakeTimeLimiter",
@@ -4978,7 +4978,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AtomicDoubleTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AtomicDouble",
@@ -4997,7 +4997,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ForwardingFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ForwardingFuture",
@@ -5016,7 +5016,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_SettableFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.SettableFuture",
@@ -5035,7 +5035,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AtomicsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Atomics",
@@ -5054,7 +5054,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_WrappingExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.WrappingExecutorService",
@@ -5073,7 +5073,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ExecutionListTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ExecutionList",
@@ -5092,7 +5092,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AsyncFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AsyncFunction",
@@ -5111,7 +5111,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_SmoothRateLimiterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.SmoothRateLimiter",
@@ -5130,7 +5130,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_SerializingExecutorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.SerializingExecutor",
@@ -5149,7 +5149,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractCheckedFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractCheckedFuture",
@@ -5168,7 +5168,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_GwtFuturesCatchingSpecializationTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.GwtFuturesCatchingSpecialization",
@@ -5188,7 +5188,7 @@ public class CrossCheckingTest {
   // These all look like false positives...
   @Test
   public void concurrent_JdkFutureAdaptersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.JdkFutureAdapters",
@@ -5207,7 +5207,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_InterruptibleTaskTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.InterruptibleTask",
@@ -5226,7 +5226,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ListenableScheduledFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ListenableScheduledFuture",
@@ -5245,7 +5245,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_UninterruptiblesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Uninterruptibles",
@@ -5264,7 +5264,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractListeningExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractListeningExecutorService",
@@ -5283,7 +5283,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractFuture",
@@ -5302,7 +5302,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ForwardingBlockingQueueTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ForwardingBlockingQueue",
@@ -5321,7 +5321,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_CollectionFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.CollectionFuture",
@@ -5340,7 +5340,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_TrustedListenableFutureTaskTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.TrustedListenableFutureTask",
@@ -5359,7 +5359,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_WrappingScheduledExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.WrappingScheduledExecutorService",
@@ -5378,7 +5378,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_RateLimiterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.RateLimiter",
@@ -5397,7 +5397,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractExecutionThreadServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractExecutionThreadService",
@@ -5416,7 +5416,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ThreadFactoryBuilderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ThreadFactoryBuilder",
@@ -5435,7 +5435,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AtomicLongMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AtomicLongMap",
@@ -5454,7 +5454,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_FutureCallbackTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.FutureCallback",
@@ -5473,7 +5473,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_UncaughtExceptionHandlersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.UncaughtExceptionHandlers",
@@ -5492,7 +5492,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_PlatformTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Platform",
@@ -5511,7 +5511,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractService",
@@ -5530,7 +5530,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ForwardingExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ForwardingExecutorService",
@@ -5549,7 +5549,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_CycleDetectingLockFactoryTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.CycleDetectingLockFactory",
@@ -5568,7 +5568,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Service",
@@ -5587,7 +5587,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AggregateFutureStateTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AggregateFutureState",
@@ -5606,7 +5606,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ListeningScheduledExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ListeningScheduledExecutorService",
@@ -5625,7 +5625,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_UncheckedTimeoutExceptionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.UncheckedTimeoutException",
@@ -5644,7 +5644,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ExecutionErrorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ExecutionError",
@@ -5663,7 +5663,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_CallablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Callables",
@@ -5682,7 +5682,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_FuturesGetCheckedTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.FuturesGetChecked",
@@ -5701,7 +5701,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_AbstractIdleServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.AbstractIdleService",
@@ -5720,7 +5720,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_FutureFallbackTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.FutureFallback",
@@ -5739,7 +5739,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_StripedTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Striped",
@@ -5758,7 +5758,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_FuturesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Futures",
@@ -5777,7 +5777,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ForwardingListeningExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ForwardingListeningExecutorService",
@@ -5796,7 +5796,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ListenableFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ListenableFuture",
@@ -5815,7 +5815,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_MonitorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.Monitor",
@@ -5834,7 +5834,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ListenableFutureTaskTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ListenableFutureTask",
@@ -5853,7 +5853,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ListenerCallQueueTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ListenerCallQueue",
@@ -5872,7 +5872,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_UncheckedExecutionExceptionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.UncheckedExecutionException",
@@ -5891,7 +5891,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_ListeningExecutorServiceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.ListeningExecutorService",
@@ -5910,7 +5910,7 @@ public class CrossCheckingTest {
 
   @Test
   public void concurrent_CheckedFutureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.util.concurrent.CheckedFuture",
@@ -5929,7 +5929,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_ChecksumHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.ChecksumHashFunction",
@@ -5948,7 +5948,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_SipHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.SipHashFunction",
@@ -5967,7 +5967,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_AbstractStreamingHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.AbstractStreamingHashFunction",
@@ -5988,7 +5988,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void hash_HashingTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.hash.Hashing",
   //            "--class-dir",
@@ -6005,7 +6005,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_Crc32cHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.Crc32cHashFunction",
@@ -6024,7 +6024,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_HashCodeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.HashCode",
@@ -6043,7 +6043,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_FunnelTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.Funnel",
@@ -6062,7 +6062,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_HashingOutputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.HashingOutputStream",
@@ -6081,7 +6081,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_PrimitiveSinkTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.PrimitiveSink",
@@ -6100,7 +6100,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_AbstractByteHasherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.AbstractByteHasher",
@@ -6119,7 +6119,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_Murmur3_128HashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.Murmur3_128HashFunction",
@@ -6138,7 +6138,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_BloomFilterStrategiesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.BloomFilterStrategies",
@@ -6157,7 +6157,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_Murmur3_32HashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.Murmur3_32HashFunction",
@@ -6176,7 +6176,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_FunnelsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.Funnels",
@@ -6195,7 +6195,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_AbstractCompositeHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.AbstractCompositeHashFunction",
@@ -6214,7 +6214,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_MessageDigestHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.MessageDigestHashFunction",
@@ -6233,7 +6233,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_HasherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.Hasher",
@@ -6252,7 +6252,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_HashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.HashFunction",
@@ -6271,7 +6271,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_BloomFilterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.BloomFilter",
@@ -6290,7 +6290,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_HashingInputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.HashingInputStream",
@@ -6309,7 +6309,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_AbstractHasherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.AbstractHasher",
@@ -6328,7 +6328,7 @@ public class CrossCheckingTest {
 
   @Test
   public void hash_AbstractNonStreamingHashFunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.hash.AbstractNonStreamingHashFunction",
@@ -6347,7 +6347,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_ClassPathTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.ClassPath",
@@ -6366,7 +6366,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_ElementTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.Element",
@@ -6385,7 +6385,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_ParameterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.Parameter",
@@ -6404,7 +6404,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_ReflectionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.Reflection",
@@ -6423,7 +6423,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_TypeVisitorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.TypeVisitor",
@@ -6442,7 +6442,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_ImmutableTypeToInstanceMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.ImmutableTypeToInstanceMap",
@@ -6461,7 +6461,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_MutableTypeToInstanceMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.MutableTypeToInstanceMap",
@@ -6481,7 +6481,7 @@ public class CrossCheckingTest {
   // Only undefined parameters
   @Test
   public void reflect_TypeToInstanceMapTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.TypeToInstanceMap",
@@ -6500,7 +6500,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_TypeParameterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.TypeParameter",
@@ -6519,7 +6519,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_TypeCaptureTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.TypeCapture",
@@ -6538,7 +6538,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_TypeResolverTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.TypeResolver",
@@ -6557,7 +6557,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_TypesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.Types",
@@ -6576,7 +6576,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_InvokableTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.Invokable",
@@ -6595,7 +6595,7 @@ public class CrossCheckingTest {
 
   @Test
   public void reflect_AbstractInvocationHandlerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.reflect.AbstractInvocationHandler",
@@ -6617,7 +6617,7 @@ public class CrossCheckingTest {
   // there are ways to convert iterable to iterator, though I'm not sure...
   @Test
   public void io_CharSourceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.CharSource",
@@ -6636,7 +6636,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CharSinkTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.CharSink",
@@ -6655,7 +6655,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_AppendableWriterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.AppendableWriter",
@@ -6674,7 +6674,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_MultiReaderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.MultiReader",
@@ -6693,7 +6693,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_MultiInputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.MultiInputStream",
@@ -6712,7 +6712,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_ByteSinkTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.ByteSink",
@@ -6731,7 +6731,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_ByteArrayDataOutputTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.ByteArrayDataOutput",
@@ -6750,7 +6750,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CloserTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.Closer",
@@ -6769,7 +6769,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_OutputSupplierTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.OutputSupplier",
@@ -6788,7 +6788,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_PatternFilenameFilterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.PatternFilenameFilter",
@@ -6807,7 +6807,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CloseablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.Closeables",
@@ -6826,7 +6826,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_BaseEncodingTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.BaseEncoding",
@@ -6845,7 +6845,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_LineBufferTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.LineBuffer",
@@ -6864,7 +6864,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_FilesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.Files",
@@ -6883,7 +6883,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CharStreamsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.CharStreams",
@@ -6902,7 +6902,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_ResourcesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.Resources",
@@ -6921,7 +6921,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_ByteArrayDataInputTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.ByteArrayDataInput",
@@ -6940,7 +6940,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_FileWriteModeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.FileWriteMode",
@@ -6959,7 +6959,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_ByteStreamsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.ByteStreams",
@@ -6980,7 +6980,7 @@ public class CrossCheckingTest {
   // Equivalent to calling flush(flushable, true), but with no IOException in the signature.
   @Test
   public void io_FlushablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.Flushables",
@@ -6999,7 +6999,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CountingOutputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.CountingOutputStream",
@@ -7018,7 +7018,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CountingInputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.CountingInputStream",
@@ -7040,7 +7040,7 @@ public class CrossCheckingTest {
   // there are ways to convert iterable to iterator, though I'm not sure...
   @Test
   public void io_ByteSourceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.ByteSource",
@@ -7059,7 +7059,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_LittleEndianDataInputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.LittleEndianDataInputStream",
@@ -7078,7 +7078,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_LineProcessorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.LineProcessor",
@@ -7097,7 +7097,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_InputSupplierTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.InputSupplier",
@@ -7116,7 +7116,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_FileBackedOutputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.FileBackedOutputStream",
@@ -7135,7 +7135,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_LineReaderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.LineReader",
@@ -7154,7 +7154,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_LittleEndianDataOutputStreamTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.LittleEndianDataOutputStream",
@@ -7173,7 +7173,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_ByteProcessorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.ByteProcessor",
@@ -7192,7 +7192,7 @@ public class CrossCheckingTest {
 
   @Test
   public void io_CharSequenceReaderTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.io.CharSequenceReader",
@@ -7211,7 +7211,7 @@ public class CrossCheckingTest {
 
   @Test
   public void html_HtmlEscapersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.html.HtmlEscapers",
@@ -7230,7 +7230,7 @@ public class CrossCheckingTest {
 
   @Test
   public void math_LongMathTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.math.LongMath",
@@ -7249,7 +7249,7 @@ public class CrossCheckingTest {
 
   @Test
   public void math_IntMathTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.math.IntMath",
@@ -7268,7 +7268,7 @@ public class CrossCheckingTest {
 
   @Test
   public void math_MathPreconditionsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.math.MathPreconditions",
@@ -7287,7 +7287,7 @@ public class CrossCheckingTest {
 
   @Test
   public void math_BigIntegerMathTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.math.BigIntegerMath",
@@ -7306,7 +7306,7 @@ public class CrossCheckingTest {
 
   @Test
   public void math_DoubleMathTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.math.DoubleMath",
@@ -7325,7 +7325,7 @@ public class CrossCheckingTest {
 
   @Test
   public void math_DoubleUtilsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.math.DoubleUtils",
@@ -7344,7 +7344,7 @@ public class CrossCheckingTest {
 
   @Test
   public void xml_XmlEscapersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.xml.XmlEscapers",
@@ -7363,7 +7363,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_FloatsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Floats",
@@ -7382,7 +7382,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_BooleansTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Booleans",
@@ -7401,7 +7401,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_UnsignedLongsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.UnsignedLongs",
@@ -7420,7 +7420,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_ShortsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Shorts",
@@ -7439,7 +7439,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_SignedBytesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.SignedBytes",
@@ -7458,7 +7458,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_DoublesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Doubles",
@@ -7477,7 +7477,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_BytesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Bytes",
@@ -7496,7 +7496,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_UnsignedIntsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.UnsignedInts",
@@ -7515,7 +7515,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_UnsignedLongTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.UnsignedLong",
@@ -7534,7 +7534,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_IntsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Ints",
@@ -7553,7 +7553,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_UnsignedBytesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.UnsignedBytes",
@@ -7572,7 +7572,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_CharsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Chars",
@@ -7591,7 +7591,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_PrimitivesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Primitives",
@@ -7610,7 +7610,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_UnsignedIntegerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.UnsignedInteger",
@@ -7629,7 +7629,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_ParseRequestTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.ParseRequest",
@@ -7648,7 +7648,7 @@ public class CrossCheckingTest {
 
   @Test
   public void primitives_LongsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.primitives.Longs",
@@ -7667,7 +7667,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_PreconditionsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Preconditions",
@@ -7686,7 +7686,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_JoinerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Joiner",
@@ -7705,7 +7705,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_AsciiTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Ascii",
@@ -7724,7 +7724,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_StandardSystemPropertyTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.StandardSystemProperty",
@@ -7743,7 +7743,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_EnumsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Enums",
@@ -7764,7 +7764,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void base_PairwiseEquivalenceTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.base.PairwiseEquivalence",
   //            "--class-dir",
@@ -7781,7 +7781,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_SuppliersTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Suppliers",
@@ -7800,7 +7800,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FunctionsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Functions",
@@ -7819,7 +7819,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_ObjectsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Objects",
@@ -7840,7 +7840,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void base_OptionalTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.base.Optional",
   //            "--class-dir",
@@ -7857,7 +7857,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_StopwatchTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Stopwatch",
@@ -7876,7 +7876,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_CharsetsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Charsets",
@@ -7895,7 +7895,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FinalizableSoftReferenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.FinalizableSoftReference",
@@ -7914,7 +7914,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_StringsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Strings",
@@ -7933,7 +7933,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_SupplierTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Supplier",
@@ -7952,7 +7952,7 @@ public class CrossCheckingTest {
 
   @Test
   public void internal_FinalizerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.internal.Finalizer",
@@ -7971,7 +7971,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FinalizableReferenceQueueTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.FinalizableReferenceQueue",
@@ -7990,7 +7990,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_MoreObjectsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.MoreObjects",
@@ -8009,7 +8009,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_Utf8Test() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Utf8",
@@ -8028,7 +8028,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_PredicateTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Predicate",
@@ -8047,7 +8047,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_ThrowablesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Throwables",
@@ -8066,7 +8066,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_ConverterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Converter",
@@ -8085,7 +8085,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_PlatformTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Platform",
@@ -8106,7 +8106,7 @@ public class CrossCheckingTest {
 
   //  @Test
   //  public void base_EquivalenceTest() {
-  //    MeMo.main( new String[] {
+  //    CallMeMaybe.main( new String[] {
   //            "--target-class",
   //            "com.google.common.base.Equivalence",
   //            "--class-dir",
@@ -8123,7 +8123,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_PresentTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Present",
@@ -8142,7 +8142,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_VerifyExceptionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.VerifyException",
@@ -8161,7 +8161,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FunctionalEquivalenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.FunctionalEquivalence",
@@ -8180,7 +8180,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_SplitterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Splitter",
@@ -8199,7 +8199,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_CharMatcherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.CharMatcher",
@@ -8218,7 +8218,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_PredicatesTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Predicates",
@@ -8237,7 +8237,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_AbstractIteratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.AbstractIterator",
@@ -8256,7 +8256,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FinalizableReferenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.FinalizableReference",
@@ -8275,7 +8275,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_VerifyTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Verify",
@@ -8294,7 +8294,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_DefaultsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Defaults",
@@ -8313,7 +8313,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FinalizableWeakReferenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.FinalizableWeakReference",
@@ -8332,7 +8332,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_TickerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Ticker",
@@ -8351,7 +8351,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_AbsentTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Absent",
@@ -8370,7 +8370,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FunctionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.Function",
@@ -8389,7 +8389,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_FinalizablePhantomReferenceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.FinalizablePhantomReference",
@@ -8408,7 +8408,7 @@ public class CrossCheckingTest {
 
   @Test
   public void base_SmallCharMatcherTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.base.SmallCharMatcher",
@@ -8427,7 +8427,7 @@ public class CrossCheckingTest {
 
   @Test
   public void publicsuffix_PublicSuffixPatternsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.thirdparty.publicsuffix.PublicSuffixPatterns",
@@ -8446,7 +8446,7 @@ public class CrossCheckingTest {
 
   @Test
   public void publicsuffix_PublicSuffixTypeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.thirdparty.publicsuffix.PublicSuffixType",
@@ -8465,7 +8465,7 @@ public class CrossCheckingTest {
 
   @Test
   public void publicsuffix_TrieParserTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.thirdparty.publicsuffix.TrieParser",

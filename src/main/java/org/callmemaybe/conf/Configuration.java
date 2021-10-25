@@ -1,4 +1,4 @@
-package org.memo.conf;
+package org.callmemaybe.conf;
 
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.converters.FileConverter;
@@ -8,7 +8,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.List;
 
-/** Holds the configuration options (particularly command-line options) for MeMo. */
+/** Holds the configuration options (particularly command-line options) for CallMeMaybe. */
 @SuppressWarnings("ImmutableEnumChecker")
 public enum Configuration {
   INSTANCE;
@@ -26,7 +26,7 @@ public enum Configuration {
 
   @Parameter(
       names = "--target-class",
-      description = "Fully-qualified name of the class that MeMo should analyze",
+      description = "Fully-qualified name of the class that CallMeMaybe should analyze",
       required = true)
   private String targetClass;
 
@@ -57,7 +57,7 @@ public enum Configuration {
 
   @Parameter(
       names = "--stats-file",
-      description = "File path to export MeMo statistics in CSV format",
+      description = "File path to export CallMeMaybe statistics in CSV format",
       converter = FileConverter.class)
   private File statsFile;
 
@@ -69,7 +69,7 @@ public enum Configuration {
 
   @Parameter(
       names = "--stop-on-error",
-      description = "MeMo stops when there is an error in the being-analyzed Javadoc")
+      description = "CallMeMaybe stops when there is an error in the being-analyzed Javadoc")
   public boolean stopOnError = false;
 
   // Javadoc extractor options
@@ -122,7 +122,7 @@ public enum Configuration {
       names = "--expected-output",
       description =
           "Condition extractor expected output file used to compute statistics about "
-              + "MeMo's performance. Statistics are computed only if a valid expected output file"
+              + "CallMeMaybe's performance. Statistics are computed only if a valid expected output file"
               + " is provided",
       converter = FileConverter.class,
       hidden = true)
@@ -169,7 +169,7 @@ public enum Configuration {
 
   @Parameter(
       names = "--aspects-output-dir",
-      description = "Specifies a directory where MeMo will output aspects")
+      description = "Specifies a directory where CallMeMaybe will output aspects")
   private String aspectsOutputDir = "aspects";
 
   /** File used as template for generated aspects. */
@@ -218,9 +218,9 @@ public enum Configuration {
   }
 
   /**
-   * Returns the fully-qualified name of the target class to analyze with MeMo.
+   * Returns the fully-qualified name of the target class to analyze with CallMeMaybe.
    *
-   * @return the fully-qualified name of the target class to analyze with MeMo
+   * @return the fully-qualified name of the target class to analyze with CallMeMaybe
    */
   public String getTargetClass() {
     return targetClass;
@@ -321,7 +321,7 @@ public enum Configuration {
   }
 
   /**
-   * Returns the cost of removing a word. This is used in MeMo's edit distance algorithm.
+   * Returns the cost of removing a word. This is used in CallMeMaybe's edit distance algorithm.
    *
    * @return the cost of removing a word
    */
@@ -330,10 +330,10 @@ public enum Configuration {
   }
 
   /**
-   * Returns the expected output file to compare MeMo's output against, or null if no such file is
+   * Returns the expected output file to compare CallMeMaybe's output against, or null if no such file is
    * specified.
    *
-   * @return the expected output file to compare MeMo's output against, or null if no such file is
+   * @return the expected output file to compare CallMeMaybe's output against, or null if no such file is
    *     specified
    */
   public File getExpectedOutput() {
@@ -341,16 +341,16 @@ public enum Configuration {
   }
 
   /**
-   * Returns the file in which to export MeMo statistics in CSV format.
+   * Returns the file in which to export CallMeMaybe statistics in CSV format.
    *
-   * @return the file in which to export MeMo statistics in CSV format
+   * @return the file in which to export CallMeMaybe statistics in CSV format
    */
   public File getStatsFile() {
     return statsFile;
   }
 
   /**
-   * Returns whether to use @tComment translation algorithm instead of the standard MeMo condition
+   * Returns whether to use @tComment translation algorithm instead of the standard CallMeMaybe condition
    * translator.
    *
    * @return true if @tComment has to be used, false otherwise
@@ -360,16 +360,16 @@ public enum Configuration {
   }
 
   /**
-   * Returns the file where to export MeMo generated specifications as Randoop specifications.
+   * Returns the file where to export CallMeMaybe generated specifications as Randoop specifications.
    *
-   * @return the file where to export MeMo generated specifications as Randoop specifications
+   * @return the file where to export CallMeMaybe generated specifications as Randoop specifications
    */
   public File randoopSpecsFile() {
     return randoopSpecs;
   }
 
   /**
-   * Returns whether MeMo uses semantic matching when translating conditions. If false, classic
+   * Returns whether CallMeMaybe uses semantic matching when translating conditions. If false, classic
    * syntactic matching is used.
    *
    * @return true if semantic matching is used during translation, false otherwise
@@ -379,7 +379,7 @@ public enum Configuration {
   }
 
   /**
-   * Returns whether MeMo generates or not output when it has not been able to translate any
+   * Returns whether CallMeMaybe generates or not output when it has not been able to translate any
    * comment.
    *
    * @return true if no output has to be generated when there is no translation, false otherwise

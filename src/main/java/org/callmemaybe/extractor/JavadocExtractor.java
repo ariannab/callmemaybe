@@ -1,7 +1,7 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import static java.util.stream.Collectors.toList;
-import static org.memo.extractor.DocumentedExecutable.BlockTags;
+import static org.callmemaybe.extractor.DocumentedExecutable.BlockTags;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
@@ -38,8 +38,8 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.jetbrains.annotations.NotNull;
-import org.memo.conf.Configuration;
-import org.memo.util.Reflection;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.util.Reflection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -149,7 +149,7 @@ public final class JavadocExtractor {
 
       FreeText freeText =
           new FreeText(
-              org.memo.extractor.JavadocComment.Kind.FREETEXT, new CommentContent(parsedFreeText));
+              org.callmemaybe.extractor.JavadocComment.Kind.FREETEXT, new CommentContent(parsedFreeText));
 
       documentedExecutables.add(
           new DocumentedExecutable(
@@ -444,7 +444,7 @@ public final class JavadocExtractor {
    *
    * @param sourceParams the {@code NodeList} of parameters found in source
    * @param reflectionParams the array of parameters found through reflection
-   * @return the list of {@code org.memo.extractor.DocumentedParameter}
+   * @return the list of {@code org.callmemaybe.extractor.DocumentedParameter}
    */
   private List<DocumentedParameter> createDocumentedParameters(
       NodeList<com.github.javaparser.ast.body.Parameter> sourceParams,

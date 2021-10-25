@@ -1,7 +1,7 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 import java.util.Objects;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /** This class represents a method parameter. */
 public final class Parameter {

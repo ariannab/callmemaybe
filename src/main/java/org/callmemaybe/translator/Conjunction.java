@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 /** This class represents a grammatical conjunction between propositions: AND or OR. */
 public enum Conjunction {

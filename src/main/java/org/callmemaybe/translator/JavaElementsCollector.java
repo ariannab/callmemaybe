@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import static java.util.stream.Collectors.toList;
 
@@ -18,11 +18,11 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import org.jetbrains.annotations.NotNull;
-import org.memo.conf.Configuration;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedParameter;
-import org.memo.extractor.ParamTag;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedParameter;
+import org.callmemaybe.extractor.ParamTag;
 
 /**
  * Collects all the Java elements that can be used for the condition translation. Java elements are

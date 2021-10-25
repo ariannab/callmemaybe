@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.util.Objects;
 
@@ -7,7 +7,7 @@ import java.util.Objects;
  * the non-nullity of a method's parameter named foo can be checked with {@code
  * Checks.nonNullParameter(foo, "foo")}. The main advantage of this pattern is that in this way the
  * error messages provided to the users are consistent. This class is intended to be used within the
- * MeMo codebase.
+ * CallMeMaybe codebase.
  */
 public final class Checks {
 

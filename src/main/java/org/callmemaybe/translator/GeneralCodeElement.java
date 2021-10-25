@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 /**
  * This class represents a dummy Java code element for use in translation. This code element does

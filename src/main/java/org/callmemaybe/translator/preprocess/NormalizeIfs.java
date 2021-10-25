@@ -1,7 +1,7 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
 
 public class NormalizeIfs implements PreprocessingPhase {
 
@@ -27,7 +27,7 @@ public class NormalizeIfs implements PreprocessingPhase {
         comment = comment.substring(0, comment.length() - 1);
       }
       if (comment.contains("true if"))
-        // By adding this, MeMo is able to understand that also the false property must be
+        // By adding this, CallMeMaybe is able to understand that also the false property must be
         // specified
         comment += ", false otherwise.";
       else if (comment.contains("null if")) comment += ", non-null otherwise.";

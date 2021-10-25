@@ -1,9 +1,9 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import org.memo.extractor.CommentContent;
+import org.callmemaybe.extractor.CommentContent;
 
 /** Created by arianna on 28/06/17. */
 public class ThrowsTagOutput extends TagOutput {

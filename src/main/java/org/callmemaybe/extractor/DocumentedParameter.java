@@ -1,10 +1,10 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /** This class represents a method parameter. */
 public final class DocumentedParameter {

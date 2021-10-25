@@ -1,4 +1,4 @@
-package org.memo.regression;
+package org.callmemaybe.regression;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.junit.Test;
-import org.memo.MeMo;
+import org.callmemaybe.CallMeMaybe;
 
 /**
  * Collects tests that expose bugs. These tests should be moved to the precision/recall test suite.
@@ -27,7 +27,7 @@ public class RegressionTests {
           "false",
           "--debug"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -43,7 +43,7 @@ public class RegressionTests {
           "--oracle-generation",
           "false"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -59,7 +59,7 @@ public class RegressionTests {
           "--oracle-generation",
           "false"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -75,7 +75,7 @@ public class RegressionTests {
           "--oracle-generation",
           "false"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -94,7 +94,7 @@ public class RegressionTests {
           "--randoop-specs",
           "randoop-specs/1.txt"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
 
     toradocuArgs =
         new String[] {
@@ -109,7 +109,7 @@ public class RegressionTests {
           "--randoop-specs",
           "randoop-specs/2.txt"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -126,7 +126,7 @@ public class RegressionTests {
           "--oracle-generation",
           "false"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -143,7 +143,7 @@ public class RegressionTests {
           "--oracle-generation",
           "false"
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
   }
 
   @Test
@@ -163,7 +163,7 @@ public class RegressionTests {
           "--randoop-specs",
           RANDOOP_SPEC
         };
-    MeMo.main(toradocuArgs);
+    CallMeMaybe.main(toradocuArgs);
     // There are no specifications in the file, and so file should not be written
     assertTrue("file should not be written", Files.notExists(Paths.get(RANDOOP_SPEC)));
   }
@@ -171,7 +171,7 @@ public class RegressionTests {
   @Test
   public void issue51() {
     // Issue #51: https://github.com/albertogoffi/toradocu/issues/51
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "com.google.common.collect.Ordering",

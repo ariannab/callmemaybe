@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.semgraph.SemanticGraph;

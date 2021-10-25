@@ -1,4 +1,4 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 // TODO: Add documentation throughout this class.
 /** Created by arianna on 29/06/17. */

@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import com.github.javaparser.ast.body.CallableDeclaration;
 import com.github.javaparser.ast.expr.SimpleName;
@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.StringJoiner;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /**
  * DocumentedExecutable represents the Javadoc documentation for a method in a class. It identifies

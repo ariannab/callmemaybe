@@ -22,7 +22,7 @@ plugins {
 }
 //apply plugin: 'kotlin'
 
-mainClassName = "org.memo.Toradocu"
+mainClassName = "org.callmemaybe.CallMeMaybe"
 apply plugin: 'com.github.johnrengelman.shadow' // Workaround for https://github.com/johnrengelman/shadow/issues/336
 
 task downloadRandoop(type: Download) {
@@ -76,14 +76,14 @@ jar {
 sourceSets {
   main {
     java {
-      excludes = ['org/memo/util/old/*']
+      excludes = ['org/callmemaybe/util/old/*']
     }
   }
   test {
     java {
-      excludes = ['org/memo/util/old*',
-                  'org/memo/regression/*',
-                  'org/memo/generator/**']
+      excludes = ['org/callmemaybe/util/old*',
+                  'org/callmemaybe/regression/*',
+                  'org/callmemaybe/generator/**']
     }
     resources {
       exclude 'goal-output/issta_2018'
@@ -92,8 +92,8 @@ sourceSets {
 }
 
 test {
-  exclude 'org/memo/generator/**'
-  exclude 'org/memo/accuracy/paper/*'
+  exclude 'org/callmemaybe/generator/**'
+  exclude 'org/callmemaybe/accuracy/paper/*'
   reports {
     html.enabled = true
   }
@@ -106,28 +106,28 @@ test {
 }
 
 task issta18(type: Test) {
-  include 'org/memo/accuracy/paper/*'
+  include 'org/callmemaybe/accuracy/paper/*'
   enableAssertions = false
   ignoreFailures = true
 }
 
 task accuracyEQComplete(type: Test) {
-  include 'org/memo/accuracy/equivalences/'
+  include 'org/callmemaybe/accuracy/equivalences/'
   enableAssertions = false
 }
 
 task accuracyEQ(type: Test) {
-  include 'org/memo/accuracy/equivalences/dataset/'
+  include 'org/callmemaybe/accuracy/equivalences/dataset/'
   enableAssertions = false
 }
 
 task accuracyEQSB15(type: Test) {
-  include 'org/memo/accuracy/equivalences/sbes15/'
+  include 'org/callmemaybe/accuracy/equivalences/sbes15/'
   enableAssertions = false
 }
 
 task accuracyEQSB14(type: Test) {
-  include 'org/memo/accuracy/equivalences/sbes14/'
+  include 'org/callmemaybe/accuracy/equivalences/sbes14/'
   enableAssertions = false
 }
 
@@ -264,8 +264,8 @@ tasks.withType(Test) {
 build.dependsOn javadoc
 javadoc {
   options.encoding = 'UTF-8'
-  exclude 'org/memo/generator/**'
-  exclude 'org/memo/util/old/**'
+  exclude 'org/callmemaybe/generator/**'
+  exclude 'org/callmemaybe/util/old/**'
 }
 
 /* Disable unneeded tasks. */
@@ -466,7 +466,7 @@ googleJavaFormat {
 
 shadowJar {
   // default: "${baseName}-${version}-${classifier}.${extension}",
-  // where ${baseName} is the name of the directory into which the memo
+  // where ${baseName} is the name of the directory into which the callmemaybe
   // repository is cloned.
   archiveName = "MeMo-${version}-${classifier}.${extension}"
   zip64 true

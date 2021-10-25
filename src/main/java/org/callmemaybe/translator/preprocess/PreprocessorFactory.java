@@ -1,8 +1,8 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.memo.extractor.JavadocComment;
+import org.callmemaybe.extractor.JavadocComment;
 
 public class PreprocessorFactory {
 

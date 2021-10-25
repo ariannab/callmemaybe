@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import java.util.HashMap;
 import java.util.Map;

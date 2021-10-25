@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.HasWord;

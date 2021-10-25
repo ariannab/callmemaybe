@@ -1,4 +1,4 @@
-package org.memo.translator.spec;
+package org.callmemaybe.translator.spec;
 
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.SpecificationClause;

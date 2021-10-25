@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -18,9 +18,9 @@ import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.memo.MeMo;
-import org.memo.output.util.JsonOutput;
-import org.memo.util.GsonInstance;
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.util.GsonInstance;
 
 public class NullDereferenceTest {
   private static final Path resourcesPath = Paths.get("src", "test", "resources");
@@ -65,7 +65,7 @@ public class NullDereferenceTest {
           expectedOutput.toString()
         };
     List<String> argsList = new ArrayList<>(Arrays.asList(toradocuArgs));
-    MeMo.main(argsList.toArray(new String[0]));
+    CallMeMaybe.main(argsList.toArray(new String[0]));
     assertTrue(Files.exists(actualOutput));
 
     Type listType = new TypeToken<List<JsonOutput>>() {}.getType();

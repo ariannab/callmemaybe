@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import java.lang.reflect.Method;
 import java.util.List;

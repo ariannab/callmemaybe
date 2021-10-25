@@ -1,9 +1,9 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
 import java.util.List;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
 
 public class Preprocessor {
 

@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.memo.conf.Configuration;
-import org.memo.extractor.CommentContent;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.CommentContent;
 
 public class POSTagger {
 

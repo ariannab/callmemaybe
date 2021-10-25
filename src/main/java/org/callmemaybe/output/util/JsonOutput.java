@@ -1,16 +1,16 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedParameter;
-import org.memo.extractor.ParamTag;
-import org.memo.extractor.ReturnTag;
-import org.memo.extractor.ThrowsTag;
-import org.memo.translator.spec.EqOperationSpecification;
-import org.memo.translator.spec.EquivalenceSpec;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedParameter;
+import org.callmemaybe.extractor.ParamTag;
+import org.callmemaybe.extractor.ReturnTag;
+import org.callmemaybe.extractor.ThrowsTag;
+import org.callmemaybe.translator.spec.EqOperationSpecification;
+import org.callmemaybe.translator.spec.EquivalenceSpec;
 import randoop.condition.specification.OperationSpecification;
 import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Precondition;
@@ -19,11 +19,11 @@ import randoop.condition.specification.ThrowsCondition;
 public class JsonOutput {
   public String signature;
   public String name;
-  public org.memo.output.util.Type containingClass;
+  public org.callmemaybe.output.util.Type containingClass;
   public String targetClass;
   public boolean isVarArgs;
-  public org.memo.output.util.Type returnType;
-  public List<org.memo.output.util.Parameter> parameters;
+  public org.callmemaybe.output.util.Type returnType;
+  public List<org.callmemaybe.output.util.Parameter> parameters;
   public List<ParamTagOutput> paramTags;
   public ReturnTagOutput returnTag;
   public List<ThrowsTagOutput> throwsTags;
@@ -70,7 +70,7 @@ public class JsonOutput {
     this.signature = member.getSignature();
     this.name = member.getName();
     this.containingClass =
-        new org.memo.output.util.Type(
+        new org.callmemaybe.output.util.Type(
             member.getDeclaringClass().getName(),
             member.getDeclaringClass().getSimpleName(),
             member.getDeclaringClass().isArray());
@@ -79,7 +79,7 @@ public class JsonOutput {
 
     String returnTypeName = member.getExecutable().getAnnotatedReturnType().getType().getTypeName();
     this.returnType =
-        new org.memo.output.util.Type(returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
+        new org.callmemaybe.output.util.Type(returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
 
     createParameters(member);
 
@@ -94,13 +94,13 @@ public class JsonOutput {
 
   private void createReturnTags(DocumentedExecutable member, List<Postcondition> specs) {
     if (specs.size() > 2) {
-      throw new IllegalArgumentException("Old MeMo had a limited support for return specs");
+      throw new IllegalArgumentException("Old CallMeMaybe had a limited support for return specs");
     }
 
     ReturnTag mrt = member.returnTag();
     if (mrt != null) { // If member has a @return comment.
       String spec = "";
-      if (!specs.isEmpty()) { // If MeMo produced a translation for the @return comment.
+      if (!specs.isEmpty()) { // If CallMeMaybe produced a translation for the @return comment.
         Postcondition postSpec = specs.get(0);
         spec =
             postSpec.getGuard().getConditionSource()

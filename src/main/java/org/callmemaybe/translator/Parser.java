@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import static java.util.stream.Collectors.toList;
 
@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedParameter;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedParameter;
 
 /**
  * Created by arianna on 18/05/17.

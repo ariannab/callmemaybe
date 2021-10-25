@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
@@ -9,12 +9,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.List;
-import org.memo.output.util.JsonOutput;
-import org.memo.output.util.ReturnTagOutput;
-import org.memo.output.util.TagOutput;
+import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.output.util.ReturnTagOutput;
+import org.callmemaybe.output.util.TagOutput;
 
 /**
- * Given a goal JSON file as produced by MeMo, this program prints the number of specifications
+ * Given a goal JSON file as produced by CallMeMaybe, this program prints the number of specifications
  * contained in the file. Notice that this program ignores inherited specs and specs of private
  * methods.
  *
@@ -25,7 +25,7 @@ public class SpecsCount {
 
   public static void main(String[] args) throws IOException {
     if (args.length != 1) {
-      throw new IllegalArgumentException("Please provide a MeMo JSON file.");
+      throw new IllegalArgumentException("Please provide a CallMeMaybe JSON file.");
     }
 
     final String jsonFile = args[0];

@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.lang.reflect.Executable;
 import java.lang.reflect.Modifier;

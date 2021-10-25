@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import edu.stanford.nlp.ling.IndexedWord;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /**
  * Represents a subject in a sentence. The subject contains also the information about the container

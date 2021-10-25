@@ -1,7 +1,7 @@
-package org.memo.accuracy.equivalences.dataset;
+package org.callmemaybe.accuracy.equivalences.dataset;
 
 import org.junit.Test;
-import org.memo.testlib.AbstractPrecisionRecallTestSuite;
+import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyGuava19 extends AbstractPrecisionRecallTestSuite {
 

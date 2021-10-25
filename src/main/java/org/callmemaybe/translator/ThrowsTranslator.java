@@ -1,9 +1,9 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
-import static org.memo.util.ComplianceChecks.isSpecCompilable;
+import static org.callmemaybe.util.ComplianceChecks.isSpecCompilable;
 
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.ThrowsTag;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.ThrowsTag;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.ThrowsCondition;
 

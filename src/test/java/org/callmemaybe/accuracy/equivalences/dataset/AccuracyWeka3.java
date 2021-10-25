@@ -1,7 +1,7 @@
-package org.memo.accuracy.equivalences.dataset;
+package org.callmemaybe.accuracy.equivalences.dataset;
 
 import org.junit.Test;
-import org.memo.testlib.AbstractPrecisionRecallTestSuite;
+import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyWeka3 extends AbstractPrecisionRecallTestSuite {
   private static final String WEKA_3_SRC = "src/test/resources/weka-stable-3.8.0-sources";

@@ -1,7 +1,7 @@
-package org.memo.accuracy.equivalences.sbes14;
+package org.callmemaybe.accuracy.equivalences.sbes14;
 
 import org.junit.Test;
-import org.memo.testlib.AbstractPrecisionRecallTestSuite;
+import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyJDK8 extends AbstractPrecisionRecallTestSuite {
 

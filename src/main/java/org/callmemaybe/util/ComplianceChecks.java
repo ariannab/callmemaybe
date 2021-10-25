@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.io.File;
 import java.lang.reflect.Modifier;
@@ -11,13 +11,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.mdkt.compiler.CompilationException;
 import org.mdkt.compiler.InMemoryJavaCompiler;
-import org.memo.conf.Configuration;
-import org.memo.extractor.CodeSnippet;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedParameter;
-import org.memo.extractor.EquivalentMatch;
-import org.memo.extractor.JavadocExtractor;
-import org.memo.translator.FreeTextTranslator;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.CodeSnippet;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedParameter;
+import org.callmemaybe.extractor.EquivalentMatch;
+import org.callmemaybe.extractor.JavadocExtractor;
+import org.callmemaybe.translator.FreeTextTranslator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import randoop.condition.specification.Guard;
@@ -468,7 +468,7 @@ public class ComplianceChecks {
   }
 
   /**
-   * Substitutes in the condition the actual arguments names, since MeMo-generated conditions refer
+   * Substitutes in the condition the actual arguments names, since CallMeMaybe-generated conditions refer
    * to the nth argument with the {@code args[n]} notation.
    *
    * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code

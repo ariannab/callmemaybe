@@ -1,9 +1,9 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import org.memo.conf.Configuration;
+import org.callmemaybe.conf.Configuration;
 
 /**
  * This utility class returns the edit distance between two strings based on character edits and
@@ -14,7 +14,7 @@ public class Distance {
   /**
    * Returns the edit distance between the given strings. {@code s1} is the only string in which
    * word deletions are considered when calculating the edit distance. The cost of a word deletion
-   * is specified by the field {@code org.memo.conf.Configuration.wordRemovalCost}.
+   * is specified by the field {@code org.callmemaybe.conf.Configuration.wordRemovalCost}.
    *
    * @param s0 the first string to use in calculating distance. Word deletions are not considered
    *     for this string.

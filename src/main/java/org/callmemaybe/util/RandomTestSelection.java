@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import static java.util.stream.Collectors.toList;
 
@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
-import org.memo.extractor.JavadocExtractor;
+import org.callmemaybe.extractor.JavadocExtractor;
 
 public class RandomTestSelection {
 

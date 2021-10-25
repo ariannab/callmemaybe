@@ -1,4 +1,4 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 import com.google.gson.*;
 

@@ -1,4 +1,4 @@
-package org.memo.conf;
+package org.callmemaybe.conf;
 
 import com.beust.jcommander.IStringConverter;
 import java.io.File;

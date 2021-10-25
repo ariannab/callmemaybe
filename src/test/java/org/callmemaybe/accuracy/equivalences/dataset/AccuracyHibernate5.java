@@ -1,14 +1,14 @@
-package org.memo.accuracy.equivalences.dataset;
+package org.callmemaybe.accuracy.equivalences.dataset;
 
 import org.junit.Test;
-import org.memo.testlib.AbstractPrecisionRecallTestSuite;
+import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracyHibernate5 extends AbstractPrecisionRecallTestSuite {
   private static final String HIBERNATE_5_SRC =
       "src/test/resources/src/hibernate-core-5.4.2.Final-sources";
   private static final String HIBERNATE_5_BIN =
       "src/test/resources/bin/hibernate-core-5.4.2.jar"
-          + ":/Users/arianna/memo/src/test/resources/bin/javax.persistence-api-2.2.jar";
+          + ":/Users/arianna/callmemaybe/src/test/resources/bin/javax.persistence-api-2.2.jar";
   private static final String HIBERNATE_5_GOAL_DIR = "expected-equivalences/hibernate";
 
   public AccuracyHibernate5() {

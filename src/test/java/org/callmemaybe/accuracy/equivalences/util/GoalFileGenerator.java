@@ -1,12 +1,12 @@
-package org.memo.accuracy.equivalences.util;
+package org.callmemaybe.accuracy.equivalences.util;
 
 import org.junit.Test;
-import org.memo.MeMo;
+import org.callmemaybe.CallMeMaybe;
 
 public class GoalFileGenerator {
   @Test
   public void fitting_CurveFitterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.fitting.CurveFitter",
@@ -25,7 +25,7 @@ public class GoalFileGenerator {
 
   @Test
   public void leastsquares_EvaluationRmsCheckerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.fitting.leastsquares.EvaluationRmsChecker",
@@ -44,7 +44,7 @@ public class GoalFileGenerator {
 
   @Test
   public void fitting_WeightedObservedPointsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.fitting.WeightedObservedPoints",
@@ -63,7 +63,7 @@ public class GoalFileGenerator {
 
   @Test
   public void analysis_FunctionUtilsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.analysis.FunctionUtils",
@@ -82,7 +82,7 @@ public class GoalFileGenerator {
 
   @Test
   public void solvers_BaseUnivariateSolverTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.analysis.solvers.BaseUnivariateSolver",
@@ -101,7 +101,7 @@ public class GoalFileGenerator {
 
   @Test
   public void solvers_BracketedRealFieldUnivariateSolverTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.analysis.solvers.BracketedRealFieldUnivariateSolver",
@@ -120,7 +120,7 @@ public class GoalFileGenerator {
 
   @Test
   public void interpolation_LoessInterpolatorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.analysis.interpolation.LoessInterpolator",
@@ -139,7 +139,7 @@ public class GoalFileGenerator {
 
   @Test
   public void interpolation_HermiteInterpolatorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.analysis.interpolation.HermiteInterpolator",
@@ -158,7 +158,7 @@ public class GoalFileGenerator {
 
   @Test
   public void interpolation_MicrosphereInterpolatorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.analysis.interpolation.MicrosphereInterpolator",
@@ -177,7 +177,7 @@ public class GoalFileGenerator {
 
   @Test
   public void util_MathArraysTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.util.MathArrays",
@@ -196,7 +196,7 @@ public class GoalFileGenerator {
 
   @Test
   public void util_CombinationsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.util.Combinations",
@@ -215,7 +215,7 @@ public class GoalFileGenerator {
 
   @Test
   public void util_Decimal64Test() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.util.Decimal64",
@@ -234,7 +234,7 @@ public class GoalFileGenerator {
 
   @Test
   public void complex_ComplexTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.complex.Complex",
@@ -253,7 +253,7 @@ public class GoalFileGenerator {
 
   @Test
   public void fitting_optimization_CurveFitterTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.optimization.fitting.CurveFitter",
@@ -272,7 +272,7 @@ public class GoalFileGenerator {
 
   @Test
   public void direct_AbstractSimplexTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.optimization.direct.AbstractSimplex",
@@ -291,7 +291,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_EigenDecompositionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.EigenDecomposition",
@@ -310,7 +310,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_Array2DRowRealMatrixTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.Array2DRowRealMatrix",
@@ -329,7 +329,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_BlockFieldMatrixTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.BlockFieldMatrix",
@@ -348,7 +348,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_Array2DRowFieldMatrixTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.Array2DRowFieldMatrix",
@@ -367,7 +367,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_CholeskyDecompositionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.CholeskyDecomposition",
@@ -386,7 +386,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_BlockRealMatrixTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.BlockRealMatrix",
@@ -405,7 +405,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_RealVectorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.RealVector",
@@ -424,7 +424,7 @@ public class GoalFileGenerator {
 
   @Test
   public void linear_RectangularCholeskyDecompositionTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.linear.RectangularCholeskyDecomposition",
@@ -443,7 +443,7 @@ public class GoalFileGenerator {
 
   @Test
   public void noderiv_AbstractSimplexTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.optim.nonlinear.scalar.noderiv.AbstractSimplex",
@@ -462,7 +462,7 @@ public class GoalFileGenerator {
 
   @Test
   public void ode_FieldODEStateTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.ode.FieldODEState",
@@ -481,7 +481,7 @@ public class GoalFileGenerator {
 
   @Test
   public void ode_FieldODEStateAndDerivativeTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.ode.FieldODEStateAndDerivative",
@@ -500,7 +500,7 @@ public class GoalFileGenerator {
 
   @Test
   public void events_FieldEventHandlerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.ode.events.FieldEventHandler",
@@ -519,7 +519,7 @@ public class GoalFileGenerator {
 
   @Test
   public void events_EventHandlerTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.ode.events.EventHandler",
@@ -538,7 +538,7 @@ public class GoalFileGenerator {
 
   @Test
   public void stat_StatUtilsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.StatUtils",
@@ -557,7 +557,7 @@ public class GoalFileGenerator {
 
   @Test
   public void correlation_StorelessCovarianceTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.correlation.StorelessCovariance",
@@ -576,7 +576,7 @@ public class GoalFileGenerator {
 
   @Test
   public void inference_KolmogorovSmirnovTestTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.inference.KolmogorovSmirnovTest",
@@ -595,7 +595,7 @@ public class GoalFileGenerator {
 
   @Test
   public void rank_PercentileTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.descriptive.rank.Percentile",
@@ -614,7 +614,7 @@ public class GoalFileGenerator {
 
   @Test
   public void rank_PSquarePercentileTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.descriptive.rank.PSquarePercentile",
@@ -633,7 +633,7 @@ public class GoalFileGenerator {
 
   @Test
   public void descriptive_AbstractStorelessUnivariateStatisticTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.descriptive.AbstractStorelessUnivariateStatistic",
@@ -652,7 +652,7 @@ public class GoalFileGenerator {
 
   @Test
   public void regression_RegressionResultsTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.stat.regression.RegressionResults",
@@ -671,7 +671,7 @@ public class GoalFileGenerator {
 
   @Test
   public void dfp_DfpFieldTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.dfp.DfpField",
@@ -690,7 +690,7 @@ public class GoalFileGenerator {
 
   @Test
   public void geometry_VectorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.Vector",
@@ -709,7 +709,7 @@ public class GoalFileGenerator {
 
   @Test
   public void threed_FieldVector3DTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.euclidean.threed.FieldVector3D",
@@ -728,7 +728,7 @@ public class GoalFileGenerator {
 
   @Test
   public void threed_RotationTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.euclidean.threed.Rotation",
@@ -747,7 +747,7 @@ public class GoalFileGenerator {
 
   @Test
   public void threed_FieldRotationTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.euclidean.threed.FieldRotation",
@@ -766,7 +766,7 @@ public class GoalFileGenerator {
 
   @Test
   public void threed_Vector3DTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.euclidean.threed.Vector3D",
@@ -785,7 +785,7 @@ public class GoalFileGenerator {
 
   @Test
   public void oned_Vector1DTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.euclidean.oned.Vector1D",
@@ -804,7 +804,7 @@ public class GoalFileGenerator {
 
   @Test
   public void twod_Vector2DTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.euclidean.twod.Vector2D",
@@ -823,7 +823,7 @@ public class GoalFileGenerator {
 
   @Test
   public void oned_S1PointTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.spherical.oned.S1Point",
@@ -842,7 +842,7 @@ public class GoalFileGenerator {
 
   @Test
   public void twod_CircleTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.spherical.twod.Circle",
@@ -861,7 +861,7 @@ public class GoalFileGenerator {
 
   @Test
   public void twod_S2PointTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.geometry.spherical.twod.S2Point",
@@ -880,7 +880,7 @@ public class GoalFileGenerator {
 
   @Test
   public void random_CorrelatedRandomVectorGeneratorTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "org.apache.commons.math3.random.CorrelatedRandomVectorGenerator",

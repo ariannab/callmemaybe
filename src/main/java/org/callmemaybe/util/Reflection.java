@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.lang.reflect.Type;
 import java.net.URL;
@@ -6,7 +6,7 @@ import java.net.URLClassLoader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.memo.conf.Configuration;
+import org.callmemaybe.conf.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,7 +48,7 @@ public class Reflection {
     }
 
     // The order here is important. We have to first look in the paths specified by the user and
-    // then in the default class path. The default classpath contains the dependencies of MeMo
+    // then in the default class path. The default classpath contains the dependencies of CallMeMaybe
     // that could clash with the system under analysis.
     final List<URL> urls = Configuration.INSTANCE.classDirs;
     final URLClassLoader loader = new URLClassLoader(urls.toArray(new URL[urls.size()]), null);

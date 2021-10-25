@@ -1,10 +1,10 @@
-package org.memo.testlib;
+package org.callmemaybe.testlib;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import org.memo.extractor.JavadocComment;
-import org.memo.util.Stats;
+import org.callmemaybe.extractor.JavadocComment;
+import org.callmemaybe.util.Stats;
 
 /**
  * TestSuiteStats computes the mean and standard deviation of the precision and recall of a

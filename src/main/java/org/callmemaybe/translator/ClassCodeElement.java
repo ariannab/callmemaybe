@@ -1,7 +1,7 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import org.apache.commons.lang3.ClassUtils;
-import org.memo.conf.Configuration;
+import org.callmemaybe.conf.Configuration;
 
 /**
  * This class represents a {@code Class} code element for use in translation. It holds String

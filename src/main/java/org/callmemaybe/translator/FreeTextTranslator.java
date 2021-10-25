@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import com.github.javaparser.ast.ImportDeclaration;
 import java.io.FileWriter;
@@ -16,18 +16,18 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.memo.MeMo;
-import org.memo.conf.Configuration;
-import org.memo.extractor.CodeSnippet;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedParameter;
-import org.memo.extractor.DocumentedType;
-import org.memo.extractor.EquivalenceMatcher;
-import org.memo.extractor.EquivalentMatch;
-import org.memo.util.ComplianceChecks;
-import org.memo.util.ComplianceError;
-import org.memo.util.Reflection;
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.CodeSnippet;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedParameter;
+import org.callmemaybe.extractor.DocumentedType;
+import org.callmemaybe.extractor.EquivalenceMatcher;
+import org.callmemaybe.extractor.EquivalentMatch;
+import org.callmemaybe.util.ComplianceChecks;
+import org.callmemaybe.util.ComplianceError;
+import org.callmemaybe.util.Reflection;
 
 public class FreeTextTranslator {
 
@@ -49,7 +49,7 @@ public class FreeTextTranslator {
     EquivalentMatch equivalenceMatch;
 
     for (String sentence : sentences) {
-      MeMo.configuration.ALL_SENTENCES = MeMo.configuration.ALL_SENTENCES + 1;
+      CallMeMaybe.configuration.ALL_SENTENCES = CallMeMaybe.configuration.ALL_SENTENCES + 1;
       // Let's avoid spurious comments...
       if (!sentence.isEmpty() && sentence.length() > 2) {
         // Verify if there is a snippet in the sentence...

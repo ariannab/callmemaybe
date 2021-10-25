@@ -1,4 +1,4 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
 import static java.util.stream.Collectors.toList;
 
@@ -8,12 +8,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
-import org.memo.extractor.ParamTag;
-import org.memo.translator.Parser;
-import org.memo.translator.PropositionSeries;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
+import org.callmemaybe.extractor.ParamTag;
+import org.callmemaybe.translator.Parser;
+import org.callmemaybe.translator.PropositionSeries;
 
 public class ImplicitParamSubjectPatterns implements PreprocessingPhase {
 

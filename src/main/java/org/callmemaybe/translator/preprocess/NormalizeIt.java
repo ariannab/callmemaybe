@@ -1,15 +1,15 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
 import static java.util.stream.Collectors.toList;
 
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.semgraph.SemanticGraph;
 import java.util.List;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
-import org.memo.translator.Parser;
-import org.memo.translator.PropositionSeries;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
+import org.callmemaybe.translator.Parser;
+import org.callmemaybe.translator.PropositionSeries;
 
 /** Created by arianna on 29/06/17. */
 public class NormalizeIt implements PreprocessingPhase {

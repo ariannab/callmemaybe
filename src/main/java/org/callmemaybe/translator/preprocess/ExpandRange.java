@@ -1,11 +1,11 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.StringJoiner;
 import java.util.regex.Pattern;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
 
 /**
  * Preprocessing phase in which value ranges are replaced with standard inequalities using &lt; and

@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.memo.translator.CodeElement;
-import org.memo.util.ComplianceChecks;
+import org.callmemaybe.translator.CodeElement;
+import org.callmemaybe.util.ComplianceChecks;
 
 // FIXME turn this into:
 /*

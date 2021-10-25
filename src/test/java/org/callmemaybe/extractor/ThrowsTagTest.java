@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;

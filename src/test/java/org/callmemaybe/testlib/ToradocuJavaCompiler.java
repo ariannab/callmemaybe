@@ -1,4 +1,4 @@
-package org.memo.testlib;
+package org.callmemaybe.testlib;
 
 import java.util.List;
 import java.util.Locale;

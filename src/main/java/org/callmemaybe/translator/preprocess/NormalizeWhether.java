@@ -1,7 +1,7 @@
-package org.memo.translator.preprocess;
+package org.callmemaybe.translator.preprocess;
 
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
 
 public class NormalizeWhether implements PreprocessingPhase {
 

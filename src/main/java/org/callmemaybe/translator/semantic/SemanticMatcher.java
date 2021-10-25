@@ -1,4 +1,4 @@
-package org.memo.translator.semantic;
+package org.callmemaybe.translator.semantic;
 
 import com.crtomirmajer.wmd4j.WordMovers;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.stream.Collectors;
-import org.memo.conf.Configuration;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.translator.*;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.translator.*;
 
 /**
  * Main component. Contains all the methods to compute the {@code SemantichMatch}es for a given

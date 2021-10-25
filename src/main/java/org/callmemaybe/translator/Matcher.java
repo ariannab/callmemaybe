@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Member;
@@ -20,12 +20,12 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.jetbrains.annotations.NotNull;
-import org.memo.conf.Configuration;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedParameter;
-import org.memo.extractor.EquivalentMatch;
-import org.memo.translator.semantic.SemanticMatcher;
-import org.memo.util.Reflection;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedParameter;
+import org.callmemaybe.extractor.EquivalentMatch;
+import org.callmemaybe.translator.semantic.SemanticMatcher;
+import org.callmemaybe.util.Reflection;
 
 /**
  * The {@code Matcher} class translates subjects and predicates in Javadoc comments to Java

@@ -1,4 +1,4 @@
-package org.memo.translator.semantic;
+package org.callmemaybe.translator.semantic;
 
 import java.io.File;
 import java.io.InputStream;
@@ -36,7 +36,7 @@ public class GloveModelWrapper {
     String gloveTxtFolder = "glove-txt";
     String gloveTxtFile = "glove.6B.300d.txt";
 
-    // Copy GloVe models in MeMo jar to glove-txt folder and use them.
+    // Copy GloVe models in CallMeMaybe jar to glove-txt folder and use them.
     String filePath = "/" + gloveTxtFile;
     InputStream gloveInputStream = GloveModelWrapper.class.getResourceAsStream(filePath);
     Path destinationFile = Paths.get(gloveTxtFolder, gloveTxtFile);

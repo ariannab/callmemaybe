@@ -1,8 +1,8 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import java.util.Objects;
 import java.util.StringJoiner;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /**
  * Represents Javadoc @throws and @exception comments. Each {@link ThrowsTag} consists of a comment,

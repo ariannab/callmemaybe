@@ -1,8 +1,8 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import java.util.*;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.JavadocComment;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.JavadocComment;
 
 /**
  * The {@code BasicTranslator} class holds the {@code translate()} methods for {@code

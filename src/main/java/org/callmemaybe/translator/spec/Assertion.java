@@ -1,4 +1,4 @@
-package org.memo.translator.spec;
+package org.callmemaybe.translator.spec;
 
 public class Assertion {
   public static final String OPENING = "assert(";

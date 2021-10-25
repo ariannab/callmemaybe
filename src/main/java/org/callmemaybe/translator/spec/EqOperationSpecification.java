@@ -1,4 +1,4 @@
-package org.memo.translator.spec;
+package org.callmemaybe.translator.spec;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;

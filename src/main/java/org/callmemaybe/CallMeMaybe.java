@@ -1,6 +1,6 @@
-package org.memo;
+package org.callmemaybe;
 
-import static org.memo.translator.CommentTranslator.processCondition;
+import static org.callmemaybe.translator.CommentTranslator.processCondition;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.ParameterException;
@@ -19,18 +19,18 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.memo.conf.Configuration;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.DocumentedType;
-import org.memo.extractor.JavadocExtractor;
-import org.memo.extractor.ParameterNotFoundException;
-import org.memo.generator.OracleGenerator;
-import org.memo.output.util.JsonOutput;
-import org.memo.translator.CommentTranslator;
-import org.memo.translator.semantic.SemanticMatcher;
-import org.memo.translator.spec.EqOperationSpecification;
-import org.memo.util.GsonInstance;
-import org.memo.util.Stats;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.DocumentedType;
+import org.callmemaybe.extractor.JavadocExtractor;
+import org.callmemaybe.extractor.ParameterNotFoundException;
+import org.callmemaybe.generator.OracleGenerator;
+import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.translator.CommentTranslator;
+import org.callmemaybe.translator.semantic.SemanticMatcher;
+import org.callmemaybe.translator.spec.EqOperationSpecification;
+import org.callmemaybe.util.GsonInstance;
+import org.callmemaybe.util.Stats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.impl.SimpleLogger;
@@ -42,20 +42,20 @@ import randoop.condition.specification.Property;
 import randoop.condition.specification.ThrowsCondition;
 
 /**
- * Entry point of MeMo. {@code MeMo.main} is automatically executed running the command: {@code java
- * -jar memo.jar}.
+ * Entry point of CallMeMaybe. {@code CallMeMaybe.main} is automatically executed running the command: {@code java
+ * -jar callmemaybe.jar}.
  */
-public class MeMo {
+public class CallMeMaybe {
 
-  /** Command to run MeMo. This string is used only in output messages. */
-  private static final String TORADOCU_COMMAND = "java -jar memo.jar";
-  /** MeMo's configurations. */
+  /** Command to run CallMeMaybe. This string is used only in output messages. */
+  private static final String TORADOCU_COMMAND = "java -jar callmemaybe.jar";
+  /** CallMeMaybe's configurations. */
   public static Configuration configuration = null;
   /** Logger of this class. */
   private static Logger log;
 
   /**
-   * Entry point for MeMo. Takes several command-line arguments that configure its behavior.
+   * Entry point for CallMeMaybe. Takes several command-line arguments that configure its behavior.
    *
    * @param args command-line arguments
    */
@@ -85,7 +85,7 @@ public class MeMo {
     // Suppress non-error messages from Stanford parser (some of the messages directly printed on
     // standard error are still visible).
     System.setProperty(SimpleLogger.LOG_KEY_PREFIX + "edu.stanford", "error");
-    log = LoggerFactory.getLogger(MeMo.class);
+    log = LoggerFactory.getLogger(CallMeMaybe.class);
 
     // === Javadoc Extractor ===
 
@@ -111,7 +111,7 @@ public class MeMo {
                 + configuration.classDirs
                 + "\nPlease, check the correctness of the command line arguments."
                 + "\nIf the error persists, report the issue at "
-                + "https://github.com/albertogoffi/memo/issues"
+                + "https://github.com/albertogoffi/callmemaybe/issues"
                 + "\nError stack trace:\n"
                 + Arrays.toString(e.getStackTrace()));
         System.exit(1);

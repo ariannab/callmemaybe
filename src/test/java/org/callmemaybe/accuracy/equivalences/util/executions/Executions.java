@@ -1,19 +1,19 @@
-package org.memo.accuracy.equivalences.dataset.executions;
+package org.callmemaybe.accuracy.equivalences.dataset.executions;
 
 import org.junit.Test;
-import org.memo.MeMo;
+import org.callmemaybe.CallMeMaybe;
 
 public class Executions {
   @Test
   public void matrix_DoubleMatrix2DTest() {
-    MeMo.main(
+    CallMeMaybe.main(
         new String[] {
           "--target-class",
           "cern.colt.matrix.DoubleMatrix2D",
           "--class-dir",
-          "/Users/arianna/memo/src/test/resources/bin/colt-1.2.0.jar",
+          "/Users/arianna/callmemaybe/src/test/resources/bin/colt-1.2.0.jar",
           "--source-dir",
-          "/Users/arianna/memo/src/test/resources/colt-master/src",
+          "/Users/arianna/callmemaybe/src/test/resources/colt-master/src",
           "--disable-semantics",
           "true",
           "--cross-oracles",

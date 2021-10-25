@@ -1,4 +1,4 @@
-package org.memo.testlib;
+package org.callmemaybe.testlib;
 
 import static org.junit.Assert.fail;
 
@@ -13,16 +13,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import org.memo.MeMo;
-import org.memo.output.util.JsonOutput;
-import org.memo.util.GsonInstance;
-import org.memo.util.Stats;
 
-/** PrecisionRecallTest contains static methods to perform a precision recall test using MeMo. */
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.util.GsonInstance;
+import org.callmemaybe.util.Stats;
+
+/** PrecisionRecallTest contains static methods to perform a precision recall test using CallMeMaybe. */
 class PrecisionRecallTest {
 
   /**
-   * Runs MeMo on the given class and collects data on its precision and recall.
+   * Runs CallMeMaybe on the given class and collects data on its precision and recall.
    *
    * @param targetClass the fully qualified name of the class on which to run the test
    * @param srcPath the source path for the given targetClass
@@ -52,7 +53,7 @@ class PrecisionRecallTest {
         };
     final List<String> argsList = new ArrayList<>(Arrays.asList(toradocuArgs));
 
-    final String oracleGeneration = System.getProperty("org.memo.generator");
+    final String oracleGeneration = System.getProperty("org.callmemaybe.generator");
     // Disable oracle generation unless the specific system property is set.
     if (oracleGeneration != null && oracleGeneration.equals("true")) {
       argsList.add("--aspects-output-dir");
@@ -62,7 +63,7 @@ class PrecisionRecallTest {
       argsList.add("false");
     }
 
-    final String translator = System.getProperty("org.memo.translator");
+    final String translator = System.getProperty("org.callmemaybe.translator");
     if (translator != null && translator.equals("tcomment")) {
       argsList.add("--tcomment");
       argsList.add("--stats-file");
@@ -78,12 +79,12 @@ class PrecisionRecallTest {
       argsList.add("results_semantics_.csv");
     }
 
-    MeMo.main(argsList.toArray(new String[0]));
+    CallMeMaybe.main(argsList.toArray(new String[0]));
     return compare(targetClass, actualOutputFile, goalOutputFile, message);
   }
 
   /**
-   * Runs MeMo on the given class and collects data on its precision and recall.
+   * Runs CallMeMaybe on the given class and collects data on its precision and recall.
    *
    * @param targetClass the fully qualified name of the class on which to run the test
    * @param srcPath the source path for the given targetClass
@@ -113,7 +114,7 @@ class PrecisionRecallTest {
         };
     final List<String> argsList = new ArrayList<>(Arrays.asList(memoArgs));
 
-    final String oracleGeneration = System.getProperty("org.memo.generator");
+    final String oracleGeneration = System.getProperty("org.callmemaybe.generator");
     // Disable oracle generation unless the specific system property is set.
     //    if (oracleGeneration != null && oracleGeneration.equals("true")) {
     //      argsList.add("--aspects-output-dir");
@@ -130,10 +131,10 @@ class PrecisionRecallTest {
     argsList.add("--cross-oracles");
     argsList.add("true");
     argsList.add("--disable-semantics");
-    // Toggle to true to try out  MeMo without WMD (only n-grams match)
+    // Toggle to true to try out  CallMeMaybe without WMD (only n-grams match)
     argsList.add("true");
 
-    final String translator = System.getProperty("org.memo.translator");
+    final String translator = System.getProperty("org.callmemaybe.translator");
     if (translator != null && translator.equals("tcomment")) {
       argsList.add("--tcomment");
       argsList.add("--stats-file");
@@ -149,7 +150,7 @@ class PrecisionRecallTest {
       argsList.add("results_semantics_.csv");
     }
 
-    MeMo.main(argsList.toArray(new String[0]));
+    CallMeMaybe.main(argsList.toArray(new String[0]));
     return compareEq(targetClass, actualOutputFile, goalOutputFile, message);
   }
 

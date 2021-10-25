@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 public class ParameterNotFoundException extends Error {
 

@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 /**
  * Represents a Javadoc @return comment. Each {@link ReturnTag} consists of a comment and a

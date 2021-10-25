@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import static java.util.stream.Collectors.toList;
 
@@ -8,8 +8,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-import org.memo.extractor.CodeSnippet;
-import org.memo.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.CodeSnippet;
+import org.callmemaybe.extractor.DocumentedExecutable;
 
 public class ComplianceError {
   private static final String MISSING_SYMBOL_PATTERN = "message=cannot find symbol";

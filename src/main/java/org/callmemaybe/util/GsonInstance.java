@@ -1,9 +1,9 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.memo.output.util.JsonOutput;
-import org.memo.output.util.JsonOutputSerializer;
+import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.output.util.JsonOutputSerializer;
 
 /** This class holds an instance of a {@code Gson} object. */
 public final class GsonInstance {

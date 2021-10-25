@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -8,8 +8,8 @@ import edu.stanford.nlp.ling.IndexedWord;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
 
 public class PropositionSeriesTest {
 

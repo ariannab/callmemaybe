@@ -1,4 +1,4 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;

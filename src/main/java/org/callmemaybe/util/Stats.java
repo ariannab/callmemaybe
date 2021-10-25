@@ -1,18 +1,19 @@
-package org.memo.util;
+package org.callmemaybe.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import org.memo.MeMo;
-import org.memo.extractor.JavadocComment;
-import org.memo.output.util.EquivalenceOutput;
-import org.memo.output.util.JsonOutput;
-import org.memo.output.util.ReturnTagOutput;
-import org.memo.output.util.TagOutput;
+
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.extractor.JavadocComment;
+import org.callmemaybe.output.util.EquivalenceOutput;
+import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.output.util.ReturnTagOutput;
+import org.callmemaybe.output.util.TagOutput;
 
 /**
- * Represents MeMo precision/recall for a given Java element (for example, it can be a class or a
+ * Represents CallMeMaybe precision/recall for a given Java element (for example, it can be a class or a
  * method). The Java element is only referred by its name and is used only to output the collected
  * statistics.
  */
@@ -21,40 +22,40 @@ public class Stats {
   /** Java element (for example a class or method name) this statistics refer to. */
   private final String identifier;
 
-  /** Number of @throws conditions correctly translated by MeMo. */
+  /** Number of @throws conditions correctly translated by CallMeMaybe. */
   private int correctThrowsTranslations = 0;
-  /** Number of @throws conditions wrongly translated by MeMo. */
+  /** Number of @throws conditions wrongly translated by CallMeMaybe. */
   private int wrongThrowsTranslations = 0;
-  /** Number of @throws conditions unexpectedly translated by MeMo. */
+  /** Number of @throws conditions unexpectedly translated by CallMeMaybe. */
   private int unexpectedThrowsTranslations = 0;
-  /** Number of @throws conditions not translated at all by MeMo. */
+  /** Number of @throws conditions not translated at all by CallMeMaybe. */
   private int missingThrowsTranslations = 0;
 
-  /** Number of @param conditions correctly translated by MeMo. */
+  /** Number of @param conditions correctly translated by CallMeMaybe. */
   private int correctParamTranslations = 0;
-  /** Number of @param conditions wrongly translated by MeMo. */
+  /** Number of @param conditions wrongly translated by CallMeMaybe. */
   private int wrongParamTranslations = 0;
-  /** Number of @param conditions unexpectedly translated by MeMo. */
+  /** Number of @param conditions unexpectedly translated by CallMeMaybe. */
   private int unexpectedParamTranslations = 0;
-  /** Number of @param conditions not translated at all by MeMo. */
+  /** Number of @param conditions not translated at all by CallMeMaybe. */
   private int missingParamTranslations = 0;
 
-  /** Number of @return conditions correctly translated by MeMo (true positives). */
+  /** Number of @return conditions correctly translated by CallMeMaybe (true positives). */
   private int correctReturnTranslations = 0;
-  /** Number of @return conditions wrongly translated by MeMo (false positives). */
+  /** Number of @return conditions wrongly translated by CallMeMaybe (false positives). */
   private int wrongReturnTranslations = 0;
-  /** Number of @return conditions unexpectedly translated by MeMo. */
+  /** Number of @return conditions unexpectedly translated by CallMeMaybe. */
   private int unexpectedReturnTranslations = 0;
-  /** Number of @return conditions not translated at all by MeMo (false negatives). */
+  /** Number of @return conditions not translated at all by CallMeMaybe (false negatives). */
   private int missingReturnTranslations = 0;
 
-  /** Number of equivalence conditions correctly translated by MeMo (true positives). */
+  /** Number of equivalence conditions correctly translated by CallMeMaybe (true positives). */
   private int correctEqTranslations = 0;
-  /** Number of equivalence conditions wrongly translated by MeMo (false positives). */
+  /** Number of equivalence conditions wrongly translated by CallMeMaybe (false positives). */
   private int wrongEqTranslations = 0;
-  /** Number of equivalence conditions unexpectedly translated by MeMo. */
+  /** Number of equivalence conditions unexpectedly translated by CallMeMaybe. */
   private int unexpectedEqTranslations = 0;
-  /** Number of equivalence conditions not translated at all by MeMo (false negatives). */
+  /** Number of equivalence conditions not translated at all by CallMeMaybe (false negatives). */
   private int missingEqTranslations = 0;
 
   /**
@@ -201,7 +202,7 @@ public class Stats {
   }
 
   /**
-   * Increments the number of correct translations produced by MeMo by 1.
+   * Increments the number of correct translations produced by CallMeMaybe by 1.
    *
    * @param kind the kind of tag for which increment the number of correct translations
    */
@@ -225,7 +226,7 @@ public class Stats {
   }
 
   /**
-   * Increments the number of wrong translations produced by MeMo by 1.
+   * Increments the number of wrong translations produced by CallMeMaybe by 1.
    *
    * @param kind the kind of tag for which increment the number of wrong translations
    */
@@ -249,7 +250,7 @@ public class Stats {
   }
 
   /**
-   * Increments the number of missing translations produced by MeMo by 1.
+   * Increments the number of missing translations produced by CallMeMaybe by 1.
    *
    * @param kind the kind of tag for which increment the number of missing translations
    */
@@ -273,7 +274,7 @@ public class Stats {
   }
 
   /**
-   * Increments the number of unexpected translations produced by MeMo by 1.
+   * Increments the number of unexpected translations produced by CallMeMaybe by 1.
    *
    * @param kind the kind of tag for which increment the number of missing translations
    */
@@ -307,9 +308,9 @@ public class Stats {
         + identifier
         + "\""
         + SEPARATOR
-        + MeMo.configuration.getDistanceThreshold()
+        + CallMeMaybe.configuration.getDistanceThreshold()
         + SEPARATOR
-        + MeMo.configuration.getWordRemovalCost()
+        + CallMeMaybe.configuration.getWordRemovalCost()
         + SEPARATOR
         + correctThrowsTranslations
         + SEPARATOR
@@ -338,10 +339,10 @@ public class Stats {
 
   /**
    * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
-   * used to generate statistics (precision and recall) of MeMo for each method in {@code
+   * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
    * actualMethodList}.
    *
-   * @param actualMethodList methods with tags translated by MeMo
+   * @param actualMethodList methods with tags translated by CallMeMaybe
    * @param expectedMethodList methods with tags manually translated
    * @return statistics for each method of the given lists
    * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
@@ -384,10 +385,10 @@ public class Stats {
 
   /**
    * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
-   * used to generate statistics (precision and recall) of MeMo for each method in {@code
+   * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
    * actualMethodList}.
    *
-   * @param actualMethodList methods with tags translated by MeMo
+   * @param actualMethodList methods with tags translated by CallMeMaybe
    * @param expectedMethodList methods with tags manually translated
    * @return statistics for each method of the given lists
    * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
@@ -423,12 +424,12 @@ public class Stats {
 
   /**
    * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
-   * used to generate statistics (precision and recall) of MeMo for each method in {@code
+   * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
    * actualMethodList}. The statistics are aggregated per class, we assume that the {@code
    * actualMethodList} contains methods belonging to one class.
    *
    * @param targetClass the class for which collect statistics
-   * @param actualMethodList methods with tags translated by MeMo
+   * @param actualMethodList methods with tags translated by CallMeMaybe
    * @param expectedMethodList methods with tags manually translated
    * @param output the output message to be populated
    * @return statistics for each method of the given lists, aggregated per class
@@ -501,7 +502,7 @@ public class Stats {
             stats.addCorrectTranslation(kind);
             outputMessage.append("Correct ");
           } else {
-            continue; // No output message when MeMo does not output anything as expected.
+            continue; // No output message when CallMeMaybe does not output anything as expected.
           }
         } else {
           if (expectedConditionNoSpace.isEmpty()) {
@@ -591,12 +592,12 @@ public class Stats {
 
   /**
    * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
-   * used to generate statistics (precision and recall) of MeMo for each method in {@code
+   * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
    * actualMethodList}. The statistics are aggregated per class, we assume that the {@code
    * actualMethodList} contains methods belonging to one class.
    *
    * @param targetClass the class for which collect statistics
-   * @param actualMethodList methods with tags translated by MeMo
+   * @param actualMethodList methods with tags translated by CallMeMaybe
    * @param expectedMethodList methods with tags manually translated
    * @param output the output message to be populated
    * @return statistics for each method of the given lists, aggregated per class

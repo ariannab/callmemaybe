@@ -1,7 +1,7 @@
-package org.memo.accuracy.equivalences.sbes15;
+package org.callmemaybe.accuracy.equivalences.sbes15;
 
 import org.junit.Test;
-import org.memo.testlib.AbstractPrecisionRecallTestSuite;
+import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
 
 public class AccuracySBESGuava19 extends AbstractPrecisionRecallTestSuite {
 

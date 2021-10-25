@@ -1,4 +1,4 @@
-package org.memo.output.util;
+package org.callmemaybe.output.util;
 
 public class EquivalenceOutput extends TagOutput {
 

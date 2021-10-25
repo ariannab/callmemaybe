@@ -1,10 +1,10 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import java.lang.reflect.Constructor;
 import java.util.Arrays;
 import java.util.List;
 import java.util.StringJoiner;
-import org.memo.conf.Configuration;
+import org.callmemaybe.conf.Configuration;
 
 /**
  * This class represents an instance method code element for use in translation. It holds String

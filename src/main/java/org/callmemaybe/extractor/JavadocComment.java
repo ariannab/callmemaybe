@@ -1,7 +1,7 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import java.util.Objects;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /**
  * Represents a Javadoc block tag (e.g., {@code @param}, {@code @return}, {@code @thraws}) and its
@@ -12,7 +12,7 @@ import org.memo.util.Checks;
  */
 public abstract class JavadocComment {
 
-  /** The Javadoc block tags currently supported by MeMo. */
+  /** The Javadoc block tags currently supported by CallMeMaybe. */
   public enum Kind {
     FREETEXT, // the main description that precedes tags
     PARAM, // @param

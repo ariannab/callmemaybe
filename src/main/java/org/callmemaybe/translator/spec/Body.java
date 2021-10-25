@@ -1,4 +1,4 @@
-package org.memo.translator.spec;
+package org.callmemaybe.translator.spec;
 
 import java.util.LinkedList;
 

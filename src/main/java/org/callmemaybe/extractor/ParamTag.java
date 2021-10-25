@@ -1,7 +1,7 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import java.util.Objects;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /**
  * Represents a Javadoc @param comment. Each {@code ParamTag} consists of the name of the parameter,

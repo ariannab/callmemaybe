@@ -1,7 +1,7 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import static java.util.stream.Collectors.toList;
-import static org.memo.util.ComplianceChecks.isPostSpecCompilable;
+import static org.callmemaybe.util.ComplianceChecks.isPostSpecCompilable;
 
 import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.semgraph.SemanticGraph;
@@ -16,11 +16,11 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-import org.memo.conf.Configuration;
-import org.memo.extractor.CommentContent;
-import org.memo.extractor.DocumentedExecutable;
-import org.memo.extractor.ReturnTag;
-import org.memo.util.Reflection;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.CommentContent;
+import org.callmemaybe.extractor.DocumentedExecutable;
+import org.callmemaybe.extractor.ReturnTag;
+import org.callmemaybe.util.Reflection;
 import randoop.condition.specification.Guard;
 import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Property;

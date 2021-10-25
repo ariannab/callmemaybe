@@ -1,10 +1,10 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.NodeList;
 import java.util.List;
 import java.util.Objects;
-import org.memo.util.Checks;
+import org.callmemaybe.util.Checks;
 
 /** Represents a class or interface that is documented with Javadoc comments. */
 public final class DocumentedType {

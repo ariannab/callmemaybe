@@ -1,4 +1,4 @@
-package org.memo.translator.semantic;
+package org.callmemaybe.translator.semantic;
 
 import de.jungblut.glove.GloveRandomAccessReader;
 import de.jungblut.glove.impl.GloveBinaryRandomAccessReader;
@@ -43,7 +43,7 @@ public class GloveBinModelWrapper {
     String file1 = "dict.bin";
     String file2 = "vectors.bin";
 
-    // Copy GloVe models in MeMo jar to glove-binary folder and use them.
+    // Copy GloVe models in CallMeMaybe jar to glove-binary folder and use them.
     String file1Path = "/" + gloveBinaries + "/" + file1;
     String file2Path = "/" + gloveBinaries + "/" + file2;
     InputStream gloveBinary1 = getClass().getResourceAsStream(file1Path);

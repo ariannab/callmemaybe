@@ -1,4 +1,4 @@
-package org.memo.testlib;
+package org.callmemaybe.testlib;
 
 import static org.hamcrest.number.IsCloseTo.closeTo;
 import static org.junit.Assert.assertThat;
@@ -7,20 +7,20 @@ import java.io.File;
 import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.memo.MeMo;
-import org.memo.extractor.JavadocComment;
-import org.memo.util.Stats;
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.extractor.JavadocComment;
+import org.callmemaybe.util.Stats;
 
 /**
  * Represents an abstract test suite that uses precision and recall to measure relevance.
  *
  * <p>To create a new precision/recall test suite, create a new test class extending
- * `org.memo.testlib.AbstractPrecisionRecallTestSuite`.
+ * `org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite`.
  *
  * <p>In the newly created class, create a method for each target class. In the method add the
- * following line of code to execute MeMo on the target class: {@code Stats stats =
+ * following line of code to execute CallMeMaybe on the target class: {@code Stats stats =
  * test(<qualified_class_name>)}. A Stats object contains the results (e.g., precision, recall, ...)
- * of the execution of MeMo on a given class. You probably want to add assertions on the
+ * of the execution of CallMeMaybe on a given class. You probably want to add assertions on the
  * precision/recall values obtained. The existing test suites have examples of assertions on the
  * precision/recall values.
  */
@@ -45,7 +45,7 @@ public abstract class AbstractPrecisionRecallTestSuite {
   private final String goalOutputDirPath;
 
   /**
-   * Constructs and initializes a precision recall test suite that will test MeMo using the files in
+   * Constructs and initializes a precision recall test suite that will test CallMeMaybe using the files in
    * the given directories.
    *
    * @param sourceDirPath the path to the sources of the library to test
@@ -69,7 +69,7 @@ public abstract class AbstractPrecisionRecallTestSuite {
   @AfterClass
   public static void tearDown() {
 
-    System.out.println("Classifier classified: " + MeMo.configuration.ALL_SENTENCES + " sentences");
+    System.out.println("Classifier classified: " + CallMeMaybe.configuration.ALL_SENTENCES + " sentences");
 
     System.out.println(
         "=== Test Suite ==="

@@ -1,4 +1,4 @@
-package org.memo.translator;
+package org.callmemaybe.translator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-import org.memo.util.Distance;
+import org.callmemaybe.util.Distance;
 
 /**
  * This class wraps a Java code element (e.g., {@code java.lang.reflect.Parameter}, {@code

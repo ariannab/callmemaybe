@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import static java.util.stream.Collectors.toList;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -16,10 +16,10 @@ import java.util.Collections;
 import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.memo.conf.ClassDirsConverter;
-import org.memo.conf.Configuration;
-import org.memo.testlib.ToradocuJavaCompiler;
-import org.memo.util.Reflection;
+import org.callmemaybe.conf.ClassDirsConverter;
+import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.testlib.ToradocuJavaCompiler;
+import org.callmemaybe.util.Reflection;
 
 /**
  * Tests {@code JavadocExtractor} on the example class example.AClass in src/test/resources/example.

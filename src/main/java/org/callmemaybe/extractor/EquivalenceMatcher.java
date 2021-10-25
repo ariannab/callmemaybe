@@ -1,4 +1,4 @@
-package org.memo.extractor;
+package org.callmemaybe.extractor;
 
 import com.crtomirmajer.wmd4j.WordMovers;
 import java.io.FileWriter;
@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.memo.MeMo;
-import org.memo.translator.semantic.GloveModelWrapper;
+import org.callmemaybe.CallMeMaybe;
+import org.callmemaybe.translator.semantic.GloveModelWrapper;
 
 public class EquivalenceMatcher {
 
@@ -56,7 +56,7 @@ public class EquivalenceMatcher {
     if (methodMatch != null) {
       return methodMatch;
     } else {
-      if (MeMo.configuration.isSemanticMatcherEnabled()) {
+      if (CallMeMaybe.configuration.isSemanticMatcherEnabled()) {
         // No match found via n-grams: try WMD
         methodMatch = findEquivalencesSemantic(comment, codeSnippet);
       }
