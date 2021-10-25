@@ -49,7 +49,7 @@ public class CommentTranslator {
       DocumentedType documentedType, DocumentedExecutable excMember) {
     // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
-    return new FreeTextTranslator().translate(documentedType, excMember);
+    return new FreeTextTranslator().translateEq(documentedType, excMember);
   }
 
   /**

@@ -14,6 +14,9 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import org.callmemaybe.extractor.TempProtocolMatcher;
+import org.callmemaybe.extractor.TemporalMatch;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.callmemaybe.CallMeMaybe;
@@ -39,7 +42,7 @@ public class FreeTextTranslator {
    * @param documentedType the type the member belongs to
    * @return the translation, null if failed
    */
-  public List<EquivalentMatch> translate(
+  public List<EquivalentMatch> translateEq(
       DocumentedType documentedType, DocumentedExecutable excMember) {
 
     CommentContent commentContent = excMember.getFreeText().getComment();
@@ -105,6 +108,39 @@ public class FreeTextTranslator {
     }
     return matches;
   }
+
+  /**
+   * Translates a free text comment if it contains a temporal protocol.
+   * This method calls the TP Finder and then the Translator.
+   *
+   * @param excMember the executable member the comment belongs to
+   * @param documentedType the type the member belongs to
+   * @return the translation, null if failed
+   */
+  public List<TemporalMatch> translateTP(
+          DocumentedType documentedType, DocumentedExecutable excMember) {
+
+    CommentContent commentContent = excMember.getFreeText().getComment();
+    String commentText = commentContent.getText();
+    String[] sentences = commentText.split("\\. |(?<!\\.\\.)\\.\\)");
+    ArrayList<TemporalMatch> matches = new ArrayList<>();
+    TemporalMatch temporalMatch;
+
+    for (String sentence : sentences) {
+      // FIXME what is the following doing?
+      CallMeMaybe.configuration.ALL_SENTENCES = CallMeMaybe.configuration.ALL_SENTENCES + 1;
+      // Let's avoid spurious comments...
+      if (!sentence.isEmpty() && sentence.length() > 2) {
+        // Verify if there is a snippet in the sentence...
+        CodeSnippet sentenceSnippet = determineSnippet(commentContent, sentence);
+        // MR Finder entry point: Verify sentence contains an equivalence declaration...
+        temporalMatch = TempProtocolMatcher.findProtocolInComment(sentence, sentenceSnippet);
+      }
+    }
+
+    return new ArrayList<>();
+  }
+
 
   @Nullable
   private CodeSnippet determineSnippet(CommentContent commentContent, String sentence) {
