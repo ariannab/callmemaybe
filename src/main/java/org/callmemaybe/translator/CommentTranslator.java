@@ -15,6 +15,7 @@ import org.callmemaybe.extractor.DocumentedType;
 import org.callmemaybe.extractor.EquivalentMatch;
 import org.callmemaybe.extractor.ParamTag;
 import org.callmemaybe.extractor.ReturnTag;
+import org.callmemaybe.extractor.TemporalMatch;
 import org.callmemaybe.extractor.ThrowsTag;
 import org.callmemaybe.translator.preprocess.PreprocessorFactory;
 import org.callmemaybe.translator.spec.Assertion;
@@ -22,6 +23,7 @@ import org.callmemaybe.translator.spec.Body;
 import org.callmemaybe.translator.spec.EqOperationSpecification;
 import org.callmemaybe.translator.spec.EquivalenceSpec;
 import org.callmemaybe.translator.spec.PostAssertion;
+import org.callmemaybe.translator.spec.ProtocolSpecification;
 import org.callmemaybe.util.Checks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,11 +47,24 @@ public class CommentTranslator {
    * @param excMember the executable member commented with {@code freeTextComment}
    * @return a specification
    */
-  public static List<EquivalentMatch> translate(
+  public static List<EquivalentMatch> translateEq(
       DocumentedType documentedType, DocumentedExecutable excMember) {
     // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
     return new FreeTextTranslator().translateEq(documentedType, excMember);
+  }
+
+  /**
+   * Translates the given free text comment into a specification.
+   *
+   * @param excMember the executable member commented with {@code freeTextComment}
+   * @return a specification
+   */
+  public static List<TemporalMatch> translateTP(
+          DocumentedType documentedType, DocumentedExecutable excMember) {
+    // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
+    //    log.info("Translating " + tag + " of " + excMember.getSignature());
+    return new FreeTextTranslator().translateTP(documentedType, excMember);
   }
 
   /**
@@ -147,11 +162,35 @@ public class CommentTranslator {
           new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
 
       EqOperationSpecification opSpec = new EqOperationSpecification(operation, identifiers);
-      List<EquivalentMatch> equivalentMatches = CommentTranslator.translate(documentedType, member);
+      List<EquivalentMatch> equivalentMatches = CommentTranslator.translateEq(documentedType, member);
 
       List<EquivalenceSpec> eqSpecifications = createEqSpecifications(member, equivalentMatches);
 
       opSpec.addEqSpecifications(eqSpecifications);
+      methodsSpecs.put(member, opSpec);
+    }
+
+    return methodsSpecs;
+  }
+
+  public static Map<DocumentedExecutable, ProtocolSpecification> createProtocolSpec(
+          DocumentedType documentedType) {
+    Map<DocumentedExecutable, ProtocolSpecification> methodsSpecs = new LinkedHashMap<>();
+    List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
+    for (DocumentedExecutable member : members) {
+      OperationSignature operation = OperationSignature.of(member.getExecutable());
+      List<String> paramNames =
+              member.getParameters().stream().map(DocumentedParameter::getName).collect(toList());
+
+      Identifiers identifiers =
+              new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
+
+      ProtocolSpecification opSpec = new ProtocolSpecification(operation, identifiers);
+      List<TemporalMatch> temporalMatches = CommentTranslator.translateTP(documentedType, member);
+
+//      List<EquivalenceSpec> eqSpecifications = createEqSpecifications(member, equivalentMatches);
+
+//      opSpec.addEqSpecifications(eqSpecifications);
       methodsSpecs.put(member, opSpec);
     }
 

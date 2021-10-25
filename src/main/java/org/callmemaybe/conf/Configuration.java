@@ -185,6 +185,13 @@ public enum Configuration {
       arity = 1)
   private boolean generateCrossOracles = false;
 
+
+  @Parameter(
+          names = "--temp-protocols",
+          description = "Enable/disable the generation of temporal protocols",
+          arity = 1)
+  private boolean generateTempProtocols = false;
+
   /**
    * Initializes the configuration based on the given command-line options. This method must be
    * called before Javadoc options or the temporary Javadoc output directory are retrieved.
@@ -390,5 +397,9 @@ public enum Configuration {
 
   public boolean mustGenerateCrossOracles() {
     return generateCrossOracles;
+  }
+
+  public boolean mustGenerateTPs() {
+    return generateTempProtocols;
   }
 }

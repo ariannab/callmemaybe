@@ -29,6 +29,7 @@ import org.callmemaybe.output.util.JsonOutput;
 import org.callmemaybe.translator.CommentTranslator;
 import org.callmemaybe.translator.semantic.SemanticMatcher;
 import org.callmemaybe.translator.spec.EqOperationSpecification;
+import org.callmemaybe.translator.spec.ProtocolSpecification;
 import org.callmemaybe.util.GsonInstance;
 import org.callmemaybe.util.Stats;
 import org.slf4j.Logger;
@@ -153,6 +154,9 @@ public class CallMeMaybe {
         // Use @tComment or the standard condition translator to translate comments.
         //      } else if (configuration.useTComment()) {
         //        specifications = tcomment.TcommentKt.translate(members);
+      } else if(configuration.mustGenerateTPs()){
+        Map<DocumentedExecutable, ProtocolSpecification> temporalProtocols =
+                CommentTranslator.createProtocolSpec(documentedType);
       } else {
         specifications = CommentTranslator.createSpecifications(members);
       }

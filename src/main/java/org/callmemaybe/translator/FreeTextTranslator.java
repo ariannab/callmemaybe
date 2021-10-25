@@ -121,22 +121,12 @@ public class FreeTextTranslator {
           DocumentedType documentedType, DocumentedExecutable excMember) {
 
     CommentContent commentContent = excMember.getFreeText().getComment();
-    String commentText = commentContent.getText();
-    String[] sentences = commentText.split("\\. |(?<!\\.\\.)\\.\\)");
+//    String commentText = commentContent.getText();
+//    String[] sentences = commentText.split("\\. |(?<!\\.\\.)\\.\\)");
     ArrayList<TemporalMatch> matches = new ArrayList<>();
     TemporalMatch temporalMatch;
 
-    for (String sentence : sentences) {
-      // FIXME what is the following doing?
-      CallMeMaybe.configuration.ALL_SENTENCES = CallMeMaybe.configuration.ALL_SENTENCES + 1;
-      // Let's avoid spurious comments...
-      if (!sentence.isEmpty() && sentence.length() > 2) {
-        // Verify if there is a snippet in the sentence...
-        CodeSnippet sentenceSnippet = determineSnippet(commentContent, sentence);
-        // MR Finder entry point: Verify sentence contains an equivalence declaration...
-        temporalMatch = TempProtocolMatcher.findProtocolInComment(sentence, sentenceSnippet);
-      }
-    }
+    temporalMatch = TempProtocolMatcher.findProtocolInComment(commentContent, excMember);
 
     return new ArrayList<>();
   }

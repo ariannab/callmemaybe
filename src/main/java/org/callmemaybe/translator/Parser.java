@@ -57,7 +57,7 @@ public class Parser {
    * @param comment the comment object
    * @param method the DocumentedExecutable
    */
-  private static List<SemanticGraph> parse_(CommentContent comment, DocumentedExecutable method) {
+  public static List<SemanticGraph> extractSemanticGraphs(CommentContent comment, DocumentedExecutable method) {
     // Check if cache contains a valid answer.
     MethodComment key = new MethodComment(comment, method);
     if (graphsCache.containsKey(key)) {
@@ -97,7 +97,7 @@ public class Parser {
   // TODO Move this to a new class PropositionIdentifier that handles Proposition.
   public static List<PropositionSeries> parse(CommentContent comment, DocumentedExecutable method) {
     List<PropositionSeries> result = new ArrayList<>();
-    List<SemanticGraph> semanticGraphs = parse_(comment, method);
+    List<SemanticGraph> semanticGraphs = extractSemanticGraphs(comment, method);
     for (SemanticGraph semanticGraph : semanticGraphs) {
       result.add(new SentenceParser(semanticGraph).getPropositionSeries());
     }
