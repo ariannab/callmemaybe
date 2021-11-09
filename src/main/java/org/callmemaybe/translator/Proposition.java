@@ -13,6 +13,9 @@ public class Proposition {
   private String translation;
   private final boolean isNegative;
 
+  // TODO The predicate may be, e.g, "will function", while we want only "function"
+  private Verb verb;
+
   /**
    * Constructs and initializes a {@code Proposition} with the given subject and predicate.
    *
@@ -87,6 +90,14 @@ public class Proposition {
   public void setTranslation(String translation) {
     Objects.requireNonNull(translation);
     this.translation = translation;
+  }
+
+  public Verb getVerb() {
+    return verb;
+  }
+
+  public void setVerb(Verb verb) {
+    this.verb = verb;
   }
 
   /**

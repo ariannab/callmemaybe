@@ -178,20 +178,20 @@ public class CommentTranslator {
     Map<DocumentedExecutable, ProtocolSpecification> methodsSpecs = new LinkedHashMap<>();
     List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
     for (DocumentedExecutable member : members) {
-      OperationSignature operation = OperationSignature.of(member.getExecutable());
+//      OperationSignature operation = OperationSignature.of(member.getExecutable());
       List<String> paramNames =
               member.getParameters().stream().map(DocumentedParameter::getName).collect(toList());
 
-      Identifiers identifiers =
-              new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
+//      Identifiers identifiers =
+//              new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
 
-      ProtocolSpecification opSpec = new ProtocolSpecification(operation, identifiers);
+//      ProtocolSpecification opSpec = new ProtocolSpecification(operation, identifiers);
       List<TemporalMatch> temporalMatches = CommentTranslator.translateTP(documentedType, member);
 
 //      List<EquivalenceSpec> eqSpecifications = createEqSpecifications(member, equivalentMatches);
 
 //      opSpec.addEqSpecifications(eqSpecifications);
-      methodsSpecs.put(member, opSpec);
+//      methodsSpecs.put(member, opSpec);
     }
 
     return methodsSpecs;

@@ -40,7 +40,8 @@ public class SentenceParser {
       conjunctionRelations,
       negationRelations,
       numModifierRelations,
-      auxRelations;
+      auxRelations,
+      temporalRelations;
   /** Logger for this class. */
   private static final Logger log = LoggerFactory.getLogger(SentenceParser.class);
 
@@ -74,7 +75,7 @@ public class SentenceParser {
 
     for (SemanticGraphEdge subjectRelation : subjectRelations) {
       // Get the words that make up the predicate.
-      List<IndexedWord> predicateWords = getPredicateWords(subjectRelation.getGovernor());
+      List<Verb> predicateWords = getPredicateWords(subjectRelation.getGovernor());
       if (predicateWords.isEmpty()) {
         // Skip creating a Proposition if no predicate could be identified.
         continue;
@@ -141,6 +142,113 @@ public class SentenceParser {
     return propositionSeries;
   }
 
+  public TemporalPropSeries getTemporalPropositionSeries() {
+    // Map between some of the words in a sentence and the proposition composed of those words.
+    // (IndexedWord is a Stanford parser class representing a word in a sentence, plus many other
+    // information).
+    // This map is used to understand which propositions a conjunction is joining, since we have to
+    // map a conjunction between two specific words to a conjunction between two propositions.
+    Map<List<IndexedWord>, Proposition> propositionMap = new LinkedHashMap<>();
+    // Proposition series that will be built and returned.
+    TemporalPropSeries propositionSeries = new TemporalPropSeries(semanticGraph);
+
+    for (SemanticGraphEdge subjectRelation : subjectRelations) {
+      // Get the words that make up the predicate.
+      List<Verb> predicateWords = getPredicateWords(subjectRelation.getGovernor());
+      if (predicateWords.isEmpty()) {
+        // Skip creating a Proposition if no predicate could be identified.
+        continue;
+      }
+      // Check if the predicate should be negated.
+      boolean negative = predicateIsNegative(subjectRelation.getGovernor());
+
+      // Stores the word marked as a subject word in the semantic graph.
+      IndexedWord subjectWord = subjectRelation.getDependent();
+      // Stores the subject and associated words, such as any modifiers that come before it.
+      // Words (but the subject) appear in the list in the same order as they appear in the
+      // sentence. Subject is always the last word in the list.
+      Subject subject = getSubject(subjectWord);
+      List<IndexedWord> subjectWords = subject.getSubjectWords();
+      // Create a Proposition from the subject and predicate words.
+      String predicateWordsAsString =
+              predicateWords.stream().map(Verb::getWord).collect(Collectors.joining(" "));
+      Proposition proposition = new Proposition(subject, predicateWordsAsString, negative);
+
+//      Optional<IndexedWord> verb = predicateWords.stream().filter(x -> x.indexedWord.matches("VB.*")).findFirst();
+//      verb.ifPresent(indexedWord -> proposition.setVerb(indexedWord.word()));
+      // FIXME instead of the above, retrieve the Verb that is not Copula
+
+      // Add the Proposition and associated words to the propositionMap.
+      List<IndexedWord> propositionWords = new ArrayList<>(subjectWords);
+      propositionWords.addAll(predicateWords);
+      propositionMap.put(propositionWords, proposition);
+    }
+
+    for (SemanticGraphEdge tempRelation : temporalRelations) {
+      // TODO So here the code iterates any subject relations found and for each of them,
+      // TODO a preposition is built. But what about the advcl -- what can we build with that,
+      // TODO another preposition?
+
+      String specificRelation = tempRelation.getRelation().getSpecific();
+      // Get the words that make up the governor.
+      List<Verb> governorWords = getPredicateWords(tempRelation.getGovernor());
+      if (governorWords.isEmpty()) {
+        // Skip creating a Proposition if no gov. could be identified.
+        continue;
+      }
+      // Check if the gov. should be negated.
+      boolean negative = predicateIsNegative(tempRelation.getGovernor());
+
+      // Stores the word marked as a dependent word in the semantic graph.
+      IndexedWord dependentWord = tempRelation.getDependent();
+
+      // Stores the dependent and associated words, such as any modifiers that come before it.
+      // Words (but the dependent) appear in the list in the same order as they appear in the
+      // sentence. Dep. is always the last word in the list.
+      Subject dependent = getSubject(dependentWord);
+
+      List<IndexedWord> depWords = dependent.getSubjectWords();
+      // Create a Proposition from the subject and predicate words.
+      String predicateWordsAsString =
+              governorWords.stream().map(Verb::getWord).collect(Collectors.joining(" "));
+      Proposition proposition = new Proposition(dependent, predicateWordsAsString, negative);
+
+      // Add the Proposition and associated words to the propositionMap.
+      List<IndexedWord> propositionWords = new ArrayList<>(depWords);
+      propositionWords.addAll(governorWords);
+      propositionMap.put(propositionWords, proposition);
+    }
+
+    // Identify propositions associated with each temp. rel. and add them to the propositionSeries.
+    for (SemanticGraphEdge temporalRelations : temporalRelations) {
+      IndexedWord conjGovernor = temporalRelations.getGovernor();
+      IndexedWord conjDependent = temporalRelations.getDependent();
+      Proposition p1 = null, p2 = null;
+
+      for (Entry<List<IndexedWord>, Proposition> entry : propositionMap.entrySet()) {
+        if (entry.getKey().contains(conjGovernor)) {
+          p1 = entry.getValue();
+        }
+        if (entry.getKey().contains(conjDependent)) {
+          p2 = entry.getValue();
+        }
+        if (p1 != null && p2 != null) {
+          break;
+        }
+      }
+
+      if (p1 != null && p2 != null) {
+        if (propositionSeries.isEmpty()) {
+          propositionSeries.add(p1);
+        }
+        propositionSeries.add(getTemporalSpecific(temporalRelations), p2);
+      }
+    }
+
+    return propositionSeries;
+  }
+
+
   /**
    * Returns the type of conjunction associated with a conjunction relation.
    *
@@ -157,6 +265,24 @@ public class SentenceParser {
       case "and":
       case "but":
         operator = Conjunction.AND;
+        break;
+      default:
+        operator = null;
+    }
+    return operator;
+  }
+
+  /**
+   *
+   * @param temporalRelation
+   * @return
+   */
+  private TemporalRelation getTemporalSpecific(SemanticGraphEdge temporalRelation) {
+    String conjunctionRelationSpecific = temporalRelation.getRelation().getSpecific();
+    TemporalRelation operator;
+    switch (conjunctionRelationSpecific) {
+      case "until":
+        operator = TemporalRelation.UNTIL;
         break;
       default:
         operator = null;
@@ -186,8 +312,8 @@ public class SentenceParser {
    * @param governor the governor for a subject relation
    * @return all words in the predicate associated with the subject in the subject relation
    */
-  private List<IndexedWord> getPredicateWords(IndexedWord governor) {
-    List<IndexedWord> result;
+  private List<Verb> getPredicateWords(IndexedWord governor) {
+    List<Verb> result;
 
     result = tryCopulaPredicate(governor);
     if (result.isEmpty()) {
@@ -219,8 +345,8 @@ public class SentenceParser {
    * @return the predicate words or an empty list if the predicate is not involved in an auxiliary
    *     relation
    */
-  private List<IndexedWord> tryAuxiliaryRelation(IndexedWord governor) {
-    List<IndexedWord> predicateWords = new ArrayList<>();
+  private List<Verb> tryAuxiliaryRelation(IndexedWord governor) {
+    List<Verb> predicateWords = new ArrayList<>();
 
     Optional<SemanticGraphEdge> auxEdge =
         auxRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
@@ -229,8 +355,8 @@ public class SentenceParser {
     }
 
     IndexedWord aux = auxEdge.get().getDependent();
-    predicateWords.add(aux);
-    predicateWords.add(governor);
+    predicateWords.add(new Verb(aux, Verb.KindOfVerb.AUX));
+    predicateWords.add(new Verb(governor, Verb.KindOfVerb.AUX));
     return predicateWords;
   }
 
@@ -241,8 +367,8 @@ public class SentenceParser {
    * @param governor the governor associated with the predicate
    * @return the predicate words or an empty list if the predicate is not of the non-copula form
    */
-  private List<IndexedWord> tryNonCopulaPredicate(IndexedWord governor) {
-    List<IndexedWord> predicateWords = new ArrayList<>();
+  private List<Verb> tryNonCopulaPredicate(IndexedWord governor) {
+    List<Verb> predicateWords = new ArrayList<>();
 
     Optional<SemanticGraphEdge> complementEdge =
         complementRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
@@ -250,15 +376,15 @@ public class SentenceParser {
       // Predicate is not of non-copula form.
       return predicateWords;
     }
-    predicateWords.add(governor);
+    predicateWords.add(new Verb(governor, Verb.KindOfVerb.NON_COPULA));
 
     IndexedWord complement = complementEdge.get().getDependent();
-    predicateWords.add(complement);
+    predicateWords.add(new Verb(complement, Verb.KindOfVerb.NON_COPULA));
 
     Optional<SemanticGraphEdge> numModifierEdge =
         numModifierRelations.stream().filter(e -> e.getGovernor().equals(complement)).findFirst();
     if (numModifierEdge.isPresent()) {
-      predicateWords.add(numModifierEdge.get().getDependent());
+      predicateWords.add(new Verb(numModifierEdge.get().getDependent(), Verb.KindOfVerb.NON_COPULA));
     }
 
     return predicateWords;
@@ -271,8 +397,8 @@ public class SentenceParser {
    * @param governor the governor associated with the predicate
    * @return the predicate words or an empty list if the predicate is not of the conjunction form
    */
-  private List<IndexedWord> tryConjunctionPredicate(IndexedWord governor) {
-    List<IndexedWord> predicateWords = new ArrayList<>();
+  private List<Verb> tryConjunctionPredicate(IndexedWord governor) {
+    List<Verb> predicateWords = new ArrayList<>();
 
     // Case 1: conjunction between verbs (e.g., set is OR contains null).
     Optional<SemanticGraphEdge> conjunctionEdge1 =
@@ -284,8 +410,8 @@ public class SentenceParser {
               .filter(e -> e.getGovernor().equals(conjunctionEdge1.get().getDependent()))
               .findFirst();
       if (complementEdge.isPresent()) {
-        predicateWords.add(governor);
-        predicateWords.add(complementEdge.get().getDependent());
+        predicateWords.add(new Verb(governor, Verb.KindOfVerb.CONJUNCTION));
+        predicateWords.add(new Verb(complementEdge.get().getDependent(), Verb.KindOfVerb.CONJUNCTION));
         return predicateWords;
       }
     }
@@ -299,8 +425,8 @@ public class SentenceParser {
               .filter(e -> e.getGovernor().equals(conjunctionEdge2.get().getGovernor()))
               .findFirst();
       if (copulaEdge.isPresent()) {
-        predicateWords.add(copulaEdge.get().getDependent());
-        predicateWords.add(conjunctionEdge2.get().getDependent());
+        predicateWords.add(new Verb(copulaEdge.get().getDependent(), Verb.KindOfVerb.COPULA));
+        predicateWords.add(new Verb(conjunctionEdge2.get().getDependent(), Verb.KindOfVerb.COPULA));
         return predicateWords;
       }
     }
@@ -315,8 +441,8 @@ public class SentenceParser {
    * @param governor the governor associated with the predicate
    * @return the predicate words or an empty list if the predicate is not of the passive form
    */
-  private List<IndexedWord> tryPassivePredicate(IndexedWord governor) {
-    List<IndexedWord> predicateWords = new ArrayList<>();
+  private List<Verb> tryPassivePredicate(IndexedWord governor) {
+    List<Verb> predicateWords = new ArrayList<>();
 
     Optional<SemanticGraphEdge> auxpassEdge =
         getRelationsFromGraph("auxpass")
@@ -327,8 +453,8 @@ public class SentenceParser {
       // Predicate is not of passive form.
       return predicateWords;
     }
-    predicateWords.add(auxpassEdge.get().getDependent());
-    predicateWords.add(governor);
+    predicateWords.add(new Verb(auxpassEdge.get().getDependent(), Verb.KindOfVerb.PASSIVE));
+    predicateWords.add(new Verb(governor, Verb.KindOfVerb.PASSIVE));
 
     return predicateWords;
   }
@@ -340,8 +466,8 @@ public class SentenceParser {
    * @param governor the governor associated with the predicate
    * @return the predicate words or an empty list if the predicate is not of the copula form
    */
-  private List<IndexedWord> tryCopulaPredicate(IndexedWord governor) {
-    List<IndexedWord> predicateWords = new ArrayList<>();
+  private List<Verb> tryCopulaPredicate(IndexedWord governor) {
+    List<Verb> predicateWords = new ArrayList<>();
 
     // For a predicate of this form, the given governor of the subject relation is also the governor
     // of the copula relation.
@@ -351,9 +477,9 @@ public class SentenceParser {
       // Predicate is not of copula form.
       return predicateWords;
     }
-    predicateWords.add(copEdge.get().getDependent());
+    predicateWords.add(new Verb(copEdge.get().getDependent(), Verb.KindOfVerb.COPULA));
     // Add the governor itself to the predicate.
-    predicateWords.add(governor);
+    predicateWords.add(new Verb(governor, Verb.KindOfVerb.COPULA));
 
     return predicateWords;
   }
@@ -397,6 +523,7 @@ public class SentenceParser {
 
   /** Initializes the relations fields using the semantic graph. */
   private void initializeRelations() {
+    // TODO Here manage advcl too (and obl, and?)
     subjectRelations = getRelationsFromGraph("nsubj", "nsubjpass");
     //    if (subjectRelations.isEmpty()) {
     //      log.warn("Unable to identify subjects in \"{}\".",
@@ -408,6 +535,7 @@ public class SentenceParser {
     conjunctionRelations = getRelationsFromGraph("conj:and", "conj:or", "conj:but");
     negationRelations = getRelationsFromGraph("neg");
     numModifierRelations = getRelationsFromGraph("nummod");
+    temporalRelations = getTemporalRelationsFromGraph("advcl");
   }
 
   /**
@@ -433,6 +561,33 @@ public class SentenceParser {
       if (specific != null) {
         identifier += ":" + specific;
       }
+      if (identifiers.contains(identifier)) {
+        foundRelations.add(edge);
+      }
+    }
+    return foundRelations;
+  }
+
+  /**
+   * Mimics the above but slightly different logic.  FIXME double check this works
+   * @param relationIdentifiers
+   * @return
+   */
+  private List<SemanticGraphEdge> getTemporalRelationsFromGraph(String... relationIdentifiers) {
+    final List<String> identifiers =
+            Collections.unmodifiableList(Arrays.asList(relationIdentifiers));
+    final List<SemanticGraphEdge> foundRelations = new ArrayList<>();
+
+    for (SemanticGraphEdge edge : semanticGraph.edgeIterable()) {
+      final GrammaticalRelation grammaticalRelation = edge.getRelation();
+      String identifier = grammaticalRelation.getShortName();
+
+      // FIXME do we care about this *now*?
+//      final String specific = grammaticalRelation.getSpecific();
+//      if (specific != null) {
+//        identifier += ":" + specific;
+//      }
+
       if (identifiers.contains(identifier)) {
         foundRelations.add(edge);
       }

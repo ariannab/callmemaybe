@@ -105,6 +105,21 @@ public class Parser {
   }
 
   /**
+   *
+   * @param comment
+   * @param method
+   * @return
+   */
+  public static List<PropositionSeries> parseTemporal(CommentContent comment, DocumentedExecutable method) {
+    List<PropositionSeries> result = new ArrayList<>();
+    List<SemanticGraph> semanticGraphs = extractSemanticGraphs(comment, method);
+    for (SemanticGraph semanticGraph : semanticGraphs) {
+      result.add(new SentenceParser(semanticGraph).getTemporalPropositionSeries());
+    }
+    return removePlaceholders(result);
+  }
+
+  /**
    * Verifies if the comment contains a verb among the {@code possibleVerbs}. If it doesn't, the
    * verb is assumed to be "is" and is added to the comment.
    *

@@ -128,6 +128,7 @@ public class FreeTextTranslator {
 
     temporalMatch = TempProtocolMatcher.findProtocolInComment(commentContent, excMember);
 
+    // TODO if true...
     return new ArrayList<>();
   }
 

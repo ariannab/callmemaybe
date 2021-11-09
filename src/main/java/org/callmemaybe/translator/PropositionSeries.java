@@ -1,9 +1,13 @@
 package org.callmemaybe.translator;
 
 import edu.stanford.nlp.semgraph.SemanticGraph;
+import org.callmemaybe.extractor.TempProtocolMatcher;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * This class represents a series of propositions and conjunctions in a sentence, as in
@@ -167,6 +171,16 @@ public class PropositionSeries {
       }
     }
     return output.toString();
+  }
+
+  public List<String> getAllPredicates(){
+    return propositions.stream().map(Proposition::getPredicate)
+            .collect(Collectors.toList());
+  }
+
+  public List<Verb> getAllVerbs(){
+    return propositions.stream().map(Proposition::getVerb)
+            .collect(Collectors.toList());
   }
 
   /**

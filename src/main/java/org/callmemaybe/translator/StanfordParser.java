@@ -58,7 +58,7 @@ public class StanfordParser {
     Tree tree = LEXICALIZED_PARSER.parse(words);
     GrammaticalStructure gs = GSF.newGrammaticalStructure(tree);
     // Build the semantic graph.
-    return new SemanticGraph(gs.typedDependenciesCCprocessed());
+    return new SemanticGraph(gs.typedDependenciesEnhancedPlusPlus());
   }
 
   public static List<CoreLabel> lemmatize(String text) {
