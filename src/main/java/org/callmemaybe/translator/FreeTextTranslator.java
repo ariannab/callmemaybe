@@ -128,8 +128,12 @@ public class FreeTextTranslator {
 
     temporalMatch = TempProtocolMatcher.findProtocolInComment(commentContent, excMember);
 
-    // TODO if true...
-    return new ArrayList<>();
+    if(temporalMatch.isMatch()){
+      String translation = TemporalRule.getTemporalTranslation(temporalMatch);
+      temporalMatch.setOracle(translation);
+      matches.add(temporalMatch);
+    }
+    return matches;
   }
 
 

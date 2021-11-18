@@ -110,13 +110,15 @@ public class Parser {
    * @param method
    * @return
    */
-  public static List<PropositionSeries> parseTemporal(CommentContent comment, DocumentedExecutable method) {
-    List<PropositionSeries> result = new ArrayList<>();
+  public static List<TemporalPropSeries> parseTemporal(CommentContent comment, DocumentedExecutable method) {
+    List<TemporalPropSeries> result = new ArrayList<>();
     List<SemanticGraph> semanticGraphs = extractSemanticGraphs(comment, method);
     for (SemanticGraph semanticGraph : semanticGraphs) {
       result.add(new SentenceParser(semanticGraph).getTemporalPropositionSeries());
     }
-    return removePlaceholders(result);
+//    return removePlaceholders(result);
+    // FIXME what about placeholders
+    return result;
   }
 
   /**

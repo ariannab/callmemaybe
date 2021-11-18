@@ -178,10 +178,10 @@ public class PropositionSeries {
             .collect(Collectors.toList());
   }
 
-  public List<Verb> getAllVerbs(){
-    return propositions.stream().map(Proposition::getVerb)
-            .collect(Collectors.toList());
-  }
+//  public List<Verb> getAllVerbs(){
+//    return propositions.stream().map(Proposition::getVerb)
+//            .collect(Collectors.toList());
+//  }
 
   /**
    * Returns a string representation of this series. The returned string is formatted as
