@@ -55,8 +55,9 @@ public class TemporalPropSeries {
      * @throws IllegalArgumentException if the number of temporalRelations is not exactly 1 less than the
      *     number of propositions, unless both are empty
      */
-    TemporalPropSeries(
-            SemanticGraph semanticGraph, List<Proposition> propositions, List<TemporalRule.TemporalRelation> conjunctions) {
+    TemporalPropSeries(SemanticGraph semanticGraph,
+                       List<Proposition> propositions,
+                       List<TemporalRule.TemporalRelation> conjunctions) {
         if (!propositions.isEmpty()
                 && !conjunctions.isEmpty()
                 && propositions.size() - conjunctions.size() != 1) {

@@ -129,11 +129,33 @@ public class FreeTextTranslator {
     temporalMatch = TempProtocolMatcher.findProtocolInComment(commentContent, excMember);
 
     if(temporalMatch.isMatch()){
-      String translation = TemporalRule.getTemporalTranslation(temporalMatch);
-      temporalMatch.setOracle(translation);
+      TemporalRule.TemporalProtocol rawProtocol = TemporalRule.buildRawProtocol(temporalMatch);
+//      temporalMatch.setOracle(rawProtocol);
+      // TODO translate the raw protocol, that is, match the members involved in it
+      temporalMatch = matchProtocolMembers(excMember, documentedType, rawProtocol, temporalMatch);
       matches.add(temporalMatch);
     }
     return matches;
+  }
+
+  private TemporalMatch matchProtocolMembers(DocumentedExecutable excMember,
+                                             DocumentedType documentedType,
+                                             TemporalRule.TemporalProtocol rawProtocol,
+                                             TemporalMatch temporalMatch) {
+
+    Matcher matcher = new Matcher();
+//    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember, Configuration.RECEIVER);
+    Set<CodeElement<?>> codeElements = JavaElementsCollector.collectIgnoringScope(excMember);
+    Set<CodeElement<?>> firstMemberMatches = matcher.subjectMatch(rawProtocol.getFirstMember(), codeElements);
+    Set<CodeElement<?>> secMemberMatches = matcher.subjectMatch(rawProtocol.getSecondMember(), codeElements);
+    if(!firstMemberMatches.iterator().hasNext() || !secMemberMatches.iterator().hasNext()){
+      // TODO check if this is the best way to flag a failed match
+      temporalMatch.setMatch(false);
+      return temporalMatch;
+    }
+    temporalMatch.setMemberA(String.valueOf(firstMemberMatches.iterator().next()));
+    temporalMatch.setMemberB(String.valueOf(secMemberMatches.iterator().next()));
+    return temporalMatch;
   }
 
 

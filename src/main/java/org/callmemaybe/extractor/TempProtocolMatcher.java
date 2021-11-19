@@ -1,6 +1,5 @@
 package org.callmemaybe.extractor;
 
-import edu.stanford.nlp.semgraph.SemanticGraph;
 import edu.stanford.nlp.simple.Sentence;
 import org.callmemaybe.translator.Parser;
 import org.callmemaybe.translator.TemporalPropSeries;
@@ -9,7 +8,6 @@ import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -64,8 +62,8 @@ public class TempProtocolMatcher {
             temporalMatch.setMatch(lemmatizedGoldenSet.containsAll(nonCopulaVerbs));
             temporalMatch.setRelations(p.getTemporalRelations());
             // FIXME About to do something even uglier:
-            temporalMatch.setMethodA(p.getPropositions().get(0).getSubject().getSubject());
-            temporalMatch.setMethodB(p.getPropositions().get(1).getSubject().getSubject());
+            temporalMatch.setMemberA(p.getPropositions().get(0).getSubject().getSubject());
+            temporalMatch.setMemberB(p.getPropositions().get(1).getSubject().getSubject());
         }
         return temporalMatch;
     }

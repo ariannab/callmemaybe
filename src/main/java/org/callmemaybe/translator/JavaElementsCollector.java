@@ -57,6 +57,34 @@ public class JavaElementsCollector {
     return collectedElements;
   }
 
+  /**
+   * Collects all the Java code elements that can be used for the condition translation. The code
+   * elements are collected using reflection starting from the given method. Differs from
+   * simple #collect because it doesn't exclude methods not invokable via executable's params.
+   *
+   * @param documentedExecutable the method from which to start to collect the code elements
+   * @return the collected code elements
+   */
+  public static Set<CodeElement<?>> collectIgnoringScope(DocumentedExecutable documentedExecutable) {
+    Set<CodeElement<?>> collectedElements = new LinkedHashSet<>();
+    final Class<?> containingClass = documentedExecutable.getDeclaringClass();
+
+    // Add the containing class.
+    collectedElements.add(containingClassOf(documentedExecutable));
+
+    // Add the parameters of the executable member.
+    collectedElements.addAll(parametersOf(documentedExecutable));
+
+    // Add fields of the containing class.
+    collectedElements.addAll(fieldsOf(containingClass));
+
+    // Add methods of the containing class (all but the method corresponding to
+    // documentedExecutable).
+    collectedElements.addAll(allMethodsOf(containingClass, Configuration.RECEIVER));
+
+    return collectedElements;
+  }
+
   // Executable member is ignored and not included in the returned list of methods.
   private static List<CodeElement<?>> methodsOf(
       Class<?> containingClass, DocumentedExecutable documentedExecutable) {

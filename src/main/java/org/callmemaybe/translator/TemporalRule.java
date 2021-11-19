@@ -10,52 +10,89 @@ public class TemporalRule {
         AFTER
     }
 
-    public static String getTemporalTranslation(TemporalMatch temporalMatch){
-        switch (temporalMatch.getRelations().get(0)){
-            case UNTIL: return notUntilTranslation(temporalMatch.getMethodA(), temporalMatch.getMethodB());
-            case AFTER: return afterTranslation(temporalMatch.getMethodA(), temporalMatch.getMethodB());
-            case BEFORE: return beforeTranslation(temporalMatch.getMethodA(), temporalMatch.getMethodB());
-            default: return "";
+    public final static String LEFT_ARROW = "<-";
+    public final static String RIGHT_ARROW = "->";
+
+    public static class TemporalProtocol{
+        String firstMember;
+        String secondMember;
+        String arrow;
+
+        public TemporalProtocol(String firstMember, String secondMember, String arrow) {
+            this.firstMember = firstMember;
+            this.secondMember = secondMember;
+            this.arrow = arrow;
+        }
+
+
+        public TemporalProtocol() {
+
+        }
+
+        public boolean isNoProtocol(){
+            return firstMember.isEmpty() && secondMember.isEmpty() && arrow.isEmpty();
+        }
+
+        public String getFirstMember() {
+            return firstMember;
+        }
+
+        public String getSecondMember() {
+            return secondMember;
+        }
+
+        public String getArrow() {
+            return arrow;
         }
     }
 
-    // FIXME What are A and B? If they're object is a thing, if they're methods
+    public static TemporalProtocol buildRawProtocol(TemporalMatch temporalMatch){
+        switch (temporalMatch.getRelations().get(0)){
+            case UNTIL: return notUntilTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+            case AFTER: return afterTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+            case BEFORE: return beforeTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+            default: return new TemporalProtocol();
+        }
+    }
+
+    // FIXME What are A and B? If they're object it's a thing, if they're methods
     // FIXME it's another thing
     /**
-     * Translates "A before B".
-     * (e.g., "A must be called before B"
+     * Translates "A before B", or, A -> B (arrow looking right)
+     * (e.g., "A must be called before B")
      *
      * @param A
      * @param B
      * @return
      */
     // TODO reason a bit better about types -- String...???
-    public static String beforeTranslation(String A, String B){
-        return A + "->" + B;
+    public static TemporalProtocol beforeTranslation(String A, String B){
+        return new TemporalProtocol(A, B,  RIGHT_ARROW);
     }
 
     /**
-     * Translates "A after B".
+     * Translates "A after B", or, A <- B (arrow looking left)
      * (e.g., "A can only be called after B"
      *
      * @param A
      * @param B
      * @return
      */
-    public static String afterTranslation(String A, String B){
-        return B + "->" + A;
+    public static TemporalProtocol afterTranslation(String A, String B){
+        return new TemporalProtocol(A, B,  LEFT_ARROW);
     }
 
+    // FIXME I am not sure about the below, reason about plain until and not + until
     /**
      * Translates "not A until B".
-     * (e.g., "A should not be called until B is called",
+     * (e.g., "A should not be called, until B is called",
      *       ~~ "B should precede A")
      *
      * @param A
      * @param B
      * @return
      */
-    public static String notUntilTranslation(String A, String B){
+    public static TemporalProtocol notUntilTranslation(String A, String B){
         return afterTranslation(A, B);
     }
 

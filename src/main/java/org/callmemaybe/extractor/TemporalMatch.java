@@ -13,9 +13,9 @@ public class TemporalMatch {
 
     private String oracle;
 
-    private String methodA;
+    private String memberA;
 
-    private String methodB;
+    private String memberB;
 
     public boolean isMatch() {
         return isMatch;
@@ -41,19 +41,19 @@ public class TemporalMatch {
         this.oracle = oracle;
     }
 
-    public String getMethodA() {
-        return methodA;
+    public String getMemberA() {
+        return memberA;
     }
 
-    public void setMethodA(String methodA) {
-        this.methodA = methodA;
+    public void setMemberA(String memberA) {
+        this.memberA = memberA;
     }
 
-    public String getMethodB() {
-        return methodB;
+    public String getMemberB() {
+        return memberB;
     }
 
-    public void setMethodB(String methodB) {
-        this.methodB = methodB;
+    public void setMemberB(String memberB) {
+        this.memberB = memberB;
     }
 }
