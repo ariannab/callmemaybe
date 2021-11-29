@@ -114,11 +114,9 @@ public class FreeTextTranslator {
    * This method calls the TP Finder and then the Translator.
    *
    * @param excMember the executable member the comment belongs to
-   * @param documentedType the type the member belongs to
    * @return the translation, null if failed
    */
-  public List<TemporalMatch> translateTP(
-          DocumentedType documentedType, DocumentedExecutable excMember) {
+  public List<TemporalMatch> translateTP(TempProtocolMatcher temporalMatcher,DocumentedExecutable excMember) {
 
     CommentContent commentContent = excMember.getFreeText().getComment();
 //    String commentText = commentContent.getText();
@@ -126,24 +124,22 @@ public class FreeTextTranslator {
     ArrayList<TemporalMatch> matches = new ArrayList<>();
     TemporalMatch temporalMatch;
 
-    temporalMatch = TempProtocolMatcher.findProtocolInComment(commentContent, excMember);
+    temporalMatch = temporalMatcher.findProtocolInComment(commentContent, excMember);
 
     if(temporalMatch.isMatch()){
-      TemporalRule.TemporalProtocol rawProtocol = TemporalRule.buildRawProtocol(temporalMatch);
-//      temporalMatch.setOracle(rawProtocol);
+      temporalMatch.setRawProtocol(TemporalRule.buildRawProtocol(temporalMatch));
       // TODO translate the raw protocol, that is, match the members involved in it
-      temporalMatch = matchProtocolMembers(excMember, documentedType, rawProtocol, temporalMatch);
+      matchProtocolMembers(excMember, temporalMatch);
       matches.add(temporalMatch);
     }
     return matches;
   }
 
   private TemporalMatch matchProtocolMembers(DocumentedExecutable excMember,
-                                             DocumentedType documentedType,
-                                             TemporalRule.TemporalProtocol rawProtocol,
                                              TemporalMatch temporalMatch) {
 
     Matcher matcher = new Matcher();
+    TemporalProtocol rawProtocol = temporalMatch.getRawProtocol();
 //    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember, Configuration.RECEIVER);
     Set<CodeElement<?>> codeElements = JavaElementsCollector.collectIgnoringScope(excMember);
     Set<CodeElement<?>> firstMemberMatches = matcher.subjectMatch(rawProtocol.getFirstMember(), codeElements);

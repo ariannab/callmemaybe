@@ -1,5 +1,6 @@
 package org.callmemaybe.extractor;
 
+import org.callmemaybe.translator.TemporalProtocol;
 import org.callmemaybe.translator.TemporalRule;
 
 import java.util.List;
@@ -7,6 +8,11 @@ import java.util.List;
 public class TemporalMatch {
 
     private boolean isMatch;
+
+    /**
+     * The underlying protocol with members and arrows.
+     */
+    private TemporalProtocol rawProtocol;
 
     // FIXME why are they multiple? Fix needed in temp.prop.series
     private List<TemporalRule.TemporalRelation> relations;
@@ -55,5 +61,13 @@ public class TemporalMatch {
 
     public void setMemberB(String memberB) {
         this.memberB = memberB;
+    }
+
+    public TemporalProtocol getRawProtocol() {
+        return rawProtocol;
+    }
+
+    public void setRawProtocol(TemporalProtocol rawProtocol) {
+        this.rawProtocol = rawProtocol;
     }
 }

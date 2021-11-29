@@ -11,6 +11,8 @@ import org.callmemaybe.extractor.ReturnTag;
 import org.callmemaybe.extractor.ThrowsTag;
 import org.callmemaybe.translator.spec.EqOperationSpecification;
 import org.callmemaybe.translator.spec.EquivalenceSpec;
+import org.callmemaybe.translator.spec.ProtocolSpec;
+import org.callmemaybe.translator.spec.ProtocolSpecification;
 import randoop.condition.specification.OperationSpecification;
 import randoop.condition.specification.Postcondition;
 import randoop.condition.specification.Precondition;
@@ -63,6 +65,43 @@ public class JsonOutput {
             member.getSignature(),
             member.getFreeText().getKind().toString(),
             oracle.toString());
+  }
+
+  // FIXME see errors
+  private void createProtocols(
+          DocumentedExecutable member, ProtocolSpecification specification) {
+    StringBuilder oracle = new StringBuilder();
+    int i = 0;
+    boolean moreThanOne = false;
+    for (ProtocolSpec m : specification.getProtocolSpecs()) {
+      // We have more than one equivalence spec: add them all in the oracle, they all must hold!
+      if (i > 0) {
+        moreThanOne = true;
+      }
+      boolean closingCurly = false;
+      if (!m.getGuard().getConditionSource().equals("true")) {
+        if (moreThanOne) {
+          oracle.append(" && ");
+          moreThanOne = false;
+        }
+        oracle.append("if(").append(m.getGuard().getConditionSource()).append(")").append("{");
+        closingCurly = true;
+      }
+      if (!m.getPostAssertion().toString().isEmpty()) {
+        if (moreThanOne) oracle.append(" && ");
+        oracle.append(m.getPostAssertion().toString());
+        i++;
+        if (closingCurly) {
+          oracle.append("}");
+        }
+      }
+    }
+    this.equivalence =
+            new EquivalenceOutput(
+                    member.getFreeText().getComment().getText(),
+                    member.getSignature(),
+                    member.getFreeText().getKind().toString(),
+                    oracle.toString());
   }
 
   public JsonOutput(DocumentedExecutable member, OperationSpecification specification) {

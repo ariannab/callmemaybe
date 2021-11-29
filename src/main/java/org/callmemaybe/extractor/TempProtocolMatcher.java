@@ -16,6 +16,22 @@ import java.util.stream.Stream;
 
 public class TempProtocolMatcher {
 
+    private Word2Vec w2vModel;
+    private Collection<String> goldenSet;
+
+    /**
+     * Initialize model and golden set of concepts.
+     * Doing it in the constructor so it can be done exactly once
+     * for all translations.
+     */
+    public TempProtocolMatcher() {
+        this.w2vModel = WordVectorSerializer.readWord2VecModel("src/test/resources/bin/SO_vectors_200.bin");
+        List<String> allProtocolConcepts = Stream.of(ProtocolConcepts.values())
+                .map(ProtocolConcepts::getStringConcept)
+                .collect(Collectors.toList());
+        this.goldenSet = w2vModel.wordsNearest(allProtocolConcepts, new HashSet<>(), 10);
+    }
+
     private enum ProtocolConcepts {
         CALL("call"),
         OPERATION("operation");
@@ -40,7 +56,7 @@ public class TempProtocolMatcher {
      * @return TemporalMatch object containing information such as the matched signature, empty if
      * no match
      */
-    public static TemporalMatch findProtocolInComment(CommentContent commentContent, DocumentedExecutable excMember) {
+    public TemporalMatch findProtocolInComment(CommentContent commentContent, DocumentedExecutable excMember) {
 //        List<SemanticGraph> semanticGraphs = Parser.extractSemanticGraphs(commentContent, excMember);
         List<TemporalPropSeries> propositionSeries = Parser.parseTemporal(commentContent, excMember);
         TemporalMatch temporalMatch = new TemporalMatch();
@@ -48,11 +64,7 @@ public class TempProtocolMatcher {
 
         // TODO now we have enhanced deps from the comments, e.g., advcl:until. That's a good sign,
         // TODO but are there *operations* associated with it? If it, we're likely looking at a protocol.
-        Word2Vec w2vModel = WordVectorSerializer.readWord2VecModel("src/test/resources/bin/SO_vectors_200.bin");
-        List<String> allProtocolConcepts = Stream.of(ProtocolConcepts.values())
-                .map(ProtocolConcepts::getStringConcept)
-                .collect(Collectors.toList());
-        Collection<String> goldenSet = w2vModel.wordsNearest(allProtocolConcepts, new HashSet<>(), 10);
+
         Set<String> lemmatizedGoldenSet = goldenSet.stream().map(TempProtocolMatcher::getLemma).collect(Collectors.toSet());
         for (TemporalPropSeries p : propositionSeries) {
             Set<String> nonCopulaVerbs = p.verbsDB.stream().filter(x -> x.getKindOfVerb()
@@ -60,10 +72,12 @@ public class TempProtocolMatcher {
                     .collect(Collectors.toSet());
             // FIXME TERRIBLE but I still dunno why/how we may end up with multiple prop series!
             temporalMatch.setMatch(lemmatizedGoldenSet.containsAll(nonCopulaVerbs));
-            temporalMatch.setRelations(p.getTemporalRelations());
-            // FIXME About to do something even uglier:
-            temporalMatch.setMemberA(p.getPropositions().get(0).getSubject().getSubject());
-            temporalMatch.setMemberB(p.getPropositions().get(1).getSubject().getSubject());
+            if(temporalMatch.isMatch()) {
+                temporalMatch.setRelations(p.getTemporalRelations());
+                // FIXME About to do something even uglier:
+                temporalMatch.setMemberA(p.getPropositions().get(0).getSubject().getSubject());
+                temporalMatch.setMemberB(p.getPropositions().get(1).getSubject().getSubject());
+            }
         }
         return temporalMatch;
     }

@@ -147,6 +147,7 @@ public class CallMeMaybe {
     if (configuration.isConditionTranslationEnabled()) {
       Map<DocumentedExecutable, OperationSpecification> specifications = new HashMap<>();
       Map<DocumentedExecutable, EqOperationSpecification> eqSpecifications = new HashMap<>();
+      Map<DocumentedExecutable, ProtocolSpecification> temporalProtocols = new HashMap<>();
 
       List<JsonOutput> jsonOutputs = new ArrayList<>();
       if (configuration.mustGenerateCrossOracles()) {
@@ -155,7 +156,7 @@ public class CallMeMaybe {
         //      } else if (configuration.useTComment()) {
         //        specifications = tcomment.TcommentKt.translate(members);
       } else if(configuration.mustGenerateTPs()){
-        Map<DocumentedExecutable, ProtocolSpecification> temporalProtocols =
+        temporalProtocols =
                 CommentTranslator.createProtocolSpec(documentedType);
       } else {
         specifications = CommentTranslator.createSpecifications(members);
@@ -187,6 +188,32 @@ public class CallMeMaybe {
                   "Unable to write the output on file "
                       + configuration.getConditionTranslatorOutput().getAbsolutePath(),
                   e);
+            }
+          }
+        } else if (configuration.mustGenerateTPs() && !temporalProtocols.isEmpty()) {
+          // Cross-oracles goal output
+          if (configuration.getConditionTranslatorOutput() != null) {
+            try (BufferedWriter writer =
+                         Files.newBufferedWriter(
+                                 configuration.getConditionTranslatorOutput().toPath(),
+                                 StandardCharsets.UTF_8)) {
+              Collection<ProtocolSpecification> protocols = temporalProtocols.values();
+              if (!protocols.isEmpty()) {
+                for (DocumentedExecutable executable : members) {
+                  jsonOutputs.add(new JsonOutput(executable, temporalProtocols.get(executable)));
+                }
+                String jsonOutput = GsonInstance.gson().toJson(jsonOutputs);
+                writer.write(jsonOutput);
+              } else {
+                // FIXME ugly, but we don't want empty JSON files around for now
+                File file = new File(configuration.getConditionTranslatorOutput().toURI());
+                file.delete();
+              }
+            } catch (Exception e) {
+              log.error(
+                      "Unable to write the output on file "
+                              + configuration.getConditionTranslatorOutput().getAbsolutePath(),
+                      e);
             }
           }
         } else if (!specifications.isEmpty()) {

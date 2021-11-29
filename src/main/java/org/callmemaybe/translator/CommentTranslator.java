@@ -15,6 +15,7 @@ import org.callmemaybe.extractor.DocumentedType;
 import org.callmemaybe.extractor.EquivalentMatch;
 import org.callmemaybe.extractor.ParamTag;
 import org.callmemaybe.extractor.ReturnTag;
+import org.callmemaybe.extractor.TempProtocolMatcher;
 import org.callmemaybe.extractor.TemporalMatch;
 import org.callmemaybe.extractor.ThrowsTag;
 import org.callmemaybe.translator.preprocess.PreprocessorFactory;
@@ -61,10 +62,10 @@ public class CommentTranslator {
    * @return a specification
    */
   public static List<TemporalMatch> translateTP(
-          DocumentedType documentedType, DocumentedExecutable excMember) {
+          TempProtocolMatcher tempProtocolMatcher, DocumentedExecutable excMember) {
     // PreprocessorFactory.create(freeTextComment.getKind()).preprocess(freeTextComment, excMember);
     //    log.info("Translating " + tag + " of " + excMember.getSignature());
-    return new FreeTextTranslator().translateTP(documentedType, excMember);
+    return new FreeTextTranslator().translateTP(tempProtocolMatcher, excMember);
   }
 
   /**
@@ -177,6 +178,7 @@ public class CommentTranslator {
           DocumentedType documentedType) {
     Map<DocumentedExecutable, ProtocolSpecification> methodsSpecs = new LinkedHashMap<>();
     List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
+    TempProtocolMatcher tempProtocolMatcher = new TempProtocolMatcher();
     for (DocumentedExecutable member : members) {
 //      OperationSignature operation = OperationSignature.of(member.getExecutable());
       List<String> paramNames =
@@ -186,7 +188,7 @@ public class CommentTranslator {
 //              new Identifiers(Configuration.RECEIVER, paramNames, Configuration.RETURN_VALUE);
 
 //      ProtocolSpecification opSpec = new ProtocolSpecification(operation, identifiers);
-      List<TemporalMatch> temporalMatches = CommentTranslator.translateTP(documentedType, member);
+      List<TemporalMatch> temporalMatches = CommentTranslator.translateTP(tempProtocolMatcher, member);
 
 //      List<EquivalenceSpec> eqSpecifications = createEqSpecifications(member, equivalentMatches);
 
