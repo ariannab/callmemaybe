@@ -20,7 +20,7 @@ public class EqOperationSpecification extends OperationSpecification {
     this.equivalenceSpecs = new ArrayList<>();
   }
 
-  public void addEqSpecifications(List<EquivalenceSpec> specifications) {
+  public void addSpecifications(List<EquivalenceSpec> specifications) {
     this.equivalenceSpecs.addAll(specifications);
   }
 

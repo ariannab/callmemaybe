@@ -280,10 +280,19 @@ public class SentenceParser {
    */
   private TemporalRule.TemporalRelation getTemporalSpecific(SemanticGraphEdge temporalRelation) {
     String conjunctionRelationSpecific = temporalRelation.getRelation().getSpecific();
+    if(conjunctionRelationSpecific==null){
+      return null;
+    }
     TemporalRule.TemporalRelation operator;
     switch (conjunctionRelationSpecific) {
       case "until":
         operator = TemporalRule.TemporalRelation.UNTIL;
+        break;
+      case "before":
+        operator = TemporalRule.TemporalRelation.BEFORE;
+        break;
+      case "after":
+        operator = TemporalRule.TemporalRelation.AFTER;
         break;
       default:
         operator = null;

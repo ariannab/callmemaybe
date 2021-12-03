@@ -130,9 +130,17 @@ public class FreeTextTranslator {
       temporalMatch.setRawProtocol(TemporalRule.buildRawProtocol(temporalMatch));
       // TODO translate the raw protocol, that is, match the members involved in it
       matchProtocolMembers(excMember, temporalMatch);
+      buildOracle(temporalMatch);
       matches.add(temporalMatch);
     }
     return matches;
+  }
+
+  private void buildOracle(TemporalMatch temporalMatch) {
+    String memberA = temporalMatch.getMemberA();
+    String memberB = temporalMatch.getMemberB();
+    String arrow = temporalMatch.getRawProtocol().getArrow();
+    temporalMatch.setOracle(memberA + arrow + memberB);
   }
 
   private TemporalMatch matchProtocolMembers(DocumentedExecutable excMember,
@@ -149,8 +157,8 @@ public class FreeTextTranslator {
       temporalMatch.setMatch(false);
       return temporalMatch;
     }
-    temporalMatch.setMemberA(String.valueOf(firstMemberMatches.iterator().next()));
-    temporalMatch.setMemberB(String.valueOf(secMemberMatches.iterator().next()));
+    temporalMatch.setMemberA(firstMemberMatches.iterator().next().getJavaExpression());
+    temporalMatch.setMemberB(secMemberMatches.iterator().next().getJavaExpression());
     return temporalMatch;
   }
 

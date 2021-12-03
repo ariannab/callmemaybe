@@ -20,4 +20,15 @@ public class ProtocolSpecification  extends OperationSpecification {
     public List<ProtocolSpec> getProtocolSpecs() {
         return protocolSpecs;
     }
+
+    public void addSpecifications(List<ProtocolSpec> specifications) {
+        this.protocolSpecs.addAll(specifications);
+    }
+
+    public boolean isEmpty() {
+        return this.protocolSpecs.isEmpty()
+                || this.protocolSpecs
+                .stream()
+                .allMatch(s -> s.getPostAssertion().getAssertionContent().isEmpty());
+    }
 }

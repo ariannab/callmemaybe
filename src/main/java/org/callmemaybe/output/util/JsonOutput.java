@@ -30,6 +30,7 @@ public class JsonOutput {
   public ReturnTagOutput returnTag;
   public List<ThrowsTagOutput> throwsTags;
   public EquivalenceOutput equivalence;
+  public ProtocolOutput protocol;
 
   private void createEquivalences(
       DocumentedExecutable member, EqOperationSpecification specification) {
@@ -67,7 +68,6 @@ public class JsonOutput {
             oracle.toString());
   }
 
-  // FIXME see errors
   private void createProtocols(
           DocumentedExecutable member, ProtocolSpecification specification) {
     StringBuilder oracle = new StringBuilder();
@@ -96,8 +96,8 @@ public class JsonOutput {
         }
       }
     }
-    this.equivalence =
-            new EquivalenceOutput(
+    this.protocol =
+            new ProtocolOutput(
                     member.getFreeText().getComment().getText(),
                     member.getSignature(),
                     member.getFreeText().getKind().toString(),
@@ -124,7 +124,9 @@ public class JsonOutput {
 
     if (specification instanceof EqOperationSpecification) {
       createEquivalences(member, (EqOperationSpecification) specification);
-    } else {
+    } else if(specification instanceof  ProtocolSpecification){
+      createProtocols(member, (ProtocolSpecification) specification);
+    }else {
       createParamTags(member, specification.getPreconditions());
       createThrowsTags(member, specification.getThrowsConditions());
       createReturnTags(member, specification.getPostconditions());
@@ -207,64 +209,41 @@ public class JsonOutput {
     if (this == o) return true;
     if (!(o instanceof JsonOutput)) return false;
     JsonOutput that = (JsonOutput) o;
-    return isVarArgs == that.isVarArgs
-        && Objects.equals(signature, that.signature)
-        && Objects.equals(name, that.name)
-        && Objects.equals(containingClass, that.containingClass)
-        && Objects.equals(targetClass, that.targetClass)
-        && Objects.equals(returnType, that.returnType)
-        && Objects.equals(parameters, that.parameters)
-        && Objects.equals(paramTags, that.paramTags)
-        && Objects.equals(returnTag, that.returnTag)
-        && Objects.equals(throwsTags, that.throwsTags)
-        && Objects.equals(equivalence, that.equivalence);
+    return isVarArgs == that.isVarArgs &&
+            Objects.equals(signature, that.signature) &&
+            Objects.equals(name, that.name) &&
+            Objects.equals(containingClass, that.containingClass) &&
+            Objects.equals(targetClass, that.targetClass) &&
+            Objects.equals(returnType, that.returnType) &&
+            Objects.equals(parameters, that.parameters) &&
+            Objects.equals(paramTags, that.paramTags) &&
+            Objects.equals(returnTag, that.returnTag) &&
+            Objects.equals(throwsTags, that.throwsTags) &&
+            Objects.equals(equivalence, that.equivalence) &&
+            Objects.equals(protocol, that.protocol);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        signature,
-        name,
-        containingClass,
-        targetClass,
-        isVarArgs,
-        returnType,
-        parameters,
-        paramTags,
-        returnTag,
-        throwsTags,
-        equivalence);
+    return Objects.hash(signature, name, containingClass, targetClass, isVarArgs, returnType, parameters, paramTags, returnTag, throwsTags, equivalence, protocol);
   }
 
   @Override
   public String toString() {
-    return "JsonOutput{"
-        + "signature='"
-        + signature
-        + '\''
-        + ", name='"
-        + name
-        + '\''
-        + ", containingClass="
-        + containingClass
-        + ", targetClass='"
-        + targetClass
-        + '\''
-        + ", isVarArgs="
-        + isVarArgs
-        + ", returnType="
-        + returnType
-        + ", parameters="
-        + parameters
-        + ", paramTags="
-        + paramTags
-        + ", returnTag="
-        + returnTag
-        + ", throwsTags="
-        + throwsTags
-        + ", equivalence="
-        + equivalence
-        + '}';
+    return "JsonOutput{" +
+            "signature='" + signature + '\'' +
+            ", name='" + name + '\'' +
+            ", containingClass=" + containingClass +
+            ", targetClass='" + targetClass + '\'' +
+            ", isVarArgs=" + isVarArgs +
+            ", returnType=" + returnType +
+            ", parameters=" + parameters +
+            ", paramTags=" + paramTags +
+            ", returnTag=" + returnTag +
+            ", throwsTags=" + throwsTags +
+            ", equivalence=" + equivalence +
+            ", protocol=" + protocol +
+            '}';
   }
 
   public static class JsonOutputComparator implements Comparator<JsonOutput> {

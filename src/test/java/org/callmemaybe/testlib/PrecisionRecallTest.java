@@ -128,7 +128,7 @@ class PrecisionRecallTest {
     argsList.add("aspects" + File.separator + targetClass);
     argsList.add("--oracle-generation");
     argsList.add("true");
-    argsList.add("--cross-oracles");
+    argsList.add("--temp-protocols");
     argsList.add("true");
     argsList.add("--disable-semantics");
     // Toggle to true to try out  CallMeMaybe without WMD (only n-grams match)
@@ -204,7 +204,7 @@ class PrecisionRecallTest {
       Type collectionType = new TypeToken<Collection<JsonOutput>>() {}.getType();
       List<JsonOutput> actualResult = GsonInstance.gson().fromJson(outFile, collectionType);
       List<JsonOutput> goalResult = GsonInstance.gson().fromJson(goalFile, collectionType);
-      final Stats stats = Stats.getEqStats(targetClass, actualResult, goalResult, report);
+      final Stats stats = Stats.getTPStats(targetClass, actualResult, goalResult, report);
       // if (!report.toString().isEmpty()) {
       report.insert(0, message + "\n");
       // }

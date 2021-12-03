@@ -67,16 +67,18 @@ public class TempProtocolMatcher {
 
         Set<String> lemmatizedGoldenSet = goldenSet.stream().map(TempProtocolMatcher::getLemma).collect(Collectors.toSet());
         for (TemporalPropSeries p : propositionSeries) {
-            Set<String> nonCopulaVerbs = p.verbsDB.stream().filter(x -> x.getKindOfVerb()
-                    != Verb.KindOfVerb.COPULA).map(x -> getLemma(x.getWord()))
-                    .collect(Collectors.toSet());
-            // FIXME TERRIBLE but I still dunno why/how we may end up with multiple prop series!
-            temporalMatch.setMatch(lemmatizedGoldenSet.containsAll(nonCopulaVerbs));
-            if(temporalMatch.isMatch()) {
-                temporalMatch.setRelations(p.getTemporalRelations());
-                // FIXME About to do something even uglier:
-                temporalMatch.setMemberA(p.getPropositions().get(0).getSubject().getSubject());
-                temporalMatch.setMemberB(p.getPropositions().get(1).getSubject().getSubject());
+            if(!p.isEmpty()) {
+                Set<String> nonCopulaVerbs = p.verbsDB.stream().filter(x -> x.getKindOfVerb()
+                        != Verb.KindOfVerb.COPULA).map(x -> getLemma(x.getWord()))
+                        .collect(Collectors.toSet());
+                // FIXME TERRIBLE but I still dunno why/how we may end up with multiple prop series!
+                temporalMatch.setMatch(lemmatizedGoldenSet.containsAll(nonCopulaVerbs));
+                if (temporalMatch.isMatch()) {
+                    temporalMatch.setRelations(p.getTemporalRelations());
+                    // FIXME About to do something even uglier:
+                    temporalMatch.setMemberA(p.getPropositions().get(0).getSubject().getSubject());
+                    temporalMatch.setMemberB(p.getPropositions().get(1).getSubject().getSubject());
+                }
             }
         }
         return temporalMatch;

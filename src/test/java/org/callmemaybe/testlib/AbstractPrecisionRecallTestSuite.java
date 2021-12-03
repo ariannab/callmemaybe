@@ -101,14 +101,14 @@ public abstract class AbstractPrecisionRecallTestSuite {
             + testSuiteStats.getTotalMissingTranslation()
             + "\nUnexpected translations: "
             + testSuiteStats.getTotalUnexpectedTranslation()
-            + "\nAverage precision on Eq: "
+            + "\nAverage precision on TP: "
             + String.format("%.2f", testSuiteStats.getAvgPrecision(JavadocComment.Kind.FREETEXT))
-            + "\nAverage recall on Eq: "
+            + "\nAverage recall on TP: "
             + String.format("%.2f", testSuiteStats.getAvgRecall(JavadocComment.Kind.FREETEXT))
-            + "\nOverall precision on Eq: "
+            + "\nOverall precision on TP: "
             + String.format(
                 "%.2f", testSuiteStats.getOverallPrecision(JavadocComment.Kind.FREETEXT))
-            + "\nOverall recall on Eq: "
+            + "\nOverall recall on TP: "
             + String.format("%.2f", testSuiteStats.getOverallRecall(JavadocComment.Kind.FREETEXT)));
   }
 
@@ -181,5 +181,28 @@ public abstract class AbstractPrecisionRecallTestSuite {
         "Free text (equivalence) recall is different than expected",
         stats.getRecall(JavadocComment.Kind.FREETEXT),
         closeTo(eqRecall, PRECISION));
+  }
+
+  /**
+   * Computes precision and recall for the given target class and checks that precision and recall
+   * are as expected for the given target class (for both @param and @throws tags).
+   *
+   * @param targetClass the fully qualified name of the class on which to run the test
+   * @param tpPrecision the expected precision for protocols translations
+   * @param tpRecall the expected recall for protocols translations
+   */
+  protected void testTP(String targetClass, double tpPrecision, double tpRecall) {
+    final Stats stats =
+            PrecisionRecallTest.computeEqPrecisionAndRecall(
+                    targetClass, sourceDirPath, binDirPath, goalOutputDirPath);
+    testSuiteStats.addStats(stats);
+    assertThat(
+            "Free text (temp protocol) precision is different than expected",
+            stats.getPrecision(JavadocComment.Kind.FREETEXT),
+            closeTo(tpPrecision, PRECISION));
+    assertThat(
+            "Free text (temp protocol) recall is different than expected",
+            stats.getRecall(JavadocComment.Kind.FREETEXT),
+            closeTo(tpRecall, PRECISION));
   }
 }

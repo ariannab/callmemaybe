@@ -9,6 +9,7 @@ import org.callmemaybe.CallMeMaybe;
 import org.callmemaybe.extractor.JavadocComment;
 import org.callmemaybe.output.util.EquivalenceOutput;
 import org.callmemaybe.output.util.JsonOutput;
+import org.callmemaybe.output.util.ProtocolOutput;
 import org.callmemaybe.output.util.ReturnTagOutput;
 import org.callmemaybe.output.util.TagOutput;
 
@@ -590,6 +591,66 @@ public class Stats {
     return outputMessage;
   }
 
+  private static StringBuilder collectTPStats(
+          Stats stats,
+          ProtocolOutput actualTag,
+          ProtocolOutput expectedTag,
+          JavadocComment.Kind kind) {
+
+    final StringBuilder outputMessage = new StringBuilder();
+    //    final TagOutput[] actualTagsArray = actualTags.toArray(new TagOutput[actualTags.size()]);
+    //    final TagOutput[] expectedTagsArray = expectedTags.toArray(new
+    // TagOutput[expectedTags.size()]);
+    //    for (int tagIndex = 0; tagIndex < actualTagsArray.length; tagIndex++) {
+    //      TagOutput actualTag = actualTagsArray[tagIndex];
+    //      TagOutput expectedTag = expectedTagsArray[tagIndex];
+
+    if (actualTag != null && expectedTag != null) {
+      String expectedConditionNoSpace = expectedTag.getCondition().replaceAll("[\\n ]", "");
+      String actualConditionNoSpace = actualTag.getCondition().replaceAll("[\\n ]", "");
+
+      if (expectedConditionNoSpace.isEmpty() && actualConditionNoSpace.isEmpty()) {
+        // Both empty, nothing interesting to print!
+        return outputMessage;
+      }
+
+      outputMessage.append("\n\n");
+
+      if (actualConditionNoSpace.equals(expectedConditionNoSpace)) {
+        if (!expectedConditionNoSpace.isEmpty()) {
+          stats.addCorrectTranslation(kind);
+          outputMessage.append("Correct ");
+        }
+      } else {
+        if (expectedConditionNoSpace.isEmpty()) {
+          stats.addUnexpectedTranslation(kind);
+          outputMessage.append("Unexpected ");
+        } else if (actualConditionNoSpace.isEmpty()) {
+          stats.addMissingTranslation(kind);
+          outputMessage.append("Missing ");
+        } else {
+          stats.addWrongTranslation(kind);
+          outputMessage.append("Wrong ");
+        }
+      }
+      outputMessage
+              .append(kind)
+              .append("condition ")
+              .append("for method: ")
+              .append(actualTag.getMember().substring(0, actualTag.getMember().indexOf(")") + 1))
+              .append("\n")
+              .append("CommentContent: ")
+              .append(actualTag.getComment())
+              .append("\n\tExpected condition: ")
+              .append(expectedTag.getCondition())
+              .append("\n\tActual condition: ")
+              .append(actualTag.getCondition())
+              .append("\n");
+    }
+    //    }
+    return outputMessage;
+  }
+
   /**
    * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
    * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
@@ -634,6 +695,56 @@ public class Stats {
               actualMethod.equivalence,
               expectedMethod.equivalence,
               JavadocComment.Kind.FREETEXT));
+    }
+    return stats;
+  }
+
+
+
+  /**
+   * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
+   * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
+   * actualMethodList}. The statistics are aggregated per class, we assume that the {@code
+   * actualMethodList} contains methods belonging to one class.
+   *
+   * @param targetClass the class for which collect statistics
+   * @param actualMethodList methods with tags translated by CallMeMaybe
+   * @param expectedMethodList methods with tags manually translated
+   * @param output the output message to be populated
+   * @return statistics for each method of the given lists, aggregated per class
+   * @throws IllegalArgumentException if {@code actualMethodList} and {@code expectedMethodList} are
+   *     not of the same size
+   */
+  public static Stats getTPStats(
+          String targetClass,
+          List<JsonOutput> actualMethodList,
+          List<JsonOutput> expectedMethodList,
+          StringBuilder output) {
+
+    if (actualMethodList.size() != expectedMethodList.size()) {
+      throw new IllegalArgumentException(
+              "Actual and expected method list should be of the same size.");
+    }
+
+    Collections.sort(actualMethodList, new JsonOutput.JsonOutputComparator());
+    Collections.sort(expectedMethodList, new JsonOutput.JsonOutputComparator());
+
+    Stats stats = new Stats(targetClass);
+    for (int methodIndex = 0; methodIndex < expectedMethodList.size(); methodIndex++) {
+      JsonOutput actualMethod = actualMethodList.get(methodIndex);
+      JsonOutput expectedMethod = expectedMethodList.get(methodIndex);
+
+      List<ProtocolOutput> actualMethodReturnTag = new ArrayList<>();
+      List<ProtocolOutput> expectedMethodReturnTag = new ArrayList<>();
+      actualMethodReturnTag.add(actualMethod.protocol);
+      expectedMethodReturnTag.add(expectedMethod.protocol);
+
+      output.append(
+              collectTPStats(
+                      stats,
+                      actualMethod.protocol,
+                      expectedMethod.protocol,
+                      JavadocComment.Kind.FREETEXT));
     }
     return stats;
   }
