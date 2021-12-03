@@ -3,6 +3,7 @@ package org.callmemaybe.extractor;
 import edu.stanford.nlp.simple.Sentence;
 import org.callmemaybe.translator.Parser;
 import org.callmemaybe.translator.TemporalPropSeries;
+import org.callmemaybe.translator.TemporalRule;
 import org.callmemaybe.translator.Verb;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
@@ -68,11 +69,18 @@ public class TempProtocolMatcher {
         Set<String> lemmatizedGoldenSet = goldenSet.stream().map(TempProtocolMatcher::getLemma).collect(Collectors.toSet());
         for (TemporalPropSeries p : propositionSeries) {
             if(!p.isEmpty()) {
+                if(p.getTemporalRelations().contains(TemporalRule.TemporalRelation.BEFORE)){
+                    System.out.println("DEBUG");
+                }
                 Set<String> nonCopulaVerbs = p.verbsDB.stream().filter(x -> x.getKindOfVerb()
                         != Verb.KindOfVerb.COPULA).map(x -> getLemma(x.getWord()))
                         .collect(Collectors.toSet());
-                // FIXME TERRIBLE but I still dunno why/how we may end up with multiple prop series!
-                temporalMatch.setMatch(lemmatizedGoldenSet.containsAll(nonCopulaVerbs));
+                // FIXME the non-copula verbs heuristics works for one category of protocols but not
+                // FIXME all of them. Imagine having at least 2 categories: explicit by verb (you must call,
+                // FIXME must be invoked, etc.); implicit by verb referring to method semantics.
+                // FIXME We probably should require that the verb is EITHER a non copula in our semantic
+                // FIXME model about concepts, OR, a predicate match on other methods.
+                temporalMatch.setMatch(!nonCopulaVerbs.isEmpty()&&lemmatizedGoldenSet.containsAll(nonCopulaVerbs));
                 if (temporalMatch.isMatch()) {
                     temporalMatch.setRelations(p.getTemporalRelations());
                     // FIXME About to do something even uglier:

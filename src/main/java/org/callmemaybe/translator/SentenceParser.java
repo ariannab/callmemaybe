@@ -242,7 +242,10 @@ public class SentenceParser {
         if (propositionSeries.isEmpty()) {
           propositionSeries.add(p1);
         }
-        propositionSeries.add(getTemporalSpecific(tempRelation), p2);
+        TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
+        if(temporalSpecific!=null) {
+          propositionSeries.add(temporalSpecific, p2);
+        }
       }
     }
 

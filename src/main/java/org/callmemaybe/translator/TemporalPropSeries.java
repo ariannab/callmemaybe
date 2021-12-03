@@ -34,7 +34,7 @@ public class TemporalPropSeries {
     /**
      * All the verbs in this temporal prop. series
      */
-    public static List<Verb> verbsDB = new ArrayList<>();
+    public static List<Verb> verbsDB;
 
     private final SemanticGraph semanticGraph;
 
@@ -43,7 +43,7 @@ public class TemporalPropSeries {
         this.semanticGraph = semanticGraph;
         propositions = new ArrayList<>();
         temporalRelations = new ArrayList<>();
-        //    this(new ArrayList<>(), new ArrayList<>());
+        verbsDB = new ArrayList<>();
     }
 
     /**

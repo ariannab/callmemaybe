@@ -16,12 +16,19 @@ public class TemporalRule {
 
 
     public static TemporalProtocol buildRawProtocol(TemporalMatch temporalMatch){
-        switch (temporalMatch.getRelations().get(0)){
-            case UNTIL: return notUntilTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
-            case AFTER: return afterTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
-            case BEFORE: return beforeTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
-            default: return new TemporalProtocol();
+        if(!temporalMatch.getRelations().isEmpty() && temporalMatch.getRelations().get(0)!=null) {
+            switch (temporalMatch.getRelations().get(0)) {
+                case UNTIL:
+                    return notUntilTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+                case AFTER:
+                    return afterTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+                case BEFORE:
+                    return beforeTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+                default:
+                    return new TemporalProtocol();
+            }
         }
+        return new TemporalProtocol();
     }
 
     // FIXME What are A and B? If they're object it's a thing, if they're methods
