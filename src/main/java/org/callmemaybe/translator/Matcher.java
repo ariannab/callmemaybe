@@ -31,7 +31,7 @@ import org.callmemaybe.util.Reflection;
  * The {@code Matcher} class translates subjects and predicates in Javadoc comments to Java
  * expressions containing Java code elements.
  */
-class Matcher {
+public class Matcher {
 
   /**
    * Represents the threshold for the edit distance above which {@code CodeElement}s are considered
@@ -55,7 +55,7 @@ class Matcher {
    * @param subject the subject of a proposition from a Javadoc comment
    * @return a set of {@code CodeElement}s that have a similar name to the subject
    */
-  Set<CodeElement<?>> subjectMatch(String subject, Set<CodeElement<?>> codeElements) {
+  public Set<CodeElement<?>> subjectMatch(String subject, Set<CodeElement<?>> codeElements) {
     // Clean the subject string by removing words and characters not related to its identity so that
     // they do not influence string matching.
     List<String> wordsToRemove = Arrays.asList("either", "both", "any");

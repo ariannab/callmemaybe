@@ -149,9 +149,15 @@ public class SentenceParser {
     // information).
     // This map is used to understand which propositions a conjunction is joining, since we have to
     // map a conjunction between two specific words to a conjunction between two propositions.
-    Map<List<IndexedWord>, Proposition> propositionMap = new LinkedHashMap<>();
+
     // Proposition series that will be built and returned.
     TemporalPropSeries propositionSeries = new TemporalPropSeries(semanticGraph);
+
+    if(temporalRelations.isEmpty()){
+      return propositionSeries;
+    }
+
+    Map<List<IndexedWord>, TemporalProposition> propositionMap = new LinkedHashMap<>();
 
     for (SemanticGraphEdge subjectRelation : subjectRelations) {
       // Get the words that make up the predicate.
@@ -173,7 +179,7 @@ public class SentenceParser {
       // Create a Proposition from the subject and predicate words.
       String predicateWordsAsString =
               predicateWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
-      Proposition proposition = new Proposition(subject, predicateWordsAsString, negative);
+      TemporalProposition proposition = new TemporalProposition(subject, predicateWordsAsString, negative);
 
 //      Optional<IndexedWord> verb = predicateWords.stream().filter(x -> x.indexedWord.matches("VB.*")).findFirst();
 //      verb.ifPresent(indexedWord -> proposition.setIndexedWord(indexedWord.word()));
@@ -212,7 +218,7 @@ public class SentenceParser {
       // Create a Proposition from the subject and predicate words.
       String predicateWordsAsString =
               governorWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
-      Proposition proposition = new Proposition(dependent, predicateWordsAsString, negative);
+      TemporalProposition proposition = new TemporalProposition(dependent, predicateWordsAsString, negative);
 
       // Add the Proposition and associated words to the propositionMap.
       List<IndexedWord> propositionWords = new ArrayList<>(depWords);
@@ -224,9 +230,9 @@ public class SentenceParser {
     for (SemanticGraphEdge tempRelation : temporalRelations) {
       IndexedWord tempRelGovernor = tempRelation.getGovernor();
       IndexedWord tempRelDependent = tempRelation.getDependent();
-      Proposition p1 = null, p2 = null;
+      TemporalProposition p1 = null, p2 = null;
 
-      for (Entry<List<IndexedWord>, Proposition> entry : propositionMap.entrySet()) {
+      for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
         if (entry.getKey().contains(tempRelGovernor)) {
           p1 = entry.getValue();
         }
@@ -370,8 +376,8 @@ public class SentenceParser {
     IndexedWord aux = auxEdge.get().getDependent();
     predicateWords.add(aux);
     predicateWords.add(governor);
-//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.KindOfVerb.AUX));
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.KindOfVerb.AUX));
+//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
+    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.AUX));
     return predicateWords;
   }
 
@@ -391,17 +397,17 @@ public class SentenceParser {
       // Predicate is not of non-copula form.
       return predicateWords;
     }
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.KindOfVerb.NON_COPULA));
+    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.NON_COPULA));
     predicateWords.add(governor);
     IndexedWord complement = complementEdge.get().getDependent();
-//    TemporalPropSeries.verbsDB.add(new Verb(complement, Verb.KindOfVerb.NON_COPULA));
+//    TemporalPropSeries.verbsDB.add(new Verb(complement, Verb.GrammaticalKind.NON_COPULA));
     predicateWords.add(complement);
 
     Optional<SemanticGraphEdge> numModifierEdge =
         numModifierRelations.stream().filter(e -> e.getGovernor().equals(complement)).findFirst();
     if (numModifierEdge.isPresent()) {
       IndexedWord dep = numModifierEdge.get().getDependent();
-//      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.KindOfVerb.NON_COPULA));
+//      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.NON_COPULA));
       predicateWords.add(dep);
     }
 
@@ -428,11 +434,11 @@ public class SentenceParser {
               .filter(e -> e.getGovernor().equals(conjunctionEdge1.get().getDependent()))
               .findFirst();
       if (complementEdge.isPresent()) {
-        TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.KindOfVerb.CONJUNCTION));
+        TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.CONJUNCTION));
         predicateWords.add(governor);
         IndexedWord dep = complementEdge.get().getDependent();
         predicateWords.add(dep);
-//        TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.KindOfVerb.CONJUNCTION));
+//        TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.CONJUNCTION));
         return predicateWords;
       }
     }
@@ -450,8 +456,8 @@ public class SentenceParser {
         IndexedWord dep2 = conjunctionEdge2.get().getDependent();
         predicateWords.add(dep);
         predicateWords.add(dep2);
-//        TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.KindOfVerb.COPULA));
-//        TemporalPropSeries.verbsDB.add(new Verb(dep2, Verb.KindOfVerb.COPULA));
+//        TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.COPULA));
+//        TemporalPropSeries.verbsDB.add(new Verb(dep2, Verb.GrammaticalKind.COPULA));
         return predicateWords;
       }
     }
@@ -480,8 +486,8 @@ public class SentenceParser {
     }
     IndexedWord dep = auxpassEdge.get().getDependent();
     // FIXME try ignoring dependents (is, will... + real verb)
-//    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.KindOfVerb.PASSIVE));
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.KindOfVerb.PASSIVE));
+//    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.PASSIVE));
+    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.PASSIVE));
     predicateWords.add(dep);
     predicateWords.add(governor);
 
@@ -507,8 +513,8 @@ public class SentenceParser {
       return predicateWords;
     }
     IndexedWord dep = copEdge.get().getDependent();
-    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.KindOfVerb.COPULA));
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.KindOfVerb.COPULA));
+    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.COPULA));
+    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.COPULA));
     predicateWords.add(dep);
     // Add the governor itself to the predicate.
     predicateWords.add(governor);

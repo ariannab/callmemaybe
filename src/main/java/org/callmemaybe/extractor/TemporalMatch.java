@@ -1,13 +1,13 @@
 package org.callmemaybe.extractor;
 
+import org.callmemaybe.translator.Proposition;
+import org.callmemaybe.translator.PropositionSeries;
 import org.callmemaybe.translator.TemporalProtocol;
 import org.callmemaybe.translator.TemporalRule;
 
 import java.util.List;
 
 public class TemporalMatch {
-
-    private boolean isMatch;
 
     /**
      * The underlying protocol with members and arrows.
@@ -23,12 +23,26 @@ public class TemporalMatch {
 
     private String memberB;
 
-    public boolean isMatch() {
-        return isMatch;
+    private Proposition propositionA;
+
+    private Proposition propositionB;
+
+    boolean isIndeedMatch;
+
+    public Proposition getPropositionA() {
+        return propositionA;
     }
 
-    public void setMatch(boolean match) {
-        isMatch = match;
+    public void setPropositionA(Proposition propositionA) {
+        this.propositionA = propositionA;
+    }
+
+    public Proposition getPropositionB() {
+        return propositionB;
+    }
+
+    public void setPropositionB(Proposition propositionB) {
+        this.propositionB = propositionB;
     }
 
     public List<TemporalRule.TemporalRelation> getRelations() {
@@ -69,5 +83,13 @@ public class TemporalMatch {
 
     public void setRawProtocol(TemporalProtocol rawProtocol) {
         this.rawProtocol = rawProtocol;
+    }
+
+    public boolean isIndeedMatch() {
+        return isIndeedMatch;
+    }
+
+    public void setIndeedMatch(boolean indeedMatch) {
+        isIndeedMatch = indeedMatch;
     }
 }

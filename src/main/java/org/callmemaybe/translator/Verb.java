@@ -1,14 +1,10 @@
 package org.callmemaybe.translator;
 
 import edu.stanford.nlp.ling.IndexedWord;
-import edu.stanford.nlp.simple.Sentence;
-import org.tartarus.snowball.ext.EnglishStemmer;
-
-import java.util.Objects;
 
 public class Verb{
 
-    public enum KindOfVerb{
+    public enum GrammaticalKind {
         COPULA,
         PASSIVE,
         AUX,
@@ -17,9 +13,9 @@ public class Verb{
     }
 
     IndexedWord word;
-    KindOfVerb kindOfVerb;
+    GrammaticalKind kindOfVerb;
 
-    public Verb(IndexedWord indexedWord, KindOfVerb kindOfVerb) {
+    public Verb(IndexedWord indexedWord, GrammaticalKind kindOfVerb) {
         this.kindOfVerb = kindOfVerb;
         this.word = indexedWord;
     }
@@ -28,7 +24,7 @@ public class Verb{
         return word.word();
     }
 
-    public KindOfVerb getKindOfVerb() {
+    public GrammaticalKind getKindOfVerb() {
         return kindOfVerb;
     }
 

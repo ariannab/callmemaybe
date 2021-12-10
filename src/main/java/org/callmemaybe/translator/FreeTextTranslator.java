@@ -126,12 +126,29 @@ public class FreeTextTranslator {
 
     temporalMatch = temporalMatcher.findProtocolInComment(commentContent, excMember);
 
-    if(temporalMatch.isMatch()){
-      temporalMatch.setRawProtocol(TemporalRule.buildRawProtocol(temporalMatch));
-      // TODO translate the raw protocol, that is, match the members involved in it
-      matchProtocolMembers(excMember, temporalMatch);
-      buildOracle(temporalMatch);
-      matches.add(temporalMatch);
+    if(temporalMatch.isIndeedMatch()){
+      // TODO loop through propositions types
+//      // FIXME the protocol kind is 1 but actually we always have 2 prop. for protocol
+//      // FIXME and they may be of a different type.
+//      if(temporalMatch.getKindOfProtocol() == TemporalMatch.KindOfProtocol.METHOD_TO_CALL) {
+//        temporalMatch.setMemberA(temporalMatch.getPropositionA().getSubject().getSubject());
+//        temporalMatch.setMemberB(temporalMatch.getPropositionB().getSubject().getSubject());
+//        temporalMatch.setRawProtocol(TemporalRule.buildRawProtocol(temporalMatch));
+//        // TODO translate the raw protocol, that is, match the members involved in it
+//        matchProtocolMembers(excMember, temporalMatch);
+//      }else if(temporalMatch.getKindOfProtocol() == TemporalMatch.KindOfProtocol.ACTION_TO_MATCH){
+//        Matcher matcher = new Matcher();
+//        String pred = temporalMatch.getPropositionA().getPredicate();
+//        String sub = temporalMatch.getPropositionA().getSubject().getSubject();
+//        if("is started".equals(pred)) {
+//          System.out.println("DEBUG");
+//        }
+//        Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember, Configuration.RECEIVER);
+//        Set<CodeElement<?>> matchingSubjects = matcher.subjectMatch(sub, codeElements);
+////        Set<CodeElement<?>> matchingActions = matcher.predicateMatch(excMember, pred, codeElements);
+//      }
+////      buildOracle(temporalMatch);
+//      matches.add(temporalMatch);
     }
     return matches;
   }
@@ -154,7 +171,7 @@ public class FreeTextTranslator {
     Set<CodeElement<?>> secMemberMatches = matcher.subjectMatch(rawProtocol.getSecondMember(), codeElements);
     if(!firstMemberMatches.iterator().hasNext() || !secMemberMatches.iterator().hasNext()){
       // TODO check if this is the best way to flag a failed match
-      temporalMatch.setMatch(false);
+//      temporalMatch.setKindOfProtocol(TemporalMatch.KindOfProtocol.NONE);
       return temporalMatch;
     }
     temporalMatch.setMemberA(firstMemberMatches.iterator().next().getJavaExpression());

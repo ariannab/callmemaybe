@@ -4,7 +4,9 @@ import edu.stanford.nlp.semgraph.SemanticGraph;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -23,7 +25,7 @@ public class TemporalPropSeries {
      * temporalRelations.size() + 1}
      */
     // FIXME For a temporal prop., we assume  always 2 propositions only, connected by a temp.rel.
-    private final List<Proposition> propositions;
+    private final List<TemporalProposition> propositions;
     /**
      * Conjunctions composing this {@code PropositionSeries}. Each conjunction links two propositions.
      * {@literal Invariant: (propositions.size() = 0 && temporalRelations.size() = 0) ||
@@ -34,7 +36,7 @@ public class TemporalPropSeries {
     /**
      * All the verbs in this temporal prop. series
      */
-    public static List<Verb> verbsDB;
+    public static Set<Verb> verbsDB;
 
     private final SemanticGraph semanticGraph;
 
@@ -43,7 +45,7 @@ public class TemporalPropSeries {
         this.semanticGraph = semanticGraph;
         propositions = new ArrayList<>();
         temporalRelations = new ArrayList<>();
-        verbsDB = new ArrayList<>();
+        verbsDB = new HashSet<>();
     }
 
     /**
@@ -56,7 +58,7 @@ public class TemporalPropSeries {
      *     number of propositions, unless both are empty
      */
     TemporalPropSeries(SemanticGraph semanticGraph,
-                       List<Proposition> propositions,
+                       List<TemporalProposition> propositions,
                        List<TemporalRule.TemporalRelation> conjunctions) {
         if (!propositions.isEmpty()
                 && !conjunctions.isEmpty()
@@ -75,7 +77,7 @@ public class TemporalPropSeries {
      * @param proposition the initial proposition to add to the series
      * @throws IllegalStateException if the series not empty
      */
-    public void add(Proposition proposition) {
+    public void add(TemporalProposition proposition) {
         if (!propositions.isEmpty()) {
             throw new IllegalStateException(
                     "Proposition series is not empty. Use add(Proposition, Conjunction).");
@@ -94,7 +96,7 @@ public class TemporalPropSeries {
      * @param proposition the proposition to add to the end of the series
      * @throws IllegalStateException if there is not already at least one proposition in the series
      */
-    public void add(TemporalRule.TemporalRelation conjunction, Proposition proposition) {
+    public void add(TemporalRule.TemporalRelation conjunction, TemporalProposition proposition) {
         if (propositions.isEmpty()) {
             throw new IllegalStateException("Proposition series is empty. Use add(Proposition)");
         }
@@ -108,7 +110,7 @@ public class TemporalPropSeries {
      * @param proposition the proposition that is checked
      * @return true if the series contains the given proposition
      */
-    public boolean contains(Proposition proposition) {
+    public boolean contains(TemporalProposition proposition) {
         return propositions.contains(proposition);
     }
 
@@ -135,7 +137,7 @@ public class TemporalPropSeries {
      *
      * @return an unmodifiable list view of the propositions in this series
      */
-    public List<Proposition> getPropositions() {
+    public List<TemporalProposition> getPropositions() {
         return Collections.unmodifiableList(propositions);
     }
 
