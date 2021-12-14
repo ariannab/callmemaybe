@@ -11,7 +11,9 @@ import org.callmemaybe.translator.Matcher;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -94,10 +96,14 @@ public class TempProtocolMatcher {
     private void assessIfTemporalMatch(DocumentedExecutable excMember,
                                        TemporalPropSeries propSeries,
                                        TemporalMatch temporalMatch) {
-        Set<String> lemmatizedGoldenSet = goldenSet.stream().map(TempProtocolMatcher::getLemma).collect(Collectors.toSet());
-        Set<String> nonCopulaVerbs = propSeries.verbsDB.stream().filter(x -> x.getKindOfVerb()
-                != Verb.GrammaticalKind.COPULA).map(x -> getLemma(x.getWord()))
+        Set<String> lemmatizedGoldenSet = goldenSet.stream()
+                .map(TempProtocolMatcher::getLemma)
                 .collect(Collectors.toSet());
+
+        Set<String> nonCopulaVerbs = propSeries.verbsDB.stream()
+                .filter(x -> x.getKindOfVerb() != Verb.GrammaticalKind.COPULA).map(x -> getLemma(x.getWord()))
+                .collect(Collectors.toSet());
+
 
         // FIXME the non-copula verbs heuristics works for one category of protocols but not
         // FIXME all of them. Imagine having at least 2 categories: explicit by verb (you must call,
@@ -106,27 +112,53 @@ public class TempProtocolMatcher {
         // FIXME model about concepts, OR, a predicate match on other methods.
         // First criterion: verbs such as "to call", "to invoke", and synonym related to our concepts
         // FIXME f- containsAll. Check one proposition at a time and set right kind.
-        boolean belongsToSemanticConcepts = !nonCopulaVerbs.isEmpty() &&
-                lemmatizedGoldenSet.containsAll(nonCopulaVerbs);
-        boolean isAction = false;
-        if(!belongsToSemanticConcepts){
-            // No verb related to calls/operations. Is it an action related to a specific method?
-            Matcher matcher = new Matcher();
-            Set<CodeElement<?>> possibleMethods = JavaElementsCollector.collect(excMember);
-            for(String v : nonCopulaVerbs) {
-                isAction = matcher.subjectMatch(v, possibleMethods)!=null;
-                if(isAction){
-                    // Found an action verb, we're good
-                    // TODO are we? check
-                    break;
+        for(TemporalProposition p : propSeries.getPropositions()) {
+            Set<String> propositionVerbs =
+                    Arrays.stream(p.getPredicate()
+                            .split(" ")).map(TempProtocolMatcher::getLemma)
+                            .collect(Collectors.toSet());
+            Set<String> nonCopulaVerbsCopy = new HashSet<>(nonCopulaVerbs);
+            // To remove useless part of the predicate, "is" and what not
+            nonCopulaVerbsCopy.retainAll(propositionVerbs);
+            // TODO Check: Only one should remain
+            String propVerb;
+            if(nonCopulaVerbsCopy.iterator().hasNext()) {
+                propVerb = nonCopulaVerbsCopy.iterator().next();
+            }else{
+                continue;
+            }
+
+            boolean belongsToSemanticConcepts = !Collections.disjoint(nonCopulaVerbsCopy, lemmatizedGoldenSet);
+//            boolean belongsToSemanticConcepts = !nonCopulaVerbs.isEmpty() &&
+//                    lemmatizedGoldenSet.containsAll(nonCopulaVerbs);
+            if (belongsToSemanticConcepts) {
+                p.setKindOfProtocol(TemporalProposition.KindOfProtocol.METHOD_TO_CALL);
+            } else {
+                // No verb related to calls/operations. Is it an action related to a specific method?
+                Matcher matcher = new Matcher();
+                Set<CodeElement<?>> possibleMethods = JavaElementsCollector.collect(excMember);
+                boolean isAction = !matcher.subjectMatch(propVerb, possibleMethods).isEmpty();
+//                for(String v : nonCopulaVerbs) {
+//                    isAction = matcher.subjectMatch(v, possibleMethods)!=null;
+//                    if(isAction){
+//                        // Found an action verb, we're good
+//                        // TODO are we? check
+//                        break;
+//                    }
+//                }
+                if (isAction) {
+                    p.setKindOfProtocol(TemporalProposition.KindOfProtocol.ACTION_TO_MATCH);
+                } else {
+                    p.setKindOfProtocol(TemporalProposition.KindOfProtocol.NONE);
                 }
             }
         }
-        if(isAction || belongsToSemanticConcepts){
-            for(TemporalProposition prop : propSeries.getPropositions()){
+        // TODO I expect all propositions to express a protocol, otherwise do not consider
+        // TODO the comment a temporal match is this correct assumption always? Check
+        temporalMatch.setIndeedMatch(propSeries.getPropositions()
+                        .stream()
+                        .allMatch(x -> x.getKindOfProtocol()!=TemporalProposition.KindOfProtocol.NONE));
 
-            }
-        }
     }
 
 
