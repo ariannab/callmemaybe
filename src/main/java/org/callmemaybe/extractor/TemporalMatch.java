@@ -1,7 +1,9 @@
 package org.callmemaybe.extractor;
 
+import org.callmemaybe.translator.CodeElement;
 import org.callmemaybe.translator.Proposition;
 import org.callmemaybe.translator.PropositionSeries;
+import org.callmemaybe.translator.TemporalProposition;
 import org.callmemaybe.translator.TemporalProtocol;
 import org.callmemaybe.translator.TemporalRule;
 
@@ -23,25 +25,25 @@ public class TemporalMatch {
 
     private String memberB;
 
-    private Proposition propositionA;
+    private TemporalProposition propositionA;
 
-    private Proposition propositionB;
+    private TemporalProposition propositionB;
 
     boolean isIndeedMatch;
 
-    public Proposition getPropositionA() {
+    public TemporalProposition getPropositionA() {
         return propositionA;
     }
 
-    public void setPropositionA(Proposition propositionA) {
+    public void setPropositionA(TemporalProposition propositionA) {
         this.propositionA = propositionA;
     }
 
-    public Proposition getPropositionB() {
+    public TemporalProposition getPropositionB() {
         return propositionB;
     }
 
-    public void setPropositionB(Proposition propositionB) {
+    public void setPropositionB(TemporalProposition propositionB) {
         this.propositionB = propositionB;
     }
 
@@ -91,5 +93,30 @@ public class TemporalMatch {
 
     public void setIndeedMatch(boolean indeedMatch) {
         isIndeedMatch = indeedMatch;
+    }
+
+    public void setMember(String letter, String member){
+        switch (letter){
+            case "A": setMemberA(member);
+            break;
+            case "B": setMemberB(member);
+            break;
+            default:
+        }
+    }
+
+
+    public void setMember(int i, String member) {
+        switch(i){
+            case 0: setMemberA(member);
+                break;
+            case 1: setMemberB(member);
+                break;
+            default:
+        }
+    }
+
+    public void buildOracle() {
+        this.oracle = rawProtocol.getFirstMember() + rawProtocol.getArrow() + rawProtocol.getSecondMember();
     }
 }

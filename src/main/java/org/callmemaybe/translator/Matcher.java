@@ -56,6 +56,11 @@ public class Matcher {
    * @return a set of {@code CodeElement}s that have a similar name to the subject
    */
   public Set<CodeElement<?>> subjectMatch(String subject, Set<CodeElement<?>> codeElements) {
+    // FIXME in this method, subject can get a lil weird. (This method, is invoked) says the
+    // FIXME subject is the receiverObjectID (maybe bc of "this"), however it's the doc. method
+    // FIXME We can even hardcode a placeholder in a early stage, "this method" becomes the method
+    // FIXME signature and we're all happy (when the proposition is built already, but
+    // FIXME before calling here)
     // Clean the subject string by removing words and characters not related to its identity so that
     // they do not influence string matching.
     List<String> wordsToRemove = Arrays.asList("either", "both", "any");

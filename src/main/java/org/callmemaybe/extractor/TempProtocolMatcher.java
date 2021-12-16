@@ -68,11 +68,12 @@ public class TempProtocolMatcher {
         TemporalMatch temporalMatch = new TemporalMatch();
 
         for (TemporalPropSeries p : propositionSeries) {
-            if(p.getPropositions().size() >= 2) {
+            if(p.getPropositions().size() == 2) {
                 assessIfTemporalMatch(excMember, p, temporalMatch);
                 if (temporalMatch.isIndeedMatch()) {
                     temporalMatch.setRelations(p.getTemporalRelations());
                     // FIXME About to do something even uglier:
+                    // FIXME Let's do the below in assessIfTemporal and probably even change the name.
                     temporalMatch.setPropositionA(p.getPropositions().get(0));
                     temporalMatch.setPropositionB(p.getPropositions().get(1));
                 }
@@ -112,7 +113,8 @@ public class TempProtocolMatcher {
         // FIXME model about concepts, OR, a predicate match on other methods.
         // First criterion: verbs such as "to call", "to invoke", and synonym related to our concepts
         // FIXME f- containsAll. Check one proposition at a time and set right kind.
-        for(TemporalProposition p : propSeries.getPropositions()) {
+        for(int i = 0; i < 2; i++){
+            TemporalProposition p = propSeries.getPropositions().get(i);
             Set<String> propositionVerbs =
                     Arrays.stream(p.getPredicate()
                             .split(" ")).map(TempProtocolMatcher::getLemma)
@@ -137,17 +139,13 @@ public class TempProtocolMatcher {
                 // No verb related to calls/operations. Is it an action related to a specific method?
                 Matcher matcher = new Matcher();
                 Set<CodeElement<?>> possibleMethods = JavaElementsCollector.collect(excMember);
-                boolean isAction = !matcher.subjectMatch(propVerb, possibleMethods).isEmpty();
-//                for(String v : nonCopulaVerbs) {
-//                    isAction = matcher.subjectMatch(v, possibleMethods)!=null;
-//                    if(isAction){
-//                        // Found an action verb, we're good
-//                        // TODO are we? check
-//                        break;
-//                    }
-//                }
+                Set<CodeElement<?>> matchingSubjects = matcher.subjectMatch(propVerb, possibleMethods);
+                boolean isAction = matchingSubjects.iterator().hasNext();
                 if (isAction) {
+                    // FIXME Set the prop. A and B of temporalMatch here while looping them.
+                    // FIXME it's silly to pospone it outside and we lose important info (= the match of the action)
                     p.setKindOfProtocol(TemporalProposition.KindOfProtocol.ACTION_TO_MATCH);
+                    temporalMatch.setMember(i, matchingSubjects.iterator().next().toString());
                 } else {
                     p.setKindOfProtocol(TemporalProposition.KindOfProtocol.NONE);
                 }

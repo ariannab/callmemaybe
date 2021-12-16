@@ -397,6 +397,12 @@ public final class CommentContent {
     }
   }
 
+  public void modifyTextWithPlaceholder(String part, String placeHolder){
+    if(this.text.contains(part)){
+      this.text = this.text.replace(part, placeHolder);
+    }
+  }
+
   public List<CodeSnippet> getCodeSnippets() {
     return commentSnippets;
   }
