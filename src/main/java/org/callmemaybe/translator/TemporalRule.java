@@ -7,7 +7,8 @@ public class TemporalRule {
     public enum TemporalRelation {
         UNTIL,
         BEFORE,
-        AFTER
+        AFTER,
+        PRIOR
     }
 
     public final static String LEFT_ARROW = "<-";
@@ -23,6 +24,8 @@ public class TemporalRule {
                 case AFTER:
                     return afterTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
                 case BEFORE:
+                    return beforeTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
+                case PRIOR:
                     return beforeTranslation(temporalMatch.getMemberA(), temporalMatch.getMemberB());
                 default:
                     return new TemporalProtocol();

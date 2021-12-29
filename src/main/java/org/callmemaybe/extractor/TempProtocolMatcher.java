@@ -31,11 +31,16 @@ public class TempProtocolMatcher {
      * for all translations.
      */
     public TempProtocolMatcher() {
-        this.w2vModel = WordVectorSerializer.readWord2VecModel("src/test/resources/bin/SO_vectors_200.bin");
-        List<String> allProtocolConcepts = Stream.of(ProtocolConcepts.values())
-                .map(ProtocolConcepts::getStringConcept)
-                .collect(Collectors.toList());
-        this.goldenSet = w2vModel.wordsNearest(allProtocolConcepts, new HashSet<>(), 10);
+//        this.w2vModel = WordVectorSerializer.readWord2VecModel("src/test/resources/bin/SO_vectors_200.bin");
+//        List<String> allProtocolConcepts = Stream.of(ProtocolConcepts.values())
+//                .map(ProtocolConcepts::getStringConcept)
+//                .collect(Collectors.toList());
+//        this.goldenSet = w2vModel.wordsNearest(allProtocolConcepts, new HashSet<>(), 10);
+        // TODO de-comment the above for real use, the following idiocy is to avoid heavy computations while debugging:
+        this.goldenSet = new HashSet<>();
+        this.goldenSet.add("call");
+        this.goldenSet.add("operation");
+        this.goldenSet.add("function");
     }
 
     private enum ProtocolConcepts {

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.callmemaybe.extractor.CommentContent;
 import org.callmemaybe.extractor.DocumentedExecutable;
@@ -110,7 +111,15 @@ public class Parser {
    * @param method
    * @return
    */
-  public static List<TemporalPropSeries> parseTemporal(CommentContent comment, DocumentedExecutable method) {
+  public static List<TemporalPropSeries> parseTemporal(CommentContent comment,
+                                                       DocumentedExecutable method) {
+
+    if(method.getName().contains("binary")){
+      System.out.println("DEBUG");
+    }
+
+//    manageSignaturesAsPlaceholders();
+
     List<TemporalPropSeries> result = new ArrayList<>();
     List<SemanticGraph> semanticGraphs = extractSemanticGraphs(comment, method);
     for (SemanticGraph semanticGraph : semanticGraphs) {
@@ -249,6 +258,8 @@ public class Parser {
 
     return new CommentContent(placeholderText, comment.getWordsMarkedAsCode());
   }
+
+
 
   /**
    * Returns a new list of {@code PropositionSeries} in which any placeholder text has been replaced

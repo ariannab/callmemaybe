@@ -157,6 +157,7 @@ public class SentenceParser {
       return propositionSeries;
     }
 
+
     Map<List<IndexedWord>, TemporalProposition> propositionMap = new LinkedHashMap<>();
 
     for (SemanticGraphEdge subjectRelation : subjectRelations) {
@@ -573,7 +574,7 @@ public class SentenceParser {
     conjunctionRelations = getRelationsFromGraph("conj:and", "conj:or", "conj:but");
     negationRelations = getRelationsFromGraph("neg");
     numModifierRelations = getRelationsFromGraph("nummod");
-    temporalRelations = getTemporalRelationsFromGraph("advcl");
+    temporalRelations = getTemporalRelationsFromGraph("advcl", "advmod");
   }
 
   /**

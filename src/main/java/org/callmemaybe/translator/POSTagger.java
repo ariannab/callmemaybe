@@ -85,10 +85,13 @@ public class POSTagger {
           }
         }
       } else if (parameters != null && parameters.contains(wordString)) {
-        // Last attempt: no code tags found. Make an assumption over parameters names.
+        // No code tags found. Make an assumption over parameters names.
         taggedSentence.add(new TaggedWord(wordString, "NN"));
-      } else {
-        taggedSentence.add(taggedWord);
+      } else if (wordString.startsWith("method_")) {
+        // Method signatures placeholder
+        taggedSentence.add(new TaggedWord(wordString, "NN"));
+      }else{
+          taggedSentence.add(taggedWord);
       }
     }
     return taggedSentence;

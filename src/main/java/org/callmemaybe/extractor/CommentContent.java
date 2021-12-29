@@ -22,6 +22,9 @@ public final class CommentContent {
    */
   private final Map<String, List<Integer>> wordsMarkedAsCode;
 
+  private Map<String, String> signaturesInComment;
+
+
   private final List<String> linksContent;
   /**
    * CommentContent text. Does not include the tag (e.g., @return) and any additional information
@@ -44,6 +47,7 @@ public final class CommentContent {
     // this.text = text.replaceAll(";", ".");
     this.wordsMarkedAsCode = new HashMap<>();
     this.linksContent = new ArrayList<>();
+    this.signaturesInComment = new HashMap<>();
     // String linkPattern = "\\{@(link|linkplain) (#?([^}^ ]+)( [^}]+)?)\\}";
     String linkPattern = "\\{@(link|linkplain) (.*?)\\}";
     manageLinks(linkPattern);
@@ -57,6 +61,7 @@ public final class CommentContent {
     removeTagsNotContent(codePattern2, 1, 2);
     removeHTMLTags();
     decodeHTML();
+    manageSignaturesAsPlaceholders();
     this.text = this.text.trim();
   }
 
@@ -87,7 +92,7 @@ public final class CommentContent {
         // FIXME I want to keep group(3) only if it is a legit method signature
         linkContent = urlSplitterMatcher.replaceFirst("$3");
       }
-      text = text.replace(linkTagMatcher.group(0), linkContent);
+      this.text = text.replace(linkTagMatcher.group(0), linkContent);
       this.linksContent.add(linkContent);
     }
   }
@@ -370,8 +375,9 @@ public final class CommentContent {
   /**
    * Removes Javadoc inline tags from the comment text preserving the content of the tags.
    *
-   * @param pattern a regular expression
-   * @param i
+   * @param pattern
+   * @param groupReplace
+   * @param groupReplacer
    */
   private void removeTagsNotContent(String pattern, int groupReplace, int groupReplacer) {
     Matcher matcher = Pattern.compile(pattern).matcher(text);
@@ -405,6 +411,40 @@ public final class CommentContent {
 
   public List<CodeSnippet> getCodeSnippets() {
     return commentSnippets;
+  }
+
+
+  /**
+   * Literal (not implicit) method names cannot get parsed normally,
+   * replace them with place-holders
+   */
+  public void manageSignaturesAsPlaceholders(){
+    // FIXME make this static final, reflect it in POSTagger too
+    String basePlaceholder = "method_";
+
+    // FIXME what's the point of an index if we are never incrementing this
+    int baseIndex = 0;
+
+    this.signaturesInComment = new HashMap<>();
+    String methodRegex =
+            "(new )?(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
+    String partialMethodRegex = "(!)?([A-Z]\\w+)?[.#]\\w+";
+    Matcher signatureMatch = Pattern.compile(methodRegex).matcher(text);
+
+    boolean matchFound = signatureMatch.find();
+    if(matchFound){
+      // FIXME Base case, iterate over all matches while increasing index
+      this.signaturesInComment.put(basePlaceholder+baseIndex, signatureMatch.group(0));
+      this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder+baseIndex);
+    }
+    else{
+      signatureMatch = Pattern.compile(partialMethodRegex).matcher(text);
+      boolean partial = signatureMatch.find();
+      if(partial){
+        this.signaturesInComment.put(basePlaceholder+baseIndex, signatureMatch.group(0));
+        this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder+baseIndex);
+      }
+    }
   }
 
   @Override
