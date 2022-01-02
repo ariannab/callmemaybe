@@ -118,6 +118,9 @@ public class Parser {
       System.out.println("DEBUG");
     }
 
+    if(comment.getText().contains("is started")){
+      System.out.println("DEBUG");
+    }
 //    manageSignaturesAsPlaceholders();
 
     List<TemporalPropSeries> result = new ArrayList<>();

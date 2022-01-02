@@ -160,6 +160,7 @@ public class SentenceParser {
 
     Map<List<IndexedWord>, TemporalProposition> propositionMap = new LinkedHashMap<>();
 
+    // Building propositions following the classic subj/pred schema:
     for (SemanticGraphEdge subjectRelation : subjectRelations) {
       // Get the words that make up the predicate.
       List<IndexedWord> predicateWords = getPredicateWords(subjectRelation.getGovernor());
@@ -192,12 +193,8 @@ public class SentenceParser {
       propositionMap.put(propositionWords, proposition);
     }
 
+    // Building propositions following temporal relationships:
     for (SemanticGraphEdge tempRelation : temporalRelations) {
-      // TODO So here the code iterates any subject relations found and for each of them,
-      // TODO a preposition is built. But what about the advcl -- what can we build with that,
-      // TODO another preposition?
-
-      String specificRelation = tempRelation.getRelation().getSpecific();
       // Get the words that make up the governor.
       List<IndexedWord> governorWords = getPredicateWords(tempRelation.getGovernor());
       if (governorWords.isEmpty()) {
@@ -213,15 +210,19 @@ public class SentenceParser {
       // Stores the dependent and associated words, such as any modifiers that come before it.
       // Words (but the dependent) appear in the list in the same order as they appear in the
       // sentence. Dep. is always the last word in the list.
-      Subject dependent = getSubject(dependentWord);
+      Subject dependent = getTemporalSubject(dependentWord);
 
-      List<IndexedWord> depWords = dependent.getSubjectWords();
       // Create a Proposition from the subject and predicate words.
       String predicateWordsAsString =
               governorWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
+
+      // FIXME we may want a different, or flexible, temp. prop. build -- is the dependent always first?
+      // FIXME VBG (-> obj) can get tricky. What looks like the object is what serves as subject in our prop.
+      // FIXME VN and VBN work fine.
       TemporalProposition proposition = new TemporalProposition(dependent, predicateWordsAsString, negative);
 
       // Add the Proposition and associated words to the propositionMap.
+      List<IndexedWord> depWords = dependent.getSubjectWords();
       List<IndexedWord> propositionWords = new ArrayList<>(depWords);
       propositionWords.addAll(governorWords);
       propositionMap.put(propositionWords, proposition);
@@ -290,15 +291,23 @@ public class SentenceParser {
    */
   private TemporalRule.TemporalRelation getTemporalSpecific(SemanticGraphEdge temporalRelation) {
     String conjunctionRelationSpecific = temporalRelation.getRelation().getSpecific();
+
+    if(conjunctionRelationSpecific==null &&
+            "advmod".equals(temporalRelation.getRelation().getShortName())
+            && temporalRelation.getDependent().tag().equals("RB")){
+      conjunctionRelationSpecific = temporalRelation.getDependent().word();
+    }
     if(conjunctionRelationSpecific==null){
       return null;
     }
+
     TemporalRule.TemporalRelation operator;
     switch (conjunctionRelationSpecific) {
       case "until":
         operator = TemporalRule.TemporalRelation.UNTIL;
         break;
       case "before":
+      case "prior":
         operator = TemporalRule.TemporalRelation.BEFORE;
         break;
       case "after":
@@ -560,6 +569,33 @@ public class SentenceParser {
     return new Subject(extractSubjectWords(subjectWord), containerWords, isPassive);
   }
 
+  private Subject getTemporalSubject(IndexedWord subjectWord) {
+    // Collect the words composing the container. For example, in the comment "any value in the
+    // array is null", the subject is "any value", while the container is "array". At the moment
+    // we collect only one word as container. Extend the code to support containers composed of
+    // multiple words. For example in "any element in the entry set is null", the container is
+    // "entry set".
+    List<IndexedWord> containerWords = new ArrayList<>();
+    IndexedWord container =
+            getRelationsFromGraph("nmod:in")
+                    .stream()
+                    .filter(e -> e.getGovernor().equals(subjectWord))
+                    .map(SemanticGraphEdge::getDependent)
+                    .findFirst()
+                    .orElse(null);
+    if (container != null) {
+      containerWords.add(container);
+    }
+
+    boolean isPassive =
+            getRelationsFromGraph("nsubjpass")
+                    .stream()
+                    .anyMatch(e -> e.getTarget().equals(subjectWord));
+
+    List<IndexedWord> tempSubjectWords = extractTemporalObjects(subjectWord);
+    return new Subject(tempSubjectWords, containerWords, isPassive);
+  }
+
   /** Initializes the relations fields using the semantic graph. */
   private void initializeRelations() {
     // TODO Here manage advcl too (and obl, and?)
@@ -574,6 +610,7 @@ public class SentenceParser {
     conjunctionRelations = getRelationsFromGraph("conj:and", "conj:or", "conj:but");
     negationRelations = getRelationsFromGraph("neg");
     numModifierRelations = getRelationsFromGraph("nummod");
+    // TODO originally it was advcl only. Check if you truly want advmod.
     temporalRelations = getTemporalRelationsFromGraph("advcl", "advmod");
   }
 
@@ -659,6 +696,24 @@ public class SentenceParser {
     return subjectWords;
   }
 
+  private List<IndexedWord> extractTemporalObjects(IndexedWord subject) {
+    List<IndexedWord> subjectWords = new ArrayList<>();
+    Queue<IndexedWord> nodeQueue = new LinkedList<>();
+    nodeQueue.add(subject);
+    subjectWords.add(subject);
+
+    while (!nodeQueue.isEmpty()) {
+      IndexedWord currentNode = nodeQueue.poll();
+      List<IndexedWord> children = getTemporalChildren(currentNode);
+      for (IndexedWord child : children) {
+        subjectWords.add(child);
+        nodeQueue.add(child);
+      }
+    }
+    subjectWords.sort(Comparator.comparingInt(IndexedWord::index));
+    return subjectWords;
+  }
+
   /**
    * Returns the list of children of {@code node} in the semantic graph produce by the Stanford
    * parser. The list of children only contains nodes that are connected with {@code node} with the
@@ -689,5 +744,28 @@ public class SentenceParser {
         .map(SemanticGraphEdge::getTarget)
         .filter(word -> !stopwords.contains(word.word().toLowerCase()))
         .collect(Collectors.toList());
+  }
+
+  private List<IndexedWord> getTemporalChildren(IndexedWord node) {
+    List<String> relationIdentifiers =
+            Arrays.asList("compound", "advmod", "amod", "det", "nmod:poss", "nmod:of", "dobj");
+    List<String> stopwords = Arrays.asList("a", "an", "the");
+
+    return semanticGraph
+            .getOutEdgesSorted(node)
+            .stream()
+            .filter(
+                    edge -> {
+                      GrammaticalRelation grammaticalRelation = edge.getRelation();
+                      String identifier = grammaticalRelation.getShortName();
+                      final String specific = grammaticalRelation.getSpecific();
+                      if (specific != null) {
+                        identifier += ":" + specific;
+                      }
+                      return relationIdentifiers.contains(identifier);
+                    })
+            .map(SemanticGraphEdge::getTarget)
+            .filter(word -> !stopwords.contains(word.word().toLowerCase()))
+            .collect(Collectors.toList());
   }
 }
