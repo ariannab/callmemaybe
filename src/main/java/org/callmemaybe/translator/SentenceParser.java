@@ -195,8 +195,24 @@ public class SentenceParser {
 
     // Building propositions following temporal relationships:
     for (SemanticGraphEdge tempRelation : temporalRelations) {
+      // Stores the word marked as a dependent word in the semantic graph.
+      IndexedWord dependentWord;
+      List<IndexedWord> governorWords;
+
+      dependentWord = tempRelation.getDependent();
       // Get the words that make up the governor.
-      List<IndexedWord> governorWords = getPredicateWords(tempRelation.getGovernor());
+      governorWords = getPredicateWords(tempRelation.getGovernor());
+
+      if(!complementRelations.isEmpty()) {
+        // Direct object becomes subject of temporal proposition.
+        for (SemanticGraphEdge complementRel : complementRelations) {
+          if (complementRel.getGovernor().equals(dependentWord)) {
+            dependentWord = complementRel.getDependent();
+            governorWords = getPredicateWords(complementRel.getGovernor());
+          }
+        }
+      }
+
       if (governorWords.isEmpty()) {
         // Skip creating a Proposition if no gov. could be identified.
         continue;
@@ -204,21 +220,18 @@ public class SentenceParser {
       // Check if the gov. should be negated.
       boolean negative = predicateIsNegative(tempRelation.getGovernor());
 
-      // Stores the word marked as a dependent word in the semantic graph.
-      IndexedWord dependentWord = tempRelation.getDependent();
 
       // Stores the dependent and associated words, such as any modifiers that come before it.
       // Words (but the dependent) appear in the list in the same order as they appear in the
       // sentence. Dep. is always the last word in the list.
       Subject dependent = getTemporalSubject(dependentWord);
+//      Subject dependent = getSubject(dependentWord);
+
 
       // Create a Proposition from the subject and predicate words.
       String predicateWordsAsString =
               governorWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
 
-      // FIXME we may want a different, or flexible, temp. prop. build -- is the dependent always first?
-      // FIXME VBG (-> obj) can get tricky. What looks like the object is what serves as subject in our prop.
-      // FIXME VN and VBN work fine.
       TemporalProposition proposition = new TemporalProposition(dependent, predicateWordsAsString, negative);
 
       // Add the Proposition and associated words to the propositionMap.
@@ -232,6 +245,7 @@ public class SentenceParser {
     for (SemanticGraphEdge tempRelation : temporalRelations) {
       IndexedWord tempRelGovernor = tempRelation.getGovernor();
       IndexedWord tempRelDependent = tempRelation.getDependent();
+      TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
       TemporalProposition p1 = null, p2 = null;
 
       for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
@@ -250,7 +264,6 @@ public class SentenceParser {
         if (propositionSeries.isEmpty()) {
           propositionSeries.add(p1);
         }
-        TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
         if(temporalSpecific!=null) {
           propositionSeries.add(temporalSpecific, p2);
         }
@@ -292,6 +305,8 @@ public class SentenceParser {
   private TemporalRule.TemporalRelation getTemporalSpecific(SemanticGraphEdge temporalRelation) {
     String conjunctionRelationSpecific = temporalRelation.getRelation().getSpecific();
 
+    // FIXME We are not passing advmod here anymore. Look for it here. If the specific of
+    // FIXME advcl is not temporal but there is a advmod as specified below, there's hope!
     if(conjunctionRelationSpecific==null &&
             "advmod".equals(temporalRelation.getRelation().getShortName())
             && temporalRelation.getDependent().tag().equals("RB")){
@@ -611,7 +626,7 @@ public class SentenceParser {
     negationRelations = getRelationsFromGraph("neg");
     numModifierRelations = getRelationsFromGraph("nummod");
     // TODO originally it was advcl only. Check if you truly want advmod.
-    temporalRelations = getTemporalRelationsFromGraph("advcl", "advmod");
+    temporalRelations = getTemporalRelationsFromGraph("advcl");
   }
 
   /**
@@ -748,7 +763,7 @@ public class SentenceParser {
 
   private List<IndexedWord> getTemporalChildren(IndexedWord node) {
     List<String> relationIdentifiers =
-            Arrays.asList("compound", "advmod", "amod", "det", "nmod:poss", "nmod:of", "dobj");
+            Arrays.asList("compound", "amod", "det", "nmod:poss", "nmod:of", "dobj");
     List<String> stopwords = Arrays.asList("a", "an", "the");
 
     return semanticGraph
