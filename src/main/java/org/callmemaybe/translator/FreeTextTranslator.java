@@ -173,6 +173,8 @@ public class FreeTextTranslator {
 
         if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.METHOD_TO_CALL) {
             // FIXME does it make sense to set this members or is it extra work
+            // FIXME Either way the subject can be a silly placeholder such as "this method" or "this call",
+            // FIXME manage the case here
             temporalMatch.setMember(propositionLetter, proposition.getSubject().getSubject());
         } else if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.ACTION_TO_MATCH) {
             Matcher matcher = new Matcher();

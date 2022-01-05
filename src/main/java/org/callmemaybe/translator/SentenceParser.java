@@ -166,6 +166,7 @@ public class SentenceParser {
     for (SemanticGraphEdge subjectRelation : subjectRelations) {
       // Get the words that make up the predicate.
       List<IndexedWord> predicateWords = getPredicateWords(subjectRelation.getGovernor());
+      collectPropSeriesVerbs(subjectRelation.getGovernor(), propositionSeries);
       if (predicateWords.isEmpty()) {
         // Skip creating a Proposition if no predicate could be identified.
         continue;
@@ -204,6 +205,8 @@ public class SentenceParser {
       dependentWord = tempRelation.getDependent();
       // Get the words that make up the governor.
       governorWords = getPredicateWords(tempRelation.getGovernor());
+      collectPropSeriesVerbs(tempRelation.getGovernor(), propositionSeries);
+      collectPropSeriesVerbs(tempRelation.getDependent(), propositionSeries);
 
       if(!complementRelations.isEmpty()) {
         // Direct object becomes subject of temporal proposition.
@@ -273,6 +276,59 @@ public class SentenceParser {
     }
 
     return propositionSeries;
+  }
+
+  private void collectPropSeriesVerbs(IndexedWord governor,
+                                      TemporalPropSeries propositionSeries) {
+    // Copula verbs
+    Optional<SemanticGraphEdge> copEdge =
+            copulaRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
+    if (copEdge.isPresent()) {
+      // Predicate is of copula form.
+      IndexedWord dep = copEdge.get().getDependent();
+      propositionSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.COPULA));
+      propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.COPULA));
+    }
+
+    // Auxiliary verbs
+    Optional<SemanticGraphEdge> auxEdge =
+            auxRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
+    if (auxEdge.isPresent()) {
+//      IndexedWord aux = auxEdge.get().getDependent();
+//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
+      propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.AUX));
+    }
+
+    // Complementary verbs. Tricky ones: e.g., for dobj such as "making call", you want to retain "call"
+    // and not just "make"
+    Optional<SemanticGraphEdge> complementEdge =
+            complementRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
+    if (complementEdge.isPresent()) {
+      propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.NON_COPULA));
+      IndexedWord complement = complementEdge.get().getDependent();
+      propositionSeries.verbsDB.add(new Verb(complement, Verb.GrammaticalKind.NON_COPULA));
+
+//      Optional<SemanticGraphEdge> numModifierEdge =
+//              numModifierRelations.stream().filter(e -> e.getGovernor().equals(complement)).findFirst();
+//      if (numModifierEdge.isPresent()) {
+//        IndexedWord dep = numModifierEdge.get().getDependent();
+//      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.NON_COPULA));
+//      }
+    }
+
+    // Passive
+    Optional<SemanticGraphEdge> auxpassEdge =
+            getRelationsFromGraph("auxpass")
+                    .stream()
+                    .filter(e -> e.getGovernor().equals(governor))
+                    .findFirst();
+    if (auxpassEdge.isPresent()) {
+      IndexedWord dep = auxpassEdge.get().getDependent();
+      // TODO for now try ignoring dependents (is, will... + real verb)
+//    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.PASSIVE));
+      propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.PASSIVE));
+    }
+
   }
 
 
@@ -412,8 +468,6 @@ public class SentenceParser {
     IndexedWord aux = auxEdge.get().getDependent();
     predicateWords.add(aux);
     predicateWords.add(governor);
-//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.AUX));
     return predicateWords;
   }
 
@@ -433,7 +487,6 @@ public class SentenceParser {
       // Predicate is not of non-copula form.
       return predicateWords;
     }
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.NON_COPULA));
     predicateWords.add(governor);
     IndexedWord complement = complementEdge.get().getDependent();
 //    TemporalPropSeries.verbsDB.add(new Verb(complement, Verb.GrammaticalKind.NON_COPULA));
@@ -470,11 +523,9 @@ public class SentenceParser {
               .filter(e -> e.getGovernor().equals(conjunctionEdge1.get().getDependent()))
               .findFirst();
       if (complementEdge.isPresent()) {
-        TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.CONJUNCTION));
         predicateWords.add(governor);
         IndexedWord dep = complementEdge.get().getDependent();
         predicateWords.add(dep);
-//        TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.CONJUNCTION));
         return predicateWords;
       }
     }
@@ -492,8 +543,6 @@ public class SentenceParser {
         IndexedWord dep2 = conjunctionEdge2.get().getDependent();
         predicateWords.add(dep);
         predicateWords.add(dep2);
-//        TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.COPULA));
-//        TemporalPropSeries.verbsDB.add(new Verb(dep2, Verb.GrammaticalKind.COPULA));
         return predicateWords;
       }
     }
@@ -521,9 +570,6 @@ public class SentenceParser {
       return predicateWords;
     }
     IndexedWord dep = auxpassEdge.get().getDependent();
-    // FIXME try ignoring dependents (is, will... + real verb)
-//    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.PASSIVE));
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.PASSIVE));
     predicateWords.add(dep);
     predicateWords.add(governor);
 
@@ -549,8 +595,6 @@ public class SentenceParser {
       return predicateWords;
     }
     IndexedWord dep = copEdge.get().getDependent();
-    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.COPULA));
-    TemporalPropSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.COPULA));
     predicateWords.add(dep);
     // Add the governor itself to the predicate.
     predicateWords.add(governor);

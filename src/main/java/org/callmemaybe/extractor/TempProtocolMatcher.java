@@ -102,9 +102,12 @@ public class TempProtocolMatcher {
     private void assessIfTemporalMatch(DocumentedExecutable excMember,
                                        TemporalPropSeries propSeries,
                                        TemporalMatch temporalMatch) {
-        Set<String> lemmatizedGoldenSet = goldenSet.stream()
-                .map(TempProtocolMatcher::getLemma)
-                .collect(Collectors.toSet());
+//        Set<String> lemmatizedGoldenSet = goldenSet.stream()
+//                .map(TempProtocolMatcher::getLemma)
+//                .collect(Collectors.toSet());
+
+        //FIXME De-comment above and eliminate the following line, it's to speed up dev./debug
+        Set<String> lemmatizedGoldenSet = new HashSet<>(goldenSet);
 
         Set<String> nonCopulaVerbs = propSeries.verbsDB.stream()
                 .filter(x -> x.getKindOfVerb() != Verb.GrammaticalKind.COPULA).map(x -> getLemma(x.getWord()))

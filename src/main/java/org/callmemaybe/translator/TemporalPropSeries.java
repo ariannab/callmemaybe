@@ -36,7 +36,7 @@ public class TemporalPropSeries {
     /**
      * All the verbs in this temporal prop. series
      */
-    public static Set<Verb> verbsDB;
+    public Set<Verb> verbsDB;
 
     private final SemanticGraph semanticGraph;
 
@@ -212,5 +212,9 @@ public class TemporalPropSeries {
 
     public SemanticGraph getSemanticGraph() {
         return semanticGraph;
+    }
+
+    public Set<Verb> getVerbsDB() {
+        return verbsDB;
     }
 }
