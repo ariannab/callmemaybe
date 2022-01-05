@@ -16,6 +16,8 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -307,13 +309,22 @@ public class SentenceParser {
 
     // FIXME We are not passing advmod here anymore. Look for it here. If the specific of
     // FIXME advcl is not temporal but there is a advmod as specified below, there's hope!
-    if(conjunctionRelationSpecific==null &&
-            "advmod".equals(temporalRelation.getRelation().getShortName())
-            && temporalRelation.getDependent().tag().equals("RB")){
-      conjunctionRelationSpecific = temporalRelation.getDependent().word();
-    }
-    if(conjunctionRelationSpecific==null){
-      return null;
+    List<String> enumNames = Stream.of(TemporalRule.TemporalRelation.values())
+            .map(Enum::name)
+            .collect(Collectors.toList());
+
+    if(!enumNames.contains(conjunctionRelationSpecific)) {
+      List<SemanticGraphEdge> advmodEdges = getRelationsFromGraph("advmod");
+      for(SemanticGraphEdge e : advmodEdges) {
+        if(temporalRelation.getDependent().equals(e.getGovernor()) &&
+                e.getDependent().tag().equals("RB")) {
+          conjunctionRelationSpecific = e.getDependent().word();
+          break;
+        }
+        if (conjunctionRelationSpecific == null) {
+          return null;
+        }
+      }
     }
 
     TemporalRule.TemporalRelation operator;
