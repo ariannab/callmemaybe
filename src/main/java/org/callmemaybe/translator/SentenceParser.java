@@ -248,32 +248,32 @@ public class SentenceParser {
 
     // Identify propositions associated with each temp. rel. and add them to the propositionSeries.
     for (SemanticGraphEdge tempRelation : temporalRelations) {
-      IndexedWord tempRelGovernor = tempRelation.getGovernor();
-      IndexedWord tempRelDependent = tempRelation.getDependent();
-      TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
-      TemporalProposition p1 = null, p2 = null;
+        IndexedWord tempRelGovernor = tempRelation.getGovernor();
+        IndexedWord tempRelDependent = tempRelation.getDependent();
+        TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
+        TemporalProposition p1 = null, p2 = null;
 
-      for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
-        if (entry.getKey().contains(tempRelGovernor)) {
-          p1 = entry.getValue();
+        for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
+          if (entry.getKey().contains(tempRelGovernor)) {
+            p1 = entry.getValue();
+          }
+          if (entry.getKey().contains(tempRelDependent)) {
+            p2 = entry.getValue();
+          }
+          if (p1 != null && p2 != null) {
+            break;
+          }
         }
-        if (entry.getKey().contains(tempRelDependent)) {
-          p2 = entry.getValue();
-        }
+
         if (p1 != null && p2 != null) {
-          break;
+          if (propositionSeries.isEmpty()) {
+            propositionSeries.add(p1);
+          }
+          if (temporalSpecific != null) {
+            propositionSeries.add(temporalSpecific, p2);
+          }
         }
       }
-
-      if (p1 != null && p2 != null) {
-        if (propositionSeries.isEmpty()) {
-          propositionSeries.add(p1);
-        }
-        if(temporalSpecific!=null) {
-          propositionSeries.add(temporalSpecific, p2);
-        }
-      }
-    }
 
     return propositionSeries;
   }
@@ -362,43 +362,46 @@ public class SentenceParser {
    */
   private TemporalRule.TemporalRelation getTemporalSpecific(SemanticGraphEdge temporalRelation) {
     String conjunctionRelationSpecific = temporalRelation.getRelation().getSpecific();
+    if(conjunctionRelationSpecific!=null) {
 
-    // FIXME We are not passing advmod here anymore. Look for it here. If the specific of
-    // FIXME advcl is not temporal but there is a advmod as specified below, there's hope!
-    List<String> enumNames = Stream.of(TemporalRule.TemporalRelation.values())
-            .map(Enum::name)
-            .collect(Collectors.toList());
+      // FIXME We are not passing advmod here anymore. Look for it here. If the specific of
+      // FIXME advcl is not temporal but there is a advmod as specified below, there's hope!
+      List<String> enumNames = Stream.of(TemporalRule.TemporalRelation.values())
+              .map(Enum::name)
+              .collect(Collectors.toList());
 
-    if(!enumNames.contains(conjunctionRelationSpecific)) {
-      List<SemanticGraphEdge> advmodEdges = getRelationsFromGraph("advmod");
-      for(SemanticGraphEdge e : advmodEdges) {
-        if(temporalRelation.getDependent().equals(e.getGovernor()) &&
-                e.getDependent().tag().equals("RB")) {
-          conjunctionRelationSpecific = e.getDependent().word();
-          break;
-        }
-        if (conjunctionRelationSpecific == null) {
-          return null;
+      if (!enumNames.contains(conjunctionRelationSpecific)) {
+        List<SemanticGraphEdge> advmodEdges = getRelationsFromGraph("advmod");
+        for (SemanticGraphEdge e : advmodEdges) {
+          if (temporalRelation.getDependent().equals(e.getGovernor()) &&
+                  e.getDependent().tag().equals("RB")) {
+            conjunctionRelationSpecific = e.getDependent().word();
+            break;
+          }
+          if (conjunctionRelationSpecific == null) {
+            return null;
+          }
         }
       }
-    }
 
-    TemporalRule.TemporalRelation operator;
-    switch (conjunctionRelationSpecific) {
-      case "until":
-        operator = TemporalRule.TemporalRelation.UNTIL;
-        break;
-      case "before":
-      case "prior":
-        operator = TemporalRule.TemporalRelation.BEFORE;
-        break;
-      case "after":
-        operator = TemporalRule.TemporalRelation.AFTER;
-        break;
-      default:
-        operator = null;
+      TemporalRule.TemporalRelation operator;
+      switch (conjunctionRelationSpecific) {
+        case "until":
+          operator = TemporalRule.TemporalRelation.UNTIL;
+          break;
+        case "before":
+        case "prior":
+          operator = TemporalRule.TemporalRelation.BEFORE;
+          break;
+        case "after":
+          operator = TemporalRule.TemporalRelation.AFTER;
+          break;
+        default:
+          operator = null;
+      }
+      return operator;
     }
-    return operator;
+    return null;
   }
 
   /**

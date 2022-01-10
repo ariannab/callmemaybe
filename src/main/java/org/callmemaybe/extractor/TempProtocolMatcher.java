@@ -41,6 +41,7 @@ public class TempProtocolMatcher {
         this.goldenSet.add("call");
         this.goldenSet.add("operation");
         this.goldenSet.add("function");
+        this.goldenSet.add("invoke");
     }
 
     private enum ProtocolConcepts {

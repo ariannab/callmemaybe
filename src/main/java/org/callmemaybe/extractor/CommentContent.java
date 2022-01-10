@@ -61,7 +61,8 @@ public final class CommentContent {
     removeTagsNotContent(codePattern2, 1, 2);
     removeHTMLTags();
     decodeHTML();
-    manageSignaturesAsPlaceholders();
+    // FIXME see if this is useful for real:
+//    manageSignaturesAsPlaceholders();
     this.text = this.text.trim();
   }
 
@@ -445,6 +446,10 @@ public final class CommentContent {
         this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder+baseIndex);
       }
     }
+  }
+
+  public Map<String, String> getSignaturesInComment() {
+    return signaturesInComment;
   }
 
   @Override

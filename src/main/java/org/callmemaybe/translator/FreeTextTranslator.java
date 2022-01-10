@@ -122,7 +122,7 @@ public class FreeTextTranslator {
         CommentContent commentContent = excMember.getFreeText().getComment();
         // TODO We have a similar method (addPlaceholders) that does something similar for other reasons.
         // TODO This may cause confusion.
-        methodNamePlaceholders(commentContent, excMember);
+        commentContentPlaceholders(commentContent, excMember);
 
 //    String commentText = commentContent.getText();
 //    String[] sentences = commentText.split("\\. |(?<!\\.\\.)\\.\\)");
@@ -132,10 +132,10 @@ public class FreeTextTranslator {
 
         if (temporalMatch.isIndeedMatch()) {
             if(temporalMatch.getMemberA()==null || temporalMatch.getMemberA().isEmpty()) {
-                setMembers("A", temporalMatch, excMember, commentContent.getText());
+                setMembers("A", temporalMatch, excMember, commentContent);
             }
             if(temporalMatch.getMemberB()==null || temporalMatch.getMemberB().isEmpty()) {
-                setMembers("B", temporalMatch, excMember, commentContent.getText());
+                setMembers("B", temporalMatch, excMember, commentContent);
             }
             // After both proposition are translated, we set the "raw protocol"
             // FIXME whatever it is~
@@ -154,16 +154,25 @@ public class FreeTextTranslator {
         return matches;
     }
 
-    private void methodNamePlaceholders(CommentContent commentContent, DocumentedExecutable excMember) {
+    private void commentContentPlaceholders(CommentContent commentContent, DocumentedExecutable excMember) {
+        // FIXME is this the right place? What if a signature is not parsed right
+        // FIXME ANSWER: does not look like, well, not always. try ignore "this call" and leave "this method"
+        // FIXME for texts purposes
         // TODO Add more if found.
+        // FIXME cases are sad, smt like  Apache commons->StringUtils.containsIgnoreCase would be nice
         commentContent.modifyTextWithPlaceholder("This method", excMember.getSignature());
+//        commentContent.modifyTextWithPlaceholder("this call", excMember.getSignature());
+        commentContent.modifyTextWithPlaceholder("this method", excMember.getSignature());
+//        commentContent.modifyTextWithPlaceholder("This call", excMember.getSignature());
+
     }
+
 
 
     private void setMembers(String propositionLetter,
                             TemporalMatch temporalMatch,
                             DocumentedExecutable excMember,
-                            String comment) {
+                            CommentContent commentContent) {
         TemporalProposition proposition;
         if (propositionLetter.equals("A")) {
             proposition = temporalMatch.getPropositionA();
@@ -175,7 +184,8 @@ public class FreeTextTranslator {
             // FIXME does it make sense to set this members or is it extra work
             // FIXME Either way the subject can be a silly placeholder such as "this method" or "this call",
             // FIXME manage the case here
-            temporalMatch.setMember(propositionLetter, proposition.getSubject().getSubject());
+            String subj = replaceThisSubject(proposition.getSubject().getSubject(), commentContent, excMember);
+            temporalMatch.setMember(propositionLetter, subj);
         } else if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.ACTION_TO_MATCH) {
             Matcher matcher = new Matcher();
             Set<CodeElement<?>> codeElements = JavaElementsCollector.collectIgnoringScope(excMember);
@@ -191,6 +201,19 @@ public class FreeTextTranslator {
                 }
             }
         }
+    }
+
+    private String replaceThisSubject(String subject,
+                                      CommentContent commentContent,
+                                      DocumentedExecutable excMember) {
+        // TODO add more, "this method", cases, etch.
+        // FIXME missing method_0 placeholders
+        if(subject.contains("this call")){
+            return excMember.getSignature();
+        }else if(subject.contains("method_")){
+            return commentContent.getSignaturesInComment().get(subject);
+        }
+        return subject;
     }
 
 
