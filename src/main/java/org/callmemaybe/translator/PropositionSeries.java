@@ -130,7 +130,7 @@ public class PropositionSeries {
    *
    * @return an unmodifiable list view of the propositions in this series
    */
-  List<Proposition> getPropositions() {
+  public List<Proposition> getPropositions() {
     return Collections.unmodifiableList(propositions);
   }
 

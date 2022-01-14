@@ -7,7 +7,10 @@ import java.io.IOException;
 import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Executable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +36,13 @@ import org.callmemaybe.util.ComplianceChecks;
 import org.callmemaybe.util.ComplianceError;
 import org.callmemaybe.util.Reflection;
 
+import static org.callmemaybe.translator.BasicTranslator.findMatchingCodeElements;
+
 public class FreeTextTranslator {
+
+    private static final String LOOP_OK = "OK";
+    private static final String LOOP_CONTINUE = "continue";
+    private static final String LOOP_RETURN = "return";
 
     /**
      * Translates a free text comment if it contains a MR. This method calls the MR Finder and then
@@ -122,7 +131,9 @@ public class FreeTextTranslator {
         CommentContent commentContent = excMember.getFreeText().getComment();
         // TODO We have a similar method (addPlaceholders) that does something similar for other reasons.
         // TODO This may cause confusion.
-        commentContentPlaceholders(commentContent, excMember);
+
+        // FIXME See if this is the right point or it's below, later (setMembers calling replaceThisSubj):
+//        commentContentPlaceholders(commentContent, excMember);
 
 //    String commentText = commentContent.getText();
 //    String[] sentences = commentText.split("\\. |(?<!\\.\\.)\\.\\)");
@@ -132,19 +143,21 @@ public class FreeTextTranslator {
 
         if (temporalMatch.isIndeedMatch()) {
             if(temporalMatch.getMemberA()==null || temporalMatch.getMemberA().isEmpty()) {
-                setMembers("A", temporalMatch, excMember, commentContent);
+                translateMembers("A", temporalMatch, excMember, commentContent);
             }
             if(temporalMatch.getMemberB()==null || temporalMatch.getMemberB().isEmpty()) {
-                setMembers("B", temporalMatch, excMember, commentContent);
+                translateMembers("B", temporalMatch, excMember, commentContent);
             }
-            // After both proposition are translated, we set the "raw protocol"
-            // FIXME whatever it is~
+            // After both proposition are translated, we set the "raw protocol". It is
+            // only made of identifiers (simple names), that will be translated into real
+            // code names only in the last phase. FIXME maybe not what we need tho
             temporalMatch.setRawProtocol(TemporalRule.buildRawProtocol(temporalMatch));
-            // Then match them against real code names
-            // FIXME sounds redundant we probably did this already
             if(temporalMatch.getRawProtocol().getFirstMember() != null &&
                     temporalMatch.getRawProtocol().getSecondMember()!=null) {
-                translateRawProtocol(excMember, temporalMatch);
+                // We have a complete raw protocol: translate into code
+                // TODO Ignoring it for now, come back to it later.
+//                translateRawProtocol(excMember, temporalMatch);
+
                 // Build the oracle by gluing members and arrow
                 temporalMatch.buildOracle();
                 // Match is now ready to be returned
@@ -154,6 +167,12 @@ public class FreeTextTranslator {
         return matches;
     }
 
+    /**
+     * This method will replace the original comment text. Use wisely.
+     *
+     * @param commentContent
+     * @param excMember
+     */
     private void commentContentPlaceholders(CommentContent commentContent, DocumentedExecutable excMember) {
         // FIXME is this the right place? What if a signature is not parsed right
         // FIXME ANSWER: does not look like, well, not always. try ignore "this call" and leave "this method"
@@ -169,10 +188,10 @@ public class FreeTextTranslator {
 
 
 
-    private void setMembers(String propositionLetter,
-                            TemporalMatch temporalMatch,
-                            DocumentedExecutable excMember,
-                            CommentContent commentContent) {
+    private void translateMembers(String propositionLetter,
+                                  TemporalMatch temporalMatch,
+                                  DocumentedExecutable excMember,
+                                  CommentContent commentContent) {
         TemporalProposition proposition;
         if (propositionLetter.equals("A")) {
             proposition = temporalMatch.getPropositionA();
@@ -180,25 +199,100 @@ public class FreeTextTranslator {
             proposition = temporalMatch.getPropositionB();
         }
 
+        String subjNameToMatch="";
+
         if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.METHOD_TO_CALL) {
-            // FIXME does it make sense to set this members or is it extra work
-            // FIXME Either way the subject can be a silly placeholder such as "this method" or "this call",
-            // FIXME manage the case here
-            String subj = replaceThisSubject(proposition.getSubject().getSubject(), commentContent, excMember);
-            temporalMatch.setMember(propositionLetter, subj);
+            subjNameToMatch = replaceThisSubject(proposition.getSubject().getSubject(), commentContent, excMember);
+            if(!subjNameToMatch.isEmpty()){
+                // Subject was the documented method itself: done with matching
+                // FIXME not sure, check, you may want to fill arguments for example: check MeMo's methods
+                temporalMatch.setMember(propositionLetter, subjNameToMatch);
+                return;
+            }
         } else if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.ACTION_TO_MATCH) {
+            // A classic subject + predicate matching similar to Jdoctor's.
+            subjNameToMatch = proposition.getSubject().getSubject();
             Matcher matcher = new Matcher();
-            Set<CodeElement<?>> codeElements = JavaElementsCollector.collectIgnoringScope(excMember);
-            // FIXME we do this like THREE times. When we want to understand if it's an action to match,
-            // FIXME here, and later in the "real" translation. Aaaanywayyyy...
-            Set<CodeElement<?>> matchingSubjs = matcher.subjectMatch(proposition.getSubject().getSubject(), codeElements);
+            Set<CodeElement<?>> allCodeElements = JavaElementsCollector.collect(excMember);
+            // TODO Following code is borrowed from BasicTranslator. Check it's alright.
+            Set<CodeElement<?>> matchingSubjs = matcher.subjectMatch(subjNameToMatch, allCodeElements);
             if(matchingSubjs.iterator().hasNext()) {
-                CodeElement<?> sub = matchingSubjs.iterator().next();
-                Set<CodeElement<?>> matchingActions = matcher.subjectMatch(proposition.getPredicate(), codeElements);
-                if(matchingActions.iterator().hasNext()) {
-                    CodeElement<?> pred = matchingActions.iterator().next();
-                    temporalMatch.setMember(propositionLetter, sub.getJavaExpression() + "." + pred.getJavaExpression());
+//                CodeElement<?> sub = matchingSubjs.iterator().next();
+                final Set<CodeElement<?>> matchingCodeElements = new LinkedHashSet<>();
+                String loop = findMatchingCodeElements(proposition, matchingSubjs, excMember, matchingCodeElements);
+                if (loop.equals(LOOP_RETURN)) {
+                    return;
                 }
+
+                // Maps each subject code element to the Java expression translation that uses that code
+                // element.
+                Map<CodeElement<?>, String> translations = new LinkedHashMap<>();
+                for (CodeElement<?> subjectMatch : matchingCodeElements) {
+                    Set<CodeElement<?>> codeElements = JavaElementsCollector.collectIgnoringScope(excMember);
+                    Match predicateMatch = matcher.syntacticMatch(proposition.getVerbWord(),
+                            codeElements, excMember, subjectMatch.getJavaExpression());
+                    if(predicateMatch!=null) {
+                        String currentTranslation = predicateMatch.getBaseExpression();
+                        if (currentTranslation == null) {
+                            //          ConditionTranslator.log.trace("Failed predicate translation for: " + p);
+                            continue;
+                        }
+                        if (currentTranslation.contains("{") && currentTranslation.contains("}")) {
+                            String argument =
+                                    currentTranslation.substring(
+                                            currentTranslation.indexOf("{") + 1, currentTranslation.indexOf("}"));
+
+                            Set<CodeElement<?>> argMatches;
+
+                            // Extract every CodeElement associated with the method and the containing class of the
+                            // method.
+                            Set<CodeElement<?>> methodCodeElements = JavaElementsCollector.collect(excMember);
+                            argMatches = matcher.subjectMatch(argument, methodCodeElements);
+                            if (argMatches.isEmpty()) {
+                                //            ConditionTranslator.log.trace("Failed predicate translation for: " + p + "
+                                // due to variable not found.");
+                                continue;
+                            } else {
+                                Iterator<CodeElement<?>> it = argMatches.iterator();
+                                String replaceTarget = "{" + argument + "}";
+                                // Naive solution: picks the first match from the list.
+                                String replacement = it.next().getJavaExpression();
+                                currentTranslation = currentTranslation.replace(replaceTarget, replacement);
+                            }
+                        }
+                        translations.put(subjectMatch, currentTranslation);
+                    }
+                }
+
+                if (translations.isEmpty()) {
+                    // Predicate match failed for every subject match.
+                    return;
+                }
+
+                // The final translation.
+                String result;
+                // Sort matching subjects according to their priorities (defined in CodeElement#compareTo).
+                List<CodeElement<?>> matchingSubjects = new ArrayList<>(translations.keySet());
+                matchingSubjects.sort(Collections.reverseOrder());
+                // Get all the matching subjects with the same priority (i.e., of the same type)
+                // and pick the first one
+                CodeElement<?> match =
+                        matchingCodeElements
+                                .stream()
+                                .filter(c -> matchingSubjects.get(0).getClass().equals(c.getClass()))
+                                .findFirst()
+                                .orElse(null);
+
+                result = translations.get(match);
+                if (result == null) {
+                    //        ConditionTranslator.log.warn("Failed translation for proposition " + p);
+                    proposition.setTranslation("");
+                } else {
+                    //        ConditionTranslator.log.trace("Translated proposition " + p + " as: " + result);
+                    proposition.setTranslation(result);
+                    temporalMatch.setMember(propositionLetter, result);
+                }
+
             }
         }
     }
@@ -207,9 +301,13 @@ public class FreeTextTranslator {
                                       CommentContent commentContent,
                                       DocumentedExecutable excMember) {
         // TODO add more, "this method", cases, etch.
-        // FIXME missing method_0 placeholders
-        if(subject.contains("this call")){
-            return excMember.getSignature();
+
+        // FIXME Probably we don't want to return nor the name nor the signature but a proper JavaExpression
+        // FIXME From the code element.
+        if(subject.contains("this call")) {
+            return excMember.getName();
+        }else if(subject.contains("This method")) {
+            return excMember.getName();
         }else if(subject.contains("method_")){
             return commentContent.getSignaturesInComment().get(subject);
         }
@@ -217,6 +315,9 @@ public class FreeTextTranslator {
     }
 
 
+    // FIXME Not super sure we have this for. According to my best current understanding:
+    // FIXME [1] OPERATION TO CALL: no real subject and predicate, just a call to the method name. Simple search in code.
+    // FIXME [2] ACTION TO MATCH: likely a *classic* proposition that needs *classic* subject+pred matching.
     private TemporalMatch translateRawProtocol(DocumentedExecutable excMember,
                                                TemporalMatch temporalMatch) {
 
@@ -224,8 +325,16 @@ public class FreeTextTranslator {
         TemporalProtocol rawProtocol = temporalMatch.getRawProtocol();
 //    Set<CodeElement<?>> codeElements = extractMethodCodeElements(excMember, Configuration.RECEIVER);
         Set<CodeElement<?>> codeElements = JavaElementsCollector.collectIgnoringScope(excMember);
+        // Protocols do involve the doc. method often times, we want to have it in the list.
+        CodeElement<?> documentedMethod = JavaElementsCollector.getCodeElementFromRawMethod(excMember.getExecutable(), Configuration.RECEIVER);
+        codeElements.add(documentedMethod);
+
+        // Match first member of the protocol.
         Set<CodeElement<?>> firstMemberMatches = matcher.subjectMatch(rawProtocol.getFirstMember(), codeElements);
+
+        // Match second member of the protocol.
         Set<CodeElement<?>> secMemberMatches = matcher.subjectMatch(rawProtocol.getSecondMember(), codeElements);
+
         if (!firstMemberMatches.iterator().hasNext() || !secMemberMatches.iterator().hasNext()) {
             // TODO check if this is the best way to flag a failed match
 //      temporalMatch.setKindOfProtocol(TemporalMatch.KindOfProtocol.NONE);

@@ -8,7 +8,6 @@ import org.callmemaybe.translator.TemporalPropSeries;
 import org.callmemaybe.translator.TemporalProposition;
 import org.callmemaybe.translator.Verb;
 import org.callmemaybe.translator.Matcher;
-import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TempProtocolMatcher {
 
@@ -71,17 +69,17 @@ public class TempProtocolMatcher {
     public TemporalMatch findProtocolInComment(CommentContent commentContent, DocumentedExecutable excMember) {
 //        List<SemanticGraph> semanticGraphs = Parser.extractSemanticGraphs(commentContent, excMember);
         List<TemporalPropSeries> propositionSeries = Parser.parseTemporal(commentContent, excMember);
-        TemporalMatch temporalMatch = new TemporalMatch();
+        TemporalMatch temporalMatch = new TemporalMatch(propositionSeries);
 
         for (TemporalPropSeries p : propositionSeries) {
-            if(p.getPropositions().size() == 2) {
+            if(p.getTemporalPropositions().size() == 2) {
                 assessIfTemporalMatch(excMember, p, temporalMatch);
                 if (temporalMatch.isIndeedMatch()) {
                     temporalMatch.setRelations(p.getTemporalRelations());
                     // FIXME About to do something even uglier:
                     // FIXME Let's do the below in assessIfTemporal and probably even change the name.
-                    temporalMatch.setPropositionA(p.getPropositions().get(0));
-                    temporalMatch.setPropositionB(p.getPropositions().get(1));
+                    temporalMatch.setPropositionA(p.getTemporalPropositions().get(0));
+                    temporalMatch.setPropositionB(p.getTemporalPropositions().get(1));
                 }
             }
         }
@@ -123,7 +121,7 @@ public class TempProtocolMatcher {
         // First criterion: verbs such as "to call", "to invoke", and synonym related to our concepts
         // FIXME f- containsAll. Check one proposition at a time and set right kind.
         for(int i = 0; i < 2; i++){
-            TemporalProposition p = propSeries.getPropositions().get(i);
+            TemporalProposition p = propSeries.getTemporalPropositions().get(i);
             Set<String> propositionVerbs =
                     Arrays.stream(p.getPredicate()
                             .split(" ")).map(TempProtocolMatcher::getLemma)
@@ -135,6 +133,7 @@ public class TempProtocolMatcher {
             String propVerb;
             if(nonCopulaVerbsCopy.iterator().hasNext()) {
                 propVerb = nonCopulaVerbsCopy.iterator().next();
+                p.setVerbWord(propVerb);
             }else{
                 continue;
             }
@@ -148,13 +147,17 @@ public class TempProtocolMatcher {
                 // No verb related to calls/operations. Is it an action related to a specific method?
                 Matcher matcher = new Matcher();
                 Set<CodeElement<?>> possibleMethods = JavaElementsCollector.collect(excMember);
+                // TODO This thing here seems redundant w.r.t. the proposition translation we will do later.
+                // TODO But I want to keep separated the recognizing of a protocol and its translation.
+                // TODO Here I only check the verb relates to a possible action (method), then set if it so.
                 Set<CodeElement<?>> matchingSubjects = matcher.subjectMatch(propVerb, possibleMethods);
                 boolean isAction = matchingSubjects.iterator().hasNext();
                 if (isAction) {
-                    // FIXME Set the prop. A and B of temporalMatch here while looping them.
-                    // FIXME it's silly to pospone it outside and we lose important info (= the match of the action)
                     p.setKindOfProtocol(TemporalProposition.KindOfProtocol.ACTION_TO_MATCH);
-                    temporalMatch.setMember(i, matchingSubjects.iterator().next().toString());
+
+                    // FIXME OK but the later translation must be done right. There is a subj and a pred,
+                    // FIXME As we would have in Jdoctor!
+//                    temporalMatch.setMember(i, matchingSubjects.iterator().next().toString());
                 } else {
                     p.setKindOfProtocol(TemporalProposition.KindOfProtocol.NONE);
                 }
@@ -162,7 +165,7 @@ public class TempProtocolMatcher {
         }
         // TODO I expect all propositions to express a protocol, otherwise do not consider
         // TODO the comment a temporal match is this correct assumption always? Check
-        temporalMatch.setIndeedMatch(propSeries.getPropositions()
+        temporalMatch.setIndeedMatch(propSeries.getTemporalPropositions()
                         .stream()
                         .allMatch(x -> x.getKindOfProtocol()!=TemporalProposition.KindOfProtocol.NONE));
 

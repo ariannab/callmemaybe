@@ -339,11 +339,11 @@ public class Matcher {
    * @param method the {@code DocumentedExecutable} the predicate belongs to
    * @return the best matching code element according to the edit distance, null if none found
    */
-  private Match syntacticMatch(
-      String predicate,
-      Set<CodeElement<?>> codeElements,
-      DocumentedExecutable method,
-      String subject) {
+  Match syntacticMatch(
+          String predicate,
+          Set<CodeElement<?>> codeElements,
+          DocumentedExecutable method,
+          String subject) {
     List<CodeElement<?>> sortedMethodList;
     sortedMethodList = new ArrayList<>(filterMatchingCodeElements(predicate, codeElements));
 

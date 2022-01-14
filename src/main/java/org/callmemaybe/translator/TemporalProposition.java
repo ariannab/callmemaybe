@@ -9,6 +9,8 @@ public class TemporalProposition extends Proposition {
         NONE
     }
 
+    String verbWord;
+
     private KindOfProtocol kindOfProtocol;
 
     public TemporalProposition(Subject subject, String predicate) {
@@ -26,5 +28,13 @@ public class TemporalProposition extends Proposition {
 
     public void setKindOfProtocol(KindOfProtocol kindOfProtocol) {
         this.kindOfProtocol = kindOfProtocol;
+    }
+
+    public String getVerbWord() {
+        return verbWord;
+    }
+
+    public void setVerbWord(String verbWord) {
+        this.verbWord = verbWord;
     }
 }

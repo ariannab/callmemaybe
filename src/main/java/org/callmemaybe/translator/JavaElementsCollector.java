@@ -108,18 +108,28 @@ public class JavaElementsCollector {
       List<Executable> methods, String receiver) {
     List<CodeElement<?>> codeElements = new ArrayList<>();
     for (Executable executable : methods) {
-      if (executable instanceof Method) {
-        if (Modifier.isStatic(executable.getModifiers())) {
-          codeElements.add(new StaticMethodCodeElement(((Method) executable)));
-        } else {
-          // if (!documentedExecutable.isConstructor()) {
-          codeElements.add(new MethodCodeElement(receiver, ((Method) executable)));
-        }
-      } else if (executable instanceof Constructor) {
-        codeElements.add(new ConstructorCodeElement(receiver, ((Constructor) executable)));
-      }
+      codeElements.add(getCodeElementFromRawMethod(executable, receiver));
     }
     return codeElements;
+  }
+
+  @NotNull
+  public static CodeElement<?> getCodeElementFromRawMethod(
+          Executable executable, String receiver) {
+    CodeElement<?> codeElement = null;
+
+    if (executable instanceof Method) {
+      if (Modifier.isStatic(executable.getModifiers())) {
+        codeElement = new StaticMethodCodeElement(((Method) executable));
+      } else {
+        // if (!documentedExecutable.isConstructor()) {
+        codeElement = new MethodCodeElement(receiver, ((Method) executable));
+      }
+    } else if (executable instanceof Constructor) {
+      codeElement = new ConstructorCodeElement(receiver, ((Constructor) executable));
+    }
+
+    return codeElement;
   }
 
   // Exclude docExecutable.

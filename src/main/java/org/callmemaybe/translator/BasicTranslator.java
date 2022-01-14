@@ -203,11 +203,11 @@ public class BasicTranslator {
    *     to the next iteration (LOOP_CONTINUE), to stop (LOOP_RETURN) or go on executing the rest of
    *     the body (LOOP_OK)
    */
-  private static String findMatchingCodeElements(
-      Proposition p,
-      Set<CodeElement<?>> subjectMatches,
-      DocumentedExecutable method,
-      Set<CodeElement<?>> matchingCodeElements) {
+  static String findMatchingCodeElements(
+          Proposition p,
+          Set<CodeElement<?>> subjectMatches,
+          DocumentedExecutable method,
+          Set<CodeElement<?>> matchingCodeElements) {
     Matcher matcher = new Matcher();
     final String container = p.getSubject().getContainer();
     if (container.isEmpty()) {

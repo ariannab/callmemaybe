@@ -3,6 +3,7 @@ package org.callmemaybe.extractor;
 import org.callmemaybe.translator.CodeElement;
 import org.callmemaybe.translator.Proposition;
 import org.callmemaybe.translator.PropositionSeries;
+import org.callmemaybe.translator.TemporalPropSeries;
 import org.callmemaybe.translator.TemporalProposition;
 import org.callmemaybe.translator.TemporalProtocol;
 import org.callmemaybe.translator.TemporalRule;
@@ -15,6 +16,8 @@ public class TemporalMatch {
      * The underlying protocol with members and arrows.
      */
     private TemporalProtocol rawProtocol;
+
+    private List<TemporalPropSeries> temporalPropSeries;
 
     // FIXME why are they multiple? Fix needed in temp.prop.series
     private List<TemporalRule.TemporalRelation> relations;
@@ -30,6 +33,10 @@ public class TemporalMatch {
     private TemporalProposition propositionB;
 
     boolean isIndeedMatch;
+
+    public TemporalMatch(List<TemporalPropSeries> propositionSeries) {
+        this.temporalPropSeries = propositionSeries;
+    }
 
     public TemporalProposition getPropositionA() {
         return propositionA;
@@ -118,5 +125,13 @@ public class TemporalMatch {
 
     public void buildOracle() {
         this.oracle = rawProtocol.getFirstMember() + rawProtocol.getArrow() + rawProtocol.getSecondMember();
+    }
+
+    public List<TemporalPropSeries> getTemporalPropSeries() {
+        return temporalPropSeries;
+    }
+
+    public void setTemporalPropSeries(List<TemporalPropSeries> temporalPropSeries) {
+        this.temporalPropSeries = temporalPropSeries;
     }
 }

@@ -137,7 +137,7 @@ public class TemporalPropSeries {
      *
      * @return an unmodifiable list view of the propositions in this series
      */
-    public List<TemporalProposition> getPropositions() {
+    public List<TemporalProposition> getTemporalPropositions() {
         return Collections.unmodifiableList(propositions);
     }
 
