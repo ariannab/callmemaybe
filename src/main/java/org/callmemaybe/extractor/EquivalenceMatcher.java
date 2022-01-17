@@ -331,7 +331,7 @@ public class EquivalenceMatcher {
     return new EquivalentMatch(signaturesFound, equivalence, !equivalence, argumentsMap, negation);
   }
 
-  private static boolean signatureIsEqualMethod(String signatureFound) {
+  public static boolean signatureIsEqualMethod(String signatureFound) {
     // FIXME avoid involving the equals method in cross-oracles
     return signatureFound.contains(".equals(") || signatureFound.endsWith("#equals");
   }
@@ -345,7 +345,7 @@ public class EquivalenceMatcher {
             .find();
   }
 
-  private static List<String> extractArguments(Matcher methodMatch, int group) {
+  public static List<String> extractArguments(Matcher methodMatch, int group) {
     if (methodMatch.group(group) != null && !methodMatch.group(group).isEmpty()) {
       // the method takes arguments
       String[] args = methodMatch.group(group).split(",");
