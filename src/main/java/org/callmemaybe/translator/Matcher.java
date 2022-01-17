@@ -365,6 +365,11 @@ public class Matcher {
    * Search the best match between the {@code predicate} and the list of possibly matching sorted
    * {@code CodeElement}s. This is especially to find the best method match in case of {@code
    * MethodCodeElement}, by comparing the arguments needed.
+   * The original (e.g., Jdoctor's) implementation changed a little after realizing that, in the face
+   * of many good candidates with different numbers of args required, the candidates requiring exactly the
+   * same number of parameters was deemed as the best one. However, any match requiring a number <= (not ==)
+   * is equally good for all we know. This method to pick among equally valid candidates could still be improved
+   * with many heuristics indeed, for now it is what it is.
    *
    * @param method the {@code DocumentedExecutable} the predicate is referring to
    * @param sortedCodeElements sorted list of matching method {@code CodeElement}s
@@ -375,13 +380,13 @@ public class Matcher {
     Match match = null;
     CodeElement<?> firstCodeMatch = null;
     boolean foundArgMatch = false;
-    List<String> paramForMatch = new ArrayList<String>();
     List<String> otherMethodParams;
     String[] otherMethodArgs = null;
     String receiver = "";
     java.lang.reflect.Parameter[] myMethodArgs = method.getExecutable().getParameters();
 
     for (CodeElement<?> currentMatch : sortedCodeElements) {
+      List<String> paramForMatch = new ArrayList<>();
       if (currentMatch instanceof MethodCodeElement) {
         otherMethodArgs = ((MethodCodeElement) currentMatch).getArgs();
         receiver = ((MethodCodeElement) currentMatch).getReceiver();
@@ -396,41 +401,50 @@ public class Matcher {
         for (java.lang.reflect.Parameter myMethodParam : myMethodArgs) {
           Type myParamType = myMethodParam.getParameterizedType();
           if (otherMethodParams.contains(myParamType.getTypeName())
-              || isGenericType(myParamType.getTypeName(), otherMethodParams)
-              || isAssignableToAny(myParamType, otherMethodArgs)) {
+                  || isGenericType(myParamType.getTypeName(), otherMethodParams)
+                  || isAssignableToAny(myParamType, otherMethodArgs)) {
             paramForMatch.add("args[" + pcount + "]");
             if (!receiver.equals("args[" + pcount + "]")) {
               firstCodeMatch = currentMatch;
               foundArgMatch = true;
+              if(pcount <= otherMethodParams.size()) {
+                // We could fill all the matching method args with ours, let's assume we're good
+                break;
+              }
             }
           }
 
           pcount++;
         }
       }
-      if (foundArgMatch) {
+//      if (foundArgMatch) {
+//        break;
+//      }
+
+      if (foundArgMatch && paramForMatch.size() == otherMethodArgs.length) {
+        String exp = firstCodeMatch.getJavaExpression();
+        if (firstCodeMatch instanceof MethodCodeElement) {
+          match =
+                  new Match(
+                          exp.substring(0, exp.indexOf("(") + 1),
+                          ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                          firstCodeMatch);
+        } else {
+          match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
+        }
+        for (int j = 0; j < paramForMatch.size() - 1; j++) {
+          match.completeExpression(paramForMatch.get(j) + ",");
+        }
+        match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
+      } else if (!foundArgMatch && otherMethodArgs != null) {
+        // the method is supposed to take params but we haven't find a match: does it have to take
+        // special arguments such as null?
+        match = manageSpecialPatterns(predicate, receiver, sortedCodeElements, myMethodArgs);
+      }
+      if (match != null && foundArgMatch){
         break;
       }
-    }
-    if (foundArgMatch && paramForMatch.size() == otherMethodArgs.length) {
-      String exp = firstCodeMatch.getJavaExpression();
-      if (firstCodeMatch instanceof MethodCodeElement) {
-        match =
-            new Match(
-                exp.substring(0, exp.indexOf("(") + 1),
-                ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                firstCodeMatch);
-      } else {
-        match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
-      }
-      for (int j = 0; j < paramForMatch.size() - 1; j++) {
-        match.completeExpression(paramForMatch.get(j) + ",");
-      }
-      match.completeExpression(paramForMatch.get(paramForMatch.size() - 1) + ")");
-    } else if (!foundArgMatch && otherMethodArgs != null) {
-      // the method is supposed to take params but we haven't find a match: does it have to take
-      // special arguments such as null?
-      match = manageSpecialPatterns(predicate, receiver, sortedCodeElements, myMethodArgs);
+
     }
 
     if (match == null && !foundArgMatch) {
@@ -451,6 +465,7 @@ public class Matcher {
                 firstCodeMatch);
       }
     }
+
     return match;
   }
 

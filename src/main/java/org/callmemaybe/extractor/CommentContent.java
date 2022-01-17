@@ -61,8 +61,10 @@ public final class CommentContent {
     removeTagsNotContent(codePattern2, 1, 2);
     removeHTMLTags();
     decodeHTML();
-    // FIXME see if this is useful for real:
-//    manageSignaturesAsPlaceholders();
+    // The management of signatures was added after realizing parser difficulties
+    // with some kind of signatures (not always). This solution is about wrapping them in
+    // placeholders tagged as Nouns, just to be safe.
+    manageSignaturesAsPlaceholders();
     this.text = this.text.trim();
   }
 
