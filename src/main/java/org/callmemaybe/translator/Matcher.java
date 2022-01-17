@@ -19,6 +19,8 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.callmemaybe.extractor.DocSignatureParameters;
 import org.jetbrains.annotations.NotNull;
 import org.callmemaybe.conf.Configuration;
 import org.callmemaybe.extractor.DocumentedExecutable;
@@ -480,9 +482,10 @@ public class Matcher {
   }
 
   /**
-   * This is a revised version of {@code bestArgsTypeMatch} useful for now only for equivalences
+   * This is a revised version of {@code bestArgsTypeMatch} receiving an EquivalentMatch (i.e., Memo's).
+   * Basically, it receives already a signature to filled with args, and finds the right fill for it specifically.
    *
-   * @param methodSignature
+   * @param methodSignature the signature to be filled with correct args
    * @param equivalentMethod equivalent method to be matched
    * @param method executable the equivalentMethod is equivalent to
    * @param sortedCodeElements possible candidates for matching
@@ -493,23 +496,35 @@ public class Matcher {
       EquivalentMatch equivalentMethod,
       DocumentedExecutable method,
       List<CodeElement<?>> sortedCodeElements) {
-    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
-    ;
 
     Match match =
         matchAccordingToArgs(
-            methodSignature, equivalentMethod, method, sortedCodeElements, myMethodParamTypes);
+                methodSignature,
+                equivalentMethod.getDocSignatureParameters(),
+                method,
+                sortedCodeElements);
 
     return match;
   }
 
-  private Match matchAccordingToArgs(
+  /**
+   * The core of {@code reverseBestArgsTypeMatch}, the revised version of {@code bestArgsTypeMatch}.
+   * Basically, it receives already a signature to be filled with args, and finds the right fill for
+   * it specifically.
+   *
+   * @param methodSignature the signature to be filled with correct args
+   * @param signaturesParameters equivalent method to be matched
+   * @param method executable the equivalentMethod is equivalent to
+   * @param sortedCodeElements possible candidates for matching
+   * @return the match, may be null
+   */
+  public Match matchAccordingToArgs(
       String methodSignature,
-      EquivalentMatch equivalentMethod,
+      DocSignatureParameters signaturesParameters,
       DocumentedExecutable method,
-      List<CodeElement<?>> sortedCodeElements,
-      Parameter[] myMethodParamTypes) {
+      List<CodeElement<?>> sortedCodeElements) {
 
+    java.lang.reflect.Parameter[] myMethodParamTypes = method.getExecutable().getParameters();
     String[] currentMatchParamTypes;
     List<String> myParamTypes = new ArrayList<>();
     CodeElement<?> firstCodeMatch = null;
@@ -517,12 +532,12 @@ public class Matcher {
 
     for (Parameter arg : myMethodParamTypes) {
       if (arg.getType().isArray()) {
-        myParamTypes.add(convertArrayTipe(arg.getType()));
+        myParamTypes.add(extractArrayType(arg.getType()));
       } else {
         myParamTypes.add(arg.getType().getName());
       }
     }
-    List<String> eqArgs = equivalentMethod.getArguments().get(methodSignature);
+    List<String> signatureArguments = signaturesParameters.getArguments().get(methodSignature);
     List<String> docArgs =
         method
             .getParameters()
@@ -532,8 +547,8 @@ public class Matcher {
     List<Integer> rightIndexes = new ArrayList<>();
     Match match = null;
 
-    if (eqArgs != null) {
-      for (String eqArg : eqArgs) {
+    if (signatureArguments != null) {
+      for (String eqArg : signatureArguments) {
         // This answers the question:
         // Which param indexes do we have to match in the equivalent method, wrt the doc. method?
         // e.g., the 1st (index 0) param of the equivalent method could be the 3rd (index 2) of the
@@ -600,12 +615,12 @@ public class Matcher {
       } else continue;
 
       List<String> paramForMatch = new ArrayList<>();
-      List<String> actualArgList = equivalentMethod.getArguments().get(methodSignature);
+      List<String> actualArgList = signaturesParameters.getArguments().get(methodSignature);
       Map<Integer, String> constantParamsToIgnore =
-          equivalentMethod.getHardcodedParams().get(methodSignature);
+          signaturesParameters.getHardcodedParams().get(methodSignature);
       Map<Integer, String> codeElementsParams =
-          equivalentMethod.getStaticFinalParams().get(methodSignature);
-      Map<Integer, String> typeParams = equivalentMethod.getTypeParams().get(methodSignature);
+          signaturesParameters.getStaticFinalParams().get(methodSignature);
+      Map<Integer, String> typeParams = signaturesParameters.getTypeParams().get(methodSignature);
 
       if (currentMatchParamTypes != null
           && actualArgList != null
@@ -818,12 +833,26 @@ public class Matcher {
     return codeElementTokens[codeElementTokens.length - 1];
   }
 
-  private String convertArrayTipe(Class<?> type) {
+  private String extractArrayType(Class<?> type) {
+    // A few hints here: https://docs.oracle.com/javase/tutorial/reflect/special/arrayComponents.html
     String name = type.getName();
     String returnName = "";
     if (name.equals("[B")) {
       returnName = "byte[]";
+    } else if (name.equals("[J")) {
+      returnName = "long[]";
+    } else if (name.equals("[F")) {
+      returnName = "float[]";
+    } else if (name.equals("[D")) {
+      returnName = "double[]";
+    } else if (name.equals("[I")) {
+      returnName = "int[]";
+    } else if (name.equals("[S")) {
+      returnName = "short[]";
+    } else if (name.equals("[C")) {
+      returnName = "char[]";
     } else if (name.matches("\\[L.*;")) {
+      // type Class
       returnName = name.substring(2, (name.length() - 1)) + "[]";
     }
     return returnName;

@@ -8,6 +8,7 @@ import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Executable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -19,6 +20,7 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.callmemaybe.extractor.DocSignatureParameters;
 import org.callmemaybe.extractor.TempProtocolMatcher;
 import org.callmemaybe.extractor.TemporalMatch;
 import org.jetbrains.annotations.NotNull;
@@ -37,6 +39,7 @@ import org.callmemaybe.util.ComplianceError;
 import org.callmemaybe.util.Reflection;
 
 import static org.callmemaybe.translator.BasicTranslator.findMatchingCodeElements;
+import static org.callmemaybe.translator.JavaElementsCollector.getCodeElementsFromRawMethods;
 
 public class FreeTextTranslator {
 
@@ -200,19 +203,35 @@ public class FreeTextTranslator {
         }
 
         String subjNameToMatch="";
+        Matcher matcher = new Matcher();
 
         if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.METHOD_TO_CALL) {
             subjNameToMatch = replaceThisSubject(proposition.getSubject().getSubject(), commentContent, excMember);
             if(!subjNameToMatch.isEmpty()){
                 // Subject was the documented method itself: done with matching
-                // FIXME not sure, check, you may want to fill arguments for example: check MeMo's methods
-                temporalMatch.setMember(propositionLetter, subjNameToMatch);
-                return;
+                List<Executable> singleRawMethodsList = new ArrayList<>();
+                singleRawMethodsList.add(excMember.getExecutable());
+                List<CodeElement<?>> singleCandidateList = getCodeElementsFromRawMethods(singleRawMethodsList, Configuration.RECEIVER);
+                HashMap<String, String> singleSignatureMap = new HashMap<>();
+                singleSignatureMap.put(subjNameToMatch, Configuration.RECEIVER);
+                DocSignatureParameters docSignatureParams = new DocSignatureParameters(subjNameToMatch, excMember.getParameters());
+                docSignatureParams.doArgsFillingForSignatures(singleSignatureMap);
+                Match matchForDocMethod = matcher.matchAccordingToArgs(
+                        subjNameToMatch,
+                        docSignatureParams,
+                        excMember,
+                        singleCandidateList
+                        );
+                if(matchForDocMethod!=null) {
+                    // It should never be null here though, since it's the doc. method itself
+                    String result = matchForDocMethod.getBaseExpression();
+                    proposition.setTranslation(result);
+                    temporalMatch.setMember(propositionLetter, result);
+                }
             }
         } else if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.ACTION_TO_MATCH) {
             // A classic subject + predicate matching similar to Jdoctor's.
             subjNameToMatch = proposition.getSubject().getSubject();
-            Matcher matcher = new Matcher();
             Set<CodeElement<?>> allCodeElements = JavaElementsCollector.collect(excMember);
             // TODO Following code is borrowed from BasicTranslator. Check it's alright.
             Set<CodeElement<?>> matchingSubjs = matcher.subjectMatch(subjNameToMatch, allCodeElements);
@@ -305,9 +324,9 @@ public class FreeTextTranslator {
         // FIXME Probably we don't want to return nor the name nor the signature but a proper JavaExpression
         // FIXME From the code element.
         if(subject.contains("this call")) {
-            return excMember.getName();
+            return excMember.getSignature();
         }else if(subject.contains("This method")) {
-            return excMember.getName();
+            return excMember.getSignature();
         }else if(subject.contains("method_")){
             return commentContent.getSignaturesInComment().get(subject);
         }
@@ -827,7 +846,7 @@ public class FreeTextTranslator {
             String simpleMethodName,
             String className) {
         List<CodeElement<?>> allMethodsInClass =
-                JavaElementsCollector.getCodeElementsFromRawMethods(
+                getCodeElementsFromRawMethods(
                         JavaElementsCollector.collectRawMethods(matchedType, excMember),
                         matchedType.getCanonicalName());
         Set<CodeElement<?>> matchingCodeEelem = null;
@@ -1037,7 +1056,7 @@ public class FreeTextTranslator {
         List<Executable> rawMethods =
                 JavaElementsCollector.collectRawMethods(containingClass, excMember);
         collectedElements.addAll(
-                JavaElementsCollector.getCodeElementsFromRawMethods(rawMethods, receiver));
+                getCodeElementsFromRawMethods(rawMethods, receiver));
         return collectedElements;
     }
 
