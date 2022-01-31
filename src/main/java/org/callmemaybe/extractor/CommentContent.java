@@ -33,16 +33,19 @@ public final class CommentContent {
    */
   private String text;
 
+  private String originalText;
+
   private List<CodeSnippet> commentSnippets;
 
   /**
    * Builds a new CommentContent with the given {@code text}. Words marked with {@literal @code} and
    * {@literal <code></code>} in {@code text} are added to the map of words marked as code. Than,
-   * the text is cleaned from any tag.
+   * the text is cleaned from any ta g.
    *
    * @param text text of the comment.
    */
   public CommentContent(String text) {
+    this.originalText = text;
     this.text = text.replaceAll("\\s+", " ");
     // this.text = text.replaceAll(";", ".");
     this.wordsMarkedAsCode = new HashMap<>();
@@ -425,29 +428,27 @@ public final class CommentContent {
     // FIXME make this static final, reflect it in POSTagger too
     String basePlaceholder = "method_";
 
-    // FIXME what's the point of an index if we are never incrementing this
     int baseIndex = 0;
 
     this.signaturesInComment = new HashMap<>();
     String methodRegex =
             "(new )?(!)?(([a-z]\\w*)\\.)?([A-Z]\\w+[.#])?(\\w+(\\((.*?(?<!\\) ))\\))+)(\\)+)?\\.?";
     String partialMethodRegex = "(!)?([A-Z]\\w+)?[.#]\\w+";
-    Matcher signatureMatch = Pattern.compile(methodRegex).matcher(text);
 
-    boolean matchFound = signatureMatch.find();
-    if(matchFound){
-      // FIXME Base case, iterate over all matches while increasing index
-      this.signaturesInComment.put(basePlaceholder+baseIndex, signatureMatch.group(0));
-      this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder+baseIndex);
+    Matcher signatureMatch = Pattern.compile(methodRegex).matcher(originalText);
+    while (signatureMatch.find()) {
+      this.signaturesInComment.put(basePlaceholder + baseIndex, signatureMatch.group(0));
+      this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder + baseIndex);
+      // Iterate over all matches while increasing index
+      baseIndex++;
     }
-    else{
-      signatureMatch = Pattern.compile(partialMethodRegex).matcher(text);
-      boolean partial = signatureMatch.find();
-      if(partial){
-        this.signaturesInComment.put(basePlaceholder+baseIndex, signatureMatch.group(0));
-        this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder+baseIndex);
-      }
+    signatureMatch = Pattern.compile(partialMethodRegex).matcher(originalText);
+    while (signatureMatch.find()) {
+      this.signaturesInComment.put(basePlaceholder + baseIndex, signatureMatch.group(0));
+      this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder + baseIndex);
+      baseIndex++;
     }
+
   }
 
   public Map<String, String> getSignaturesInComment() {
@@ -461,11 +462,11 @@ public final class CommentContent {
 
     CommentContent comment = (CommentContent) o;
 
-    return text.equals(comment.text) && wordsMarkedAsCode.equals(comment.wordsMarkedAsCode);
+    return originalText.equals(comment.originalText) && wordsMarkedAsCode.equals(comment.wordsMarkedAsCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, wordsMarkedAsCode);
+    return Objects.hash(originalText, wordsMarkedAsCode);
   }
 }

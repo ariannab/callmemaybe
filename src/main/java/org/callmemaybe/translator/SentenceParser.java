@@ -179,11 +179,26 @@ public class SentenceParser {
       // Stores the subject and associated words, such as any modifiers that come before it.
       // Words (but the subject) appear in the list in the same order as they appear in the
       // sentence. Subject is always the last word in the list.
-      Subject subject = getSubject(subjectWord);
+      if(subjectIsDeveloper(subjectWord)){
+        Optional<IndexedWord> alternativeSubj = getACodeSubject(predicateWords);
+        if(alternativeSubj.isPresent()){
+          subjectWord = alternativeSubj.get();
+          predicateWords.remove(subjectWord);
+        }
+        else{
+          continue;
+        }
+      }
+//      Subject subject = getSubject(subjectWord);
+      Subject subject = getTemporalSubject(subjectWord);
+
       List<IndexedWord> subjectWords = subject.getSubjectWords();
       // Create a Proposition from the subject and predicate words.
+
       String predicateWordsAsString =
               predicateWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
+
+
       TemporalProposition proposition = new TemporalProposition(subject, predicateWordsAsString, negative);
 
 //      Optional<IndexedWord> verb = predicateWords.stream().filter(x -> x.indexedWord.matches("VB.*")).findFirst();
@@ -254,10 +269,10 @@ public class SentenceParser {
         TemporalProposition p1 = null, p2 = null;
 
         for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
-          if (entry.getKey().contains(tempRelGovernor)) {
+          if (p1== null && entry.getKey().contains(tempRelGovernor) && p1!=entry.getValue() && p2!=entry.getValue()) {
             p1 = entry.getValue();
           }
-          if (entry.getKey().contains(tempRelDependent)) {
+          if (p2==null && entry.getKey().contains(tempRelDependent) && p2!=entry.getValue() && p1!=entry.getValue()) {
             p2 = entry.getValue();
           }
           if (p1 != null && p2 != null) {
@@ -276,6 +291,15 @@ public class SentenceParser {
       }
 
     return propositionSeries;
+  }
+
+  private Optional<IndexedWord> getACodeSubject(List<IndexedWord> predicateWords) {
+    return predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
+  }
+
+  private boolean subjectIsDeveloper(IndexedWord subjectWord) {
+    // TODO This would apply also to: "the user", "a user", whatever.
+    return subjectWord.tag().equals("PRP") && subjectWord.word().equalsIgnoreCase("you");
   }
 
   private void collectPropSeriesVerbs(IndexedWord governor,
@@ -394,6 +418,7 @@ public class SentenceParser {
           operator = TemporalRule.TemporalRelation.BEFORE;
           break;
         case "after":
+        case "once":
           operator = TemporalRule.TemporalRelation.AFTER;
           break;
         default:
@@ -683,8 +708,8 @@ public class SentenceParser {
     conjunctionRelations = getRelationsFromGraph("conj:and", "conj:or", "conj:but");
     negationRelations = getRelationsFromGraph("neg");
     numModifierRelations = getRelationsFromGraph("nummod");
-    // TODO originally it was advcl only. Check if you truly want advmod.
-    temporalRelations = getTemporalRelationsFromGraph("advcl");
+    // TODO originally it was advcl only. But obliques do matter: advmod, nmod, obl?
+    temporalRelations = getTemporalRelationsFromGraph("advcl", "obl", "nmod");
   }
 
   /**

@@ -147,6 +147,7 @@ public class FreeTextTranslator {
         temporalMatch = temporalMatcher.findProtocolInComment(commentContent, excMember);
 
         if (temporalMatch.isIndeedMatch()) {
+            System.out.println("\n ++++ Finder found protocol in: " + excMember + "+++++ \n");
             if (temporalMatch.getMemberA() == null || temporalMatch.getMemberA().isEmpty()) {
                 translateMembers("A", temporalMatch, excMember, commentContent);
             }
@@ -233,7 +234,7 @@ public class FreeTextTranslator {
             } else {
                 // Not the doc. method: solve translation later
                 subjNameToMatch = replaceMethodNamePlaceholder(proposition.getSubject().getSubject(), commentContent);
-                if(!subjNameToMatch.isEmpty()) {
+                if(subjNameToMatch!=null && !subjNameToMatch.isEmpty()) {
                     // FIXME Not sure the following ~5 lines are needed:
                     Map<String, List<String>> argsMap = getArgumentsMap(subjNameToMatch);
                     DocSignatureParameters docSignatureParams = new DocSignatureParameters(argsMap);
@@ -241,7 +242,11 @@ public class FreeTextTranslator {
                     singleSignatureMap.put(subjNameToMatch, Configuration.RECEIVER);
                     docSignatureParams.doArgsFillingForSignatures(singleSignatureMap);
 
-                    String simpleMethodName = subjNameToMatch.substring(0, subjNameToMatch.indexOf("("));
+                    String simpleMethodName = subjNameToMatch;
+                    int argParenthesis = subjNameToMatch.indexOf("(");
+                    if(argParenthesis != -1) {
+                        simpleMethodName = subjNameToMatch.substring(0, argParenthesis);
+                    }
                     Set<CodeElement<?>> candidates = extractMatchingCodeElementFromType(excMember,
                             excMember.getDeclaringClass(),
                             simpleMethodName,
@@ -260,7 +265,7 @@ public class FreeTextTranslator {
         }
 //        if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.ACTION_TO_MATCH) {
 
-        if (subjNameToMatch.isEmpty()) {
+        if (subjNameToMatch==null || subjNameToMatch.isEmpty()) {
             subjNameToMatch = proposition.getSubject().getSubject();
         }
         Set<CodeElement<?>> allCodeElements = JavaElementsCollector.collect(excMember);
@@ -421,13 +426,8 @@ public class FreeTextTranslator {
     private String replaceThisSubject(String subject,
                                       CommentContent commentContent,
                                       DocumentedExecutable excMember) {
-        // TODO add more, "this method", cases, etch.
-
-        // FIXME Probably we don't want to return nor the name nor the signature but a proper JavaExpression
-        // FIXME From the code element.
-        if (subject.contains("this call")) {
-            return excMember.getSignature();
-        } else if (subject.contains("This method")) {
+        // FIXME Risky and naive but covers anything ranging from "this" to "this call" to "this method".
+        if (subject.contains("this") || subject.contains("This")) {
             return excMember.getSignature();
         }
         return "";
@@ -435,7 +435,11 @@ public class FreeTextTranslator {
 
     private String replaceMethodNamePlaceholder(String subject, CommentContent commentContent) {
         if (subject.contains("method_")) {
-            return commentContent.getSignaturesInComment().get(subject);
+            java.util.regex.Matcher matching = Pattern.compile("method_[0-9]").matcher(subject);
+            if(matching.find()) {
+                String theMethodPlaceholder = matching.group(0);
+                return commentContent.getSignaturesInComment().get(theMethodPlaceholder);
+            }
         }
         return "";
     }
@@ -1174,10 +1178,6 @@ public class FreeTextTranslator {
      * @return the extracted condition, if any
      */
     private String extractCondition(String text) {
-        if (text.contains("if extension is null")) {
-            System.out.println("DEBUG");
-        }
-
         java.util.regex.Matcher matchIf =
                 Pattern.compile("\\b" + "(?i)if" + "\\b", Pattern.CASE_INSENSITIVE).matcher(text);
         java.util.regex.Matcher matchWhen =

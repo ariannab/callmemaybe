@@ -547,7 +547,7 @@ public class Matcher {
     List<Integer> rightIndexes = new ArrayList<>();
     Match match = null;
 
-    if (signatureArguments != null) {
+    if (signatureArguments != null && !signatureArguments.isEmpty()) {
       for (String eqArg : signatureArguments) {
         // This answers the question:
         // Which param indexes do we have to match in the equivalent method, wrt the doc. method?
