@@ -18,6 +18,7 @@ import java.util.Queue;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +45,8 @@ public class SentenceParser {
       negationRelations,
       numModifierRelations,
       auxRelations,
-      temporalRelations;
+      temporalRelations,
+      depRelations;
   /** Logger for this class. */
   private static final Logger log = LoggerFactory.getLogger(SentenceParser.class);
 
@@ -159,7 +161,6 @@ public class SentenceParser {
       return propositionSeries;
     }
 
-
     Map<List<IndexedWord>, TemporalProposition> propositionMap = new LinkedHashMap<>();
 
     // Building propositions following the classic subj/pred schema:
@@ -180,14 +181,17 @@ public class SentenceParser {
       // Words (but the subject) appear in the list in the same order as they appear in the
       // sentence. Subject is always the last word in the list.
       if(subjectIsDeveloper(subjectWord)){
-        Optional<IndexedWord> alternativeSubj = getACodeSubject(predicateWords);
-        if(alternativeSubj.isPresent()){
-          subjectWord = alternativeSubj.get();
-          predicateWords.remove(subjectWord);
+        Pair<IndexedWord, List<IndexedWord>> alternativeSubj = getACodeSubject(predicateWords);
+        if(alternativeSubj != null){
+          subjectWord = alternativeSubj.getKey();
+          predicateWords = alternativeSubj.getValue();
+          for(IndexedWord pred : predicateWords){
+            collectPropSeriesVerbs(pred, propositionSeries);
+          }
         }
-        else{
-          continue;
-        }
+//        else{
+//          continue;
+//        }
       }
 //      Subject subject = getSubject(subjectWord);
       Subject subject = getTemporalSubject(subjectWord);
@@ -293,8 +297,35 @@ public class SentenceParser {
     return propositionSeries;
   }
 
-  private Optional<IndexedWord> getACodeSubject(List<IndexedWord> predicateWords) {
-    return predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
+  private Pair<IndexedWord, List<IndexedWord>> getACodeSubject(List<IndexedWord> predicateWords) {
+    Optional<IndexedWord> methodReady = predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
+    if(methodReady.isPresent()){
+      predicateWords.remove(methodReady.get());
+      return new Pair<>(methodReady.get(), predicateWords);
+    }
+
+    IndexedWord methodFound = null;
+    if(!complementRelations.isEmpty()) {
+      // Direct object becomes subject of temporal proposition.
+      for (SemanticGraphEdge complementRel : complementRelations) {
+        if (predicateWords.contains(complementRel.getGovernor())) {
+          IndexedWord somePred = complementRel.getDependent();
+          Optional<SemanticGraphEdge> winningEdge = complementRelations.stream()
+                  .filter(x -> x.getGovernor().equals(somePred) &&
+                  x.getDependent().word().contains("method_"))
+                  .findFirst();
+
+          if(winningEdge.isPresent()){
+            methodFound = winningEdge.get().getDependent();
+            // Clear and update correct predicate.
+//            predicateWords = new ArrayList<>();
+            predicateWords.add(winningEdge.get().getGovernor());
+            return new Pair<>(methodFound, predicateWords);
+          }
+        }
+      }
+    }
+    return null;
   }
 
   private boolean subjectIsDeveloper(IndexedWord subjectWord) {
@@ -710,6 +741,7 @@ public class SentenceParser {
     numModifierRelations = getRelationsFromGraph("nummod");
     // TODO originally it was advcl only. But obliques do matter: advmod, nmod, obl?
     temporalRelations = getTemporalRelationsFromGraph("advcl", "obl", "nmod");
+    depRelations = getRelationsFromGraph("dep");
   }
 
   /**

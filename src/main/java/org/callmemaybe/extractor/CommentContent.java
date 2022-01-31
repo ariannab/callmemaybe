@@ -439,6 +439,8 @@ public final class CommentContent {
     while (signatureMatch.find()) {
       this.signaturesInComment.put(basePlaceholder + baseIndex, signatureMatch.group(0));
       this.text = this.text.replaceAll(Pattern.quote(signatureMatch.group(0)), basePlaceholder + baseIndex);
+      // FIXME ugly trick
+      this.text = this.text.replaceAll("#" + basePlaceholder + baseIndex, basePlaceholder + baseIndex);
       // Iterate over all matches while increasing index
       baseIndex++;
     }

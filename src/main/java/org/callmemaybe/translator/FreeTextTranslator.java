@@ -209,6 +209,10 @@ public class FreeTextTranslator {
 
         if (proposition.getKindOfProtocol() == TemporalProposition.KindOfProtocol.METHOD_TO_CALL) {
             subjNameToMatch = replaceThisSubject(proposition.getSubject().getSubject(), commentContent, excMember);
+            if(subjNameToMatch.isEmpty()){
+                // Maybe a less direct ref. to doc. method
+                subjNameToMatch = replacePlaceholderWithDocMethod(proposition.getSubject().getSubject(), commentContent, excMember);
+            }
             if (!subjNameToMatch.isEmpty()) {
                 // Subject was the documented method itself: done with matching
                 List<Executable> singleRawMethodsList = new ArrayList<>();
@@ -232,7 +236,7 @@ public class FreeTextTranslator {
                     return;
                 }
             } else {
-                // Not the doc. method: solve translation later
+                // Not a direct reference to the doc. method: solve translation later
                 subjNameToMatch = replaceMethodNamePlaceholder(proposition.getSubject().getSubject(), commentContent);
                 if(subjNameToMatch!=null && !subjNameToMatch.isEmpty()) {
                     // FIXME Not sure the following ~5 lines are needed:
@@ -359,6 +363,24 @@ public class FreeTextTranslator {
 
         }
 //        }
+    }
+
+    private String replacePlaceholderWithDocMethod(String subject,
+                                                   CommentContent commentContent,
+                                                   DocumentedExecutable excMember) {
+        String subjNameToMatch = replaceMethodNamePlaceholder(subject, commentContent);
+        String simpleNameToMatch = subjNameToMatch;
+
+        if(subjNameToMatch.contains("(")) {
+            simpleNameToMatch = subjNameToMatch.substring(0, subjNameToMatch.indexOf("("));
+        }
+
+        String docSignature = excMember.getSignature();
+        String docSimpleName = docSignature.substring(0, docSignature.indexOf("("));
+        if (simpleNameToMatch.equals(docSimpleName)) {
+            return excMember.getSignature();
+        }
+        return "";
     }
 
     private static Map<String, List<String>> getArgumentsMap(String signature) {

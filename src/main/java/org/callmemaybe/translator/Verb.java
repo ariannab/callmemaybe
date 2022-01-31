@@ -2,6 +2,8 @@ package org.callmemaybe.translator;
 
 import edu.stanford.nlp.ling.IndexedWord;
 
+import java.util.Objects;
+
 public class Verb{
 
     public enum GrammaticalKind {
@@ -28,7 +30,20 @@ public class Verb{
         return kindOfVerb;
     }
 
-//    /**
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Verb verb = (Verb) o;
+        return Objects.equals(word, verb.word) && kindOfVerb == verb.kindOfVerb;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(word, kindOfVerb);
+    }
+
+    //    /**
 //     * Given a word text, lemmatize it and then stem it.
 //     *
 //     * @return the result of lemmatization+stemmating
