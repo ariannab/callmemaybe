@@ -41,6 +41,7 @@ public class TempProtocolMatcher {
         this.goldenSet.add("function");
         this.goldenSet.add("invoke");
         this.goldenSet.add("use");
+        this.goldenSet.add("return");
     }
 
     private enum ProtocolConcepts {
@@ -146,29 +147,39 @@ public class TempProtocolMatcher {
                 p.setKindOfProtocol(TemporalProposition.KindOfProtocol.METHOD_TO_CALL);
             } else {
                 // No verb related to calls/operations. Is it an action related to a specific method?
-                Matcher matcher = new Matcher();
-                Set<CodeElement<?>> possibleMethods = JavaElementsCollector.collect(excMember);
-                // TODO This thing here seems redundant w.r.t. the proposition translation we will do later.
-                // TODO But I want to keep separated the recognizing of a protocol and its translation.
-                // TODO Here I only check the verb relates to a possible action (method), then set if it so.
-                Set<CodeElement<?>> matchingSubjects = matcher.subjectMatch(propVerb, possibleMethods);
-                boolean isAction = matchingSubjects.iterator().hasNext();
-                if (isAction) {
-                    p.setKindOfProtocol(TemporalProposition.KindOfProtocol.ACTION_TO_MATCH);
+                // TODO [Check] Before, we were trying to make a pre-assessment before declaring if a
+                // TODO proposition was expressing an action to match. But since a) it's already not so
+                // TODO common that we end up here (the proposition must be well-formed grammtically already)
+                // TODO and b) that the pre-assessment was flawed and excluding potential good actions,
+                // TODO let's b brave and just se this may be an action to match (will be attempted later
+                // TODO and if it's not it will abort anyway). Commented-out code after this line was it.
+                p.setKindOfProtocol(TemporalProposition.KindOfProtocol.ACTION_TO_MATCH);
 
-                    // FIXME OK but the later translation must be done right. There is a subj and a pred,
-                    // FIXME As we would have in Jdoctor!
-//                    temporalMatch.setMember(i, matchingSubjects.iterator().next().toString());
-                } else {
-                    p.setKindOfProtocol(TemporalProposition.KindOfProtocol.NONE);
-                }
+//                Matcher matcher = new Matcher();
+//                Set<CodeElement<?>> possibleMethods = JavaElementsCollector.collect(excMember);
+//                // TODO This thing here seems redundant w.r.t. the proposition translation we will do later.
+//                // TODO But I want to keep separated the recognizing of a protocol and its translation.
+//                // TODO Here I only check the verb relates to a possible action (method), then set if it so.
+//                Set<CodeElement<?>> matchingSubjects = matcher.subjectMatch(propVerb, possibleMethods);
+//                boolean isAction = matchingSubjects.iterator().hasNext();
+//                if (isAction) {
+//                    p.setKindOfProtocol(TemporalProposition.KindOfProtocol.ACTION_TO_MATCH);
+//
+//                    // FIXME OK but the later translation must be done right. There is a subj and a pred,
+//                    // FIXME As we would have in Jdoctor!
+////                    temporalMatch.setMember(i, matchingSubjects.iterator().next().toString());
+//                } else {
+//                    p.setKindOfProtocol(TemporalProposition.KindOfProtocol.NONE);
+//                }
             }
         }
         // TODO I expect all propositions to express a protocol, otherwise do not consider
         // TODO the comment a temporal match is this correct assumption always? Check
-        temporalMatch.setIndeedMatch(propSeries.getTemporalPropositions()
-                        .stream()
-                        .allMatch(x -> x.getKindOfProtocol()!=TemporalProposition.KindOfProtocol.NONE));
+        // FIXME Useless if we do not declare it "NONE" ever here above.
+//        temporalMatch.setIndeedMatch(propSeries.getTemporalPropositions()
+//                        .stream()
+//                        .allMatch(x -> x.getKindOfProtocol()!=TemporalProposition.KindOfProtocol.NONE));
+        temporalMatch.setIndeedMatch(true);
 
     }
 

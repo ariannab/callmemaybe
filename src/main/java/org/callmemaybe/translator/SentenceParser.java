@@ -167,6 +167,7 @@ public class SentenceParser {
     for (SemanticGraphEdge subjectRelation : subjectRelations) {
       // Get the words that make up the predicate.
       List<IndexedWord> predicateWords = getPredicateWords(subjectRelation.getGovernor());
+      addTemporalPredicates(subjectRelation.getGovernor(), predicateWords);
       collectPropSeriesVerbs(subjectRelation.getGovernor(), propositionSeries);
       if (predicateWords.isEmpty()) {
         // Skip creating a Proposition if no predicate could be identified.
@@ -297,6 +298,24 @@ public class SentenceParser {
     return propositionSeries;
   }
 
+  private List<IndexedWord> addTemporalPredicates(IndexedWord governor,
+                                                  List<IndexedWord> predicateWords) {
+
+    Optional<SemanticGraphEdge> tempEdge =
+            temporalRelations.stream().filter(e -> e.getDependent().equals(governor)).findFirst();
+    if (!tempEdge.isPresent()) {
+      return predicateWords;
+    }
+
+    if(!predicateWords.contains(tempEdge.get().getDependent()) &&
+            !predicateWords.contains(tempEdge.get().getGovernor())) {
+      IndexedWord aux = tempEdge.get().getDependent();
+      predicateWords.add(aux);
+//    predicateWords.add(governor);
+    }
+    return predicateWords;
+  }
+
   private Pair<IndexedWord, List<IndexedWord>> getACodeSubject(List<IndexedWord> predicateWords) {
     Optional<IndexedWord> methodReady = predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
     if(methodReady.isPresent()){
@@ -384,6 +403,14 @@ public class SentenceParser {
       propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.PASSIVE));
     }
 
+    // Verbs in temporal rel.
+    Optional<SemanticGraphEdge> tempEdge =
+            temporalRelations.stream().filter(e -> e.getDependent().equals(governor)).findFirst();
+    if (tempEdge.isPresent() && governor.tag().contains("VB")) {
+//      IndexedWord aux = auxEdge.get().getDependent();
+//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
+      propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.TEMP));
+    }
   }
 
 
@@ -740,7 +767,7 @@ public class SentenceParser {
     negationRelations = getRelationsFromGraph("neg");
     numModifierRelations = getRelationsFromGraph("nummod");
     // TODO originally it was advcl only. But obliques do matter: advmod, nmod, obl?
-    temporalRelations = getTemporalRelationsFromGraph("advcl", "obl", "nmod");
+    temporalRelations = getTemporalRelationsFromGraph("advcl", "obl", "nmod", "amod", "tmod");
     depRelations = getRelationsFromGraph("dep");
   }
 

@@ -11,7 +11,8 @@ public class Verb{
         PASSIVE,
         AUX,
         NON_COPULA,
-        CONJUNCTION
+        CONJUNCTION,
+        TEMP
     }
 
     IndexedWord word;
