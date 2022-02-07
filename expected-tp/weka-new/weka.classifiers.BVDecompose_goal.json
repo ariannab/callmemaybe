@@ -1,0 +1,704 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this object",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -c <class index> The index of the class attribute. (default last)  -t <name of arff file> The name of the arff file used for the decomposition.  -T <training pool size> The number of instances placed in the training pool. The remainder will be used for testing. (default 100)  -s <seed> The random number seed used.  -x <num> The number of training repetitions used. (default 50)  -D Turn on debugging output.  -W <classifier class name> Full class name of the learner used in the decomposition. eg: wekamethod_0method_1method_2  Options specific to learner wekamethod_0method_4method_5:   -D If set, classifier is run in debug mode and may output additional info to the console Options after -- are passed to the designated sub-learner.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the CheckClassifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTrainPoolSize()",
+    "name": "getTrainPoolSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTrainPoolSize()",
+      "comment": "Get the number of instances in the training pool.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTrainPoolSize(int numTrain)",
+    "name": "setTrainPoolSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numTrain"
+      }
+    ],
+    "protocol": {
+      "member": "setTrainPoolSize(int numTrain)",
+      "comment": "Set the number of instances in the training pool.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassifier(weka.classifiers.Classifier newClassifier)",
+    "name": "setClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "newClassifier"
+      }
+    ],
+    "protocol": {
+      "member": "setClassifier(weka.classifiers.Classifier newClassifier)",
+      "comment": "Set the classifiers being analysed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassifier()",
+    "name": "getClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier",
+      "name": "weka.classifiers.Classifier",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getClassifier()",
+      "comment": "Gets the name of the classifier being analysed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDebug(boolean debug)",
+    "name": "setDebug",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "debug"
+      }
+    ],
+    "protocol": {
+      "member": "setDebug(boolean debug)",
+      "comment": "Sets debugging mode",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDebug()",
+    "name": "getDebug",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDebug()",
+      "comment": "Gets whether debugging is turned on",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSeed(int seed)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "seed"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(int seed)",
+      "comment": "Sets the random number seed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSeed()",
+    "name": "getSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSeed()",
+      "comment": "Gets the random number seed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTrainIterations(int trainIterations)",
+    "name": "setTrainIterations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "trainIterations"
+      }
+    ],
+    "protocol": {
+      "member": "setTrainIterations(int trainIterations)",
+      "comment": "Sets the maximum number of boost iterations",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTrainIterations()",
+    "name": "getTrainIterations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTrainIterations()",
+      "comment": "Gets the maximum number of boost iterations",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDataFileName(java.lang.String dataFileName)",
+    "name": "setDataFileName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "dataFileName"
+      }
+    ],
+    "protocol": {
+      "member": "setDataFileName(java.lang.String dataFileName)",
+      "comment": "Sets the name of the data file used for the decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDataFileName()",
+    "name": "getDataFileName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDataFileName()",
+      "comment": "Get the name of the data file used for the decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassIndex()",
+    "name": "getClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getClassIndex()",
+      "comment": "Get the index (starting from 1) of the attribute used as the class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setClassIndex(int classIndex)",
+    "name": "setClassIndex",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "setClassIndex(int classIndex)",
+      "comment": "Sets index of attribute to discretize on",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBias()",
+    "name": "getBias",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBias()",
+      "comment": "Get the calculated bias squared",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getVariance()",
+    "name": "getVariance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getVariance()",
+      "comment": "Get the calculated variance",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSigma()",
+    "name": "getSigma",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSigma()",
+      "comment": "Get the calculated sigma squared",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getError()",
+    "name": "getError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getError()",
+      "comment": "Get the calculated error rate",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decompose()",
+    "name": "decompose",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "decompose()",
+      "comment": "Carry out the bias-variance decomposition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns description of the bias-variance decomposition results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.BVDecompose",
+      "name": "BVDecompose",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.BVDecompose",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Test method for this class",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

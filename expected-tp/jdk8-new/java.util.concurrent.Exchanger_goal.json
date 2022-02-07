@@ -1,0 +1,100 @@
+[
+  {
+    "signature": "java.util.concurrent.Exchanger()",
+    "name": "java.util.concurrent.Exchanger",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Exchanger",
+      "name": "Exchanger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Exchanger",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.Exchanger()",
+      "comment": "Creates a new Exchanger.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exchange(V x)",
+    "name": "exchange",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Exchanger",
+      "name": "Exchanger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Exchanger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "exchange(V x)",
+      "comment": "Waits for another thread to arrive at this exchange point (unless the current thread is method_0 interrupted), and then transfers the given object to it, receiving its object in return. If another thread is already waiting at the exchange point then it is resumed for thread scheduling purposes and receives the object passed in by the current thread. The current thread returns immediately, receiving the object passed to the exchange by that other thread. If no other thread is already waiting at the exchange then the current thread is disabled for thread scheduling purposes and lies dormant until one of two things happens:  <li>Some other thread enters the exchange; or <li>Some other thread method_0 interrupts the current thread.  If the current thread:  <li>has its interrupted status set on entry to this method; or <li>is method_0 interrupted while waiting for the exchange,  then InterruptedException is thrown and the current thread's interrupted status is cleared.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exchange(V x, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "exchange",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Exchanger",
+      "name": "Exchanger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Exchanger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "exchange(V x, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Waits for another thread to arrive at this exchange point (unless the current thread is method_0 interrupted or the specified waiting time elapses), and then transfers the given object to it, receiving its object in return. If another thread is already waiting at the exchange point then it is resumed for thread scheduling purposes and receives the object passed in by the current thread. The current thread returns immediately, receiving the object passed to the exchange by that other thread. If no other thread is already waiting at the exchange then the current thread is disabled for thread scheduling purposes and lies dormant until one of three things happens:  <li>Some other thread enters the exchange; or <li>Some other thread method_0 interrupts the current thread; or <li>The specified waiting time elapses.  If the current thread:  <li>has its interrupted status set on entry to this method; or <li>is method_0 interrupted while waiting for the exchange,  then InterruptedException is thrown and the current thread's interrupted status is cleared. If the specified waiting time elapses then TimeoutException is thrown. If the time is less than or equal to zero, the method will not wait at all.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

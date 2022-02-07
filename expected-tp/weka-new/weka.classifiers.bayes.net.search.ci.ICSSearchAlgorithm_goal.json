@@ -1,0 +1,571 @@
+[
+  {
+    "signature": "name(int iAttribute)",
+    "name": "name",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttribute"
+      }
+    ],
+    "protocol": {
+      "member": "name(int iAttribute)",
+      "comment": "returns the name of the attribute with the given index",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxn()",
+    "name": "maxn",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxn()",
+      "comment": "returns the number of attributes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMaxCardinality(int nMaxCardinality)",
+    "name": "setMaxCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nMaxCardinality"
+      }
+    ],
+    "protocol": {
+      "member": "setMaxCardinality(int nMaxCardinality)",
+      "comment": "sets the cardinality",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxCardinality()",
+    "name": "getMaxCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMaxCardinality()",
+      "comment": "returns the max cardinality",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "Search for Bayes network structure using ICS algorithm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcDependencyGraph(boolean[][] edges, weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet[][] sepsets)",
+    "name": "calcDependencyGraph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "edges"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Lweka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet;",
+          "name": "SeparationSet[][]",
+          "isArray": true
+        },
+        "name": "sepsets"
+      }
+    ],
+    "protocol": {
+      "member": "calcDependencyGraph(boolean[][] edges, weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet[][] sepsets)",
+      "comment": "CalcDependencyGraph determines the skeleton of the BayesNetwork by starting with a complete graph and removing edges (a--b) if it can find a set Z such that a and b conditionally independent given Z. The set Z is found by trying all possible subsets of nodes adjacent to a and b, first of size 0, then of size 1, etc. up to size m_nMaxCardinality",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "existsSepSet(int iNode1, int iNode2, int nCardinality, boolean[][] edges)",
+    "name": "existsSepSet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet",
+      "name": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode2"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCardinality"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "edges"
+      }
+    ],
+    "protocol": {
+      "member": "existsSepSet(int iNode1, int iNode2, int nCardinality, boolean[][] edges)",
+      "comment": "ExistsSepSet tests if a separating set Z of node a and b exists of given cardiniality exists. The set Z is found by trying all possible subsets of nodes adjacent to both a and b of the requested cardinality.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next(int x, int iNode1, int iNode2, boolean[][] edges)",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode2"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "edges"
+      }
+    ],
+    "protocol": {
+      "member": "next(int x, int iNode1, int iNode2, boolean[][] edges)",
+      "comment": "determine index of node that makes next candidate separating set adjacent to iNode1 and iNode2, but not iNode2 itself",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcVeeNodes(boolean[][] edges, boolean[][] arrows, weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet[][] sepsets)",
+    "name": "calcVeeNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "edges"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "arrows"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Lweka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet;",
+          "name": "SeparationSet[][]",
+          "isArray": true
+        },
+        "name": "sepsets"
+      }
+    ],
+    "protocol": {
+      "member": "calcVeeNodes(boolean[][] edges, boolean[][] arrows, weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm$SeparationSet[][] sepsets)",
+      "comment": "CalcVeeNodes tries to find V-nodes, imethod_0. nodes a,b,c such that a->c<-b and a-/-b. These nodes are identified by finding nodes a,b,c in the skeleton such that a--c, c--b and a-/-b and furthermore c is not in the set Z that separates a and b",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcArcDirections(boolean[][] edges, boolean[][] arrows)",
+    "name": "calcArcDirections",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "edges"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "arrows"
+      }
+    ],
+    "protocol": {
+      "member": "calcArcDirections(boolean[][] edges, boolean[][] arrows)",
+      "comment": "CalcArcDirections assigns directions to edges that remain after V-nodes have been identified. The arcs are directed using the following rules: Rule 1: i->j--k & i-/-k => j->k Rule 2: i->j->k & i--k => i->k Rule 3 m /|\\ i | k => m->j i->j<-k \\|/ j Rule 4 m / \\ i---k => i->m & k->m i->j \\ / j Rule 5: if no edges are directed then take a random one (first we can find)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -cardinality <num> When determining whether an edge exists a search is performed for a set Z that separates the nodes. MaxCardinality determines the maximum size of the set Z. This greatly influences the length of the search. (default 2)   -mbc Applies a Markov Blanket correction to the network structure, after a network structure is learned. This ensures that all nodes in the network are part of the Markov blanket of the classifier node.   -S [BAYES|MDL|ENTROPY|AIC|CROSS_CLASSIC|CROSS_BAYES] Score type (BAYES, BDeu, MDL, ENTROPY and AIC)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxCardinalityTipText()",
+    "name": "maxCardinalityTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxCardinalityTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+      "name": "ICSSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.ci.ICSSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "for testing the class",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

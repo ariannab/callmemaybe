@@ -1,0 +1,105 @@
+[
+  {
+    "signature": "toSummaryString()",
+    "name": "toSummaryString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.StandardEvaluationMetric",
+      "name": "StandardEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.StandardEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toSummaryString()",
+      "comment": "Return a formatted string (suitable for displaying in console or GUI output) containing all the statistics that this metric computes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatsForClassifier(double[] predictedDistribution, weka.core.Instance instance)",
+    "name": "updateStatsForClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.StandardEvaluationMetric",
+      "name": "StandardEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.StandardEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "predictedDistribution"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForClassifier(double[] predictedDistribution, weka.core.Instance instance)",
+      "comment": "Updates the statistics about a classifiers performance for the current test instance. Gets called when the class is nominal. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatsForPredictor(double predictedValue, weka.core.Instance instance)",
+    "name": "updateStatsForPredictor",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.StandardEvaluationMetric",
+      "name": "StandardEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.StandardEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "predictedValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForPredictor(double predictedValue, weka.core.Instance instance)",
+      "comment": "Updates the statistics about a predictors performance for the current test instance. Gets called when the class is numeric. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

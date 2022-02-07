@@ -1,0 +1,466 @@
+[
+  {
+    "signature": "x(long d, long m, long over)",
+    "name": "x",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "d"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "over"
+      }
+    ],
+    "protocol": {
+      "member": "x(long d, long m, long over)",
+      "comment": "Scale d by m, checking for overflow. This has a short name to make above code more readable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convert(long sourceDuration, java.util.concurrent.TimeUnit sourceUnit)",
+    "name": "convert",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "sourceDuration"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "sourceUnit"
+      }
+    ],
+    "protocol": {
+      "member": "convert(long sourceDuration, java.util.concurrent.TimeUnit sourceUnit)",
+      "comment": "Converts the given time duration in the given unit to this unit. Conversions from finer to coarser granularities truncate, so lose precision. For example, converting 999 milliseconds to seconds results in 0. Conversions from coarser to finer granularities with arguments that would numerically overflow saturate to method_1 if negative or method_2 if positive. For example, to convert 10 minutes to milliseconds, use: Tmethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toNanos(long duration)",
+    "name": "toNanos",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toNanos(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMicros(long duration)",
+    "name": "toMicros",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toMicros(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMillis(long duration)",
+    "name": "toMillis",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toMillis(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSeconds(long duration)",
+    "name": "toSeconds",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toSeconds(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMinutes(long duration)",
+    "name": "toMinutes",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toMinutes(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toHours(long duration)",
+    "name": "toHours",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toHours(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toDays(long duration)",
+    "name": "toDays",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "duration"
+      }
+    ],
+    "protocol": {
+      "member": "toDays(long duration)",
+      "comment": "Equivalent to method_0 method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "excessNanos(long d, long m)",
+    "name": "excessNanos",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "d"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "excessNanos(long d, long m)",
+      "comment": "Utility to compute the excess-nanosecond argument to wait, sleep, join.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "timedWait(java.lang.Object obj, long timeout)",
+    "name": "timedWait",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      }
+    ],
+    "protocol": {
+      "member": "timedWait(java.lang.Object obj, long timeout)",
+      "comment": "Performs a timed method_0 method_4 using this time unit. This is a convenience method that converts timeout arguments into the form required by the method_4 method. For example, you could implement a blocking poll method (see method_6 method_7) using:  public synchronized Object method_1 throws InterruptedException { while (empty) { method_2; ...  }}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "timedJoin(java.lang.Thread thread, long timeout)",
+    "name": "timedJoin",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Thread",
+          "name": "Thread",
+          "isArray": false
+        },
+        "name": "thread"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      }
+    ],
+    "protocol": {
+      "member": "timedJoin(java.lang.Thread thread, long timeout)",
+      "comment": "Performs a timed method_0 method_2 using this time unit. This is a convenience method that converts time arguments into the form required by the method_2 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sleep(long timeout)",
+    "name": "sleep",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.TimeUnit",
+      "name": "TimeUnit",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.TimeUnit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      }
+    ],
+    "protocol": {
+      "member": "sleep(long timeout)",
+      "comment": "Performs a method_0 method_2 using this time unit. This is a convenience method that converts time arguments into the form required by the method_2 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "signature": "java.util.concurrent.CountedCompleter(java.util.concurrent.CountedCompleter<?> completer, int initialPendingCount)",
+    "name": "java.util.concurrent.CountedCompleter",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CountedCompleter",
+          "name": "CountedCompleter",
+          "isArray": false
+        },
+        "name": "completer"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialPendingCount"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.CountedCompleter(java.util.concurrent.CountedCompleter<?> completer, int initialPendingCount)",
+      "comment": "Creates a new CountedCompleter with the given completer and initial pending count.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.CountedCompleter(java.util.concurrent.CountedCompleter<?> completer)",
+    "name": "java.util.concurrent.CountedCompleter",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CountedCompleter",
+          "name": "CountedCompleter",
+          "isArray": false
+        },
+        "name": "completer"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.CountedCompleter(java.util.concurrent.CountedCompleter<?> completer)",
+      "comment": "Creates a new CountedCompleter with the given completer and an initial pending count of zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.CountedCompleter()",
+    "name": "java.util.concurrent.CountedCompleter",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.CountedCompleter()",
+      "comment": "Creates a new CountedCompleter with no completer and an initial pending count of zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute()",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "compute()",
+      "comment": "The main computation performed by this task.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onCompletion(java.util.concurrent.CountedCompleter<?> caller)",
+    "name": "onCompletion",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CountedCompleter",
+          "name": "CountedCompleter",
+          "isArray": false
+        },
+        "name": "caller"
+      }
+    ],
+    "protocol": {
+      "member": "onCompletion(java.util.concurrent.CountedCompleter<?> caller)",
+      "comment": "Performs an action when method method_0 is invoked and the pending count is zero, or when the unconditional method method_1 is invoked. By default, this method does nothing. You can distinguish cases by checking the identity of the given caller argument. If not equal to this, then it is typically a subtask that may contain results (and/or links to other results) to combine.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onExceptionalCompletion(java.lang.Throwable ex, java.util.concurrent.CountedCompleter<?> caller)",
+    "name": "onExceptionalCompletion",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "ex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CountedCompleter",
+          "name": "CountedCompleter",
+          "isArray": false
+        },
+        "name": "caller"
+      }
+    ],
+    "protocol": {
+      "member": "onExceptionalCompletion(java.lang.Throwable ex, java.util.concurrent.CountedCompleter<?> caller)",
+      "comment": "Performs an action when method method_0 is invoked or method method_2 throws an exception, and this task has not already otherwise completed normally. On entry to this method, this task method_3. The return value of this method controls further propagation: If true and this task has a completer that has not completed, then that completer is also completed exceptionally, with the same exception as this completer. The default implementation of this method does nothing except return true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCompleter()",
+    "name": "getCompleter",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter<?>",
+      "name": "java.util.concurrent.CountedCompleter<?>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCompleter()",
+      "comment": "Returns the completer established in this task's constructor, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPendingCount()",
+    "name": "getPendingCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPendingCount()",
+      "comment": "Returns the current pending count.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPendingCount(int count)",
+    "name": "setPendingCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "protocol": {
+      "member": "setPendingCount(int count)",
+      "comment": "Sets the pending count to the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addToPendingCount(int delta)",
+    "name": "addToPendingCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "delta"
+      }
+    ],
+    "protocol": {
+      "member": "addToPendingCount(int delta)",
+      "comment": "Adds (atomically) the given value to the pending count.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareAndSetPendingCount(int expected, int count)",
+    "name": "compareAndSetPendingCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expected"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "count"
+      }
+    ],
+    "protocol": {
+      "member": "compareAndSetPendingCount(int expected, int count)",
+      "comment": "Sets (atomically) the pending count to the given count only if it currently holds the given expected value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decrementPendingCountUnlessZero()",
+    "name": "decrementPendingCountUnlessZero",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "decrementPendingCountUnlessZero()",
+      "comment": "If the pending count is nonzero, (atomically) decrements it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRoot()",
+    "name": "getRoot",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter<?>",
+      "name": "java.util.concurrent.CountedCompleter<?>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRoot()",
+      "comment": "Returns the root of the current computation; imethod_0., this task if it has no completer, else its completer's root.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryComplete()",
+    "name": "tryComplete",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryComplete()",
+      "comment": "If the pending count is nonzero, decrements the count; otherwise invokes method_0 and then similarly tries to complete this task's completer, if one exists, else marks this task as complete.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "propagateCompletion()",
+    "name": "propagateCompletion",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "propagateCompletion()",
+      "comment": "Equivalent to method_1 but does not invoke method_0 along the completion path: If the pending count is nonzero, decrements the count; otherwise, similarly tries to complete this task's completer, if one exists, else marks this task as complete. This method may be useful in cases where onCompletion should not, or need not, be invoked for each completer in a computation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "complete(T rawResult)",
+    "name": "complete",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "rawResult"
+      }
+    ],
+    "protocol": {
+      "member": "complete(T rawResult)",
+      "comment": "Regardless of pending count, invokes method_0, marks this task as complete and further triggers method_4 on this task's completer, if one exists. The given rawResult is used as an argument to method_5 before invoking method_0 or marking this task as complete; its value is meaningful only for classes overriding setRawResult. This method does not modify the pending count. This method may be useful when forcing completion as soon as any one (versus all) of several subtask results are obtained. However, in the common (and recommended) case in which setRawResult is not overridden, this effect can be obtained more simply using method_2;.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstComplete()",
+    "name": "firstComplete",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter<?>",
+      "name": "java.util.concurrent.CountedCompleter<?>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "firstComplete()",
+      "comment": "If this task's pending count is zero, returns this task; otherwise decrements its pending count and returns null. This method is designed to be used with method_0 in completion traversal loops.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextComplete()",
+    "name": "nextComplete",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter<?>",
+      "name": "java.util.concurrent.CountedCompleter<?>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextComplete()",
+      "comment": "If this task does not have a completer, invokes method_2 and returns null. Or, if the completer's pending count is non-zero, decrements that pending count and returns null. Otherwise, returns the completer. This method can be used as part of a completion traversal loop for homogeneous task hierarchies:  for (CountedCompleter<?> c = method_0; c != null; c = method_1 { // ... process c ... }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "quietlyCompleteRoot()",
+    "name": "quietlyCompleteRoot",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "quietlyCompleteRoot()",
+      "comment": "Equivalent to method_0method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "helpComplete(int maxTasks)",
+    "name": "helpComplete",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxTasks"
+      }
+    ],
+    "protocol": {
+      "member": "helpComplete(int maxTasks)",
+      "comment": "If this task has not completed, attempts to process at most the given number of other unprocessed tasks for which this task is on the completion path, if any are known to exist.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internalPropagateException(java.lang.Throwable ex)",
+    "name": "internalPropagateException",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "ex"
+      }
+    ],
+    "protocol": {
+      "member": "internalPropagateException(java.lang.Throwable ex)",
+      "comment": "Supports ForkJoinTask exception propagation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exec()",
+    "name": "exec",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "exec()",
+      "comment": "Implements execution conventions for CountedCompleters.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRawResult()",
+    "name": "getRawResult",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRawResult()",
+      "comment": "Returns the result of the computation. By default returns null, which is appropriate for Void actions, but in other cases should be overridden, almost always to return a field or function of a field that holds the result upon completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRawResult(T t)",
+    "name": "setRawResult",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CountedCompleter",
+      "name": "CountedCompleter",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CountedCompleter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "setRawResult(T t)",
+      "comment": "A method that result-bearing CountedCompleters may optionally use to help maintain result data. By default, does nothing. Overrides are not recommended. However, if this method is overridden to update existing objects or fields, then it must in general be defined to be thread-safe.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

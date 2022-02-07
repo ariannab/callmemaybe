@@ -1,0 +1,447 @@
+[
+  {
+    "signature": "weka.classifiers.rules.part.ClassifierDecList(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, int minNum)",
+    "name": "weka.classifiers.rules.part.ClassifierDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ModelSelection",
+          "name": "ModelSelection",
+          "isArray": false
+        },
+        "name": "toSelectLocModel"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minNum"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.rules.part.ClassifierDecList(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, int minNum)",
+      "comment": "Constructor - just calls constructor of class DecList.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildRule(weka.core.Instances data)",
+    "name": "buildRule",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildRule(weka.core.Instances data)",
+      "comment": "Method for building a pruned partial tree. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildDecList(weka.core.Instances data, boolean leaf)",
+    "name": "buildDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "leaf"
+      }
+    ],
+    "protocol": {
+      "member": "buildDecList(weka.core.Instances data, boolean leaf)",
+      "comment": "Builds the partial tree without hold out set. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance instance)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance instance)",
+      "comment": "Classifies an instance. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Returns class probabilities for a weighted instance. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weight(weka.core.Instance instance)",
+    "name": "weight",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "weight(weka.core.Instance instance)",
+      "comment": "Returns the weight a rule assigns to an instance. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cleanup(weka.core.Instances justHeaderInfo)",
+    "name": "cleanup",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "justHeaderInfo"
+      }
+    ],
+    "protocol": {
+      "member": "cleanup(weka.core.Instances justHeaderInfo)",
+      "comment": "Cleanup in order to save memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Prints rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNewDecList(weka.core.Instances train, boolean leaf)",
+    "name": "getNewDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "weka.classifiers.rules.part.ClassifierDecList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "leaf"
+      }
+    ],
+    "protocol": {
+      "member": "getNewDecList(weka.core.Instances train, boolean leaf)",
+      "comment": "Returns a newly created tree. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "chooseIndex()",
+    "name": "chooseIndex",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "chooseIndex()",
+      "comment": "Method for choosing a subset to expand.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "chooseLastIndex()",
+    "name": "chooseLastIndex",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "chooseLastIndex()",
+      "comment": "Choose last index (ie. choose rule).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSizeOfBranch()",
+    "name": "getSizeOfBranch",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSizeOfBranch()",
+      "comment": "Returns the number of instances covered by a branch",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "localModel()",
+    "name": "localModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierSplitModel",
+      "name": "weka.classifiers.trees.j48.ClassifierSplitModel",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "localModel()",
+      "comment": "Method just exists to make program easier to read.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "son(int index)",
+    "name": "son",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "weka.classifiers.rules.part.ClassifierDecList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "son(int index)",
+      "comment": "Method just exists to make program easier to read.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "ClassifierDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.ClassifierDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

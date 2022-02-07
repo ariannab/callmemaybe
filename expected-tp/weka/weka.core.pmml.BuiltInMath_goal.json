@@ -1,0 +1,162 @@
+[
+  {
+    "signature": "weka.core.pmml.BuiltInMath(weka.core.pmml.BuiltInMath$MathFunc func)",
+    "name": "weka.core.pmml.BuiltInMath",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.BuiltInMath",
+      "name": "BuiltInMath",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.BuiltInMath",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.BuiltInMath$MathFunc",
+          "name": "MathFunc",
+          "isArray": false
+        },
+        "name": "func"
+      }
+    ],
+    "protocol": {
+      "member": "weka.core.pmml.BuiltInMath(weka.core.pmml.BuiltInMath$MathFunc func)",
+      "comment": "Construct a new built-in pmml Math function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setParameterDefs(java.util.ArrayList<weka.core.Attribute> paramDefs)",
+    "name": "setParameterDefs",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.BuiltInMath",
+      "name": "BuiltInMath",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.BuiltInMath",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "paramDefs"
+      }
+    ],
+    "protocol": {
+      "member": "setParameterDefs(java.util.ArrayList<weka.core.Attribute> paramDefs)",
+      "comment": "Set the structure of the parameters that are expected as input by this function. This must be called before method_0 is called.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.setParameterDefs(args[0])->weka.core.pmml.BuiltInMath.getOutputDef()"
+    }
+  },
+  {
+    "signature": "getOutputDef()",
+    "name": "getOutputDef",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.BuiltInMath",
+      "name": "BuiltInMath",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.BuiltInMath",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Attribute",
+      "name": "weka.core.Attribute",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOutputDef()",
+      "comment": "Get the structure of the result produced by this function. Subclasses must implement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParameterNames()",
+    "name": "getParameterNames",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.BuiltInMath",
+      "name": "BuiltInMath",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.BuiltInMath",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getParameterNames()",
+      "comment": "Returns an array of the names of the parameters expected as input by this function. May return null if the function can accept an unbounded number of arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getResult(double[] incoming)",
+    "name": "getResult",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.BuiltInMath",
+      "name": "BuiltInMath",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.BuiltInMath",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "incoming"
+      }
+    ],
+    "protocol": {
+      "member": "getResult(double[] incoming)",
+      "comment": "Get the result of applying this function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.core.pmml.BuiltInMath",
+      "name": "BuiltInMath",
+      "isArray": false
+    },
+    "targetClass": "weka.core.pmml.BuiltInMath",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

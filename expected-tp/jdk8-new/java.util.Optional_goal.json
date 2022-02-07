@@ -1,0 +1,437 @@
+[
+  {
+    "signature": "empty()",
+    "name": "empty",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Optional<T>",
+      "name": "java.util.Optional<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "empty()",
+      "comment": "Returns an empty Optional instance. No value is present for this Optional. @apiNote Though it may be tempting to do so, avoid testing if an object is empty by comparing with == against instances returned by method_0. There is no guarantee that it is a singleton. Instead, use method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(T value)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Optional<T>",
+      "name": "java.util.Optional<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "of(T value)",
+      "comment": "Returns an Optional with the specified present non-null value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ofNullable(T value)",
+    "name": "ofNullable",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Optional<T>",
+      "name": "java.util.Optional<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "ofNullable(T value)",
+      "comment": "Returns an Optional describing the specified value, if non-null, otherwise returns an empty Optional.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get()",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "get()",
+      "comment": "If a value is present in this Optional, returns the value, otherwise throws NoSuchElementException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPresent()",
+    "name": "isPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isPresent()",
+      "comment": "Return true if there is a value present, otherwise false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ifPresent(java.util.function.Consumer<? super T> consumer)",
+    "name": "ifPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "consumer"
+      }
+    ],
+    "protocol": {
+      "member": "ifPresent(java.util.function.Consumer<? super T> consumer)",
+      "comment": "If a value is present, invoke the specified consumer with the value, otherwise do nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filter(java.util.function.Predicate<? super T> predicate)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Optional<T>",
+      "name": "java.util.Optional<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "filter(java.util.function.Predicate<? super T> predicate)",
+      "comment": "If a value is present, and the value matches the given predicate, return an Optional describing the value, otherwise return an empty Optional.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "map(java.util.function.Function<? super T, ? extends U> mapper)",
+    "name": "map",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Optional<U>",
+      "name": "java.util.Optional<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "map(java.util.function.Function<? super T, ? extends U> mapper)",
+      "comment": "If a value is present, apply the provided mapping function to it, and if the result is non-null, return an Optional describing the result. Otherwise return an empty Optional. @apiNote This method supports post-processing on optional values, without the need to explicitly check for a return status. For example, the following code traverses a stream of file names, selects one that has not yet been processed, and then opens that file, returning an Optional<FileInputStream>}: {@code Optional<FileInputStream> fis = method_0method_1 .method_2 .method_3;  Here, findFirst returns an Optional<String>, and then map returns an Optional<FileInputStream> for the desired file if one exists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flatMap(java.util.function.Function<? super T, java.util.Optional<U>> mapper)",
+    "name": "flatMap",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Optional<U>",
+      "name": "java.util.Optional<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "flatMap(java.util.function.Function<? super T, java.util.Optional<U>> mapper)",
+      "comment": "If a value is present, apply the provided Optional}-bearing mapping function to it, return that result, otherwise return an empty {@code Optional. This method is similar to method_0, but the provided mapper is one whose result is already an Optional, and if invoked, flatMap does not wrap it with an additional Optional.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orElse(T other)",
+    "name": "orElse",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "orElse(T other)",
+      "comment": "Return the value if present, otherwise return other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orElseGet(java.util.function.Supplier<? extends T> other)",
+    "name": "orElseGet",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "orElseGet(java.util.function.Supplier<? extends T> other)",
+      "comment": "Return the value if present, otherwise invoke other and return the result of that invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orElseThrow(java.util.function.Supplier<? extends X> exceptionSupplier)",
+    "name": "orElseThrow",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "exceptionSupplier"
+      }
+    ],
+    "protocol": {
+      "member": "orElseThrow(java.util.function.Supplier<? extends X> exceptionSupplier)",
+      "comment": "Return the contained value, if present, otherwise throw an exception to be created by the provided supplier. @apiNote A method reference to the exception constructor with an empty argument list can be used as the supplier. For example, IllegalStateException::new",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Indicates whether some other object is \"equal to\" this Optional. The other object is considered equal if:  <li>it is also an Optional and; <li>both instances have no value present or; <li>the present values are \"equal to\" each other via method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value of the present value, if any, or 0 (zero) if no value is present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.Optional",
+      "name": "Optional",
+      "isArray": false
+    },
+    "targetClass": "java.util.Optional",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a non-empty string representation of this Optional suitable for debugging. The exact presentation format is unspecified and may vary between implementations and versions. @implSpec If a value is present the result must include its string representation in the result. Empty and present Optionals must be unambiguously differentiable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

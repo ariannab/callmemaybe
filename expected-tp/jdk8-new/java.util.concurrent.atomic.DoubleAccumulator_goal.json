@@ -1,0 +1,253 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.DoubleAccumulator(java.util.function.DoubleBinaryOperator accumulatorFunction, double identity)",
+    "name": "java.util.concurrent.atomic.DoubleAccumulator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "accumulatorFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "identity"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.DoubleAccumulator(java.util.function.DoubleBinaryOperator accumulatorFunction, double identity)",
+      "comment": "Creates a new instance using the given accumulator function and identity element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accumulate(double x)",
+    "name": "accumulate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "accumulate(double x)",
+      "comment": "Updates with the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get()",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "get()",
+      "comment": "Returns the current value. The returned value is NOT an atomic snapshot; invocation in the absence of concurrent updates returns an accurate result, but concurrent updates that occur while the value is being calculated might not be incorporated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets variables maintaining updates to the identity value. This method may be a useful alternative to creating a new updater, but is only effective if there are no concurrent updates. Because this method is intrinsically racy, it should only be used when it is known that no threads are concurrently updating.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getThenReset()",
+    "name": "getThenReset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getThenReset()",
+      "comment": "Equivalent in effect to method_0 followed by method_1. This method may apply for example during quiescent points between multithreaded computations. If there are updates concurrent with this method, the returned value is not guaranteed to be the final value occurring before the reset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the String representation of the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubleValue()",
+    "name": "doubleValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doubleValue()",
+      "comment": "Equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longValue()",
+    "name": "longValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "longValue()",
+      "comment": "Returns the method_0 current value as a long after a narrowing primitive conversion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intValue()",
+    "name": "intValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "intValue()",
+      "comment": "Returns the method_0 current value as an int after a narrowing primitive conversion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floatValue()",
+    "name": "floatValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAccumulator",
+      "name": "DoubleAccumulator",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAccumulator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "floatValue()",
+      "comment": "Returns the method_0 current value as a float after a narrowing primitive conversion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

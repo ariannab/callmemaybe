@@ -1,0 +1,162 @@
+[
+  {
+    "signature": "export(java.io.OutputStream os, java.util.prefs.Preferences p, boolean subTree)",
+    "name": "export",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.XmlSupport",
+      "name": "XmlSupport",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.XmlSupport",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "os"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.Preferences",
+          "name": "Preferences",
+          "isArray": false
+        },
+        "name": "p"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "subTree"
+      }
+    ],
+    "protocol": {
+      "member": "export(java.io.OutputStream os, java.util.prefs.Preferences p, boolean subTree)",
+      "comment": "Export the specified preferences node and, if subTree is true, all subnodes, to the specified output stream. Preferences are exported as an XML document conforming to the definition in the Preferences spec.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "importPreferences(java.io.InputStream is)",
+    "name": "importPreferences",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.XmlSupport",
+      "name": "XmlSupport",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.XmlSupport",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "is"
+      }
+    ],
+    "protocol": {
+      "member": "importPreferences(java.io.InputStream is)",
+      "comment": "Import preferences from the specified input stream, which is assumed to contain an XML document in the format described in the Preferences spec.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exportMap(java.io.OutputStream os, java.util.Map<java.lang.String, java.lang.String> map)",
+    "name": "exportMap",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.XmlSupport",
+      "name": "XmlSupport",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.XmlSupport",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "os"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "map"
+      }
+    ],
+    "protocol": {
+      "member": "exportMap(java.io.OutputStream os, java.util.Map<java.lang.String, java.lang.String> map)",
+      "comment": "Export the specified Map<String,String> to a map document on the specified OutputStream as per the prefs DTD. This is used as the internal (undocumented) format for FileSystemPrefs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "importMap(java.io.InputStream is, java.util.Map<java.lang.String, java.lang.String> m)",
+    "name": "importMap",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.XmlSupport",
+      "name": "XmlSupport",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.XmlSupport",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "is"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "importMap(java.io.InputStream is, java.util.Map<java.lang.String, java.lang.String> m)",
+      "comment": "Import Map from the specified input stream, which is assumed to contain a map document as per the prefs DTD. This is used as the internal (undocumented) format for FileSystemPrefs. The key-value pairs specified in the XML document will be put into the specified Map. (If this Map is empty, it will contain exactly the key-value pairs int the XML-document when this method returns.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

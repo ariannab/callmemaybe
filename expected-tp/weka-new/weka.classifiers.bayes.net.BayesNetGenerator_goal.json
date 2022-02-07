@@ -1,0 +1,589 @@
+[
+  {
+    "signature": "weka.classifiers.bayes.net.BayesNetGenerator()",
+    "name": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.BayesNetGenerator()",
+      "comment": "Constructor for BayesNetGenerator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateRandomNetwork()",
+    "name": "generateRandomNetwork",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "generateRandomNetwork()",
+      "comment": "Generate random connected Bayesian network with discrete nodes having all the same cardinality.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "Init(int nNodes, int nValues)",
+    "name": "Init",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNodes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nValues"
+      }
+    ],
+    "protocol": {
+      "member": "Init(int nNodes, int nValues)",
+      "comment": "Init defines a minimal Bayes net with no arcs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateRandomNetworkStructure(int nNodes, int nArcs)",
+    "name": "generateRandomNetworkStructure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNodes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nArcs"
+      }
+    ],
+    "protocol": {
+      "member": "generateRandomNetworkStructure(int nNodes, int nArcs)",
+      "comment": "GenerateRandomNetworkStructure generate random connected Bayesian network",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateTree(int nNodes)",
+    "name": "generateTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNodes"
+      }
+    ],
+    "protocol": {
+      "member": "generateTree(int nNodes)",
+      "comment": "GenerateTree creates a tree-like network structure (actually a forest) by starting with a randomly selected pair of nodes, add an arc between. Then keep on selecting one of the connected nodes and one of the unconnected ones and add an arrow between them, till all nodes are connected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateRandomDistributions(int nNodes, int nValues)",
+    "name": "generateRandomDistributions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNodes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nValues"
+      }
+    ],
+    "protocol": {
+      "member": "generateRandomDistributions(int nNodes, int nValues)",
+      "comment": "GenerateRandomDistributions generates discrete conditional distribution tables for all nodes of a Bayes network once a network structure has been determined.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateInstances()",
+    "name": "generateInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "generateInstances()",
+      "comment": "GenerateInstances generates random instances sampling from the distribution represented by the Bayes network structure. It assumes a Bayes network structure has been initialized",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOrder()",
+    "name": "getOrder",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[]",
+      "name": "int[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOrder()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns either the net (if BIF format) or the generated instances",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNrOfNodes(int nNrOfNodes)",
+    "name": "setNrOfNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfNodes"
+      }
+    ],
+    "protocol": {
+      "member": "setNrOfNodes(int nNrOfNodes)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNrOfArcs(int nNrOfArcs)",
+    "name": "setNrOfArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfArcs"
+      }
+    ],
+    "protocol": {
+      "member": "setNrOfArcs(int nNrOfArcs)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNrOfInstances(int nNrOfInstances)",
+    "name": "setNrOfInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfInstances"
+      }
+    ],
+    "protocol": {
+      "member": "setNrOfInstances(int nNrOfInstances)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCardinality(int nCardinality)",
+    "name": "setCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCardinality"
+      }
+    ],
+    "protocol": {
+      "member": "setCardinality(int nCardinality)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSeed(int nSeed)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nSeed"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(int nSeed)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -B Generate network (instead of instances)   -N <integer> Nr of nodes   -A <integer> Nr of arcs   -M <integer> Nr of instances   -C <integer> Cardinality of the variables   -S <integer> Seed for random number generator   -F <file> The BIF file to obtain the structure from.  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printOptions(weka.core.OptionHandler o)",
+    "name": "printOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.OptionHandler",
+          "name": "OptionHandler",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "printOptions(weka.core.OptionHandler o)",
+      "comment": "prints all the options to stdout",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "BayesNetGenerator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BayesNetGenerator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "signature": "schedule(java.lang.Runnable command, long delay, java.util.concurrent.TimeUnit unit)",
+    "name": "schedule",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "ScheduledExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ScheduledExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledFuture<?>",
+      "name": "java.util.concurrent.ScheduledFuture<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "command"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "delay"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "schedule(java.lang.Runnable command, long delay, java.util.concurrent.TimeUnit unit)",
+      "comment": "Creates and executes a one-shot action that becomes enabled after the given delay.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "schedule(java.util.concurrent.Callable<V> callable, long delay, java.util.concurrent.TimeUnit unit)",
+    "name": "schedule",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "ScheduledExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ScheduledExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledFuture<V>",
+      "name": "java.util.concurrent.ScheduledFuture<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Callable",
+          "name": "Callable",
+          "isArray": false
+        },
+        "name": "callable"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "delay"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "schedule(java.util.concurrent.Callable<V> callable, long delay, java.util.concurrent.TimeUnit unit)",
+      "comment": "Creates and executes a ScheduledFuture that becomes enabled after the given delay.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "scheduleAtFixedRate(java.lang.Runnable command, long initialDelay, long period, java.util.concurrent.TimeUnit unit)",
+    "name": "scheduleAtFixedRate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "ScheduledExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ScheduledExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledFuture<?>",
+      "name": "java.util.concurrent.ScheduledFuture<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "command"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "initialDelay"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "period"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "scheduleAtFixedRate(java.lang.Runnable command, long initialDelay, long period, java.util.concurrent.TimeUnit unit)",
+      "comment": "Creates and executes a periodic action that becomes enabled first after the given initial delay, and subsequently with the given period; that is executions will commence after initialDelay then initialDelay+period, then initialDelay + 2 * period, and so on. If any execution of the task encounters an exception, subsequent executions are suppressed. Otherwise, the task will only terminate via cancellation or termination of the executor. If any execution of this task takes longer than its period, then subsequent executions may start late, but will not concurrently execute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "scheduleWithFixedDelay(java.lang.Runnable command, long initialDelay, long delay, java.util.concurrent.TimeUnit unit)",
+    "name": "scheduleWithFixedDelay",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ScheduledExecutorService",
+      "name": "ScheduledExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ScheduledExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ScheduledFuture<?>",
+      "name": "java.util.concurrent.ScheduledFuture<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "command"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "initialDelay"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "delay"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "scheduleWithFixedDelay(java.lang.Runnable command, long initialDelay, long delay, java.util.concurrent.TimeUnit unit)",
+      "comment": "Creates and executes a periodic action that becomes enabled first after the given initial delay, and subsequently with the given delay between the termination of one execution and the commencement of the next. If any execution of the task encounters an exception, subsequent executions are suppressed. Otherwise, the task will only terminate via cancellation or termination of the executor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

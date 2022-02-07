@@ -1,0 +1,89 @@
+[
+  {
+    "signature": "java.util.TimerTask()",
+    "name": "java.util.TimerTask",
+    "containingClass": {
+      "qualifiedName": "java.util.TimerTask",
+      "name": "TimerTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimerTask",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.TimerTask()",
+      "comment": "Creates a new timer task.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "run()",
+    "name": "run",
+    "containingClass": {
+      "qualifiedName": "java.util.TimerTask",
+      "name": "TimerTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimerTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "run()",
+      "comment": "The action to be performed by this timer task.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cancel()",
+    "name": "cancel",
+    "containingClass": {
+      "qualifiedName": "java.util.TimerTask",
+      "name": "TimerTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimerTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cancel()",
+      "comment": "Cancels this timer task. If the task has been scheduled for one-time execution and has not yet run, or has not yet been scheduled, it will never run. If the task has been scheduled for repeated execution, it will never run again. (If the task is running when this call occurs, the task will run to completion, but will never run again.) Note that calling this method from within the run method of a repeating timer task absolutely guarantees that the timer task will not run again. This method may be called repeatedly; the second and subsequent calls have no effect.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "scheduledExecutionTime()",
+    "name": "scheduledExecutionTime",
+    "containingClass": {
+      "qualifiedName": "java.util.TimerTask",
+      "name": "TimerTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.TimerTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "scheduledExecutionTime()",
+      "comment": "Returns the scheduled execution time of the most recent actual execution of this task. (If this method is invoked while task execution is in progress, the return value is the scheduled execution time of the ongoing task execution.) This method is typically invoked from within a task's run method, to determine whether the current execution of the task is sufficiently timely to warrant performing the scheduled activity: public void method_0 { if (method_1 - method_2 >= MAX_TARDINESS) return; // Too late; skip this execution. // Perform the task  } This method is typically not used in conjunction with fixed-delay execution repeating tasks, as their scheduled execution times are allowed to drift over time, and so are not terribly significant.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

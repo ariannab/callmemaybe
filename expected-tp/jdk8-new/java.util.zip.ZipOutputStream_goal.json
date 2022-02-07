@@ -1,0 +1,309 @@
+[
+  {
+    "signature": "java.util.zip.ZipOutputStream(java.io.OutputStream out)",
+    "name": "java.util.zip.ZipOutputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.ZipOutputStream(java.io.OutputStream out)",
+      "comment": "Creates a new ZIP output stream. The UTF-8 javamethod_0method_1method_2 charset is used to encode the entry names and comments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.ZipOutputStream(java.io.OutputStream out, java.nio.charset.Charset charset)",
+    "name": "java.util.zip.ZipOutputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "out"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.charset.Charset",
+          "name": "Charset",
+          "isArray": false
+        },
+        "name": "charset"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.ZipOutputStream(java.io.OutputStream out, java.nio.charset.Charset charset)",
+      "comment": "Creates a new ZIP output stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setComment(java.lang.String comment)",
+    "name": "setComment",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "comment"
+      }
+    ],
+    "protocol": {
+      "member": "setComment(java.lang.String comment)",
+      "comment": "Sets the ZIP file comment.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMethod(int method)",
+    "name": "setMethod",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "method"
+      }
+    ],
+    "protocol": {
+      "member": "setMethod(int method)",
+      "comment": "Sets the default compression method for subsequent entries. This default will be used whenever the compression method is not specified for an individual ZIP file entry, and is initially set to DEFLATED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLevel(int level)",
+    "name": "setLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      }
+    ],
+    "protocol": {
+      "member": "setLevel(int level)",
+      "comment": "Sets the compression level for subsequent entries which are DEFLATED. The default setting is DEFAULT_COMPRESSION.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putNextEntry(java.util.zip.ZipEntry e)",
+    "name": "putNextEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.zip.ZipEntry",
+          "name": "ZipEntry",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "putNextEntry(java.util.zip.ZipEntry e)",
+      "comment": "Begins writing a new ZIP file entry and positions the stream to the start of the entry data. Closes the current entry if still active. The default compression method will be used if no compression method was specified for the entry, and the current time will be used if the entry has no set modification time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "closeEntry()",
+    "name": "closeEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "closeEntry()",
+      "comment": "Closes the current ZIP entry and positions the stream for writing the next entry. @exception ZipException if a ZIP format error has occurred @exception IOException if an I/O error has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write(byte[] b, int off, int len)",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "write(byte[] b, int off, int len)",
+      "comment": "Writes an array of bytes to the current ZIP entry data. This method will block until all the bytes are written.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finish()",
+    "name": "finish",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finish()",
+      "comment": "Finishes writing the contents of the ZIP output stream without closing the underlying stream. Use this method when applying multiple filters in succession to the same output stream. @exception ZipException if a ZIP file error has occurred @exception IOException if an I/O exception has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipOutputStream",
+      "name": "ZipOutputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipOutputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Closes the ZIP output stream as well as the stream being filtered. @exception ZipException if a ZIP file error has occurred @exception IOException if an I/O error has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

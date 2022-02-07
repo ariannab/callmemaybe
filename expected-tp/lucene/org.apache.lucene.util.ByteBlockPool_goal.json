@@ -1,0 +1,443 @@
+[
+  {
+    "signature": "org.apache.lucene.util.ByteBlockPool(org.apache.lucene.util.ByteBlockPool$Allocator allocator)",
+    "name": "org.apache.lucene.util.ByteBlockPool",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.util.ByteBlockPool$Allocator",
+          "name": "Allocator",
+          "isArray": false
+        },
+        "name": "allocator"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.lucene.util.ByteBlockPool(org.apache.lucene.util.ByteBlockPool$Allocator allocator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets the pool to its initial state reusing the first buffer and fills all buffers with 0 bytes before they reused or passed to method_0 Calling ByteBlockPool#nextBuffer() is not needed after reset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset(boolean zeroFillBuffers, boolean reuseFirst)",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "zeroFillBuffers"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "reuseFirst"
+      }
+    ],
+    "protocol": {
+      "member": "reset(boolean zeroFillBuffers, boolean reuseFirst)",
+      "comment": "Expert: Resets the pool to its initial state reusing the first buffer. Calling method_0 is not needed after reset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextBuffer()",
+    "name": "nextBuffer",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextBuffer()",
+      "comment": "Advances the pool to its next buffer. This method should be called once after the constructor to initialize the pool. In contrast to the constructor a method_0 call will advance the pool to its first buffer immediately.",
+      "kind": "FreeText",
+      "condition": "ByteBlockPool->receiverObjectID.nextBuffer()"
+    }
+  },
+  {
+    "signature": "newSlice(int size)",
+    "name": "newSlice",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "protocol": {
+      "member": "newSlice(int size)",
+      "comment": "Allocates a new slice with the given size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allocSlice(byte[] slice, int upto)",
+    "name": "allocSlice",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "slice"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "upto"
+      }
+    ],
+    "protocol": {
+      "member": "allocSlice(byte[] slice, int upto)",
+      "comment": "Creates a new byte slice with the given starting size and returns the slices offset in the pool.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBytesRef(org.apache.lucene.util.BytesRefBuilder builder, org.apache.lucene.util.BytesRef result, long offset, int length)",
+    "name": "setBytesRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.util.BytesRefBuilder",
+          "name": "BytesRefBuilder",
+          "isArray": false
+        },
+        "name": "builder"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.util.BytesRef",
+          "name": "BytesRef",
+          "isArray": false
+        },
+        "name": "result"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "protocol": {
+      "member": "setBytesRef(org.apache.lucene.util.BytesRefBuilder builder, org.apache.lucene.util.BytesRef result, long offset, int length)",
+      "comment": "This will avoid copying the bytes, if the slice fits into a single block; otherwise, it uses the provided BytesRefBuilder to copy bytes over.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBytesRef(org.apache.lucene.util.BytesRef term, int textStart)",
+    "name": "setBytesRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.util.BytesRef",
+          "name": "BytesRef",
+          "isArray": false
+        },
+        "name": "term"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "textStart"
+      }
+    ],
+    "protocol": {
+      "member": "setBytesRef(org.apache.lucene.util.BytesRef term, int textStart)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "append(org.apache.lucene.util.BytesRef bytes)",
+    "name": "append",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.util.BytesRef",
+          "name": "BytesRef",
+          "isArray": false
+        },
+        "name": "bytes"
+      }
+    ],
+    "protocol": {
+      "member": "append(org.apache.lucene.util.BytesRef bytes)",
+      "comment": "Appends the bytes in the provided BytesRef at the current position.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readBytes(long offset, byte[] bytes, int bytesOffset, int bytesLength)",
+    "name": "readBytes",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bytesOffset"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bytesLength"
+      }
+    ],
+    "protocol": {
+      "member": "readBytes(long offset, byte[] bytes, int bytesOffset, int bytesLength)",
+      "comment": "Reads bytes bytes out of the pool starting at the given offset with the given length into the given byte array at offset off. Note: this method allows to copy across block boundaries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRawBytesRef(org.apache.lucene.util.BytesRef ref, long offset)",
+    "name": "setRawBytesRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.util.BytesRef",
+          "name": "BytesRef",
+          "isArray": false
+        },
+        "name": "ref"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "protocol": {
+      "member": "setRawBytesRef(org.apache.lucene.util.BytesRef ref, long offset)",
+      "comment": "Set the given BytesRef so that its content is equal to the ref.length bytes starting at offset. Most of the time this method will set pointers to internal data-structures. However, in case a value crosses a boundary, a fresh copy will be returned. On the contrary to #method_0, this does not expect the length to be encoded with the data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readByte(long offset)",
+    "name": "readByte",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.util.ByteBlockPool",
+      "name": "ByteBlockPool",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.util.ByteBlockPool",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte",
+      "name": "byte",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "protocol": {
+      "member": "readByte(long offset)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

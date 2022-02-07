@@ -1,0 +1,653 @@
+[
+  {
+    "signature": "weka.classifiers.lazy.LWL()",
+    "name": "weka.classifiers.lazy.LWL",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.lazy.LWL()",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the additional measure names produced by the neighbour search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String additionalMeasureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "additionalMeasureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String additionalMeasureName)",
+      "comment": "Returns the value of the named measure from the neighbour search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -A The nearest neighbour search algorithm to use (default: wekamethod_0method_1method_2).   -K <number of neighbours> Set the number of neighbours used to set the kernel bandwidth. (default all)  -U <number of weighting method> Set the weighting kernel shape to use. 0=Linear, 1=Epanechnikov, 2=Tricube, 3=Inverse, 4=Gaussian. (default 0 = Linear)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_3method_4method_5)  Options specific to classifier wekamethod_3method_4method_5:   -D If set, classifier is run in debug mode and may output additional info to the console",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "KNNTipText()",
+    "name": "KNNTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "KNNTipText()",
+      "comment": "Returns the tip text for this property.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setKNN(int knn)",
+    "name": "setKNN",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "knn"
+      }
+    ],
+    "protocol": {
+      "member": "setKNN(int knn)",
+      "comment": "Sets the number of neighbours used for kernel bandwidth setting. The bandwidth is taken as the distance to the kth neighbour.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getKNN()",
+    "name": "getKNN",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getKNN()",
+      "comment": "Gets the number of neighbours used for kernel bandwidth setting. The bandwidth is taken as the distance to the kth neighbour.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightingKernelTipText()",
+    "name": "weightingKernelTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightingKernelTipText()",
+      "comment": "Returns the tip text for this property.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeightingKernel(int kernel)",
+    "name": "setWeightingKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "kernel"
+      }
+    ],
+    "protocol": {
+      "member": "setWeightingKernel(int kernel)",
+      "comment": "Sets the kernel weighting method to use. Must be one of LINEAR, EPANECHNIKOV, TRICUBE, INVERSE, GAUSS or CONSTANT, other values are ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWeightingKernel()",
+    "name": "getWeightingKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getWeightingKernel()",
+      "comment": "Gets the kernel weighting method to use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nearestNeighbourSearchAlgorithmTipText()",
+    "name": "nearestNeighbourSearchAlgorithmTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nearestNeighbourSearchAlgorithmTipText()",
+      "comment": "Returns the tip text for this property.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNearestNeighbourSearchAlgorithm()",
+    "name": "getNearestNeighbourSearchAlgorithm",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.neighboursearch.NearestNeighbourSearch",
+      "name": "weka.core.neighboursearch.NearestNeighbourSearch",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNearestNeighbourSearchAlgorithm()",
+      "comment": "Returns the current nearestNeighbourSearch algorithm in use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNearestNeighbourSearchAlgorithm(weka.core.neighboursearch.NearestNeighbourSearch nearestNeighbourSearchAlgorithm)",
+    "name": "setNearestNeighbourSearchAlgorithm",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.neighboursearch.NearestNeighbourSearch",
+          "name": "NearestNeighbourSearch",
+          "isArray": false
+        },
+        "name": "nearestNeighbourSearchAlgorithm"
+      }
+    ],
+    "protocol": {
+      "member": "setNearestNeighbourSearchAlgorithm(weka.core.neighboursearch.NearestNeighbourSearch nearestNeighbourSearchAlgorithm)",
+      "comment": "Sets the nearestNeighbourSearch algorithm to be used for finding nearest method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Generates the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateClassifier(weka.core.Instance instance)",
+    "name": "updateClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateClassifier(weka.core.Instance instance)",
+      "comment": "Adds the supplied instance to the training set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a description of this classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.lazy.LWL",
+      "name": "LWL",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.lazy.LWL",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

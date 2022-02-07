@@ -1,0 +1,646 @@
+[
+  {
+    "signature": "java.util.ResourceBundle()",
+    "name": "java.util.ResourceBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.ResourceBundle()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBaseBundleName()",
+    "name": "getBaseBundleName",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBaseBundleName()",
+      "comment": "Returns the base name of this bundle, if known, or null if unknown. If not null, then this is the value of the baseName parameter that was passed to the method_0 method when the resource bundle was loaded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getString(java.lang.String key)",
+    "name": "getString",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getString(java.lang.String key)",
+      "comment": "Gets a string for the given key from this resource bundle or one of its parents. Calling this method is equivalent to calling  (String) method_0 getObject(key).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStringArray(java.lang.String key)",
+    "name": "getStringArray",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getStringArray(java.lang.String key)",
+      "comment": "Gets a string array for the given key from this resource bundle or one of its parents. Calling this method is equivalent to calling  (String[]) method_0 getObject(key).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getObject(java.lang.String key)",
+    "name": "getObject",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getObject(java.lang.String key)",
+      "comment": "Gets an object for the given key from this resource bundle or one of its parents. This method first tries to obtain the object from this resource bundle using method_0 handleGetObject. If not successful, and the parent resource bundle is not null, it calls the parent's getObject method. If still not successful, it throws a MissingResourceException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLocale()",
+    "name": "getLocale",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Locale",
+      "name": "java.util.Locale",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLocale()",
+      "comment": "Returns the locale of this resource bundle. This method can be used after a call to method_0 to determine whether the resource bundle returned really corresponds to the requested locale or is a fallback.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setParent(java.util.ResourceBundle parent)",
+    "name": "setParent",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ResourceBundle",
+          "name": "ResourceBundle",
+          "isArray": false
+        },
+        "name": "parent"
+      }
+    ],
+    "protocol": {
+      "member": "setParent(java.util.ResourceBundle parent)",
+      "comment": "Sets the parent bundle of this bundle. The parent bundle is searched by method_0 getObject when this bundle does not contain a particular resource.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBundle(java.lang.String baseName)",
+    "name": "getBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "java.util.ResourceBundle",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "baseName"
+      }
+    ],
+    "protocol": {
+      "member": "getBundle(java.lang.String baseName)",
+      "comment": "Gets a resource bundle using the specified base name, the default locale, and the caller's class loader. Calling this method is equivalent to calling  method_0, method_1method_2,  except that method_3 is run with the security privileges of ResourceBundle. See method_4 getBundle for a complete description of the search and instantiation strategy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBundle(java.lang.String baseName, java.util.ResourceBundle$Control control)",
+    "name": "getBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "java.util.ResourceBundle",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "baseName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ResourceBundle$Control",
+          "name": "Control",
+          "isArray": false
+        },
+        "name": "control"
+      }
+    ],
+    "protocol": {
+      "member": "getBundle(java.lang.String baseName, java.util.ResourceBundle$Control control)",
+      "comment": "Returns a resource bundle using the specified base name, the default locale and the specified control. Calling this method is equivalent to calling  method_0, method_1method_2, control),  except that method_2 is run with the security privileges of ResourceBundle. See method_4 getBundle for the complete description of the resource bundle loading process with a method_9.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBundle(java.lang.String baseName, java.util.Locale locale)",
+    "name": "getBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "java.util.ResourceBundle",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "baseName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getBundle(java.lang.String baseName, java.util.Locale locale)",
+      "comment": "Gets a resource bundle using the specified base name and locale, and the caller's class loader. Calling this method is equivalent to calling  method_0method_1,  except that method_2 is run with the security privileges of ResourceBundle. See method_3 getBundle for a complete description of the search and instantiation strategy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBundle(java.lang.String baseName, java.util.Locale targetLocale, java.util.ResourceBundle$Control control)",
+    "name": "getBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "java.util.ResourceBundle",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "baseName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "targetLocale"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ResourceBundle$Control",
+          "name": "Control",
+          "isArray": false
+        },
+        "name": "control"
+      }
+    ],
+    "protocol": {
+      "member": "getBundle(java.lang.String baseName, java.util.Locale targetLocale, java.util.ResourceBundle$Control control)",
+      "comment": "Returns a resource bundle using the specified base name, target locale and control, and the caller's class loader. Calling this method is equivalent to calling  method_0method_1, control),  except that method_1 is run with the security privileges of ResourceBundle. See method_3 getBundle for the complete description of the resource bundle loading process with a method_7.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBundle(java.lang.String baseName, java.util.Locale locale, java.lang.ClassLoader loader)",
+    "name": "getBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "java.util.ResourceBundle",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "baseName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.ClassLoader",
+          "name": "ClassLoader",
+          "isArray": false
+        },
+        "name": "loader"
+      }
+    ],
+    "protocol": {
+      "member": "getBundle(java.lang.String baseName, java.util.Locale locale, java.lang.ClassLoader loader)",
+      "comment": "Gets a resource bundle using the specified base name, locale, and class loader. This method behaves the same as calling method_0 passing a default instance of Control unless another Control is provided with the ResourceBundleControlProvider SPI. Refer to the description of modifying the default behavior. The following describes the default behavior. getBundle uses the base name, the specified locale, and the default locale (obtained from java.method_1 method_17) to generate a sequence of <em>candidate bundle names</em>. If the specified locale's language, script, country, and variant are all empty strings, then the base name is the only candidate bundle name. Otherwise, a list of candidate locales is generated from the attribute values of the specified locale (language, script, country and variant) and appended to the base name. Typically, this will look like the following:  baseName + \"_\" + language + \"_\" + script + \"_\" + country + \"_\" + variant baseName + \"_\" + language + \"_\" + script + \"_\" + country baseName + \"_\" + language + \"_\" + script baseName + \"_\" + language + \"_\" + country + \"_\" + variant baseName + \"_\" + language + \"_\" + country baseName + \"_\" + language  Candidate bundle names where the final component is an empty string are omitted, along with the underscore. For example, if country is an empty string, the second and the fifth candidate bundle names above would be omitted. Also, if script is an empty string, the candidate names including script are omitted. For example, a locale with language \"de\" and variant \"JAVA\" will produce candidate names with base name \"MyResource\" below.  MyResource_de__JAVA MyResource_de  In the case that the variant contains one or more underscores ('_'), a sequence of bundle names generated by truncating the last underscore and the part following it is inserted after a candidate bundle name with the original variant. For example, for a locale with language \"en\", script \"Latn, country \"US\" and variant \"WINDOWS_VISTA\", and bundle base name \"MyResource\", the list of candidate bundle names below is generated:  MyResource_en_Latn_US_WINDOWS_VISTA MyResource_en_Latn_US_WINDOWS MyResource_en_Latn_US MyResource_en_Latn MyResource_en_US_WINDOWS_VISTA MyResource_en_US_WINDOWS MyResource_en_US MyResource_en  Note: For some Locales, the list of candidate bundle names contains extra names, or the order of bundle names is slightly modified. See the description of the default implementation of method_2 getCandidateLocales for details. getBundle then iterates over the candidate bundle names to find the first one for which it can instantiate an actual resource bundle. It uses the default controls' method_19 getFormats method, which generates two bundle names for each generated name, the first a class name and the second a properties file name. For each candidate bundle name, it attempts to create a resource bundle: <li>First, it attempts to load a class using the generated class name. If such a class can be found and loaded using the specified class loader, is assignment compatible with ResourceBundle, is accessible from ResourceBundle, and can be instantiated, getBundle creates a new instance of this class and uses it as the <em>result resource bundle</em>. <li>Otherwise, getBundle attempts to locate a property resource file using the generated properties file name. It generates a path name from the candidate bundle name by replacing all \".\" characters with \"/\" and appending the string \"method_20\". It attempts to find a \"resource\" with this name using java.method_3 method_26. (Note that a \"resource\" in the sense of getResource has nothing to do with the contents of a resource bundle, it is just a container of data, such as a file.) If it finds a \"resource\", it attempts to create a new PropertyResourceBundle instance from its contents. If successful, this instance becomes the <em>result resource bundle</em>.  This continues until a result resource bundle is instantiated or the list of candidate bundle names is exhausted. If no matching resource bundle is found, the default control's method_27 getFallbackLocale method is called, which returns the current default locale. A new sequence of candidate locale names is generated using this locale and and searched again, as above. If still no result bundle is found, the base name alone is looked up. If this still fails, a MissingResourceException is thrown.  Once a result resource bundle has been found, its <em>parent chain</em> is instantiated. If the result bundle already has a parent (perhaps because it was returned from a cache) the chain is complete. Otherwise, getBundle examines the remainder of the candidate locale list that was used during the pass that generated the result resource bundle. (As before, candidate bundle names where the final component is an empty string are omitted.) When it comes to the end of the candidate list, it tries the plain bundle name. With each of the candidate bundle names it attempts to instantiate a resource bundle (first looking for a class and then a properties file, as described above). Whenever it succeeds, it calls the previously instantiated resource bundle's method_4 setParent method with the new resource bundle. This continues until the list of names is exhausted or the current bundle already has a non-null parent. Once the parent chain is complete, the bundle is returned. Note: getBundle caches instantiated resource bundles and might return the same resource bundle instance multiple times. Note:The baseName argument should be a fully qualified class name. However, for compatibility with earlier versions, Sun's Java SE Runtime Environments do not verify this, and so it is possible to access PropertyResourceBundles by specifying a path name (using \"/\") instead of a fully qualified class name (using \".\").  <strong>Example:</strong>  The following class and property files are provided:  method_31 MyResourcesmethod_20 MyResources_frmethod_20 method_34 MyResources_fr_CHmethod_20 MyResources_enmethod_20 method_37  The contents of all files are valid (that is, public non-abstract subclasses of ResourceBundle for the \"method_38\" files, syntactically correct \"method_20\" files). The default locale is method_5. Calling getBundle with the locale arguments below will instantiate resource bundles as follows:  <tr><td>method_7</td><td>method_34, parent MyResources_frmethod_20, parent method_31</td></tr> <tr><td>method_8</td><td>MyResources_frmethod_20, parent method_31</td></tr> <tr><td>method_9</td><td>MyResources_enmethod_20, parent method_31</td></tr> <tr><td>method_10</td><td>MyResources_enmethod_20, parent method_31</td></tr> <tr><td>method_11</td><td>method_37, parent method_31</td></tr>  The file MyResources_fr_CHmethod_20 is never used because it is hidden by the method_34. Likewise, MyResourcesmethod_20 is also hidden by method_31.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBundle(java.lang.String baseName, java.util.Locale targetLocale, java.lang.ClassLoader loader, java.util.ResourceBundle$Control control)",
+    "name": "getBundle",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "java.util.ResourceBundle",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "baseName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "targetLocale"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.ClassLoader",
+          "name": "ClassLoader",
+          "isArray": false
+        },
+        "name": "loader"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ResourceBundle$Control",
+          "name": "Control",
+          "isArray": false
+        },
+        "name": "control"
+      }
+    ],
+    "protocol": {
+      "member": "getBundle(java.lang.String baseName, java.util.Locale targetLocale, java.lang.ClassLoader loader, java.util.ResourceBundle$Control control)",
+      "comment": "Returns a resource bundle using the specified base name, target locale, class loader and control. Unlike the method_0 getBundle factory methods with no control argument, the given control specifies how to locate and instantiate resource bundles. Conceptually, the bundle loading process with the given control is performed in the following steps.  <li>This factory method looks up the resource bundle in the cache for the specified baseName, targetLocale and loader. If the requested resource bundle instance is found in the cache and the time-to-live periods of the instance and all of its parent instances have not expired, the instance is returned to the caller. Otherwise, this factory method proceeds with the loading process below.</li> <li>The Rmethod_1 controlmethod_25 method is called to get resource bundle formats to produce bundle or resource names. The strings \"javamethod_26\" and \"javamethod_27\" designate class-based and PropertyResourceBundle property-based resource bundles, respectively. Other strings starting with \"java.\" are reserved for future extensions and must not be used for application-defined formats. Other strings designate application-defined formats.</li> <li>The Rmethod_2 controlmethod_30 method is called with the target locale to get a list of <em>candidate Locales</em> for which resource bundles are searched.</li> <li>The Rmethod_3 controlmethod_33 method is called to instantiate a ResourceBundle for the base bundle name, a candidate locale, and a format. (Refer to the note on the cache lookup below.) This step is iterated over all combinations of the candidate locales and formats until the newBundle method returns a ResourceBundle instance or the iteration has used up all the combinations. For example, if the candidate locales are method_4, method_5 and method_6 and the formats are \"javamethod_26\" and \"javamethod_27\", then the following is the sequence of locale-format combinations to be used to call controlmethod_33. <table style=\"width: 50%; text-align: left; margin-left: 40px;\" border=\"0\" cellpadding=\"2\" cellspacing=\"2\" summary=\"locale-format combinations for newBundle\"> <tbody> <tr> <td style=\"vertical-align: top; text-align: left; font-weight: bold; width: 50%;\">Locale<br> </td> <td style=\"vertical-align: top; text-align: left; font-weight: bold; width: 50%;\">format<br> </td> </tr> <tr> <td style=\"vertical-align: top; width: 50%;\">method_4<br> </td> <td style=\"vertical-align: top; width: 50%;\">javamethod_26<br> </td> </tr> <tr> <td style=\"vertical-align: top; width: 50%;\">method_4</td> <td style=\"vertical-align: top; width: 50%;\">javamethod_27<br> </td> </tr> <tr> <td style=\"vertical-align: top; width: 50%;\">method_5</td> <td style=\"vertical-align: top; width: 50%;\">javamethod_26</td> </tr> <tr> <td style=\"vertical-align: top; width: 50%;\">method_5</td> <td style=\"vertical-align: top; width: 50%;\">javamethod_27</td> </tr> <tr> <td style=\"vertical-align: top; width: 50%;\">method_6<br> </td> <td style=\"vertical-align: top; width: 50%;\">javamethod_26</td> </tr> <tr> <td style=\"vertical-align: top; width: 50%;\">method_6</td> <td style=\"vertical-align: top; width: 50%;\">javamethod_27</td> </tr> </tbody> </table> </li> <li>If the previous step has found no resource bundle, proceed to Step 6. If a bundle has been found that is a base bundle (a bundle for method_6), and the candidate locale list only contained method_6, return the bundle to the caller. If a bundle has been found that is a base bundle, but the candidate locale list contained locales other than method_6, put the bundle on hold and proceed to Step 6. If a bundle has been found that is not a base bundle, proceed to Step 7.</li> <li>The Rmethod_16 controlmethod_45 method is called to get a fallback locale (alternative to the current target locale) to try further finding a resource bundle. If the method returns a non-null locale, it becomes the next target locale and the loading process starts over from Step 3. Otherwise, if a base bundle was found and put on hold in a previous Step 5, it is returned to the caller now. Otherwise, a MissingResourceException is thrown.</li> <li>At this point, we have found a resource bundle that's not the base bundle. If this bundle set its parent during its instantiation, it is returned to the caller. Otherwise, its <a href=\"./method_46method_47\">parent chain</a> is instantiated based on the list of candidate locales from which it was found. Finally, the bundle is returned to the caller.</li>  During the resource bundle loading process above, this factory method looks up the cache before calling the method_17 controlmethod_33 method. If the time-to-live period of the resource bundle found in the cache has expired, the factory method calls the Rmethod_18 controlmethod_52 method to determine whether the resource bundle needs to be reloaded. If reloading is required, the factory method calls controlmethod_33 to reload the resource bundle. If controlmethod_33 returns null, the factory method puts a dummy resource bundle in the cache as a mark of nonexistent resource bundles in order to avoid lookup overhead for subsequent requests. Such dummy resource bundles are under the same expiration control as specified by control. All resource bundles loaded are cached by default. Refer to method_19 controlmethod_56 for details. The following is an example of the bundle loading process with the default method_23 implementation. Conditions:  <li>Base bundle name: foomethod_58method_59 <li>Requested Locale: method_60</li> <li>Default Locale: method_61</li> <li>Available resource bundles: foo/bar/Messages_frmethod_27 and foo/bar/Messagesmethod_27</li>  First, getBundle tries loading a resource bundle in the following sequence.  <li>class foomethod_58method_59_it_IT <li>file foo/bar/Messages_it_ITmethod_27 <li>class foomethod_58method_59_it</li> <li>file foo/bar/Messages_itmethod_27</li> <li>class foomethod_58method_59</li> <li>file foo/bar/Messagesmethod_27</li>  At this point, getBundle finds foo/bar/Messagesmethod_27, which is put on hold because it's the base bundle. getBundle calls method_20 method_21 which returns method_79. Next, getBundle tries loading a bundle in the following sequence.  <li>class foomethod_58method_59_fr</li> <li>file foo/bar/Messages_frmethod_27</li> <li>class foomethod_58method_59</li> <li>file foo/bar/Messagesmethod_27</li>  getBundle finds foo/bar/Messages_frmethod_27 and creates a ResourceBundle instance. Then, getBundle sets up its parent chain from the list of the candidate locales. Only foo/bar/Messagesmethod_27 is found in the list and getBundle creates a ResourceBundle instance that becomes the parent of the instance for foo/bar/Messages_frmethod_27.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clearCache()",
+    "name": "clearCache",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clearCache()",
+      "comment": "Removes all resource bundles from the cache that have been loaded using the caller's class loader.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clearCache(java.lang.ClassLoader loader)",
+    "name": "clearCache",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.ClassLoader",
+          "name": "ClassLoader",
+          "isArray": false
+        },
+        "name": "loader"
+      }
+    ],
+    "protocol": {
+      "member": "clearCache(java.lang.ClassLoader loader)",
+      "comment": "Removes all resource bundles from the cache that have been loaded using the given class loader.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "handleGetObject(java.lang.String key)",
+    "name": "handleGetObject",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "handleGetObject(java.lang.String key)",
+      "comment": "Gets an object for the given key from this resource bundle. Returns null if this resource bundle does not contain an object for the given key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getKeys()",
+    "name": "getKeys",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getKeys()",
+      "comment": "Returns an enumeration of the keys.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.String key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.String key)",
+      "comment": "Determines whether the given key is contained in this ResourceBundle or its parent bundles.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.lang.String>",
+      "name": "java.util.Set<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a Set of all keys contained in this ResourceBundle and its parent bundles.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "handleKeySet()",
+    "name": "handleKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.ResourceBundle",
+      "name": "ResourceBundle",
+      "isArray": false
+    },
+    "targetClass": "java.util.ResourceBundle",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.lang.String>",
+      "name": "java.util.Set<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "handleKeySet()",
+      "comment": "Returns a Set of the keys contained only in this ResourceBundle. The default implementation returns a Set of the keys returned by the method_0 getKeys method except for the ones for which the method_1 handleGetObject method returns null. Once the Set has been created, the value is kept in this ResourceBundle in order to avoid producing the same Set in subsequent calls. Subclasses can override this method for faster handling.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

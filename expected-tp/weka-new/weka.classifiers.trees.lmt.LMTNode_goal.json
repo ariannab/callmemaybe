@@ -1,0 +1,855 @@
+[
+  {
+    "signature": "weka.classifiers.trees.lmt.LMTNode(weka.classifiers.trees.j48.ModelSelection modelSelection, int numBoostingIterations, boolean fastRegression, boolean errorOnProbabilities, int minNumInstances, double weightTrimBeta, boolean useAIC, weka.filters.supervised.attribute.NominalToBinary ntb, int numDecimalPlaces)",
+    "name": "weka.classifiers.trees.lmt.LMTNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ModelSelection",
+          "name": "ModelSelection",
+          "isArray": false
+        },
+        "name": "modelSelection"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numBoostingIterations"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fastRegression"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "errorOnProbabilities"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minNumInstances"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weightTrimBeta"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "useAIC"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.filters.supervised.attribute.NominalToBinary",
+          "name": "NominalToBinary",
+          "isArray": false
+        },
+        "name": "ntb"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numDecimalPlaces"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.lmt.LMTNode(weka.classifiers.trees.j48.ModelSelection modelSelection, int numBoostingIterations, boolean fastRegression, boolean errorOnProbabilities, int minNumInstances, double weightTrimBeta, boolean useAIC, weka.filters.supervised.attribute.NominalToBinary ntb, int numDecimalPlaces)",
+      "comment": "Constructor for logistic model tree node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Method for building a logistic model tree (only called for the root node). Grows an initial logistic model tree and prunes it back using the CART pruning scheme.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildTree(weka.core.Instances data, weka.classifiers.trees.lmt.SimpleLinearRegression[][] higherRegressions, double totalInstanceWeight, double higherNumParameters, weka.core.Instances numericDataHeader)",
+    "name": "buildTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Lweka.classifiers.trees.lmt.SimpleLinearRegression;",
+          "name": "SimpleLinearRegression[][]",
+          "isArray": true
+        },
+        "name": "higherRegressions"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "totalInstanceWeight"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "higherNumParameters"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "numericDataHeader"
+      }
+    ],
+    "protocol": {
+      "member": "buildTree(weka.core.Instances data, weka.classifiers.trees.lmt.SimpleLinearRegression[][] higherRegressions, double totalInstanceWeight, double higherNumParameters, weka.core.Instances numericDataHeader)",
+      "comment": "Method for building the tree structure. Builds a logistic model, splits the node and recursively builds tree for child nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prune(double alpha)",
+    "name": "prune",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "alpha"
+      }
+    ],
+    "protocol": {
+      "member": "prune(double alpha)",
+      "comment": "Prunes a logistic model tree using the CART pruning scheme, given a cost-complexity parameter alpha.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prune(double[] alphas, double[] errors, weka.core.Instances test)",
+    "name": "prune",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "alphas"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "errors"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      }
+    ],
+    "protocol": {
+      "member": "prune(double[] alphas, double[] errors, weka.core.Instances test)",
+      "comment": "Method for performing one fold in the cross-validation of the cost-complexity parameter. Generates a sequence of alpha-values with error estimates for the corresponding (partially pruned) trees, given the test set of that fold.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unprune()",
+    "name": "unprune",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unprune()",
+      "comment": "Method to \"unprune\" a logistic model tree. Sets all leaf-fields to false. Faster than re-growing the tree because the logistic models do not have to be fit again.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryLogistic(weka.core.Instances data)",
+    "name": "tryLogistic",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "tryLogistic(weka.core.Instances data)",
+      "comment": "Determines the optimum number of LogitBoost iterations to perform by building a standalone logistic regression function on the training data. Used for the heuristic that avoids cross-validating this number again at every node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumInnerNodes()",
+    "name": "getNumInnerNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumInnerNodes()",
+      "comment": "Method to count the number of inner nodes in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumLeaves()",
+    "name": "getNumLeaves",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumLeaves()",
+      "comment": "Returns the number of leaves in the tree. Leaves are only counted if their logistic model has changed compared to the one of the parent node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "treeErrors()",
+    "name": "treeErrors",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "treeErrors()",
+      "comment": "Updates the numIncorrectTree field for all nodes. This is needed for calculating the alpha-values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateAlphas()",
+    "name": "calculateAlphas",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "calculateAlphas()",
+      "comment": "Updates the alpha field for all nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodes()",
+    "name": "getNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Vector<weka.classifiers.trees.lmt.LMTNode>",
+      "name": "java.util.Vector<weka.classifiers.trees.lmt.LMTNode>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNodes()",
+      "comment": "Return a list of all inner nodes in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodes(java.util.Vector<weka.classifiers.trees.lmt.LMTNode> nodeList)",
+    "name": "getNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Vector",
+          "name": "Vector",
+          "isArray": false
+        },
+        "name": "nodeList"
+      }
+    ],
+    "protocol": {
+      "member": "getNodes(java.util.Vector<weka.classifiers.trees.lmt.LMTNode> nodeList)",
+      "comment": "Fills a list with all inner nodes in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumericData(weka.core.Instances train)",
+    "name": "getNumericData",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      }
+    ],
+    "protocol": {
+      "member": "getNumericData(weka.core.Instances train)",
+      "comment": "Returns a numeric version of a set of instances. All nominal attributes are replaced by binary ones, and the class variable is replaced by a pseudo-class variable that is used by LogitBoost.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasModels()",
+    "name": "hasModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasModels()",
+      "comment": "Returns true if the logistic regression model at this node has changed compared to the one at the parent node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "modelDistributionForInstance(weka.core.Instance instance)",
+    "name": "modelDistributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "modelDistributionForInstance(weka.core.Instance instance)",
+      "comment": "Returns the class probabilities for an instance according to the logistic model at the node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Returns the class probabilities for an instance given by the logistic model tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numLeaves()",
+    "name": "numLeaves",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numLeaves()",
+      "comment": "Returns the number of leaves (normal count).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numNodes()",
+    "name": "numNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numNodes()",
+      "comment": "Returns the number of nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a description of the logistic model tree (tree structure and logistic models)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getModelParameters()",
+    "name": "getModelParameters",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getModelParameters()",
+      "comment": "Returns a string describing the number of LogitBoost iterations performed at this node, the total number of LogitBoost iterations performed (including iterations at higher levels in the tree), and the number of training examples at this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dumpTree(int depth, java.lang.StringBuffer text)",
+    "name": "dumpTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "depth"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "protocol": {
+      "member": "dumpTree(int depth, java.lang.StringBuffer text)",
+      "comment": "Help method for printing tree structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "assignIDs(int lastID)",
+    "name": "assignIDs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lastID"
+      }
+    ],
+    "protocol": {
+      "member": "assignIDs(int lastID)",
+      "comment": "Assigns unique IDs to all nodes in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "assignLeafModelNumbers(int leafCounter)",
+    "name": "assignLeafModelNumbers",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "leafCounter"
+      }
+    ],
+    "protocol": {
+      "member": "assignLeafModelNumbers(int leafCounter)",
+      "comment": "Assigns numbers to the logistic regression models at the leaves of the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "modelsToString()",
+    "name": "modelsToString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "modelsToString()",
+      "comment": "Returns a string describing the logistic regression function at the node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "Returns graph describing the tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LMTNode",
+      "name": "LMTNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LMTNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

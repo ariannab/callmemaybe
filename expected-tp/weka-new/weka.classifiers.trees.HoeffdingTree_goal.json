@@ -1,0 +1,1231 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -L The leaf prediction strategy to use. 0 = majority class, 1 = naive Bayes, 2 = naive Bayes adaptive. (default = 0)   -S The splitting criterion to use. 0 = Gini, 1 = Info gain (default = 0)   -E The allowable error in a split decision - values closer to zero will take longer to decide (default = 1e-7)   -H Threshold below which a split will be forced to break ties (default = 0method_0)   -M Minimum fraction of weight required down at least two branches for info gain splitting (default = 0method_1)   -G Grace period - the number of instances a leaf should observe between split attempts (default = 200)   -N The number of instances (weight) a leaf should observe before allowing naive Bayes to make predictions (NB or NB adaptive only) (default = 0)   -P Print leaf models when using naive Bayes at the leaves.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printLeafModelsTipText()",
+    "name": "printLeafModelsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "printLeafModelsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPrintLeafModels(boolean p)",
+    "name": "setPrintLeafModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "setPrintLeafModels(boolean p)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPrintLeafModels()",
+    "name": "getPrintLeafModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPrintLeafModels()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minimumFractionOfWeightInfoGainTipText()",
+    "name": "minimumFractionOfWeightInfoGainTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "minimumFractionOfWeightInfoGainTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinimumFractionOfWeightInfoGain(double m)",
+    "name": "setMinimumFractionOfWeightInfoGain",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "setMinimumFractionOfWeightInfoGain(double m)",
+      "comment": "Set the minimum fraction of weight required down at least two branches for info gain splitting",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinimumFractionOfWeightInfoGain()",
+    "name": "getMinimumFractionOfWeightInfoGain",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMinimumFractionOfWeightInfoGain()",
+      "comment": "Get the minimum fraction of weight required down at least two branches for info gain splitting",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "gracePeriodTipText()",
+    "name": "gracePeriodTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "gracePeriodTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setGracePeriod(double grace)",
+    "name": "setGracePeriod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "grace"
+      }
+    ],
+    "protocol": {
+      "member": "setGracePeriod(double grace)",
+      "comment": "Set the number of instances (or total weight of instances) a leaf should observe between split attempts",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGracePeriod()",
+    "name": "getGracePeriod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGracePeriod()",
+      "comment": "Get the number of instances (or total weight of instances) a leaf should observe between split attempts",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hoeffdingTieThresholdTipText()",
+    "name": "hoeffdingTieThresholdTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hoeffdingTieThresholdTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setHoeffdingTieThreshold(double ht)",
+    "name": "setHoeffdingTieThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "ht"
+      }
+    ],
+    "protocol": {
+      "member": "setHoeffdingTieThreshold(double ht)",
+      "comment": "Set the threshold below which a split will be forced to break ties",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHoeffdingTieThreshold()",
+    "name": "getHoeffdingTieThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getHoeffdingTieThreshold()",
+      "comment": "Get the threshold below which a split will be forced to break ties",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "splitConfidenceTipText()",
+    "name": "splitConfidenceTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "splitConfidenceTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSplitConfidence(double sc)",
+    "name": "setSplitConfidence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "sc"
+      }
+    ],
+    "protocol": {
+      "member": "setSplitConfidence(double sc)",
+      "comment": "Set the allowable error in a split decision. Values closer to zero will take longer to decide.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSplitConfidence()",
+    "name": "getSplitConfidence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSplitConfidence()",
+      "comment": "Get the allowable error in a split decision. Values closer to zero will take longer to decide.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "splitCriterionTipText()",
+    "name": "splitCriterionTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "splitCriterionTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSplitCriterion(weka.core.SelectedTag crit)",
+    "name": "setSplitCriterion",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "crit"
+      }
+    ],
+    "protocol": {
+      "member": "setSplitCriterion(weka.core.SelectedTag crit)",
+      "comment": "Set the split criterion to use (either Gini or info gain).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSplitCriterion()",
+    "name": "getSplitCriterion",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSplitCriterion()",
+      "comment": "Get the split criterion to use (either Gini or info gain).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leafPredictionStrategyTipText()",
+    "name": "leafPredictionStrategyTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "leafPredictionStrategyTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLeafPredictionStrategy(weka.core.SelectedTag strat)",
+    "name": "setLeafPredictionStrategy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "strat"
+      }
+    ],
+    "protocol": {
+      "member": "setLeafPredictionStrategy(weka.core.SelectedTag strat)",
+      "comment": "Set the leaf prediction strategy to use (majority class, naive Bayes or naive Bayes adaptive)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLeafPredictionStrategy()",
+    "name": "getLeafPredictionStrategy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLeafPredictionStrategy()",
+      "comment": "Get the leaf prediction strategy to use (majority class, naive Bayes or naive Bayes adaptive)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "naiveBayesPredictionThresholdTipText()",
+    "name": "naiveBayesPredictionThresholdTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "naiveBayesPredictionThresholdTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNaiveBayesPredictionThreshold(double n)",
+    "name": "setNaiveBayesPredictionThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "setNaiveBayesPredictionThreshold(double n)",
+      "comment": "Set the number of instances (weight) a leaf should observe before allowing naive Bayes to make predictions",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNaiveBayesPredictionThreshold()",
+    "name": "getNaiveBayesPredictionThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNaiveBayesPredictionThreshold()",
+      "comment": "Get the number of instances (weight) a leaf should observe before allowing naive Bayes to make predictions",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeHoeffdingBound(double max, double confidence, double weight)",
+    "name": "computeHoeffdingBound",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "max"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "confidence"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "protocol": {
+      "member": "computeHoeffdingBound(double max, double confidence, double weight)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Builds the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateClassifier(weka.core.Instance inst)",
+    "name": "updateClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "updateClassifier(weka.core.Instance inst)",
+      "comment": "Updates the classifier with the given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance inst)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance inst)",
+      "comment": "Returns class probabilities for an instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deactivateNode(weka.classifiers.trees.ht.ActiveHNode toDeactivate, weka.classifiers.trees.ht.SplitNode parent, java.lang.String parentBranch)",
+    "name": "deactivateNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.ht.ActiveHNode",
+          "name": "ActiveHNode",
+          "isArray": false
+        },
+        "name": "toDeactivate"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.ht.SplitNode",
+          "name": "SplitNode",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "parentBranch"
+      }
+    ],
+    "protocol": {
+      "member": "deactivateNode(weka.classifiers.trees.ht.ActiveHNode toDeactivate, weka.classifiers.trees.ht.SplitNode parent, java.lang.String parentBranch)",
+      "comment": "Deactivate (prevent growth) from the supplied node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "activateNode(weka.classifiers.trees.ht.InactiveHNode toActivate, weka.classifiers.trees.ht.SplitNode parent, java.lang.String parentBranch)",
+    "name": "activateNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.ht.InactiveHNode",
+          "name": "InactiveHNode",
+          "isArray": false
+        },
+        "name": "toActivate"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.ht.SplitNode",
+          "name": "SplitNode",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "parentBranch"
+      }
+    ],
+    "protocol": {
+      "member": "activateNode(weka.classifiers.trees.ht.InactiveHNode toActivate, weka.classifiers.trees.ht.SplitNode parent, java.lang.String parentBranch)",
+      "comment": "Activate (allow growth) the supplied node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trySplit(weka.classifiers.trees.ht.ActiveHNode node, weka.classifiers.trees.ht.SplitNode parent, java.lang.String parentBranch)",
+    "name": "trySplit",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.ht.ActiveHNode",
+          "name": "ActiveHNode",
+          "isArray": false
+        },
+        "name": "node"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.ht.SplitNode",
+          "name": "SplitNode",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "parentBranch"
+      }
+    ],
+    "protocol": {
+      "member": "trySplit(weka.classifiers.trees.ht.ActiveHNode node, weka.classifiers.trees.ht.SplitNode parent, java.lang.String parentBranch)",
+      "comment": "Try a split from the supplied node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newLearningNode()",
+    "name": "newLearningNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.ht.ActiveHNode",
+      "name": "weka.classifiers.trees.ht.ActiveHNode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newLearningNode()",
+      "comment": "Create a new learning node (either majority class, naive Bayes or naive Bayes adaptive)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Return a textual description of the mode",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphType()",
+    "name": "graphType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphType()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.HoeffdingTree",
+      "name": "HoeffdingTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.HoeffdingTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

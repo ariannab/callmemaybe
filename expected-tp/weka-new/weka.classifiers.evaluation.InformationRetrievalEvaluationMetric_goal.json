@@ -1,0 +1,114 @@
+[
+  {
+    "signature": "updateStatsForClassifier(double[] predictedDistribution, weka.core.Instance instance)",
+    "name": "updateStatsForClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.InformationRetrievalEvaluationMetric",
+      "name": "InformationRetrievalEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.InformationRetrievalEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "predictedDistribution"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForClassifier(double[] predictedDistribution, weka.core.Instance instance)",
+      "comment": "Updates the statistics about a classifiers performance for the current test instance. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStatistic(java.lang.String statName, int classIndex)",
+    "name": "getStatistic",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.InformationRetrievalEvaluationMetric",
+      "name": "InformationRetrievalEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.InformationRetrievalEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "statName"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getStatistic(java.lang.String statName, int classIndex)",
+      "comment": "Get the value of the named statistic for the given class index. If the implementing class is extending AbstractEvaluationMetric then the implementation of method_0 should just call this method with a classIndex of 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassWeightedAverageStatistic(java.lang.String statName)",
+    "name": "getClassWeightedAverageStatistic",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.InformationRetrievalEvaluationMetric",
+      "name": "InformationRetrievalEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.InformationRetrievalEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "statName"
+      }
+    ],
+    "protocol": {
+      "member": "getClassWeightedAverageStatistic(java.lang.String statName)",
+      "comment": "Get the weighted (by class) average for this statistic.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

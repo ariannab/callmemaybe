@@ -1,0 +1,66 @@
+[
+  {
+    "signature": "sourceFor(java.lang.String fileName)",
+    "name": "sourceFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSourceFactory",
+      "name": "FileSourceFactory",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSourceFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.stream.file.FileSource",
+      "name": "org.graphstream.stream.file.FileSource",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fileName"
+      }
+    ],
+    "protocol": {
+      "member": "sourceFor(java.lang.String fileName)",
+      "comment": "Create a file input for the given file name.  This method first tests if the file is a regular file and is readable. If so, it opens it and reads the magic cookie to test the known file formats that can be inferred from their header. If it works, it returns a file input for the format. Else it looks at the file name extension, and returns a file input for the extension. Finally if all fail, it throws a NotFoundException.   Notice that this method only creates the file input and does not connect it to a graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getXMLRootElement(java.lang.String fileName)",
+    "name": "getXMLRootElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSourceFactory",
+      "name": "FileSourceFactory",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSourceFactory",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fileName"
+      }
+    ],
+    "protocol": {
+      "member": "getXMLRootElement(java.lang.String fileName)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

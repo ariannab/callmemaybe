@@ -1,0 +1,652 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metaOption()",
+    "name": "metaOption",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "metaOption()",
+      "comment": "String describing option for setting meta classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -M <scheme specification> Full name of meta classifier, followed by options. (default: \"wekamethod_0method_1method_2\")  -X <number of folds> Sets the number of cross-validation folds.  -S <num> Random number seed. (default 1)  -B <classifier specification> Full class name of classifier to include, followed by scheme options. May be specified multiple times. (default: \"wekamethod_0method_1method_2R\")  -D If set, classifier is run in debug mode and may output additional info to the console",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "processMetaOptions(java.lang.String[] options)",
+    "name": "processMetaOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "processMetaOptions(java.lang.String[] options)",
+      "comment": "Process options setting meta classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numFoldsTipText()",
+    "name": "numFoldsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numFoldsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumFolds()",
+    "name": "getNumFolds",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumFolds()",
+      "comment": "Gets the number of folds for the cross-validation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumFolds(int numFolds)",
+    "name": "setNumFolds",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      }
+    ],
+    "protocol": {
+      "member": "setNumFolds(int numFolds)",
+      "comment": "Sets the number of folds for the cross-validation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metaClassifierTipText()",
+    "name": "metaClassifierTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "metaClassifierTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMetaClassifier(weka.classifiers.Classifier classifier)",
+    "name": "setMetaClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      }
+    ],
+    "protocol": {
+      "member": "setMetaClassifier(weka.classifiers.Classifier classifier)",
+      "comment": "Adds meta classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetaClassifier()",
+    "name": "getMetaClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier",
+      "name": "weka.classifiers.Classifier",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMetaClassifier()",
+      "comment": "Gets the meta classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns combined capabilities of the base classifiers, imethod_0., the capabilities all of them have in common.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Buildclassifier selects a classifier from the set of classifiers by minimising error on the training data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateMetaLevel(weka.core.Instances newData, java.util.Random random)",
+    "name": "generateMetaLevel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "newData"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "protocol": {
+      "member": "generateMetaLevel(weka.core.Instances newData, java.util.Random random)",
+      "comment": "Generates the meta data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Returns class probabilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Output a representation of this classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metaFormat(weka.core.Instances instances)",
+    "name": "metaFormat",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "metaFormat(weka.core.Instances instances)",
+      "comment": "Makes the format for the level-1 data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "metaInstance(weka.core.Instance instance)",
+    "name": "metaInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "metaInstance(weka.core.Instance instance)",
+      "comment": "Makes a level-1 instance from the given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "preExecution()",
+    "name": "preExecution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "preExecution()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "postExecution()",
+    "name": "postExecution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "postExecution()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Stacking",
+      "name": "Stacking",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Stacking",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

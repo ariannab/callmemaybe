@@ -1,0 +1,651 @@
+[
+  {
+    "signature": "weka.classifiers.trees.j48.ClassifierTree(weka.classifiers.trees.j48.ModelSelection toSelectLocModel)",
+    "name": "weka.classifiers.trees.j48.ClassifierTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ModelSelection",
+          "name": "ModelSelection",
+          "isArray": false
+        },
+        "name": "toSelectLocModel"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.ClassifierTree(weka.classifiers.trees.j48.ModelSelection toSelectLocModel)",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextID()",
+    "name": "nextID",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextID()",
+      "comment": "Gets the next unique node ID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resetID()",
+    "name": "resetID",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "resetID()",
+      "comment": "Resets the unique node ID counter (emethod_0. between repeated separate print types)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Method for building a classifier tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildTree(weka.core.Instances data, boolean keepData)",
+    "name": "buildTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "keepData"
+      }
+    ],
+    "protocol": {
+      "member": "buildTree(weka.core.Instances data, boolean keepData)",
+      "comment": "Builds the tree structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildTree(weka.core.Instances train, weka.core.Instances test, boolean keepData)",
+    "name": "buildTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "keepData"
+      }
+    ],
+    "protocol": {
+      "member": "buildTree(weka.core.Instances train, weka.core.Instances test, boolean keepData)",
+      "comment": "Builds the tree structure with hold out set",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance instance)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance instance)",
+      "comment": "Classifies an instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cleanup(weka.core.Instances justHeaderInfo)",
+    "name": "cleanup",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "justHeaderInfo"
+      }
+    ],
+    "protocol": {
+      "member": "cleanup(weka.core.Instances justHeaderInfo)",
+      "comment": "Cleanup in order to save memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance, boolean useLaplace)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "useLaplace"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance, boolean useLaplace)",
+      "comment": "Returns class probabilities for a weighted instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "assignIDs(int lastID)",
+    "name": "assignIDs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lastID"
+      }
+    ],
+    "protocol": {
+      "member": "assignIDs(int lastID)",
+      "comment": "Assigns a uniqe id to every node in the tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphType()",
+    "name": "graphType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphType()",
+      "comment": "Returns the type of graph this classifier represents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "Returns graph describing the tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prefix()",
+    "name": "prefix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "prefix()",
+      "comment": "Returns tree in prefix order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSource(java.lang.String className)",
+    "name": "toSource",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.StringBuffer[]",
+      "name": "java.lang.StringBuffer[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "className"
+      }
+    ],
+    "protocol": {
+      "member": "toSource(java.lang.String className)",
+      "comment": "Returns source code for the tree as an if-then statement. The class is assigned to variable \"p\", and assumes the tested instance is named \"i\". The results are returned as two stringbuffers: a section of code for assignment of the class, and a section of code containing support code (eg: other support methods).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numLeaves()",
+    "name": "numLeaves",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numLeaves()",
+      "comment": "Returns number of leaves in tree structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numNodes()",
+    "name": "numNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numNodes()",
+      "comment": "Returns number of nodes in tree structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Prints tree structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNewTree(weka.core.Instances data)",
+    "name": "getNewTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "weka.classifiers.trees.j48.ClassifierTree",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getNewTree(weka.core.Instances data)",
+      "comment": "Returns a newly created tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNewTree(weka.core.Instances train, weka.core.Instances test)",
+    "name": "getNewTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "weka.classifiers.trees.j48.ClassifierTree",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      }
+    ],
+    "protocol": {
+      "member": "getNewTree(weka.core.Instances train, weka.core.Instances test)",
+      "comment": "Returns a newly created tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMembershipValues(weka.core.Instance instance)",
+    "name": "getMembershipValues",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "getMembershipValues(weka.core.Instance instance)",
+      "comment": "Computes a list that indicates node membership",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "ClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.ClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,671 @@
+[
+  {
+    "signature": "java.util.WeakHashMap(int initialCapacity, float loadFactor)",
+    "name": "java.util.WeakHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "loadFactor"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.WeakHashMap(int initialCapacity, float loadFactor)",
+      "comment": "Constructs a new, empty WeakHashMap with the given initial capacity and the given load factor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.WeakHashMap(int initialCapacity)",
+    "name": "java.util.WeakHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.WeakHashMap(int initialCapacity)",
+      "comment": "Constructs a new, empty WeakHashMap with the given initial capacity and the default load factor (0method_0).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.WeakHashMap()",
+    "name": "java.util.WeakHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.WeakHashMap()",
+      "comment": "Constructs a new, empty WeakHashMap with the default initial capacity (16) and load factor (0method_0).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.WeakHashMap(java.util.Map<? extends K, ? extends V> m)",
+    "name": "java.util.WeakHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.WeakHashMap(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Constructs a new WeakHashMap with the same mappings as the specified map. The WeakHashMap is created with the default load factor (0method_0) and an initial capacity sufficient to hold the mappings in the specified map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unmaskNull(java.lang.Object key)",
+    "name": "unmaskNull",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "unmaskNull(java.lang.Object key)",
+      "comment": "Returns internal representation of null key back to caller as null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hash(java.lang.Object k)",
+    "name": "hash",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "protocol": {
+      "member": "hash(java.lang.Object k)",
+      "comment": "Retrieve object hash code and applies a supplemental hash function to the result hash, which defends against poor quality hash functions. This is critical because HashMap uses power-of-two length hash tables, that otherwise encounter collisions for hashCodes that do not differ in lower bits.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of key-value mappings in this map. This result is a snapshot, and may not reflect unprocessed entries that will be removed before next attempted access because they are no longer referenced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "Returns true if this map contains no key-value mappings. This result is a snapshot, and may not reflect unprocessed entries that will be removed before next attempted access because they are no longer referenced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that (key==null ? k==null : method_0, then this method returns v; otherwise it returns null. (There can be at most one such mapping.) A return value of null does not necessarily indicate that the map contains no mapping for the key; it's also possible that the map explicitly maps the key to null. The method_2 containsKey operation may be used to distinguish these two cases.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "Returns true if this map contains a mapping for the specified key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEntry(java.lang.Object key)",
+    "name": "getEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.WeakHashMap$Entry<K, V>",
+      "name": "java.util.WeakHashMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getEntry(java.lang.Object key)",
+      "comment": "Returns the entry associated with the specified key in this map. Returns null if the map contains no mapping for this key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "Associates the specified value with the specified key in this map. If the map previously contained a mapping for this key, the old value is replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resize(int newCapacity)",
+    "name": "resize",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "resize(int newCapacity)",
+      "comment": "Rehashes the contents of this map into a new array with a larger capacity. This method is called automatically when the number of keys in this map reaches its threshold. If current capacity is MAXIMUM_CAPACITY, this method does not resize the map, but sets threshold to method_0. This has the effect of preventing future calls.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(java.util.Map<? extends K, ? extends V> m)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "putAll(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Copies all of the mappings from the specified map to this map. These mappings will replace any mappings that this map had for any of the keys currently in the specified map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "Removes the mapping for a key from this weak hash map if it is present. More formally, if this map contains a mapping from key k to value v such that (key==null ? k==null : method_0, that mapping is removed. (The map can contain at most one such mapping.) Returns the value to which this map previously associated the key, or null if the map contained no mapping for the key. A return value of null does not necessarily indicate that the map contained no mapping for the key; it's also possible that the map explicitly mapped the key to null. The map will not contain a mapping for the specified key once the call returns.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeMapping(java.lang.Object o)",
+    "name": "removeMapping",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "removeMapping(java.lang.Object o)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the mappings from this map. The map will be empty after this call returns.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.isEmpty()<-receiverObjectID.isEmpty()"
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if this map maps one or more keys to the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<K>",
+      "name": "java.util.Set<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a Set view of the keys contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is modified while an iteration over the set is in progress (except through the iterator's own remove operation), the results of the iteration are undefined. The set supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll, and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "Returns a Collection view of the values contained in this map. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa. If the map is modified while an iteration over the collection is in progress (except through the iterator's own remove operation), the results of the iteration are undefined. The collection supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "Returns a Set view of the mappings contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is modified while an iteration over the set is in progress (except through the iterator's own remove operation, or through the setValue operation on a map entry returned by the iterator) the results of the iteration are undefined. The set supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.WeakHashMap",
+      "name": "WeakHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.WeakHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

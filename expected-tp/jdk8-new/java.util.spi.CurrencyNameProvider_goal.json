@@ -1,0 +1,100 @@
+[
+  {
+    "signature": "java.util.spi.CurrencyNameProvider()",
+    "name": "java.util.spi.CurrencyNameProvider",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.CurrencyNameProvider",
+      "name": "CurrencyNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.CurrencyNameProvider",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.spi.CurrencyNameProvider()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSymbol(java.lang.String currencyCode, java.util.Locale locale)",
+    "name": "getSymbol",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.CurrencyNameProvider",
+      "name": "CurrencyNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.CurrencyNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "currencyCode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getSymbol(java.lang.String currencyCode, java.util.Locale locale)",
+      "comment": "Gets the symbol of the given currency code for the specified locale. For example, for \"USD\" (US Dollar), the symbol is \"$\" if the specified locale is the US, while for other locales it may be \"US$\". If no symbol can be determined, null should be returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayName(java.lang.String currencyCode, java.util.Locale locale)",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.CurrencyNameProvider",
+      "name": "CurrencyNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.CurrencyNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "currencyCode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayName(java.lang.String currencyCode, java.util.Locale locale)",
+      "comment": "Returns a name for the currency that is appropriate for display to the user. The default implementation returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

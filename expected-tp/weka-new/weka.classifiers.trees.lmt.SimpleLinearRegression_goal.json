@@ -1,0 +1,283 @@
+[
+  {
+    "signature": "weka.classifiers.trees.lmt.SimpleLinearRegression()",
+    "name": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.trees.lmt.SimpleLinearRegression()",
+      "comment": "Default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.lmt.SimpleLinearRegression(int attIndex, double slope, double intercept)",
+    "name": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "slope"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "intercept"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.lmt.SimpleLinearRegression(int attIndex, double slope, double intercept)",
+      "comment": "Construct a simple linear regression model based on the given info.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addModel(weka.classifiers.trees.lmt.SimpleLinearRegression slr)",
+    "name": "addModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+          "name": "SimpleLinearRegression",
+          "isArray": false
+        },
+        "name": "slr"
+      }
+    ],
+    "protocol": {
+      "member": "addModel(weka.classifiers.trees.lmt.SimpleLinearRegression slr)",
+      "comment": "Takes the given simple linear regression model and adds it to this one. Does nothing if the given model is based on a different attribute. Assumes the given model has been initialized.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance inst)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance inst)",
+      "comment": "Generate a prediction for the supplied instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeMeans(weka.core.Instances insts)",
+    "name": "computeMeans",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "protocol": {
+      "member": "computeMeans(weka.core.Instances insts)",
+      "comment": "Computes the attribute means.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances insts)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances insts)",
+      "comment": "Builds a simple linear regression model given the supplied training data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "foundUsefulAttribute()",
+    "name": "foundUsefulAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "foundUsefulAttribute()",
+      "comment": "Returns true if a usable attribute was found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAttributeIndex()",
+    "name": "getAttributeIndex",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAttributeIndex()",
+      "comment": "Returns the index of the attribute used in the regression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSlope()",
+    "name": "getSlope",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSlope()",
+      "comment": "Returns the slope of the function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIntercept()",
+    "name": "getIntercept",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+      "name": "SimpleLinearRegression",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.SimpleLinearRegression",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getIntercept()",
+      "comment": "Returns the intercept of the function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

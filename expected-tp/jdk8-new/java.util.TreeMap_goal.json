@@ -1,0 +1,2007 @@
+[
+  {
+    "signature": "java.util.TreeMap()",
+    "name": "java.util.TreeMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.TreeMap()",
+      "comment": "Constructs a new, empty tree map, using the natural ordering of its keys. All keys inserted into the map must implement the Comparable interface. Furthermore, all such keys must be mutually comparable: method_0 must not throw a ClassCastException for any keys k1 and k2 in the map. If the user attempts to put a key into the map that violates this constraint (for example, the user attempts to put a string key into a map whose keys are integers), the method_1 call will throw a ClassCastException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.TreeMap(java.util.Comparator<? super K> comparator)",
+    "name": "java.util.TreeMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.TreeMap(java.util.Comparator<? super K> comparator)",
+      "comment": "Constructs a new, empty tree map, ordered according to the given comparator. All keys inserted into the map must be mutually comparable by the given comparator: method_0 must not throw a ClassCastException for any keys k1 and k2 in the map. If the user attempts to put a key into the map that violates this constraint, the method_1 call will throw a ClassCastException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.TreeMap(java.util.Map<? extends K, ? extends V> m)",
+    "name": "java.util.TreeMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.TreeMap(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Constructs a new tree map containing the same mappings as the given map, ordered according to the natural ordering of its keys. All keys inserted into the new map must implement the Comparable interface. Furthermore, all such keys must be mutually comparable: method_0 must not throw a ClassCastException for any keys k1 and k2 in the map. This method runs in n*method_1 time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.TreeMap(java.util.SortedMap<K, ? extends V> m)",
+    "name": "java.util.TreeMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.SortedMap",
+          "name": "SortedMap",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.TreeMap(java.util.SortedMap<K, ? extends V> m)",
+      "comment": "Constructs a new tree map containing the same mappings and using the same ordering as the specified sorted map. This method runs in linear time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of key-value mappings in this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "Returns true if this map contains a mapping for the specified key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if this map maps one or more keys to the specified value. More formally, returns true if and only if this map contains at least one mapping to a value v such that (value==null ? v==null : method_0. This operation will probably require time linear in the map size for most implementations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that key compares equal to k according to the map's ordering, then this method returns v; otherwise it returns null. (There can be at most one such mapping.) A return value of null does not necessarily indicate that the map contains no mapping for the key; it's also possible that the map explicitly maps the key to null. The method_0 containsKey operation may be used to distinguish these two cases.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparator()",
+    "name": "comparator",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<? super K>",
+      "name": "java.util.Comparator<? super K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "comparator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstKey()",
+    "name": "firstKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "firstKey()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastKey()",
+    "name": "lastKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lastKey()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(java.util.Map<? extends K, ? extends V> map)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "map"
+      }
+    ],
+    "protocol": {
+      "member": "putAll(java.util.Map<? extends K, ? extends V> map)",
+      "comment": "Copies all of the mappings from the specified map to this map. These mappings replace any mappings that this map had for any of the keys currently in the specified map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEntry(java.lang.Object key)",
+    "name": "getEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getEntry(java.lang.Object key)",
+      "comment": "Returns this map's entry for the given key, or null if the map does not contain an entry for the key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEntryUsingComparator(java.lang.Object key)",
+    "name": "getEntryUsingComparator",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getEntryUsingComparator(java.lang.Object key)",
+      "comment": "Version of getEntry using comparator. Split off from getEntry for performance. (This is not worth doing for most methods, that are less dependent on comparator performance, but is worthwhile here.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCeilingEntry(K key)",
+    "name": "getCeilingEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getCeilingEntry(K key)",
+      "comment": "Gets the entry corresponding to the specified key; if no such entry exists, returns the entry for the least key greater than the specified key; if no such entry exists (imethod_0., the greatest key in the Tree is less than the specified key), returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFloorEntry(K key)",
+    "name": "getFloorEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getFloorEntry(K key)",
+      "comment": "Gets the entry corresponding to the specified key; if no such entry exists, returns the entry for the greatest key less than the specified key; if no such entry exists, returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHigherEntry(K key)",
+    "name": "getHigherEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getHigherEntry(K key)",
+      "comment": "Gets the entry for the least key greater than the specified key; if no such entry exists, returns the entry for the least key greater than the specified key; if no such entry exists returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLowerEntry(K key)",
+    "name": "getLowerEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getLowerEntry(K key)",
+      "comment": "Returns the entry for the greatest key less than the specified key; if no such entry exists (imethod_0., the least key in the Tree is greater than the specified key), returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "Associates the specified value with the specified key in this map. If the map previously contained a mapping for the key, the old value is replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "Removes the mapping for this key from this TreeMap if present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the mappings from this map. The map will be empty after this call returns.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.isEmpty()<-receiverObjectID.isEmpty()"
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a shallow copy of this TreeMap instance. (The keys and values themselves are not cloned.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstEntry()",
+    "name": "firstEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "firstEntry()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastEntry()",
+    "name": "lastEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lastEntry()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollFirstEntry()",
+    "name": "pollFirstEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pollFirstEntry()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollLastEntry()",
+    "name": "pollLastEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pollLastEntry()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerEntry(K key)",
+    "name": "lowerEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "lowerEntry(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerKey(K key)",
+    "name": "lowerKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "lowerKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floorEntry(K key)",
+    "name": "floorEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "floorEntry(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floorKey(K key)",
+    "name": "floorKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "floorKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ceilingEntry(K key)",
+    "name": "ceilingEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "ceilingEntry(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ceilingKey(K key)",
+    "name": "ceilingKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "ceilingKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "higherEntry(K key)",
+    "name": "higherEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "higherEntry(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "higherKey(K key)",
+    "name": "higherKey",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "higherKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<K>",
+      "name": "java.util.Set<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a Set view of the keys contained in this map. The set's iterator returns the keys in ascending order. The set's spliterator is <a href=\"method_2method_3\">late-binding</a>, fail-fast, and additionally reports method_4 and method_5 with an encounter order that is ascending key order. The spliterator's comparator (see java.method_0) is null if the tree map's comparator (see method_1) is null. Otherwise, the spliterator's comparator is the same as or imposes the same total ordering as the tree map's comparator. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is modified while an iteration over the set is in progress (except through the iterator's own remove operation), the results of the iteration are undefined. The set supports element removal, which removes the corresponding mapping from the map, via the method_10, method_11, removeAll, retainAll, and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "navigableKeySet()",
+    "name": "navigableKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableSet<K>",
+      "name": "java.util.NavigableSet<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "navigableKeySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingKeySet()",
+    "name": "descendingKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableSet<K>",
+      "name": "java.util.NavigableSet<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingKeySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "Returns a Collection view of the values contained in this map. The collection's iterator returns the values in ascending order of the corresponding keys. The collection's spliterator is <a href=\"method_0method_1\">late-binding</a>, fail-fast, and additionally reports method_2 with an encounter order that is ascending order of the corresponding keys. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa. If the map is modified while an iteration over the collection is in progress (except through the iterator's own remove operation), the results of the iteration are undefined. The collection supports element removal, which removes the corresponding mapping from the map, via the method_3, method_4, removeAll, retainAll and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "Returns a Set view of the mappings contained in this map. The set's iterator returns the entries in ascending key order. The sets's spliterator is <a href=\"method_0method_1\">late-binding</a>, fail-fast, and additionally reports method_2 and method_3 with an encounter order that is ascending key order. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is modified while an iteration over the set is in progress (except through the iterator's own remove operation, or through the setValue operation on a map entry returned by the iterator) the results of the iteration are undefined. The set supports element removal, which removes the corresponding mapping from the map, via the method_4, method_5, removeAll, retainAll and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingMap()",
+    "name": "descendingMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableMap<K, V>",
+      "name": "java.util.NavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingMap()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)",
+    "name": "subMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableMap<K, V>",
+      "name": "java.util.NavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fromInclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "toInclusive"
+      }
+    ],
+    "protocol": {
+      "member": "subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "headMap(K toKey, boolean inclusive)",
+    "name": "headMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableMap<K, V>",
+      "name": "java.util.NavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "protocol": {
+      "member": "headMap(K toKey, boolean inclusive)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailMap(K fromKey, boolean inclusive)",
+    "name": "tailMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableMap<K, V>",
+      "name": "java.util.NavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "protocol": {
+      "member": "tailMap(K fromKey, boolean inclusive)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subMap(K fromKey, K toKey)",
+    "name": "subMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedMap<K, V>",
+      "name": "java.util.SortedMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      }
+    ],
+    "protocol": {
+      "member": "subMap(K fromKey, K toKey)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "headMap(K toKey)",
+    "name": "headMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedMap<K, V>",
+      "name": "java.util.SortedMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      }
+    ],
+    "protocol": {
+      "member": "headMap(K toKey)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailMap(K fromKey)",
+    "name": "tailMap",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.SortedMap<K, V>",
+      "name": "java.util.SortedMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      }
+    ],
+    "protocol": {
+      "member": "tailMap(K fromKey)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V oldValue, V newValue)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "oldValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V oldValue, V newValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V value)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V value)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keyIterator()",
+    "name": "keyIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<K>",
+      "name": "java.util.Iterator<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keyIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingKeyIterator()",
+    "name": "descendingKeyIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<K>",
+      "name": "java.util.Iterator<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingKeyIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compare(java.lang.Object k1, java.lang.Object k2)",
+    "name": "compare",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k2"
+      }
+    ],
+    "protocol": {
+      "member": "compare(java.lang.Object k1, java.lang.Object k2)",
+      "comment": "Compares two keys using the correct comparison method for this TreeMap.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valEquals(java.lang.Object o1, java.lang.Object o2)",
+    "name": "valEquals",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o2"
+      }
+    ],
+    "protocol": {
+      "member": "valEquals(java.lang.Object o1, java.lang.Object o2)",
+      "comment": "Test two values for equality. Differs from method_0 only in that it copes with null o1 properly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exportEntry(java.util.TreeMap$Entry<K, V> e)",
+    "name": "exportEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TreeMap$Entry",
+          "name": "Entry",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "exportEntry(java.util.TreeMap$Entry<K, V> e)",
+      "comment": "Return SimpleImmutableEntry for entry, or null if null",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keyOrNull(java.util.TreeMap$Entry<K, V> e)",
+    "name": "keyOrNull",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TreeMap$Entry",
+          "name": "Entry",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "keyOrNull(java.util.TreeMap$Entry<K, V> e)",
+      "comment": "Return key for entry, or null if null",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "key(java.util.TreeMap$Entry<K, ?> e)",
+    "name": "key",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TreeMap$Entry",
+          "name": "Entry",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "key(java.util.TreeMap$Entry<K, ?> e)",
+      "comment": "Returns the key corresponding to the specified Entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFirstEntry()",
+    "name": "getFirstEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFirstEntry()",
+      "comment": "Returns the first Entry in the TreeMap (according to the TreeMap's key-sort function). Returns null if the TreeMap is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLastEntry()",
+    "name": "getLastEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLastEntry()",
+      "comment": "Returns the last Entry in the TreeMap (according to the TreeMap's key-sort function). Returns null if the TreeMap is empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "successor(java.util.TreeMap$Entry<K, V> t)",
+    "name": "successor",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TreeMap$Entry",
+          "name": "Entry",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "successor(java.util.TreeMap$Entry<K, V> t)",
+      "comment": "Returns the successor of the specified Entry, or null if no such.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "predecessor(java.util.TreeMap$Entry<K, V> t)",
+    "name": "predecessor",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.TreeMap$Entry<K, V>",
+      "name": "java.util.TreeMap$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.TreeMap$Entry",
+          "name": "Entry",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "predecessor(java.util.TreeMap$Entry<K, V> t)",
+      "comment": "Returns the predecessor of the specified Entry, or null if no such.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readTreeSet(int size, java.io.ObjectInputStream s, V defaultVal)",
+    "name": "readTreeSet",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.io.ObjectInputStream",
+          "name": "ObjectInputStream",
+          "isArray": false
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultVal"
+      }
+    ],
+    "protocol": {
+      "member": "readTreeSet(int size, java.io.ObjectInputStream s, V defaultVal)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAllForTreeSet(java.util.SortedSet<? extends K> set, V defaultVal)",
+    "name": "addAllForTreeSet",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.SortedSet",
+          "name": "SortedSet",
+          "isArray": false
+        },
+        "name": "set"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultVal"
+      }
+    ],
+    "protocol": {
+      "member": "addAllForTreeSet(java.util.SortedSet<? extends K> set, V defaultVal)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySpliteratorFor(java.util.NavigableMap<K, ?> m)",
+    "name": "keySpliteratorFor",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<K>",
+      "name": "java.util.Spliterator<K>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.NavigableMap",
+          "name": "NavigableMap",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "keySpliteratorFor(java.util.NavigableMap<K, ?> m)",
+      "comment": "Currently, we support Spliterator-based versions only for the full map, in either plain of descending form, otherwise relying on defaults because size estimation for submaps would dominate costs. The type tests needed to check these for key views are not very nice but avoid disrupting existing class structures. Callers must use plain default spliterators if this returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySpliterator()",
+    "name": "keySpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<K>",
+      "name": "java.util.Spliterator<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySpliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingKeySpliterator()",
+    "name": "descendingKeySpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.TreeMap",
+      "name": "TreeMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.TreeMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<K>",
+      "name": "java.util.Spliterator<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingKeySpliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

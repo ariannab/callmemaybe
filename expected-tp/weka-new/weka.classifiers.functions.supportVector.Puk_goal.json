@@ -1,0 +1,572 @@
+[
+  {
+    "signature": "weka.classifiers.functions.supportVector.Puk()",
+    "name": "weka.classifiers.functions.supportVector.Puk",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.functions.supportVector.Puk()",
+      "comment": "default constructor - does nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.functions.supportVector.Puk(weka.core.Instances data, int cacheSize, double omega, double sigma)",
+    "name": "weka.classifiers.functions.supportVector.Puk",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "cacheSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "omega"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "sigma"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.functions.supportVector.Puk(weka.core.Instances data, int cacheSize, double omega, double sigma)",
+      "comment": "Constructor. Initializes m_kernelPrecalc[].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing the kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -D Enables debugging output (if available) to be printed. (default: off)   -no-checks Turns off all checks - use with caution! (default: checks on)   -C <num> The size of the cache (a prime number), 0 for full cache and -1 to turn it off. (default: 250007)   -O <num> The Omega parameter. (default: 1method_0)   -S <num> The Sigma parameter. (default: 1method_0)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Kernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(int id1, int id2, weka.core.Instance inst1)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "id1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "id2"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst1"
+      }
+    ],
+    "protocol": {
+      "member": "evaluate(int id1, int id2, weka.core.Instance inst1)",
+      "comment": "returns the dot product",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOmega(double value)",
+    "name": "setOmega",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setOmega(double value)",
+      "comment": "Sets the omega value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOmega()",
+    "name": "getOmega",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOmega()",
+      "comment": "Gets the omega value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "omegaTipText()",
+    "name": "omegaTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "omegaTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSigma(double value)",
+    "name": "setSigma",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setSigma(double value)",
+      "comment": "Sets the sigma value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSigma()",
+    "name": "getSigma",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSigma()",
+      "comment": "Gets the sigma value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sigmaTipText()",
+    "name": "sigmaTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sigmaTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeFactor(double omega, double sigma)",
+    "name": "computeFactor",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "omega"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "sigma"
+      }
+    ],
+    "protocol": {
+      "member": "computeFactor(double omega, double sigma)",
+      "comment": "computes the factor for curve-fitting (see equation (13) in paper)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initVars(weka.core.Instances data)",
+    "name": "initVars",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "initVars(weka.core.Instances data)",
+      "comment": "initializes variables etc.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns the Capabilities of this kernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildKernel(weka.core.Instances data)",
+    "name": "buildKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildKernel(weka.core.Instances data)",
+      "comment": "builds the kernel with the given data. Initializes the kernel cache. The actual size of the cache in bytes is (64 * cacheSize).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "returns a string representation for the Kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Puk",
+      "name": "Puk",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.Puk",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

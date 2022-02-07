@@ -1,0 +1,771 @@
+[
+  {
+    "signature": "weka.classifiers.CostMatrix(int numOfClasses)",
+    "name": "weka.classifiers.CostMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numOfClasses"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.CostMatrix(int numOfClasses)",
+      "comment": "Creates a default cost matrix of a particular size. All diagonal values will be 0 and all non-diagonal values 1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.CostMatrix(weka.classifiers.CostMatrix toCopy)",
+    "name": "weka.classifiers.CostMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.CostMatrix",
+          "name": "CostMatrix",
+          "isArray": false
+        },
+        "name": "toCopy"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.CostMatrix(weka.classifiers.CostMatrix toCopy)",
+      "comment": "Creates a cost matrix that is a copy of another.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.CostMatrix(java.io.Reader reader)",
+    "name": "weka.classifiers.CostMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Reader",
+          "name": "Reader",
+          "isArray": false
+        },
+        "name": "reader"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.CostMatrix(java.io.Reader reader)",
+      "comment": "Reads a matrix from a reader. The first line in the file should contain the number of rows and columns. Subsequent lines contain elements of the matrix. (FracPete: taken from old wekamethod_0method_1 class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initialize()",
+    "name": "initialize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initialize()",
+      "comment": "Initializes the matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "The number of rows (and columns)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numColumns()",
+    "name": "numColumns",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numColumns()",
+      "comment": "Same as size",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numRows()",
+    "name": "numRows",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numRows()",
+      "comment": "Same as size",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyCostMatrix(weka.core.Instances data, java.util.Random random)",
+    "name": "applyCostMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "protocol": {
+      "member": "applyCostMatrix(weka.core.Instances data, java.util.Random random)",
+      "comment": "Applies the cost matrix to a set of instances. If a random number generator is supplied the instances will be resampled, otherwise they will be rewighted. Adapted from code once sitting in method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "expectedCosts(double[] classProbs)",
+    "name": "expectedCosts",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "classProbs"
+      }
+    ],
+    "protocol": {
+      "member": "expectedCosts(double[] classProbs)",
+      "comment": "Calculates the expected misclassification cost for each possible class value, given class probability estimates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "expectedCosts(double[] classProbs, weka.core.Instance inst)",
+    "name": "expectedCosts",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "classProbs"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "expectedCosts(double[] classProbs, weka.core.Instance inst)",
+      "comment": "Calculates the expected misclassification cost for each possible class value, given class probability estimates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxCost(int classVal)",
+    "name": "getMaxCost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classVal"
+      }
+    ],
+    "protocol": {
+      "member": "getMaxCost(int classVal)",
+      "comment": "Gets the maximum cost for a particular class value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxCost(int classVal, weka.core.Instance inst)",
+    "name": "getMaxCost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classVal"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "getMaxCost(int classVal, weka.core.Instance inst)",
+      "comment": "Gets the maximum cost for a particular class value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normalize()",
+    "name": "normalize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "normalize()",
+      "comment": "Normalizes the matrix so that the diagonal contains zeros.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readOldFormat(java.io.Reader reader)",
+    "name": "readOldFormat",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Reader",
+          "name": "Reader",
+          "isArray": false
+        },
+        "name": "reader"
+      }
+    ],
+    "protocol": {
+      "member": "readOldFormat(java.io.Reader reader)",
+      "comment": "Loads a cost matrix in the old format from a reader. Adapted from code once sitting in method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "write(java.io.Writer w)",
+    "name": "write",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Writer",
+          "name": "Writer",
+          "isArray": false
+        },
+        "name": "w"
+      }
+    ],
+    "protocol": {
+      "member": "write(java.io.Writer w)",
+      "comment": "Writes out a matrix. The format can be read via the method_0 constructor. (FracPete: taken from old wekamethod_1method_2 class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMatlab()",
+    "name": "toMatlab",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toMatlab()",
+      "comment": "converts the Matrix into a single line Matlab string: matrix is enclosed by parentheses, rows are separated by semicolon and single cells by blanks, emethod_0., [1 2; 3 4].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parseMatlab(java.lang.String matlab)",
+    "name": "parseMatlab",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "weka.classifiers.CostMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "matlab"
+      }
+    ],
+    "protocol": {
+      "member": "parseMatlab(java.lang.String matlab)",
+      "comment": "creates a matrix from the given Matlab string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCell(int rowIndex, int columnIndex, java.lang.Object value)",
+    "name": "setCell",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setCell(int rowIndex, int columnIndex, java.lang.Object value)",
+      "comment": "Set the value of a particular cell in the matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCell(int rowIndex, int columnIndex)",
+    "name": "getCell",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getCell(int rowIndex, int columnIndex)",
+      "comment": "Return the contents of a particular cell. Note: this method returns the Object stored at a particular cell.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElement(int rowIndex, int columnIndex)",
+    "name": "getElement",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getElement(int rowIndex, int columnIndex)",
+      "comment": "Return the value of a cell as a double (for legacy code)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElement(int rowIndex, int columnIndex, weka.core.Instance inst)",
+    "name": "getElement",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "getElement(int rowIndex, int columnIndex, weka.core.Instance inst)",
+      "comment": "Return the value of a cell as a double. Computes the value for non-fixed costs using the supplied Instance",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setElement(int rowIndex, int columnIndex, double value)",
+    "name": "setElement",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rowIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "columnIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setElement(int rowIndex, int columnIndex, double value)",
+      "comment": "Set the value of a cell as a double",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Converts a matrix to a string. (FracPete: taken from old wekamethod_0method_1 class)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "CostMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.CostMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

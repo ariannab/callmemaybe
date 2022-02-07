@@ -1,0 +1,397 @@
+[
+  {
+    "signature": "compile(java.lang.String regex)",
+    "name": "compile",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "java.util.regex.Pattern",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      }
+    ],
+    "protocol": {
+      "member": "compile(java.lang.String regex)",
+      "comment": "Compiles the given regular expression into a pattern.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compile(java.lang.String regex, int flags)",
+    "name": "compile",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "java.util.regex.Pattern",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "protocol": {
+      "member": "compile(java.lang.String regex, int flags)",
+      "comment": "Compiles the given regular expression into a pattern with the given flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pattern()",
+    "name": "pattern",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pattern()",
+      "comment": "Returns the regular expression from which this pattern was compiled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the string representation of this pattern. This is the regular expression from which this pattern was compiled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matcher(java.lang.CharSequence input)",
+    "name": "matcher",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "input"
+      }
+    ],
+    "protocol": {
+      "member": "matcher(java.lang.CharSequence input)",
+      "comment": "Creates a matcher that will match the given input against this pattern.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flags()",
+    "name": "flags",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flags()",
+      "comment": "Returns this pattern's match flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matches(java.lang.String regex, java.lang.CharSequence input)",
+    "name": "matches",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "regex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "input"
+      }
+    ],
+    "protocol": {
+      "member": "matches(java.lang.String regex, java.lang.CharSequence input)",
+      "comment": "Compiles the given regular expression and attempts to match the given input against it.  An invocation of this convenience method of the form <blockquote><pre> method_0;</pre></blockquote> behaves in exactly the same way as the expression <blockquote><pre> method_1method_2method_3</pre></blockquote> <p> If a pattern is to be used multiple times, compiling it once and reusing it will be more efficient than invoking this method each time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "split(java.lang.CharSequence input, int limit)",
+    "name": "split",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "input"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "limit"
+      }
+    ],
+    "protocol": {
+      "member": "split(java.lang.CharSequence input, int limit)",
+      "comment": "Splits the given input sequence around matches of this pattern.  The array returned by this method contains each substring of the input sequence that is terminated by another subsequence that matches this pattern or is terminated by the end of the input sequence. The substrings in the array are in the order in which they occur in the input. If this pattern does not match any subsequence of the input then the resulting array has just one element, namely the input sequence in string form.  When there is a positive-width match at the beginning of the input sequence then an empty leading substring is included at the beginning of the resulting array. A zero-width match at the beginning however never produces such empty leading substring.  The limit parameter controls the number of times the pattern is applied and therefore affects the length of the resulting array. If the limit n is greater than zero then the pattern will be applied at most n&nbsp;-&nbsp;1 times, the array's length will be no greater than n, and the array's last entry will contain all input beyond the last matched delimiter. If n is non-positive then the pattern will be applied as many times as possible and the array can have any length. If n is zero then the pattern will be applied as many times as possible, the array can have any length, and trailing empty strings will be discarded.  The input \"boo:and:foo\", for example, yields the following results with these parameters: <table cellpadding=1 cellspacing=0 summary=\"Split examples showing regex, limit, and result\"> <tr><th align=\"left\"><i>Regex&nbsp;&nbsp;&nbsp;&nbsp;</i></th> <th align=\"left\"><i>Limit&nbsp;&nbsp;&nbsp;&nbsp;</i></th> <th align=\"left\"><i>Result&nbsp;&nbsp;&nbsp;&nbsp;</i></th></tr> <tr><td align=center>:</td> <td align=center>2</td> <td><tt>{ \"boo\", \"and:foo\" }</tt></td></tr> <tr><td align=center>:</td> <td align=center>5</td> <td><tt>{ \"boo\", \"and\", \"foo\" }</tt></td></tr> <tr><td align=center>:</td> <td align=center>-2</td> <td><tt>{ \"boo\", \"and\", \"foo\" }</tt></td></tr> <tr><td align=center>o</td> <td align=center>5</td> <td><tt>{ \"b\", \"\", \":and:f\", \"\", \"\" }</tt></td></tr> <tr><td align=center>o</td> <td align=center>-2</td> <td><tt>{ \"b\", \"\", \":and:f\", \"\", \"\" }</tt></td></tr> <tr><td align=center>o</td> <td align=center>0</td> <td><tt>{ \"b\", \"\", \":and:f\" }</tt></td></tr> </table>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "split(java.lang.CharSequence input)",
+    "name": "split",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "input"
+      }
+    ],
+    "protocol": {
+      "member": "split(java.lang.CharSequence input)",
+      "comment": "Splits the given input sequence around matches of this pattern.  This method works as if by invoking the two-argument method_0 split method with the given input sequence and a limit argument of zero. Trailing empty strings are therefore not included in the resulting array.  <p> The input \"boo:and:foo\", for example, yields the following results with these expressions: <table cellpadding=1 cellspacing=0 summary=\"Split examples showing regex and result\"> <tr><th align=\"left\"><i>Regex&nbsp;&nbsp;&nbsp;&nbsp;</i></th> <th align=\"left\"><i>Result</i></th></tr> <tr><td align=center>:</td> <td><tt>{ \"boo\", \"and\", \"foo\" }</tt></td></tr> <tr><td align=center>o</td> <td><tt>{ \"b\", \"\", \":and:f\" }</tt></td></tr> </table>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "quote(java.lang.String s)",
+    "name": "quote",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "quote(java.lang.String s)",
+      "comment": "Returns a literal pattern String for the specified String. This method produces a String that can be used to create a Pattern that would match the string s as if it were a literal pattern. Metacharacters or escape sequences in the input sequence will be given no special meaning.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "namedGroups()",
+    "name": "namedGroups",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.lang.Integer>",
+      "name": "java.util.Map<java.lang.String, java.lang.Integer>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "namedGroups()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asPredicate()",
+    "name": "asPredicate",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.Predicate<java.lang.String>",
+      "name": "java.util.function.Predicate<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asPredicate()",
+      "comment": "Creates a predicate which can be used to match a string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "splitAsStream(java.lang.CharSequence input)",
+    "name": "splitAsStream",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "Pattern",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Pattern",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Stream<java.lang.String>",
+      "name": "java.util.stream.Stream<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "input"
+      }
+    ],
+    "protocol": {
+      "member": "splitAsStream(java.lang.CharSequence input)",
+      "comment": "Creates a stream from the given input sequence around matches of this pattern.  The stream returned by this method contains each substring of the input sequence that is terminated by another subsequence that matches this pattern or is terminated by the end of the input sequence. The substrings in the stream are in the order in which they occur in the input. Trailing empty strings will be discarded and not encountered in the stream.  If this pattern does not match any subsequence of the input then the resulting stream has just one element, namely the input sequence in string form.  When there is a positive-width match at the beginning of the input sequence then an empty leading substring is included at the beginning of the stream. A zero-width match at the beginning however never produces such empty leading substring.  If the input sequence is mutable, it must remain constant during the execution of the terminal stream operation. Otherwise, the result of the terminal stream operation is undefined.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,921 @@
+[
+  {
+    "signature": "addFirst(E e)",
+    "name": "addFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "addFirst(E e)",
+      "comment": "Inserts the specified element at the front of this deque if it is possible to do so immediately without violating capacity restrictions, throwing an IllegalStateException if no space is currently available. When using a capacity-restricted deque, it is generally preferable to use method_0 offerFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addLast(E e)",
+    "name": "addLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "addLast(E e)",
+      "comment": "Inserts the specified element at the end of this deque if it is possible to do so immediately without violating capacity restrictions, throwing an IllegalStateException if no space is currently available. When using a capacity-restricted deque, it is generally preferable to use method_0 offerLast.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offerFirst(E e)",
+    "name": "offerFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offerFirst(E e)",
+      "comment": "Inserts the specified element at the front of this deque if it is possible to do so immediately without violating capacity restrictions, returning true upon success and false if no space is currently available. When using a capacity-restricted deque, this method is generally preferable to the method_0 addFirst method, which can fail to insert an element only by throwing an exception.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offerLast(E e)",
+    "name": "offerLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offerLast(E e)",
+      "comment": "Inserts the specified element at the end of this deque if it is possible to do so immediately without violating capacity restrictions, returning true upon success and false if no space is currently available. When using a capacity-restricted deque, this method is generally preferable to the method_0 addLast method, which can fail to insert an element only by throwing an exception.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putFirst(E e)",
+    "name": "putFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "putFirst(E e)",
+      "comment": "Inserts the specified element at the front of this deque, waiting if necessary for space to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putLast(E e)",
+    "name": "putLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "putLast(E e)",
+      "comment": "Inserts the specified element at the end of this deque, waiting if necessary for space to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offerFirst(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "offerFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "offerFirst(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Inserts the specified element at the front of this deque, waiting up to the specified wait time if necessary for space to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offerLast(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "offerLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "offerLast(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Inserts the specified element at the end of this deque, waiting up to the specified wait time if necessary for space to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "takeFirst()",
+    "name": "takeFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "takeFirst()",
+      "comment": "Retrieves and removes the first element of this deque, waiting if necessary until an element becomes available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "takeLast()",
+    "name": "takeLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "takeLast()",
+      "comment": "Retrieves and removes the last element of this deque, waiting if necessary until an element becomes available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollFirst(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "pollFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "pollFirst(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Retrieves and removes the first element of this deque, waiting up to the specified wait time if necessary for an element to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollLast(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "pollLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "pollLast(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Retrieves and removes the last element of this deque, waiting up to the specified wait time if necessary for an element to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeFirstOccurrence(java.lang.Object o)",
+    "name": "removeFirstOccurrence",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "removeFirstOccurrence(java.lang.Object o)",
+      "comment": "Removes the first occurrence of the specified element from this deque. If the deque does not contain the element, it is unchanged. More formally, removes the first element e such that method_0 (if such an element exists). Returns true if this deque contained the specified element (or equivalently, if this deque changed as a result of the call).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeLastOccurrence(java.lang.Object o)",
+    "name": "removeLastOccurrence",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "removeLastOccurrence(java.lang.Object o)",
+      "comment": "Removes the last occurrence of the specified element from this deque. If the deque does not contain the element, it is unchanged. More formally, removes the last element e such that method_0 (if such an element exists). Returns true if this deque contained the specified element (or equivalently, if this deque changed as a result of the call).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "add(E e)",
+      "comment": "Inserts the specified element into the queue represented by this deque (in other words, at the tail of this deque) if it is possible to do so immediately without violating capacity restrictions, returning true upon success and throwing an IllegalStateException if no space is currently available. When using a capacity-restricted deque, it is generally preferable to use method_0 offer. This method is equivalent to method_1 addLast.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e)",
+      "comment": "Inserts the specified element into the queue represented by this deque (in other words, at the tail of this deque) if it is possible to do so immediately without violating capacity restrictions, returning true upon success and false if no space is currently available. When using a capacity-restricted deque, this method is generally preferable to the method_1 method, which can fail to insert an element only by throwing an exception. This method is equivalent to method_0 offerLast.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(E e)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "put(E e)",
+      "comment": "Inserts the specified element into the queue represented by this deque (in other words, at the tail of this deque), waiting if necessary for space to become available. This method is equivalent to method_0 putLast.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Inserts the specified element into the queue represented by this deque (in other words, at the tail of this deque), waiting up to the specified wait time if necessary for space to become available. This method is equivalent to method_0 offerLast.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "Retrieves and removes the head of the queue represented by this deque (in other words, the first element of this deque). This method differs from method_1 poll only in that it throws an exception if this deque is empty. This method is equivalent to method_0 removeFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll()",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "poll()",
+      "comment": "Retrieves and removes the head of the queue represented by this deque (in other words, the first element of this deque), or returns null if this deque is empty. This method is equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "take()",
+    "name": "take",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "take()",
+      "comment": "Retrieves and removes the head of the queue represented by this deque (in other words, the first element of this deque), waiting if necessary until an element becomes available. This method is equivalent to method_0 takeFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Retrieves and removes the head of the queue represented by this deque (in other words, the first element of this deque), waiting up to the specified wait time if necessary for an element to become available. This method is equivalent to method_0 pollFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "element()",
+    "name": "element",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "element()",
+      "comment": "Retrieves, but does not remove, the head of the queue represented by this deque (in other words, the first element of this deque). This method differs from method_1 peek only in that it throws an exception if this deque is empty. This method is equivalent to method_0 getFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peek()",
+    "name": "peek",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "peek()",
+      "comment": "Retrieves, but does not remove, the head of the queue represented by this deque (in other words, the first element of this deque), or returns null if this deque is empty. This method is equivalent to method_0 peekFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object o)",
+      "comment": "Removes the first occurrence of the specified element from this deque. If the deque does not contain the element, it is unchanged. More formally, removes the first element e such that method_0 (if such an element exists). Returns true if this deque contained the specified element (or equivalently, if this deque changed as a result of the call). This method is equivalent to method_1 removeFirstOccurrence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.Object o)",
+      "comment": "Returns true if this deque contains the specified element. More formally, returns true if and only if this deque contains at least one element e such that method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of elements in this deque.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator over the elements in this deque in proper sequence. The elements will be returned in order from first (head) to last (tail).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "push(E e)",
+    "name": "push",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingDeque",
+      "name": "BlockingDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "push(E e)",
+      "comment": "Pushes an element onto the stack represented by this deque (in other words, at the head of this deque) if it is possible to do so immediately without violating capacity restrictions, throwing an IllegalStateException if no space is currently available. This method is equivalent to method_0 addFirst.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "signature": "java.util.DoubleSummaryStatistics()",
+    "name": "java.util.DoubleSummaryStatistics",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.DoubleSummaryStatistics()",
+      "comment": "Construct an empty instance with zero count, zero sum, method_0 min, method_1 max and zero average.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accept(double value)",
+    "name": "accept",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "accept(double value)",
+      "comment": "Records another value into the summary information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "combine(java.util.DoubleSummaryStatistics other)",
+    "name": "combine",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.DoubleSummaryStatistics",
+          "name": "DoubleSummaryStatistics",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "combine(java.util.DoubleSummaryStatistics other)",
+      "comment": "Combines the state of another DoubleSummaryStatistics into this one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCount()",
+    "name": "getCount",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCount()",
+      "comment": "Return the count of values recorded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSum()",
+    "name": "getSum",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSum()",
+      "comment": "Returns the sum of values recorded, or zero if no values have been recorded. If any recorded value is a NaN or the sum is at any point a NaN then the sum will be NaN.  The value of a floating-point sum is a function both of the input values as well as the order of addition operations. The order of addition operations of this method is intentionally not defined to allow for implementation flexibility to improve the speed and accuracy of the computed result. In particular, this method may be implemented using compensated summation or other technique to reduce the error bound in the numerical sum compared to a simple summation of double values. @apiNote Values sorted by increasing absolute magnitude tend to yield more accurate results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMin()",
+    "name": "getMin",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMin()",
+      "comment": "Returns the minimum recorded value, method_0 if any recorded value was NaN or method_1 if no values were recorded. Unlike the numerical comparison operators, this method considers negative zero to be strictly smaller than positive zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMax()",
+    "name": "getMax",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMax()",
+      "comment": "Returns the maximum recorded value, method_0 if any recorded value was NaN or method_1 if no values were recorded. Unlike the numerical comparison operators, this method considers negative zero to be strictly smaller than positive zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAverage()",
+    "name": "getAverage",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAverage()",
+      "comment": "Returns the arithmetic mean of values recorded, or zero if no values have been recorded. If any recorded value is a NaN or the sum is at any point a NaN then the average will be code NaN. The average returned can vary depending upon the order in which values are recorded. This method may be implemented using compensated summation or other technique to reduce the error bound in the method_0 numerical sum used to compute the average. @apiNote Values sorted by increasing absolute magnitude tend to yield more accurate results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.DoubleSummaryStatistics",
+      "name": "DoubleSummaryStatistics",
+      "isArray": false
+    },
+    "targetClass": "java.util.DoubleSummaryStatistics",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "{@inheritDoc} Returns a non-empty string representation of this object suitable for debugging. The exact presentation format is unspecified and may vary between implementations and versions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "signature": "java.util.AbstractSet()",
+    "name": "java.util.AbstractSet",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSet",
+      "name": "AbstractSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSet",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.AbstractSet()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSet",
+      "name": "AbstractSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object o)",
+      "comment": "Compares the specified object with this set for equality. Returns true if the given object is also a set, the two sets have the same size, and every member of the given set is contained in this set. This ensures that the equals method works properly across different implementations of the Set interface. This implementation first checks if the specified object is this set; if so it returns true. Then, it checks if the specified object is a set whose size is identical to the size of this set; if not, it returns false. If so, it returns method_0 o).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSet",
+      "name": "AbstractSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this set. The hash code of a set is defined to be the sum of the hash codes of the elements in the set, where the hash code of a null element is defined to be zero. This ensures that method_0 implies that method_1==method_2 for any two sets s1 and s2, as required by the general contract of method_6. This implementation iterates over the set, calling the hashCode method on each element in the set, and adding up the results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.util.Collection<?> c)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSet",
+      "name": "AbstractSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "removeAll(java.util.Collection<?> c)",
+      "comment": "Removes from this set all of its elements that are contained in the specified collection (optional operation). If the specified collection is also a set, this operation effectively modifies this set so that its value is the asymmetric set difference of the two sets. This implementation determines which is the smaller of this set and the specified collection, by invoking the size method on each. If this set has fewer elements, then the implementation iterates over this set, checking each element returned by the iterator in turn to see if it is contained in the specified collection. If it is so contained, it is removed from this set with the iterator's remove method. If the specified collection has fewer elements, then the implementation iterates over the specified collection, removing from this set each element returned by the iterator, using this set's remove method. Note that this implementation will throw an UnsupportedOperationException if the iterator returned by the iterator method does not implement the remove method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

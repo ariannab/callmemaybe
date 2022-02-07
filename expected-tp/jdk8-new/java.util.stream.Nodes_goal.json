@@ -1,0 +1,806 @@
+[
+  {
+    "signature": "emptyNode(java.util.stream.StreamShape shape)",
+    "name": "emptyNode",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.StreamShape",
+          "name": "StreamShape",
+          "isArray": false
+        },
+        "name": "shape"
+      }
+    ],
+    "protocol": {
+      "member": "emptyNode(java.util.stream.StreamShape shape)",
+      "comment": "Produces an empty node whose count is zero, has no children and no content.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "conc(java.util.stream.StreamShape shape, java.util.stream.Node<T> left, java.util.stream.Node<T> right)",
+    "name": "conc",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.StreamShape",
+          "name": "StreamShape",
+          "isArray": false
+        },
+        "name": "shape"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "left"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "right"
+      }
+    ],
+    "protocol": {
+      "member": "conc(java.util.stream.StreamShape shape, java.util.stream.Node<T> left, java.util.stream.Node<T> right)",
+      "comment": "Produces a concatenated Node that has two or more children. The count of the concatenated node is equal to the sum of the count of each child. Traversal of the concatenated node traverses the content of each child in encounter order of the list of children. Splitting a spliterator obtained from the concatenated node preserves the encounter order of the list of children. The result may be a concatenated node, the input sole node if the size of the list is 1, or an empty node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(T[] array)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "protocol": {
+      "member": "node(T[] array)",
+      "comment": "Produces a Node describing an array. The node will hold a reference to the array and will not make a copy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(java.util.Collection<T> c)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "node(java.util.Collection<T> c)",
+      "comment": "Produces a Node describing a Collection.  The node will hold a reference to the collection and will not make a copy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "builder(long exactSizeIfKnown, java.util.function.IntFunction<T[]> generator)",
+    "name": "builder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder<T>",
+      "name": "java.util.stream.Node$Builder<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "exactSizeIfKnown"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "builder(long exactSizeIfKnown, java.util.function.IntFunction<T[]> generator)",
+      "comment": "Produces a method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "builder()",
+    "name": "builder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder<T>",
+      "name": "java.util.stream.Node$Builder<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "builder()",
+      "comment": "Produces a variable size @{link method_0}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(int[] array)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfInt",
+      "name": "java.util.stream.Node$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "protocol": {
+      "member": "node(int[] array)",
+      "comment": "Produces a method_0 describing an int[] array. The node will hold a reference to the array and will not make a copy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intBuilder(long exactSizeIfKnown)",
+    "name": "intBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder$OfInt",
+      "name": "java.util.stream.Node$Builder$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "exactSizeIfKnown"
+      }
+    ],
+    "protocol": {
+      "member": "intBuilder(long exactSizeIfKnown)",
+      "comment": "Produces a method_0method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intBuilder()",
+    "name": "intBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder$OfInt",
+      "name": "java.util.stream.Node$Builder$OfInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "intBuilder()",
+      "comment": "Produces a variable size @{link method_0method_1}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(long[] array)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfLong",
+      "name": "java.util.stream.Node$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "protocol": {
+      "member": "node(long[] array)",
+      "comment": "Produces a method_0 describing a long[] array.  The node will hold a reference to the array and will not make a copy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longBuilder(long exactSizeIfKnown)",
+    "name": "longBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder$OfLong",
+      "name": "java.util.stream.Node$Builder$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "exactSizeIfKnown"
+      }
+    ],
+    "protocol": {
+      "member": "longBuilder(long exactSizeIfKnown)",
+      "comment": "Produces a method_0method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longBuilder()",
+    "name": "longBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder$OfLong",
+      "name": "java.util.stream.Node$Builder$OfLong",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "longBuilder()",
+      "comment": "Produces a variable size @{link method_0method_1}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(double[] array)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfDouble",
+      "name": "java.util.stream.Node$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "array"
+      }
+    ],
+    "protocol": {
+      "member": "node(double[] array)",
+      "comment": "Produces a method_0 describing a double[] array. The node will hold a reference to the array and will not make a copy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubleBuilder(long exactSizeIfKnown)",
+    "name": "doubleBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder$OfDouble",
+      "name": "java.util.stream.Node$Builder$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "exactSizeIfKnown"
+      }
+    ],
+    "protocol": {
+      "member": "doubleBuilder(long exactSizeIfKnown)",
+      "comment": "Produces a method_0method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubleBuilder()",
+    "name": "doubleBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder$OfDouble",
+      "name": "java.util.stream.Node$Builder$OfDouble",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doubleBuilder()",
+      "comment": "Produces a variable size @{link method_0method_1}.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collect(java.util.stream.PipelineHelper<P_OUT> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree, java.util.function.IntFunction<P_OUT[]> generator)",
+    "name": "collect",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<P_OUT>",
+      "name": "java.util.stream.Node<P_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flattenTree"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "collect(java.util.stream.PipelineHelper<P_OUT> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree, java.util.function.IntFunction<P_OUT[]> generator)",
+      "comment": "Collect, in parallel, elements output from a pipeline and describe those elements with a Node. @implSpec If the exact size of the output from the pipeline is known and the source Spliterator has the method_0 characteristic, then a flat Node will be returned whose content is an array, since the size is known the array can be constructed in advance and output elements can be placed into the array concurrently by leaf tasks at the correct offsets. If the exact size is not known, output elements are collected into a conc-node whose shape mirrors that of the computation. This conc-node can then be flattened in parallel to produce a flat Node if desired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collectInt(java.util.stream.PipelineHelper<java.lang.Integer> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree)",
+    "name": "collectInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfInt",
+      "name": "java.util.stream.Node$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flattenTree"
+      }
+    ],
+    "protocol": {
+      "member": "collectInt(java.util.stream.PipelineHelper<java.lang.Integer> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree)",
+      "comment": "Collect, in parallel, elements output from an int-valued pipeline and describe those elements with a method_0. @implSpec If the exact size of the output from the pipeline is known and the source Spliterator has the method_1 characteristic, then a flat Node will be returned whose content is an array, since the size is known the array can be constructed in advance and output elements can be placed into the array concurrently by leaf tasks at the correct offsets. If the exact size is not known, output elements are collected into a conc-node whose shape mirrors that of the computation. This conc-node can then be flattened in parallel to produce a flat method_0 if desired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collectLong(java.util.stream.PipelineHelper<java.lang.Long> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree)",
+    "name": "collectLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfLong",
+      "name": "java.util.stream.Node$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flattenTree"
+      }
+    ],
+    "protocol": {
+      "member": "collectLong(java.util.stream.PipelineHelper<java.lang.Long> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree)",
+      "comment": "Collect, in parallel, elements output from a long-valued pipeline and describe those elements with a method_0. @implSpec If the exact size of the output from the pipeline is known and the source Spliterator has the method_1 characteristic, then a flat Node will be returned whose content is an array, since the size is known the array can be constructed in advance and output elements can be placed into the array concurrently by leaf tasks at the correct offsets. If the exact size is not known, output elements are collected into a conc-node whose shape mirrors that of the computation. This conc-node can then be flattened in parallel to produce a flat method_0 if desired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collectDouble(java.util.stream.PipelineHelper<java.lang.Double> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree)",
+    "name": "collectDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfDouble",
+      "name": "java.util.stream.Node$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flattenTree"
+      }
+    ],
+    "protocol": {
+      "member": "collectDouble(java.util.stream.PipelineHelper<java.lang.Double> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree)",
+      "comment": "Collect, in parallel, elements output from n double-valued pipeline and describe those elements with a method_0. @implSpec If the exact size of the output from the pipeline is known and the source Spliterator has the method_1 characteristic, then a flat Node will be returned whose content is an array, since the size is known the array can be constructed in advance and output elements can be placed into the array concurrently by leaf tasks at the correct offsets. If the exact size is not known, output elements are collected into a conc-node whose shape mirrors that of the computation. This conc-node can then be flattened in parallel to produce a flat method_0 if desired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flatten(java.util.stream.Node<T> node, java.util.function.IntFunction<T[]> generator)",
+    "name": "flatten",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "flatten(java.util.stream.Node<T> node, java.util.function.IntFunction<T[]> generator)",
+      "comment": "Flatten, in parallel, a Node. A flattened node is one that has no children. If the node is already flat, it is simply returned. @implSpec If a new node is to be created, the generator is used to create an array whose length is method_0. Then the node tree is traversed and leaf node elements are placed in the array concurrently by leaf tasks at the correct offsets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flattenInt(java.util.stream.Node$OfInt node)",
+    "name": "flattenInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfInt",
+      "name": "java.util.stream.Node$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Node$OfInt",
+          "name": "OfInt",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "protocol": {
+      "member": "flattenInt(java.util.stream.Node$OfInt node)",
+      "comment": "Flatten, in parallel, a method_1. A flattened node is one that has no children. If the node is already flat, it is simply returned. @implSpec If a new node is to be created, a new int[] array is created whose length is method_0. Then the node tree is traversed and leaf node elements are placed in the array concurrently by leaf tasks at the correct offsets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flattenLong(java.util.stream.Node$OfLong node)",
+    "name": "flattenLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfLong",
+      "name": "java.util.stream.Node$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Node$OfLong",
+          "name": "OfLong",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "protocol": {
+      "member": "flattenLong(java.util.stream.Node$OfLong node)",
+      "comment": "Flatten, in parallel, a method_1. A flattened node is one that has no children. If the node is already flat, it is simply returned. @implSpec If a new node is to be created, a new long[] array is created whose length is method_0. Then the node tree is traversed and leaf node elements are placed in the array concurrently by leaf tasks at the correct offsets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flattenDouble(java.util.stream.Node$OfDouble node)",
+    "name": "flattenDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Nodes",
+      "name": "Nodes",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Nodes",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$OfDouble",
+      "name": "java.util.stream.Node$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Node$OfDouble",
+          "name": "OfDouble",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "protocol": {
+      "member": "flattenDouble(java.util.stream.Node$OfDouble node)",
+      "comment": "Flatten, in parallel, a method_1. A flattened node is one that has no children. If the node is already flat, it is simply returned. @implSpec If a new node is to be created, a new double[] array is created whose length is method_0. Then the node tree is traversed and leaf node elements are placed in the array concurrently by leaf tasks at the correct offsets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

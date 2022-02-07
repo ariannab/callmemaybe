@@ -1,0 +1,256 @@
+[
+  {
+    "signature": "setSeed(int seed)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "seed"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(int seed)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSeed()",
+    "name": "getSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSeed()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCVPredictions(weka.classifiers.Classifier classifier, weka.core.Instances data, int numFolds)",
+    "name": "getCVPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "name": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      }
+    ],
+    "protocol": {
+      "member": "getCVPredictions(weka.classifiers.Classifier classifier, weka.core.Instances data, int numFolds)",
+      "comment": "Generate a bunch of predictions ready for processing, by performing a cross-validation on the supplied dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTrainTestPredictions(weka.classifiers.Classifier classifier, weka.core.Instances train, weka.core.Instances test)",
+    "name": "getTrainTestPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "name": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      }
+    ],
+    "protocol": {
+      "member": "getTrainTestPredictions(weka.classifiers.Classifier classifier, weka.core.Instances train, weka.core.Instances test)",
+      "comment": "Generate a bunch of predictions ready for processing, by performing a evaluation on a test set after training on the given training set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTestPredictions(weka.classifiers.Classifier classifier, weka.core.Instances test)",
+    "name": "getTestPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "name": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      }
+    ],
+    "protocol": {
+      "member": "getTestPredictions(weka.classifiers.Classifier classifier, weka.core.Instances test)",
+      "comment": "Generate a bunch of predictions ready for processing, by performing a evaluation on a test set assuming the classifier is already trained.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPrediction(weka.classifiers.Classifier classifier, weka.core.Instance test)",
+    "name": "getPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.evaluation.Prediction",
+      "name": "weka.classifiers.evaluation.Prediction",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "test"
+      }
+    ],
+    "protocol": {
+      "member": "getPrediction(weka.classifiers.Classifier classifier, weka.core.Instance test)",
+      "comment": "Generate a single prediction for a test instance given the pre-trained classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.EvaluationUtils",
+      "name": "EvaluationUtils",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.EvaluationUtils",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

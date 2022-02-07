@@ -1,0 +1,648 @@
+[
+  {
+    "signature": "calcScore(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "calcScore",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "calcScore(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "performCV returns the accuracy calculated using cross validation. The dataset used is m_Instances associated with the Bayes Network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcScoreWithExtraParent(int nNode, int nCandidateParent)",
+    "name": "calcScoreWithExtraParent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCandidateParent"
+      }
+    ],
+    "protocol": {
+      "member": "calcScoreWithExtraParent(int nNode, int nCandidateParent)",
+      "comment": "Calc Node Score With Added Parent",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcScoreWithMissingParent(int nNode, int nCandidateParent)",
+    "name": "calcScoreWithMissingParent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCandidateParent"
+      }
+    ],
+    "protocol": {
+      "member": "calcScoreWithMissingParent(int nNode, int nCandidateParent)",
+      "comment": "Calc Node Score With Parent Deleted",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcScoreWithReversedParent(int nNode, int nCandidateParent)",
+    "name": "calcScoreWithReversedParent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCandidateParent"
+      }
+    ],
+    "protocol": {
+      "member": "calcScoreWithReversedParent(int nNode, int nCandidateParent)",
+      "comment": "Calc Node Score With Arrow reversed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leaveOneOutCV(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "leaveOneOutCV",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "leaveOneOutCV(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "LeaveOneOutCV returns the accuracy calculated using Leave One Out cross validation. The dataset used is m_Instances associated with the Bayes Network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cumulativeCV(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "cumulativeCV",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "cumulativeCV(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "CumulativeCV returns the accuracy calculated using cumulative cross validation. The idea is to run through the data set and try to classify each of the instances based on the previously seen data. The data set used is m_Instances associated with the Bayes Network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kFoldCV(weka.classifiers.bayes.BayesNet bayesNet, int nNrOfFolds)",
+    "name": "kFoldCV",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfFolds"
+      }
+    ],
+    "protocol": {
+      "member": "kFoldCV(weka.classifiers.bayes.BayesNet bayesNet, int nNrOfFolds)",
+      "comment": "kFoldCV uses k-fold cross validation to measure the accuracy of a Bayes network classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accuracyIncrease(weka.core.Instance instance)",
+    "name": "accuracyIncrease",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "accuracyIncrease(weka.core.Instance instance)",
+      "comment": "accuracyIncrease determines how much the accuracy estimate should be increased due to the contribution of a single given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseProb()",
+    "name": "getUseProb",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseProb()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseProb(boolean useProb)",
+    "name": "setUseProb",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "useProb"
+      }
+    ],
+    "protocol": {
+      "member": "setUseProb(boolean useProb)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCVType(weka.core.SelectedTag newCVType)",
+    "name": "setCVType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "newCVType"
+      }
+    ],
+    "protocol": {
+      "member": "setCVType(weka.core.SelectedTag newCVType)",
+      "comment": "set cross validation strategy to be used in searching for networks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCVType()",
+    "name": "getCVType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCVType()",
+      "comment": "get cross validation strategy to be used in searching for networks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMarkovBlanketClassifier(boolean bMarkovBlanketClassifier)",
+    "name": "setMarkovBlanketClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bMarkovBlanketClassifier"
+      }
+    ],
+    "protocol": {
+      "member": "setMarkovBlanketClassifier(boolean bMarkovBlanketClassifier)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMarkovBlanketClassifier()",
+    "name": "getMarkovBlanketClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMarkovBlanketClassifier()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -mbc Applies a Markov Blanket correction to the network structure, after a network structure is learned. This ensures that all nodes in the network are part of the Markov blanket of the classifier node.   -S [LOO-CV|k-Fold-CV|Cumulative-CV] Score type (LOO-CV,k-Fold-CV,Cumulative-CV)   -Q Use probabilistic or 0/1 scoring. (default probabilistic scoring)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "CVTypeTipText()",
+    "name": "CVTypeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "CVTypeTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useProbTipText()",
+    "name": "useProbTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useProbTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "markovBlanketClassifierTipText()",
+    "name": "markovBlanketClassifierTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "markovBlanketClassifierTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+      "name": "GlobalScoreSearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.global.GlobalScoreSearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "signature": "java.util.PropertyPermission(java.lang.String name, java.lang.String actions)",
+    "name": "java.util.PropertyPermission",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "actions"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.PropertyPermission(java.lang.String name, java.lang.String actions)",
+      "comment": "Creates a new PropertyPermission object with the specified name. The name is the name of the system property, and actions contains a comma-separated list of the desired actions granted on the property. Possible actions are \"read\" and \"write\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "implies(java.security.Permission p)",
+    "name": "implies",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.security.Permission",
+          "name": "Permission",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "implies(java.security.Permission p)",
+      "comment": "Checks if this PropertyPermission object \"implies\" the specified permission. <P> More specifically, this method returns true if:  <li> <i>p</i> is an instanceof PropertyPermission, <li> <i>p</i>'s actions are a subset of this object's actions, and <li> <i>p</i>'s name is implied by this object's name. For example, \"java.*\" implies \"javamethod_0\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Checks two PropertyPermission objects for equality. Checks that obj is a PropertyPermission, and has the same name and actions as this object. <P>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this object. The hash code used is the hash code of this permissions name, that is, method_0method_1, where getName is from the Permission superclass.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getActions(int mask)",
+    "name": "getActions",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "mask"
+      }
+    ],
+    "protocol": {
+      "member": "getActions(int mask)",
+      "comment": "Return the canonical string representation of the actions. Always returns present actions in the following order: read, write.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getActions()",
+    "name": "getActions",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getActions()",
+      "comment": "Returns the \"canonical string representation\" of the actions. That is, this method always returns present actions in the following order: read, write. For example, if this PropertyPermission object allows both write and read actions, a call to getActions will return the string \"read,write\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMask()",
+    "name": "getMask",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMask()",
+      "comment": "Return the current action mask. Used by the PropertyPermissionCollection",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newPermissionCollection()",
+    "name": "newPermissionCollection",
+    "containingClass": {
+      "qualifiedName": "java.util.PropertyPermission",
+      "name": "PropertyPermission",
+      "isArray": false
+    },
+    "targetClass": "java.util.PropertyPermission",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.PermissionCollection",
+      "name": "java.security.PermissionCollection",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newPermissionCollection()",
+      "comment": "Returns a new PermissionCollection object for storing PropertyPermission objects.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

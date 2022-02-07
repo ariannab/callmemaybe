@@ -1,0 +1,138 @@
+[
+  {
+    "signature": "org.graphstream.ui.swingViewer.util.ImageCache()",
+    "name": "org.graphstream.ui.swingViewer.util.ImageCache",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "name": "ImageCache",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.util.ImageCache",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "org.graphstream.ui.swingViewer.util.ImageCache()",
+      "comment": "New empty image cache.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultImageCache()",
+    "name": "defaultImageCache",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "name": "ImageCache",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.util.ImageCache",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "name": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultImageCache()",
+      "comment": "Default singleton image cache instance that can be shared. This method and singleton must be used only in the Swing thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getImage(java.lang.String fileNameOrUrl)",
+    "name": "getImage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "name": "ImageCache",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.util.ImageCache",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Image",
+      "name": "java.awt.Image",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fileNameOrUrl"
+      }
+    ],
+    "protocol": {
+      "member": "getImage(java.lang.String fileNameOrUrl)",
+      "comment": "Lookup an image based on its name, if found return it, else try to load it. If an image is not found once, the cache remembers it and will not try to reload it again if the same image is requested anew. Therefore using method_0 is fast and smooth.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getImage(java.lang.String fileNameOrUrl, boolean forceTryReload)",
+    "name": "getImage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "name": "ImageCache",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.util.ImageCache",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Image",
+      "name": "java.awt.Image",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fileNameOrUrl"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "forceTryReload"
+      }
+    ],
+    "protocol": {
+      "member": "getImage(java.lang.String fileNameOrUrl, boolean forceTryReload)",
+      "comment": "The same as method_0 but you can force the cache to try to reload an image that where not found before.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDummyImage()",
+    "name": "getDummyImage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.ImageCache",
+      "name": "ImageCache",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.util.ImageCache",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Image",
+      "name": "java.awt.Image",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDummyImage()",
+      "comment": "A dummy 16x16 image.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

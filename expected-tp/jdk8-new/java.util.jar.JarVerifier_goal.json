@@ -1,0 +1,690 @@
+[
+  {
+    "signature": "java.util.jar.JarVerifier(byte[] rawBytes)",
+    "name": "java.util.jar.JarVerifier",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "rawBytes"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.jar.JarVerifier(byte[] rawBytes)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "beginEntry(java.util.jar.JarEntry je, sun.security.util.ManifestEntryVerifier mev)",
+    "name": "beginEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarEntry",
+          "name": "JarEntry",
+          "isArray": false
+        },
+        "name": "je"
+      },
+      {
+        "type": {
+          "qualifiedName": "sun.security.util.ManifestEntryVerifier",
+          "name": "ManifestEntryVerifier",
+          "isArray": false
+        },
+        "name": "mev"
+      }
+    ],
+    "protocol": {
+      "member": "beginEntry(java.util.jar.JarEntry je, sun.security.util.ManifestEntryVerifier mev)",
+      "comment": "This method scans to see which entry we're parsing and keeps various state information depending on what type of file is being parsed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "update(int b, sun.security.util.ManifestEntryVerifier mev)",
+    "name": "update",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "sun.security.util.ManifestEntryVerifier",
+          "name": "ManifestEntryVerifier",
+          "isArray": false
+        },
+        "name": "mev"
+      }
+    ],
+    "protocol": {
+      "member": "update(int b, sun.security.util.ManifestEntryVerifier mev)",
+      "comment": "update a single byte.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "update(int n, byte[] b, int off, int len, sun.security.util.ManifestEntryVerifier mev)",
+    "name": "update",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      },
+      {
+        "type": {
+          "qualifiedName": "sun.security.util.ManifestEntryVerifier",
+          "name": "ManifestEntryVerifier",
+          "isArray": false
+        },
+        "name": "mev"
+      }
+    ],
+    "protocol": {
+      "member": "update(int n, byte[] b, int off, int len, sun.security.util.ManifestEntryVerifier mev)",
+      "comment": "update an array of bytes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCerts(java.lang.String name)",
+    "name": "getCerts",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.cert.Certificate[]",
+      "name": "java.security.cert.Certificate[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getCerts(java.lang.String name)",
+      "comment": "Return an array of javamethod_0method_1method_2 objects for the given file in the jar. @deprecated",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCerts(java.util.jar.JarFile jar, java.util.jar.JarEntry entry)",
+    "name": "getCerts",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.cert.Certificate[]",
+      "name": "java.security.cert.Certificate[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarFile",
+          "name": "JarFile",
+          "isArray": false
+        },
+        "name": "jar"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarEntry",
+          "name": "JarEntry",
+          "isArray": false
+        },
+        "name": "entry"
+      }
+    ],
+    "protocol": {
+      "member": "getCerts(java.util.jar.JarFile jar, java.util.jar.JarEntry entry)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCodeSigners(java.lang.String name)",
+    "name": "getCodeSigners",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSigner[]",
+      "name": "java.security.CodeSigner[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getCodeSigners(java.lang.String name)",
+      "comment": "return an array of CodeSigner objects for the given file in the jar. this array is not cloned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCodeSigners(java.util.jar.JarFile jar, java.util.jar.JarEntry entry)",
+    "name": "getCodeSigners",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSigner[]",
+      "name": "java.security.CodeSigner[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarFile",
+          "name": "JarFile",
+          "isArray": false
+        },
+        "name": "jar"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarEntry",
+          "name": "JarEntry",
+          "isArray": false
+        },
+        "name": "entry"
+      }
+    ],
+    "protocol": {
+      "member": "getCodeSigners(java.util.jar.JarFile jar, java.util.jar.JarEntry entry)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nothingToVerify()",
+    "name": "nothingToVerify",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nothingToVerify()",
+      "comment": "returns true if there no files to verify. should only be called after all the META-INF entries have been processed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doneWithMeta()",
+    "name": "doneWithMeta",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doneWithMeta()",
+      "comment": "called to let us know we have processed all the META-INF entries, and if we re-read one of them, don't re-process it. Also gets rid of any data structures we needed when parsing META-INF entries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entryNames(java.util.jar.JarFile jar, java.security.CodeSource[] cs)",
+    "name": "entryNames",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarFile",
+          "name": "JarFile",
+          "isArray": false
+        },
+        "name": "jar"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.security.CodeSource;",
+          "name": "CodeSource[]",
+          "isArray": true
+        },
+        "name": "cs"
+      }
+    ],
+    "protocol": {
+      "member": "entryNames(java.util.jar.JarFile jar, java.security.CodeSource[] cs)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entries2(java.util.jar.JarFile jar, java.util.Enumeration<? extends java.util.zip.ZipEntry> e)",
+    "name": "entries2",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.util.jar.JarEntry>",
+      "name": "java.util.Enumeration<java.util.jar.JarEntry>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarFile",
+          "name": "JarFile",
+          "isArray": false
+        },
+        "name": "jar"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Enumeration",
+          "name": "Enumeration",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "entries2(java.util.jar.JarFile jar, java.util.Enumeration<? extends java.util.zip.ZipEntry> e)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSigningRelated(java.lang.String name)",
+    "name": "isSigningRelated",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "isSigningRelated(java.lang.String name)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCodeSources(java.util.jar.JarFile jar, java.net.URL url)",
+    "name": "getCodeSources",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSource[]",
+      "name": "java.security.CodeSource[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarFile",
+          "name": "JarFile",
+          "isArray": false
+        },
+        "name": "jar"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.net.URL",
+          "name": "URL",
+          "isArray": false
+        },
+        "name": "url"
+      }
+    ],
+    "protocol": {
+      "member": "getCodeSources(java.util.jar.JarFile jar, java.net.URL url)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCodeSource(java.net.URL url, java.lang.String name)",
+    "name": "getCodeSource",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSource",
+      "name": "java.security.CodeSource",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.net.URL",
+          "name": "URL",
+          "isArray": false
+        },
+        "name": "url"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getCodeSource(java.net.URL url, java.lang.String name)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCodeSource(java.net.URL url, java.util.jar.JarFile jar, java.util.jar.JarEntry je)",
+    "name": "getCodeSource",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSource",
+      "name": "java.security.CodeSource",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.net.URL",
+          "name": "URL",
+          "isArray": false
+        },
+        "name": "url"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarFile",
+          "name": "JarFile",
+          "isArray": false
+        },
+        "name": "jar"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarEntry",
+          "name": "JarEntry",
+          "isArray": false
+        },
+        "name": "je"
+      }
+    ],
+    "protocol": {
+      "member": "getCodeSource(java.net.URL url, java.util.jar.JarFile jar, java.util.jar.JarEntry je)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEagerValidation(boolean eager)",
+    "name": "setEagerValidation",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "eager"
+      }
+    ],
+    "protocol": {
+      "member": "setEagerValidation(boolean eager)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getManifestDigests()",
+    "name": "getManifestDigests",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.Object>",
+      "name": "java.util.List<java.lang.Object>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getManifestDigests()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUnsignedCS(java.net.URL url)",
+    "name": "getUnsignedCS",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarVerifier",
+      "name": "JarVerifier",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarVerifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSource",
+      "name": "java.security.CodeSource",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.net.URL",
+          "name": "URL",
+          "isArray": false
+        },
+        "name": "url"
+      }
+    ],
+    "protocol": {
+      "member": "getUnsignedCS(java.net.URL url)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

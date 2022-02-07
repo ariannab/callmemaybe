@@ -1,0 +1,1430 @@
+[
+  {
+    "signature": "toCollection(java.util.function.Supplier<C> collectionFactory)",
+    "name": "toCollection",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, C>",
+      "name": "java.util.stream.Collector<T, ?, C>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "collectionFactory"
+      }
+    ],
+    "protocol": {
+      "member": "toCollection(java.util.function.Supplier<C> collectionFactory)",
+      "comment": "Returns a Collector that accumulates the input elements into a new Collection, in encounter order. The Collection is created by the provided factory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toList()",
+    "name": "toList",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.List<T>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.List<T>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toList()",
+      "comment": "Returns a Collector that accumulates the input elements into a new List. There are no guarantees on the type, mutability, serializability, or thread-safety of the List returned; if more control over the returned List is required, use method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSet()",
+    "name": "toSet",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Set<T>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Set<T>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toSet()",
+      "comment": "Returns a Collector that accumulates the input elements into a new Set. There are no guarantees on the type, mutability, serializability, or thread-safety of the Set returned; if more control over the returned Set is required, use method_0. This is an method_2method_3 unordered Collector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "joining()",
+    "name": "joining",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>",
+      "name": "java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "joining()",
+      "comment": "Returns a Collector that concatenates the input elements into a String, in encounter order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "joining(java.lang.CharSequence delimiter)",
+    "name": "joining",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>",
+      "name": "java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "delimiter"
+      }
+    ],
+    "protocol": {
+      "member": "joining(java.lang.CharSequence delimiter)",
+      "comment": "Returns a Collector that concatenates the input elements, separated by the specified delimiter, in encounter order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "joining(java.lang.CharSequence delimiter, java.lang.CharSequence prefix, java.lang.CharSequence suffix)",
+    "name": "joining",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>",
+      "name": "java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "delimiter"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "prefix"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "suffix"
+      }
+    ],
+    "protocol": {
+      "member": "joining(java.lang.CharSequence delimiter, java.lang.CharSequence prefix, java.lang.CharSequence suffix)",
+      "comment": "Returns a Collector that concatenates the input elements, separated by the specified delimiter, with the specified prefix and suffix, in encounter order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mapping(java.util.function.Function<? super T, ? extends U> mapper, java.util.stream.Collector<? super U, A, R> downstream)",
+    "name": "mapping",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, R>",
+      "name": "java.util.stream.Collector<T, ?, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      }
+    ],
+    "protocol": {
+      "member": "mapping(java.util.function.Function<? super T, ? extends U> mapper, java.util.stream.Collector<? super U, A, R> downstream)",
+      "comment": "Adapts a Collector accepting elements of type U to one accepting elements of type T by applying a mapping function to each input element before accumulation. @apiNote The method_0 collectors are most useful when used in a multi-level reduction, such as downstream of a groupingBy or partitioningBy. For example, given a stream of Person, to accumulate the set of last names in each city: Map<City, Set<String>> lastNamesByCity = method_1collect(groupingBy(Person::getCity, mapping(Person::getLastName, toSet())));",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collectingAndThen(java.util.stream.Collector<T, A, R> downstream, java.util.function.Function<R, RR> finisher)",
+    "name": "collectingAndThen",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, A, RR>",
+      "name": "java.util.stream.Collector<T, A, RR>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "finisher"
+      }
+    ],
+    "protocol": {
+      "member": "collectingAndThen(java.util.stream.Collector<T, A, R> downstream, java.util.function.Function<R, RR> finisher)",
+      "comment": "Adapts a Collector to perform an additional finishing transformation. For example, one could adapt the method_0 collector to always produce an immutable list with: List<String> people = method_1collect(collectingAndThen(method_0, Collections::unmodifiableList));",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "counting()",
+    "name": "counting",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Long>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Long>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "counting()",
+      "comment": "Returns a Collector accepting elements of type T that counts the number of input elements. If no elements are present, the result is 0. @implSpec This produces a result equivalent to: method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minBy(java.util.Comparator<? super T> comparator)",
+    "name": "minBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Optional<T>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Optional<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "protocol": {
+      "member": "minBy(java.util.Comparator<? super T> comparator)",
+      "comment": "Returns a Collector that produces the minimal element according to a given Comparator, described as an Optional<T>. @implSpec This produces a result equivalent to: method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxBy(java.util.Comparator<? super T> comparator)",
+    "name": "maxBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Optional<T>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Optional<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "protocol": {
+      "member": "maxBy(java.util.Comparator<? super T> comparator)",
+      "comment": "Returns a Collector that produces the maximal element according to a given Comparator, described as an Optional<T>. @implSpec This produces a result equivalent to: method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summingInt(java.util.function.ToIntFunction<? super T> mapper)",
+    "name": "summingInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Integer>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Integer>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "summingInt(java.util.function.ToIntFunction<? super T> mapper)",
+      "comment": "Returns a Collector that produces the sum of a integer-valued function applied to the input elements. If no elements are present, the result is 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summingLong(java.util.function.ToLongFunction<? super T> mapper)",
+    "name": "summingLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Long>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Long>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "summingLong(java.util.function.ToLongFunction<? super T> mapper)",
+      "comment": "Returns a Collector that produces the sum of a long-valued function applied to the input elements. If no elements are present, the result is 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summingDouble(java.util.function.ToDoubleFunction<? super T> mapper)",
+    "name": "summingDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "summingDouble(java.util.function.ToDoubleFunction<? super T> mapper)",
+      "comment": "Returns a Collector that produces the sum of a double-valued function applied to the input elements. If no elements are present, the result is 0. The sum returned can vary depending upon the order in which values are recorded, due to accumulated rounding error in addition of values of differing magnitudes. Values sorted by increasing absolute magnitude tend to yield more accurate results. If any recorded value is a NaN or the sum is at any point a NaN then the sum will be NaN.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumWithCompensation(double[] intermediateSum, double value)",
+    "name": "sumWithCompensation",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "intermediateSum"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "sumWithCompensation(double[] intermediateSum, double value)",
+      "comment": "Incorporate a new double value using Kahan summation / compensation summation. High-order bits of the sum are in intermediateSum[0], low-order bits of the sum are in intermediateSum[1], any additional elements are application-specific.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeFinalSum(double[] summands)",
+    "name": "computeFinalSum",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "summands"
+      }
+    ],
+    "protocol": {
+      "member": "computeFinalSum(double[] summands)",
+      "comment": "If the compensated sum is spuriously NaN from accumulating one or more same-signed infinite values, return the correctly-signed infinity stored in the simple sum.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "averagingInt(java.util.function.ToIntFunction<? super T> mapper)",
+    "name": "averagingInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "averagingInt(java.util.function.ToIntFunction<? super T> mapper)",
+      "comment": "Returns a Collector that produces the arithmetic mean of an integer-valued function applied to the input elements. If no elements are present, the result is 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "averagingLong(java.util.function.ToLongFunction<? super T> mapper)",
+    "name": "averagingLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "averagingLong(java.util.function.ToLongFunction<? super T> mapper)",
+      "comment": "Returns a Collector that produces the arithmetic mean of a long-valued function applied to the input elements. If no elements are present, the result is 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "averagingDouble(java.util.function.ToDoubleFunction<? super T> mapper)",
+    "name": "averagingDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "name": "java.util.stream.Collector<T, ?, java.lang.Double>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "averagingDouble(java.util.function.ToDoubleFunction<? super T> mapper)",
+      "comment": "Returns a Collector that produces the arithmetic mean of a double-valued function applied to the input elements. If no elements are present, the result is 0. The average returned can vary depending upon the order in which values are recorded, due to accumulated rounding error in addition of values of differing magnitudes. Values sorted by increasing absolute magnitude tend to yield more accurate results. If any recorded value is a NaN or the sum is at any point a NaN then the average will be NaN. @implNote The double format can represent all consecutive integers in the range -253 to 253. If the pipeline has more than 253 values, the divisor in the average computation will saturate at 253, leading to additional numerical errors.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reducing(T identity, java.util.function.BinaryOperator<T> op)",
+    "name": "reducing",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, T>",
+      "name": "java.util.stream.Collector<T, ?, T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "identity"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "op"
+      }
+    ],
+    "protocol": {
+      "member": "reducing(T identity, java.util.function.BinaryOperator<T> op)",
+      "comment": "Returns a Collector which performs a reduction of its input elements under a specified BinaryOperator using the provided identity. @apiNote The method_0 collectors are most useful when used in a multi-level reduction, downstream of groupingBy or partitioningBy. To perform a simple reduction on a stream, use method_1} instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reducing(java.util.function.BinaryOperator<T> op)",
+    "name": "reducing",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Optional<T>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Optional<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "op"
+      }
+    ],
+    "protocol": {
+      "member": "reducing(java.util.function.BinaryOperator<T> op)",
+      "comment": "Returns a Collector which performs a reduction of its input elements under a specified BinaryOperator. The result is described as an Optional<T>. @apiNote The method_0 collectors are most useful when used in a multi-level reduction, downstream of groupingBy or partitioningBy. To perform a simple reduction on a stream, use method_1 instead. For example, given a stream of Person, to calculate tallest person in each city: Comparator<Person> byHeight = method_2; Map<City, Person> tallestByCity = method_3method_4;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reducing(U identity, java.util.function.Function<? super T, ? extends U> mapper, java.util.function.BinaryOperator<U> op)",
+    "name": "reducing",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, U>",
+      "name": "java.util.stream.Collector<T, ?, U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "identity"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "op"
+      }
+    ],
+    "protocol": {
+      "member": "reducing(U identity, java.util.function.Function<? super T, ? extends U> mapper, java.util.function.BinaryOperator<U> op)",
+      "comment": "Returns a Collector which performs a reduction of its input elements under a specified mapping function and BinaryOperator. This is a generalization of method_0 which allows a transformation of the elements before reduction. @apiNote The method_1 collectors are most useful when used in a multi-level reduction, downstream of groupingBy or partitioningBy. To perform a simple map-reduce on a stream, use method_2 and method_3 instead. For example, given a stream of Person, to calculate the longest last name of residents in each city: Comparator<String> byLength = method_4; Map<City, String> longestLastNameByCity = method_5collect(groupingBy(Person::getCity, reducing(Person::getLastName, method_13(byLength))));",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupingBy(java.util.function.Function<? super T, ? extends K> classifier)",
+    "name": "groupingBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Map<K, java.util.List<T>>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Map<K, java.util.List<T>>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "classifier"
+      }
+    ],
+    "protocol": {
+      "member": "groupingBy(java.util.function.Function<? super T, ? extends K> classifier)",
+      "comment": "Returns a Collector implementing a \"group by\" operation on input elements of type T, grouping elements according to a classification function, and returning the results in a Map. The classification function maps elements to some key type K. The collector produces a Map<K, List<T>> whose keys are the values resulting from applying the classification function to the input elements, and whose corresponding values are Lists containing the input elements which map to the associated key under the classification function. There are no guarantees on the type, mutability, serializability, or thread-safety of the Map or List objects returned. @implSpec This produces a result similar to: method_0;  @implNote The returned Collector is not concurrent. For parallel stream pipelines, the combiner function operates by merging the keys from one map into another, which can be an expensive operation. If preservation of the order in which elements appear in the resulting Map collector is not required, using method_1 may offer better parallel performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupingBy(java.util.function.Function<? super T, ? extends K> classifier, java.util.stream.Collector<? super T, A, D> downstream)",
+    "name": "groupingBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Map<K, D>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Map<K, D>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      }
+    ],
+    "protocol": {
+      "member": "groupingBy(java.util.function.Function<? super T, ? extends K> classifier, java.util.stream.Collector<? super T, A, D> downstream)",
+      "comment": "Returns a Collector implementing a cascaded \"group by\" operation on input elements of type T, grouping elements according to a classification function, and then performing a reduction operation on the values associated with a given key using the specified downstream Collector. The classification function maps elements to some key type K. The downstream collector operates on elements of type T and produces a result of type D. The resulting collector produces a Map<K, D>. There are no guarantees on the type, mutability, serializability, or thread-safety of the Map returned. For example, to compute the set of last names of people in each city: Map<City, Set<String>> namesByCity = method_0collect(groupingBy(Person::getCity, mapping(Person::getLastName, toSet())));  @implNote The returned Collector is not concurrent. For parallel stream pipelines, the combiner function operates by merging the keys from one map into another, which can be an expensive operation. If preservation of the order in which elements are presented to the downstream collector is not required, using method_2 may offer better parallel performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupingBy(java.util.function.Function<? super T, ? extends K> classifier, java.util.function.Supplier<M> mapFactory, java.util.stream.Collector<? super T, A, D> downstream)",
+    "name": "groupingBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, M>",
+      "name": "java.util.stream.Collector<T, ?, M>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "mapFactory"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      }
+    ],
+    "protocol": {
+      "member": "groupingBy(java.util.function.Function<? super T, ? extends K> classifier, java.util.function.Supplier<M> mapFactory, java.util.stream.Collector<? super T, A, D> downstream)",
+      "comment": "Returns a Collector implementing a cascaded \"group by\" operation on input elements of type T, grouping elements according to a classification function, and then performing a reduction operation on the values associated with a given key using the specified downstream Collector. The Map produced by the Collector is created with the supplied factory function. The classification function maps elements to some key type K. The downstream collector operates on elements of type T and produces a result of type D. The resulting collector produces a Map<K, D>. For example, to compute the set of last names of people in each city, where the city names are sorted: Map<City, Set<String>> namesByCity = method_0collect(groupingBy(Person::getCity, TreeMap::new, mapping(Person::getLastName, toSet())));  @implNote The returned Collector is not concurrent. For parallel stream pipelines, the combiner function operates by merging the keys from one map into another, which can be an expensive operation. If preservation of the order in which elements are presented to the downstream collector is not required, using method_2 may offer better parallel performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupingByConcurrent(java.util.function.Function<? super T, ? extends K> classifier)",
+    "name": "groupingByConcurrent",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, java.util.List<T>>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, java.util.List<T>>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "classifier"
+      }
+    ],
+    "protocol": {
+      "member": "groupingByConcurrent(java.util.function.Function<? super T, ? extends K> classifier)",
+      "comment": "Returns a concurrent Collector implementing a \"group by\" operation on input elements of type T, grouping elements according to a classification function. This is a method_1method_2 concurrent and method_1method_4 unordered Collector. The classification function maps elements to some key type K. The collector produces a ConcurrentMap<K, List<T>> whose keys are the values resulting from applying the classification function to the input elements, and whose corresponding values are List}s containing the input elements which map to the associated key under the classification function. There are no guarantees on the type, mutability, or serializability of the {@code Map or List objects returned, or of the thread-safety of the List objects returned. @implSpec This produces a result similar to: method_0;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupingByConcurrent(java.util.function.Function<? super T, ? extends K> classifier, java.util.stream.Collector<? super T, A, D> downstream)",
+    "name": "groupingByConcurrent",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, D>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, D>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      }
+    ],
+    "protocol": {
+      "member": "groupingByConcurrent(java.util.function.Function<? super T, ? extends K> classifier, java.util.stream.Collector<? super T, A, D> downstream)",
+      "comment": "Returns a concurrent Collector implementing a cascaded \"group by\" operation on input elements of type T, grouping elements according to a classification function, and then performing a reduction operation on the values associated with a given key using the specified downstream Collector. This is a method_2method_3 concurrent and method_2method_5 unordered Collector. The classification function maps elements to some key type K. The downstream collector operates on elements of type T and produces a result of type D. The resulting collector produces a Map<K, D>. For example, to compute the set of last names of people in each city, where the city names are sorted: ConcurrentMap<City, Set<String>> namesByCity = method_0collect(groupingByConcurrent(Person::getCity, mapping(Person::getLastName, toSet())));",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupingByConcurrent(java.util.function.Function<? super T, ? extends K> classifier, java.util.function.Supplier<M> mapFactory, java.util.stream.Collector<? super T, A, D> downstream)",
+    "name": "groupingByConcurrent",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, M>",
+      "name": "java.util.stream.Collector<T, ?, M>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "mapFactory"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      }
+    ],
+    "protocol": {
+      "member": "groupingByConcurrent(java.util.function.Function<? super T, ? extends K> classifier, java.util.function.Supplier<M> mapFactory, java.util.stream.Collector<? super T, A, D> downstream)",
+      "comment": "Returns a concurrent Collector implementing a cascaded \"group by\" operation on input elements of type T, grouping elements according to a classification function, and then performing a reduction operation on the values associated with a given key using the specified downstream Collector. The ConcurrentMap produced by the Collector is created with the supplied factory function. This is a method_2method_3 concurrent and method_2method_5 unordered Collector. The classification function maps elements to some key type K. The downstream collector operates on elements of type T and produces a result of type D. The resulting collector produces a Map<K, D>. For example, to compute the set of last names of people in each city, where the city names are sorted: ConcurrentMap<City, Set<String>> namesByCity = method_0collect(groupingBy(Person::getCity, ConcurrentSkipListMap::new, mapping(Person::getLastName, toSet())));",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partitioningBy(java.util.function.Predicate<? super T> predicate)",
+    "name": "partitioningBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Map<java.lang.Boolean, java.util.List<T>>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Map<java.lang.Boolean, java.util.List<T>>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "partitioningBy(java.util.function.Predicate<? super T> predicate)",
+      "comment": "Returns a Collector which partitions the input elements according to a Predicate, and organizes them into a Map<Boolean, List<T>>. There are no guarantees on the type, mutability, serializability, or thread-safety of the Map returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partitioningBy(java.util.function.Predicate<? super T> predicate, java.util.stream.Collector<? super T, A, D> downstream)",
+    "name": "partitioningBy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Map<java.lang.Boolean, D>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Map<java.lang.Boolean, D>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "downstream"
+      }
+    ],
+    "protocol": {
+      "member": "partitioningBy(java.util.function.Predicate<? super T> predicate, java.util.stream.Collector<? super T, A, D> downstream)",
+      "comment": "Returns a Collector which partitions the input elements according to a Predicate, reduces the values in each partition according to another Collector, and organizes them into a Map<Boolean, D> whose values are the result of the downstream reduction. There are no guarantees on the type, mutability, serializability, or thread-safety of the Map returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper)",
+    "name": "toMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Map<K, U>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Map<K, U>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueMapper"
+      }
+    ],
+    "protocol": {
+      "member": "toMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper)",
+      "comment": "Returns a Collector that accumulates elements into a Map whose keys and values are the result of applying the provided mapping functions to the input elements. If the mapped keys contains duplicates (according to method_0), an IllegalStateException is thrown when the collection operation is performed. If the mapped keys may have duplicates, use method_1 instead. @apiNote It is common for either the key or the value to be the input elements. In this case, the utility method javamethod_11.method_2 may be helpful. For example, the following produces a Map mapping students to their grade point average: Map<Student, Double> studentToGPA method_3method_4, student -> method_5;  And the following produces a Map mapping a unique identifier to students: Map<String, Student> studentIdToStudent method_3collect(toMap(Student::getId, method_17());  @implNote The returned Collector is not concurrent. For parallel stream pipelines, the combiner function operates by merging the keys from one map into another, which can be an expensive operation. If it is not required that results are inserted into the Map in encounter order, using method_8 may offer better parallel performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction)",
+    "name": "toMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.Map<K, U>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.Map<K, U>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "mergeFunction"
+      }
+    ],
+    "protocol": {
+      "member": "toMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction)",
+      "comment": "Returns a Collector that accumulates elements into a Map whose keys and values are the result of applying the provided mapping functions to the input elements. If the mapped keys contains duplicates (according to method_0), the value mapping function is applied to each equal element, and the results are merged using the provided merging function. @apiNote There are multiple ways to deal with collisions between multiple elements mapping to the same key. The other forms of toMap simply use a merge function that throws unconditionally, but you can easily write more flexible merge policies. For example, if you have a stream of Person, and you want to produce a \"phone book\" mapping name to address, but it is possible that two persons have the same name, you can do as follows to gracefully deals with these collisions, and produce a Map mapping names to a concatenated list of addresses: Map<String, String> phoneBook method_1collect(toMap(Person::getName, Person::getAddress, (s, a) -> s + \", \" + a));  @implNote The returned Collector is not concurrent. For parallel stream pipelines, the combiner function operates by merging the keys from one map into another, which can be an expensive operation. If it is not required that results are merged into the Map in encounter order, using method_3 may offer better parallel performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction, java.util.function.Supplier<M> mapSupplier)",
+    "name": "toMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, M>",
+      "name": "java.util.stream.Collector<T, ?, M>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "mergeFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "mapSupplier"
+      }
+    ],
+    "protocol": {
+      "member": "toMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction, java.util.function.Supplier<M> mapSupplier)",
+      "comment": "Returns a Collector that accumulates elements into a Map whose keys and values are the result of applying the provided mapping functions to the input elements. If the mapped keys contains duplicates (according to method_0), the value mapping function is applied to each equal element, and the results are merged using the provided merging function. The Map is created by a provided supplier function. @implNote The returned Collector is not concurrent. For parallel stream pipelines, the combiner function operates by merging the keys from one map into another, which can be an expensive operation. If it is not required that results are merged into the Map in encounter order, using method_1 may offer better parallel performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toConcurrentMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper)",
+    "name": "toConcurrentMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, U>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, U>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueMapper"
+      }
+    ],
+    "protocol": {
+      "member": "toConcurrentMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper)",
+      "comment": "Returns a concurrent Collector that accumulates elements into a ConcurrentMap whose keys and values are the result of applying the provided mapping functions to the input elements. If the mapped keys contains duplicates (according to method_0), an IllegalStateException is thrown when the collection operation is performed. If the mapped keys may have duplicates, use method_1 instead. @apiNote It is common for either the key or the value to be the input elements. In this case, the utility method javamethod_10.method_2 may be helpful. For example, the following produces a Map mapping students to their grade point average: Map<Student, Double> studentToGPA method_3method_4, student -> method_5;  And the following produces a Map mapping a unique identifier to students: Map<String, Student> studentIdToStudent method_3collect(toConcurrentMap(Student::getId, method_16());  This is a method_20method_21 concurrent and method_20method_23 unordered Collector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toConcurrentMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction)",
+    "name": "toConcurrentMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, U>>",
+      "name": "java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, U>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "mergeFunction"
+      }
+    ],
+    "protocol": {
+      "member": "toConcurrentMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction)",
+      "comment": "Returns a concurrent Collector that accumulates elements into a ConcurrentMap whose keys and values are the result of applying the provided mapping functions to the input elements. If the mapped keys contains duplicates (according to method_0), the value mapping function is applied to each equal element, and the results are merged using the provided merging function. @apiNote There are multiple ways to deal with collisions between multiple elements mapping to the same key. The other forms of toConcurrentMap simply use a merge function that throws unconditionally, but you can easily write more flexible merge policies. For example, if you have a stream of Person, and you want to produce a \"phone book\" mapping name to address, but it is possible that two persons have the same name, you can do as follows to gracefully deals with these collisions, and produce a Map mapping names to a concatenated list of addresses: Map<String, String> phoneBook method_1collect(toConcurrentMap(Person::getName, Person::getAddress, (s, a) -> s + \", \" + a));  This is a method_6method_7 concurrent and method_6method_9 unordered Collector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toConcurrentMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction, java.util.function.Supplier<M> mapSupplier)",
+    "name": "toConcurrentMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, M>",
+      "name": "java.util.stream.Collector<T, ?, M>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "valueMapper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "mergeFunction"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "mapSupplier"
+      }
+    ],
+    "protocol": {
+      "member": "toConcurrentMap(java.util.function.Function<? super T, ? extends K> keyMapper, java.util.function.Function<? super T, ? extends U> valueMapper, java.util.function.BinaryOperator<U> mergeFunction, java.util.function.Supplier<M> mapSupplier)",
+      "comment": "Returns a concurrent Collector that accumulates elements into a ConcurrentMap whose keys and values are the result of applying the provided mapping functions to the input elements. If the mapped keys contains duplicates (according to method_0), the value mapping function is applied to each equal element, and the results are merged using the provided merging function. The ConcurrentMap is created by a provided supplier function. This is a method_2method_3 concurrent and method_2method_5 unordered Collector.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summarizingInt(java.util.function.ToIntFunction<? super T> mapper)",
+    "name": "summarizingInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.IntSummaryStatistics>",
+      "name": "java.util.stream.Collector<T, ?, java.util.IntSummaryStatistics>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "summarizingInt(java.util.function.ToIntFunction<? super T> mapper)",
+      "comment": "Returns a Collector which applies an {@code int}-producing mapping function to each input element, and returns summary statistics for the resulting values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summarizingLong(java.util.function.ToLongFunction<? super T> mapper)",
+    "name": "summarizingLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.LongSummaryStatistics>",
+      "name": "java.util.stream.Collector<T, ?, java.util.LongSummaryStatistics>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "summarizingLong(java.util.function.ToLongFunction<? super T> mapper)",
+      "comment": "Returns a Collector which applies an {@code long}-producing mapping function to each input element, and returns summary statistics for the resulting values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summarizingDouble(java.util.function.ToDoubleFunction<? super T> mapper)",
+    "name": "summarizingDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collectors",
+      "name": "Collectors",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collectors",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, ?, java.util.DoubleSummaryStatistics>",
+      "name": "java.util.stream.Collector<T, ?, java.util.DoubleSummaryStatistics>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "summarizingDouble(java.util.function.ToDoubleFunction<? super T> mapper)",
+      "comment": "Returns a Collector which applies an {@code double}-producing mapping function to each input element, and returns summary statistics for the resulting values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

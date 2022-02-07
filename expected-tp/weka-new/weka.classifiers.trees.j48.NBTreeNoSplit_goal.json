@@ -1,0 +1,439 @@
+[
+  {
+    "signature": "weka.classifiers.trees.j48.NBTreeNoSplit()",
+    "name": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.NBTreeNoSplit()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Build the no-split node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getErrors()",
+    "name": "getErrors",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getErrors()",
+      "comment": "Return the errors made by the naive bayes model at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDiscretizer()",
+    "name": "getDiscretizer",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.filters.supervised.attribute.Discretize",
+      "name": "weka.filters.supervised.attribute.Discretize",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDiscretizer()",
+      "comment": "Return the discretizer used at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNaiveBayesModel()",
+    "name": "getNaiveBayesModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.NaiveBayesUpdateable",
+      "name": "weka.classifiers.bayes.NaiveBayesUpdateable",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNaiveBayesModel()",
+      "comment": "Get the naive bayes model at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "whichSubset(weka.core.Instance instance)",
+    "name": "whichSubset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "whichSubset(weka.core.Instance instance)",
+      "comment": "Always returns 0 because only there is only one subset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weights(weka.core.Instance instance)",
+    "name": "weights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "weights(weka.core.Instance instance)",
+      "comment": "Always returns null because there is only one subset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leftSide(weka.core.Instances instances)",
+    "name": "leftSide",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "leftSide(weka.core.Instances instances)",
+      "comment": "Does nothing because no condition has to be satisfied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rightSide(int index, weka.core.Instances instances)",
+    "name": "rightSide",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "rightSide(int index, weka.core.Instances instances)",
+      "comment": "Does nothing because no condition has to be satisfied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sourceExpression(int index, weka.core.Instances data)",
+    "name": "sourceExpression",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "sourceExpression(int index, weka.core.Instances data)",
+      "comment": "Returns a string containing java source code equivalent to the test made at this node. The instance being tested is called \"i\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classProb(int classIndex, weka.core.Instance instance, int theSubset)",
+    "name": "classProb",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "theSubset"
+      }
+    ],
+    "protocol": {
+      "member": "classProb(int classIndex, weka.core.Instance instance, int theSubset)",
+      "comment": "Return the probability for a class value",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Return a textual description of the node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossValidate(weka.classifiers.bayes.NaiveBayesUpdateable fullModel, weka.core.Instances trainingSet, java.util.Random r)",
+    "name": "crossValidate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.NaiveBayesUpdateable",
+          "name": "NaiveBayesUpdateable",
+          "isArray": false
+        },
+        "name": "fullModel"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "trainingSet"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "protocol": {
+      "member": "crossValidate(weka.classifiers.bayes.NaiveBayesUpdateable fullModel, weka.core.Instances trainingSet, java.util.Random r)",
+      "comment": "Utility method for fast 5-fold cross validation of a naive bayes model",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.NBTreeNoSplit",
+      "name": "NBTreeNoSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.NBTreeNoSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

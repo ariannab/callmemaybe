@@ -1,0 +1,991 @@
+[
+  {
+    "signature": "weka.classifiers.trees.m5.RuleNode(double globalDev, double globalAbsDev, weka.classifiers.trees.m5.RuleNode parent)",
+    "name": "weka.classifiers.trees.m5.RuleNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "globalDev"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "globalAbsDev"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+          "name": "RuleNode",
+          "isArray": false
+        },
+        "name": "parent"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.m5.RuleNode(double globalDev, double globalAbsDev, weka.classifiers.trees.m5.RuleNode parent)",
+      "comment": "Creates a new RuleNode instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Build this node (find an attribute and split point)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance inst)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance inst)",
+      "comment": "Classify an instance using this node. Recursively calls classifyInstance on child nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "smoothingOriginal(double n, double pred, double supportPred)",
+    "name": "smoothingOriginal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "pred"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "supportPred"
+      }
+    ],
+    "protocol": {
+      "member": "smoothingOriginal(double n, double pred, double supportPred)",
+      "comment": "Applies the m5 smoothing procedure to a prediction",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "split()",
+    "name": "split",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "split()",
+      "comment": "Finds an attribute and split point for this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numLeaves(int leafCounter)",
+    "name": "numLeaves",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "leafCounter"
+      }
+    ],
+    "protocol": {
+      "member": "numLeaves(int leafCounter)",
+      "comment": "Sets the leaves' numbers",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "print the linear model at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printNodeLinearModel()",
+    "name": "printNodeLinearModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "printNodeLinearModel()",
+      "comment": "print the linear model at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printLeafModels()",
+    "name": "printLeafModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "printLeafModels()",
+      "comment": "print all leaf models",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nodeToString()",
+    "name": "nodeToString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nodeToString()",
+      "comment": "Returns a description of this node (debugging purposes)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "treeToString(int level)",
+    "name": "treeToString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      }
+    ],
+    "protocol": {
+      "member": "treeToString(int level)",
+      "comment": "Recursively builds a textual description of the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "installLinearModels()",
+    "name": "installLinearModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "installLinearModels()",
+      "comment": "Traverses the tree and installs linear models at each node. This method must be called if pruning is not to be performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "installSmoothedModels()",
+    "name": "installSmoothedModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "installSmoothedModels()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prune()",
+    "name": "prune",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "prune()",
+      "comment": "Recursively prune the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findBestLeaf(double[] maxCoverage, weka.classifiers.trees.m5.RuleNode[] bestLeaf)",
+    "name": "findBestLeaf",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "maxCoverage"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Lweka.classifiers.trees.m5.RuleNode;",
+          "name": "RuleNode[]",
+          "isArray": true
+        },
+        "name": "bestLeaf"
+      }
+    ],
+    "protocol": {
+      "member": "findBestLeaf(double[] maxCoverage, weka.classifiers.trees.m5.RuleNode[] bestLeaf)",
+      "comment": "Find the leaf with greatest coverage",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "returnLeaves(java.util.ArrayList<weka.classifiers.trees.m5.RuleNode>[] v)",
+    "name": "returnLeaves",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.ArrayList;",
+          "name": "ArrayList[]",
+          "isArray": true
+        },
+        "name": "v"
+      }
+    ],
+    "protocol": {
+      "member": "returnLeaves(java.util.ArrayList<weka.classifiers.trees.m5.RuleNode>[] v)",
+      "comment": "Return a list containing all the leaves in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parentNode()",
+    "name": "parentNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "weka.classifiers.trees.m5.RuleNode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "parentNode()",
+      "comment": "Get the parent of this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leftNode()",
+    "name": "leftNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "weka.classifiers.trees.m5.RuleNode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "leftNode()",
+      "comment": "Get the left child of this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rightNode()",
+    "name": "rightNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "weka.classifiers.trees.m5.RuleNode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "rightNode()",
+      "comment": "Get the right child of this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "splitAtt()",
+    "name": "splitAtt",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "splitAtt()",
+      "comment": "Get the index of the splitting attribute for this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "splitVal()",
+    "name": "splitVal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "splitVal()",
+      "comment": "Get the split point for this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numberOfLinearModels()",
+    "name": "numberOfLinearModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numberOfLinearModels()",
+      "comment": "Get the number of linear models in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLeaf()",
+    "name": "isLeaf",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isLeaf()",
+      "comment": "Return true if this node is a leaf",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rootMeanSquaredError()",
+    "name": "rootMeanSquaredError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "rootMeanSquaredError()",
+      "comment": "Get the root mean squared error at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getModel()",
+    "name": "getModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.m5.PreConstructedLinearModel",
+      "name": "weka.classifiers.trees.m5.PreConstructedLinearModel",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getModel()",
+      "comment": "Get the linear model at this node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumInstances()",
+    "name": "getNumInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumInstances()",
+      "comment": "Return the number of instances that reach this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRegressionTree()",
+    "name": "getRegressionTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRegressionTree()",
+      "comment": "Get the value of regressionTree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinNumInstances(double minNum)",
+    "name": "setMinNumInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "minNum"
+      }
+    ],
+    "protocol": {
+      "member": "setMinNumInstances(double minNum)",
+      "comment": "Set the minumum number of instances to allow at a leaf node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinNumInstances()",
+    "name": "getMinNumInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMinNumInstances()",
+      "comment": "Get the minimum number of instances to allow at a leaf node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRegressionTree(boolean newregressionTree)",
+    "name": "setRegressionTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newregressionTree"
+      }
+    ],
+    "protocol": {
+      "member": "setRegressionTree(boolean newregressionTree)",
+      "comment": "Set the value of regressionTree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printAllModels()",
+    "name": "printAllModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "printAllModels()",
+      "comment": "Print all the linear models at the learf (debugging purposes)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "assignIDs(int lastID)",
+    "name": "assignIDs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lastID"
+      }
+    ],
+    "protocol": {
+      "member": "assignIDs(int lastID)",
+      "comment": "Assigns a unique identifier to each node in the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph(java.lang.StringBuffer text)",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "protocol": {
+      "member": "graph(java.lang.StringBuffer text)",
+      "comment": "Assign a unique identifier to each node in the tree and then calls graphTree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphTree(java.lang.StringBuffer text)",
+    "name": "graphTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "protocol": {
+      "member": "graphTree(java.lang.StringBuffer text)",
+      "comment": "Return a dotty style string describing the tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSaveInstances(boolean save)",
+    "name": "setSaveInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "save"
+      }
+    ],
+    "protocol": {
+      "member": "setSaveInstances(boolean save)",
+      "comment": "Set whether to save instances for visualization purposes. Default is to save memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.m5.RuleNode",
+      "name": "RuleNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.m5.RuleNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

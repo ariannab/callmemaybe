@@ -1,0 +1,1714 @@
+[
+  {
+    "signature": "java.util.HashMap(int initialCapacity, float loadFactor)",
+    "name": "java.util.HashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "loadFactor"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.HashMap(int initialCapacity, float loadFactor)",
+      "comment": "Constructs an empty HashMap with the specified initial capacity and load factor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.HashMap(int initialCapacity)",
+    "name": "java.util.HashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.HashMap(int initialCapacity)",
+      "comment": "Constructs an empty HashMap with the specified initial capacity and the default load factor (0method_0).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.HashMap()",
+    "name": "java.util.HashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.HashMap()",
+      "comment": "Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0method_0).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.HashMap(java.util.Map<? extends K, ? extends V> m)",
+    "name": "java.util.HashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.HashMap(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Constructs a new HashMap with the same mappings as the specified Map. The HashMap is created with default load factor (0method_0) and an initial capacity sufficient to hold the mappings in the specified Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hash(java.lang.Object key)",
+    "name": "hash",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "hash(java.lang.Object key)",
+      "comment": "Computes method_0 and spreads (XORs) higher bits of hash to lower. Because the table uses power-of-two masking, sets of hashes that vary only in bits above the current mask will always collide. (Among known examples are sets of Float keys holding consecutive whole numbers in small tables.) So we apply a transform that spreads the impact of higher bits downward. There is a tradeoff between speed, utility, and quality of bit-spreading. Because many common sets of hashes are already reasonably distributed (so don't benefit from spreading), and because we use trees to handle large sets of collisions in bins, we just XOR some shifted bits in the cheapest possible way to reduce systematic lossage, as well as to incorporate impact of the highest bits that would otherwise never be used in index calculations because of table bounds.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparableClassFor(java.lang.Object x)",
+    "name": "comparableClassFor",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Class<?>",
+      "name": "java.lang.Class<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "comparableClassFor(java.lang.Object x)",
+      "comment": "Returns x's Class if it is of the form \"class C implements Comparable<C>\", else null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareComparables(java.lang.Class<?> kc, java.lang.Object k, java.lang.Object x)",
+    "name": "compareComparables",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "kc"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "compareComparables(java.lang.Class<?> kc, java.lang.Object k, java.lang.Object x)",
+      "comment": "Returns method_0 if x matches kc (k's screened comparable class), else 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tableSizeFor(int cap)",
+    "name": "tableSizeFor",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "cap"
+      }
+    ],
+    "protocol": {
+      "member": "tableSizeFor(int cap)",
+      "comment": "Returns a power of two size for the given target capacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putMapEntries(java.util.Map<? extends K, ? extends V> m, boolean evict)",
+    "name": "putMapEntries",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "evict"
+      }
+    ],
+    "protocol": {
+      "member": "putMapEntries(java.util.Map<? extends K, ? extends V> m, boolean evict)",
+      "comment": "Implements method_0 and Map constructor",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of key-value mappings in this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "Returns true if this map contains no key-value mappings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that (key==null ? k==null : method_0, then this method returns v; otherwise it returns null. (There can be at most one such mapping.) A return value of null does not necessarily indicate that the map contains no mapping for the key; it's also possible that the map explicitly maps the key to null. The method_2 containsKey operation may be used to distinguish these two cases.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode(int hash, java.lang.Object key)",
+    "name": "getNode",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$Node<K, V>",
+      "name": "java.util.HashMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hash"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getNode(int hash, java.lang.Object key)",
+      "comment": "Implements method_0 and related methods",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "Returns true if this map contains a mapping for the specified key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "Associates the specified value with the specified key in this map. If the map previously contained a mapping for the key, the old value is replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict)",
+    "name": "putVal",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hash"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "onlyIfAbsent"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "evict"
+      }
+    ],
+    "protocol": {
+      "member": "putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict)",
+      "comment": "Implements method_0 and related methods",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resize()",
+    "name": "resize",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$Node<K, V>[]",
+      "name": "java.util.HashMap$Node<K, V>[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "resize()",
+      "comment": "Initializes or doubles table size. If null, allocates in accord with initial capacity target held in field threshold. Otherwise, because we are using power-of-two expansion, the elements from each bin must either stay at same index, or move with a power of two offset in the new table.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "treeifyBin(java.util.HashMap$Node<K, V>[] tab, int hash)",
+    "name": "treeifyBin",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.HashMap$Node;",
+          "name": "Node[]",
+          "isArray": true
+        },
+        "name": "tab"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hash"
+      }
+    ],
+    "protocol": {
+      "member": "treeifyBin(java.util.HashMap$Node<K, V>[] tab, int hash)",
+      "comment": "Replaces all linked nodes in bin at index for given hash unless table is too small, in which case resizes instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(java.util.Map<? extends K, ? extends V> m)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "putAll(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Copies all of the mappings from the specified map to this map. These mappings will replace any mappings that this map had for any of the keys currently in the specified map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "Removes the mapping for the specified key from this map if present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeNode(int hash, java.lang.Object key, java.lang.Object value, boolean matchValue, boolean movable)",
+    "name": "removeNode",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$Node<K, V>",
+      "name": "java.util.HashMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hash"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "matchValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "movable"
+      }
+    ],
+    "protocol": {
+      "member": "removeNode(int hash, java.lang.Object key, java.lang.Object value, boolean matchValue, boolean movable)",
+      "comment": "Implements method_0 and related methods",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the mappings from this map. The map will be empty after this call returns.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.isEmpty()<-receiverObjectID.isEmpty()"
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if this map maps one or more keys to the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<K>",
+      "name": "java.util.Set<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a Set view of the keys contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is modified while an iteration over the set is in progress (except through the iterator's own remove operation), the results of the iteration are undefined. The set supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll, and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "Returns a Collection view of the values contained in this map. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa. If the map is modified while an iteration over the collection is in progress (except through the iterator's own remove operation), the results of the iteration are undefined. The collection supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "Returns a Set view of the mappings contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is modified while an iteration over the set is in progress (except through the iterator's own remove operation, or through the setValue operation on a map entry returned by the iterator) the results of the iteration are undefined. The set supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll and clear operations. It does not support the add or addAll operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOrDefault(java.lang.Object key, V defaultValue)",
+    "name": "getOrDefault",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getOrDefault(java.lang.Object key, V defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putIfAbsent(K key, V value)",
+    "name": "putIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putIfAbsent(K key, V value)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key, java.lang.Object value)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key, java.lang.Object value)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V oldValue, V newValue)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "oldValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V oldValue, V newValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V value)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V value)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+    "name": "computeIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "computeIfPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+    "name": "merge",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a shallow copy of this HashMap instance: the keys and values themselves are not cloned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "loadFactor()",
+    "name": "loadFactor",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "loadFactor()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "capacity()",
+    "name": "capacity",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "capacity()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newNode(int hash, K key, V value, java.util.HashMap$Node<K, V> next)",
+    "name": "newNode",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$Node<K, V>",
+      "name": "java.util.HashMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hash"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "next"
+      }
+    ],
+    "protocol": {
+      "member": "newNode(int hash, K key, V value, java.util.HashMap$Node<K, V> next)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replacementNode(java.util.HashMap$Node<K, V> p, java.util.HashMap$Node<K, V> next)",
+    "name": "replacementNode",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$Node<K, V>",
+      "name": "java.util.HashMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "p"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "next"
+      }
+    ],
+    "protocol": {
+      "member": "replacementNode(java.util.HashMap$Node<K, V> p, java.util.HashMap$Node<K, V> next)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newTreeNode(int hash, K key, V value, java.util.HashMap$Node<K, V> next)",
+    "name": "newTreeNode",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$TreeNode<K, V>",
+      "name": "java.util.HashMap$TreeNode<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "hash"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "next"
+      }
+    ],
+    "protocol": {
+      "member": "newTreeNode(int hash, K key, V value, java.util.HashMap$Node<K, V> next)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replacementTreeNode(java.util.HashMap$Node<K, V> p, java.util.HashMap$Node<K, V> next)",
+    "name": "replacementTreeNode",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.HashMap$TreeNode<K, V>",
+      "name": "java.util.HashMap$TreeNode<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "p"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "next"
+      }
+    ],
+    "protocol": {
+      "member": "replacementTreeNode(java.util.HashMap$Node<K, V> p, java.util.HashMap$Node<K, V> next)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reinitialize()",
+    "name": "reinitialize",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reinitialize()",
+      "comment": "Reset to initial default state. Called by clone and readObject.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "afterNodeAccess(java.util.HashMap$Node<K, V> p)",
+    "name": "afterNodeAccess",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "afterNodeAccess(java.util.HashMap$Node<K, V> p)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "afterNodeInsertion(boolean evict)",
+    "name": "afterNodeInsertion",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "evict"
+      }
+    ],
+    "protocol": {
+      "member": "afterNodeInsertion(boolean evict)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "afterNodeRemoval(java.util.HashMap$Node<K, V> p)",
+    "name": "afterNodeRemoval",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.HashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "afterNodeRemoval(java.util.HashMap$Node<K, V> p)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internalWriteEntries(java.io.ObjectOutputStream s)",
+    "name": "internalWriteEntries",
+    "containingClass": {
+      "qualifiedName": "java.util.HashMap",
+      "name": "HashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.HashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.ObjectOutputStream",
+          "name": "ObjectOutputStream",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "internalWriteEntries(java.io.ObjectOutputStream s)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

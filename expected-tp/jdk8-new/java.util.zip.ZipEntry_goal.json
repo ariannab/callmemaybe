@@ -1,0 +1,779 @@
+[
+  {
+    "signature": "java.util.zip.ZipEntry(java.lang.String name)",
+    "name": "java.util.zip.ZipEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.ZipEntry(java.lang.String name)",
+      "comment": "Creates a new zip entry with the specified name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.ZipEntry(java.util.zip.ZipEntry e)",
+    "name": "java.util.zip.ZipEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.zip.ZipEntry",
+          "name": "ZipEntry",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.ZipEntry(java.util.zip.ZipEntry e)",
+      "comment": "Creates a new zip entry with fields taken from the specified zip entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.ZipEntry()",
+    "name": "java.util.zip.ZipEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.zip.ZipEntry()",
+      "comment": "Creates a new un-initialized zip entry",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getName()",
+    "name": "getName",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getName()",
+      "comment": "Returns the name of the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTime(long time)",
+    "name": "setTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      }
+    ],
+    "protocol": {
+      "member": "setTime(long time)",
+      "comment": "Sets the last modification time of the entry.  If the entry is output to a ZIP file or ZIP file formatted output stream the last modification time set by this method will be stored into the date and time fields of the zip file entry and encoded in standard MS-DOS date and time format. The java.method_0 default TimeZone is used to convert the epoch time to the MS-DOS data and time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTime()",
+    "name": "getTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTime()",
+      "comment": "Returns the last modification time of the entry.  If the entry is read from a ZIP file or ZIP file formatted input stream, this is the last modification time from the date and time fields of the zip file entry. The java.method_0 default TimeZone is used to convert the standard MS-DOS formatted date and time to the epoch time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLastModifiedTime(java.nio.file.attribute.FileTime time)",
+    "name": "setLastModifiedTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.file.attribute.FileTime",
+          "name": "FileTime",
+          "isArray": false
+        },
+        "name": "time"
+      }
+    ],
+    "protocol": {
+      "member": "setLastModifiedTime(java.nio.file.attribute.FileTime time)",
+      "comment": "Sets the last modification time of the entry.  When output to a ZIP file or ZIP file formatted output stream the last modification time set by this method will be stored into zip file entry's date and time fields in standard MS-DOS date and time format}), and the extended timestamp fields in {@code optional extra data in UTC time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLastModifiedTime()",
+    "name": "getLastModifiedTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.nio.file.attribute.FileTime",
+      "name": "java.nio.file.attribute.FileTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLastModifiedTime()",
+      "comment": "Returns the last modification time of the entry.  If the entry is read from a ZIP file or ZIP file formatted input stream, this is the last modification time from the zip file entry's optional extra data if the extended timestamp fields are present. Otherwise the last modification time is read from the entry's date and time fields, the java.method_0 default TimeZone is used to convert the standard MS-DOS formatted date and time to the epoch time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLastAccessTime(java.nio.file.attribute.FileTime time)",
+    "name": "setLastAccessTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.file.attribute.FileTime",
+          "name": "FileTime",
+          "isArray": false
+        },
+        "name": "time"
+      }
+    ],
+    "protocol": {
+      "member": "setLastAccessTime(java.nio.file.attribute.FileTime time)",
+      "comment": "Sets the last access time of the entry.  If set, the last access time will be stored into the extended timestamp fields of entry's optional extra data, when output to a ZIP file or ZIP file formatted stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLastAccessTime()",
+    "name": "getLastAccessTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.nio.file.attribute.FileTime",
+      "name": "java.nio.file.attribute.FileTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLastAccessTime()",
+      "comment": "Returns the last access time of the entry.  The last access time is from the extended timestamp fields of entry's optional extra data when read from a ZIP file or ZIP file formatted stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCreationTime(java.nio.file.attribute.FileTime time)",
+    "name": "setCreationTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.file.attribute.FileTime",
+          "name": "FileTime",
+          "isArray": false
+        },
+        "name": "time"
+      }
+    ],
+    "protocol": {
+      "member": "setCreationTime(java.nio.file.attribute.FileTime time)",
+      "comment": "Sets the creation time of the entry.  If set, the creation time will be stored into the extended timestamp fields of entry's optional extra data, when output to a ZIP file or ZIP file formatted stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCreationTime()",
+    "name": "getCreationTime",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.nio.file.attribute.FileTime",
+      "name": "java.nio.file.attribute.FileTime",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCreationTime()",
+      "comment": "Returns the creation time of the entry.  The creation time is from the extended timestamp fields of entry's optional extra data when read from a ZIP file or ZIP file formatted stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSize(long size)",
+    "name": "setSize",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "protocol": {
+      "member": "setSize(long size)",
+      "comment": "Sets the uncompressed size of the entry data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSize()",
+    "name": "getSize",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSize()",
+      "comment": "Returns the uncompressed size of the entry data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCompressedSize()",
+    "name": "getCompressedSize",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCompressedSize()",
+      "comment": "Returns the size of the compressed entry data.  In the case of a stored entry, the compressed size will be the same as the uncompressed size of the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCompressedSize(long csize)",
+    "name": "setCompressedSize",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "csize"
+      }
+    ],
+    "protocol": {
+      "member": "setCompressedSize(long csize)",
+      "comment": "Sets the size of the compressed entry data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCrc(long crc)",
+    "name": "setCrc",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "crc"
+      }
+    ],
+    "protocol": {
+      "member": "setCrc(long crc)",
+      "comment": "Sets the CRC-32 checksum of the uncompressed entry data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCrc()",
+    "name": "getCrc",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCrc()",
+      "comment": "Returns the CRC-32 checksum of the uncompressed entry data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMethod(int method)",
+    "name": "setMethod",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "method"
+      }
+    ],
+    "protocol": {
+      "member": "setMethod(int method)",
+      "comment": "Sets the compression method for the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMethod()",
+    "name": "getMethod",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMethod()",
+      "comment": "Returns the compression method of the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setExtra(byte[] extra)",
+    "name": "setExtra",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "extra"
+      }
+    ],
+    "protocol": {
+      "member": "setExtra(byte[] extra)",
+      "comment": "Sets the optional extra field data for the entry.  Invoking this method may change this entry's last modification time, last access time and creation time, if the extra field data includes the extensible timestamp fields, such as NTFS tag 0x0001 or Info-ZIP Extended Timestamp, as specified in Info-ZIP Application Note 970311.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setExtra0(byte[] extra, boolean doZIP64)",
+    "name": "setExtra0",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "extra"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "doZIP64"
+      }
+    ],
+    "protocol": {
+      "member": "setExtra0(byte[] extra, boolean doZIP64)",
+      "comment": "Sets the optional extra field data for the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExtra()",
+    "name": "getExtra",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getExtra()",
+      "comment": "Returns the extra field data for the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setComment(java.lang.String comment)",
+    "name": "setComment",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "comment"
+      }
+    ],
+    "protocol": {
+      "member": "setComment(java.lang.String comment)",
+      "comment": "Sets the optional comment string for the entry. ZIP entry comments have maximum length of 0xffff. If the length of the specified comment string is greater than 0xFFFF bytes after encoding, only the first 0xFFFF bytes are output to the ZIP file entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getComment()",
+    "name": "getComment",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getComment()",
+      "comment": "Returns the comment string for the entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isDirectory()",
+    "name": "isDirectory",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isDirectory()",
+      "comment": "Returns true if this is a directory entry. A directory entry is defined to be one whose name ends with a '/'.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string representation of the ZIP entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "ZipEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a copy of this entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

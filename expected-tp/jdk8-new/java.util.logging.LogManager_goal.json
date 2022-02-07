@@ -1,0 +1,770 @@
+[
+  {
+    "signature": "java.util.logging.LogManager()",
+    "name": "java.util.logging.LogManager",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.logging.LogManager()",
+      "comment": "Protected constructor. This is protected so that container applications (such as J2EE containers) can subclass the object. It is non-public as it is intended that there only be one LogManager object, whose value is retrieved by calling method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureLogManagerInitialized()",
+    "name": "ensureLogManagerInitialized",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "ensureLogManagerInitialized()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLogManager()",
+    "name": "getLogManager",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "java.util.logging.LogManager",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLogManager()",
+      "comment": "Returns the global LogManager object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addPropertyChangeListener(java.beans.PropertyChangeListener l)",
+    "name": "addPropertyChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.beans.PropertyChangeListener",
+          "name": "PropertyChangeListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "addPropertyChangeListener(java.beans.PropertyChangeListener l)",
+      "comment": "Adds an event listener to be invoked when the logging properties are re-read. Adding multiple instances of the same event Listener results in multiple entries in the property event listener table. <b>WARNING:</b> This method is omitted from this class in all subset Profiles of Java SE that do not include the javamethod_0 package.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removePropertyChangeListener(java.beans.PropertyChangeListener l)",
+    "name": "removePropertyChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.beans.PropertyChangeListener",
+          "name": "PropertyChangeListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "removePropertyChangeListener(java.beans.PropertyChangeListener l)",
+      "comment": "Removes an event listener for property change events. If the same listener instance has been added to the listener table through multiple invocations of addPropertyChangeListener, then an equivalent number of removePropertyChangeListener invocations are required to remove all instances of that listener from the listener table. <P> Returns silently if the given listener is not found. <b>WARNING:</b> This method is omitted from this class in all subset Profiles of Java SE that do not include the javamethod_0 package.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSystemContext()",
+    "name": "getSystemContext",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.LogManager$LoggerContext",
+      "name": "java.util.logging.LogManager$LoggerContext",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSystemContext()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "demandLogger(java.lang.String name, java.lang.String resourceBundleName, java.lang.Class<?> caller)",
+    "name": "demandLogger",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Logger",
+      "name": "java.util.logging.Logger",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "resourceBundleName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "caller"
+      }
+    ],
+    "protocol": {
+      "member": "demandLogger(java.lang.String name, java.lang.String resourceBundleName, java.lang.Class<?> caller)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "demandSystemLogger(java.lang.String name, java.lang.String resourceBundleName)",
+    "name": "demandSystemLogger",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Logger",
+      "name": "java.util.logging.Logger",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "resourceBundleName"
+      }
+    ],
+    "protocol": {
+      "member": "demandSystemLogger(java.lang.String name, java.lang.String resourceBundleName)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drainLoggerRefQueueBounded()",
+    "name": "drainLoggerRefQueueBounded",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "drainLoggerRefQueueBounded()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addLogger(java.util.logging.Logger logger)",
+    "name": "addLogger",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Logger",
+          "name": "Logger",
+          "isArray": false
+        },
+        "name": "logger"
+      }
+    ],
+    "protocol": {
+      "member": "addLogger(java.util.logging.Logger logger)",
+      "comment": "Add a named logger. This does nothing and returns false if a logger with the same name is already registered.  The Logger factory methods call this method to register each newly created Logger.  The application should retain its own reference to the Logger object to avoid it being garbage collected. The LogManager may only retain a weak reference.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLogger(java.lang.String name)",
+    "name": "getLogger",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Logger",
+      "name": "java.util.logging.Logger",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getLogger(java.lang.String name)",
+      "comment": "Method to find a named logger.  Note that since untrusted code may create loggers with arbitrary names this method should not be relied on to find Loggers for security sensitive logging. It is also important to note that the Logger associated with the String name may be garbage collected at any time if there is no strong reference to the Logger. The caller of this method must check the return value for null in order to properly handle the case where the Logger has been garbage collected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLoggerNames()",
+    "name": "getLoggerNames",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLoggerNames()",
+      "comment": "Get an enumeration of known logger names.  Note: Loggers may be added dynamically as new classes are loaded. This method only reports on the loggers that are currently registered. It is also important to note that this method only returns the name of a Logger, not a strong reference to the Logger itself. The returned String does nothing to prevent the Logger from being garbage collected. In particular, if the returned name is passed to method_0, then the caller must check the return value from method_0 for null to properly handle the case where the Logger has been garbage collected in the time since its name was returned by this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readConfiguration()",
+    "name": "readConfiguration",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "readConfiguration()",
+      "comment": "Reinitialize the logging properties and reread the logging configuration.  The same rules are used for locating the configuration properties as are used at startup. So normally the logging properties will be re-read from the same file that was used at startup. <P> Any log level definitions in the new configuration file will be applied using method_0, if the target Logger exists.  A PropertyChangeEvent will be fired after the properties are read. @exception SecurityException if a security manager exists and if the caller does not have method_1 @exception IOException if there are IO problems reading the configuration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Reset the logging configuration.  For all named loggers, the reset operation removes and closes all Handlers and (except for the root logger) sets the level to null. The root logger's level is set to method_1. @exception SecurityException if a security manager exists and if the caller does not have method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readConfiguration(java.io.InputStream ins)",
+    "name": "readConfiguration",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "ins"
+      }
+    ],
+    "protocol": {
+      "member": "readConfiguration(java.io.InputStream ins)",
+      "comment": "Reinitialize the logging properties and reread the logging configuration from the given stream, which should be in javamethod_1method_2 format. A PropertyChangeEvent will be fired after the properties are read.  Any log level definitions in the new configuration file will be applied using method_0, if the target Logger exists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProperty(java.lang.String name)",
+    "name": "getProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getProperty(java.lang.String name)",
+      "comment": "Get the value of a logging property. The method returns null if the property is not found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStringProperty(java.lang.String name, java.lang.String defaultValue)",
+    "name": "getStringProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getStringProperty(java.lang.String name, java.lang.String defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIntProperty(java.lang.String name, int defaultValue)",
+    "name": "getIntProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getIntProperty(java.lang.String name, int defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBooleanProperty(java.lang.String name, boolean defaultValue)",
+    "name": "getBooleanProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getBooleanProperty(java.lang.String name, boolean defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLevelProperty(java.lang.String name, java.util.logging.Level defaultValue)",
+    "name": "getLevelProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Level",
+      "name": "java.util.logging.Level",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Level",
+          "name": "Level",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getLevelProperty(java.lang.String name, java.util.logging.Level defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFilterProperty(java.lang.String name, java.util.logging.Filter defaultValue)",
+    "name": "getFilterProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Filter",
+      "name": "java.util.logging.Filter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Filter",
+          "name": "Filter",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getFilterProperty(java.lang.String name, java.util.logging.Filter defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFormatterProperty(java.lang.String name, java.util.logging.Formatter defaultValue)",
+    "name": "getFormatterProperty",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Formatter",
+      "name": "java.util.logging.Formatter",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Formatter",
+          "name": "Formatter",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getFormatterProperty(java.lang.String name, java.util.logging.Formatter defaultValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkPermission()",
+    "name": "checkPermission",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "checkPermission()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkAccess()",
+    "name": "checkAccess",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "checkAccess()",
+      "comment": "Check that the current context is trusted to modify the logging configuration. This requires method_0  If the check fails we throw a SecurityException, otherwise we return normally. @exception SecurityException if a security manager exists and if the caller does not have method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLoggingMXBean()",
+    "name": "getLoggingMXBean",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LogManager",
+      "name": "LogManager",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LogManager",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.LoggingMXBean",
+      "name": "java.util.logging.LoggingMXBean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLoggingMXBean()",
+      "comment": "Returns LoggingMXBean for managing loggers. An alternative way to manage loggers is through the javamethod_1method_2method_3 interface that can be obtained by calling:  PlatformLoggingMXBean logging = javamethod_1.method_0 method_8(method_9);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,1184 @@
+[
+  {
+    "signature": "weka.classifiers.meta.LogitBoost()",
+    "name": "weka.classifiers.meta.LogitBoost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.LogitBoost()",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectWeightQuantile(weka.core.Instances data, double quantile)",
+    "name": "selectWeightQuantile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "quantile"
+      }
+    ],
+    "protocol": {
+      "member": "selectWeightQuantile(weka.core.Instances data, double quantile)",
+      "comment": "Select only instances with weights that contribute to the specified quantile of the weight distribution",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -Q Use resampling instead of reweighting for boosting.   -P <percent> Percentage of weight mass to base training on. (default 100, reduce to around 90 speed up)   -L <num> Threshold on the improvement of the likelihood. (default -method_0)   -H <num> Shrinkage parameter. (default 1)   -Z <num> Z max threshold for responses. (default 3)   -O <int> The size of the thread pool, for example, the number of cores in the CPU. (default 1)   -E <int> The number of threads to use for batch prediction, which should be >= size of thread pool. (default 1)   -S <num> Random number seed. (default 1)   -I <num> Number of iterations. (default 10)   -W Full name of base classifier. (default: wekamethod_1method_2method_3)   -output-debug-info If set, classifier is run in debug mode and may output additional info to the console   -do-not-check-capabilities If set, classifier capabilities are not checked before classifier is built (use with caution).   Options specific to classifier wekamethod_1method_2method_3:   -output-debug-info If set, classifier is run in debug mode and may output additional info to the console   -do-not-check-capabilities If set, classifier capabilities are not checked before classifier is built (use with caution).  <!-- options-end --> Options after -- are passed to the designated learner.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ZMaxTipText()",
+    "name": "ZMaxTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "ZMaxTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setZMax(double zMax)",
+    "name": "setZMax",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "zMax"
+      }
+    ],
+    "protocol": {
+      "member": "setZMax(double zMax)",
+      "comment": "Set the Z max threshold on the responses",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZMax()",
+    "name": "getZMax",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getZMax()",
+      "comment": "Get the Z max threshold on the responses",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shrinkageTipText()",
+    "name": "shrinkageTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "shrinkageTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShrinkage()",
+    "name": "getShrinkage",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShrinkage()",
+      "comment": "Get the value of Shrinkage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setShrinkage(double newShrinkage)",
+    "name": "setShrinkage",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "newShrinkage"
+      }
+    ],
+    "protocol": {
+      "member": "setShrinkage(double newShrinkage)",
+      "comment": "Set the value of Shrinkage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "likelihoodThresholdTipText()",
+    "name": "likelihoodThresholdTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "likelihoodThresholdTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLikelihoodThreshold()",
+    "name": "getLikelihoodThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLikelihoodThreshold()",
+      "comment": "Get the value of Precision.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLikelihoodThreshold(double newPrecision)",
+    "name": "setLikelihoodThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "newPrecision"
+      }
+    ],
+    "protocol": {
+      "member": "setLikelihoodThreshold(double newPrecision)",
+      "comment": "Set the value of Precision.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useResamplingTipText()",
+    "name": "useResamplingTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useResamplingTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseResampling(boolean r)",
+    "name": "setUseResampling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "protocol": {
+      "member": "setUseResampling(boolean r)",
+      "comment": "Set resampling mode",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseResampling()",
+    "name": "getUseResampling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseResampling()",
+      "comment": "Get whether resampling is turned on",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightThresholdTipText()",
+    "name": "weightThresholdTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightThresholdTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeightThreshold(int threshold)",
+    "name": "setWeightThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "threshold"
+      }
+    ],
+    "protocol": {
+      "member": "setWeightThreshold(int threshold)",
+      "comment": "Set weight thresholding",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWeightThreshold()",
+    "name": "getWeightThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getWeightThreshold()",
+      "comment": "Get the degree of weight thresholding",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numThreadsTipText()",
+    "name": "numThreadsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numThreadsTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumThreads()",
+    "name": "getNumThreads",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumThreads()",
+      "comment": "Gets the number of threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumThreads(int nT)",
+    "name": "setNumThreads",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nT"
+      }
+    ],
+    "protocol": {
+      "member": "setNumThreads(int nT)",
+      "comment": "Sets the number of threads",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poolSizeTipText()",
+    "name": "poolSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "poolSizeTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPoolSize()",
+    "name": "getPoolSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPoolSize()",
+      "comment": "Gets the number of threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPoolSize(int nT)",
+    "name": "setPoolSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nT"
+      }
+    ],
+    "protocol": {
+      "member": "setPoolSize(int nT)",
+      "comment": "Sets the number of threads",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Method used to build the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initializeClassifier(weka.core.Instances data)",
+    "name": "initializeClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "initializeClassifier(weka.core.Instances data)",
+      "comment": "Builds the boosted classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Perform another iteration of boosting.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "done()",
+    "name": "done",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "done()",
+      "comment": "Clean up after boosting.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifiers()",
+    "name": "classifiers",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier[][]",
+      "name": "weka.classifiers.Classifier[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "classifiers()",
+      "comment": "Returns the array of classifiers that have been built.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "batchSizeTipText()",
+    "name": "batchSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "batchSizeTipText()",
+      "comment": "Tool tip text",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBatchSize(java.lang.String i)",
+    "name": "setBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "setBatchSize(java.lang.String i)",
+      "comment": "Dummy method to satisfy BatchPredictor interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBatchSize()",
+    "name": "getBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBatchSize()",
+      "comment": "Dummy method to satisfy BatchPredictor interface.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "implementsMoreEfficientBatchPrediction()",
+    "name": "implementsMoreEfficientBatchPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "implementsMoreEfficientBatchPrediction()",
+      "comment": "Performs efficient batch predcition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance inst)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance inst)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionsForInstances(weka.core.Instances insts)",
+    "name": "distributionsForInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "protocol": {
+      "member": "distributionsForInstances(weka.core.Instances insts)",
+      "comment": "Calculates the class membership probabilities for the given test instances. Uses multi-threading if requested.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSource(java.lang.String className)",
+    "name": "toSource",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "className"
+      }
+    ],
+    "protocol": {
+      "member": "toSource(java.lang.String className)",
+      "comment": "Returns the boosted model as Java source code.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns description of the boosted classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.LogitBoost",
+      "name": "LogitBoost",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.LogitBoost",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

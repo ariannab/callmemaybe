@@ -1,0 +1,459 @@
+[
+  {
+    "signature": "java.util.AbstractMap()",
+    "name": "java.util.AbstractMap",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.AbstractMap()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "{@inheritDoc} @implSpec This implementation returns method_0method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "{@inheritDoc} @implSpec This implementation returns method_0 == 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "{@inheritDoc} @implSpec This implementation iterates over method_0 searching for an entry with the specified value. If such an entry is found, true is returned. If the iteration terminates without finding such an entry, false is returned. Note that this implementation requires linear time in the size of the map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "{@inheritDoc} @implSpec This implementation iterates over method_0 searching for an entry with the specified key. If such an entry is found, true is returned. If the iteration terminates without finding such an entry, false is returned. Note that this implementation requires linear time in the size of the map; many implementations will override this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "{@inheritDoc} @implSpec This implementation iterates over method_0 searching for an entry with the specified key. If such an entry is found, the entry's value is returned. If the iteration terminates without finding such an entry, null is returned. Note that this implementation requires linear time in the size of the map; many implementations will override this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "{@inheritDoc} @implSpec This implementation always throws an UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "{@inheritDoc} @implSpec This implementation iterates over method_0 searching for an entry with the specified key. If such an entry is found, its value is obtained with its getValue operation, the entry is removed from the collection (and the backing map) with the iterator's remove operation, and the saved value is returned. If the iteration terminates without finding such an entry, null is returned. Note that this implementation requires linear time in the size of the map; many implementations will override this method. Note that this implementation throws an UnsupportedOperationException if the entrySet iterator does not support the remove method and this map contains a mapping for the specified key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(java.util.Map<? extends K, ? extends V> m)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "putAll(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "{@inheritDoc} @implSpec This implementation iterates over the specified map's method_0 collection, and calls this map's put operation once for each entry returned by the iteration. Note that this implementation throws an UnsupportedOperationException if this map does not support the put operation and the specified map is nonempty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "{@inheritDoc} @implSpec This implementation calls method_0method_1. Note that this implementation throws an UnsupportedOperationException if the entrySet does not support the clear operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<K>",
+      "name": "java.util.Set<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "{@inheritDoc} @implSpec This implementation returns a set that subclasses AbstractSet. The subclass's iterator method returns a \"wrapper object\" over this map's method_0 iterator. The size method delegates to this map's size method and the contains method delegates to this map's containsKey method. The set is created the first time this method is called, and returned in response to all subsequent calls. No synchronization is performed, so there is a slight chance that multiple calls to this method will not all return the same set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "{@inheritDoc} @implSpec This implementation returns a collection that subclasses AbstractCollection. The subclass's iterator method returns a \"wrapper object\" over this map's method_0 iterator. The size method delegates to this map's size method and the contains method delegates to this map's containsValue method. The collection is created the first time this method is called, and returned in response to all subsequent calls. No synchronization is performed, so there is a slight chance that multiple calls to this method will not all return the same collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object o)",
+      "comment": "Compares the specified object with this map for equality. Returns true if the given object is also a map and the two maps represent the same mappings. More formally, two maps m1 and m2 represent the same mappings if method_0method_1. This ensures that the equals method works properly across different implementations of the Map interface. @implSpec This implementation first checks if the specified object is this map; if so it returns true. Then, it checks if the specified object is a map whose size is identical to the size of this map; if not, it returns false. If so, it iterates over this map's entrySet collection, and checks that the specified map contains each mapping that this map contains. If the specified map fails to contain such a mapping, false is returned. If the iteration completes, true is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this map. The hash code of a map is defined to be the sum of the hash codes of each entry in the map's method_0 view. This ensures that method_1 implies that method_2==method_3 for any two maps m1 and m2, as required by the general contract of method_9. @implSpec This implementation iterates over method_0, calling method_10method_11 method_5 on each element (entry) in the set, and adding up the results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string representation of this map. The string representation consists of a list of key-value mappings in the order returned by the map's entrySet view's iterator, enclosed in braces (\"{}\"). Adjacent mappings are separated by the characters \", \" (comma and space). Each key-value mapping is rendered as the key followed by an equals sign (\"=\") followed by the associated value. Keys and values are converted to strings as by method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractMap",
+      "name": "AbstractMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a shallow copy of this AbstractMap instance: the keys and values themselves are not cloned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

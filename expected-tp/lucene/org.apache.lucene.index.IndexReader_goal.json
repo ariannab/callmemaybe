@@ -1,0 +1,805 @@
+[
+  {
+    "signature": "org.apache.lucene.index.IndexReader()",
+    "name": "org.apache.lucene.index.IndexReader",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "org.apache.lucene.index.IndexReader()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "registerParentReader(org.apache.lucene.index.IndexReader reader)",
+    "name": "registerParentReader",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.IndexReader",
+          "name": "IndexReader",
+          "isArray": false
+        },
+        "name": "reader"
+      }
+    ],
+    "protocol": {
+      "member": "registerParentReader(org.apache.lucene.index.IndexReader reader)",
+      "comment": "(emethod_0. CompositeReader or FilterLeafReader) to register the parent at the child (this reader) on construction of the parent. When this reader is closed, it will mark all registered parents as closed, too. The references to parent readers are weak only, so they can be GCed once they are no longer in use. @lucene.experimental",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "notifyReaderClosedListeners(java.lang.Throwable th)",
+    "name": "notifyReaderClosedListeners",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "th"
+      }
+    ],
+    "protocol": {
+      "member": "notifyReaderClosedListeners(java.lang.Throwable th)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRefCount()",
+    "name": "getRefCount",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRefCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incRef()",
+    "name": "incRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "incRef()",
+      "comment": "Expert: increments the refCount of this IndexReader instance. RefCounts are used to determine when a reader can be closed safely, i.e. as soon as there are no more references. Be sure to always call a corresponding #decRef, in a finally clause; otherwise the reader may never be closed. Note that #close simply calls method_0, which means that the IndexReader will not really be closed until #decRef has been called for all outstanding references.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.decRef()<-receiverObjectID.incRef()"
+    }
+  },
+  {
+    "signature": "tryIncRef()",
+    "name": "tryIncRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryIncRef()",
+      "comment": "Expert: increments the refCount of this IndexReader instance only if the IndexReader has not been closed yet and returns true iff the refCount was successfully incremented, otherwise false. If this method returns false the reader is either already closed or is currently being closed. Either way this reader instance shouldn't be used by an application unless true is returned.  RefCounts are used to determine when a reader can be closed safely, i.e. as soon as there are no more references. Be sure to always call a corresponding #decRef, in a finally clause; otherwise the reader may never be closed. Note that #close simply calls method_0, which means that the IndexReader will not really be closed until #decRef has been called for all outstanding references.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.decRef()<-receiverObjectID.incRef()"
+    }
+  },
+  {
+    "signature": "decRef()",
+    "name": "decRef",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "decRef()",
+      "comment": "Expert: decreases the refCount of this IndexReader instance. If the refCount drops to 0, then this reader is closed. If an exception is hit, the refCount is unchanged.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureOpen()",
+    "name": "ensureOpen",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "ensureOpen()",
+      "comment": "Throws AlreadyClosedException if this IndexReader or any of its child readers is closed, otherwise returns.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "IndexReader subclasses are not allowed to implement equals/hashCode, so methods are declared final.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "IndexReader subclasses are not allowed to implement equals/hashCode, so methods are declared final.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTermVectors(int docID)",
+    "name": "getTermVectors",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.index.Fields",
+      "name": "org.apache.lucene.index.Fields",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      }
+    ],
+    "protocol": {
+      "member": "getTermVectors(int docID)",
+      "comment": "term vectors were not indexed. The returned Fields instance acts like a single-document inverted index (the docID will be 0).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTermVector(int docID, java.lang.String field)",
+    "name": "getTermVector",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.index.Terms",
+      "name": "org.apache.lucene.index.Terms",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "protocol": {
+      "member": "getTermVector(int docID, java.lang.String field)",
+      "comment": "null if term vectors were not indexed. The returned Fields instance acts like a single-document inverted index (the docID will be 0).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numDocs()",
+    "name": "numDocs",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numDocs()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxDoc()",
+    "name": "maxDoc",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxDoc()",
+      "comment": "This may be used to, emethod_0., determine how big to allocate an array which will have an element for every document number in an index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numDeletedDocs()",
+    "name": "numDeletedDocs",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numDeletedDocs()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "document(int docID, org.apache.lucene.index.StoredFieldVisitor visitor)",
+    "name": "document",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.StoredFieldVisitor",
+          "name": "StoredFieldVisitor",
+          "isArray": false
+        },
+        "name": "visitor"
+      }
+    ],
+    "protocol": {
+      "member": "document(int docID, org.apache.lucene.index.StoredFieldVisitor visitor)",
+      "comment": "custom processing/loading of each field. If you simply want to load all fields, use #method_0 If you want to load a subset, use DocumentStoredFieldVisitor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "document(int docID)",
+    "name": "document",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.document.Document",
+      "name": "org.apache.lucene.document.Document",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      }
+    ],
+    "protocol": {
+      "member": "document(int docID)",
+      "comment": "Returns the stored fields of the nth Document in this index. This is just sugar for using DocumentStoredFieldVisitor.  NOTE: for performance reasons, this method does not check if the requested document is deleted, and therefore asking for a deleted document may yield unspecified results. Usually this is not required, however you can test if the doc is deleted by checking the Bits returned from method_0. NOTE: only the content of a field is returned, if that field was stored during indexing. Metadata like boost, omitNorm, IndexOptions, tokenized, etc., are not preserved.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "document(int docID, java.util.Set<java.lang.String> fieldsToLoad)",
+    "name": "document",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.document.Document",
+      "name": "org.apache.lucene.document.Document",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Set",
+          "name": "Set",
+          "isArray": false
+        },
+        "name": "fieldsToLoad"
+      }
+    ],
+    "protocol": {
+      "member": "document(int docID, java.util.Set<java.lang.String> fieldsToLoad)",
+      "comment": "Like #method_0 but only loads the specified fields. Note that this is simply sugar for DocumentStoredFieldVisitor#DocumentStoredFieldVisitor(Set).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasDeletions()",
+    "name": "hasDeletions",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasDeletions()",
+      "comment": "consider overriding this method if #method_0 or #numDocs() are not constant-time operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Closes files associated with this index. Also saves any new deletions to disk. No other methods should be called after this has been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doClose()",
+    "name": "doClose",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doClose()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getContext()",
+    "name": "getContext",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.index.IndexReaderContext",
+      "name": "org.apache.lucene.index.IndexReaderContext",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getContext()",
+      "comment": "Expert: Returns the root IndexReaderContext for this IndexReader's sub-reader tree.  Iff this reader is composed of sub readers, i.e. this reader being a composite reader, this method returns a CompositeReaderContext holding the reader's direct children as well as a view of the reader tree's atomic leaf contexts. All sub- IndexReaderContext instances referenced from this readers top-level context are private to this reader and are not shared with another context tree. For example, IndexSearcher uses this API to drive searching by one atomic leaf reader at a time. If this reader is not composed of child readers, this method returns an LeafReaderContext.  Note: Any of the sub-CompositeReaderContext instances referenced from this top-level context do not support method_0 Only the top-level context maintains the convenience leaf-view for performance reasons.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leaves()",
+    "name": "leaves",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<org.apache.lucene.index.LeafReaderContext>",
+      "name": "java.util.List<org.apache.lucene.index.LeafReaderContext>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "leaves()",
+      "comment": "Returns the reader's leaves, or itself if this reader is atomic. This is a convenience method calling method_0leaves().",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReaderCacheHelper()",
+    "name": "getReaderCacheHelper",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader$CacheHelper",
+      "name": "org.apache.lucene.index.IndexReader$CacheHelper",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getReaderCacheHelper()",
+      "comment": "Optional method: Return a CacheHelper that can be used to cache based on the content of this reader. Two readers that have different data or different sets of deleted documents will be considered different. A return value of null indicates that this reader is not suited for caching, which is typically the case for short-lived wrappers that alter the content of the wrapped reader. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "docFreq(org.apache.lucene.index.Term term)",
+    "name": "docFreq",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.Term",
+          "name": "Term",
+          "isArray": false
+        },
+        "name": "term"
+      }
+    ],
+    "protocol": {
+      "member": "docFreq(org.apache.lucene.index.Term term)",
+      "comment": "term. This method returns 0 if the term or field does not exists. This method does not take into account deleted documents that have not yet been merged away.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "totalTermFreq(org.apache.lucene.index.Term term)",
+    "name": "totalTermFreq",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.Term",
+          "name": "Term",
+          "isArray": false
+        },
+        "name": "term"
+      }
+    ],
+    "protocol": {
+      "member": "totalTermFreq(org.apache.lucene.index.Term term)",
+      "comment": "Returns the total number of occurrences of term across all documents (the sum of the method_0 for each doc that has this term). This will be -1 if the codec doesn't support this measure. Note that, like other term measures, this measure does not take deleted documents into account.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSumDocFreq(java.lang.String field)",
+    "name": "getSumDocFreq",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "protocol": {
+      "member": "getSumDocFreq(java.lang.String field)",
+      "comment": "Returns the sum of method_0 for all terms in this field, or -1 if this measure isn't stored by the codec. Note that, just like other term measures, this measure does not take deleted documents into account.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDocCount(java.lang.String field)",
+    "name": "getDocCount",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "protocol": {
+      "member": "getDocCount(java.lang.String field)",
+      "comment": "Returns the number of documents that have at least one term for this field, or -1 if this measure isn't stored by the codec. Note that, just like other term measures, this measure does not take deleted documents into account.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSumTotalTermFreq(java.lang.String field)",
+    "name": "getSumTotalTermFreq",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "IndexReader",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.index.IndexReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "protocol": {
+      "member": "getSumTotalTermFreq(java.lang.String field)",
+      "comment": "Returns the sum of method_0 for all terms in this field, or -1 if this measure isn't stored by the codec (or if this fields omits term freq and positions). Note that, just like other term measures, this measure does not take deleted documents into account.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

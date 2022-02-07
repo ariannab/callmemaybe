@@ -1,0 +1,234 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.Striped64()",
+    "name": "java.util.concurrent.atomic.Striped64",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.Striped64()",
+      "comment": "Package-private default constructor",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "casBase(long cmp, long val)",
+    "name": "casBase",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "cmp"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "val"
+      }
+    ],
+    "protocol": {
+      "member": "casBase(long cmp, long val)",
+      "comment": "CASes the base field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "casCellsBusy()",
+    "name": "casCellsBusy",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "casCellsBusy()",
+      "comment": "CASes the cellsBusy field from 0 to 1 to acquire lock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProbe()",
+    "name": "getProbe",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getProbe()",
+      "comment": "Returns the probe value for the current thread. Duplicated from ThreadLocalRandom because of packaging restrictions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "advanceProbe(int probe)",
+    "name": "advanceProbe",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "probe"
+      }
+    ],
+    "protocol": {
+      "member": "advanceProbe(int probe)",
+      "comment": "Pseudo-randomly advances and records the given probe value for the given thread. Duplicated from ThreadLocalRandom because of packaging restrictions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longAccumulate(long x, java.util.function.LongBinaryOperator fn, boolean wasUncontended)",
+    "name": "longAccumulate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "wasUncontended"
+      }
+    ],
+    "protocol": {
+      "member": "longAccumulate(long x, java.util.function.LongBinaryOperator fn, boolean wasUncontended)",
+      "comment": "Handles cases of updates involving initialization, resizing, creating new Cells, and/or contention. See above for explanation. This method suffers the usual non-modularity problems of optimistic retry code, relying on rechecked sets of reads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubleAccumulate(double x, java.util.function.DoubleBinaryOperator fn, boolean wasUncontended)",
+    "name": "doubleAccumulate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.Striped64",
+      "name": "Striped64",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.Striped64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "wasUncontended"
+      }
+    ],
+    "protocol": {
+      "member": "doubleAccumulate(double x, java.util.function.DoubleBinaryOperator fn, boolean wasUncontended)",
+      "comment": "Same as longAccumulate, but injecting long/double conversions in too many places to sensibly merge with long version, given the low-overhead requirements of this class. So must instead be maintained by copy/paste/adapt.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

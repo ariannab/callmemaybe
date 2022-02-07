@@ -1,0 +1,1003 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options Valid options are:  -F number <br> The number of folds for reduced error pruning. One fold is used as the pruning set. (Default: 3)  -N number <br> The minimal weights of instances within a split. (Default: 2)  -O number <br> Set the number of runs of optimizations. (Default: 2)  -D <br> Whether turn on the debug mode -S number <br> The seed of randomization used in Ripper.(Default: 1)  -E <br> Whether NOT check the error rate >= 0method_0 in stopping criteria. (default: check)  -P <br> Whether NOT use pruning. (default: use pruning)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -F <number of folds> Set number of folds for REP One fold is used as pruning set. (default 3)   -N <min. weights> Set the minimal weights of instances within a split. (default 2method_0)   -O <number of runs> Set the number of runs of optimizations. (Default: 2)   -D Set whether turn on the debug mode (Default: false)   -S <seed> The seed of randomization (Default: 1)   -E Whether NOT check the error rate>=0method_1 in stopping criteria (default: check)   -P Whether NOT use pruning (default: use pruning)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the additional measure names",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String additionalMeasureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "additionalMeasureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String additionalMeasureName)",
+      "comment": "Returns the value of the named measure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "foldsTipText()",
+    "name": "foldsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "foldsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFolds(int fold)",
+    "name": "setFolds",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fold"
+      }
+    ],
+    "protocol": {
+      "member": "setFolds(int fold)",
+      "comment": "Sets the number of folds to use",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFolds()",
+    "name": "getFolds",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFolds()",
+      "comment": "Gets the number of folds",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minNoTipText()",
+    "name": "minNoTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "minNoTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinNo(double m)",
+    "name": "setMinNo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "setMinNo(double m)",
+      "comment": "Sets the minimum total weight of the instances in a rule",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinNo()",
+    "name": "getMinNo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMinNo()",
+      "comment": "Gets the minimum total weight of the instances in a rule",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "seedTipText()",
+    "name": "seedTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "seedTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSeed(long s)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(long s)",
+      "comment": "Sets the seed value to use in randomizing the data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSeed()",
+    "name": "getSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSeed()",
+      "comment": "Gets the current seed value to use in randomizing the data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "optimizationsTipText()",
+    "name": "optimizationsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "optimizationsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptimizations(int run)",
+    "name": "setOptimizations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "run"
+      }
+    ],
+    "protocol": {
+      "member": "setOptimizations(int run)",
+      "comment": "Sets the number of optimization runs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptimizations()",
+    "name": "getOptimizations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptimizations()",
+      "comment": "Gets the the number of optimization runs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "debugTipText()",
+    "name": "debugTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "debugTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDebug(boolean d)",
+    "name": "setDebug",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "protocol": {
+      "member": "setDebug(boolean d)",
+      "comment": "Sets whether debug information is output to the console",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDebug()",
+    "name": "getDebug",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDebug()",
+      "comment": "Gets whether debug information is output to the console",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkErrorRateTipText()",
+    "name": "checkErrorRateTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "checkErrorRateTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCheckErrorRate(boolean d)",
+    "name": "setCheckErrorRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "protocol": {
+      "member": "setCheckErrorRate(boolean d)",
+      "comment": "Sets whether to check for error rate is in stopping criterion",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCheckErrorRate()",
+    "name": "getCheckErrorRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCheckErrorRate()",
+      "comment": "Gets whether to check for error rate is in stopping criterion",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "usePruningTipText()",
+    "name": "usePruningTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "usePruningTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUsePruning(boolean d)",
+    "name": "setUsePruning",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "d"
+      }
+    ],
+    "protocol": {
+      "member": "setUsePruning(boolean d)",
+      "comment": "Sets whether pruning is performed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUsePruning()",
+    "name": "getUsePruning",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUsePruning()",
+      "comment": "Gets whether pruning is performed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRuleset()",
+    "name": "getRuleset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.classifiers.rules.Rule>",
+      "name": "java.util.ArrayList<weka.classifiers.rules.Rule>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRuleset()",
+      "comment": "Get the ruleset generated by Ripper",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRuleStats(int pos)",
+    "name": "getRuleStats",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.rules.RuleStats",
+      "name": "weka.classifiers.rules.RuleStats",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "pos"
+      }
+    ],
+    "protocol": {
+      "member": "getRuleStats(int pos)",
+      "comment": "Get the statistics of the ruleset in the given position",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Builds Ripper in the order of class frequencies. For each class it's built in two stages: building and optimization",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance datum)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "datum"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance datum)",
+      "comment": "Classify the test instance with the rule learner and provide the class distributions",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rulesetForOneClass(double expFPRate, weka.core.Instances data, double classIndex, double defDL)",
+    "name": "rulesetForOneClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "expFPRate"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "defDL"
+      }
+    ],
+    "protocol": {
+      "member": "rulesetForOneClass(double expFPRate, weka.core.Instances data, double classIndex, double defDL)",
+      "comment": "Build a ruleset for the given class according to the given data",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Prints the all the rules of the rule learner.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.JRip",
+      "name": "JRip",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.JRip",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

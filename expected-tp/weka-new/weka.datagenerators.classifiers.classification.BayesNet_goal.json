@@ -1,0 +1,910 @@
+[
+  {
+    "signature": "weka.datagenerators.classifiers.classification.BayesNet()",
+    "name": "weka.datagenerators.classifiers.classification.BayesNet",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.datagenerators.classifiers.classification.BayesNet()",
+      "comment": "initializes the generator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this data generator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a list of options for this object.  Valid options are:   -h Prints this help.  -o <file> The name of the output file, otherwise the generated data is printed to stdout.  -r <name> The name of the relation.  -d Whether to print debug informations.  -S The seed for random function (default 1)  -n <num> The number of examples to generate (default 100)  -A <num> The number of arcs to use. (default 20)  -N <num> The number of attributes to generate. (default 10)  -C <num> The cardinality of the attributes and the class. (default 2)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the datagenerator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setGeneratorOptions(weka.classifiers.bayes.net.BayesNetGenerator generator, java.util.Vector<java.lang.String> options)",
+    "name": "setGeneratorOptions",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+          "name": "BayesNetGenerator",
+          "isArray": false
+        },
+        "name": "generator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Vector",
+          "name": "Vector",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setGeneratorOptions(weka.classifiers.bayes.net.BayesNetGenerator generator, java.util.Vector<java.lang.String> options)",
+      "comment": "sets the given options of the BayesNetGenerator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGenerator()",
+    "name": "getGenerator",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "name": "weka.classifiers.bayes.net.BayesNetGenerator",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGenerator()",
+      "comment": "returns the actual datagenerator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setGeneratorOptions(java.util.Vector<java.lang.String> options)",
+    "name": "setGeneratorOptions",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Vector",
+          "name": "Vector",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setGeneratorOptions(java.util.Vector<java.lang.String> options)",
+      "comment": "sets the given options of the BayesNetGenerator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setGeneratorOption(weka.classifiers.bayes.net.BayesNetGenerator generator, java.lang.String option, java.lang.String value)",
+    "name": "setGeneratorOption",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.BayesNetGenerator",
+          "name": "BayesNetGenerator",
+          "isArray": false
+        },
+        "name": "generator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "option"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setGeneratorOption(weka.classifiers.bayes.net.BayesNetGenerator generator, java.lang.String option, java.lang.String value)",
+      "comment": "sets a specific option/value of the generator (option must be w/o then '-')",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setGeneratorOption(java.lang.String option, java.lang.String value)",
+    "name": "setGeneratorOption",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "option"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setGeneratorOption(java.lang.String option, java.lang.String value)",
+      "comment": "sets a specific option/value of the generator (option must be w/o then '-')",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultNumAttributes()",
+    "name": "defaultNumAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultNumAttributes()",
+      "comment": "returns the default number of attributes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumAttributes(int numAttributes)",
+    "name": "setNumAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numAttributes"
+      }
+    ],
+    "protocol": {
+      "member": "setNumAttributes(int numAttributes)",
+      "comment": "Sets the number of attributes the dataset should have.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumAttributes()",
+    "name": "getNumAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumAttributes()",
+      "comment": "Gets the number of attributes that should be produced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numAttributesTipText()",
+    "name": "numAttributesTipText",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numAttributesTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultCardinality()",
+    "name": "defaultCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultCardinality()",
+      "comment": "returns the default cardinality",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCardinality(int value)",
+    "name": "setCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setCardinality(int value)",
+      "comment": "Sets the cardinality of the attributes (incl class attribute)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCardinality()",
+    "name": "getCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCardinality()",
+      "comment": "Gets the cardinality of the attributes (incl class attribute)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cardinalityTipText()",
+    "name": "cardinalityTipText",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cardinalityTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultNumArcs()",
+    "name": "defaultNumArcs",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultNumArcs()",
+      "comment": "returns the default number of arcs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumArcs(int value)",
+    "name": "setNumArcs",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setNumArcs(int value)",
+      "comment": "Sets the number of arcs for the bayesian net",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumArcs()",
+    "name": "getNumArcs",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumArcs()",
+      "comment": "Gets the number of arcs for the bayesian net",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numArcsTipText()",
+    "name": "numArcsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numArcsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumExamples(int numExamples)",
+    "name": "setNumExamples",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numExamples"
+      }
+    ],
+    "protocol": {
+      "member": "setNumExamples(int numExamples)",
+      "comment": "Sets the number of examples, given by option.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumExamples()",
+    "name": "getNumExamples",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumExamples()",
+      "comment": "Gets the number of examples, given by option.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSeed()",
+    "name": "getSeed",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSeed()",
+      "comment": "Gets the random number seed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSeed(int newSeed)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newSeed"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(int newSeed)",
+      "comment": "Sets the random number seed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSingleModeFlag()",
+    "name": "getSingleModeFlag",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSingleModeFlag()",
+      "comment": "Return if single mode is set for the given data generator mode depends on option setting and or generator type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defineDataFormat()",
+    "name": "defineDataFormat",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defineDataFormat()",
+      "comment": "Initializes the format for the dataset produced. Must be called before the generateExample or generateExamples methods are used. Re-initializes the random number generator with the given seed.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.getSeed()->receiverObjectID.generateExample()"
+    }
+  },
+  {
+    "signature": "generateExample()",
+    "name": "generateExample",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "generateExample()",
+      "comment": "Generates one example of the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateExamples()",
+    "name": "generateExamples",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "generateExamples()",
+      "comment": "Generates all examples of the dataset. Re-initializes the random number generator with the given seed, before generating instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateStart()",
+    "name": "generateStart",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "generateStart()",
+      "comment": "Generates a comment string that documentates the data generator. By default this string is added at the beginning of the produced output as ARFF file type, next after the options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generateFinished()",
+    "name": "generateFinished",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "generateFinished()",
+      "comment": "Generates a comment string that documentats the data generator. By default this string is added at the end of theproduces output as ARFF file type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.datagenerators.classifiers.classification.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.datagenerators.classifiers.classification.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method for executing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

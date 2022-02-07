@@ -1,0 +1,213 @@
+[
+  {
+    "signature": "java.util.jar.JarInputStream(java.io.InputStream in)",
+    "name": "java.util.jar.JarInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.jar.JarInputStream(java.io.InputStream in)",
+      "comment": "Creates a new JarInputStream and reads the optional manifest. If a manifest is present, also attempts to verify the signatures if the JarInputStream is signed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.jar.JarInputStream(java.io.InputStream in, boolean verify)",
+    "name": "java.util.jar.JarInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "verify"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.jar.JarInputStream(java.io.InputStream in, boolean verify)",
+      "comment": "Creates a new JarInputStream and reads the optional manifest. If a manifest is present and verify is true, also attempts to verify the signatures if the JarInputStream is signed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getManifest()",
+    "name": "getManifest",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.jar.Manifest",
+      "name": "java.util.jar.Manifest",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getManifest()",
+      "comment": "Returns the Manifest for this JAR file, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNextEntry()",
+    "name": "getNextEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNextEntry()",
+      "comment": "Reads the next ZIP file entry and positions the stream at the beginning of the entry data. If verification has been enabled, any invalid signature detected while positioning the stream for the next entry will result in an exception. @exception ZipException if a ZIP file error has occurred @exception IOException if an I/O error has occurred @exception SecurityException if any of the jar file entries are incorrectly signed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNextJarEntry()",
+    "name": "getNextJarEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "java.util.jar.JarEntry",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNextJarEntry()",
+      "comment": "Reads the next JAR file entry and positions the stream at the beginning of the entry data. If verification has been enabled, any invalid signature detected while positioning the stream for the next entry will result in an exception.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read(byte[] b, int off, int len)",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "read(byte[] b, int off, int len)",
+      "comment": "Reads from the current JAR file entry into an array of bytes. If len is not zero, the method blocks until some input is available; otherwise, no bytes are read and 0 is returned. If verification has been enabled, any invalid signature on the current entry will be reported at some point before the end of the entry is reached.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createZipEntry(java.lang.String name)",
+    "name": "createZipEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarInputStream",
+      "name": "JarInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "createZipEntry(java.lang.String name)",
+      "comment": "Creates a new JarEntry (ZipEntry) for the specified JAR file entry name. The manifest attributes of the specified JAR file entry name will be copied to the new JarEntry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

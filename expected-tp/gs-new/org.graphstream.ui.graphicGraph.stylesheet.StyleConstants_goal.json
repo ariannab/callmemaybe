@@ -1,0 +1,162 @@
+[
+  {
+    "signature": "convertColor(java.lang.Object anyValue)",
+    "name": "convertColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+      "name": "StyleConstants",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "anyValue"
+      }
+    ],
+    "protocol": {
+      "member": "convertColor(java.lang.Object anyValue)",
+      "comment": "Try to convert the given string value to a colour. It understands the 600 colour names of the X11 RGB data base. It also understands colours given in the \"method_1\" format and the hexadecimal \"0xFFFFFF\" format. Finally, it understands colours given as a \"method_0\", CSS-like format. If the input value is null, the result is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convertLabel(java.lang.Object value)",
+    "name": "convertLabel",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+      "name": "StyleConstants",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "convertLabel(java.lang.Object value)",
+      "comment": "Check if the given value is an instance of CharSequence (String is) and return it as a string. Else return null. If the input value is null, the return value is null. If the value returned is larger than 128 characters, this method cuts it to 128 characters. TODO: allow to set the max length of these strings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convertWidth(java.lang.Object value)",
+    "name": "convertWidth",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+      "name": "StyleConstants",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "convertWidth(java.lang.Object value)",
+      "comment": "Try to convert an arbitrary value to a float. If it is a descendant of Number, the float value is returned. If it is a string, a conversion is tried to change it into a number and if successful, this number is returned as a float. Else, the -1 value is returned as no width can be negative to indicate the conversion failed. If the input is null, the return value is -1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convertValue(java.lang.Object value)",
+    "name": "convertValue",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+      "name": "StyleConstants",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "convertValue(java.lang.Object value)",
+      "comment": "Convert an object to a value with units. The object can be a number, in which case the value returned contains this number in pixel units. The object can be a string. In this case the strings understood by this method are of the form (spaces, number, spaces, unit, spaces). For example \"3px\", \"45gu\", \"5method_0%\", \" 25method_1 gu \", \"4\", \" 28method_2 \".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convertUnit(java.lang.String unit)",
+    "name": "convertUnit",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+      "name": "StyleConstants",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$Units",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$Units",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "convertUnit(java.lang.String unit)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

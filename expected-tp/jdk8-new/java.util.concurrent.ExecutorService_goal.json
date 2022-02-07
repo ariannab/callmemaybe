@@ -1,0 +1,398 @@
+[
+  {
+    "signature": "shutdown()",
+    "name": "shutdown",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "shutdown()",
+      "comment": "Initiates an orderly shutdown in which previously submitted tasks are executed, but no new tasks will be accepted. Invocation has no additional effect if already shut down. This method does not wait for previously submitted tasks to complete execution. Use method_0 awaitTermination to do that.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shutdownNow()",
+    "name": "shutdownNow",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.Runnable>",
+      "name": "java.util.List<java.lang.Runnable>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "shutdownNow()",
+      "comment": "Attempts to stop all actively executing tasks, halts the processing of waiting tasks, and returns a list of the tasks that were awaiting execution. This method does not wait for actively executing tasks to terminate. Use method_0 awaitTermination to do that. There are no guarantees beyond best-effort attempts to stop processing actively executing tasks. For example, typical implementations will cancel via method_1, so any task that fails to respond to interrupts may never terminate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isShutdown()",
+    "name": "isShutdown",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isShutdown()",
+      "comment": "Returns true if this executor has been shut down.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isTerminated()",
+    "name": "isTerminated",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isTerminated()",
+      "comment": "Returns true if all tasks have completed following shut down. Note that isTerminated is never true unless either shutdown or shutdownNow was called first.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "awaitTermination(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "awaitTermination",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "awaitTermination(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Blocks until all tasks have completed execution after a shutdown request, or the timeout occurs, or the current thread is interrupted, whichever happens first.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "submit(java.util.concurrent.Callable<T> task)",
+    "name": "submit",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<T>",
+      "name": "java.util.concurrent.Future<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Callable",
+          "name": "Callable",
+          "isArray": false
+        },
+        "name": "task"
+      }
+    ],
+    "protocol": {
+      "member": "submit(java.util.concurrent.Callable<T> task)",
+      "comment": "Submits a value-returning task for execution and returns a Future representing the pending results of the task. The Future's get method will return the task's result upon successful completion.  If you would like to immediately block waiting for a task, you can use constructions of the form result = method_0method_1; Note: The Executors class includes a set of methods that can convert some other common closure-like objects, for example, javamethod_4method_5 to Callable form so they can be submitted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "submit(java.lang.Runnable task, T result)",
+    "name": "submit",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<T>",
+      "name": "java.util.concurrent.Future<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "task"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "result"
+      }
+    ],
+    "protocol": {
+      "member": "submit(java.lang.Runnable task, T result)",
+      "comment": "Submits a Runnable task for execution and returns a Future representing that task. The Future's get method will return the given result upon successful completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "submit(java.lang.Runnable task)",
+    "name": "submit",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<?>",
+      "name": "java.util.concurrent.Future<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "task"
+      }
+    ],
+    "protocol": {
+      "member": "submit(java.lang.Runnable task)",
+      "comment": "Submits a Runnable task for execution and returns a Future representing that task. The Future's get method will return null upon successful completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)",
+    "name": "invokeAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.util.concurrent.Future<T>>",
+      "name": "java.util.List<java.util.concurrent.Future<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "tasks"
+      }
+    ],
+    "protocol": {
+      "member": "invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)",
+      "comment": "Executes the given tasks, returning a list of Futures holding their status and results when all complete. method_0 is true for each element of the returned list. Note that a completed task could have terminated either normally or by throwing an exception. The results of this method are undefined if the given collection is modified while this operation is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "invokeAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.util.concurrent.Future<T>>",
+      "name": "java.util.List<java.util.concurrent.Future<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "tasks"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Executes the given tasks, returning a list of Futures holding their status and results when all complete or the timeout expires, whichever happens first. method_0 is true for each element of the returned list. Upon return, tasks that have not completed are cancelled. Note that a completed task could have terminated either normally or by throwing an exception. The results of this method are undefined if the given collection is modified while this operation is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)",
+    "name": "invokeAny",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "tasks"
+      }
+    ],
+    "protocol": {
+      "member": "invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)",
+      "comment": "Executes the given tasks, returning the result of one that has completed successfully (imethod_0., without throwing an exception), if any do. Upon normal or exceptional return, tasks that have not completed are cancelled. The results of this method are undefined if the given collection is modified while this operation is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "invokeAny",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ExecutorService",
+      "name": "ExecutorService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ExecutorService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "tasks"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Executes the given tasks, returning the result of one that has completed successfully (imethod_0., without throwing an exception), if any do before the given timeout elapses. Upon normal or exceptional return, tasks that have not completed are cancelled. The results of this method are undefined if the given collection is modified while this operation is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

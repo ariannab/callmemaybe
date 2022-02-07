@@ -1,0 +1,522 @@
+[
+  {
+    "signature": "makeRef(U seed, java.util.function.BiFunction<U, ? super T, U> reducer, java.util.function.BinaryOperator<U> combiner)",
+    "name": "makeRef",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<T, U>",
+      "name": "java.util.stream.TerminalOp<T, U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "seed"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "combiner"
+      }
+    ],
+    "protocol": {
+      "member": "makeRef(U seed, java.util.function.BiFunction<U, ? super T, U> reducer, java.util.function.BinaryOperator<U> combiner)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on reference values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeRef(java.util.function.BinaryOperator<T> operator)",
+    "name": "makeRef",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<T, java.util.Optional<T>>",
+      "name": "java.util.stream.TerminalOp<T, java.util.Optional<T>>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeRef(java.util.function.BinaryOperator<T> operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on reference values producing an optional reference result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeRef(java.util.stream.Collector<? super T, I, ?> collector)",
+    "name": "makeRef",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<T, I>",
+      "name": "java.util.stream.TerminalOp<T, I>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "collector"
+      }
+    ],
+    "protocol": {
+      "member": "makeRef(java.util.stream.Collector<? super T, I, ?> collector)",
+      "comment": "Constructs a TerminalOp that implements a mutable reduce on reference values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeRef(java.util.function.Supplier<R> seedFactory, java.util.function.BiConsumer<R, ? super T> accumulator, java.util.function.BiConsumer<R, R> reducer)",
+    "name": "makeRef",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<T, R>",
+      "name": "java.util.stream.TerminalOp<T, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "seedFactory"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "makeRef(java.util.function.Supplier<R> seedFactory, java.util.function.BiConsumer<R, ? super T> accumulator, java.util.function.BiConsumer<R, R> reducer)",
+      "comment": "Constructs a TerminalOp that implements a mutable reduce on reference values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeInt(int identity, java.util.function.IntBinaryOperator operator)",
+    "name": "makeInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Integer, java.lang.Integer>",
+      "name": "java.util.stream.TerminalOp<java.lang.Integer, java.lang.Integer>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "identity"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeInt(int identity, java.util.function.IntBinaryOperator operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on int values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeInt(java.util.function.IntBinaryOperator operator)",
+    "name": "makeInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Integer, java.util.OptionalInt>",
+      "name": "java.util.stream.TerminalOp<java.lang.Integer, java.util.OptionalInt>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeInt(java.util.function.IntBinaryOperator operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on int values, producing an optional integer result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeInt(java.util.function.Supplier<R> supplier, java.util.function.ObjIntConsumer<R> accumulator, java.util.function.BinaryOperator<R> combiner)",
+    "name": "makeInt",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Integer, R>",
+      "name": "java.util.stream.TerminalOp<java.lang.Integer, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ObjIntConsumer",
+          "name": "ObjIntConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "combiner"
+      }
+    ],
+    "protocol": {
+      "member": "makeInt(java.util.function.Supplier<R> supplier, java.util.function.ObjIntConsumer<R> accumulator, java.util.function.BinaryOperator<R> combiner)",
+      "comment": "Constructs a TerminalOp that implements a mutable reduce on int values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeLong(long identity, java.util.function.LongBinaryOperator operator)",
+    "name": "makeLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Long, java.lang.Long>",
+      "name": "java.util.stream.TerminalOp<java.lang.Long, java.lang.Long>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "identity"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeLong(long identity, java.util.function.LongBinaryOperator operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on long values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeLong(java.util.function.LongBinaryOperator operator)",
+    "name": "makeLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Long, java.util.OptionalLong>",
+      "name": "java.util.stream.TerminalOp<java.lang.Long, java.util.OptionalLong>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeLong(java.util.function.LongBinaryOperator operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on long values, producing an optional long result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeLong(java.util.function.Supplier<R> supplier, java.util.function.ObjLongConsumer<R> accumulator, java.util.function.BinaryOperator<R> combiner)",
+    "name": "makeLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Long, R>",
+      "name": "java.util.stream.TerminalOp<java.lang.Long, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ObjLongConsumer",
+          "name": "ObjLongConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "combiner"
+      }
+    ],
+    "protocol": {
+      "member": "makeLong(java.util.function.Supplier<R> supplier, java.util.function.ObjLongConsumer<R> accumulator, java.util.function.BinaryOperator<R> combiner)",
+      "comment": "Constructs a TerminalOp that implements a mutable reduce on long values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeDouble(double identity, java.util.function.DoubleBinaryOperator operator)",
+    "name": "makeDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Double, java.lang.Double>",
+      "name": "java.util.stream.TerminalOp<java.lang.Double, java.lang.Double>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "identity"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeDouble(double identity, java.util.function.DoubleBinaryOperator operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on double values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeDouble(java.util.function.DoubleBinaryOperator operator)",
+    "name": "makeDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Double, java.util.OptionalDouble>",
+      "name": "java.util.stream.TerminalOp<java.lang.Double, java.util.OptionalDouble>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "operator"
+      }
+    ],
+    "protocol": {
+      "member": "makeDouble(java.util.function.DoubleBinaryOperator operator)",
+      "comment": "Constructs a TerminalOp that implements a functional reduce on double values, producing an optional double result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeDouble(java.util.function.Supplier<R> supplier, java.util.function.ObjDoubleConsumer<R> accumulator, java.util.function.BinaryOperator<R> combiner)",
+    "name": "makeDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.ReduceOps",
+      "name": "ReduceOps",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.ReduceOps",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.TerminalOp<java.lang.Double, R>",
+      "name": "java.util.stream.TerminalOp<java.lang.Double, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ObjDoubleConsumer",
+          "name": "ObjDoubleConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "combiner"
+      }
+    ],
+    "protocol": {
+      "member": "makeDouble(java.util.function.Supplier<R> supplier, java.util.function.ObjDoubleConsumer<R> accumulator, java.util.function.BinaryOperator<R> combiner)",
+      "comment": "Constructs a TerminalOp that implements a mutable reduce on double values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,998 @@
+[
+  {
+    "signature": "emptySpliterator()",
+    "name": "emptySpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "emptySpliterator()",
+      "comment": "Creates an empty Spliterator The empty spliterator reports method_1 and method_2. Calls to java.method_0 always return null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "emptyIntSpliterator()",
+    "name": "emptyIntSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfInt",
+      "name": "java.util.Spliterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "emptyIntSpliterator()",
+      "comment": "Creates an empty method_1 The empty spliterator reports method_2 and method_3. Calls to java.method_0 always return null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "emptyLongSpliterator()",
+    "name": "emptyLongSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfLong",
+      "name": "java.util.Spliterator$OfLong",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "emptyLongSpliterator()",
+      "comment": "Creates an empty method_1 The empty spliterator reports method_2 and method_3. Calls to java.method_0 always return null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "emptyDoubleSpliterator()",
+    "name": "emptyDoubleSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfDouble",
+      "name": "java.util.Spliterator$OfDouble",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "emptyDoubleSpliterator()",
+      "comment": "Creates an empty method_1 The empty spliterator reports method_2 and method_3. Calls to java.method_0 always return null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.lang.Object[] array, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.lang.Object[] array, int additionalCharacteristics)",
+      "comment": "Creates a Spliterator covering the elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report; it is common to additionally specify IMMUTABLE and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.lang.Object[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.lang.Object[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+      "comment": "Creates a Spliterator covering a range of elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report; it is common to additionally specify IMMUTABLE and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(int[] array, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfInt",
+      "name": "java.util.Spliterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(int[] array, int additionalCharacteristics)",
+      "comment": "Creates a method_1 covering the elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report; it is common to additionally specify IMMUTABLE and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(int[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfInt",
+      "name": "java.util.Spliterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(int[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+      "comment": "Creates a method_1 covering a range of elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report; it is common to additionally specify IMMUTABLE and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(long[] array, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfLong",
+      "name": "java.util.Spliterator$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(long[] array, int additionalCharacteristics)",
+      "comment": "Creates a method_1 covering the elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report; it is common to additionally specify IMMUTABLE and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(long[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfLong",
+      "name": "java.util.Spliterator$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(long[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+      "comment": "Creates a method_2 covering a range of elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report. (For example, if it is known the array will not be further modified, specify IMMUTABLE; if the array data is considered to have an an encounter order, specify ORDERED). The method method_0 can often be used instead, which returns a spliterator that reports SIZED, SUBSIZED, IMMUTABLE, and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(double[] array, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfDouble",
+      "name": "java.util.Spliterator$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(double[] array, int additionalCharacteristics)",
+      "comment": "Creates a method_1 covering the elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report; it is common to additionally specify IMMUTABLE and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(double[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfDouble",
+      "name": "java.util.Spliterator$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "additionalCharacteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(double[] array, int fromIndex, int toIndex, int additionalCharacteristics)",
+      "comment": "Creates a method_2 covering a range of elements of a given array, using a customized set of spliterator characteristics. This method is provided as an implementation convenience for Spliterators which store portions of their elements in arrays, and need fine control over Spliterator characteristics. Most other situations in which a Spliterator for an array is needed should use method_0. The returned spliterator always reports the characteristics SIZED and SUBSIZED. The caller may provide additional characteristics for the spliterator to report. (For example, if it is known the array will not be further modified, specify IMMUTABLE; if the array data is considered to have an an encounter order, specify ORDERED). The method method_1 can often be used instead, which returns a spliterator that reports SIZED, SUBSIZED, IMMUTABLE, and ORDERED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.util.Collection<? extends T> c, int characteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.util.Collection<? extends T> c, int characteristics)",
+      "comment": "Creates a Spliterator using the given collection's java.method_0 as the source of elements, and reporting its java.method_1 as its initial size. The spliterator is <a href=\"method_8method_9\">late-binding</a>, inherits the fail-fast properties of the collection's iterator, and implements trySplit to permit limited parallelism.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.util.Iterator<? extends T> iterator, long size, int characteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "size"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.util.Iterator<? extends T> iterator, long size, int characteristics)",
+      "comment": "Creates a Spliterator using a given Iterator as the source of elements, and with a given initially reported size. The spliterator is not <a href=\"method_0method_1\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned, or the initially reported size is not equal to the actual number of elements in the source.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliteratorUnknownSize(java.util.Iterator<? extends T> iterator, int characteristics)",
+    "name": "spliteratorUnknownSize",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliteratorUnknownSize(java.util.Iterator<? extends T> iterator, int characteristics)",
+      "comment": "Creates a Spliterator using a given Iterator as the source of elements, with no initial size estimate. The spliterator is not <a href=\"method_0method_1\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.util.PrimitiveIterator$OfInt iterator, long size, int characteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfInt",
+      "name": "java.util.Spliterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.PrimitiveIterator$OfInt",
+          "name": "OfInt",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "size"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.util.PrimitiveIterator$OfInt iterator, long size, int characteristics)",
+      "comment": "Creates a method_0 using a given method_1 as the source of elements, and with a given initially reported size. The spliterator is not <a href=\"method_2method_3\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned, or the initially reported size is not equal to the actual number of elements in the source.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliteratorUnknownSize(java.util.PrimitiveIterator$OfInt iterator, int characteristics)",
+    "name": "spliteratorUnknownSize",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfInt",
+      "name": "java.util.Spliterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.PrimitiveIterator$OfInt",
+          "name": "OfInt",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliteratorUnknownSize(java.util.PrimitiveIterator$OfInt iterator, int characteristics)",
+      "comment": "Creates a method_0 using a given method_1 as the source of elements, with no initial size estimate. The spliterator is not <a href=\"method_2method_3\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.util.PrimitiveIterator$OfLong iterator, long size, int characteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfLong",
+      "name": "java.util.Spliterator$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.PrimitiveIterator$OfLong",
+          "name": "OfLong",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "size"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.util.PrimitiveIterator$OfLong iterator, long size, int characteristics)",
+      "comment": "Creates a method_0 using a given method_1 as the source of elements, and with a given initially reported size. The spliterator is not <a href=\"method_2method_3\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned, or the initially reported size is not equal to the actual number of elements in the source.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliteratorUnknownSize(java.util.PrimitiveIterator$OfLong iterator, int characteristics)",
+    "name": "spliteratorUnknownSize",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfLong",
+      "name": "java.util.Spliterator$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.PrimitiveIterator$OfLong",
+          "name": "OfLong",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliteratorUnknownSize(java.util.PrimitiveIterator$OfLong iterator, int characteristics)",
+      "comment": "Creates a method_0 using a given method_1 as the source of elements, with no initial size estimate. The spliterator is not <a href=\"method_2method_3\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator(java.util.PrimitiveIterator$OfDouble iterator, long size, int characteristics)",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfDouble",
+      "name": "java.util.Spliterator$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.PrimitiveIterator$OfDouble",
+          "name": "OfDouble",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "size"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliterator(java.util.PrimitiveIterator$OfDouble iterator, long size, int characteristics)",
+      "comment": "Creates a method_0 using a given method_1 as the source of elements, and with a given initially reported size. The spliterator is not <a href=\"method_2method_3\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned, or the initially reported size is not equal to the actual number of elements in the source.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliteratorUnknownSize(java.util.PrimitiveIterator$OfDouble iterator, int characteristics)",
+    "name": "spliteratorUnknownSize",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfDouble",
+      "name": "java.util.Spliterator$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.PrimitiveIterator$OfDouble",
+          "name": "OfDouble",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "spliteratorUnknownSize(java.util.PrimitiveIterator$OfDouble iterator, int characteristics)",
+      "comment": "Creates a method_0 using a given method_1 as the source of elements, with no initial size estimate. The spliterator is not <a href=\"method_2method_3\">late-binding</a>, inherits the fail-fast properties of the iterator, and implements trySplit to permit limited parallelism. Traversal of elements should be accomplished through the spliterator. The behaviour of splitting and traversal is undefined if the iterator is operated on after the spliterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator(java.util.Spliterator<? extends T> spliterator)",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "iterator(java.util.Spliterator<? extends T> spliterator)",
+      "comment": "Creates an Iterator from a Spliterator. Traversal of elements should be accomplished through the iterator. The behaviour of traversal is undefined if the spliterator is operated after the iterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator(java.util.Spliterator$OfInt spliterator)",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.PrimitiveIterator$OfInt",
+      "name": "java.util.PrimitiveIterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator$OfInt",
+          "name": "OfInt",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "iterator(java.util.Spliterator$OfInt spliterator)",
+      "comment": "Creates an method_0 from a method_1. Traversal of elements should be accomplished through the iterator. The behaviour of traversal is undefined if the spliterator is operated after the iterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator(java.util.Spliterator$OfLong spliterator)",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.PrimitiveIterator$OfLong",
+      "name": "java.util.PrimitiveIterator$OfLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator$OfLong",
+          "name": "OfLong",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "iterator(java.util.Spliterator$OfLong spliterator)",
+      "comment": "Creates an method_0 from a method_1. Traversal of elements should be accomplished through the iterator. The behaviour of traversal is undefined if the spliterator is operated after the iterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator(java.util.Spliterator$OfDouble spliterator)",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.Spliterators",
+      "name": "Spliterators",
+      "isArray": false
+    },
+    "targetClass": "java.util.Spliterators",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.PrimitiveIterator$OfDouble",
+      "name": "java.util.PrimitiveIterator$OfDouble",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator$OfDouble",
+          "name": "OfDouble",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "iterator(java.util.Spliterator$OfDouble spliterator)",
+      "comment": "Creates an method_0 from a method_1. Traversal of elements should be accomplished through the iterator. The behaviour of traversal is undefined if the spliterator is operated after the iterator is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

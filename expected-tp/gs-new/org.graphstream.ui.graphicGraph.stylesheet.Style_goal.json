@@ -1,0 +1,1633 @@
+[
+  {
+    "signature": "org.graphstream.ui.graphicGraph.stylesheet.Style()",
+    "name": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "org.graphstream.ui.graphicGraph.stylesheet.Style()",
+      "comment": "New style with all settings to a special value meaning \"unset\". In this modeField, all the settings are inherited from the parent (when set).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.graphstream.ui.graphicGraph.stylesheet.Style(org.graphstream.ui.graphicGraph.stylesheet.Rule parent)",
+    "name": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "parent"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.graphicGraph.stylesheet.Style(org.graphstream.ui.graphicGraph.stylesheet.Rule parent)",
+      "comment": "New style with all settings to a special value meaning \"unset\". In this modeField, all the settings are inherited from the parent.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParent()",
+    "name": "getParent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getParent()",
+      "comment": "The parent style.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValue(java.lang.String property, java.lang.String... events)",
+    "name": "getValue",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "property"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "events"
+      }
+    ],
+    "protocol": {
+      "member": "getValue(java.lang.String property, java.lang.String... events)",
+      "comment": "Get the value of a given property. This code is the same for all \"getX\" methods so we explain it once here. This is the implementation of style inheritance. First if some event is actually occurring, the alternative styles are searched first. If these events have unset values for the property, their parent are then searched. If the value for the property is not found in the alternative styles, alternative styles parents, or if there is no event occurring actually, this style is checked. If its value is unset, the parents of this style are checked. Classes are not checked here, they are processed in the orgmethod_0method_1method_2method_3 class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValueForEvent(java.lang.String property, java.lang.String event)",
+    "name": "getValueForEvent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "property"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "getValueForEvent(java.lang.String property, java.lang.String event)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasValue(java.lang.String field, java.lang.String... events)",
+    "name": "hasValue",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "events"
+      }
+    ],
+    "protocol": {
+      "member": "hasValue(java.lang.String field, java.lang.String... events)",
+      "comment": "True if the given field exists in this style only (not the parents).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFillMode()",
+    "name": "getFillMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$FillMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$FillMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFillMode()",
+      "comment": "How to fill the content of an element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFillColors()",
+    "name": "getFillColors",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFillColors()",
+      "comment": "Which method_0 to use for fill modes that use it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFillColorCount()",
+    "name": "getFillColorCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFillColorCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFillColor(int i)",
+    "name": "getFillColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getFillColor(int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFillImage()",
+    "name": "getFillImage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFillImage()",
+      "comment": "Which image to use when filling the element contents with it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStrokeMode()",
+    "name": "getStrokeMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$StrokeMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$StrokeMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStrokeMode()",
+      "comment": "How to draw the element contour.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStrokeColor()",
+    "name": "getStrokeColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStrokeColor()",
+      "comment": "How to color the element contour.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStrokeColorCount()",
+    "name": "getStrokeColorCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStrokeColorCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStrokeColor(int i)",
+    "name": "getStrokeColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getStrokeColor(int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStrokeWidth()",
+    "name": "getStrokeWidth",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStrokeWidth()",
+      "comment": "Width of the element contour.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowMode()",
+    "name": "getShadowMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$ShadowMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$ShadowMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowMode()",
+      "comment": "How to draw the shadow of the element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowColors()",
+    "name": "getShadowColors",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowColors()",
+      "comment": "method_0 of the element shadow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowColorCount()",
+    "name": "getShadowColorCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowColorCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowColor(int i)",
+    "name": "getShadowColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getShadowColor(int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowWidth()",
+    "name": "getShadowWidth",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowWidth()",
+      "comment": "Width of the element shadow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowOffset()",
+    "name": "getShadowOffset",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowOffset()",
+      "comment": "Offset of the element shadow centre according to the element centre.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPadding()",
+    "name": "getPadding",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPadding()",
+      "comment": "Additional space to add inside the element between its contour and its contents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextMode()",
+    "name": "getTextMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextMode()",
+      "comment": "How to draw the text of the element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextVisibilityMode()",
+    "name": "getTextVisibilityMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextVisibilityMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextVisibilityMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextVisibilityMode()",
+      "comment": "How and when to show the text of the element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextVisibility()",
+    "name": "getTextVisibility",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextVisibility()",
+      "comment": "Visibility values if the text visibility changes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextColor()",
+    "name": "getTextColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextColor()",
+      "comment": "The text method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextColorCount()",
+    "name": "getTextColorCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextColorCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextColor(int i)",
+    "name": "getTextColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getTextColor(int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextStyle()",
+    "name": "getTextStyle",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextStyle",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextStyle",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextStyle()",
+      "comment": "The text font style variation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextFont()",
+    "name": "getTextFont",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextFont()",
+      "comment": "The text font.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextSize()",
+    "name": "getTextSize",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Value",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextSize()",
+      "comment": "The text size in points.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIconMode()",
+    "name": "getIconMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$IconMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$IconMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getIconMode()",
+      "comment": "How to draw the icon around the text (or instead of the text).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIcon()",
+    "name": "getIcon",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getIcon()",
+      "comment": "The icon image to use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getVisibilityMode()",
+    "name": "getVisibilityMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$VisibilityMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$VisibilityMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getVisibilityMode()",
+      "comment": "How and when to show the element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getVisibility()",
+    "name": "getVisibility",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getVisibility()",
+      "comment": "The element visibility if it is variable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSizeMode()",
+    "name": "getSizeMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$SizeMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$SizeMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSizeMode()",
+      "comment": "How to size the element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSize()",
+    "name": "getSize",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSize()",
+      "comment": "The element dimensions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShapePoints()",
+    "name": "getShapePoints",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShapePoints()",
+      "comment": "The element polygonal shape.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextAlignment()",
+    "name": "getTextAlignment",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextAlignment",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextAlignment",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextAlignment()",
+      "comment": "How to align the text according to the element centre.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextBackgroundMode()",
+    "name": "getTextBackgroundMode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextBackgroundMode",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$TextBackgroundMode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextBackgroundMode()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextBackgroundColor()",
+    "name": "getTextBackgroundColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextBackgroundColor()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextBackgroundColor(int i)",
+    "name": "getTextBackgroundColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getTextBackgroundColor(int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextOffset()",
+    "name": "getTextOffset",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextOffset()",
+      "comment": "Offset of the text from its computed position.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextPadding()",
+    "name": "getTextPadding",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextPadding()",
+      "comment": "Padding of the text inside its background, if any.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShape()",
+    "name": "getShape",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$Shape",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$Shape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShape()",
+      "comment": "The element shape.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getJComponent()",
+    "name": "getJComponent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$JComponents",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$JComponents",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getJComponent()",
+      "comment": "The element JComponent type if available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSpriteOrientation()",
+    "name": "getSpriteOrientation",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$SpriteOrientation",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$SpriteOrientation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSpriteOrientation()",
+      "comment": "How to orient a sprite according to its attachement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getArrowShape()",
+    "name": "getArrowShape",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$ArrowShape",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.StyleConstants$ArrowShape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getArrowShape()",
+      "comment": "The shape of edges arrows.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getArrowImage()",
+    "name": "getArrowImage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getArrowImage()",
+      "comment": "Image to use for the arrow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getArrowSize()",
+    "name": "getArrowSize",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Values",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getArrowSize()",
+      "comment": "Edge arrow dimensions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCanvasColor()",
+    "name": "getCanvasColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Colors",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCanvasColor()",
+      "comment": "Colour of all non-graph, non-edge, non-node, non-sprite things.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCanvasColorCount()",
+    "name": "getCanvasColorCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCanvasColorCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCanvasColor(int i)",
+    "name": "getCanvasColor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.awt.Color",
+      "name": "java.awt.Color",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getCanvasColor(int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZIndex()",
+    "name": "getZIndex",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Integer",
+      "name": "java.lang.Integer",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getZIndex()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDefaults()",
+    "name": "setDefaults",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "setDefaults()",
+      "comment": "Set the default values for each setting.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "augment(org.graphstream.ui.graphicGraph.stylesheet.Style other)",
+    "name": "augment",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+          "name": "Style",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "augment(org.graphstream.ui.graphicGraph.stylesheet.Style other)",
+      "comment": "Copy all the settings of the other style that are set, excepted the parent. Only the settings that have a value (different from \"unset\") are copied. The parent field is never copied.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "augmentField(java.lang.String field, org.graphstream.ui.graphicGraph.stylesheet.Style other)",
+    "name": "augmentField",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+          "name": "Style",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "augmentField(java.lang.String field, org.graphstream.ui.graphicGraph.stylesheet.Style other)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reparent(org.graphstream.ui.graphicGraph.stylesheet.Rule parent)",
+    "name": "reparent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "parent"
+      }
+    ],
+    "protocol": {
+      "member": "reparent(org.graphstream.ui.graphicGraph.stylesheet.Rule parent)",
+      "comment": "Set or change the parent of the style.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAlternateStyle(java.lang.String event, org.graphstream.ui.graphicGraph.stylesheet.Rule alternateStyle)",
+    "name": "addAlternateStyle",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "alternateStyle"
+      }
+    ],
+    "protocol": {
+      "member": "addAlternateStyle(java.lang.String event, org.graphstream.ui.graphicGraph.stylesheet.Rule alternateStyle)",
+      "comment": "Add an alternative style for specific events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(java.lang.String field, java.lang.Object value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setValue(java.lang.String field, java.lang.Object value)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(int level)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+      "name": "Style",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.stylesheet.Style",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      }
+    ],
+    "protocol": {
+      "member": "toString(int level)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

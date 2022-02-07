@@ -1,0 +1,1078 @@
+[
+  {
+    "signature": "org.graphstream.ui.graphicGraph.StyleGroup(java.lang.String identifier, java.util.Collection<org.graphstream.ui.graphicGraph.stylesheet.Rule> rules, org.graphstream.graph.Element firstElement, org.graphstream.ui.graphicGraph.StyleGroupSet$EventSet eventSet)",
+    "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "identifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "rules"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "firstElement"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet$EventSet",
+          "name": "EventSet",
+          "isArray": false
+        },
+        "name": "eventSet"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.graphicGraph.StyleGroup(java.lang.String identifier, java.util.Collection<org.graphstream.ui.graphicGraph.stylesheet.Rule> rules, org.graphstream.graph.Element firstElement, org.graphstream.ui.graphicGraph.StyleGroupSet$EventSet eventSet)",
+      "comment": "New style group for a first graph element and the set of style rules that matches it. More graph elements can be added later.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getId()",
+    "name": "getId",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getId()",
+      "comment": "The group unique identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getType()",
+    "name": "getType",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Selector$Type",
+      "name": "org.graphstream.ui.graphicGraph.stylesheet.Selector$Type",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getType()",
+      "comment": "Type of graph element concerned by this style (node, edge, sprite, graph).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasDynamicElements()",
+    "name": "hasDynamicElements",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasDynamicElements()",
+      "comment": "True if at least one of the style properties is dynamic (set according to an attribute of the element to draw). Such elements cannot therefore be drawn in a group operation, but one by one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasEventElements()",
+    "name": "hasEventElements",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasEventElements()",
+      "comment": "If true this group contains some elements that are actually changed by an event. Such elements cannot therefore be drawn in a group operation, but one by one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementHasEvents(org.graphstream.graph.Element element)",
+    "name": "elementHasEvents",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "elementHasEvents(org.graphstream.graph.Element element)",
+      "comment": "True if the given element actually has active events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementIsDynamic(org.graphstream.graph.Element element)",
+    "name": "elementIsDynamic",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "elementIsDynamic(org.graphstream.graph.Element element)",
+      "comment": "True if the given element has dynamic style values provided by specific attributes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValue(java.lang.String property, java.lang.String... events)",
+    "name": "getValue",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "property"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "events"
+      }
+    ],
+    "protocol": {
+      "member": "getValue(java.lang.String property, java.lang.String... events)",
+      "comment": "Get the value of a given property. This is a redefinition of the method in Style to consider the fact a style group aggregates several style rules.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "True if there are no elements in the group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.String elementId)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "elementId"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.String elementId)",
+      "comment": "True if the group contains the element whose identifier is given.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(org.graphstream.graph.Element element)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "contains(org.graphstream.graph.Element element)",
+      "comment": "True if the group contains the element given.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElement(java.lang.String id)",
+    "name": "getElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Element",
+      "name": "org.graphstream.graph.Element",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getElement(java.lang.String id)",
+      "comment": "Return an element of the group, knowing its identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElementCount()",
+    "name": "getElementCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getElementCount()",
+      "comment": "The number of elements of the group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElementIterator()",
+    "name": "getElementIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends org.graphstream.graph.Element>",
+      "name": "java.util.Iterator<? extends org.graphstream.graph.Element>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getElementIterator()",
+      "comment": "Iterator on the set of graph elements of this group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elements()",
+    "name": "elements",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.graph.Element>",
+      "name": "java.lang.Iterable<? extends org.graphstream.graph.Element>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "elements()",
+      "comment": "Iterable set of elements. This the complete set of elements contained in this group without regard to the fact they are modified by an event or are dynamic. If you plan to respect events or dynamic elements, you must check the elements are not modified by events using method_0 and are not dynamic by using method_1 and then draw modified elements using method_2 and method_3. But the easiest way of drawing is to use first method_4 for all non dynamic non event elements, then the method_3 and method_2 to draw all dynamic and event elements.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "bulkElements()",
+    "name": "bulkElements",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.graph.Element>",
+      "name": "java.lang.Iterable<? extends org.graphstream.graph.Element>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "bulkElements()",
+      "comment": "Iterable set of elements that can be drawn in a bulk operation, that is the subset of all elements that are not dynamic or modified by an event.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elementsEvents()",
+    "name": "elementsEvents",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<org.graphstream.ui.graphicGraph.StyleGroup$ElementEvents>",
+      "name": "java.lang.Iterable<org.graphstream.ui.graphicGraph.StyleGroup$ElementEvents>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "elementsEvents()",
+      "comment": "Subset of elements that are actually modified by one or more events. The ElementEvents class contains the element and an array of events that can be pushed on the style group set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dynamicElements()",
+    "name": "dynamicElements",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<org.graphstream.graph.Element>",
+      "name": "java.lang.Iterable<org.graphstream.graph.Element>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "dynamicElements()",
+      "comment": "Subset of elements that have dynamic style values and therefore must be rendered one by one, not in groups like others. Even though elements style can specify some dynamics, the elements must individually have attributes that specify the dynamic value. If the elements do not have these attributes they can be rendered in bulk operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<org.graphstream.graph.Element>",
+      "name": "java.util.Iterator<org.graphstream.graph.Element>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRenderer(java.lang.String id)",
+    "name": "getRenderer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer",
+      "name": "org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getRenderer(java.lang.String id)",
+      "comment": "The associated renderers.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEventsFor(org.graphstream.graph.Element element)",
+    "name": "getEventsFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup$ElementEvents",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup$ElementEvents",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "getEventsFor(org.graphstream.graph.Element element)",
+      "comment": "Set of events for a given element or null if the element has not currently occurring events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isElementDynamic(org.graphstream.graph.Element element)",
+    "name": "isElementDynamic",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "isElementDynamic(org.graphstream.graph.Element element)",
+      "comment": "Test if an element is pushed as dynamic.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addElement(org.graphstream.graph.Element element)",
+    "name": "addElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "addElement(org.graphstream.graph.Element element)",
+      "comment": "Add a new graph element to the group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeElement(org.graphstream.graph.Element element)",
+    "name": "removeElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Element",
+      "name": "org.graphstream.graph.Element",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "removeElement(org.graphstream.graph.Element element)",
+      "comment": "Remove a graph element from the group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pushEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+    "name": "pushEventFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "pushEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+      "comment": "Push an event specifically for the given element. Events are stacked in order. Called by the GraphicElement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "popEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+    "name": "popEventFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "popEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+      "comment": "Pop an event for the given element. Called by the GraphicElement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "activateEventsFor(org.graphstream.graph.Element element)",
+    "name": "activateEventsFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "activateEventsFor(org.graphstream.graph.Element element)",
+      "comment": "Before drawing an element that has events, use this method to activate the events, the style values will be modified accordingly. Events for this element must have been registered via method_0. After rendering the method_1 MUST be called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deactivateEvents()",
+    "name": "deactivateEvents",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "deactivateEvents()",
+      "comment": "De-activate any events activated for an element. This method MUST be called if method_0 has been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pushElementAsDynamic(org.graphstream.graph.Element element)",
+    "name": "pushElementAsDynamic",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "pushElementAsDynamic(org.graphstream.graph.Element element)",
+      "comment": "Indicate the element has dynamic values and thus cannot be drawn in bulk operations. Called by the GraphicElement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "popElementAsDynamic(org.graphstream.graph.Element element)",
+    "name": "popElementAsDynamic",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "popElementAsDynamic(org.graphstream.graph.Element element)",
+      "comment": "Indicate the element has no more dynamic values and can be drawn in bulk operations. Called by the GraphicElement.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release()",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "release()",
+      "comment": "Remove all graph elements of this group, and remove this group from the group list of each style rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setValue(java.lang.String property, java.lang.Object value)",
+    "name": "setValue",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "property"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setValue(java.lang.String property, java.lang.Object value)",
+      "comment": "Redefinition of the Style to forbid changing the values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addRenderer(java.lang.String id, org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer renderer)",
+    "name": "addRenderer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer",
+          "name": "SwingElementRenderer",
+          "isArray": false
+        },
+        "name": "renderer"
+      }
+    ],
+    "protocol": {
+      "member": "addRenderer(java.lang.String id, org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer renderer)",
+      "comment": "Add a renderer to this group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeRenderer(java.lang.String id)",
+    "name": "removeRenderer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer",
+      "name": "org.graphstream.ui.graphicGraph.GraphicElement$SwingElementRenderer",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "removeRenderer(java.lang.String id)",
+      "comment": "Remove a renderer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(int level)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "StyleGroup",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroup",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      }
+    ],
+    "protocol": {
+      "member": "toString(int level)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

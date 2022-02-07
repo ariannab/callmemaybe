@@ -1,0 +1,89 @@
+[
+  {
+    "signature": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+    "name": "getCurve",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.MarginCurve",
+      "name": "MarginCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.MarginCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "predictions"
+      }
+    ],
+    "protocol": {
+      "member": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+      "comment": "Calculates the cumulative margin distribution for the set of predictions, returning the result as a set of Instances. The structure of these Instances is as follows:   <li><b>Margin</b> contains the margin value (which should be plotted as an x-coordinate) <li><b>Current</b> contains the count of instances with the current margin (plot as y axis) <li><b>Cumulative</b> contains the count of instances with margin less than or equal to the current margin (plot as y axis)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.MarginCurve",
+      "name": "MarginCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.MarginCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.MarginCurve",
+      "name": "MarginCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.MarginCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Tests the MarginCurve generation from the command line. The classifier is currently hardcoded. Pipe in an arff file.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

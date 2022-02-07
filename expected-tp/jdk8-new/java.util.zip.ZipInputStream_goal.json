@@ -1,0 +1,268 @@
+[
+  {
+    "signature": "java.util.zip.ZipInputStream(java.io.InputStream in)",
+    "name": "java.util.zip.ZipInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.ZipInputStream(java.io.InputStream in)",
+      "comment": "Creates a new ZIP input stream. The UTF-8 javamethod_0method_1method_2 charset is used to decode the entry names.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.ZipInputStream(java.io.InputStream in, java.nio.charset.Charset charset)",
+    "name": "java.util.zip.ZipInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.charset.Charset",
+          "name": "Charset",
+          "isArray": false
+        },
+        "name": "charset"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.ZipInputStream(java.io.InputStream in, java.nio.charset.Charset charset)",
+      "comment": "Creates a new ZIP input stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNextEntry()",
+    "name": "getNextEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNextEntry()",
+      "comment": "Reads the next ZIP file entry and positions the stream at the beginning of the entry data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "closeEntry()",
+    "name": "closeEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "closeEntry()",
+      "comment": "Closes the current ZIP entry and positions the stream for reading the next entry. @exception ZipException if a ZIP file error has occurred @exception IOException if an I/O error has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "available()",
+    "name": "available",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "available()",
+      "comment": "Returns 0 after EOF has reached for the current entry data, otherwise always return 1.  Programs should not count on this method to return the actual number of bytes that could be read without blocking.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read(byte[] b, int off, int len)",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "read(byte[] b, int off, int len)",
+      "comment": "Reads from the current ZIP entry into an array of bytes. If len is not zero, the method blocks until some input is available; otherwise, no bytes are read and 0 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skip(long n)",
+    "name": "skip",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "skip(long n)",
+      "comment": "Skips specified number of bytes in the current ZIP entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Closes this input stream and releases any system resources associated with the stream. @exception IOException if an I/O error has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createZipEntry(java.lang.String name)",
+    "name": "createZipEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.ZipInputStream",
+      "name": "ZipInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.ZipInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.zip.ZipEntry",
+      "name": "java.util.zip.ZipEntry",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "createZipEntry(java.lang.String name)",
+      "comment": "Creates a new ZipEntry object for the specified entry name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

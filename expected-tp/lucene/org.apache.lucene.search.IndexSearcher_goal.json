@@ -1,0 +1,1406 @@
+[
+  {
+    "signature": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReader r)",
+    "name": "org.apache.lucene.search.IndexSearcher",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.IndexReader",
+          "name": "IndexReader",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReader r)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReader r, java.util.concurrent.ExecutorService executor)",
+    "name": "org.apache.lucene.search.IndexSearcher",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.IndexReader",
+          "name": "IndexReader",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ExecutorService",
+          "name": "ExecutorService",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReader r, java.util.concurrent.ExecutorService executor)",
+      "comment": "provided ExecutorService. IndexSearcher will not close/awaitTermination this ExecutorService on close; you must do so, eventually, on your own. NOTE: if you are using NIOFSDirectory, do not use the shutdownNow method of ExecutorService as this uses method_0 under-the-hood which can silently close file descriptors (see LUCENE-2239). @lucene.experimental",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReaderContext context, java.util.concurrent.ExecutorService executor)",
+    "name": "org.apache.lucene.search.IndexSearcher",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.IndexReaderContext",
+          "name": "IndexReaderContext",
+          "isArray": false
+        },
+        "name": "context"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ExecutorService",
+          "name": "ExecutorService",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReaderContext context, java.util.concurrent.ExecutorService executor)",
+      "comment": "Creates a searcher searching the provided top-level IndexReaderContext.  Given a non-null ExecutorService this method runs searches for each segment separately, using the provided ExecutorService. IndexSearcher will not close/awaitTermination this ExecutorService on close; you must do so, eventually, on your own. NOTE: if you are using NIOFSDirectory, do not use the shutdownNow method of ExecutorService as this uses method_0 under-the-hood which can silently close file descriptors (see LUCENE-2239).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReaderContext context)",
+    "name": "org.apache.lucene.search.IndexSearcher",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.IndexReaderContext",
+          "name": "IndexReaderContext",
+          "isArray": false
+        },
+        "name": "context"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.lucene.search.IndexSearcher(org.apache.lucene.index.IndexReaderContext context)",
+      "comment": "Creates a searcher searching the provided top-level IndexReaderContext.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultSimilarity()",
+    "name": "getDefaultSimilarity",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.similarities.Similarity",
+      "name": "org.apache.lucene.search.similarities.Similarity",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDefaultSimilarity()",
+      "comment": "Expert: returns a default Similarity instance. In general, this method is only called to initialize searchers and writers. User code and query implementations should respect method_0 @lucene.internal",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultQueryCache()",
+    "name": "getDefaultQueryCache",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.QueryCache",
+      "name": "org.apache.lucene.search.QueryCache",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDefaultQueryCache()",
+      "comment": "Expert: Get the default QueryCache or null if the cache is disabled. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDefaultQueryCache(org.apache.lucene.search.QueryCache defaultQueryCache)",
+    "name": "setDefaultQueryCache",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.QueryCache",
+          "name": "QueryCache",
+          "isArray": false
+        },
+        "name": "defaultQueryCache"
+      }
+    ],
+    "protocol": {
+      "member": "setDefaultQueryCache(org.apache.lucene.search.QueryCache defaultQueryCache)",
+      "comment": "Expert: set the default QueryCache instance. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultQueryCachingPolicy()",
+    "name": "getDefaultQueryCachingPolicy",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.QueryCachingPolicy",
+      "name": "org.apache.lucene.search.QueryCachingPolicy",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDefaultQueryCachingPolicy()",
+      "comment": "Expert: Get the default QueryCachingPolicy. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDefaultQueryCachingPolicy(org.apache.lucene.search.QueryCachingPolicy defaultQueryCachingPolicy)",
+    "name": "setDefaultQueryCachingPolicy",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.QueryCachingPolicy",
+          "name": "QueryCachingPolicy",
+          "isArray": false
+        },
+        "name": "defaultQueryCachingPolicy"
+      }
+    ],
+    "protocol": {
+      "member": "setDefaultQueryCachingPolicy(org.apache.lucene.search.QueryCachingPolicy defaultQueryCachingPolicy)",
+      "comment": "Expert: set the default QueryCachingPolicy instance. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setQueryCache(org.apache.lucene.search.QueryCache queryCache)",
+    "name": "setQueryCache",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.QueryCache",
+          "name": "QueryCache",
+          "isArray": false
+        },
+        "name": "queryCache"
+      }
+    ],
+    "protocol": {
+      "member": "setQueryCache(org.apache.lucene.search.QueryCache queryCache)",
+      "comment": "Set the QueryCache to use when scores are not needed. A value of null indicates that query matches should never be cached. This method should be called before starting using this IndexSearcher. NOTE: When using a query cache, queries should not be modified after they have been passed to IndexSearcher.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.setQueryCache(args[0])->receiverObjectID"
+    }
+  },
+  {
+    "signature": "getQueryCache()",
+    "name": "getQueryCache",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.QueryCache",
+      "name": "org.apache.lucene.search.QueryCache",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQueryCache()",
+      "comment": "Return the query cache of this IndexSearcher. This will be either the #method_0 default query cache or the query cache that was last set through #setQueryCache(QueryCache). A return value of null indicates that caching is disabled. @lucene.experimental",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setQueryCachingPolicy(org.apache.lucene.search.QueryCachingPolicy queryCachingPolicy)",
+    "name": "setQueryCachingPolicy",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.QueryCachingPolicy",
+          "name": "QueryCachingPolicy",
+          "isArray": false
+        },
+        "name": "queryCachingPolicy"
+      }
+    ],
+    "protocol": {
+      "member": "setQueryCachingPolicy(org.apache.lucene.search.QueryCachingPolicy queryCachingPolicy)",
+      "comment": "Set the QueryCachingPolicy to use for query caching. This method should be called before starting using this IndexSearcher.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.setQueryCache(args[0])->receiverObjectID"
+    }
+  },
+  {
+    "signature": "getQueryCachingPolicy()",
+    "name": "getQueryCachingPolicy",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.QueryCachingPolicy",
+      "name": "org.apache.lucene.search.QueryCachingPolicy",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQueryCachingPolicy()",
+      "comment": "Return the query cache of this IndexSearcher. This will be either the #method_0 default policy or the policy that was last set through #setQueryCachingPolicy(QueryCachingPolicy). @lucene.experimental",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "slices(java.util.List<org.apache.lucene.index.LeafReaderContext> leaves)",
+    "name": "slices",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher$LeafSlice[]",
+      "name": "org.apache.lucene.search.IndexSearcher$LeafSlice[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "leaves"
+      }
+    ],
+    "protocol": {
+      "member": "slices(java.util.List<org.apache.lucene.index.LeafReaderContext> leaves)",
+      "comment": "Expert: Creates an array of leaf slices each holding a subset of the given leaves. Each LeafSlice is executed in a single thread. By default there will be one LeafSlice per leaf (orgmethod_0.lucene.index.LeafReaderContext).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIndexReader()",
+    "name": "getIndexReader",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.index.IndexReader",
+      "name": "org.apache.lucene.index.IndexReader",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getIndexReader()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doc(int docID)",
+    "name": "doc",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.document.Document",
+      "name": "org.apache.lucene.document.Document",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      }
+    ],
+    "protocol": {
+      "member": "doc(int docID)",
+      "comment": "Sugar for .method_0document(docID)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doc(int docID, org.apache.lucene.index.StoredFieldVisitor fieldVisitor)",
+    "name": "doc",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.StoredFieldVisitor",
+          "name": "StoredFieldVisitor",
+          "isArray": false
+        },
+        "name": "fieldVisitor"
+      }
+    ],
+    "protocol": {
+      "member": "doc(int docID, org.apache.lucene.index.StoredFieldVisitor fieldVisitor)",
+      "comment": "Sugar for .method_0document(docID, fieldVisitor)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doc(int docID, java.util.Set<java.lang.String> fieldsToLoad)",
+    "name": "doc",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.document.Document",
+      "name": "org.apache.lucene.document.Document",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "docID"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Set",
+          "name": "Set",
+          "isArray": false
+        },
+        "name": "fieldsToLoad"
+      }
+    ],
+    "protocol": {
+      "member": "doc(int docID, java.util.Set<java.lang.String> fieldsToLoad)",
+      "comment": "Sugar for .method_0document(docID, fieldsToLoad)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSimilarity(org.apache.lucene.search.similarities.Similarity similarity)",
+    "name": "setSimilarity",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.similarities.Similarity",
+          "name": "Similarity",
+          "isArray": false
+        },
+        "name": "similarity"
+      }
+    ],
+    "protocol": {
+      "member": "setSimilarity(org.apache.lucene.search.similarities.Similarity similarity)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSimilarity(boolean needsScores)",
+    "name": "getSimilarity",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.similarities.Similarity",
+      "name": "org.apache.lucene.search.similarities.Similarity",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "needsScores"
+      }
+    ],
+    "protocol": {
+      "member": "getSimilarity(boolean needsScores)",
+      "comment": "needsScores is false, this method will return a simple Similarity that does not leverage scoring factors such as norms. When needsScores is true, this returns the Similarity that has been set through #method_0 or the #getDefaultSimilarity() default Similarity if none has been set explicitly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "count(org.apache.lucene.search.Query query)",
+    "name": "count",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      }
+    ],
+    "protocol": {
+      "member": "count(org.apache.lucene.search.Query query)",
+      "comment": "Count how many documents match the given query.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchAfter(org.apache.lucene.search.ScoreDoc after, org.apache.lucene.search.Query query, int numHits)",
+    "name": "searchAfter",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TopDocs",
+      "name": "org.apache.lucene.search.TopDocs",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.ScoreDoc",
+          "name": "ScoreDoc",
+          "isArray": false
+        },
+        "name": "after"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numHits"
+      }
+    ],
+    "protocol": {
+      "member": "searchAfter(org.apache.lucene.search.ScoreDoc after, org.apache.lucene.search.Query query, int numHits)",
+      "comment": "hits for query where all results are after a previous result (after).  By passing the bottom result from a previous page as after, this method can be used for efficient 'deep-paging' across potentially large result sets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(org.apache.lucene.search.Query query, int n)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TopDocs",
+      "name": "org.apache.lucene.search.TopDocs",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "search(org.apache.lucene.search.Query query, int n)",
+      "comment": "hits for query.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(org.apache.lucene.search.Query query, org.apache.lucene.search.Collector results)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "results"
+      }
+    ],
+    "protocol": {
+      "member": "search(org.apache.lucene.search.Query query, org.apache.lucene.search.Collector results)",
+      "comment": "method_0 is called for every matching document.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(org.apache.lucene.search.Query query, int n, org.apache.lucene.search.Sort sort, boolean doDocScores, boolean doMaxScore)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TopFieldDocs",
+      "name": "org.apache.lucene.search.TopFieldDocs",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Sort",
+          "name": "Sort",
+          "isArray": false
+        },
+        "name": "sort"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "doDocScores"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "doMaxScore"
+      }
+    ],
+    "protocol": {
+      "member": "search(org.apache.lucene.search.Query query, int n, org.apache.lucene.search.Sort sort, boolean doDocScores, boolean doMaxScore)",
+      "comment": "control over whether hit scores and max score should be computed. Finds the top n hits for query, and sorting the hits by the criteria in sort. If doDocScores is true then the score of each hit will be computed and returned. If doMaxScore is true then the maximum score over all collected hits will be computed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(org.apache.lucene.search.Query query, int n, org.apache.lucene.search.Sort sort)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TopFieldDocs",
+      "name": "org.apache.lucene.search.TopFieldDocs",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Sort",
+          "name": "Sort",
+          "isArray": false
+        },
+        "name": "sort"
+      }
+    ],
+    "protocol": {
+      "member": "search(org.apache.lucene.search.Query query, int n, org.apache.lucene.search.Sort sort)",
+      "comment": "Search implementation with arbitrary sorting.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchAfter(org.apache.lucene.search.ScoreDoc after, org.apache.lucene.search.Query query, int n, org.apache.lucene.search.Sort sort)",
+    "name": "searchAfter",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TopDocs",
+      "name": "org.apache.lucene.search.TopDocs",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.ScoreDoc",
+          "name": "ScoreDoc",
+          "isArray": false
+        },
+        "name": "after"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Sort",
+          "name": "Sort",
+          "isArray": false
+        },
+        "name": "sort"
+      }
+    ],
+    "protocol": {
+      "member": "searchAfter(org.apache.lucene.search.ScoreDoc after, org.apache.lucene.search.Query query, int n, org.apache.lucene.search.Sort sort)",
+      "comment": "hits for query where all results are after a previous result (after).  By passing the bottom result from a previous page as after, this method can be used for efficient 'deep-paging' across potentially large result sets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchAfter(org.apache.lucene.search.ScoreDoc after, org.apache.lucene.search.Query query, int numHits, org.apache.lucene.search.Sort sort, boolean doDocScores, boolean doMaxScore)",
+    "name": "searchAfter",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TopFieldDocs",
+      "name": "org.apache.lucene.search.TopFieldDocs",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.ScoreDoc",
+          "name": "ScoreDoc",
+          "isArray": false
+        },
+        "name": "after"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numHits"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Sort",
+          "name": "Sort",
+          "isArray": false
+        },
+        "name": "sort"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "doDocScores"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "doMaxScore"
+      }
+    ],
+    "protocol": {
+      "member": "searchAfter(org.apache.lucene.search.ScoreDoc after, org.apache.lucene.search.Query query, int numHits, org.apache.lucene.search.Sort sort, boolean doDocScores, boolean doMaxScore)",
+      "comment": "hits for query where all results are after a previous result (after), allowing control over whether hit scores and max score should be computed.  By passing the bottom result from a previous page as after, this method can be used for efficient 'deep-paging' across potentially large result sets. If doDocScores is true then the score of each hit will be computed and returned. If doMaxScore is true then the maximum score over all collected hits will be computed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(org.apache.lucene.search.Query query, org.apache.lucene.search.CollectorManager<C, T> collectorManager)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T",
+      "name": "T",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.CollectorManager",
+          "name": "CollectorManager",
+          "isArray": false
+        },
+        "name": "collectorManager"
+      }
+    ],
+    "protocol": {
+      "member": "search(org.apache.lucene.search.Query query, org.apache.lucene.search.CollectorManager<C, T> collectorManager)",
+      "comment": "Lower-level search API. Search all leaves using the given CollectorManager. In contrast to #method_0, this method will use the searcher's ExecutorService in order to parallelize execution of the collection on the configured #leafSlices.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(java.util.List<org.apache.lucene.index.LeafReaderContext> leaves, org.apache.lucene.search.Weight weight, org.apache.lucene.search.Collector collector)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "leaves"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Weight",
+          "name": "Weight",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Collector",
+          "name": "Collector",
+          "isArray": false
+        },
+        "name": "collector"
+      }
+    ],
+    "protocol": {
+      "member": "search(java.util.List<org.apache.lucene.index.LeafReaderContext> leaves, org.apache.lucene.search.Weight weight, org.apache.lucene.search.Collector collector)",
+      "comment": "Lower-level search API.  method_0 is called for every document. <br>  NOTE: this method executes the searches on all given leaves exclusively. To search across all the searchers leaves use #leafContexts.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rewrite(org.apache.lucene.search.Query original)",
+    "name": "rewrite",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.Query",
+      "name": "org.apache.lucene.search.Query",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "original"
+      }
+    ],
+    "protocol": {
+      "member": "rewrite(org.apache.lucene.search.Query original)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "explain(org.apache.lucene.search.Query query, int doc)",
+    "name": "explain",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.Explanation",
+      "name": "org.apache.lucene.search.Explanation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "explain(org.apache.lucene.search.Query query, int doc)",
+      "comment": "query. This is intended to be used in developing Similarity implementations, and, for good performance, should not be displayed with every hit. Computing an explanation is as expensive as executing the query over the entire index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "explain(org.apache.lucene.search.Weight weight, int doc)",
+    "name": "explain",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.Explanation",
+      "name": "org.apache.lucene.search.Explanation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Weight",
+          "name": "Weight",
+          "isArray": false
+        },
+        "name": "weight"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "explain(org.apache.lucene.search.Weight weight, int doc)",
+      "comment": "Returns an Explanation that describes how doc scored against weight. This is intended to be used in developing Similarity implementations, and, for good performance, should not be displayed with every hit. Computing an explanation is as expensive as executing the query over the entire index. Applications should call method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createNormalizedWeight(org.apache.lucene.search.Query query, boolean needsScores)",
+    "name": "createNormalizedWeight",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.Weight",
+      "name": "org.apache.lucene.search.Weight",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "needsScores"
+      }
+    ],
+    "protocol": {
+      "member": "createNormalizedWeight(org.apache.lucene.search.Query query, boolean needsScores)",
+      "comment": "Creates a normalized weight for a top-level Query. The query is rewritten by this method and method_0 called, afterwards the Weight is normalized. The returned Weight can then directly be used to get a Scorer. @lucene.internal",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "createWeight(org.apache.lucene.search.Query query, boolean needsScores, float boost)",
+    "name": "createWeight",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.Weight",
+      "name": "org.apache.lucene.search.Weight",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Query",
+          "name": "Query",
+          "isArray": false
+        },
+        "name": "query"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "needsScores"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "boost"
+      }
+    ],
+    "protocol": {
+      "member": "createWeight(org.apache.lucene.search.Query query, boolean needsScores, float boost)",
+      "comment": "Creates a Weight for the given query, potentially adding caching if possible and configured. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTopReaderContext()",
+    "name": "getTopReaderContext",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.index.IndexReaderContext",
+      "name": "org.apache.lucene.index.IndexReaderContext",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTopReaderContext()",
+      "comment": "Returns this searchers the top-level IndexReaderContext.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "termStatistics(org.apache.lucene.index.Term term, org.apache.lucene.index.TermContext context)",
+    "name": "termStatistics",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TermStatistics",
+      "name": "org.apache.lucene.search.TermStatistics",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.Term",
+          "name": "Term",
+          "isArray": false
+        },
+        "name": "term"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.index.TermContext",
+          "name": "TermContext",
+          "isArray": false
+        },
+        "name": "context"
+      }
+    ],
+    "protocol": {
+      "member": "termStatistics(org.apache.lucene.index.Term term, org.apache.lucene.index.TermContext context)",
+      "comment": "Returns TermStatistics for a term. This can be overridden for example, to return a term's statistics across a distributed collection. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collectionStatistics(java.lang.String field)",
+    "name": "collectionStatistics",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.IndexSearcher",
+      "name": "IndexSearcher",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.IndexSearcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.CollectionStatistics",
+      "name": "org.apache.lucene.search.CollectionStatistics",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      }
+    ],
+    "protocol": {
+      "member": "collectionStatistics(java.lang.String field)",
+      "comment": "Returns CollectionStatistics for a field. This can be overridden for example, to return a field's statistics across a distributed collection. @lucenemethod_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

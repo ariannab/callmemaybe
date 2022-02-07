@@ -1,0 +1,3311 @@
+[
+  {
+    "signature": "weka.classifiers.evaluation.Evaluation(weka.core.Instances data)",
+    "name": "weka.classifiers.evaluation.Evaluation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.evaluation.Evaluation(weka.core.Instances data)",
+      "comment": "Initializes all the counters for the evaluation. Use method_0 if the dataset is the test set and you can't initialize with the priors from the training set via method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.evaluation.Evaluation(weka.core.Instances data, weka.classifiers.CostMatrix costMatrix)",
+    "name": "weka.classifiers.evaluation.Evaluation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.CostMatrix",
+          "name": "CostMatrix",
+          "isArray": false
+        },
+        "name": "costMatrix"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.evaluation.Evaluation(weka.core.Instances data, weka.classifiers.CostMatrix costMatrix)",
+      "comment": "Initializes all the counters for the evaluation and also takes a cost matrix as parameter. Use method_0 if the dataset is the test set and you can't initialize with the priors from the training set via method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAllEvaluationMetricNames()",
+    "name": "getAllEvaluationMetricNames",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAllEvaluationMetricNames()",
+      "comment": "Utility method to get a list of the names of all built-in and plugin evaluation metrics",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHeader()",
+    "name": "getHeader",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getHeader()",
+      "comment": "Returns the header of the underlying dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDiscardPredictions(boolean value)",
+    "name": "setDiscardPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setDiscardPredictions(boolean value)",
+      "comment": "Sets whether to discard predictions, ie, not storing them for future reference via method_0 method in order to conserve memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDiscardPredictions()",
+    "name": "getDiscardPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDiscardPredictions()",
+      "comment": "Returns whether predictions are not recorded at all, in order to conserve memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPluginMetrics()",
+    "name": "getPluginMetrics",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<weka.classifiers.evaluation.AbstractEvaluationMetric>",
+      "name": "java.util.List<weka.classifiers.evaluation.AbstractEvaluationMetric>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPluginMetrics()",
+      "comment": "Returns the list of plugin metrics in use (or null if there are none)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMetricsToDisplay(java.util.List<java.lang.String> display)",
+    "name": "setMetricsToDisplay",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "display"
+      }
+    ],
+    "protocol": {
+      "member": "setMetricsToDisplay(java.util.List<java.lang.String> display)",
+      "comment": "Set a list of the names of metrics to have appear in the output. The default is to display all built in metrics and plugin metrics that haven't been globally disabled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetricsToDisplay()",
+    "name": "getMetricsToDisplay",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMetricsToDisplay()",
+      "comment": "Get a list of the names of metrics to have appear in the output The default is to display all built in metrics and plugin metrics that haven't been globally disabled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toggleEvalMetrics(java.util.List<java.lang.String> metricsToToggle)",
+    "name": "toggleEvalMetrics",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "metricsToToggle"
+      }
+    ],
+    "protocol": {
+      "member": "toggleEvalMetrics(java.util.List<java.lang.String> metricsToToggle)",
+      "comment": "Toggle the output of the metrics specified in the supplied list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPluginMetric(java.lang.String name)",
+    "name": "getPluginMetric",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getPluginMetric(java.lang.String name)",
+      "comment": "Get the named plugin evaluation metric",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "areaUnderROC(int classIndex)",
+    "name": "areaUnderROC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "areaUnderROC(int classIndex)",
+      "comment": "Returns the area under ROC for those predictions that have been collected in the method_0 method. Returns method_1 if the area is not available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedAreaUnderROC()",
+    "name": "weightedAreaUnderROC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedAreaUnderROC()",
+      "comment": "Calculates the weighted (by class size) AUC.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "areaUnderPRC(int classIndex)",
+    "name": "areaUnderPRC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "areaUnderPRC(int classIndex)",
+      "comment": "Returns the area under precision-recall curve (AUPRC) for those predictions that have been collected in the method_0 method. Returns method_1 if the area is not available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedAreaUnderPRC()",
+    "name": "weightedAreaUnderPRC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedAreaUnderPRC()",
+      "comment": "Calculates the weighted (by class size) AUPRC.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "confusionMatrix()",
+    "name": "confusionMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "confusionMatrix()",
+      "comment": "Returns a copy of the confusion matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossValidateModel(weka.classifiers.Classifier classifier, weka.core.Instances data, int numFolds, java.util.Random random, java.lang.Object... forPredictionsPrinting)",
+    "name": "crossValidateModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "forPredictionsPrinting"
+      }
+    ],
+    "protocol": {
+      "member": "crossValidateModel(weka.classifiers.Classifier classifier, weka.core.Instances data, int numFolds, java.util.Random random, java.lang.Object... forPredictionsPrinting)",
+      "comment": "Performs a (stratified if class is nominal) cross-validation for a classifier on a set of instances. Now performs a deep copy of the classifier before each call to method_0 (just in case the classifier is not initialized properly).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossValidateModel(java.lang.String classifierString, weka.core.Instances data, int numFolds, java.lang.String[] options, java.util.Random random)",
+    "name": "crossValidateModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "classifierString"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "protocol": {
+      "member": "crossValidateModel(java.lang.String classifierString, weka.core.Instances data, int numFolds, java.lang.String[] options, java.util.Random random)",
+      "comment": "Performs a (stratified if class is nominal) cross-validation for a classifier on a set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModel(java.lang.String classifierString, java.lang.String[] options)",
+    "name": "evaluateModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "classifierString"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModel(java.lang.String classifierString, java.lang.String[] options)",
+      "comment": "Evaluates a classifier with the options given in an array of strings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "A test method for this class. Just extracts the first command line argument as a classifier class name and calls evaluateModel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModel(weka.classifiers.Classifier classifier, java.lang.String[] options)",
+    "name": "evaluateModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModel(weka.classifiers.Classifier classifier, java.lang.String[] options)",
+      "comment": "Evaluates a classifier with the options given in an array of strings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "handleCostOption(java.lang.String costFileName, int numClasses)",
+    "name": "handleCostOption",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "weka.classifiers.CostMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "costFileName"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      }
+    ],
+    "protocol": {
+      "member": "handleCostOption(java.lang.String costFileName, int numClasses)",
+      "comment": "Attempts to load a cost matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModel(weka.classifiers.Classifier classifier, weka.core.Instances data, java.lang.Object... forPredictionsPrinting)",
+    "name": "evaluateModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "forPredictionsPrinting"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModel(weka.classifiers.Classifier classifier, weka.core.Instances data, java.lang.Object... forPredictionsPrinting)",
+      "comment": "Evaluates the classifier on a given set of instances. Note that the data must have exactly the same format (emethod_0. order of attributes) as the data used to train the classifier! Otherwise the results will generally be meaningless.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluationForSingleInstance(double[] dist, weka.core.Instance instance, boolean storePredictions)",
+    "name": "evaluationForSingleInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "dist"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "storePredictions"
+      }
+    ],
+    "protocol": {
+      "member": "evaluationForSingleInstance(double[] dist, weka.core.Instance instance, boolean storePredictions)",
+      "comment": "Evaluates the supplied distribution on a single instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluationForSingleInstance(weka.classifiers.Classifier classifier, weka.core.Instance instance, boolean storePredictions)",
+    "name": "evaluationForSingleInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "storePredictions"
+      }
+    ],
+    "protocol": {
+      "member": "evaluationForSingleInstance(weka.classifiers.Classifier classifier, weka.core.Instance instance, boolean storePredictions)",
+      "comment": "Evaluates the classifier on a single instance and records the prediction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModelOnceAndRecordPrediction(weka.classifiers.Classifier classifier, weka.core.Instance instance)",
+    "name": "evaluateModelOnceAndRecordPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModelOnceAndRecordPrediction(weka.classifiers.Classifier classifier, weka.core.Instance instance)",
+      "comment": "Evaluates the classifier on a single instance and records the prediction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModelOnce(weka.classifiers.Classifier classifier, weka.core.Instance instance)",
+    "name": "evaluateModelOnce",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModelOnce(weka.classifiers.Classifier classifier, weka.core.Instance instance)",
+      "comment": "Evaluates the classifier on a single instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModelOnce(double[] dist, weka.core.Instance instance)",
+    "name": "evaluateModelOnce",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "dist"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModelOnce(double[] dist, weka.core.Instance instance)",
+      "comment": "Evaluates the supplied distribution on a single instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModelOnceAndRecordPrediction(double[] dist, weka.core.Instance instance)",
+    "name": "evaluateModelOnceAndRecordPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "dist"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModelOnceAndRecordPrediction(double[] dist, weka.core.Instance instance)",
+      "comment": "Evaluates the supplied distribution on a single instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateModelOnce(double prediction, weka.core.Instance instance)",
+    "name": "evaluateModelOnce",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "prediction"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateModelOnce(double prediction, weka.core.Instance instance)",
+      "comment": "Evaluates the supplied prediction on a single instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "predictions()",
+    "name": "predictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "name": "java.util.ArrayList<weka.classifiers.evaluation.Prediction>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "predictions()",
+      "comment": "Returns the predictions that have been collected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wekaStaticWrapper(weka.classifiers.Sourcable classifier, java.lang.String className)",
+    "name": "wekaStaticWrapper",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Sourcable",
+          "name": "Sourcable",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "className"
+      }
+    ],
+    "protocol": {
+      "member": "wekaStaticWrapper(weka.classifiers.Sourcable classifier, java.lang.String className)",
+      "comment": "Wraps a static classifier in enough source to test using the weka class libraries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numInstances()",
+    "name": "numInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numInstances()",
+      "comment": "Gets the number of test instances that had a known class value (actually the sum of the weights of test instances with known class value).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "coverageOfTestCasesByPredictedRegions()",
+    "name": "coverageOfTestCasesByPredictedRegions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "coverageOfTestCasesByPredictedRegions()",
+      "comment": "Gets the coverage of the test cases by the predicted regions at the confidence level specified when evaluation was performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sizeOfPredictedRegions()",
+    "name": "sizeOfPredictedRegions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sizeOfPredictedRegions()",
+      "comment": "Gets the average size of the predicted regions, relative to the range of the target in the training data, at the confidence level specified when evaluation was performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incorrect()",
+    "name": "incorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "incorrect()",
+      "comment": "Gets the number of instances incorrectly classified (that is, for which an incorrect prediction was made). (Actually the sum of the weights of these instances)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pctIncorrect()",
+    "name": "pctIncorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pctIncorrect()",
+      "comment": "Gets the percentage of instances incorrectly classified (that is, for which an incorrect prediction was made).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "totalCost()",
+    "name": "totalCost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "totalCost()",
+      "comment": "Gets the total cost, that is, the cost of each prediction times the weight of the instance, summed over all instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "avgCost()",
+    "name": "avgCost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "avgCost()",
+      "comment": "Gets the average cost, that is, total cost of misclassifications (incorrect plus unclassified) over the total number of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "correct()",
+    "name": "correct",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "correct()",
+      "comment": "Gets the number of instances correctly classified (that is, for which a correct prediction was made). (Actually the sum of the weights of these instances)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pctCorrect()",
+    "name": "pctCorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pctCorrect()",
+      "comment": "Gets the percentage of instances correctly classified (that is, for which a correct prediction was made).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unclassified()",
+    "name": "unclassified",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unclassified()",
+      "comment": "Gets the number of instances not classified (that is, for which no prediction was made by the classifier). (Actually the sum of the weights of these instances)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pctUnclassified()",
+    "name": "pctUnclassified",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pctUnclassified()",
+      "comment": "Gets the percentage of instances not classified (that is, for which no prediction was made by the classifier).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "errorRate()",
+    "name": "errorRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "errorRate()",
+      "comment": "Returns the estimated error rate or the root mean squared error (if the class is numeric). If a cost matrix was given this error rate gives the average cost.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kappa()",
+    "name": "kappa",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "kappa()",
+      "comment": "Returns value of kappa statistic if class is nominal.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "correlationCoefficient()",
+    "name": "correlationCoefficient",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "correlationCoefficient()",
+      "comment": "Returns the correlation coefficient if the class is numeric.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanAbsoluteError()",
+    "name": "meanAbsoluteError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "meanAbsoluteError()",
+      "comment": "Returns the mean absolute error. Refers to the error of the predicted values for numeric classes, and the error of the predicted probability distribution for nominal classes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "meanPriorAbsoluteError()",
+    "name": "meanPriorAbsoluteError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "meanPriorAbsoluteError()",
+      "comment": "Returns the mean absolute error of the prior.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "relativeAbsoluteError()",
+    "name": "relativeAbsoluteError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "relativeAbsoluteError()",
+      "comment": "Returns the relative absolute error.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rootMeanSquaredError()",
+    "name": "rootMeanSquaredError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "rootMeanSquaredError()",
+      "comment": "Returns the root mean squared error.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rootMeanPriorSquaredError()",
+    "name": "rootMeanPriorSquaredError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "rootMeanPriorSquaredError()",
+      "comment": "Returns the root mean prior squared error.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rootRelativeSquaredError()",
+    "name": "rootRelativeSquaredError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "rootRelativeSquaredError()",
+      "comment": "Returns the root relative squared error if the class is numeric.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "priorEntropy()",
+    "name": "priorEntropy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "priorEntropy()",
+      "comment": "Calculate the entropy of the prior distribution.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "KBInformation()",
+    "name": "KBInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "KBInformation()",
+      "comment": "Return the total Kononenko & Bratko Information score in bits.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "KBMeanInformation()",
+    "name": "KBMeanInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "KBMeanInformation()",
+      "comment": "Return the Kononenko & Bratko Information score in bits per instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "KBRelativeInformation()",
+    "name": "KBRelativeInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "KBRelativeInformation()",
+      "comment": "Return the Kononenko & Bratko Relative Information score.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SFPriorEntropy()",
+    "name": "SFPriorEntropy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "SFPriorEntropy()",
+      "comment": "Returns the total entropy for the null model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SFMeanPriorEntropy()",
+    "name": "SFMeanPriorEntropy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "SFMeanPriorEntropy()",
+      "comment": "Returns the entropy per instance for the null model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SFSchemeEntropy()",
+    "name": "SFSchemeEntropy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "SFSchemeEntropy()",
+      "comment": "Returns the total entropy for the scheme.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SFMeanSchemeEntropy()",
+    "name": "SFMeanSchemeEntropy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "SFMeanSchemeEntropy()",
+      "comment": "Returns the entropy per instance for the scheme.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SFEntropyGain()",
+    "name": "SFEntropyGain",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "SFEntropyGain()",
+      "comment": "Returns the total SF, which is the null model entropy minus the scheme entropy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "SFMeanEntropyGain()",
+    "name": "SFMeanEntropyGain",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "SFMeanEntropyGain()",
+      "comment": "Returns the SF per instance, which is the null model entropy minus the scheme entropy, per instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toCumulativeMarginDistributionString()",
+    "name": "toCumulativeMarginDistributionString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toCumulativeMarginDistributionString()",
+      "comment": "Output the cumulative margin distribution as a string suitable for input for gnuplot or similar package.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSummaryString()",
+    "name": "toSummaryString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toSummaryString()",
+      "comment": "Calls method_0 with no title and no complexity stats.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSummaryString(boolean printComplexityStatistics)",
+    "name": "toSummaryString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "printComplexityStatistics"
+      }
+    ],
+    "protocol": {
+      "member": "toSummaryString(boolean printComplexityStatistics)",
+      "comment": "Calls method_0 with a default title.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSummaryString(java.lang.String title, boolean printComplexityStatistics)",
+    "name": "toSummaryString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "title"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "printComplexityStatistics"
+      }
+    ],
+    "protocol": {
+      "member": "toSummaryString(java.lang.String title, boolean printComplexityStatistics)",
+      "comment": "Outputs the performance statistics in summary form. Lists number (and percentage) of instances classified correctly, incorrectly and unclassified. Outputs the total number of instances classified, and the number of instances (if any) that had no class value provided.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMatrixString()",
+    "name": "toMatrixString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toMatrixString()",
+      "comment": "Calls method_0 with a default title.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMatrixString(java.lang.String title)",
+    "name": "toMatrixString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "title"
+      }
+    ],
+    "protocol": {
+      "member": "toMatrixString(java.lang.String title)",
+      "comment": "Outputs the performance statistics as a classification confusion matrix. For each class value, shows the distribution of predicted class values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toClassDetailsString()",
+    "name": "toClassDetailsString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toClassDetailsString()",
+      "comment": "Generates a breakdown of the accuracy for each class (with default title), incorporating various information-retrieval statistics, such as true/false positive rate, precision/recall/F-Measure. Should be useful for ROC curves, recall/precision curves.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toClassDetailsString(java.lang.String title)",
+    "name": "toClassDetailsString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "title"
+      }
+    ],
+    "protocol": {
+      "member": "toClassDetailsString(java.lang.String title)",
+      "comment": "Generates a breakdown of the accuracy for each class, incorporating various information-retrieval statistics, such as true/false positive rate, precision/recall/F-Measure. Should be useful for ROC curves, recall/precision curves.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numTruePositives(int classIndex)",
+    "name": "numTruePositives",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "numTruePositives(int classIndex)",
+      "comment": "Calculate the number of true positives with respect to a particular class. This is defined as   correctly classified positives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "truePositiveRate(int classIndex)",
+    "name": "truePositiveRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "truePositiveRate(int classIndex)",
+      "comment": "Calculate the true positive rate with respect to a particular class. This is defined as   correctly classified positives ------------------------------ total positives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedTruePositiveRate()",
+    "name": "weightedTruePositiveRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedTruePositiveRate()",
+      "comment": "Calculates the weighted (by class size) true positive rate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numTrueNegatives(int classIndex)",
+    "name": "numTrueNegatives",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "numTrueNegatives(int classIndex)",
+      "comment": "Calculate the number of true negatives with respect to a particular class. This is defined as   correctly classified negatives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trueNegativeRate(int classIndex)",
+    "name": "trueNegativeRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "trueNegativeRate(int classIndex)",
+      "comment": "Calculate the true negative rate with respect to a particular class. This is defined as   correctly classified negatives ------------------------------ total negatives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedTrueNegativeRate()",
+    "name": "weightedTrueNegativeRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedTrueNegativeRate()",
+      "comment": "Calculates the weighted (by class size) true negative rate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numFalsePositives(int classIndex)",
+    "name": "numFalsePositives",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "numFalsePositives(int classIndex)",
+      "comment": "Calculate number of false positives with respect to a particular class. This is defined as   incorrectly classified negatives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "falsePositiveRate(int classIndex)",
+    "name": "falsePositiveRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "falsePositiveRate(int classIndex)",
+      "comment": "Calculate the false positive rate with respect to a particular class. This is defined as   incorrectly classified negatives -------------------------------- total negatives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedFalsePositiveRate()",
+    "name": "weightedFalsePositiveRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedFalsePositiveRate()",
+      "comment": "Calculates the weighted (by class size) false positive rate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numFalseNegatives(int classIndex)",
+    "name": "numFalseNegatives",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "numFalseNegatives(int classIndex)",
+      "comment": "Calculate number of false negatives with respect to a particular class. This is defined as   incorrectly classified positives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "falseNegativeRate(int classIndex)",
+    "name": "falseNegativeRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "falseNegativeRate(int classIndex)",
+      "comment": "Calculate the false negative rate with respect to a particular class. This is defined as   incorrectly classified positives -------------------------------- total positives",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedFalseNegativeRate()",
+    "name": "weightedFalseNegativeRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedFalseNegativeRate()",
+      "comment": "Calculates the weighted (by class size) false negative rate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matthewsCorrelationCoefficient(int classIndex)",
+    "name": "matthewsCorrelationCoefficient",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "matthewsCorrelationCoefficient(int classIndex)",
+      "comment": "Calculates the matthews correlation coefficient (sometimes called phi coefficient) for the supplied class",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedMatthewsCorrelation()",
+    "name": "weightedMatthewsCorrelation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedMatthewsCorrelation()",
+      "comment": "Calculates the weighted (by class size) matthews correlation coefficient.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "recall(int classIndex)",
+    "name": "recall",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "recall(int classIndex)",
+      "comment": "Calculate the recall with respect to a particular class. This is defined as  (Which is also the same as the truePositiveRate.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedRecall()",
+    "name": "weightedRecall",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedRecall()",
+      "comment": "Calculates the weighted (by class size) recall.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "precision(int classIndex)",
+    "name": "precision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "precision(int classIndex)",
+      "comment": "Calculate the precision with respect to a particular class. This is defined as   correctly classified positives ------------------------------ total predicted as positive",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedPrecision()",
+    "name": "weightedPrecision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedPrecision()",
+      "comment": "Calculates the weighted (by class size) precision.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fMeasure(int classIndex)",
+    "name": "fMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "fMeasure(int classIndex)",
+      "comment": "Calculate the F-Measure with respect to a particular class. This is defined as   2 * recall * precision ---------------------- recall + precision",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedFMeasure()",
+    "name": "weightedFMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedFMeasure()",
+      "comment": "Calculates the macro weighted (by class size) average F-Measure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unweightedMacroFmeasure()",
+    "name": "unweightedMacroFmeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unweightedMacroFmeasure()",
+      "comment": "Unweighted macro-averaged F-measure. If some classes not present in the test set, they're just skipped (since recall is undefined there anyway) .",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unweightedMicroFmeasure()",
+    "name": "unweightedMicroFmeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unweightedMicroFmeasure()",
+      "comment": "Unweighted micro-averaged F-measure. If some classes not present in the test set, they have no effect. Note: if the test set is *single-label*, then this is the same as accuracy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPriors(weka.core.Instances train)",
+    "name": "setPriors",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      }
+    ],
+    "protocol": {
+      "member": "setPriors(weka.core.Instances train)",
+      "comment": "Sets the class prior probabilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassPriors()",
+    "name": "getClassPriors",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getClassPriors()",
+      "comment": "Get the current weighted class counts.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updatePriors(weka.core.Instance instance)",
+    "name": "updatePriors",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updatePriors(weka.core.Instance instance)",
+      "comment": "Updates the class prior probabilities or the mean respectively (when incrementally training).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useNoPriors()",
+    "name": "useNoPriors",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useNoPriors()",
+      "comment": "disables the use of priors, emethod_0., in case of de-serialized schemes that have no access to the original training set, but are evaluated on a set set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Tests whether the current evaluation object is equal to another evaluation object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeOptionString(weka.classifiers.Classifier classifier, boolean globalInfo)",
+    "name": "makeOptionString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "globalInfo"
+      }
+    ],
+    "protocol": {
+      "member": "makeOptionString(weka.classifiers.Classifier classifier, boolean globalInfo)",
+      "comment": "Make up the help string giving all the command line options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGlobalInfo(weka.classifiers.Classifier classifier)",
+    "name": "getGlobalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      }
+    ],
+    "protocol": {
+      "member": "getGlobalInfo(weka.classifiers.Classifier classifier)",
+      "comment": "Return the global info (if it exists) for the supplied classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "num2ShortID(int num, char[] IDChars, int IDWidth)",
+    "name": "num2ShortID",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "num"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "IDChars"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "IDWidth"
+      }
+    ],
+    "protocol": {
+      "member": "num2ShortID(int num, char[] IDChars, int IDWidth)",
+      "comment": "Method for generating indices for the confusion matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeDistribution(double predictedClass)",
+    "name": "makeDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "predictedClass"
+      }
+    ],
+    "protocol": {
+      "member": "makeDistribution(double predictedClass)",
+      "comment": "Convert a single prediction into a probability distribution with all zero probabilities except the predicted value which has probability 1method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatsForClassifier(double[] predictedDistribution, weka.core.Instance instance)",
+    "name": "updateStatsForClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "predictedDistribution"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForClassifier(double[] predictedDistribution, weka.core.Instance instance)",
+      "comment": "Updates all the statistics about a classifiers performance for the current test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatsForIntervalEstimator(weka.classifiers.IntervalEstimator classifier, weka.core.Instance classMissing, double classValue)",
+    "name": "updateStatsForIntervalEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.IntervalEstimator",
+          "name": "IntervalEstimator",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "classMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "classValue"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForIntervalEstimator(weka.classifiers.IntervalEstimator classifier, weka.core.Instance classMissing, double classValue)",
+      "comment": "Updates stats for interval estimator based on current test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatsForConditionalDensityEstimator(weka.classifiers.ConditionalDensityEstimator classifier, weka.core.Instance classMissing, double classValue)",
+    "name": "updateStatsForConditionalDensityEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.ConditionalDensityEstimator",
+          "name": "ConditionalDensityEstimator",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "classMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "classValue"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForConditionalDensityEstimator(weka.classifiers.ConditionalDensityEstimator classifier, weka.core.Instance classMissing, double classValue)",
+      "comment": "Updates stats for conditional density estimator based on current test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatsForPredictor(double predictedValue, weka.core.Instance instance)",
+    "name": "updateStatsForPredictor",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "predictedValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateStatsForPredictor(double predictedValue, weka.core.Instance instance)",
+      "comment": "Updates all the statistics about a predictors performance for the current test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateMargins(double[] predictedDistribution, int actualClass, double weight)",
+    "name": "updateMargins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "predictedDistribution"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "actualClass"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "protocol": {
+      "member": "updateMargins(double[] predictedDistribution, int actualClass, double weight)",
+      "comment": "Update the cumulative record of classification margins.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateNumericScores(double[] predicted, double[] actual, double weight)",
+    "name": "updateNumericScores",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "predicted"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "actual"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "protocol": {
+      "member": "updateNumericScores(double[] predicted, double[] actual, double weight)",
+      "comment": "Update the numeric accuracy measures. For numeric classes, the accuracy is between the actual and predicted class values. For nominal classes, the accuracy is between the actual and predicted class probabilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addNumericTrainClass(double classValue, double weight)",
+    "name": "addNumericTrainClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "classValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "weight"
+      }
+    ],
+    "protocol": {
+      "member": "addNumericTrainClass(double classValue, double weight)",
+      "comment": "Adds a numeric (non-missing) training class value and weight to the buffer of stored values. Also updates minimum and maximum target value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumericPriorsFromBuffer()",
+    "name": "setNumericPriorsFromBuffer",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "setNumericPriorsFromBuffer()",
+      "comment": "Sets up the priors for numeric class attributes from the training class values that have been seen so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "Evaluation",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.Evaluation",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

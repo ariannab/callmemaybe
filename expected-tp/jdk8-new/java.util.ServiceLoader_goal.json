@@ -1,0 +1,175 @@
+[
+  {
+    "signature": "reload()",
+    "name": "reload",
+    "containingClass": {
+      "qualifiedName": "java.util.ServiceLoader",
+      "name": "ServiceLoader",
+      "isArray": false
+    },
+    "targetClass": "java.util.ServiceLoader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reload()",
+      "comment": "Clear this loader's provider cache so that all providers will be reloaded.  After invoking this method, subsequent invocations of the method_0 iterator method will lazily look up and instantiate providers from scratch, just as is done by a newly-created loader.  This method is intended for use in situations in which new providers can be installed into a running Java virtual machine.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.ServiceLoader",
+      "name": "ServiceLoader",
+      "isArray": false
+    },
+    "targetClass": "java.util.ServiceLoader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<S>",
+      "name": "java.util.Iterator<S>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Lazily loads the available providers of this loader's service.  The iterator returned by this method first yields all of the elements of the provider cache, in instantiation order. It then lazily loads and instantiates any remaining providers, adding each one to the cache in turn.  To achieve laziness the actual work of parsing the available provider-configuration files and instantiating providers must be done by the iterator itself. Its javamethod_3method_4method_5 hasNext and javamethod_3method_4method_8 next methods can therefore throw a ServiceConfigurationError if a provider-configuration file violates the specified format, or if it names a provider class that cannot be found and instantiated, or if the result of instantiating the class is not assignable to the service type, or if any other kind of exception or error is thrown as the next provider is located and instantiated. To write robust code it is only necessary to catch ServiceConfigurationError when using a service iterator.  If such an error is thrown then subsequent invocations of the iterator will make a best effort to locate and instantiate the next available provider, but in general such recovery cannot be guaranteed. <span style=\"padding-right: 1em; font-weight: bold\">Design Note</span> Throwing an error in these cases may seem extreme. The rationale for this behavior is that a malformed provider-configuration file, like a malformed class file, indicates a serious problem with the way the Java virtual machine is configured or is being used. As such it is preferable to throw an error rather than try to recover or, even worse, fail silently.  The iterator returned by this method does not support removal. Invoking its java.method_0 remove method will cause an UnsupportedOperationException to be thrown. @implNote When adding providers to the cache, the method_13 Iterator processes resources in the order that the java.method_1 method_2 method finds the service configuration files.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "load(java.lang.Class<S> service, java.lang.ClassLoader loader)",
+    "name": "load",
+    "containingClass": {
+      "qualifiedName": "java.util.ServiceLoader",
+      "name": "ServiceLoader",
+      "isArray": false
+    },
+    "targetClass": "java.util.ServiceLoader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ServiceLoader<S>",
+      "name": "java.util.ServiceLoader<S>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "service"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.ClassLoader",
+          "name": "ClassLoader",
+          "isArray": false
+        },
+        "name": "loader"
+      }
+    ],
+    "protocol": {
+      "member": "load(java.lang.Class<S> service, java.lang.ClassLoader loader)",
+      "comment": "Creates a new service loader for the given service type and class loader.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "load(java.lang.Class<S> service)",
+    "name": "load",
+    "containingClass": {
+      "qualifiedName": "java.util.ServiceLoader",
+      "name": "ServiceLoader",
+      "isArray": false
+    },
+    "targetClass": "java.util.ServiceLoader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ServiceLoader<S>",
+      "name": "java.util.ServiceLoader<S>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "service"
+      }
+    ],
+    "protocol": {
+      "member": "load(java.lang.Class<S> service)",
+      "comment": "Creates a new service loader for the given service type, using the current thread's javamethod_3method_4method_5 context class loader.  An invocation of this convenience method of the form <pre> method_0</pre> is equivalent to <pre> method_6(<i>service</i>, method_8().method_2</pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "loadInstalled(java.lang.Class<S> service)",
+    "name": "loadInstalled",
+    "containingClass": {
+      "qualifiedName": "java.util.ServiceLoader",
+      "name": "ServiceLoader",
+      "isArray": false
+    },
+    "targetClass": "java.util.ServiceLoader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ServiceLoader<S>",
+      "name": "java.util.ServiceLoader<S>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "service"
+      }
+    ],
+    "protocol": {
+      "member": "loadInstalled(java.lang.Class<S> service)",
+      "comment": "Creates a new service loader for the given service type, using the extension class loader.  This convenience method simply locates the extension class loader, call it <i>extClassLoader</i>, and then returns <pre> method_0</pre>  If the extension class loader cannot be found then the system class loader is used; if there is no system class loader then the bootstrap class loader is used.  This method is intended for use when only installed providers are desired. The resulting service will only find and load providers that have been installed into the current Java virtual machine; providers on the application's class path will be ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.ServiceLoader",
+      "name": "ServiceLoader",
+      "isArray": false
+    },
+    "targetClass": "java.util.ServiceLoader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string describing this service.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,180 @@
+[
+  {
+    "signature": "java.util.spi.LocaleNameProvider()",
+    "name": "java.util.spi.LocaleNameProvider",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.LocaleNameProvider",
+      "name": "LocaleNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.LocaleNameProvider",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.spi.LocaleNameProvider()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayLanguage(java.lang.String languageCode, java.util.Locale locale)",
+    "name": "getDisplayLanguage",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.LocaleNameProvider",
+      "name": "LocaleNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.LocaleNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "languageCode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayLanguage(java.lang.String languageCode, java.util.Locale locale)",
+      "comment": "Returns a localized name for the given  IETF BCP47 language code and the given locale that is appropriate for display to the user. For example, if languageCode is \"fr\" and locale is en_US, method_0 will return \"French\"; if languageCode is \"en\" and locale is fr_FR, method_0 will return \"anglais\". If the name returned cannot be localized according to locale, (say, the provider does not have a Japanese name for Croatian), this method returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayScript(java.lang.String scriptCode, java.util.Locale locale)",
+    "name": "getDisplayScript",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.LocaleNameProvider",
+      "name": "LocaleNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.LocaleNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "scriptCode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayScript(java.lang.String scriptCode, java.util.Locale locale)",
+      "comment": "Returns a localized name for the given  IETF BCP47 script code and the given locale that is appropriate for display to the user. For example, if scriptCode is \"Latn\" and locale is en_US, method_0 will return \"Latin\"; if scriptCode is \"Cyrl\" and locale is fr_FR, method_0 will return \"cyrillique\". If the name returned cannot be localized according to locale, (say, the provider does not have a Japanese name for Cyrillic), this method returns null. The default implementation returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayCountry(java.lang.String countryCode, java.util.Locale locale)",
+    "name": "getDisplayCountry",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.LocaleNameProvider",
+      "name": "LocaleNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.LocaleNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "countryCode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayCountry(java.lang.String countryCode, java.util.Locale locale)",
+      "comment": "Returns a localized name for the given  IETF BCP47 region code (either ISO 3166 country code or UN Mmethod_5 area codes) and the given locale that is appropriate for display to the user. For example, if countryCode is \"FR\" and locale is en_US, method_0 will return \"France\"; if countryCode is \"US\" and locale is fr_FR, method_0 will return \"Etats-Unis\". If the name returned cannot be localized according to locale, (say, the provider does not have a Japanese name for Croatia), this method returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayVariant(java.lang.String variant, java.util.Locale locale)",
+    "name": "getDisplayVariant",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.LocaleNameProvider",
+      "name": "LocaleNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.LocaleNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "variant"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayVariant(java.lang.String variant, java.util.Locale locale)",
+      "comment": "Returns a localized name for the given variant code and the given locale that is appropriate for display to the user. If the name returned cannot be localized according to locale, this method returns null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

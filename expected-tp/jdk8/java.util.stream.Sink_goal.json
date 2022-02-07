@@ -1,0 +1,176 @@
+[
+  {
+    "signature": "begin(long size)",
+    "name": "begin",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Sink",
+      "name": "Sink",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Sink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "protocol": {
+      "member": "begin(long size)",
+      "comment": "Resets the sink state to receive a fresh data set. This must be called before sending any data to the sink. After calling #end(), you may call this method to reset the sink for another calculation.",
+      "kind": "FreeText",
+      "condition": "if(){null}"
+    }
+  },
+  {
+    "signature": "end()",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Sink",
+      "name": "Sink",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Sink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "end()",
+      "comment": "Indicates that all elements have been pushed. If the Sink is stateful, it should send any stored state downstream at this time, and should clear any accumulated state (and associated resources). Prior to this call, the sink must be in the active state, and after this call it is returned to the initial state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cancellationRequested()",
+    "name": "cancellationRequested",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Sink",
+      "name": "Sink",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Sink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cancellationRequested()",
+      "comment": "Indicates that this Sink does not wish to receive any more data. @implSpec The default implementation always returns false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accept(int value)",
+    "name": "accept",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Sink",
+      "name": "Sink",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Sink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "accept(int value)",
+      "comment": "Accepts an int value. @implSpec The default implementation throws IllegalStateException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accept(long value)",
+    "name": "accept",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Sink",
+      "name": "Sink",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Sink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "accept(long value)",
+      "comment": "Accepts a long value. @implSpec The default implementation throws IllegalStateException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accept(double value)",
+    "name": "accept",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Sink",
+      "name": "Sink",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Sink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "accept(double value)",
+      "comment": "Accepts a double value. @implSpec The default implementation throws IllegalStateException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "signature": "pump()",
+    "name": "pump",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.ProxyPipe",
+      "name": "ProxyPipe",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.ProxyPipe",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pump()",
+      "comment": "Check if some events are pending and dispatch them to the registered outputs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "blockingPump()",
+    "name": "blockingPump",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.ProxyPipe",
+      "name": "ProxyPipe",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.ProxyPipe",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "blockingPump()",
+      "comment": "Same as method_0 but try to block until new events were available. Note that this feature will not be available on all proxy pipe implementation and may throws an javamethod_2method_3. It can throw an javamethod_2method_5 if the current thread is interrupted while proxy is waiting for events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "blockingPump(long timeout)",
+    "name": "blockingPump",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.ProxyPipe",
+      "name": "ProxyPipe",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.ProxyPipe",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      }
+    ],
+    "protocol": {
+      "member": "blockingPump(long timeout)",
+      "comment": "Same as method_0 but including a timeout delay.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

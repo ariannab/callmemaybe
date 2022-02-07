@@ -1,0 +1,273 @@
+[
+  {
+    "signature": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+    "name": "getCurve",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "predictions"
+      }
+    ],
+    "protocol": {
+      "member": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+      "comment": "Calculates the performance stats for the default class and return results as a set of Instances. The structure of these Instances is as follows:   <li><b>True Positives </b> <li><b>False Negatives</b> <li><b>False Positives</b> <li><b>True Negatives</b> <li><b>False Positive Rate</b> <li><b>True Positive Rate</b> <li><b>Precision</b> <li><b>Recall</b> <li><b>Fallout</b> <li><b>Threshold</b> contains the probability threshold that gives rise to the previous performance values.   For the definitions of these measures, see TwoClassStats",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions, int classIndex)",
+    "name": "getCurve",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "predictions"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions, int classIndex)",
+      "comment": "Calculates the performance stats for the desired class and return results as a set of Instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNPointPrecision(weka.core.Instances tcurve, int n)",
+    "name": "getNPointPrecision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "tcurve"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "getNPointPrecision(weka.core.Instances tcurve, int n)",
+      "comment": "Calculates the n point precision result, which is the precision averaged over n evenly spaced (wmethod_0method_1 recall) samples of the curve.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPRCArea(weka.core.Instances tcurve)",
+    "name": "getPRCArea",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "tcurve"
+      }
+    ],
+    "protocol": {
+      "member": "getPRCArea(weka.core.Instances tcurve)",
+      "comment": "Calculates the area under the precision-recall curve (AUPRC).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getROCArea(weka.core.Instances tcurve)",
+    "name": "getROCArea",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "tcurve"
+      }
+    ],
+    "protocol": {
+      "member": "getROCArea(weka.core.Instances tcurve)",
+      "comment": "Calculates the area under the ROC curve as the Wilcoxon-Mann-Whitney statistic.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getThresholdInstance(weka.core.Instances tcurve, double threshold)",
+    "name": "getThresholdInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "tcurve"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "threshold"
+      }
+    ],
+    "protocol": {
+      "member": "getThresholdInstance(weka.core.Instances tcurve, double threshold)",
+      "comment": "Gets the index of the instance with the closest threshold value to the desired target",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ThresholdCurve",
+      "name": "ThresholdCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ThresholdCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Tests the ThresholdCurve generation from the command line. The classifier is currently hardcoded. Pipe in an arff file.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

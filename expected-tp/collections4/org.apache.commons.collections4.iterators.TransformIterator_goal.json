@@ -1,0 +1,293 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.TransformIterator()",
+    "name": "org.apache.commons.collections4.iterators.TransformIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.TransformIterator()",
+      "comment": "Constructs a new TransformIterator that will not function until the method_0 setIterator and method_1 methods are invoked.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID<-org.apache.commons.collections4.iterators.TransformIterator.setIterator(java.util.Iterator<? extends I>)"
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.TransformIterator(java.util.Iterator<? extends I> iterator)",
+    "name": "org.apache.commons.collections4.iterators.TransformIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.TransformIterator(java.util.Iterator<? extends I> iterator)",
+      "comment": "Constructs a new TransformIterator that won't transform elements from the given iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.TransformIterator(java.util.Iterator<? extends I> iterator, org.apache.commons.collections4.Transformer<? super I, ? extends O> transformer)",
+    "name": "org.apache.commons.collections4.iterators.TransformIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.collections4.Transformer",
+          "name": "Transformer",
+          "isArray": false
+        },
+        "name": "transformer"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.TransformIterator(java.util.Iterator<? extends I> iterator, org.apache.commons.collections4.Transformer<? super I, ? extends O> transformer)",
+      "comment": "Constructs a new TransformIterator that will use the given iterator and transformer. If the given transformer is null, then objects will not be transformed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "O",
+      "name": "O",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Gets the next object from the iteration, transforming it using the current transformer. If the transformer is null, no transformation occurs and the object from the iterator is returned directly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIterator()",
+    "name": "getIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends I>",
+      "name": "java.util.Iterator<? extends I>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getIterator()",
+      "comment": "Gets the iterator this iterator is using.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setIterator(java.util.Iterator<? extends I> iterator)",
+    "name": "setIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "setIterator(java.util.Iterator<? extends I> iterator)",
+      "comment": "Sets the iterator for this iterator to use. If iteration has started, this effectively resets the iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTransformer()",
+    "name": "getTransformer",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.collections4.Transformer<? super I, ? extends O>",
+      "name": "org.apache.commons.collections4.Transformer<? super I, ? extends O>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTransformer()",
+      "comment": "Gets the transformer this iterator is using.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTransformer(org.apache.commons.collections4.Transformer<? super I, ? extends O> transformer)",
+    "name": "setTransformer",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.collections4.Transformer",
+          "name": "Transformer",
+          "isArray": false
+        },
+        "name": "transformer"
+      }
+    ],
+    "protocol": {
+      "member": "setTransformer(org.apache.commons.collections4.Transformer<? super I, ? extends O> transformer)",
+      "comment": "Sets the transformer this the iterator to use. A null transformer is a no-op transformer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transform(I source)",
+    "name": "transform",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.TransformIterator",
+      "name": "TransformIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.TransformIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "O",
+      "name": "O",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "transform(I source)",
+      "comment": "Transforms the given object using the transformer. If the transformer is null, the original object is returned as-is.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "signature": "cancel(boolean mayInterruptIfRunning)",
+    "name": "cancel",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Future",
+      "name": "Future",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Future",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "mayInterruptIfRunning"
+      }
+    ],
+    "protocol": {
+      "member": "cancel(boolean mayInterruptIfRunning)",
+      "comment": "Attempts to cancel execution of this task. This attempt will fail if the task has already completed, has already been cancelled, or could not be cancelled for some other reason. If successful, and this task has not started when cancel is called, this task should never run. If the task has already started, then the mayInterruptIfRunning parameter determines whether the thread executing this task should be interrupted in an attempt to stop the task. After this method returns, subsequent calls to method_0 will always return true. Subsequent calls to method_1 will always return true if this method returned true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isCancelled()",
+    "name": "isCancelled",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Future",
+      "name": "Future",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Future",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isCancelled()",
+      "comment": "Returns true if this task was cancelled before it completed normally.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isDone()",
+    "name": "isDone",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Future",
+      "name": "Future",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Future",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isDone()",
+      "comment": "Returns true if this task completed. Completion may be due to normal termination, an exception, or cancellation -- in all of these cases, this method will return true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get()",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Future",
+      "name": "Future",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Future",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "get()",
+      "comment": "Waits if necessary for the computation to complete, and then retrieves its result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.Future",
+      "name": "Future",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.Future",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "get(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Waits if necessary for at most the given time for the computation to complete, and then retrieves its result, if available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

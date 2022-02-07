@@ -1,0 +1,3203 @@
+[
+  {
+    "signature": "java.util.concurrent.ConcurrentHashMap()",
+    "name": "java.util.concurrent.ConcurrentHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentHashMap()",
+      "comment": "Creates a new, empty map with the default initial table size (16).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentHashMap(int initialCapacity)",
+    "name": "java.util.concurrent.ConcurrentHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentHashMap(int initialCapacity)",
+      "comment": "Creates a new, empty map with an initial table size accommodating the specified number of elements without the need to dynamically resize.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentHashMap(java.util.Map<? extends K, ? extends V> m)",
+    "name": "java.util.concurrent.ConcurrentHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentHashMap(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Creates a new map with the same mappings as the given map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentHashMap(int initialCapacity, float loadFactor)",
+    "name": "java.util.concurrent.ConcurrentHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "loadFactor"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentHashMap(int initialCapacity, float loadFactor)",
+      "comment": "Creates a new, empty map with an initial table size based on the given number of elements ({@code initialCapacity}) and initial table density ({@code loadFactor}).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel)",
+    "name": "java.util.concurrent.ConcurrentHashMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "loadFactor"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "concurrencyLevel"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel)",
+      "comment": "Creates a new, empty map with an initial table size based on the given number of elements ({@code initialCapacity}), table density ({@code loadFactor}), and number of concurrently updating threads ({@code concurrencyLevel}).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spread(int h)",
+    "name": "spread",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "h"
+      }
+    ],
+    "protocol": {
+      "member": "spread(int h)",
+      "comment": "Spreads (XORs) higher bits of hash to lower and also forces top bit to 0. Because the table uses power-of-two masking, sets of hashes that vary only in bits above the current mask will always collide. (Among known examples are sets of Float keys holding consecutive whole numbers in small tables.) So we apply a transform that spreads the impact of higher bits downward. There is a tradeoff between speed, utility, and quality of bit-spreading. Because many common sets of hashes are already reasonably distributed (so don't benefit from spreading), and because we use trees to handle large sets of collisions in bins, we just XOR some shifted bits in the cheapest possible way to reduce systematic lossage, as well as to incorporate impact of the highest bits that would otherwise never be used in index calculations because of table bounds.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparableClassFor(java.lang.Object x)",
+    "name": "comparableClassFor",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Class<?>",
+      "name": "java.lang.Class<?>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "comparableClassFor(java.lang.Object x)",
+      "comment": "Returns x's Class if it is of the form \"class C implements Comparable<C>\", else null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareComparables(java.lang.Class<?> kc, java.lang.Object k, java.lang.Object x)",
+    "name": "compareComparables",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "kc"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "k"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "compareComparables(java.lang.Class<?> kc, java.lang.Object k, java.lang.Object x)",
+      "comment": "Returns method_0 if x matches kc (k's screened comparable class), else 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tabAt(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, int i)",
+    "name": "tabAt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node<K, V>",
+      "name": "java.util.concurrent.ConcurrentHashMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.concurrent.ConcurrentHashMap$Node;",
+          "name": "Node[]",
+          "isArray": true
+        },
+        "name": "tab"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "tabAt(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, int i)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "casTabAt(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, int i, java.util.concurrent.ConcurrentHashMap$Node<K, V> c, java.util.concurrent.ConcurrentHashMap$Node<K, V> v)",
+    "name": "casTabAt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.concurrent.ConcurrentHashMap$Node;",
+          "name": "Node[]",
+          "isArray": true
+        },
+        "name": "tab"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "protocol": {
+      "member": "casTabAt(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, int i, java.util.concurrent.ConcurrentHashMap$Node<K, V> c, java.util.concurrent.ConcurrentHashMap$Node<K, V> v)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setTabAt(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, int i, java.util.concurrent.ConcurrentHashMap$Node<K, V> v)",
+    "name": "setTabAt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.concurrent.ConcurrentHashMap$Node;",
+          "name": "Node[]",
+          "isArray": true
+        },
+        "name": "tab"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "protocol": {
+      "member": "setTabAt(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, int i, java.util.concurrent.ConcurrentHashMap$Node<K, V> v)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that method_0, then this method returns v; otherwise it returns null. (There can be at most one such mapping.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "Tests if the specified object is a key in this table.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if this map maps one or more keys to the specified value. Note: This method may require a full traversal of the map, and is much slower than method containsKey.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putVal(K key, V value, boolean onlyIfAbsent)",
+    "name": "putVal",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "onlyIfAbsent"
+      }
+    ],
+    "protocol": {
+      "member": "putVal(K key, V value, boolean onlyIfAbsent)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(java.util.Map<? extends K, ? extends V> m)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "putAll(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Copies all of the mappings from the specified map to this one. These mappings replace any mappings that this map had for any of the keys currently in the specified map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "Removes the key (and its corresponding value) from this map. This method does nothing if the key is not in the map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceNode(java.lang.Object key, V value, java.lang.Object cv)",
+    "name": "replaceNode",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "cv"
+      }
+    ],
+    "protocol": {
+      "member": "replaceNode(java.lang.Object key, V value, java.lang.Object cv)",
+      "comment": "Implementation for the four public remove/replace methods: Replaces node value with v, conditional upon match of cv if non-null. If resulting value is null, delete.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the mappings from this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, V>",
+      "name": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a Set view of the keys contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. The set supports element removal, which removes the corresponding mapping from this map, via the method_0, method_1, removeAll, retainAll, and clear operations. It does not support the add or addAll operations. The view's iterators and spliterators are <i>weakly consistent</i>. The view's spliterator reports method_4, method_5, and method_6.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "Returns a Collection view of the values contained in this map. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa. The collection supports element removal, which removes the corresponding mapping from this map, via the method_0, method_1, removeAll, retainAll, and clear operations. It does not support the add or addAll operations. The view's iterators and spliterators are <i>weakly consistent</i>. The view's spliterator reports method_4 and method_5.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "Returns a Set view of the mappings contained in this map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. The set supports element removal, which removes the corresponding mapping from the map, via the method_0, method_1, removeAll, retainAll, and clear operations. The view's iterators and spliterators are <i>weakly consistent</i>. The view's spliterator reports method_4, method_5, and method_6.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this Map, imethod_2., the sum of, for each key-value pair in the map, method_0 ^ method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string representation of this map. The string representation consists of a list of key-value mappings (in no particular order) enclosed in braces (\"{}}\"). Adjacent mappings are separated by the characters {@code \", \" (comma and space). Each key-value mapping is rendered as the key followed by an equals sign (\"{@code =}\") followed by the associated value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object o)",
+      "comment": "Compares the specified object with this map for equality. Returns true if the given object is a map with the same mappings as this map. This operation may return misleading results if either map is concurrently modified during execution of this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putIfAbsent(K key, V value)",
+    "name": "putIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putIfAbsent(K key, V value)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key, java.lang.Object value)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key, java.lang.Object value)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V oldValue, V newValue)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "oldValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V oldValue, V newValue)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V value)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V value)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOrDefault(java.lang.Object key, V defaultValue)",
+    "name": "getOrDefault",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getOrDefault(java.lang.Object key, V defaultValue)",
+      "comment": "Returns the value to which the specified key is mapped, or the given default value if this map contains no mapping for the key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+    "name": "computeIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+      "comment": "If the specified key is not already associated with a value, attempts to compute its value using the given mapping function and enters it into this map unless null. The entire method invocation is performed atomically, so the function is applied at most once per key. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "computeIfPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "If the value for the specified key is present, attempts to compute a new mapping given the key and its current mapped value. The entire method invocation is performed atomically. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "Attempts to compute a mapping for the specified key and its current mapped value (or null if there is no current mapping). The entire method invocation is performed atomically. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+    "name": "merge",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+      "comment": "If the specified key is not already associated with a (non-null) value, associates it with the given value. Otherwise, replaces the value with the results of the given remapping function, or removes if null. The entire method invocation is performed atomically. Some attempted update operations on this map by other threads may be blocked while computation is in progress, so the computation should be short and simple, and must not attempt to update any other mappings of this Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object value)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.Object value)",
+      "comment": "Legacy method testing if some key maps into the specified value in this table. This method is identical in functionality to method_0, and exists solely to ensure full compatibility with class javamethod_2method_3, which supported this method prior to introduction of the Java Collections framework.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keys()",
+    "name": "keys",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<K>",
+      "name": "java.util.Enumeration<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keys()",
+      "comment": "Returns an enumeration of the keys in this table.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elements()",
+    "name": "elements",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<V>",
+      "name": "java.util.Enumeration<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "elements()",
+      "comment": "Returns an enumeration of the values in this table.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mappingCount()",
+    "name": "mappingCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "mappingCount()",
+      "comment": "Returns the number of mappings. This method should be used instead of method_0 because a ConcurrentHashMap may contain more mappings than can be represented as an int. The value returned is an estimate; the actual count may differ if there are concurrent insertions or removals.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newKeySet()",
+    "name": "newKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, java.lang.Boolean>",
+      "name": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, java.lang.Boolean>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newKeySet()",
+      "comment": "Creates a new Set backed by a ConcurrentHashMap from the given type to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newKeySet(int initialCapacity)",
+    "name": "newKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, java.lang.Boolean>",
+      "name": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, java.lang.Boolean>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "newKeySet(int initialCapacity)",
+      "comment": "Creates a new Set backed by a ConcurrentHashMap from the given type to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet(V mappedValue)",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, V>",
+      "name": "java.util.concurrent.ConcurrentHashMap$KeySetView<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "mappedValue"
+      }
+    ],
+    "protocol": {
+      "member": "keySet(V mappedValue)",
+      "comment": "Returns a Set view of the keys in this map, using the given common mapped value for any additions (imethod_1., method_2 and method_0). This is of course only appropriate if it is acceptable to use the same value for all additions from this view.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resizeStamp(int n)",
+    "name": "resizeStamp",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "resizeStamp(int n)",
+      "comment": "Returns the stamp bits for resizing a table of size n. Must be negative when shifted left by RESIZE_STAMP_SHIFT.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "helpTransfer(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, java.util.concurrent.ConcurrentHashMap$Node<K, V> f)",
+    "name": "helpTransfer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node<K, V>[]",
+      "name": "java.util.concurrent.ConcurrentHashMap$Node<K, V>[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.concurrent.ConcurrentHashMap$Node;",
+          "name": "Node[]",
+          "isArray": true
+        },
+        "name": "tab"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "f"
+      }
+    ],
+    "protocol": {
+      "member": "helpTransfer(java.util.concurrent.ConcurrentHashMap$Node<K, V>[] tab, java.util.concurrent.ConcurrentHashMap$Node<K, V> f)",
+      "comment": "Helps transfer if a resize is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumCount()",
+    "name": "sumCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sumCount()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "untreeify(java.util.concurrent.ConcurrentHashMap$Node<K, V> b)",
+    "name": "untreeify",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node<K, V>",
+      "name": "java.util.concurrent.ConcurrentHashMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentHashMap$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "untreeify(java.util.concurrent.ConcurrentHashMap$Node<K, V> b)",
+      "comment": "Returns a list on non-TreeNodes replacing those in given list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "batchFor(long b)",
+    "name": "batchFor",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "batchFor(long b)",
+      "comment": "Computes initial batch value for bulk tasks. The returned value is approximately exp2 of the number of times (minus one) to split task by two before executing leaf action. This value is faster to compute and more convenient to use as a guide to splitting than is the depth, since it is used while dividing by two anyway.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(long parallelismThreshold, java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(long parallelismThreshold, java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "Performs the given action for each (key, value).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super V, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super V, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+      "comment": "Performs the given action for each non-null transformation of each (key, value).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super V, ? extends U> searchFunction)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "searchFunction"
+      }
+    ],
+    "protocol": {
+      "member": "search(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super V, ? extends U> searchFunction)",
+      "comment": "Returns a non-null result from applying the given search function on each (key, value), or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduce(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super V, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+    "name": "reduce",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduce(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super V, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceToDouble(long parallelismThreshold, java.util.function.ToDoubleBiFunction<? super K, ? super V> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+    "name": "reduceToDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleBiFunction",
+          "name": "ToDoubleBiFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceToDouble(long parallelismThreshold, java.util.function.ToDoubleBiFunction<? super K, ? super V> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceToLong(long parallelismThreshold, java.util.function.ToLongBiFunction<? super K, ? super V> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+    "name": "reduceToLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongBiFunction",
+          "name": "ToLongBiFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceToLong(long parallelismThreshold, java.util.function.ToLongBiFunction<? super K, ? super V> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceToInt(long parallelismThreshold, java.util.function.ToIntBiFunction<? super K, ? super V> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+    "name": "reduceToInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntBiFunction",
+          "name": "ToIntBiFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceToInt(long parallelismThreshold, java.util.function.ToIntBiFunction<? super K, ? super V> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all (key, value) pairs using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachKey(long parallelismThreshold, java.util.function.Consumer<? super K> action)",
+    "name": "forEachKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachKey(long parallelismThreshold, java.util.function.Consumer<? super K> action)",
+      "comment": "Performs the given action for each key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachKey(long parallelismThreshold, java.util.function.Function<? super K, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+    "name": "forEachKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachKey(long parallelismThreshold, java.util.function.Function<? super K, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+      "comment": "Performs the given action for each non-null transformation of each key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchKeys(long parallelismThreshold, java.util.function.Function<? super K, ? extends U> searchFunction)",
+    "name": "searchKeys",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "searchFunction"
+      }
+    ],
+    "protocol": {
+      "member": "searchKeys(long parallelismThreshold, java.util.function.Function<? super K, ? extends U> searchFunction)",
+      "comment": "Returns a non-null result from applying the given search function on each key, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceKeys(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super K, ? extends K> reducer)",
+    "name": "reduceKeys",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceKeys(long parallelismThreshold, java.util.function.BiFunction<? super K, ? super K, ? extends K> reducer)",
+      "comment": "Returns the result of accumulating all keys using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceKeys(long parallelismThreshold, java.util.function.Function<? super K, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+    "name": "reduceKeys",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceKeys(long parallelismThreshold, java.util.function.Function<? super K, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceKeysToDouble(long parallelismThreshold, java.util.function.ToDoubleFunction<? super K> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+    "name": "reduceKeysToDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceKeysToDouble(long parallelismThreshold, java.util.function.ToDoubleFunction<? super K> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceKeysToLong(long parallelismThreshold, java.util.function.ToLongFunction<? super K> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+    "name": "reduceKeysToLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceKeysToLong(long parallelismThreshold, java.util.function.ToLongFunction<? super K> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceKeysToInt(long parallelismThreshold, java.util.function.ToIntFunction<? super K> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+    "name": "reduceKeysToInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceKeysToInt(long parallelismThreshold, java.util.function.ToIntFunction<? super K> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all keys using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachValue(long parallelismThreshold, java.util.function.Consumer<? super V> action)",
+    "name": "forEachValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachValue(long parallelismThreshold, java.util.function.Consumer<? super V> action)",
+      "comment": "Performs the given action for each value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachValue(long parallelismThreshold, java.util.function.Function<? super V, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+    "name": "forEachValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachValue(long parallelismThreshold, java.util.function.Function<? super V, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+      "comment": "Performs the given action for each non-null transformation of each value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchValues(long parallelismThreshold, java.util.function.Function<? super V, ? extends U> searchFunction)",
+    "name": "searchValues",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "searchFunction"
+      }
+    ],
+    "protocol": {
+      "member": "searchValues(long parallelismThreshold, java.util.function.Function<? super V, ? extends U> searchFunction)",
+      "comment": "Returns a non-null result from applying the given search function on each value, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceValues(long parallelismThreshold, java.util.function.BiFunction<? super V, ? super V, ? extends V> reducer)",
+    "name": "reduceValues",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceValues(long parallelismThreshold, java.util.function.BiFunction<? super V, ? super V, ? extends V> reducer)",
+      "comment": "Returns the result of accumulating all values using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceValues(long parallelismThreshold, java.util.function.Function<? super V, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+    "name": "reduceValues",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceValues(long parallelismThreshold, java.util.function.Function<? super V, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all values using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceValuesToDouble(long parallelismThreshold, java.util.function.ToDoubleFunction<? super V> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+    "name": "reduceValuesToDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceValuesToDouble(long parallelismThreshold, java.util.function.ToDoubleFunction<? super V> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceValuesToLong(long parallelismThreshold, java.util.function.ToLongFunction<? super V> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+    "name": "reduceValuesToLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceValuesToLong(long parallelismThreshold, java.util.function.ToLongFunction<? super V> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceValuesToInt(long parallelismThreshold, java.util.function.ToIntFunction<? super V> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+    "name": "reduceValuesToInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceValuesToInt(long parallelismThreshold, java.util.function.ToIntFunction<? super V> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all values using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachEntry(long parallelismThreshold, java.util.function.Consumer<? super java.util.Map$Entry<K, V>> action)",
+    "name": "forEachEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachEntry(long parallelismThreshold, java.util.function.Consumer<? super java.util.Map$Entry<K, V>> action)",
+      "comment": "Performs the given action for each entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachEntry(long parallelismThreshold, java.util.function.Function<java.util.Map$Entry<K, V>, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+    "name": "forEachEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachEntry(long parallelismThreshold, java.util.function.Function<java.util.Map$Entry<K, V>, ? extends U> transformer, java.util.function.Consumer<? super U> action)",
+      "comment": "Performs the given action for each non-null transformation of each entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchEntries(long parallelismThreshold, java.util.function.Function<java.util.Map$Entry<K, V>, ? extends U> searchFunction)",
+    "name": "searchEntries",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "searchFunction"
+      }
+    ],
+    "protocol": {
+      "member": "searchEntries(long parallelismThreshold, java.util.function.Function<java.util.Map$Entry<K, V>, ? extends U> searchFunction)",
+      "comment": "Returns a non-null result from applying the given search function on each entry, or null if none. Upon success, further element processing is suppressed and the results of any other parallel invocations of the search function are ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceEntries(long parallelismThreshold, java.util.function.BiFunction<java.util.Map$Entry<K, V>, java.util.Map$Entry<K, V>, ? extends java.util.Map$Entry<K, V>> reducer)",
+    "name": "reduceEntries",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceEntries(long parallelismThreshold, java.util.function.BiFunction<java.util.Map$Entry<K, V>, java.util.Map$Entry<K, V>, ? extends java.util.Map$Entry<K, V>> reducer)",
+      "comment": "Returns the result of accumulating all entries using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceEntries(long parallelismThreshold, java.util.function.Function<java.util.Map$Entry<K, V>, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+    "name": "reduceEntries",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "U",
+      "name": "U",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceEntries(long parallelismThreshold, java.util.function.Function<java.util.Map$Entry<K, V>, ? extends U> transformer, java.util.function.BiFunction<? super U, ? super U, ? extends U> reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceEntriesToDouble(long parallelismThreshold, java.util.function.ToDoubleFunction<java.util.Map$Entry<K, V>> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+    "name": "reduceEntriesToDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.DoubleBinaryOperator",
+          "name": "DoubleBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceEntriesToDouble(long parallelismThreshold, java.util.function.ToDoubleFunction<java.util.Map$Entry<K, V>> transformer, double basis, java.util.function.DoubleBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceEntriesToLong(long parallelismThreshold, java.util.function.ToLongFunction<java.util.Map$Entry<K, V>> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+    "name": "reduceEntriesToLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongBinaryOperator",
+          "name": "LongBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceEntriesToLong(long parallelismThreshold, java.util.function.ToLongFunction<java.util.Map$Entry<K, V>> transformer, long basis, java.util.function.LongBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduceEntriesToInt(long parallelismThreshold, java.util.function.ToIntFunction<java.util.Map$Entry<K, V>> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+    "name": "reduceEntriesToInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentHashMap",
+      "name": "ConcurrentHashMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentHashMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "parallelismThreshold"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "transformer"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "basis"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "reducer"
+      }
+    ],
+    "protocol": {
+      "member": "reduceEntriesToInt(long parallelismThreshold, java.util.function.ToIntFunction<java.util.Map$Entry<K, V>> transformer, int basis, java.util.function.IntBinaryOperator reducer)",
+      "comment": "Returns the result of accumulating the given transformation of all entries using the given reducer to combine values, and the given basis as an identity value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

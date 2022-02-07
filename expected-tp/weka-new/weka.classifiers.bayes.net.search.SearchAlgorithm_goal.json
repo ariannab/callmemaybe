@@ -1,0 +1,548 @@
+[
+  {
+    "signature": "weka.classifiers.bayes.net.search.SearchAlgorithm()",
+    "name": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.search.SearchAlgorithm()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addArcMakesSense(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int iAttributeHead, int iAttributeTail)",
+    "name": "addArcMakesSense",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeHead"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeTail"
+      }
+    ],
+    "protocol": {
+      "member": "addArcMakesSense(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int iAttributeHead, int iAttributeTail)",
+      "comment": "AddArcMakesSense checks whether adding the arc from iAttributeTail to iAttributeHead does not already exists and does not introduce a cycle",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reverseArcMakesSense(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int iAttributeHead, int iAttributeTail)",
+    "name": "reverseArcMakesSense",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeHead"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeTail"
+      }
+    ],
+    "protocol": {
+      "member": "reverseArcMakesSense(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int iAttributeHead, int iAttributeTail)",
+      "comment": "reverseArcMakesSense checks whether the arc from iAttributeTail to iAttributeHead exists and reversing does not introduce a cycle",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isArc(weka.classifiers.bayes.BayesNet bayesNet, int iAttributeHead, int iAttributeTail)",
+    "name": "isArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeHead"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeTail"
+      }
+    ],
+    "protocol": {
+      "member": "isArc(weka.classifiers.bayes.BayesNet bayesNet, int iAttributeHead, int iAttributeTail)",
+      "comment": "IsArc checks whether the arc from iAttributeTail to iAttributeHead already exists",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "a string representation of the algorithm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildStructure(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "buildStructure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildStructure(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "buildStructure determines the network structure/graph of the network. The default behavior is creating a network where all nodes have the first node as its parent (imethod_0., a BayesNet that behaves like a naive Bayes classifier). This method can be overridden by derived classes to restrict the class of network structures that are acceptable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doMarkovBlanketCorrection(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "doMarkovBlanketCorrection",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "doMarkovBlanketCorrection(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "for each node in the network make sure it is in the Markov blanket of the classifier node, and if not, add arrows so that it is. If the node is an ancestor of the classifier node, add arrow pointing to the classifier node, otherwise, add arrow pointing to attribute node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMarkovBlanketClassifier(boolean bMarkovBlanketClassifier)",
+    "name": "setMarkovBlanketClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bMarkovBlanketClassifier"
+      }
+    ],
+    "protocol": {
+      "member": "setMarkovBlanketClassifier(boolean bMarkovBlanketClassifier)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMarkovBlanketClassifier()",
+    "name": "getMarkovBlanketClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMarkovBlanketClassifier()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxNrOfParentsTipText()",
+    "name": "maxNrOfParentsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxNrOfParentsTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initAsNaiveBayesTipText()",
+    "name": "initAsNaiveBayesTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initAsNaiveBayesTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "markovBlanketClassifierTipText()",
+    "name": "markovBlanketClassifierTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "markovBlanketClassifierTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "SearchAlgorithm",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

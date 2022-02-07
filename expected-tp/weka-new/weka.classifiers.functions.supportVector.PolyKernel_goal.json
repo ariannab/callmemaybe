@@ -1,0 +1,445 @@
+[
+  {
+    "signature": "weka.classifiers.functions.supportVector.PolyKernel()",
+    "name": "weka.classifiers.functions.supportVector.PolyKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.functions.supportVector.PolyKernel()",
+      "comment": "default constructor - does nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.functions.supportVector.PolyKernel(weka.core.Instances data, int cacheSize, double exponent, boolean lowerOrder)",
+    "name": "weka.classifiers.functions.supportVector.PolyKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "cacheSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "exponent"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "lowerOrder"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.functions.supportVector.PolyKernel(weka.core.Instances data, int cacheSize, double exponent, boolean lowerOrder)",
+      "comment": "Creates a new PolyKernel instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing the kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -D Enables debugging output (if available) to be printed. (default: off)   -no-checks Turns off all checks - use with caution! (default: checks on)   -C <num> The size of the cache (a prime number), 0 for full cache and -1 to turn it off. (default: 250007)   -E <num> The Exponent to use. (default: 1method_0)   -L Use lower-order terms. (default: no)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Kernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(int id1, int id2, weka.core.Instance inst1)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "id1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "id2"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst1"
+      }
+    ],
+    "protocol": {
+      "member": "evaluate(int id1, int id2, weka.core.Instance inst1)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns the Capabilities of this kernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setExponent(double value)",
+    "name": "setExponent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setExponent(double value)",
+      "comment": "Sets the exponent value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getExponent()",
+    "name": "getExponent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getExponent()",
+      "comment": "Gets the exponent value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exponentTipText()",
+    "name": "exponentTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "exponentTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseLowerOrder(boolean value)",
+    "name": "setUseLowerOrder",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setUseLowerOrder(boolean value)",
+      "comment": "Sets whether to use lower-order terms.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseLowerOrder()",
+    "name": "getUseLowerOrder",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseLowerOrder()",
+      "comment": "Gets whether lower-order terms are used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useLowerOrderTipText()",
+    "name": "useLowerOrderTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useLowerOrderTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "returns a string representation for the Kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.PolyKernel",
+      "name": "PolyKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.PolyKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

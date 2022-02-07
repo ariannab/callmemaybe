@@ -1,0 +1,300 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.LoopingListIterator(java.util.List<E> list)",
+    "name": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.List",
+          "name": "List",
+          "isArray": false
+        },
+        "name": "list"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.LoopingListIterator(java.util.List<E> list)",
+      "comment": "Constructor that wraps a list.  There is no way to reset a ListIterator instance without recreating it from the original source, so the List must be passed in and a reference to it held.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "Returns whether this iterator has any more elements.  Returns false only if the list originally had zero elements, or all elements have been method_0 removed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Returns the next object in the list.  If at the end of the list, returns the first element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextIndex()",
+    "name": "nextIndex",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextIndex()",
+      "comment": "Returns the index of the element that would be returned by a subsequent call to method_0.  As would be expected, if the iterator is at the physical end of the underlying list, 0 is returned, signifying the beginning of the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasPrevious()",
+    "name": "hasPrevious",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasPrevious()",
+      "comment": "Returns whether this iterator has any more previous elements.  Returns false only if the list originally had zero elements, or all elements have been method_0 removed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "previous()",
+    "name": "previous",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "previous()",
+      "comment": "Returns the previous object in the list.  If at the beginning of the list, return the last element. Note that in this case, traversal to find that element takes linear time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "previousIndex()",
+    "name": "previousIndex",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "previousIndex()",
+      "comment": "Returns the index of the element that would be returned by a subsequent call to method_0.  As would be expected, if at the iterator is at the physical beginning of the underlying list, the list's size minus one is returned, signifying the end of the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "Removes the previously retrieved item from the underlying list.  This feature is only supported if the underlying list's method_0 iterator method returns an implementation that supports it.  This method can only be called after at least one method_1 or method_2 method call. After a removal, the remove method may not be called again until another method_1 or method_2 has been performed. If the method_5 is called, then remove may not be called until method_1 or method_2 is called again.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E obj)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "add(E obj)",
+      "comment": "Inserts the specified element into the underlying list.  The element is inserted before the next element that would be returned by method_0, if any, and after the next element that would be returned by method_1, if any.  This feature is only supported if the underlying list's method_2 method returns an implementation that supports it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(E obj)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "set(E obj)",
+      "comment": "Replaces the last element that was returned by method_0 or method_1.  This feature is only supported if the underlying list's method_2 method returns an implementation that supports it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets the iterator back to the start of the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingListIterator",
+      "name": "LoopingListIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingListIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Gets the size of the list underlying the iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

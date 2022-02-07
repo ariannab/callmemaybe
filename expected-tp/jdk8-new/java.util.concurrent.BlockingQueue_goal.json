@@ -1,0 +1,368 @@
+[
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "add(E e)",
+      "comment": "Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions, returning true upon success and throwing an IllegalStateException if no space is currently available. When using a capacity-restricted queue, it is generally preferable to use method_0 offer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e)",
+      "comment": "Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions, returning true upon success and false if no space is currently available. When using a capacity-restricted queue, this method is generally preferable to method_0, which can fail to insert an element only by throwing an exception.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(E e)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "put(E e)",
+      "comment": "Inserts the specified element into this queue, waiting if necessary for space to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Inserts the specified element into this queue, waiting up to the specified wait time if necessary for space to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "take()",
+    "name": "take",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "take()",
+      "comment": "Retrieves and removes the head of this queue, waiting if necessary until an element becomes available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Retrieves and removes the head of this queue, waiting up to the specified wait time if necessary for an element to become available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remainingCapacity()",
+    "name": "remainingCapacity",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remainingCapacity()",
+      "comment": "Returns the number of additional elements that this queue can ideally (in the absence of memory or resource constraints) accept without blocking, or method_0 if there is no intrinsic limit. Note that you cannot always tell if an attempt to insert an element will succeed by inspecting remainingCapacity because it may be the case that another thread is about to insert or remove an element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object o)",
+      "comment": "Removes a single instance of the specified element from this queue, if it is present. More formally, removes an element e such that method_0, if this queue contains one or more such elements. Returns true if this queue contained the specified element (or equivalently, if this queue changed as a result of the call).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.Object o)",
+      "comment": "Returns true if this queue contains the specified element. More formally, returns true if and only if this queue contains at least one element e such that method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drainTo(java.util.Collection<? super E> c)",
+    "name": "drainTo",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "drainTo(java.util.Collection<? super E> c)",
+      "comment": "Removes all available elements from this queue and adds them to the given collection. This operation may be more efficient than repeatedly polling this queue. A failure encountered while attempting to add elements to collection c may result in elements being in neither, either or both collections when the associated exception is thrown. Attempts to drain a queue to itself result in IllegalArgumentException. Further, the behavior of this operation is undefined if the specified collection is modified while the operation is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drainTo(java.util.Collection<? super E> c, int maxElements)",
+    "name": "drainTo",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.BlockingQueue",
+      "name": "BlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.BlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxElements"
+      }
+    ],
+    "protocol": {
+      "member": "drainTo(java.util.Collection<? super E> c, int maxElements)",
+      "comment": "Removes at most the given number of available elements from this queue and adds them to the given collection. A failure encountered while attempting to add elements to collection c may result in elements being in neither, either or both collections when the associated exception is thrown. Attempts to drain a queue to itself result in IllegalArgumentException. Further, the behavior of this operation is undefined if the specified collection is modified while the operation is in progress.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

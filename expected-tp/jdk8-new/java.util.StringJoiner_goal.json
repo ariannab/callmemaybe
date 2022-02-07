@@ -1,0 +1,214 @@
+[
+  {
+    "signature": "java.util.StringJoiner(java.lang.CharSequence delimiter)",
+    "name": "java.util.StringJoiner",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "delimiter"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.StringJoiner(java.lang.CharSequence delimiter)",
+      "comment": "Constructs a StringJoiner with no characters in it, with no prefix or suffix, and a copy of the supplied delimiter. If no characters are added to the StringJoiner and methods accessing the value of it are invoked, it will not return a prefix or suffix (or properties thereof) in the result, unless setEmptyValue has first been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.StringJoiner(java.lang.CharSequence delimiter, java.lang.CharSequence prefix, java.lang.CharSequence suffix)",
+    "name": "java.util.StringJoiner",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "delimiter"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "prefix"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "suffix"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.StringJoiner(java.lang.CharSequence delimiter, java.lang.CharSequence prefix, java.lang.CharSequence suffix)",
+      "comment": "Constructs a StringJoiner with no characters in it using copies of the supplied prefix, delimiter and suffix. If no characters are added to the StringJoiner and methods accessing the string value of it are invoked, it will return the prefix + suffix (or properties thereof) in the result, unless setEmptyValue has first been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEmptyValue(java.lang.CharSequence emptyValue)",
+    "name": "setEmptyValue",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "java.util.StringJoiner",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "emptyValue"
+      }
+    ],
+    "protocol": {
+      "member": "setEmptyValue(java.lang.CharSequence emptyValue)",
+      "comment": "Sets the sequence of characters to be used when determining the string representation of this StringJoiner and no elements have been added yet, that is, when it is empty. A copy of the emptyValue parameter is made for this purpose. Note that once an add method has been called, the StringJoiner is no longer considered empty, even if the method_0 added correspond to the empty String.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the current value, consisting of the prefix, the values added so far separated by the delimiter, and the suffix, unless no elements have been added in which case, the prefix + suffix or the emptyValue characters are returned",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(java.lang.CharSequence newElement)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "java.util.StringJoiner",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "newElement"
+      }
+    ],
+    "protocol": {
+      "member": "add(java.lang.CharSequence newElement)",
+      "comment": "Adds a copy of the given CharSequence value as the next element of the StringJoiner value. If newElement is null, then \"null\" is added.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "merge(java.util.StringJoiner other)",
+    "name": "merge",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "java.util.StringJoiner",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.StringJoiner",
+          "name": "StringJoiner",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "merge(java.util.StringJoiner other)",
+      "comment": "Adds the contents of the given StringJoiner without prefix and suffix as the next element if it is non-empty. If the given StringJoiner is empty, the call has no effect. A StringJoiner is empty if method_1 has never been called, and if method_2 has never been called with a non-empty StringJoiner argument. If the other StringJoiner is using a different delimiter, then elements from the other StringJoiner are concatenated with that delimiter and the result is appended to this StringJoiner as a single element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "length()",
+    "name": "length",
+    "containingClass": {
+      "qualifiedName": "java.util.StringJoiner",
+      "name": "StringJoiner",
+      "isArray": false
+    },
+    "targetClass": "java.util.StringJoiner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "length()",
+      "comment": "Returns the length of the String representation of this StringJoiner. Note that if no add methods have been called, then the length of the String representation (either prefix + suffix or emptyValue}) will be returned. The value should be equivalent to {@code method_0method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

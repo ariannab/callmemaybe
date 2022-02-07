@@ -1,0 +1,552 @@
+[
+  {
+    "signature": "java.util.concurrent.locks.ReentrantReadWriteLock()",
+    "name": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.locks.ReentrantReadWriteLock()",
+      "comment": "Creates a new ReentrantReadWriteLock with default (nonfair) ordering properties.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.locks.ReentrantReadWriteLock(boolean fair)",
+    "name": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fair"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.locks.ReentrantReadWriteLock(boolean fair)",
+      "comment": "Creates a new ReentrantReadWriteLock with the given fairness policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeLock()",
+    "name": "writeLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock",
+      "name": "java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "writeLock()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readLock()",
+    "name": "readLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock",
+      "name": "java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "readLock()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isFair()",
+    "name": "isFair",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isFair()",
+      "comment": "Returns true if this lock has fairness set true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOwner()",
+    "name": "getOwner",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Thread",
+      "name": "java.lang.Thread",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOwner()",
+      "comment": "Returns the thread that currently owns the write lock, or null if not owned. When this method is called by a thread that is not the owner, the return value reflects a best-effort approximation of current lock status. For example, the owner may be momentarily null even if there are threads trying to acquire the lock but have not yet done so. This method is designed to facilitate construction of subclasses that provide more extensive lock monitoring facilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReadLockCount()",
+    "name": "getReadLockCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getReadLockCount()",
+      "comment": "Queries the number of read locks held for this lock. This method is designed for use in monitoring system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isWriteLocked()",
+    "name": "isWriteLocked",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isWriteLocked()",
+      "comment": "Queries if the write lock is held by any thread. This method is designed for use in monitoring system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isWriteLockedByCurrentThread()",
+    "name": "isWriteLockedByCurrentThread",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isWriteLockedByCurrentThread()",
+      "comment": "Queries if the write lock is held by the current thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWriteHoldCount()",
+    "name": "getWriteHoldCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getWriteHoldCount()",
+      "comment": "Queries the number of reentrant write holds on this lock by the current thread. A writer thread has a hold on a lock for each lock action that is not matched by an unlock action.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReadHoldCount()",
+    "name": "getReadHoldCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getReadHoldCount()",
+      "comment": "Queries the number of reentrant read holds on this lock by the current thread. A reader thread has a hold on a lock for each lock action that is not matched by an unlock action.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQueuedWriterThreads()",
+    "name": "getQueuedWriterThreads",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<java.lang.Thread>",
+      "name": "java.util.Collection<java.lang.Thread>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQueuedWriterThreads()",
+      "comment": "Returns a collection containing threads that may be waiting to acquire the write lock. Because the actual set of threads may change dynamically while constructing this result, the returned collection is only a best-effort estimate. The elements of the returned collection are in no particular order. This method is designed to facilitate construction of subclasses that provide more extensive lock monitoring facilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQueuedReaderThreads()",
+    "name": "getQueuedReaderThreads",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<java.lang.Thread>",
+      "name": "java.util.Collection<java.lang.Thread>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQueuedReaderThreads()",
+      "comment": "Returns a collection containing threads that may be waiting to acquire the read lock. Because the actual set of threads may change dynamically while constructing this result, the returned collection is only a best-effort estimate. The elements of the returned collection are in no particular order. This method is designed to facilitate construction of subclasses that provide more extensive lock monitoring facilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasQueuedThreads()",
+    "name": "hasQueuedThreads",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasQueuedThreads()",
+      "comment": "Queries whether any threads are waiting to acquire the read or write lock. Note that because cancellations may occur at any time, a true return does not guarantee that any other thread will ever acquire a lock. This method is designed primarily for use in monitoring of the system state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasQueuedThread(java.lang.Thread thread)",
+    "name": "hasQueuedThread",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Thread",
+          "name": "Thread",
+          "isArray": false
+        },
+        "name": "thread"
+      }
+    ],
+    "protocol": {
+      "member": "hasQueuedThread(java.lang.Thread thread)",
+      "comment": "Queries whether the given thread is waiting to acquire either the read or write lock. Note that because cancellations may occur at any time, a true return does not guarantee that this thread will ever acquire a lock. This method is designed primarily for use in monitoring of the system state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQueueLength()",
+    "name": "getQueueLength",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQueueLength()",
+      "comment": "Returns an estimate of the number of threads waiting to acquire either the read or write lock. The value is only an estimate because the number of threads may change dynamically while this method traverses internal data structures. This method is designed for use in monitoring of the system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQueuedThreads()",
+    "name": "getQueuedThreads",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<java.lang.Thread>",
+      "name": "java.util.Collection<java.lang.Thread>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQueuedThreads()",
+      "comment": "Returns a collection containing threads that may be waiting to acquire either the read or write lock. Because the actual set of threads may change dynamically while constructing this result, the returned collection is only a best-effort estimate. The elements of the returned collection are in no particular order. This method is designed to facilitate construction of subclasses that provide more extensive monitoring facilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasWaiters(java.util.concurrent.locks.Condition condition)",
+    "name": "hasWaiters",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.locks.Condition",
+          "name": "Condition",
+          "isArray": false
+        },
+        "name": "condition"
+      }
+    ],
+    "protocol": {
+      "member": "hasWaiters(java.util.concurrent.locks.Condition condition)",
+      "comment": "Queries whether any threads are waiting on the given condition associated with the write lock. Note that because timeouts and interrupts may occur at any time, a true return does not guarantee that a future signal will awaken any threads. This method is designed primarily for use in monitoring of the system state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWaitQueueLength(java.util.concurrent.locks.Condition condition)",
+    "name": "getWaitQueueLength",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.locks.Condition",
+          "name": "Condition",
+          "isArray": false
+        },
+        "name": "condition"
+      }
+    ],
+    "protocol": {
+      "member": "getWaitQueueLength(java.util.concurrent.locks.Condition condition)",
+      "comment": "Returns an estimate of the number of threads waiting on the given condition associated with the write lock. Note that because timeouts and interrupts may occur at any time, the estimate serves only as an upper bound on the actual number of waiters. This method is designed for use in monitoring of the system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWaitingThreads(java.util.concurrent.locks.Condition condition)",
+    "name": "getWaitingThreads",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<java.lang.Thread>",
+      "name": "java.util.Collection<java.lang.Thread>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.locks.Condition",
+          "name": "Condition",
+          "isArray": false
+        },
+        "name": "condition"
+      }
+    ],
+    "protocol": {
+      "member": "getWaitingThreads(java.util.concurrent.locks.Condition condition)",
+      "comment": "Returns a collection containing those threads that may be waiting on the given condition associated with the write lock. Because the actual set of threads may change dynamically while constructing this result, the returned collection is only a best-effort estimate. The elements of the returned collection are in no particular order. This method is designed to facilitate construction of subclasses that provide more extensive condition monitoring facilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string identifying this lock, as well as its lock state. The state, in brackets, includes the String \"Write locks =\" followed by the number of reentrantly held write locks, and the String \"Read locks =\" followed by the number of held read locks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getThreadId(java.lang.Thread thread)",
+    "name": "getThreadId",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.ReentrantReadWriteLock",
+      "name": "ReentrantReadWriteLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.ReentrantReadWriteLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Thread",
+          "name": "Thread",
+          "isArray": false
+        },
+        "name": "thread"
+      }
+    ],
+    "protocol": {
+      "member": "getThreadId(java.lang.Thread thread)",
+      "comment": "Returns the thread id for the given thread. We must access this directly rather than via method method_0 because method_1 is not final, and has been known to be overridden in ways that do not preserve unique mappings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

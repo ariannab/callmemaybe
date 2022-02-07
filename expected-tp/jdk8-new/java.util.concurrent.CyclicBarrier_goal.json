@@ -1,0 +1,219 @@
+[
+  {
+    "signature": "java.util.concurrent.CyclicBarrier(int parties, java.lang.Runnable barrierAction)",
+    "name": "java.util.concurrent.CyclicBarrier",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "parties"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "barrierAction"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.CyclicBarrier(int parties, java.lang.Runnable barrierAction)",
+      "comment": "Creates a new CyclicBarrier that will trip when the given number of parties (threads) are waiting upon it, and which will execute the given barrier action when the barrier is tripped, performed by the last thread entering the barrier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.CyclicBarrier(int parties)",
+    "name": "java.util.concurrent.CyclicBarrier",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "parties"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.CyclicBarrier(int parties)",
+      "comment": "Creates a new CyclicBarrier that will trip when the given number of parties (threads) are waiting upon it, and does not perform a predefined action when the barrier is tripped.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParties()",
+    "name": "getParties",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getParties()",
+      "comment": "Returns the number of parties required to trip this barrier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "await()",
+    "name": "await",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "await()",
+      "comment": "Waits until all method_0 parties have invoked await on this barrier. If the current thread is not the last to arrive then it is disabled for thread scheduling purposes and lies dormant until one of the following things happens:  <li>The last thread arrives; or <li>Some other thread method_1 interrupts the current thread; or <li>Some other thread method_1 interrupts one of the other waiting threads; or <li>Some other thread times out while waiting for barrier; or <li>Some other thread invokes method_3 on this barrier.  If the current thread:  <li>has its interrupted status set on entry to this method; or <li>is method_1 interrupted while waiting  then InterruptedException is thrown and the current thread's interrupted status is cleared. If the barrier is method_3 while any thread is waiting, or if the barrier method_6 is broken when await is invoked, or while any thread is waiting, then BrokenBarrierException is thrown. If any thread is method_1 interrupted while waiting, then all other waiting threads will throw BrokenBarrierException and the barrier is placed in the broken state. If the current thread is the last thread to arrive, and a non-null barrier action was supplied in the constructor, then the current thread runs the action before allowing the other threads to continue. If an exception occurs during the barrier action then that exception will be propagated in the current thread and the barrier is placed in the broken state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "await(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "await",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "await(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Waits until all method_0 parties have invoked await on this barrier, or the specified waiting time elapses. If the current thread is not the last to arrive then it is disabled for thread scheduling purposes and lies dormant until one of the following things happens:  <li>The last thread arrives; or <li>The specified timeout elapses; or <li>Some other thread method_1 interrupts the current thread; or <li>Some other thread method_1 interrupts one of the other waiting threads; or <li>Some other thread times out while waiting for barrier; or <li>Some other thread invokes method_3 on this barrier.  If the current thread:  <li>has its interrupted status set on entry to this method; or <li>is method_1 interrupted while waiting  then InterruptedException is thrown and the current thread's interrupted status is cleared. If the specified waiting time elapses then TimeoutException is thrown. If the time is less than or equal to zero, the method will not wait at all. If the barrier is method_3 while any thread is waiting, or if the barrier method_6 is broken when await is invoked, or while any thread is waiting, then BrokenBarrierException is thrown. If any thread is method_1 interrupted while waiting, then all other waiting threads will throw BrokenBarrierException and the barrier is placed in the broken state. If the current thread is the last thread to arrive, and a non-null barrier action was supplied in the constructor, then the current thread runs the action before allowing the other threads to continue. If an exception occurs during the barrier action then that exception will be propagated in the current thread and the barrier is placed in the broken state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isBroken()",
+    "name": "isBroken",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isBroken()",
+      "comment": "Queries if this barrier is in a broken state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets the barrier to its initial state. If any parties are currently waiting at the barrier, they will return with a BrokenBarrierException. Note that resets after a breakage has occurred for other reasons can be complicated to carry out; threads need to re-synchronize in some other way, and choose one to perform the reset. It may be preferable to instead create a new barrier for subsequent use.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumberWaiting()",
+    "name": "getNumberWaiting",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CyclicBarrier",
+      "name": "CyclicBarrier",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CyclicBarrier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumberWaiting()",
+      "comment": "Returns the number of parties currently waiting at the barrier. This method is primarily useful for debugging and assertions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

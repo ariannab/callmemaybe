@@ -1,0 +1,882 @@
+[
+  {
+    "signature": "encode(java.nio.ByteBuffer raw, java.nio.ByteBuffer encoded)",
+    "name": "encode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "raw"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "encoded"
+      }
+    ],
+    "protocol": {
+      "member": "encode(java.nio.ByteBuffer raw, java.nio.ByteBuffer encoded)",
+      "comment": "Performs Base64 encoding on the raw ByteBuffer, writing it to the encoded ByteBuffer. This is an experimental feature. Currently it does not pass along any options (such as method_0 or method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encode(java.nio.ByteBuffer raw, java.nio.CharBuffer encoded)",
+    "name": "encode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "raw"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.nio.CharBuffer",
+          "name": "CharBuffer",
+          "isArray": false
+        },
+        "name": "encoded"
+      }
+    ],
+    "protocol": {
+      "member": "encode(java.nio.ByteBuffer raw, java.nio.CharBuffer encoded)",
+      "comment": "Performs Base64 encoding on the raw ByteBuffer, writing it to the encoded CharBuffer. This is an experimental feature. Currently it does not pass along any options (such as method_0 or method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeObject(java.io.Serializable serializableObject)",
+    "name": "encodeObject",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Serializable",
+          "name": "Serializable",
+          "isArray": false
+        },
+        "name": "serializableObject"
+      }
+    ],
+    "protocol": {
+      "member": "encodeObject(java.io.Serializable serializableObject)",
+      "comment": "Serializes an object and returns the Base64-encoded version of that serialized object. As of v 2method_0, if the object cannot be serialized or there is another error, the method will throw an javamethod_1method_2. <b>This is new to v2method_0!</b> In earlier versions, it just returned a null value, but in retrospect that's a pretty poor way to handle it. The object is not GZip-compressed before being encoded.",
+      "kind": "FreeText",
+      "condition": "args[0]->receiverObjectID.ENCODE"
+    }
+  },
+  {
+    "signature": "encodeObject(java.io.Serializable serializableObject, int options)",
+    "name": "encodeObject",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Serializable",
+          "name": "Serializable",
+          "isArray": false
+        },
+        "name": "serializableObject"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "encodeObject(java.io.Serializable serializableObject, int options)",
+      "comment": "Serializes an object and returns the Base64-encoded version of that serialized object. As of v 2method_2, if the object cannot be serialized or there is another error, the method will throw an javamethod_3method_4. <b>This is new to v2method_2!</b> In earlier versions, it just returned a null value, but in retrospect that's a pretty poor way to handle it. The object is not GZip-compressed before being encoded. <p> Example options: GZIP: gzip-compresses object before encoding it. DO_BREAK_LINES: break lines at 76 characters  <p> Example: method_0 or <p> Example: method_1",
+      "kind": "FreeText",
+      "condition": "args[0]->receiverObjectID.ENCODE"
+    }
+  },
+  {
+    "signature": "encodeBytes(byte[] source)",
+    "name": "encodeBytes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "encodeBytes(byte[] source)",
+      "comment": "Encodes a byte array into Base64 notation. Does not GZip-compress data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeBytes(byte[] source, int options)",
+    "name": "encodeBytes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "encodeBytes(byte[] source, int options)",
+      "comment": "Encodes a byte array into Base64 notation.  Example options:<pre> GZIP: gzip-compresses object before encoding it. DO_BREAK_LINES: break lines at 76 characters <i>Note: Technically, this makes your encoding non-compliant.</i> </pre> <p> Example: method_0 or <p> Example: method_1 <p>As of v 2method_5, if there is an error with the GZIP stream, the method will throw an javamethod_6method_7. <b>This is new to v2method_5!</b> In earlier versions, it just returned a null value, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeBytes(byte[] source, int off, int len)",
+    "name": "encodeBytes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "encodeBytes(byte[] source, int off, int len)",
+      "comment": "Encodes a byte array into Base64 notation. Does not GZip-compress data. As of v 2method_0, if there is an error, the method will throw an javamethod_1method_2. <b>This is new to v2method_0!</b> In earlier versions, it just returned a null value, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeBytes(byte[] source, int off, int len, int options)",
+    "name": "encodeBytes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "encodeBytes(byte[] source, int off, int len, int options)",
+      "comment": "Encodes a byte array into Base64 notation.  Example options:<pre> GZIP: gzip-compresses object before encoding it. DO_BREAK_LINES: break lines at 76 characters <i>Note: Technically, this makes your encoding non-compliant.</i> </pre> <p> Example: method_0 or <p> Example: method_1 <p>As of v 2method_5, if there is an error with the GZIP stream, the method will throw an javamethod_6method_7. <b>This is new to v2method_5!</b> In earlier versions, it just returned a null value, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeBytesToBytes(byte[] source)",
+    "name": "encodeBytesToBytes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "encodeBytesToBytes(byte[] source)",
+      "comment": "Similar to method_0 but returns a byte array instead of instantiating a String. This is more efficient if you're working with I/O streams and have large data sets to encode.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeBytesToBytes(byte[] source, int off, int len, int options)",
+    "name": "encodeBytesToBytes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "encodeBytesToBytes(byte[] source, int off, int len, int options)",
+      "comment": "Similar to method_0 but returns a byte array instead of instantiating a String. This is more efficient if you're working with I/O streams and have large data sets to encode.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decode(byte[] source)",
+    "name": "decode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "decode(byte[] source)",
+      "comment": "Low-level access to decoding ASCII characters in the form of a byte array. Ignores GUNZIP option, if it's set. This is not generally a recommended method, although it is used internally as part of the decoding process. Special case: if len = 0, an empty array is returned. Still, if you need more speed and reduced memory footprint (and aren't gzipping), consider this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decode(byte[] source, int off, int len, int options)",
+    "name": "decode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "decode(byte[] source, int off, int len, int options)",
+      "comment": "Low-level access to decoding ASCII characters in the form of a byte array. Ignores GUNZIP option, if it's set. This is not generally a recommended method, although it is used internally as part of the decoding process. Special case: if len = 0, an empty array is returned. Still, if you need more speed and reduced memory footprint (and aren't gzipping), consider this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decode(java.lang.String s)",
+    "name": "decode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "decode(java.lang.String s)",
+      "comment": "Decodes data from Base64 notation, automatically detecting gzip-compressed data and decompressing it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decode(java.lang.String s, int options)",
+    "name": "decode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "decode(java.lang.String s, int options)",
+      "comment": "Decodes data from Base64 notation, automatically detecting gzip-compressed data and decompressing it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeToObject(java.lang.String encodedObject)",
+    "name": "decodeToObject",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encodedObject"
+      }
+    ],
+    "protocol": {
+      "member": "decodeToObject(java.lang.String encodedObject)",
+      "comment": "Attempts to decode Base64 data and deserialize a Java Object within. Returns null if there was an error.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeToObject(java.lang.String encodedObject, int options, java.lang.ClassLoader loader)",
+    "name": "decodeToObject",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encodedObject"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "options"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.ClassLoader",
+          "name": "ClassLoader",
+          "isArray": false
+        },
+        "name": "loader"
+      }
+    ],
+    "protocol": {
+      "member": "decodeToObject(java.lang.String encodedObject, int options, java.lang.ClassLoader loader)",
+      "comment": "Attempts to decode Base64 data and deserialize a Java Object within. Returns null if there was an error. If loader is not null, it will be the class loader used when deserializing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeToFile(byte[] dataToEncode, java.lang.String filename)",
+    "name": "encodeToFile",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "dataToEncode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "filename"
+      }
+    ],
+    "protocol": {
+      "member": "encodeToFile(byte[] dataToEncode, java.lang.String filename)",
+      "comment": "Convenience method for encoding data to a file. As of v 2method_0, if there is a error, the method will throw an javamethod_1method_2. <b>This is new to v2method_0!</b> In earlier versions, it just returned false, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeToFile(java.lang.String dataToDecode, java.lang.String filename)",
+    "name": "decodeToFile",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "dataToDecode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "filename"
+      }
+    ],
+    "protocol": {
+      "member": "decodeToFile(java.lang.String dataToDecode, java.lang.String filename)",
+      "comment": "Convenience method for decoding data to a file. As of v 2method_0, if there is a error, the method will throw an javamethod_1method_2. <b>This is new to v2method_0!</b> In earlier versions, it just returned false, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeFromFile(java.lang.String filename)",
+    "name": "decodeFromFile",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "filename"
+      }
+    ],
+    "protocol": {
+      "member": "decodeFromFile(java.lang.String filename)",
+      "comment": "Convenience method for reading a base64-encoded file and decoding it. As of v 2method_0, if there is a error, the method will throw an javamethod_1method_2. <b>This is new to v2method_0!</b> In earlier versions, it just returned false, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeFromFile(java.lang.String filename)",
+    "name": "encodeFromFile",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "filename"
+      }
+    ],
+    "protocol": {
+      "member": "encodeFromFile(java.lang.String filename)",
+      "comment": "Convenience method for reading a binary file and base64-encoding it. As of v 2method_0, if there is a error, the method will throw an javamethod_1method_2. <b>This is new to v2method_0!</b> In earlier versions, it just returned false, but in retrospect that's a pretty poor way to handle it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "encodeFileToFile(java.lang.String infile, java.lang.String outfile)",
+    "name": "encodeFileToFile",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "infile"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "outfile"
+      }
+    ],
+    "protocol": {
+      "member": "encodeFileToFile(java.lang.String infile, java.lang.String outfile)",
+      "comment": "Reads infile and encodes it to outfile.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeFileToFile(java.lang.String infile, java.lang.String outfile)",
+    "name": "decodeFileToFile",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.Base64",
+      "name": "Base64",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.Base64",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "infile"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "outfile"
+      }
+    ],
+    "protocol": {
+      "member": "decodeFileToFile(java.lang.String infile, java.lang.String outfile)",
+      "comment": "Reads infile and decodes it to outfile.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

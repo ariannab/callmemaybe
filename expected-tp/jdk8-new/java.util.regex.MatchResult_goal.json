@@ -1,0 +1,190 @@
+[
+  {
+    "signature": "start()",
+    "name": "start",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "start()",
+      "comment": "Returns the start index of the match.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "start(int group)",
+    "name": "start",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "start(int group)",
+      "comment": "Returns the start index of the subsequence captured by the given group during this match.  <a href=\"method_2method_3\">Capturing groups</a> are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression <i>m.</i><tt>method_0</tt> is equivalent to <i>m.</i><tt>method_1</tt>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end()",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "end()",
+      "comment": "Returns the offset after the last character matched.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end(int group)",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "end(int group)",
+      "comment": "Returns the offset after the last character of the subsequence captured by the given group during this match.  <a href=\"method_2method_3\">Capturing groups</a> are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression <i>m.</i><tt>method_0</tt> is equivalent to <i>m.</i><tt>method_1</tt>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "group()",
+    "name": "group",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "group()",
+      "comment": "Returns the input subsequence matched by the previous match.  For a matcher <i>m</i> with input sequence <i>s</i>, the expressions <i>m.</i><tt>method_0</tt> and <i>s.</i><tt>method_1,</tt>&nbsp;<i>m.</i><tt>method_2</tt> are equivalent.   Note that some patterns, for example <tt>a*</tt>, match the empty string. This method will return the empty string when the pattern successfully matches the empty string in the input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "group(int group)",
+    "name": "group",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "group(int group)",
+      "comment": "Returns the input subsequence captured by the given group during the previous match operation.  For a matcher <i>m</i>, input sequence <i>s</i>, and group index <i>g</i>, the expressions <i>m.</i><tt>method_0</tt> and <i>s.</i><tt>method_1,</tt>&nbsp;<i>m.</i><tt>method_2</tt> are equivalent.   <a href=\"method_5method_6\">Capturing groups</a> are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression <tt>method_3</tt> is equivalent to <tt>method_4</tt>.   If the match was successful but the group specified failed to match any part of the input sequence, then <tt>null</tt> is returned. Note that some groups, for example <tt>(a*)</tt>, match the empty string. This method will return the empty string when such a group successfully matches the empty string in the input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupCount()",
+    "name": "groupCount",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "MatchResult",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.MatchResult",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "groupCount()",
+      "comment": "Returns the number of capturing groups in this match result's pattern.  Group zero denotes the entire pattern by convention. It is not included in this count. <p> Any non-negative integer smaller than or equal to the value returned by this method is guaranteed to be a valid group index for this matcher.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

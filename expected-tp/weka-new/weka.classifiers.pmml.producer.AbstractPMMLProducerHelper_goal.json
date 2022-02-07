@@ -1,0 +1,137 @@
+[
+  {
+    "signature": "initPMML()",
+    "name": "initPMML",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+      "name": "AbstractPMMLProducerHelper",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.pmml.jaxbbindings.PMML",
+      "name": "weka.core.pmml.jaxbbindings.PMML",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initPMML()",
+      "comment": "Initializes a PMML object with header information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addDataDictionary(weka.core.Instances trainHeader, weka.core.pmml.jaxbbindings.PMML pmml)",
+    "name": "addDataDictionary",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+      "name": "AbstractPMMLProducerHelper",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "trainHeader"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.pmml.jaxbbindings.PMML",
+          "name": "PMML",
+          "isArray": false
+        },
+        "name": "pmml"
+      }
+    ],
+    "protocol": {
+      "member": "addDataDictionary(weka.core.Instances trainHeader, weka.core.pmml.jaxbbindings.PMML pmml)",
+      "comment": "Adds a data dictionary to the supplied PMML object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOPTYPE(int wekaType)",
+    "name": "getOPTYPE",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+      "name": "AbstractPMMLProducerHelper",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.pmml.jaxbbindings.OPTYPE",
+      "name": "weka.core.pmml.jaxbbindings.OPTYPE",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "wekaType"
+      }
+    ],
+    "protocol": {
+      "member": "getOPTYPE(int wekaType)",
+      "comment": "Returns an OPTYPE for a weka attribute type. Note that PMML only supports categorical, continuous and ordinal types.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNameAndValueFromUnsupervisedNominalToBinaryDerivedAttribute(weka.core.Instances train, weka.core.Attribute derived)",
+    "name": "getNameAndValueFromUnsupervisedNominalToBinaryDerivedAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+      "name": "AbstractPMMLProducerHelper",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.pmml.producer.AbstractPMMLProducerHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "derived"
+      }
+    ],
+    "protocol": {
+      "member": "getNameAndValueFromUnsupervisedNominalToBinaryDerivedAttribute(weka.core.Instances train, weka.core.Attribute derived)",
+      "comment": "Extracts the original attribute name and value from the name of a binary indicator attribute created by unsupervised NominalToBinary. Handles the case where one or more equals signs might be present in the original attribute name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

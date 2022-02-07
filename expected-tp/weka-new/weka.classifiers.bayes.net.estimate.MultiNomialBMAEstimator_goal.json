@@ -1,0 +1,325 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this object",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "estimateCPTs(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "estimateCPTs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "estimateCPTs(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "estimateCPTs estimates the conditional probability tables for the Bayes Net using the network structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateClassifier(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instance instance)",
+    "name": "updateClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateClassifier(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instance instance)",
+      "comment": "Updates the classifier with the given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initCPTs(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "initCPTs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "initCPTs(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "initCPTs reserves space for CPTs and set all counts to zero",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUseK2Prior()",
+    "name": "isUseK2Prior",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isUseK2Prior()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseK2Prior(boolean bUseK2Prior)",
+    "name": "setUseK2Prior",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bUseK2Prior"
+      }
+    ],
+    "protocol": {
+      "member": "setUseK2Prior(boolean bUseK2Prior)",
+      "comment": "Sets the UseK2Prior.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -k2 Whether to use K2 prior.   -A <alpha> Initial count (alpha)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+      "name": "MultiNomialBMAEstimator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.estimate.MultiNomialBMAEstimator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

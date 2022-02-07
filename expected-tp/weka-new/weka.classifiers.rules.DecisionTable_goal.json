@@ -1,0 +1,989 @@
+[
+  {
+    "signature": "weka.classifiers.rules.DecisionTable()",
+    "name": "weka.classifiers.rules.DecisionTable",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.rules.DecisionTable()",
+      "comment": "Constructor for a DecisionTable",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateInstanceLeaveOneOut(weka.core.Instance instance, double[] instA)",
+    "name": "evaluateInstanceLeaveOneOut",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "instA"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateInstanceLeaveOneOut(weka.core.Instance instance, double[] instA)",
+      "comment": "Classifies an instance for internal leave one out cross validation of feature sets",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateFoldCV(weka.core.Instances fold, int[] fs)",
+    "name": "evaluateFoldCV",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "fold"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "fs"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateFoldCV(weka.core.Instances fold, int[] fs)",
+      "comment": "Calculates the accuracy on a test fold for internal cross validation of feature sets",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "estimatePerformance(java.util.BitSet feature_set, int num_atts)",
+    "name": "estimatePerformance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.BitSet",
+          "name": "BitSet",
+          "isArray": false
+        },
+        "name": "feature_set"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "num_atts"
+      }
+    ],
+    "protocol": {
+      "member": "estimatePerformance(java.util.BitSet feature_set, int num_atts)",
+      "comment": "Evaluates a feature subset by cross validation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resetOptions()",
+    "name": "resetOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "resetOptions()",
+      "comment": "Resets the options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "crossValTipText()",
+    "name": "crossValTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "crossValTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCrossVal(int folds)",
+    "name": "setCrossVal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "folds"
+      }
+    ],
+    "protocol": {
+      "member": "setCrossVal(int folds)",
+      "comment": "Sets the number of folds for cross validation (1 = leave one out)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCrossVal()",
+    "name": "getCrossVal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCrossVal()",
+      "comment": "Gets the number of folds for cross validation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useIBkTipText()",
+    "name": "useIBkTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useIBkTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseIBk(boolean ibk)",
+    "name": "setUseIBk",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "ibk"
+      }
+    ],
+    "protocol": {
+      "member": "setUseIBk(boolean ibk)",
+      "comment": "Sets whether IBk should be used instead of the majority class",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseIBk()",
+    "name": "getUseIBk",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseIBk()",
+      "comment": "Gets whether IBk is being used instead of the majority class",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "displayRulesTipText()",
+    "name": "displayRulesTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "displayRulesTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDisplayRules(boolean rules)",
+    "name": "setDisplayRules",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "rules"
+      }
+    ],
+    "protocol": {
+      "member": "setDisplayRules(boolean rules)",
+      "comment": "Sets whether rules are to be printed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayRules()",
+    "name": "getDisplayRules",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDisplayRules()",
+      "comment": "Gets whether rules are being printed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchTipText()",
+    "name": "searchTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "searchTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSearch(weka.attributeSelection.ASSearch search)",
+    "name": "setSearch",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.attributeSelection.ASSearch",
+          "name": "ASSearch",
+          "isArray": false
+        },
+        "name": "search"
+      }
+    ],
+    "protocol": {
+      "member": "setSearch(weka.attributeSelection.ASSearch search)",
+      "comment": "Sets the search method to use",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSearch()",
+    "name": "getSearch",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.attributeSelection.ASSearch",
+      "name": "weka.attributeSelection.ASSearch",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSearch()",
+      "comment": "Gets the current search method",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluationMeasureTipText()",
+    "name": "evaluationMeasureTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "evaluationMeasureTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEvaluationMeasure()",
+    "name": "getEvaluationMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEvaluationMeasure()",
+      "comment": "Gets the currently set performance evaluation measure used for selecting attributes for the decision table",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEvaluationMeasure(weka.core.SelectedTag newMethod)",
+    "name": "setEvaluationMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "newMethod"
+      }
+    ],
+    "protocol": {
+      "member": "setEvaluationMeasure(weka.core.SelectedTag newMethod)",
+      "comment": "Sets the performance evaluation measure to use for selecting attributes for the decision table",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses the options for this object.   -S <search method specification> Full class name of search method, followed by its options. eg: \"wekamethod_0method_1 -D 1\" (default wekamethod_0method_1)   -X <number of folds> Use cross validation to evaluate features. Use number of folds = 1 for leave one out CV. (Default = leave one out CV)   -E <acc | rmse | mae | auc> Performance evaluation measure to use for selecting attributes. (Default = accuracy for discrete class and rmse for numeric class)   -I Use nearest neighbour instead of global table majority.   -R Display decision table rules.   Options specific to search method wekamethod_0method_1:   -P <start set> Specify a starting set of attributes. Eg. 1,3,5-7.   -D <0 = backward | 1 = forward | 2 = bi-directional> Direction of search. (default = 1).   -N <num> Number of non-improving nodes to consider before terminating search.   -S <num> Size of lookup cache for evaluated subsets. Expressed as a multiple of the number of attributes in the data set. (default = 1)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSearchSpec()",
+    "name": "getSearchSpec",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSearchSpec()",
+      "comment": "Gets the search specification string, which contains the class name of the search method and any options to it",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUpEvaluator()",
+    "name": "setUpEvaluator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "setUpEvaluator()",
+      "comment": "Sets up a dummy subset evaluator that basically just delegates evaluation to the estimatePerformance method in DecisionTable",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Generates the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printFeatures()",
+    "name": "printFeatures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "printFeatures()",
+      "comment": "Returns a string description of the features selected",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureNumRules()",
+    "name": "measureNumRules",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureNumRules()",
+      "comment": "Returns the number of rules",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the additional measure names",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String additionalMeasureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "additionalMeasureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String additionalMeasureName)",
+      "comment": "Returns the value of the named measure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a description of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.DecisionTable",
+      "name": "DecisionTable",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.DecisionTable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

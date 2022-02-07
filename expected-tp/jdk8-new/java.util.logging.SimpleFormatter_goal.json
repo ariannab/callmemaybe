@@ -1,0 +1,34 @@
+[
+  {
+    "signature": "format(java.util.logging.LogRecord record)",
+    "name": "format",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.SimpleFormatter",
+      "name": "SimpleFormatter",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.SimpleFormatter",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "format(java.util.logging.LogRecord record)",
+      "comment": "Format the given LogRecord.  The formatting can be customized by specifying the format string in the  javamethod_7method_8method_9method_10 property. The given LogRecord will be formatted as if by calling:  method_11 Stringmethod_10(format, date, source, logger, level, message, thrown);  where the arguments are:<br>  <li>format - the javamethod_7method_14 javamethod_7method_14 format string specified in the javamethod_7method_8method_9method_10 property or the default format.</li> <li>date - a Date object representing method_21 event time of the log record.</li> <li>source - a string representing the caller, if available; otherwise, the logger's name.</li> <li>logger - the logger's name.</li> <li>level - the method_22 log level.</li> <li>message - the formatted log message returned from the method_0 method. It uses javamethod_24method_25 javamethod_24 formatting and does not use the javamethod_7method_14 format argument.</li> <li>thrown - a string representing the method_29 throwable associated with the log record and its backtrace beginning with a newline character, if any; otherwise, an empty string.</li>  Some example formats:<br>  <li> javamethod_7method_8method_9method_10=\"%4$s: %5$s [%1$tc]%n\" This prints 1 line with the log level (4$}), the log message ({@code 5$}) and the timestamp ({@code 1$}) in a square bracket. <pre> WARNING: warning message [Tue Mar 22 13:11:31 PDT 2011] </pre></li> <li> {@code javamethod_7method_8method_9method_10=\"%1$tc %2$s%n%4$s: %5$s%6$s%n\" This prints 2 lines where the first line includes the timestamp (1$}) and the source ({@code 2$}); the second line includes the log level ({@code 4$}) and the log message ({@code 5$}) followed with the throwable and its backtrace ({@code 6$}), if any: <pre> Tue Mar 22 13:11:31 PDT 2011 MyClass fatal SEVERE: several message with an exception javamethod_38method_39: invalid argument at method_1 at method_2 at method_3 </pre></li> <li> {@code javamethod_7method_8method_9method_10=\"%1$tb %1$td, %1$tY %1$tl:%1$tM:%1$tS %1$Tp %2$s%n%4$s: %5$s%n\" This prints 2 lines similar to the example above with a different date/time formatting and does not print the throwable and its backtrace: <pre> Mar 22, 2011 1:11:31 PM MyClass fatal SEVERE: several message with an exception </pre></li>  This method can also be overridden in a subclass. It is recommended to use the method_23 convenience method to localize and format the message field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

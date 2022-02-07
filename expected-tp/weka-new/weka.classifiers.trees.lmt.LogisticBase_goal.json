@@ -1,0 +1,1217 @@
+[
+  {
+    "signature": "weka.classifiers.trees.lmt.LogisticBase()",
+    "name": "weka.classifiers.trees.lmt.LogisticBase",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.trees.lmt.LogisticBase()",
+      "comment": "Constructor that creates LogisticBase object with standard options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.lmt.LogisticBase(int numBoostingIterations, boolean useCrossValidation, boolean errorOnProbabilities)",
+    "name": "weka.classifiers.trees.lmt.LogisticBase",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numBoostingIterations"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "useCrossValidation"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "errorOnProbabilities"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.lmt.LogisticBase(int numBoostingIterations, boolean useCrossValidation, boolean errorOnProbabilities)",
+      "comment": "Constructor to create LogisticBase object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Builds the logistic regression model usiing LogitBoost.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performBoostingCV()",
+    "name": "performBoostingCV",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "performBoostingCV()",
+      "comment": "Runs LogitBoost, determining the best number of iterations by cross-validation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyRegressions(weka.classifiers.trees.lmt.SimpleLinearRegression[][] a)",
+    "name": "copyRegressions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression[][]",
+      "name": "weka.classifiers.trees.lmt.SimpleLinearRegression[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Lweka.classifiers.trees.lmt.SimpleLinearRegression;",
+          "name": "SimpleLinearRegression[][]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "protocol": {
+      "member": "copyRegressions(weka.classifiers.trees.lmt.SimpleLinearRegression[][] a)",
+      "comment": "Deep copies the given array of simple linear regression functions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performBoostingInfCriterion()",
+    "name": "performBoostingInfCriterion",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "performBoostingInfCriterion()",
+      "comment": "Runs LogitBoost, determining the best number of iterations by an information criterion (currently AIC).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performBoosting(weka.core.Instances train, weka.core.Instances test, double[] error, int maxIterations)",
+    "name": "performBoosting",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "error"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxIterations"
+      }
+    ],
+    "protocol": {
+      "member": "performBoosting(weka.core.Instances train, weka.core.Instances test, double[] error, int maxIterations)",
+      "comment": "Runs LogitBoost on a training set and monitors the error on a test set. Used for running one fold when cross-validating the number of LogitBoost iterations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performBoosting(int numIterations)",
+    "name": "performBoosting",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numIterations"
+      }
+    ],
+    "protocol": {
+      "member": "performBoosting(int numIterations)",
+      "comment": "Runs LogitBoost with a fixed number of iterations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performBoosting()",
+    "name": "performBoosting",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "performBoosting()",
+      "comment": "Runs LogitBoost using the stopping criterion on the training set. The number of iterations is used that gives the lowest error on the training set, either misclassification or error on probabilities (depending on the errorOnProbabilities option).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getErrorRate(weka.core.Instances data)",
+    "name": "getErrorRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getErrorRate(weka.core.Instances data)",
+      "comment": "Returns the misclassification error of the current model on a set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeanAbsoluteError(weka.core.Instances data)",
+    "name": "getMeanAbsoluteError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getMeanAbsoluteError(weka.core.Instances data)",
+      "comment": "Returns the error of the probability estimates for the current model on a set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBestIteration(double[] errors, int maxIteration)",
+    "name": "getBestIteration",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "errors"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxIteration"
+      }
+    ],
+    "protocol": {
+      "member": "getBestIteration(double[] errors, int maxIteration)",
+      "comment": "Helper function to find the minimum in an array of error values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performIteration(int iteration, double[][] trainYs, double[][] trainFs, double[][] probs, weka.core.Instances trainNumeric)",
+    "name": "performIteration",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iteration"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "trainYs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "trainFs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "probs"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "trainNumeric"
+      }
+    ],
+    "protocol": {
+      "member": "performIteration(int iteration, double[][] trainYs, double[][] trainFs, double[][] probs, weka.core.Instances trainNumeric)",
+      "comment": "Performs a single iteration of LogitBoost, and updates the model accordingly. A simple regression function is fit to the response and added to the m_regressions array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initRegressions()",
+    "name": "initRegressions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.lmt.SimpleLinearRegression[][]",
+      "name": "weka.classifiers.trees.lmt.SimpleLinearRegression[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initRegressions()",
+      "comment": "Helper function to initialize m_regressions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumericData(weka.core.Instances data)",
+    "name": "getNumericData",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getNumericData(weka.core.Instances data)",
+      "comment": "Converts training data to numeric version. The class variable is replaced by a pseudo-class used by LogitBoost.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZ(double actual, double p)",
+    "name": "getZ",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "actual"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "getZ(double actual, double p)",
+      "comment": "Computes the LogitBoost response variable from y/p values (actual/estimated class probabilities).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZs(double[][] probs, double[][] dataYs)",
+    "name": "getZs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "probs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataYs"
+      }
+    ],
+    "protocol": {
+      "member": "getZs(double[][] probs, double[][] dataYs)",
+      "comment": "Computes the LogitBoost response for an array of y/p values (actual/estimated class probabilities).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWs(double[][] probs, double[][] dataYs)",
+    "name": "getWs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "probs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataYs"
+      }
+    ],
+    "protocol": {
+      "member": "getWs(double[][] probs, double[][] dataYs)",
+      "comment": "Computes the LogitBoost weights from an array of y/p values (actual/estimated class probabilities).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "probs(double[] Fs)",
+    "name": "probs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "Fs"
+      }
+    ],
+    "protocol": {
+      "member": "probs(double[] Fs)",
+      "comment": "Computes the p-values (probabilities for the classes) from the F-values of the logistic model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getYs(weka.core.Instances data)",
+    "name": "getYs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getYs(weka.core.Instances data)",
+      "comment": "Computes the Y-values (actual class probabilities) for a set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFs(weka.core.Instance instance)",
+    "name": "getFs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "getFs(weka.core.Instance instance)",
+      "comment": "Computes the F-values for a single instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFs(weka.core.Instances data)",
+    "name": "getFs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getFs(weka.core.Instances data)",
+      "comment": "Computes the F-values for a set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProbs(double[][] dataFs)",
+    "name": "getProbs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataFs"
+      }
+    ],
+    "protocol": {
+      "member": "getProbs(double[][] dataFs)",
+      "comment": "Computes the p-values (probabilities for the different classes) from the F-values for a set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "negativeLogLikelihood(double[][] dataYs, double[][] probs)",
+    "name": "negativeLogLikelihood",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataYs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "probs"
+      }
+    ],
+    "protocol": {
+      "member": "negativeLogLikelihood(double[][] dataYs, double[][] probs)",
+      "comment": "Returns the negative loglikelihood of the Y-values (actual class probabilities) given the p-values (current probability estimates).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUsedAttributes()",
+    "name": "getUsedAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[][]",
+      "name": "int[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUsedAttributes()",
+      "comment": "Returns an array of the indices of the attributes used in the logistic model. The first dimension is the class, the second dimension holds a list of attribute indices. Attribute indices start at zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumRegressions()",
+    "name": "getNumRegressions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumRegressions()",
+      "comment": "The number of LogitBoost iterations performed (= the number of simple regression functions fit).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWeightTrimBeta()",
+    "name": "getWeightTrimBeta",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getWeightTrimBeta()",
+      "comment": "Get the value of weightTrimBeta.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseAIC()",
+    "name": "getUseAIC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseAIC()",
+      "comment": "Get the value of useAIC.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMaxIterations(int maxIterations)",
+    "name": "setMaxIterations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxIterations"
+      }
+    ],
+    "protocol": {
+      "member": "setMaxIterations(int maxIterations)",
+      "comment": "Sets the parameter \"maxIterations\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setHeuristicStop(int heuristicStop)",
+    "name": "setHeuristicStop",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "heuristicStop"
+      }
+    ],
+    "protocol": {
+      "member": "setHeuristicStop(int heuristicStop)",
+      "comment": "Sets the option \"heuristicStop\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeightTrimBeta(double w)",
+    "name": "setWeightTrimBeta",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "w"
+      }
+    ],
+    "protocol": {
+      "member": "setWeightTrimBeta(double w)",
+      "comment": "Sets the option \"weightTrimBeta\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseAIC(boolean c)",
+    "name": "setUseAIC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "setUseAIC(boolean c)",
+      "comment": "Set the value of useAIC.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxIterations()",
+    "name": "getMaxIterations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMaxIterations()",
+      "comment": "Returns the maxIterations parameter.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCoefficients()",
+    "name": "getCoefficients",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCoefficients()",
+      "comment": "Returns an array holding the coefficients of the logistic model. First dimension is the class, the second one holds a list of coefficients. At position zero, the constant term of the model is stored, then, the coefficients for the attributes in ascending order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "percentAttributesUsed()",
+    "name": "percentAttributesUsed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "percentAttributesUsed()",
+      "comment": "Returns the fraction of all attributes in the data that are used in the logistic model (in percent). An attribute is used in the model if it is used in any of the models for the different classes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a description of the logistic model (imethod_0., attributes and coefficients).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Returns class probabilities for an instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cleanup()",
+    "name": "cleanup",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cleanup()",
+      "comment": "Cleanup in order to save memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.LogisticBase",
+      "name": "LogisticBase",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.LogisticBase",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

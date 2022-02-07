@@ -1,0 +1,448 @@
+[
+  {
+    "signature": "java.util.stream.AbstractTask(java.util.stream.PipelineHelper<P_OUT> helper, java.util.Spliterator<P_IN> spliterator)",
+    "name": "java.util.stream.AbstractTask",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractTask(java.util.stream.PipelineHelper<P_OUT> helper, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Constructor for root nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.stream.AbstractTask(K parent, java.util.Spliterator<P_IN> spliterator)",
+    "name": "java.util.stream.AbstractTask",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.AbstractTask",
+          "name": "AbstractTask",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractTask(K parent, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Constructor for non-root nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeChild(java.util.Spliterator<P_IN> spliterator)",
+    "name": "makeChild",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "makeChild(java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Constructs a new node of type T whose parent is the receiver; must call the method_0 constructor with the receiver and the provided Spliterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doLeaf()",
+    "name": "doLeaf",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doLeaf()",
+      "comment": "Computes the result associated with a leaf node. Will be called by method_0 and the result passed to @{code method_1}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "suggestTargetSize(long sizeEstimate)",
+    "name": "suggestTargetSize",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "sizeEstimate"
+      }
+    ],
+    "protocol": {
+      "member": "suggestTargetSize(long sizeEstimate)",
+      "comment": "Returns a suggested target leaf size based on the initial size estimate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTargetSize(long sizeEstimate)",
+    "name": "getTargetSize",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "sizeEstimate"
+      }
+    ],
+    "protocol": {
+      "member": "getTargetSize(long sizeEstimate)",
+      "comment": "Returns the targetSize, initializing it via the supplied size estimate if not already initialized.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRawResult()",
+    "name": "getRawResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRawResult()",
+      "comment": "Returns the local result, if any. Subclasses should use method_0 and method_1 to manage results. This returns the local result so that calls from within the fork-join framework will return the correct result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRawResult(R result)",
+    "name": "setRawResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "result"
+      }
+    ],
+    "protocol": {
+      "member": "setRawResult(R result)",
+      "comment": "Does nothing; instead, subclasses should use method_0} to manage results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLocalResult()",
+    "name": "getLocalResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLocalResult()",
+      "comment": "Retrieves a result previously stored with method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLocalResult(R localResult)",
+    "name": "setLocalResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "localResult"
+      }
+    ],
+    "protocol": {
+      "member": "setLocalResult(R localResult)",
+      "comment": "Associates the result with the task, can be retrieved with method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLeaf()",
+    "name": "isLeaf",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isLeaf()",
+      "comment": "Indicates whether this task is a leaf node. (Only valid after method_0 has been called on this node). If the node is not a leaf node, then children will be non-null and numChildren will be positive.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isRoot()",
+    "name": "isRoot",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isRoot()",
+      "comment": "Indicates whether this task is the root node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParent()",
+    "name": "getParent",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getParent()",
+      "comment": "Returns the parent of this task, or null if this task is the root",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute()",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "compute()",
+      "comment": "Decides whether or not to split a task further or compute it directly. If computing directly, calls doLeaf and pass the result to setRawResult. Otherwise splits off subtasks, forking one and continuing as the other.  The method is structured to conserve resources across a range of uses. The loop continues with one of the child tasks when split, to avoid deep recursion. To cope with spliterators that may be systematically biased toward left-heavy or right-heavy splits, we alternate which child is forked versus continued in the loop.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onCompletion(java.util.concurrent.CountedCompleter<?> caller)",
+    "name": "onCompletion",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CountedCompleter",
+          "name": "CountedCompleter",
+          "isArray": false
+        },
+        "name": "caller"
+      }
+    ],
+    "protocol": {
+      "member": "onCompletion(java.util.concurrent.CountedCompleter<?> caller)",
+      "comment": "{@inheritDoc} @implNote Clears spliterator and children fields. Overriders MUST call supermethod_0 as the last thing they do if they want these cleared.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLeftmostNode()",
+    "name": "isLeftmostNode",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractTask",
+      "name": "AbstractTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isLeftmostNode()",
+      "comment": "Returns whether this node is a \"leftmost\" node -- whether the path from the root to this node involves only traversing leftmost child links. For a leaf node, this means it is the first leaf node in the encounter order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

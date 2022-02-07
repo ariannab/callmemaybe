@@ -1,0 +1,674 @@
+[
+  {
+    "signature": "createOptions()",
+    "name": "createOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "createOptions()",
+      "comment": "Create the options array to pass to the classifier. The parameter values and positions are taken from m_ClassifierOptions and m_CVParams.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findParamsByCrossValidation(int depth, weka.core.Instances trainData, java.util.Random random)",
+    "name": "findParamsByCrossValidation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "depth"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "trainData"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "protocol": {
+      "member": "findParamsByCrossValidation(int depth, weka.core.Instances trainData, java.util.Random random)",
+      "comment": "Finds the best parameter combination. (recursive for each parameter being optimised).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -X <number of folds> Number of folds used for cross validation (default 10).  -P <classifier parameter> Classifier parameter options. eg: \"N 1 5 10\" Sets an optimisation parameter for the classifier with name -N, with lower bound 1, upper bound 5, and 10 optimisation steps. The upper bound may be the character 'A' or 'I' to substitute the number of attributes or instances in the training data, respectively. This parameter may be supplied more than once to optimise over several classifier options simultaneously.  -S <num> Random number seed. (default 1)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_0method_1method_2)  Options specific to classifier wekamethod_0method_1method_2:   -D If set, classifier is run in debug mode and may output additional info to the console Options after -- are passed to the designated sub-classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBestClassifierOptions()",
+    "name": "getBestClassifierOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBestClassifierOptions()",
+      "comment": "Returns (a copy of) the best options found for the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Generates the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Predicts the class distribution for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addCVParameter(java.lang.String cvParam)",
+    "name": "addCVParameter",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "cvParam"
+      }
+    ],
+    "protocol": {
+      "member": "addCVParameter(java.lang.String cvParam)",
+      "comment": "Adds a scheme parameter to the list of parameters to be set by cross-validation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCVParameter(int index)",
+    "name": "getCVParameter",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "getCVParameter(int index)",
+      "comment": "Gets the scheme paramter with the given index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "CVParametersTipText()",
+    "name": "CVParametersTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "CVParametersTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCVParameters()",
+    "name": "getCVParameters",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCVParameters()",
+      "comment": "Get method for CVParameters.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCVParameters(java.lang.Object[] params)",
+    "name": "setCVParameters",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "params"
+      }
+    ],
+    "protocol": {
+      "member": "setCVParameters(java.lang.Object[] params)",
+      "comment": "Set method for CVParameters.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numFoldsTipText()",
+    "name": "numFoldsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numFoldsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumFolds()",
+    "name": "getNumFolds",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumFolds()",
+      "comment": "Gets the number of folds for the cross-validation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumFolds(int numFolds)",
+    "name": "setNumFolds",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numFolds"
+      }
+    ],
+    "protocol": {
+      "member": "setNumFolds(int numFolds)",
+      "comment": "Sets the number of folds for the cross-validation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphType()",
+    "name": "graphType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphType()",
+      "comment": "Returns the type of graph this classifier represents. @return the type of graph this classifier represents",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "Returns graph describing the classifier (if possible).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns description of the cross-validated classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSummaryString()",
+    "name": "toSummaryString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toSummaryString()",
+      "comment": "A concise description of the model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CVParameterSelection",
+      "name": "CVParameterSelection",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CVParameterSelection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

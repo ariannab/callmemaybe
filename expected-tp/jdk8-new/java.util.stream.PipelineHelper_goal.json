@@ -1,0 +1,352 @@
+[
+  {
+    "signature": "getSourceShape()",
+    "name": "getSourceShape",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.StreamShape",
+      "name": "java.util.stream.StreamShape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSourceShape()",
+      "comment": "Gets the stream shape for the source of the pipeline segment.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStreamAndOpFlags()",
+    "name": "getStreamAndOpFlags",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStreamAndOpFlags()",
+      "comment": "Gets the combined stream and operation flags for the output of the described pipeline. This will incorporate stream flags from the stream source, all the intermediate operations and the terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exactOutputSizeIfKnown(java.util.Spliterator<P_IN> spliterator)",
+    "name": "exactOutputSizeIfKnown",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "exactOutputSizeIfKnown(java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Returns the exact output size of the portion of the output resulting from applying the pipeline stages described by this PipelineHelper to the the portion of the input described by the provided Spliterator, if known. If not known or known infinite, will return -1. @apiNote The exact output size is known if the Spliterator has the SIZED characteristic, and the operation flags method_0 is known on the combined stream and operation flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapAndCopyInto(S sink, java.util.Spliterator<P_IN> spliterator)",
+    "name": "wrapAndCopyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "sink"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "wrapAndCopyInto(S sink, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Applies the pipeline stages described by this PipelineHelper to the provided Spliterator and send the results to the provided Sink. @implSpec The implementation behaves as if: method_0, spliterator);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInto(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+    "name": "copyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "wrappedSink"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "copyInto(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Pushes elements obtained from the Spliterator into the provided Sink. If the stream pipeline is known to have short-circuiting stages in it (see method_1), the method_0 is checked after each element, stopping if cancellation is requested. @implSpec This method conforms to the Sink protocol of calling method_3 before pushing elements, via method_4, and calling method_5 after all elements have been pushed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyIntoWithCancel(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+    "name": "copyIntoWithCancel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "wrappedSink"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "copyIntoWithCancel(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Pushes elements obtained from the Spliterator into the provided Sink, checking method_0 after each element, and stopping if cancellation is requested. @implSpec This method conforms to the Sink protocol of calling method_2 before pushing elements, via method_3, and calling method_4 after all elements have been pushed or if cancellation is requested.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapSink(java.util.stream.Sink<P_OUT> sink)",
+    "name": "wrapSink",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Sink<P_IN>",
+      "name": "java.util.stream.Sink<P_IN>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "sink"
+      }
+    ],
+    "protocol": {
+      "member": "wrapSink(java.util.stream.Sink<P_OUT> sink)",
+      "comment": "Takes a Sink that accepts elements of the output type of the PipelineHelper, and wrap it with a Sink that accepts elements of the input type and implements all the intermediate operations described by this PipelineHelper, delivering the result into the provided Sink.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapSpliterator(java.util.Spliterator<P_IN> spliterator)",
+    "name": "wrapSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<P_OUT>",
+      "name": "java.util.Spliterator<P_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "wrapSpliterator(java.util.Spliterator<P_IN> spliterator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeNodeBuilder(long exactSizeIfKnown, java.util.function.IntFunction<P_OUT[]> generator)",
+    "name": "makeNodeBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder<P_OUT>",
+      "name": "java.util.stream.Node$Builder<P_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "exactSizeIfKnown"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "makeNodeBuilder(long exactSizeIfKnown, java.util.function.IntFunction<P_OUT[]> generator)",
+      "comment": "Constructs a @{link method_0} compatible with the output shape of this PipelineHelper.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(java.util.Spliterator<P_IN> spliterator, boolean flatten, java.util.function.IntFunction<P_OUT[]> generator)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.PipelineHelper",
+      "name": "PipelineHelper",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.PipelineHelper",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<P_OUT>",
+      "name": "java.util.stream.Node<P_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flatten"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "evaluate(java.util.Spliterator<P_IN> spliterator, boolean flatten, java.util.function.IntFunction<P_OUT[]> generator)",
+      "comment": "Collects all output elements resulting from applying the pipeline stages to the source Spliterator into a Node. @implNote If the pipeline has no intermediate operations and the source is backed by a Node then that Node will be returned (or flattened and then returned). This reduces copying for a pipeline consisting of a stateful operation followed by a terminal operation that returns an array, such as: method_0method_1;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

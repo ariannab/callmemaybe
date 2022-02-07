@@ -1,0 +1,355 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.AtomicMarkableReference(V initialRef, boolean initialMark)",
+    "name": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "initialRef"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "initialMark"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.AtomicMarkableReference(V initialRef, boolean initialMark)",
+      "comment": "Creates a new AtomicMarkableReference with the given initial values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReference()",
+    "name": "getReference",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getReference()",
+      "comment": "Returns the current value of the reference.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isMarked()",
+    "name": "isMarked",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isMarked()",
+      "comment": "Returns the current value of the mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(boolean[] markHolder)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Z",
+          "name": "boolean[]",
+          "isArray": true
+        },
+        "name": "markHolder"
+      }
+    ],
+    "protocol": {
+      "member": "get(boolean[] markHolder)",
+      "comment": "Returns the current values of both the reference and the mark. Typical usage is boolean[1] holder; ref = method_0; .",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weakCompareAndSet(V expectedReference, V newReference, boolean expectedMark, boolean newMark)",
+    "name": "weakCompareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "expectedReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "expectedMark"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newMark"
+      }
+    ],
+    "protocol": {
+      "member": "weakCompareAndSet(V expectedReference, V newReference, boolean expectedMark, boolean newMark)",
+      "comment": "Atomically sets the value of both the reference and mark to the given update values if the current reference is == to the expected reference and the current mark is equal to the expected mark. May fail spuriously and does not provide ordering guarantees, so is only rarely an appropriate alternative to compareAndSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareAndSet(V expectedReference, V newReference, boolean expectedMark, boolean newMark)",
+    "name": "compareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "expectedReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "expectedMark"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newMark"
+      }
+    ],
+    "protocol": {
+      "member": "compareAndSet(V expectedReference, V newReference, boolean expectedMark, boolean newMark)",
+      "comment": "Atomically sets the value of both the reference and mark to the given update values if the current reference is == to the expected reference and the current mark is equal to the expected mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(V newReference, boolean newMark)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newMark"
+      }
+    ],
+    "protocol": {
+      "member": "set(V newReference, boolean newMark)",
+      "comment": "Unconditionally sets the value of both the reference and mark.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attemptMark(V expectedReference, boolean newMark)",
+    "name": "attemptMark",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "expectedReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newMark"
+      }
+    ],
+    "protocol": {
+      "member": "attemptMark(V expectedReference, boolean newMark)",
+      "comment": "Atomically sets the value of the mark to the given update value if the current reference is == to the expected reference. Any given invocation of this operation may fail (return {@code false}) spuriously, but repeated invocation when the current value holds the expected value and no other thread is also attempting to set the value will eventually succeed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "objectFieldOffset(sun.misc.Unsafe UNSAFE, java.lang.String field, java.lang.Class<?> klazz)",
+    "name": "objectFieldOffset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicMarkableReference",
+      "name": "AtomicMarkableReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicMarkableReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "sun.misc.Unsafe",
+          "name": "Unsafe",
+          "isArray": false
+        },
+        "name": "UNSAFE"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "klazz"
+      }
+    ],
+    "protocol": {
+      "member": "objectFieldOffset(sun.misc.Unsafe UNSAFE, java.lang.String field, java.lang.Class<?> klazz)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "signature": "sizeOfInt()",
+    "name": "sizeOfInt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+      "name": "NetStreamUnpacker",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sizeOfInt()",
+      "comment": "An unpacker has to be abble to indicated what is the size of an int after being packed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unpackMessage(java.nio.ByteBuffer buffer, int startIndex, int endIndex)",
+    "name": "unpackMessage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+      "name": "NetStreamUnpacker",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.nio.ByteBuffer",
+      "name": "java.nio.ByteBuffer",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "buffer"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndex"
+      }
+    ],
+    "protocol": {
+      "member": "unpackMessage(java.nio.ByteBuffer buffer, int startIndex, int endIndex)",
+      "comment": "Unpack the given ByteBuffer from startIndex to endIdex",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unpackMessage(java.nio.ByteBuffer buffer)",
+    "name": "unpackMessage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+      "name": "NetStreamUnpacker",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.nio.ByteBuffer",
+      "name": "java.nio.ByteBuffer",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "buffer"
+      }
+    ],
+    "protocol": {
+      "member": "unpackMessage(java.nio.ByteBuffer buffer)",
+      "comment": "Unpack the given ByteBuffer",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unpackMessageSize(java.nio.ByteBuffer buffer)",
+    "name": "unpackMessageSize",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+      "name": "NetStreamUnpacker",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.packing.NetStreamUnpacker",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "buffer"
+      }
+    ],
+    "protocol": {
+      "member": "unpackMessageSize(java.nio.ByteBuffer buffer)",
+      "comment": "Unpacks the data necessary to decode a 4 bytes integer that indicates the size of the following message. The given buffer's position may be important for the unpacker to work. This method may also change the given bytebuffer's position attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

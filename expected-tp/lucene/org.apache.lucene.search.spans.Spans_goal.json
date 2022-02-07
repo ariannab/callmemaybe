@@ -1,0 +1,241 @@
+[
+  {
+    "signature": "nextStartPosition()",
+    "name": "nextStartPosition",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextStartPosition()",
+      "comment": "Returns the next start position for the current doc. There is always at least one start/end position per doc. After the last start/end position at the current doc this returns method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "startPosition()",
+    "name": "startPosition",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "startPosition()",
+      "comment": "Returns the start position in the current doc, or -1 when method_0 was not yet called on the current doc. After the last start/end position at the current doc this returns #NO_MORE_POSITIONS.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endPosition()",
+    "name": "endPosition",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "endPosition()",
+      "comment": "Returns the end position for the current start position, or -1 when method_0 was not yet called on the current doc. After the last start/end position at the current doc this returns #NO_MORE_POSITIONS.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "width()",
+    "name": "width",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "width()",
+      "comment": "Return the width of the match, which is typically used to compute the method_0 slop factor. It is only legal to call this method when the iterator is on a valid doc ID and positioned. The return value must be positive, and lower values means that the match is better.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collect(org.apache.lucene.search.spans.SpanCollector collector)",
+    "name": "collect",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.spans.SpanCollector",
+          "name": "SpanCollector",
+          "isArray": false
+        },
+        "name": "collector"
+      }
+    ],
+    "protocol": {
+      "member": "collect(org.apache.lucene.search.spans.SpanCollector collector)",
+      "comment": "Collect postings data from the leaves of the current Spans. This method should only be called after #method_0, and before #NO_MORE_POSITIONS has been reached.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.collect(args[0])<-org.apache.lucene.search.spans.Spans.nextStartPosition()"
+    }
+  },
+  {
+    "signature": "positionsCost()",
+    "name": "positionsCost",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "positionsCost()",
+      "comment": "Return an estimation of the cost of using the positions of this Spans for any single document, but only after method_0 returned null. Otherwise this method should not be called. The returned value is independent of the current document. @lucene.experimental",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asTwoPhaseIterator()",
+    "name": "asTwoPhaseIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.lucene.search.TwoPhaseIterator",
+      "name": "org.apache.lucene.search.TwoPhaseIterator",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asTwoPhaseIterator()",
+      "comment": "Optional method: Return a TwoPhaseIterator view of this Scorer. A return value of null indicates that two-phase iteration is not supported.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doStartCurrentDoc()",
+    "name": "doStartCurrentDoc",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doStartCurrentDoc()",
+      "comment": "Called before the current doc's frequency is calculated",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doCurrentSpans()",
+    "name": "doCurrentSpans",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.spans.Spans",
+      "name": "Spans",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.spans.Spans",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doCurrentSpans()",
+      "comment": "Called each time the scorer's SpanScorer is advanced during frequency calculation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

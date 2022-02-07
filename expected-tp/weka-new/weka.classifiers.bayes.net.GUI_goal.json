@@ -1,0 +1,606 @@
+[
+  {
+    "signature": "weka.classifiers.bayes.net.GUI()",
+    "name": "weka.classifiers.bayes.net.GUI",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.GUI()",
+      "comment": "Constructor<br> Sets up the gui and initializes all the other previously uninitialized variables.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMenuBar()",
+    "name": "getMenuBar",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "javax.swing.JMenuBar",
+      "name": "javax.swing.JMenuBar",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMenuBar()",
+      "comment": "Get the menu bar for this application.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setAppropriateNodeSize()",
+    "name": "setAppropriateNodeSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "setAppropriateNodeSize()",
+      "comment": "This method sets the node size that is appropriate considering the maximum label size that is present. It is used internally when custom node size checkbox is unchecked.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setAppropriateSize()",
+    "name": "setAppropriateSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "setAppropriateSize()",
+      "comment": "Sets the preferred size for m_GraphPanel GraphPanel to the minimum size that is neccessary to display the graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "layoutCompleted(weka.gui.graphvisualizer.LayoutCompleteEvent le)",
+    "name": "layoutCompleted",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.gui.graphvisualizer.LayoutCompleteEvent",
+          "name": "LayoutCompleteEvent",
+          "isArray": false
+        },
+        "name": "le"
+      }
+    ],
+    "protocol": {
+      "member": "layoutCompleted(weka.gui.graphvisualizer.LayoutCompleteEvent le)",
+      "comment": "This method is an implementation for LayoutCompleteEventListener class. It sets the size appropriate for m_GraphPanel GraphPanel and and revalidates it's container JScrollPane once a LayoutCompleteEvent is received from the LayoutEngine. Also, it updates positions of the Bayesian network stored in m_BayesNet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readBIFFromFile(java.lang.String sFileName)",
+    "name": "readBIFFromFile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sFileName"
+      }
+    ],
+    "protocol": {
+      "member": "readBIFFromFile(java.lang.String sFileName)",
+      "comment": "BIF reader<br> Reads a graph description in XMLBIF03 from an file with name sFileName",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initFromArffFile(java.lang.String sFileName)",
+    "name": "initFromArffFile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sFileName"
+      }
+    ],
+    "protocol": {
+      "member": "initFromArffFile(java.lang.String sFileName)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "layoutGraph()",
+    "name": "layoutGraph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "layoutGraph()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateStatus()",
+    "name": "updateStatus",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "updateStatus()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addArcInto(int iChild)",
+    "name": "addArcInto",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iChild"
+      }
+    ],
+    "protocol": {
+      "member": "addArcInto(int iChild)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteArc(int iChild, java.lang.String sParent)",
+    "name": "deleteArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iChild"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sParent"
+      }
+    ],
+    "protocol": {
+      "member": "deleteArc(int iChild, java.lang.String sParent)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteArc(java.lang.String sChild, int iParent)",
+    "name": "deleteArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sChild"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iParent"
+      }
+    ],
+    "protocol": {
+      "member": "deleteArc(java.lang.String sChild, int iParent)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteArc(java.lang.String[] options)",
+    "name": "deleteArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "deleteArc(java.lang.String[] options)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameNode(int nTargetNode)",
+    "name": "renameNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      }
+    ],
+    "protocol": {
+      "member": "renameNode(int nTargetNode)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameValue(int nTargetNode, java.lang.String sValue)",
+    "name": "renameValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sValue"
+      }
+    ],
+    "protocol": {
+      "member": "renameValue(int nTargetNode, java.lang.String sValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteNode(int iNode)",
+    "name": "deleteNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "deleteNode(int iNode)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addValue()",
+    "name": "addValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "addValue()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "delValue(int nTargetNode, java.lang.String sValue)",
+    "name": "delValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sValue"
+      }
+    ],
+    "protocol": {
+      "member": "delValue(int nTargetNode, java.lang.String sValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "editCPT(int nTargetNode)",
+    "name": "editCPT",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      }
+    ],
+    "protocol": {
+      "member": "editCPT(int nTargetNode)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.GUI",
+      "name": "GUI",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.GUI",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method. Builds up menus and reads from file if one is specified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

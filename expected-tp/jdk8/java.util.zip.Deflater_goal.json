@@ -1,0 +1,695 @@
+[
+  {
+    "signature": "java.util.zip.Deflater(int level, boolean nowrap)",
+    "name": "java.util.zip.Deflater",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nowrap"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.Deflater(int level, boolean nowrap)",
+      "comment": "Creates a new compressor using the specified compression level. If 'nowrap' is true then the ZLIB header and checksum fields will not be used in order to support the compression format used in both GZIP and PKZIP.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.Deflater(int level)",
+    "name": "java.util.zip.Deflater",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.Deflater(int level)",
+      "comment": "Creates a new compressor using the specified compression level. Compressed data will be generated in ZLIB format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.Deflater()",
+    "name": "java.util.zip.Deflater",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.zip.Deflater()",
+      "comment": "Creates a new compressor with the default compression level. Compressed data will be generated in ZLIB format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInput(byte[] b, int off, int len)",
+    "name": "setInput",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "setInput(byte[] b, int off, int len)",
+      "comment": "Sets input data for compression. This should be called whenever method_0 returns true indicating that more input data is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInput(byte[] b)",
+    "name": "setInput",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setInput(byte[] b)",
+      "comment": "Sets input data for compression. This should be called whenever method_0 returns true indicating that more input data is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDictionary(byte[] b, int off, int len)",
+    "name": "setDictionary",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "setDictionary(byte[] b, int off, int len)",
+      "comment": "Sets preset dictionary for compression. A preset dictionary is used when the history buffer can be predetermined. When the data is later uncompressed with method_0, method_1 can be called in order to get the Adler-32 value of the dictionary required for decompression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDictionary(byte[] b)",
+    "name": "setDictionary",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setDictionary(byte[] b)",
+      "comment": "Sets preset dictionary for compression. A preset dictionary is used when the history buffer can be predetermined. When the data is later uncompressed with method_0, method_1 can be called in order to get the Adler-32 value of the dictionary required for decompression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setStrategy(int strategy)",
+    "name": "setStrategy",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "strategy"
+      }
+    ],
+    "protocol": {
+      "member": "setStrategy(int strategy)",
+      "comment": "Sets the compression strategy to the specified value.  If the compression strategy is changed, the next invocation of deflate will compress the input available so far with the old strategy (and may be flushed); the new strategy will take effect only after that invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLevel(int level)",
+    "name": "setLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "level"
+      }
+    ],
+    "protocol": {
+      "member": "setLevel(int level)",
+      "comment": "Sets the compression level to the specified value.  If the compression level is changed, the next invocation of deflate will compress the input available so far with the old level (and may be flushed); the new level will take effect only after that invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "needsInput()",
+    "name": "needsInput",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "needsInput()",
+      "comment": "Returns true if the input data buffer is empty and method_0 should be called in order to provide more input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finish()",
+    "name": "finish",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finish()",
+      "comment": "When called, indicates that compression should end with the current contents of the input buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finished()",
+    "name": "finished",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finished()",
+      "comment": "Returns true if the end of the compressed data output stream has been reached.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deflate(byte[] b, int off, int len)",
+    "name": "deflate",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "deflate(byte[] b, int off, int len)",
+      "comment": "Compresses the input data and fills specified buffer with compressed data. Returns actual number of bytes of compressed data. A return value of 0 indicates that method_0 needsInput should be called in order to determine if more input data is required. This method uses method_4 as its compression flush mode. An invocation of this method of the form method_1 yields the same result as the invocation of method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deflate(byte[] b)",
+    "name": "deflate",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "deflate(byte[] b)",
+      "comment": "Compresses the input data and fills specified buffer with compressed data. Returns actual number of bytes of compressed data. A return value of 0 indicates that method_0 needsInput should be called in order to determine if more input data is required. This method uses method_4 as its compression flush mode. An invocation of this method of the form method_1 yields the same result as the invocation of method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deflate(byte[] b, int off, int len, int flush)",
+    "name": "deflate",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flush"
+      }
+    ],
+    "protocol": {
+      "member": "deflate(byte[] b, int off, int len, int flush)",
+      "comment": "Compresses the input data and fills the specified buffer with compressed data. Returns actual number of bytes of data compressed. Compression flush mode is one of the following three modes:  <li>method_2: allows the deflater to decide how much data to accumulate, before producing output, in order to achieve the best compression (should be used in normal use scenario). A return value of 0 in this flush mode indicates that method_0 should be called in order to determine if more input data is required. <li>method_4: all pending output in the deflater is flushed, to the specified output buffer, so that an inflater that works on compressed data can get all input data available so far (In particular the method_0 returns true after this invocation if enough output space is provided). Flushing with method_4 may degrade compression for some compression algorithms and so it should be used only when necessary. <li>method_7: all pending output is flushed out as with method_4. The compression state is reset so that the inflater that works on the compressed output data can restart from this point if previous compressed data has been damaged or if random access is desired. Using method_7 too often can seriously degrade compression.  In the case of method_7 or method_4, if the return value is len, the space available in output buffer b, this method should be invoked again with the same flush parameter and more output space.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAdler()",
+    "name": "getAdler",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAdler()",
+      "comment": "Returns the ADLER-32 value of the uncompressed data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTotalIn()",
+    "name": "getTotalIn",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTotalIn()",
+      "comment": "Returns the total number of uncompressed bytes input so far. Since the number of bytes may be greater than method_1, the method_0 method is now the preferred means of obtaining this information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytesRead()",
+    "name": "getBytesRead",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBytesRead()",
+      "comment": "Returns the total number of uncompressed bytes input so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTotalOut()",
+    "name": "getTotalOut",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTotalOut()",
+      "comment": "Returns the total number of compressed bytes output so far. Since the number of bytes may be greater than method_1, the method_0 method is now the preferred means of obtaining this information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytesWritten()",
+    "name": "getBytesWritten",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBytesWritten()",
+      "comment": "Returns the total number of compressed bytes output so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets deflater so that a new set of input data can be processed. Keeps current compression level and strategy settings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end()",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "end()",
+      "comment": "Closes the compressor and discards any unprocessed input. This method should be called when the compressor is no longer being used, but will also be called automatically by the method_0 method. Once this method is called, the behavior of the Deflater object is undefined.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.end()->!receiverObjectID"
+    }
+  },
+  {
+    "signature": "finalize()",
+    "name": "finalize",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Deflater",
+      "name": "Deflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Deflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finalize()",
+      "comment": "Closes the compressor when garbage is collected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,201 @@
+[
+  {
+    "signature": "cern.colt.list.SimpleLongArrayList()",
+    "name": "cern.colt.list.SimpleLongArrayList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "cern.colt.list.SimpleLongArrayList()",
+      "comment": "Constructs an empty list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cern.colt.list.SimpleLongArrayList(long[] elements)",
+    "name": "cern.colt.list.SimpleLongArrayList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "protocol": {
+      "member": "cern.colt.list.SimpleLongArrayList(long[] elements)",
+      "comment": "Constructs a list containing the specified elements. The initial size and capacity of the list is the length of the array. WARNING: For efficiency reasons and to keep memory usage low, the array is not copied. So if subsequently you modify the specified array directly via the [] operator, be sure you know what you're doing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cern.colt.list.SimpleLongArrayList(int initialCapacity)",
+    "name": "cern.colt.list.SimpleLongArrayList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "cern.colt.list.SimpleLongArrayList(int initialCapacity)",
+      "comment": "Constructs an empty list with the specified initial capacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureCapacity(int minCapacity)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "ensureCapacity(int minCapacity)",
+      "comment": "Ensures that the receiver can hold at least the specified number of elements without needing to allocate new internal memory. If necessary, allocates new internal memory and increases the capacity of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQuick(int index)",
+    "name": "getQuick",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "getQuick(int index)",
+      "comment": "Returns the element at the specified position in the receiver; WARNING: Does not check preconditions. Provided with invalid parameters this method may return invalid elements without throwing any exception! You should only use this method when you are absolutely sure that the index is within bounds. Precondition (unchecked): index >= 0 && index < method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setQuick(int index, long element)",
+    "name": "setQuick",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "setQuick(int index, long element)",
+      "comment": "Replaces the element at the specified position in the receiver with the specified element; WARNING: Does not check preconditions. Provided with invalid parameters this method may access invalid indexes without throwing any exception! You should only use this method when you are absolutely sure that the index is within bounds. Precondition (unchecked): index >= 0 && index < method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trimToSize()",
+    "name": "trimToSize",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.SimpleLongArrayList",
+      "name": "SimpleLongArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.SimpleLongArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "trimToSize()",
+      "comment": "Trims the capacity of the receiver to be the receiver's current size. An application can use this operation to minimize the storage of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

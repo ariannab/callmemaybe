@@ -1,0 +1,1496 @@
+[
+  {
+    "signature": "weka.classifiers.functions.supportVector.StringKernel()",
+    "name": "weka.classifiers.functions.supportVector.StringKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.functions.supportVector.StringKernel()",
+      "comment": "default constructor",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.functions.supportVector.StringKernel(weka.core.Instances data, int cacheSize, int subsequenceLength, double lambda, boolean debug)",
+    "name": "weka.classifiers.functions.supportVector.StringKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "cacheSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "subsequenceLength"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "lambda"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "debug"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.functions.supportVector.StringKernel(weka.core.Instances data, int cacheSize, int subsequenceLength, double lambda, boolean debug)",
+      "comment": "creates a new StringKernel object. Initializes the kernel cache and the 'lambda cache', imethod_0. the precalculated powers of lambda from lambda^2 to lambda^MAX_POWER_OF_LAMBDA",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing the kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -D Enables debugging output (if available) to be printed. (default: off)   -no-checks Turns off all checks - use with caution! (default: checks on)   -P <0|1> The pruning method to use: 0 = No pruning 1 = Lambda pruning (default: 0)   -C <num> The size of the cache (a prime number). (default: 250007)   -IC <num> The size of the internal cache (a prime number). (default: 200003)   -L <num> The lambda constant. Penalizes non-continuous subsequence matches. Must be in (0,1). (default: 0method_0)   -ssl <num> The length of the subsequence. (default: 3)   -ssl-max <num> The maximum length of the subsequence. (default: 9)   -N Use normalization. (default: no)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Kernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pruningMethodTipText()",
+    "name": "pruningMethodTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pruningMethodTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPruningMethod(weka.core.SelectedTag value)",
+    "name": "setPruningMethod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setPruningMethod(weka.core.SelectedTag value)",
+      "comment": "Sets the method used to for pruning.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPruningMethod()",
+    "name": "getPruningMethod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPruningMethod()",
+      "comment": "Gets the method used for pruning.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCacheSize(int value)",
+    "name": "setCacheSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setCacheSize(int value)",
+      "comment": "Sets the size of the cache to use (a prime number)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCacheSize()",
+    "name": "getCacheSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCacheSize()",
+      "comment": "Gets the size of the cache",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cacheSizeTipText()",
+    "name": "cacheSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cacheSizeTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInternalCacheSize(int value)",
+    "name": "setInternalCacheSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setInternalCacheSize(int value)",
+      "comment": "sets the size of the internal cache for intermediate results. Memory consumption is about 16x this amount in bytes. Only use when lambda pruning is switched off.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInternalCacheSize()",
+    "name": "getInternalCacheSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getInternalCacheSize()",
+      "comment": "Gets the size of the internal cache",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internalCacheSizeTipText()",
+    "name": "internalCacheSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "internalCacheSizeTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSubsequenceLength(int value)",
+    "name": "setSubsequenceLength",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setSubsequenceLength(int value)",
+      "comment": "Sets the length of the subsequence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSubsequenceLength()",
+    "name": "getSubsequenceLength",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSubsequenceLength()",
+      "comment": "Returns the length of the subsequence",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subsequenceLengthTipText()",
+    "name": "subsequenceLengthTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "subsequenceLengthTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMaxSubsequenceLength(int value)",
+    "name": "setMaxSubsequenceLength",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setMaxSubsequenceLength(int value)",
+      "comment": "Sets the maximum length of the subsequence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxSubsequenceLength()",
+    "name": "getMaxSubsequenceLength",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMaxSubsequenceLength()",
+      "comment": "Returns the maximum length of the subsequence",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxSubsequenceLengthTipText()",
+    "name": "maxSubsequenceLengthTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxSubsequenceLengthTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLambda(double value)",
+    "name": "setLambda",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setLambda(double value)",
+      "comment": "Sets the lambda constant used in the string kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLambda()",
+    "name": "getLambda",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLambda()",
+      "comment": "Gets the lambda constant used in the string kernel",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lambdaTipText()",
+    "name": "lambdaTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lambdaTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseNormalization(boolean value)",
+    "name": "setUseNormalization",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setUseNormalization(boolean value)",
+      "comment": "Sets whether to use normalization. Each time this value is changed, the kernel cache is cleared.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseNormalization()",
+    "name": "getUseNormalization",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseNormalization()",
+      "comment": "Returns whether normalization is used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useNormalizationTipText()",
+    "name": "useNormalizationTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useNormalizationTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "eval(int id1, int id2, weka.core.Instance inst1)",
+    "name": "eval",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "id1"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "id2"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst1"
+      }
+    ],
+    "protocol": {
+      "member": "eval(int id1, int id2, weka.core.Instance inst1)",
+      "comment": "Computes the result of the kernel function for two instances. If id1 == -1, eval use inst1 instead of an instance in the dataset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clean()",
+    "name": "clean",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clean()",
+      "comment": "Frees the memory used by the kernel. (Useful with kernels which use cache.) This function is called when the training is done. imethod_0. after that, eval will be called with id1 == -1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numEvals()",
+    "name": "numEvals",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numEvals()",
+      "comment": "Returns the number of kernel evaluation performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numCacheHits()",
+    "name": "numCacheHits",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numCacheHits()",
+      "comment": "Returns the number of dot product cache hits.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normalizedKernel(char[] s, char[] t)",
+    "name": "normalizedKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "normalizedKernel(char[] s, char[] t)",
+      "comment": "evaluates the normalized kernel between s and t. See [1] for details about the normalized SSK.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unnormalizedKernel(char[] s, char[] t)",
+    "name": "unnormalizedKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "unnormalizedKernel(char[] s, char[] t)",
+      "comment": "evaluates the unnormalized kernel between s and t. See [1] for details about the unnormalized SSK.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReturnValue(int n)",
+    "name": "getReturnValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "getReturnValue(int n)",
+      "comment": "Recursion-ending function that is called at the end of each recursion branch.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernel(int n, char[] s, int endIndexS, char[] t, int endIndexT)",
+    "name": "kernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexS"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexT"
+      }
+    ],
+    "protocol": {
+      "member": "kernel(int n, char[] s, int endIndexS, char[] t, int endIndexT)",
+      "comment": "the kernel function (Kn). This function performs the outer loop character-wise over the first input string s. For each character encountered, a recursion branch is started that identifies all subsequences in t starting with that character. <br> See [1] for details but note that this code is optimized and may be hard to recognize.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernelHelper(int n, char[] s, int endIndexS, char[] t, int endIndexT)",
+    "name": "kernelHelper",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexS"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexT"
+      }
+    ],
+    "protocol": {
+      "member": "kernelHelper(int n, char[] s, int endIndexS, char[] t, int endIndexT)",
+      "comment": "The kernel helper function, called K' in [1] and [2].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernelHelper2(int n, char[] s, int endIndexS, char[] t, int endIndexT)",
+    "name": "kernelHelper2",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexS"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexT"
+      }
+    ],
+    "protocol": {
+      "member": "kernelHelper2(int n, char[] s, int endIndexS, char[] t, int endIndexT)",
+      "comment": "helper function for the evaluation of the kernel K'' see section 'Efficient Computation of SSK' in [1]",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernelLP(int n, char[] s, int endIndexS, char[] t, int endIndexT, int remainingMatchLength)",
+    "name": "kernelLP",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexS"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexT"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "remainingMatchLength"
+      }
+    ],
+    "protocol": {
+      "member": "kernelLP(int n, char[] s, int endIndexS, char[] t, int endIndexT, int remainingMatchLength)",
+      "comment": "the kernel function K explained in [1] using lambda pruning, explained in [2]. An additional parameter is introduced, which denotes the maximum length of a subsequence match. This allows for the control of how relaxed the subsequence matches are. <br>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernelHelperLP(int n, char[] s, int endIndexS, char[] t, int endIndexT, int remainingMatchLength)",
+    "name": "kernelHelperLP",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexS"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexT"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "remainingMatchLength"
+      }
+    ],
+    "protocol": {
+      "member": "kernelHelperLP(int n, char[] s, int endIndexS, char[] t, int endIndexT, int remainingMatchLength)",
+      "comment": "helper function for the evaluation of the kernel (K'n) using lambda pruning",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernelHelper2LP(int n, char[] s, int endIndexS, char[] t, int endIndexT, int remainingMatchLength)",
+    "name": "kernelHelper2LP",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "s"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexS"
+      },
+      {
+        "type": {
+          "qualifiedName": "[C",
+          "name": "char[]",
+          "isArray": true
+        },
+        "name": "t"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndexT"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "remainingMatchLength"
+      }
+    ],
+    "protocol": {
+      "member": "kernelHelper2LP(int n, char[] s, int endIndexS, char[] t, int endIndexT, int remainingMatchLength)",
+      "comment": "helper function for the evaluation of the kernel (K''n) using lambda pruning",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initVars(weka.core.Instances data)",
+    "name": "initVars",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "initVars(weka.core.Instances data)",
+      "comment": "initializes variables etc.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns the Capabilities of this kernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildKernel(weka.core.Instances data)",
+    "name": "buildKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildKernel(weka.core.Instances data)",
+      "comment": "builds the kernel with the given data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.StringKernel",
+      "name": "StringKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.StringKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

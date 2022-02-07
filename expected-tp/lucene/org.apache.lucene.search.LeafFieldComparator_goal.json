@@ -1,0 +1,170 @@
+[
+  {
+    "signature": "setBottom(int slot)",
+    "name": "setBottom",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.LeafFieldComparator",
+      "name": "LeafFieldComparator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.LeafFieldComparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "slot"
+      }
+    ],
+    "protocol": {
+      "member": "setBottom(int slot)",
+      "comment": "Set the bottom slot, ie the \"weakest\" (sorted last) entry in the queue. When method_0 is called, you should compare against this slot. This will always be called before method_0.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.setBottom(args[0])->receiverObjectID.compareBottom(int)"
+    }
+  },
+  {
+    "signature": "compareBottom(int doc)",
+    "name": "compareBottom",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.LeafFieldComparator",
+      "name": "LeafFieldComparator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.LeafFieldComparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "compareBottom(int doc)",
+      "comment": "Compare the bottom of the queue with this doc. This will only invoked after setBottom has been called. This should return the same result as method_0} as if bottom were slot1 and the new document were slot 2. For a search that hits many results, this method will be the hotspot (invoked by far the most frequently).",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.compareBottom(args[0])<-receiverObjectID.setBottom(int)"
+    }
+  },
+  {
+    "signature": "compareTop(int doc)",
+    "name": "compareTop",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.LeafFieldComparator",
+      "name": "LeafFieldComparator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.LeafFieldComparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "compareTop(int doc)",
+      "comment": "Compare the top value with this doc. This will only invoked after setTopValue has been called. This should return the same result as method_0} as if topValue were slot1 and the new document were slot 2. This is only called for searches that use searchAfter (deep paging).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy(int slot, int doc)",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.LeafFieldComparator",
+      "name": "LeafFieldComparator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.LeafFieldComparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "slot"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "copy(int slot, int doc)",
+      "comment": "This method is called when a new hit is competitive. You should copy any state associated with this document that will be required for future comparisons, into the specified slot.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setScorer(org.apache.lucene.search.Scorer scorer)",
+    "name": "setScorer",
+    "containingClass": {
+      "qualifiedName": "org.apache.lucene.search.LeafFieldComparator",
+      "name": "LeafFieldComparator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.lucene.search.LeafFieldComparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.lucene.search.Scorer",
+          "name": "Scorer",
+          "isArray": false
+        },
+        "name": "scorer"
+      }
+    ],
+    "protocol": {
+      "member": "setScorer(org.apache.lucene.search.Scorer scorer)",
+      "comment": "needed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

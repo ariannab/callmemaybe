@@ -1,0 +1,2020 @@
+[
+  {
+    "signature": "java.util.concurrent.ConcurrentSkipListMap()",
+    "name": "java.util.concurrent.ConcurrentSkipListMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentSkipListMap()",
+      "comment": "Constructs a new, empty map, sorted according to the Comparable natural ordering of the keys.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentSkipListMap(java.util.Comparator<? super K> comparator)",
+    "name": "java.util.concurrent.ConcurrentSkipListMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentSkipListMap(java.util.Comparator<? super K> comparator)",
+      "comment": "Constructs a new, empty map, sorted according to the specified comparator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentSkipListMap(java.util.Map<? extends K, ? extends V> m)",
+    "name": "java.util.concurrent.ConcurrentSkipListMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentSkipListMap(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Constructs a new map containing the same mappings as the given map, sorted according to the Comparable natural ordering of the keys.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentSkipListMap(java.util.SortedMap<K, ? extends V> m)",
+    "name": "java.util.concurrent.ConcurrentSkipListMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.SortedMap",
+          "name": "SortedMap",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentSkipListMap(java.util.SortedMap<K, ? extends V> m)",
+      "comment": "Constructs a new map containing the same mappings and using the same ordering as the specified sorted map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cpr(java.util.Comparator c, java.lang.Object x, java.lang.Object y)",
+    "name": "cpr",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "cpr(java.util.Comparator c, java.lang.Object x, java.lang.Object y)",
+      "comment": "Compares using comparator or natural ordering if null. Called only by methods that have performed required type checks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doRemove(java.lang.Object key, java.lang.Object value)",
+    "name": "doRemove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "doRemove(java.lang.Object key, java.lang.Object value)",
+      "comment": "Main deletion method. Locates node, nulls value, appends a deletion marker, unlinks predecessor, removes associated index nodes, and possibly reduces head index level. Index nodes are cleared out simply by calling findPredecessor. which unlinks indexes to deleted nodes found along path to key, which will include the indexes to this node. This is done unconditionally. We can't check beforehand whether there are index nodes because it might be the case that some or all indexes hadn't been inserted yet for this node during initial search for it, and we'd like to ensure lack of garbage retention, so must call to be sure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findFirst()",
+    "name": "findFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap$Node<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "findFirst()",
+      "comment": "Specialized variant of findNode to get first valid node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findLast()",
+    "name": "findLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap$Node<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "findLast()",
+      "comment": "Specialized version of find to get last valid node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findNear(K key, int rel, java.util.Comparator<? super K> cmp)",
+    "name": "findNear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap$Node<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap$Node<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rel"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "cmp"
+      }
+    ],
+    "protocol": {
+      "member": "findNear(K key, int rel, java.util.Comparator<? super K> cmp)",
+      "comment": "Utility for ceiling, floor, lower, higher methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNear(K key, int rel)",
+    "name": "getNear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.AbstractMap$SimpleImmutableEntry<K, V>",
+      "name": "java.util.AbstractMap$SimpleImmutableEntry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "rel"
+      }
+    ],
+    "protocol": {
+      "member": "getNear(K key, int rel)",
+      "comment": "Returns SimpleImmutableEntry for results of findNear.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a shallow copy of this ConcurrentSkipListMap instance. (The keys and values themselves are not cloned.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "Returns true if this map contains a mapping for the specified key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that key compares equal to k according to the map's ordering, then this method returns v; otherwise it returns null. (There can be at most one such mapping.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOrDefault(java.lang.Object key, V defaultValue)",
+    "name": "getOrDefault",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getOrDefault(java.lang.Object key, V defaultValue)",
+      "comment": "Returns the value to which the specified key is mapped, or the given defaultValue if this map contains no mapping for the key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "Associates the specified value with the specified key in this map. If the map previously contained a mapping for the key, the old value is replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "Removes the mapping for the specified key from this map if present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if this map maps one or more keys to the specified value. This operation requires time linear in the map size. Additionally, it is possible for the map to change during execution of this method, in which case the returned result may be inaccurate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of key-value mappings in this map. If this map contains more than method_0 elements, it returns method_0. Beware that, unlike in most collections, this method is NOT a constant-time operation. Because of the asynchronous nature of these maps, determining the current number of elements requires traversing them all to count them. Additionally, it is possible for the size to change during execution of this method, in which case the returned result will be inaccurate. Thus, this method is typically not very useful in concurrent applications.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "Returns true if this map contains no key-value mappings.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the mappings from this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+    "name": "computeIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+      "comment": "If the specified key is not already associated with a value, attempts to compute its value using the given mapping function and enters it into this map unless null. The function is NOT guaranteed to be applied once atomically only if the value is not present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "computeIfPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "If the value for the specified key is present, attempts to compute a new mapping given the key and its current mapped value. The function is NOT guaranteed to be applied once atomically.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "Attempts to compute a mapping for the specified key and its current mapped value (or null if there is no current mapping). The function is NOT guaranteed to be applied once atomically.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+    "name": "merge",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+      "comment": "If the specified key is not already associated with a value, associates it with the given value. Otherwise, replaces the value with the results of the given remapping function, or removes if null. The function is NOT guaranteed to be applied once atomically.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableSet<K>",
+      "name": "java.util.NavigableSet<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a NavigableSet view of the keys contained in this map. The set's iterator returns the keys in ascending order. The set's spliterator additionally reports method_2, method_3, method_4 and method_5, with an encounter order that is ascending key order. The spliterator's comparator (see java.method_0) is null if the map's comparator (see method_1) is null. Otherwise, the spliterator's comparator is the same as or imposes the same total ordering as the map's comparator. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. The set supports element removal, which removes the corresponding mapping from the map, via the method_10, method_11, removeAll, retainAll, and clear operations. It does not support the add or addAll operations. The view's iterators and spliterators are <i>weakly consistent</i>. This method is equivalent to method navigableKeySet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "navigableKeySet()",
+    "name": "navigableKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableSet<K>",
+      "name": "java.util.NavigableSet<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "navigableKeySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "Returns a Collection view of the values contained in this map. The collection's iterator returns the values in ascending order of the corresponding keys. The collections's spliterator additionally reports method_0, method_1 and method_2, with an encounter order that is ascending order of the corresponding keys. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa. The collection supports element removal, which removes the corresponding mapping from the map, via the method_3, method_4, removeAll, retainAll and clear operations. It does not support the add or addAll operations. The view's iterators and spliterators are <i>weakly consistent</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "Returns a Set view of the mappings contained in this map. The set's iterator returns the entries in ascending key order. The set's spliterator additionally reports method_0, method_1, method_2 and method_3, with an encounter order that is ascending key order. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. The set supports element removal, which removes the corresponding mapping from the map, via the method_4, method_5, removeAll, retainAll and clear operations. It does not support the add or addAll operations. The view's iterators and spliterators are <i>weakly consistent</i>. The method_8 elements traversed by the iterator or spliterator do not support the setValue operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingMap()",
+    "name": "descendingMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingMap()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingKeySet()",
+    "name": "descendingKeySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.NavigableSet<K>",
+      "name": "java.util.NavigableSet<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingKeySet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object o)",
+      "comment": "Compares the specified object with this map for equality. Returns true if the given object is also a map and the two maps represent the same mappings. More formally, two maps m1 and m2 represent the same mappings if method_0method_1. This operation may return misleading results if either map is concurrently modified during execution of this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putIfAbsent(K key, V value)",
+    "name": "putIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putIfAbsent(K key, V value)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key, java.lang.Object value)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key, java.lang.Object value)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V oldValue, V newValue)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "oldValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V oldValue, V newValue)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V value)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V value)",
+      "comment": "{@inheritDoc}",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparator()",
+    "name": "comparator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<? super K>",
+      "name": "java.util.Comparator<? super K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "comparator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstKey()",
+    "name": "firstKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "firstKey()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastKey()",
+    "name": "lastKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lastKey()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)",
+    "name": "subMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fromInclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "toInclusive"
+      }
+    ],
+    "protocol": {
+      "member": "subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "headMap(K toKey, boolean inclusive)",
+    "name": "headMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "protocol": {
+      "member": "headMap(K toKey, boolean inclusive)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailMap(K fromKey, boolean inclusive)",
+    "name": "tailMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "inclusive"
+      }
+    ],
+    "protocol": {
+      "member": "tailMap(K fromKey, boolean inclusive)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subMap(K fromKey, K toKey)",
+    "name": "subMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      }
+    ],
+    "protocol": {
+      "member": "subMap(K fromKey, K toKey)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "headMap(K toKey)",
+    "name": "headMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toKey"
+      }
+    ],
+    "protocol": {
+      "member": "headMap(K toKey)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tailMap(K fromKey)",
+    "name": "tailMap",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "name": "java.util.concurrent.ConcurrentNavigableMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "fromKey"
+      }
+    ],
+    "protocol": {
+      "member": "tailMap(K fromKey)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerEntry(K key)",
+    "name": "lowerEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "lowerEntry(K key)",
+      "comment": "Returns a key-value mapping associated with the greatest key strictly less than the given key, or null if there is no such key. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lowerKey(K key)",
+    "name": "lowerKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "lowerKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floorEntry(K key)",
+    "name": "floorEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "floorEntry(K key)",
+      "comment": "Returns a key-value mapping associated with the greatest key less than or equal to the given key, or null if there is no such key. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floorKey(K key)",
+    "name": "floorKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "floorKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ceilingEntry(K key)",
+    "name": "ceilingEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "ceilingEntry(K key)",
+      "comment": "Returns a key-value mapping associated with the least key greater than or equal to the given key, or null if there is no such entry. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ceilingKey(K key)",
+    "name": "ceilingKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "ceilingKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "higherEntry(K key)",
+    "name": "higherEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "higherEntry(K key)",
+      "comment": "Returns a key-value mapping associated with the least key strictly greater than the given key, or null if there is no such key. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "higherKey(K key)",
+    "name": "higherKey",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "K",
+      "name": "K",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "higherKey(K key)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "firstEntry()",
+    "name": "firstEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "firstEntry()",
+      "comment": "Returns a key-value mapping associated with the least key in this map, or null if the map is empty. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastEntry()",
+    "name": "lastEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lastEntry()",
+      "comment": "Returns a key-value mapping associated with the greatest key in this map, or null if the map is empty. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollFirstEntry()",
+    "name": "pollFirstEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pollFirstEntry()",
+      "comment": "Removes and returns a key-value mapping associated with the least key in this map, or null if the map is empty. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollLastEntry()",
+    "name": "pollLastEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map$Entry<K, V>",
+      "name": "java.util.Map$Entry<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pollLastEntry()",
+      "comment": "Removes and returns a key-value mapping associated with the greatest key in this map, or null if the map is empty. The returned entry does not support the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keyIterator()",
+    "name": "keyIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<K>",
+      "name": "java.util.Iterator<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keyIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueIterator()",
+    "name": "valueIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<V>",
+      "name": "java.util.Iterator<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "valueIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entryIterator()",
+    "name": "entryIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Iterator<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entryIterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toList(java.util.Collection<E> c)",
+    "name": "toList",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<E>",
+      "name": "java.util.List<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "toList(java.util.Collection<E> c)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySpliterator()",
+    "name": "keySpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap$KeySpliterator<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap$KeySpliterator<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySpliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueSpliterator()",
+    "name": "valueSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap$ValueSpliterator<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap$ValueSpliterator<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "valueSpliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySpliterator()",
+    "name": "entrySpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap",
+      "name": "ConcurrentSkipListMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentSkipListMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentSkipListMap$EntrySpliterator<K, V>",
+      "name": "java.util.concurrent.ConcurrentSkipListMap$EntrySpliterator<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySpliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

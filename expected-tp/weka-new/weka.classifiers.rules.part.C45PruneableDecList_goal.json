@@ -1,0 +1,194 @@
+[
+  {
+    "signature": "weka.classifiers.rules.part.C45PruneableDecList(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, double cf, int minNum)",
+    "name": "weka.classifiers.rules.part.C45PruneableDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.C45PruneableDecList",
+      "name": "C45PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.C45PruneableDecList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ModelSelection",
+          "name": "ModelSelection",
+          "isArray": false
+        },
+        "name": "toSelectLocModel"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "cf"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minNum"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.rules.part.C45PruneableDecList(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, double cf, int minNum)",
+      "comment": "Constructor for pruneable tree structure. Stores reference to associated training data at each node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildDecList(weka.core.Instances data, boolean leaf)",
+    "name": "buildDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.C45PruneableDecList",
+      "name": "C45PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.C45PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "leaf"
+      }
+    ],
+    "protocol": {
+      "member": "buildDecList(weka.core.Instances data, boolean leaf)",
+      "comment": "Builds the partial tree without hold out set. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNewDecList(weka.core.Instances data, boolean leaf)",
+    "name": "getNewDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.C45PruneableDecList",
+      "name": "C45PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.C45PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "weka.classifiers.rules.part.ClassifierDecList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "leaf"
+      }
+    ],
+    "protocol": {
+      "member": "getNewDecList(weka.core.Instances data, boolean leaf)",
+      "comment": "Returns a newly created tree. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pruneEnd()",
+    "name": "pruneEnd",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.C45PruneableDecList",
+      "name": "C45PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.C45PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pruneEnd()",
+      "comment": "Prunes the end of the rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEstimatedErrorsForLeaf()",
+    "name": "getEstimatedErrorsForLeaf",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.C45PruneableDecList",
+      "name": "C45PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.C45PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEstimatedErrorsForLeaf()",
+      "comment": "Computes estimated errors for leaf.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.C45PruneableDecList",
+      "name": "C45PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.C45PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

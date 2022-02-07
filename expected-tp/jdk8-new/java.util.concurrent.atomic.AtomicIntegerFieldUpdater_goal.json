@@ -1,0 +1,692 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater()",
+    "name": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater()",
+      "comment": "Protected do-nothing constructor for use by subclasses.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newUpdater(java.lang.Class<U> tclass, java.lang.String fieldName)",
+    "name": "newUpdater",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>",
+      "name": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "tclass"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fieldName"
+      }
+    ],
+    "protocol": {
+      "member": "newUpdater(java.lang.Class<U> tclass, java.lang.String fieldName)",
+      "comment": "Creates and returns an updater for objects with the given field. The Class argument is needed to check that reflective types and generic types match.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareAndSet(T obj, int expect, int update)",
+    "name": "compareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expect"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "update"
+      }
+    ],
+    "protocol": {
+      "member": "compareAndSet(T obj, int expect, int update)",
+      "comment": "Atomically sets the field of the given object managed by this updater to the given updated value if the current value == the expected value. This method is guaranteed to be atomic with respect to other calls to compareAndSet and set, but not necessarily with respect to other changes in the field.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weakCompareAndSet(T obj, int expect, int update)",
+    "name": "weakCompareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expect"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "update"
+      }
+    ],
+    "protocol": {
+      "member": "weakCompareAndSet(T obj, int expect, int update)",
+      "comment": "Atomically sets the field of the given object managed by this updater to the given updated value if the current value == the expected value. This method is guaranteed to be atomic with respect to other calls to compareAndSet and set, but not necessarily with respect to other changes in the field. May fail spuriously and does not provide ordering guarantees, so is only rarely an appropriate alternative to compareAndSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(T obj, int newValue)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "set(T obj, int newValue)",
+      "comment": "Sets the field of the given object managed by this updater to the given updated value. This operation is guaranteed to act as a volatile store with respect to subsequent invocations of compareAndSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lazySet(T obj, int newValue)",
+    "name": "lazySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "lazySet(T obj, int newValue)",
+      "comment": "Eventually sets the field of the given object managed by this updater to the given updated value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(T obj)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "get(T obj)",
+      "comment": "Gets the current value held in the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndSet(T obj, int newValue)",
+    "name": "getAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "getAndSet(T obj, int newValue)",
+      "comment": "Atomically sets the field of the given object managed by this updater to the given value and returns the old value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndIncrement(T obj)",
+    "name": "getAndIncrement",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "getAndIncrement(T obj)",
+      "comment": "Atomically increments by one the current value of the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndDecrement(T obj)",
+    "name": "getAndDecrement",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "getAndDecrement(T obj)",
+      "comment": "Atomically decrements by one the current value of the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndAdd(T obj, int delta)",
+    "name": "getAndAdd",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "delta"
+      }
+    ],
+    "protocol": {
+      "member": "getAndAdd(T obj, int delta)",
+      "comment": "Atomically adds the given value to the current value of the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incrementAndGet(T obj)",
+    "name": "incrementAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "incrementAndGet(T obj)",
+      "comment": "Atomically increments by one the current value of the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decrementAndGet(T obj)",
+    "name": "decrementAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "decrementAndGet(T obj)",
+      "comment": "Atomically decrements by one the current value of the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAndGet(T obj, int delta)",
+    "name": "addAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "delta"
+      }
+    ],
+    "protocol": {
+      "member": "addAndGet(T obj, int delta)",
+      "comment": "Atomically adds the given value to the current value of the field of the given object managed by this updater.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndUpdate(T obj, java.util.function.IntUnaryOperator updateFunction)",
+    "name": "getAndUpdate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntUnaryOperator",
+          "name": "IntUnaryOperator",
+          "isArray": false
+        },
+        "name": "updateFunction"
+      }
+    ],
+    "protocol": {
+      "member": "getAndUpdate(T obj, java.util.function.IntUnaryOperator updateFunction)",
+      "comment": "Atomically updates the field of the given object managed by this updater with the results of applying the given function, returning the previous value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateAndGet(T obj, java.util.function.IntUnaryOperator updateFunction)",
+    "name": "updateAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntUnaryOperator",
+          "name": "IntUnaryOperator",
+          "isArray": false
+        },
+        "name": "updateFunction"
+      }
+    ],
+    "protocol": {
+      "member": "updateAndGet(T obj, java.util.function.IntUnaryOperator updateFunction)",
+      "comment": "Atomically updates the field of the given object managed by this updater with the results of applying the given function, returning the updated value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndAccumulate(T obj, int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+    "name": "getAndAccumulate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "accumulatorFunction"
+      }
+    ],
+    "protocol": {
+      "member": "getAndAccumulate(T obj, int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+      "comment": "Atomically updates the field of the given object managed by this updater with the results of applying the given function to the current and given values, returning the previous value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads. The function is applied with the current value as its first argument, and the given update as the second argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accumulateAndGet(T obj, int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+    "name": "accumulateAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+      "name": "AtomicIntegerFieldUpdater",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicIntegerFieldUpdater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "accumulatorFunction"
+      }
+    ],
+    "protocol": {
+      "member": "accumulateAndGet(T obj, int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+      "comment": "Atomically updates the field of the given object managed by this updater with the results of applying the given function to the current and given values, returning the updated value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads. The function is applied with the current value as its first argument, and the given update as the second argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

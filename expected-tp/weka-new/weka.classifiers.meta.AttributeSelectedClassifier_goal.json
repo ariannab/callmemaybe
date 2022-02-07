@@ -1,0 +1,681 @@
+[
+  {
+    "signature": "weka.classifiers.meta.AttributeSelectedClassifier()",
+    "name": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.AttributeSelectedClassifier()",
+      "comment": "Default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing this search method",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -E <attribute evaluator specification> Full class name of attribute evaluator, followed by its options. eg: \"wekamethod_0method_1 -L\" (default wekamethod_0method_1)  -S <search method specification> Full class name of search method, followed by its options. eg: \"wekamethod_0method_5 -D 1\" (default wekamethod_0method_5)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_8method_9method_10)  Options specific to classifier wekamethod_8method_9method_10:   -U Use unpruned tree.  -C <pruning confidence> Set confidence threshold for pruning. (default 0method_14)  -M <minimum number of instances> Set minimum number of instances per leaf. (default 2)  -R Use reduced error pruning.  -N <number of folds> Set number of folds for reduced error pruning. One fold is used as pruning set. (default 3)  -B Use binary splits only.  -S Don't perform subtree raising.  -L Do not clean up after the tree has been built.  -A Laplace smoothing for predicted probabilities.  -Q <seed> Seed for random data shuffling (default 1).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluatorTipText()",
+    "name": "evaluatorTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "evaluatorTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEvaluator(weka.attributeSelection.ASEvaluation evaluator)",
+    "name": "setEvaluator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.attributeSelection.ASEvaluation",
+          "name": "ASEvaluation",
+          "isArray": false
+        },
+        "name": "evaluator"
+      }
+    ],
+    "protocol": {
+      "member": "setEvaluator(weka.attributeSelection.ASEvaluation evaluator)",
+      "comment": "Sets the attribute evaluator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEvaluator()",
+    "name": "getEvaluator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.attributeSelection.ASEvaluation",
+      "name": "weka.attributeSelection.ASEvaluation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEvaluator()",
+      "comment": "Gets the attribute evaluator used",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEvaluatorSpec()",
+    "name": "getEvaluatorSpec",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEvaluatorSpec()",
+      "comment": "Gets the evaluator specification string, which contains the class name of the attribute evaluator and any options to it",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchTipText()",
+    "name": "searchTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "searchTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSearch(weka.attributeSelection.ASSearch search)",
+    "name": "setSearch",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.attributeSelection.ASSearch",
+          "name": "ASSearch",
+          "isArray": false
+        },
+        "name": "search"
+      }
+    ],
+    "protocol": {
+      "member": "setSearch(weka.attributeSelection.ASSearch search)",
+      "comment": "Sets the search method",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSearch()",
+    "name": "getSearch",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.attributeSelection.ASSearch",
+      "name": "weka.attributeSelection.ASSearch",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSearch()",
+      "comment": "Gets the search method used",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSearchSpec()",
+    "name": "getSearchSpec",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSearchSpec()",
+      "comment": "Gets the search specification string, which contains the class name of the search method and any options to it",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Build the classifier on the dimensionally reduced data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Classifies a given instance after attribute selection",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphType()",
+    "name": "graphType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphType()",
+      "comment": "Returns the type of graph this classifier represents. @return the type of graph",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "Returns graph describing the classifier (if possible).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Output a representation of this classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureNumAttributesSelected()",
+    "name": "measureNumAttributesSelected",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureNumAttributesSelected()",
+      "comment": "Additional measure --- number of attributes selected",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureSelectionTime()",
+    "name": "measureSelectionTime",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureSelectionTime()",
+      "comment": "Additional measure --- time taken (milliseconds) to select the attributes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureTime()",
+    "name": "measureTime",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureTime()",
+      "comment": "Additional measure --- time taken (milliseconds) to select attributes and build the classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the additional measure names",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String additionalMeasureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "additionalMeasureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String additionalMeasureName)",
+      "comment": "Returns the value of the named measure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AttributeSelectedClassifier",
+      "name": "AttributeSelectedClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AttributeSelectedClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

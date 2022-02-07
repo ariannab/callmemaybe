@@ -1,0 +1,1116 @@
+[
+  {
+    "signature": "localInit()",
+    "name": "localInit",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "localInit()",
+      "comment": "Initialize Thread fields for the current thread. Called only when method_0 is zero, indicating that a thread local seed value needs to be generated. Note that even though the initialization is purely thread-local, we need to rely on (static) atomic generators to initialize the values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "current()",
+    "name": "current",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "java.util.concurrent.ThreadLocalRandom",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "current()",
+      "comment": "Returns the current thread's ThreadLocalRandom.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSeed(long seed)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "seed"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(long seed)",
+      "comment": "Throws UnsupportedOperationException. Setting seeds in this generator is not supported.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextSeed()",
+    "name": "nextSeed",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextSeed()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next(int bits)",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bits"
+      }
+    ],
+    "protocol": {
+      "member": "next(int bits)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internalNextLong(long origin, long bound)",
+    "name": "internalNextLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "origin"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "internalNextLong(long origin, long bound)",
+      "comment": "The form of nextLong used by LongStream Spliterators. If origin is greater than bound, acts as unbounded form of nextLong, else as bounded form.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internalNextInt(int origin, int bound)",
+    "name": "internalNextInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "origin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "internalNextInt(int origin, int bound)",
+      "comment": "The form of nextInt used by IntStream Spliterators. Exactly the same as long version, except for types.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "internalNextDouble(double origin, double bound)",
+    "name": "internalNextDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "origin"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "internalNextDouble(double origin, double bound)",
+      "comment": "The form of nextDouble used by DoubleStream Spliterators.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextInt()",
+    "name": "nextInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextInt()",
+      "comment": "Returns a pseudorandom int value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextInt(int bound)",
+    "name": "nextInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "nextInt(int bound)",
+      "comment": "Returns a pseudorandom int value between zero (inclusive) and the specified bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextInt(int origin, int bound)",
+    "name": "nextInt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "origin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "nextInt(int origin, int bound)",
+      "comment": "Returns a pseudorandom int value between the specified origin (inclusive) and the specified bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextLong()",
+    "name": "nextLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextLong()",
+      "comment": "Returns a pseudorandom long value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextLong(long bound)",
+    "name": "nextLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "nextLong(long bound)",
+      "comment": "Returns a pseudorandom long value between zero (inclusive) and the specified bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextLong(long origin, long bound)",
+    "name": "nextLong",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "origin"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "nextLong(long origin, long bound)",
+      "comment": "Returns a pseudorandom long value between the specified origin (inclusive) and the specified bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextDouble()",
+    "name": "nextDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextDouble()",
+      "comment": "Returns a pseudorandom double value between zero (inclusive) and one (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextDouble(double bound)",
+    "name": "nextDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "nextDouble(double bound)",
+      "comment": "Returns a pseudorandom double value between 0method_0 (inclusive) and the specified bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextDouble(double origin, double bound)",
+    "name": "nextDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "origin"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "bound"
+      }
+    ],
+    "protocol": {
+      "member": "nextDouble(double origin, double bound)",
+      "comment": "Returns a pseudorandom double value between the specified origin (inclusive) and bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextBoolean()",
+    "name": "nextBoolean",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextBoolean()",
+      "comment": "Returns a pseudorandom boolean value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextFloat()",
+    "name": "nextFloat",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextFloat()",
+      "comment": "Returns a pseudorandom float value between zero (inclusive) and one (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextGaussian()",
+    "name": "nextGaussian",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextGaussian()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ints(long streamSize)",
+    "name": "ints",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "streamSize"
+      }
+    ],
+    "protocol": {
+      "member": "ints(long streamSize)",
+      "comment": "Returns a stream producing the given streamSize number of pseudorandom int values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ints()",
+    "name": "ints",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "ints()",
+      "comment": "Returns an effectively unlimited stream of pseudorandom int values. @implNote This method is implemented to be equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ints(long streamSize, int randomNumberOrigin, int randomNumberBound)",
+    "name": "ints",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "streamSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "randomNumberOrigin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "randomNumberBound"
+      }
+    ],
+    "protocol": {
+      "member": "ints(long streamSize, int randomNumberOrigin, int randomNumberBound)",
+      "comment": "Returns a stream producing the given streamSize number of pseudorandom int values, each conforming to the given origin (inclusive) and bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ints(int randomNumberOrigin, int randomNumberBound)",
+    "name": "ints",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "randomNumberOrigin"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "randomNumberBound"
+      }
+    ],
+    "protocol": {
+      "member": "ints(int randomNumberOrigin, int randomNumberBound)",
+      "comment": "Returns an effectively unlimited stream of pseudorandom int values, each conforming to the given origin (inclusive) and bound (exclusive). @implNote This method is implemented to be equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longs(long streamSize)",
+    "name": "longs",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.LongStream",
+      "name": "java.util.stream.LongStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "streamSize"
+      }
+    ],
+    "protocol": {
+      "member": "longs(long streamSize)",
+      "comment": "Returns a stream producing the given streamSize number of pseudorandom long values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longs()",
+    "name": "longs",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.LongStream",
+      "name": "java.util.stream.LongStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "longs()",
+      "comment": "Returns an effectively unlimited stream of pseudorandom long values. @implNote This method is implemented to be equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longs(long streamSize, long randomNumberOrigin, long randomNumberBound)",
+    "name": "longs",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.LongStream",
+      "name": "java.util.stream.LongStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "streamSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "randomNumberOrigin"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "randomNumberBound"
+      }
+    ],
+    "protocol": {
+      "member": "longs(long streamSize, long randomNumberOrigin, long randomNumberBound)",
+      "comment": "Returns a stream producing the given streamSize number of pseudorandom long, each conforming to the given origin (inclusive) and bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longs(long randomNumberOrigin, long randomNumberBound)",
+    "name": "longs",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.LongStream",
+      "name": "java.util.stream.LongStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "randomNumberOrigin"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "randomNumberBound"
+      }
+    ],
+    "protocol": {
+      "member": "longs(long randomNumberOrigin, long randomNumberBound)",
+      "comment": "Returns an effectively unlimited stream of pseudorandom long values, each conforming to the given origin (inclusive) and bound (exclusive). @implNote This method is implemented to be equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubles(long streamSize)",
+    "name": "doubles",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.DoubleStream",
+      "name": "java.util.stream.DoubleStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "streamSize"
+      }
+    ],
+    "protocol": {
+      "member": "doubles(long streamSize)",
+      "comment": "Returns a stream producing the given streamSize number of pseudorandom double values, each between zero (inclusive) and one (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubles()",
+    "name": "doubles",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.DoubleStream",
+      "name": "java.util.stream.DoubleStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doubles()",
+      "comment": "Returns an effectively unlimited stream of pseudorandom double values, each between zero (inclusive) and one (exclusive). @implNote This method is implemented to be equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubles(long streamSize, double randomNumberOrigin, double randomNumberBound)",
+    "name": "doubles",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.DoubleStream",
+      "name": "java.util.stream.DoubleStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "streamSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "randomNumberOrigin"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "randomNumberBound"
+      }
+    ],
+    "protocol": {
+      "member": "doubles(long streamSize, double randomNumberOrigin, double randomNumberBound)",
+      "comment": "Returns a stream producing the given streamSize number of pseudorandom double values, each conforming to the given origin (inclusive) and bound (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubles(double randomNumberOrigin, double randomNumberBound)",
+    "name": "doubles",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.DoubleStream",
+      "name": "java.util.stream.DoubleStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "randomNumberOrigin"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "randomNumberBound"
+      }
+    ],
+    "protocol": {
+      "member": "doubles(double randomNumberOrigin, double randomNumberBound)",
+      "comment": "Returns an effectively unlimited stream of pseudorandom double values, each conforming to the given origin (inclusive) and bound (exclusive). @implNote This method is implemented to be equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProbe()",
+    "name": "getProbe",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getProbe()",
+      "comment": "Returns the probe value for the current thread without forcing initialization. Note that invoking method_0 can be used to force initialization on zero return.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "advanceProbe(int probe)",
+    "name": "advanceProbe",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "probe"
+      }
+    ],
+    "protocol": {
+      "member": "advanceProbe(int probe)",
+      "comment": "Pseudo-randomly advances and records the given probe value for the given thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextSecondarySeed()",
+    "name": "nextSecondarySeed",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ThreadLocalRandom",
+      "name": "ThreadLocalRandom",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ThreadLocalRandom",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextSecondarySeed()",
+      "comment": "Returns the pseudo-randomly initialized or updated secondary seed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

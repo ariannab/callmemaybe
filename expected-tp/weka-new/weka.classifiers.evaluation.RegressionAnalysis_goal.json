@@ -1,0 +1,393 @@
+[
+  {
+    "signature": "calculateSSR(weka.core.Instances data, weka.core.Attribute chosen, double slope, double intercept)",
+    "name": "calculateSSR",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "chosen"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "slope"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "intercept"
+      }
+    ],
+    "protocol": {
+      "member": "calculateSSR(weka.core.Instances data, weka.core.Attribute chosen, double slope, double intercept)",
+      "comment": "Returns the sum of squared residuals of the simple linear regression model: y = a + bx.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateRSquared(weka.core.Instances data, double ssr)",
+    "name": "calculateRSquared",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "ssr"
+      }
+    ],
+    "protocol": {
+      "member": "calculateRSquared(weka.core.Instances data, double ssr)",
+      "comment": "Returns the R-squared value for a linear regression model, where sum of squared residuals is already calculated. This works for either a simple or a multiple linear regression model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateAdjRSquared(double rsq, int n, int k)",
+    "name": "calculateAdjRSquared",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "rsq"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "protocol": {
+      "member": "calculateAdjRSquared(double rsq, int n, int k)",
+      "comment": "Returns the adjusted R-squared value for a linear regression model. This works for either a simple or a multiple linear regression model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateFStat(double rsq, int n, int k)",
+    "name": "calculateFStat",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "rsq"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "protocol": {
+      "member": "calculateFStat(double rsq, int n, int k)",
+      "comment": "Returns the F-statistic for a linear regression model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateStdErrorOfCoef(weka.core.Instances data, weka.core.Attribute chosen, double slope, double intercept, int df)",
+    "name": "calculateStdErrorOfCoef",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Attribute",
+          "name": "Attribute",
+          "isArray": false
+        },
+        "name": "chosen"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "slope"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "intercept"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "df"
+      }
+    ],
+    "protocol": {
+      "member": "calculateStdErrorOfCoef(weka.core.Instances data, weka.core.Attribute chosen, double slope, double intercept, int df)",
+      "comment": "Returns the standard errors of slope and intercept for a simple linear regression model: y = a + bx. The first element is the standard error of slope, the second element is standard error of intercept.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateStdErrorOfCoef(weka.core.Instances data, boolean[] selected, double ssr, int n, int k)",
+    "name": "calculateStdErrorOfCoef",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Z",
+          "name": "boolean[]",
+          "isArray": true
+        },
+        "name": "selected"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "ssr"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "protocol": {
+      "member": "calculateStdErrorOfCoef(weka.core.Instances data, boolean[] selected, double ssr, int n, int k)",
+      "comment": "Returns an array of the standard errors of the coefficients in a multiple linear regression. The last element in the array is the standard error of the constant coefficient. The standard error array is used to calculate the t-statistics.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calculateTStats(double[] coef, double[] stderror, int k)",
+    "name": "calculateTStats",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "coef"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "stderror"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "k"
+      }
+    ],
+    "protocol": {
+      "member": "calculateTStats(double[] coef, double[] stderror, int k)",
+      "comment": "Returns an array of the t-statistic of each coefficient in a multiple linear regression model.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.RegressionAnalysis",
+      "name": "RegressionAnalysis",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.RegressionAnalysis",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

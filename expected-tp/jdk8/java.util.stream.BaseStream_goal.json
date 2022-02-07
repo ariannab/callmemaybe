@@ -1,0 +1,195 @@
+[
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<T>",
+      "name": "java.util.Iterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator for the elements of this stream. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "Returns a spliterator for the elements of this stream. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isParallel()",
+    "name": "isParallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isParallel()",
+      "comment": "Returns whether this stream, if a terminal operation were to be executed, would execute in parallel. Calling this method after invoking an terminal stream operation method may yield unpredictable results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sequential()",
+    "name": "sequential",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sequential()",
+      "comment": "Returns an equivalent stream that is sequential. May return itself, either because the stream was already sequential, or because the underlying stream state was modified to be sequential. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parallel()",
+    "name": "parallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "parallel()",
+      "comment": "Returns an equivalent stream that is parallel. May return itself, either because the stream was already parallel, or because the underlying stream state was modified to be parallel. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unordered()",
+    "name": "unordered",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unordered()",
+      "comment": "Returns an equivalent stream that is unordered. May return itself, either because the stream was already unordered, or because the underlying stream state was modified to be unordered. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onClose(java.lang.Runnable closeHandler)",
+    "name": "onClose",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "closeHandler"
+      }
+    ],
+    "protocol": {
+      "member": "onClose(java.lang.Runnable closeHandler)",
+      "comment": "Returns an equivalent stream with an additional close handler. Close handlers are run when the #close() method is called on the stream, and are executed in the order they were added. All close handlers are run, even if earlier close handlers throw exceptions. If any close handler throws an exception, the first exception thrown will be relayed to the caller of close(), with any remaining exceptions added to that exception as suppressed exceptions (unless one of the remaining exceptions is the same exception as the first exception, since an exception cannot suppress itself.) May return itself. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.BaseStream",
+      "name": "BaseStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.BaseStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Closes this stream, causing all close handlers for this stream pipeline to be called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

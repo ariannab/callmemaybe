@@ -1,0 +1,1205 @@
+[
+  {
+    "signature": "java.util.regex.Matcher()",
+    "name": "java.util.regex.Matcher",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.regex.Matcher()",
+      "comment": "No default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.regex.Matcher(java.util.regex.Pattern parent, java.lang.CharSequence text)",
+    "name": "java.util.regex.Matcher",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.regex.Pattern",
+          "name": "Pattern",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "text"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.regex.Matcher(java.util.regex.Pattern parent, java.lang.CharSequence text)",
+      "comment": "All matchers have the state used by Pattern during a match.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pattern()",
+    "name": "pattern",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Pattern",
+      "name": "java.util.regex.Pattern",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pattern()",
+      "comment": "Returns the pattern that is interpreted by this matcher.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toMatchResult()",
+    "name": "toMatchResult",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.MatchResult",
+      "name": "java.util.regex.MatchResult",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toMatchResult()",
+      "comment": "Returns the match state of this matcher as a MatchResult. The result is unaffected by subsequent operations performed upon this matcher.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "usePattern(java.util.regex.Pattern newPattern)",
+    "name": "usePattern",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.regex.Pattern",
+          "name": "Pattern",
+          "isArray": false
+        },
+        "name": "newPattern"
+      }
+    ],
+    "protocol": {
+      "member": "usePattern(java.util.regex.Pattern newPattern)",
+      "comment": "Changes the Pattern that this Matcher uses to find matches with.  This method causes this matcher to lose information about the groups of the last match that occurred. The matcher's position in the input is maintained and its last append position is unaffected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets this matcher.  Resetting a matcher discards all of its explicit state information and sets its append position to zero. The matcher's region is set to the default region, which is its entire character sequence. The anchoring and transparency of this matcher's region boundaries are unaffected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset(java.lang.CharSequence input)",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.CharSequence",
+          "name": "CharSequence",
+          "isArray": false
+        },
+        "name": "input"
+      }
+    ],
+    "protocol": {
+      "member": "reset(java.lang.CharSequence input)",
+      "comment": "Resets this matcher with a new input sequence.  Resetting a matcher discards all of its explicit state information and sets its append position to zero. The matcher's region is set to the default region, which is its entire character sequence. The anchoring and transparency of this matcher's region boundaries are unaffected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "start()",
+    "name": "start",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "start()",
+      "comment": "Returns the start index of the previous match.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "start(int group)",
+    "name": "start",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "start(int group)",
+      "comment": "Returns the start index of the subsequence captured by the given group during the previous match operation.  <a href=\"method_2method_3\">Capturing groups</a> are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression <i>m.</i><tt>method_0</tt> is equivalent to <i>m.</i><tt>method_1</tt>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "start(java.lang.String name)",
+    "name": "start",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "start(java.lang.String name)",
+      "comment": "Returns the start index of the subsequence captured by the given named-capturing group during the previous match operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end()",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "end()",
+      "comment": "Returns the offset after the last character matched.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end(int group)",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "end(int group)",
+      "comment": "Returns the offset after the last character of the subsequence captured by the given group during the previous match operation.  <a href=\"method_2method_3\">Capturing groups</a> are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression <i>m.</i><tt>method_0</tt> is equivalent to <i>m.</i><tt>method_1</tt>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end(java.lang.String name)",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "end(java.lang.String name)",
+      "comment": "Returns the offset after the last character of the subsequence captured by the given named-capturing group during the previous match operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "group()",
+    "name": "group",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "group()",
+      "comment": "Returns the input subsequence matched by the previous match.  For a matcher <i>m</i> with input sequence <i>s</i>, the expressions <i>m.</i><tt>method_0</tt> and <i>s.</i><tt>method_1,</tt>&nbsp;<i>m.</i><tt>method_2</tt> are equivalent.   Note that some patterns, for example <tt>a*</tt>, match the empty string. This method will return the empty string when the pattern successfully matches the empty string in the input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "group(int group)",
+    "name": "group",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "group(int group)",
+      "comment": "Returns the input subsequence captured by the given group during the previous match operation.  For a matcher <i>m</i>, input sequence <i>s</i>, and group index <i>g</i>, the expressions <i>m.</i><tt>method_0</tt> and <i>s.</i><tt>method_1,</tt>&nbsp;<i>m.</i><tt>method_2</tt> are equivalent.   <a href=\"method_5method_6\">Capturing groups</a> are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression <tt>method_3</tt> is equivalent to <tt>method_4</tt>.   If the match was successful but the group specified failed to match any part of the input sequence, then <tt>null</tt> is returned. Note that some groups, for example <tt>(a*)</tt>, match the empty string. This method will return the empty string when such a group successfully matches the empty string in the input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "group(java.lang.String name)",
+    "name": "group",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "group(java.lang.String name)",
+      "comment": "Returns the input subsequence captured by the given named-capturing group during the previous match operation.  If the match was successful but the group specified failed to match any part of the input sequence, then <tt>null</tt> is returned. Note that some groups, for example <tt>(a*)</tt>, match the empty string. This method will return the empty string when such a group successfully matches the empty string in the input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groupCount()",
+    "name": "groupCount",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "groupCount()",
+      "comment": "Returns the number of capturing groups in this matcher's pattern.  Group zero denotes the entire pattern by convention. It is not included in this count. <p> Any non-negative integer smaller than or equal to the value returned by this method is guaranteed to be a valid group index for this matcher.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matches()",
+    "name": "matches",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "matches()",
+      "comment": "Attempts to match the entire region against the pattern.  If the match succeeds then more information can be obtained via the <tt>start</tt>, <tt>end</tt>, and <tt>group</tt> methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "find()",
+    "name": "find",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "find()",
+      "comment": "Attempts to find the next subsequence of the input sequence that matches the pattern.  This method starts at the beginning of this matcher's region, or, if a previous invocation of the method was successful and the matcher has not since been reset, at the first character not matched by the previous match. <p> If the match succeeds then more information can be obtained via the <tt>start</tt>, <tt>end</tt>, and <tt>group</tt> methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "find(int start)",
+    "name": "find",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "start"
+      }
+    ],
+    "protocol": {
+      "member": "find(int start)",
+      "comment": "Resets this matcher and then attempts to find the next subsequence of the input sequence that matches the pattern, starting at the specified index.  If the match succeeds then more information can be obtained via the <tt>start</tt>, <tt>end</tt>, and <tt>group</tt> methods, and subsequent invocations of the method_0 method will start at the first character not matched by this match.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lookingAt()",
+    "name": "lookingAt",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lookingAt()",
+      "comment": "Attempts to match the input sequence, starting at the beginning of the region, against the pattern.  Like the method_0 matches method, this method always starts at the beginning of the region; unlike that method, it does not require that the entire region be matched. <p> If the match succeeds then more information can be obtained via the <tt>start</tt>, <tt>end</tt>, and <tt>group</tt> methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "quoteReplacement(java.lang.String s)",
+    "name": "quoteReplacement",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "quoteReplacement(java.lang.String s)",
+      "comment": "Returns a literal replacement String for the specified String. This method produces a String that will work as a literal replacement s in the appendReplacement method of the Matcher class. The String produced will match the sequence of characters in s treated as a literal sequence. Slashes ('\\') and dollar signs ('$') will be given no special meaning.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "appendReplacement(java.lang.StringBuffer sb, java.lang.String replacement)",
+    "name": "appendReplacement",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "sb"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "replacement"
+      }
+    ],
+    "protocol": {
+      "member": "appendReplacement(java.lang.StringBuffer sb, java.lang.String replacement)",
+      "comment": "Implements a non-terminal append-and-replace step.  This method performs the following actions:   <li><p> It reads characters from the input sequence, starting at the append position, and appends them to the given string buffer. It stops after reading the last character preceding the previous match, that is, the character at index method_0&nbsp;<tt>-</tt>&nbsp;<tt>1</tt>. </p></li> <li><p> It appends the given replacement string to the string buffer. </p></li> <li><p> It sets the append position of this matcher to the index of the last character matched, plus one, that is, to method_1. </p></li>   The replacement string may contain references to subsequences captured during the previous match: Each occurrence of <tt>${</tt><i>name</i><tt>}</tt> or <tt>$</tt><i>g</i> will be replaced by the result of evaluating the corresponding method_3 or method_5 respectively. For <tt>$</tt><i>g</i>, the first number after the <tt>$</tt> is always treated as part of the group reference. Subsequent numbers are incorporated into g if they would form a legal group reference. Only the numerals '0' through '9' are considered as potential components of the group reference. If the second group matched the string <tt>\"foo\"</tt>, for example, then passing the replacement string <tt>\"$2bar\"</tt> would cause <tt>\"foobar\"</tt> to be appended to the string buffer. A dollar sign (<tt>$</tt>) may be included as a literal in the replacement string by preceding it with a backslash (<tt>\\$</tt>). <p> Note that backslashes (<tt>\\</tt>) and dollar signs (<tt>$</tt>) in the replacement string may cause the results to be different than if it were being treated as a literal replacement string. Dollar signs may be treated as references to captured subsequences as described above, and backslashes are used to escape literal characters in the replacement string. <p> This method is intended to be used in a loop together with the method_17 appendTail and method_18 find methods. The following code, for example, writes <tt>one dog two dogs in the yard</tt> to the standard-output stream:  <pre> Pattern p = method_6; Matcher m = method_7; StringBuffer sb = method_8; while (method_9 { method_10; } method_11; System.method_12;</pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "appendTail(java.lang.StringBuffer sb)",
+    "name": "appendTail",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.StringBuffer",
+      "name": "java.lang.StringBuffer",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.StringBuffer",
+          "name": "StringBuffer",
+          "isArray": false
+        },
+        "name": "sb"
+      }
+    ],
+    "protocol": {
+      "member": "appendTail(java.lang.StringBuffer sb)",
+      "comment": "Implements a terminal append-and-replace step.  This method reads characters from the input sequence, starting at the append position, and appends them to the given string buffer. It is intended to be invoked after one or more invocations of the method_0 appendReplacement method in order to copy the remainder of the input sequence.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.lang.String replacement)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "replacement"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.lang.String replacement)",
+      "comment": "Replaces every subsequence of the input sequence that matches the pattern with the given replacement string.  This method first resets this matcher. It then scans the input sequence looking for matches of the pattern. Characters that are not part of any match are appended directly to the result string; each match is replaced in the result by the replacement string. The replacement string may contain references to captured subsequences as in the method_0 appendReplacement method. <p> Note that backslashes (<tt>\\</tt>) and dollar signs (<tt>$</tt>) in the replacement string may cause the results to be different than if it were being treated as a literal replacement string. Dollar signs may be treated as references to captured subsequences as described above, and backslashes are used to escape literal characters in the replacement string. <p> Given the regular expression <tt>a*b</tt>, the input <tt>\"aabfooaabfooabfoob\"</tt>, and the replacement string <tt>\"-\"</tt>, an invocation of this method on a matcher for that expression would yield the string <tt>\"-foo-foo-foo-\"</tt>. <p> Invoking this method changes this matcher's state. If the matcher is to be used in further matching operations then it should first be reset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceFirst(java.lang.String replacement)",
+    "name": "replaceFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "replacement"
+      }
+    ],
+    "protocol": {
+      "member": "replaceFirst(java.lang.String replacement)",
+      "comment": "Replaces the first subsequence of the input sequence that matches the pattern with the given replacement string.  This method first resets this matcher. It then scans the input sequence looking for a match of the pattern. Characters that are not part of the match are appended directly to the result string; the match is replaced in the result by the replacement string. The replacement string may contain references to captured subsequences as in the method_0 appendReplacement method. <p>Note that backslashes (<tt>\\</tt>) and dollar signs (<tt>$</tt>) in the replacement string may cause the results to be different than if it were being treated as a literal replacement string. Dollar signs may be treated as references to captured subsequences as described above, and backslashes are used to escape literal characters in the replacement string. <p> Given the regular expression <tt>dog</tt>, the input <tt>\"zzzdogzzzdogzzz\"</tt>, and the replacement string <tt>\"cat\"</tt>, an invocation of this method on a matcher for that expression would yield the string <tt>\"zzzcatzzzdogzzz\"</tt>.   Invoking this method changes this matcher's state. If the matcher is to be used in further matching operations then it should first be reset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "region(int start, int end)",
+    "name": "region",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "start"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "end"
+      }
+    ],
+    "protocol": {
+      "member": "region(int start, int end)",
+      "comment": "Sets the limits of this matcher's region. The region is the part of the input sequence that will be searched to find a match. Invoking this method resets the matcher, and then sets the region to start at the index specified by the start parameter and end at the index specified by the end parameter. Depending on the transparency and anchoring being used (see method_0 useTransparentBounds and method_1 useAnchoringBounds), certain constructs such as anchors may behave differently at or around the boundaries of the region.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regionStart()",
+    "name": "regionStart",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "regionStart()",
+      "comment": "Reports the start index of this matcher's region. The searches this matcher conducts are limited to finding matches within method_0 regionStart (inclusive) and method_1 regionEnd (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regionEnd()",
+    "name": "regionEnd",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "regionEnd()",
+      "comment": "Reports the end index (exclusive) of this matcher's region. The searches this matcher conducts are limited to finding matches within method_0 regionStart (inclusive) and method_1 regionEnd (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasTransparentBounds()",
+    "name": "hasTransparentBounds",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasTransparentBounds()",
+      "comment": "Queries the transparency of region bounds for this matcher.  This method returns true if this matcher uses transparent bounds, false if it uses opaque bounds.  See method_0 useTransparentBounds for a description of transparent and opaque bounds.  By default, a matcher uses opaque region boundaries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useTransparentBounds(boolean b)",
+    "name": "useTransparentBounds",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "useTransparentBounds(boolean b)",
+      "comment": "Sets the transparency of region bounds for this matcher.  Invoking this method with an argument of true will set this matcher to use transparent bounds. If the boolean argument is false, then opaque bounds will be used.  Using transparent bounds, the boundaries of this matcher's region are transparent to lookahead, lookbehind, and boundary matching constructs. Those constructs can see beyond the boundaries of the region to see if a match is appropriate.  Using opaque bounds, the boundaries of this matcher's region are opaque to lookahead, lookbehind, and boundary matching constructs that may try to see beyond them. Those constructs cannot look past the boundaries so they will fail to match anything outside of the region.  By default, a matcher uses opaque bounds.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasAnchoringBounds()",
+    "name": "hasAnchoringBounds",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasAnchoringBounds()",
+      "comment": "Queries the anchoring of region bounds for this matcher.  This method returns true if this matcher uses anchoring bounds, false otherwise.  See method_0 useAnchoringBounds for a description of anchoring bounds.  By default, a matcher uses anchoring region boundaries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useAnchoringBounds(boolean b)",
+    "name": "useAnchoringBounds",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "java.util.regex.Matcher",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "useAnchoringBounds(boolean b)",
+      "comment": "Sets the anchoring of region bounds for this matcher.  Invoking this method with an argument of true will set this matcher to use anchoring bounds. If the boolean argument is false, then non-anchoring bounds will be used.  Using anchoring bounds, the boundaries of this matcher's region match anchors such as ^ and $.  Without anchoring bounds, the boundaries of this matcher's region will not match anchors such as ^ and $.  By default, a matcher uses anchoring region boundaries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the string representation of this matcher. The string representation of a Matcher contains information that may be useful for debugging. The exact format is unspecified.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hitEnd()",
+    "name": "hitEnd",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hitEnd()",
+      "comment": "Returns true if the end of input was hit by the search engine in the last match operation performed by this matcher. When this method returns true, then it is possible that more input would have changed the result of the last search.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "requireEnd()",
+    "name": "requireEnd",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "requireEnd()",
+      "comment": "Returns true if more input could change a positive match into a negative one. If this method returns true, and a match was found, then more input could cause the match to be lost. If this method returns false and a match was found, then more input might change the match but the match won't be lost. If a match was not found, then requireEnd has no meaning.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "search(int from)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      }
+    ],
+    "protocol": {
+      "member": "search(int from)",
+      "comment": "Initiates a search to find a Pattern within the given bounds. The groups are filled with default values and the match of the root of the state machine is called. The state machine will hold the state of the match as it proceeds in this matcher. method_0 is not set here, because it is the \"hard\" boundary of the start of the search which anchors will set to. The from param is the \"soft\" boundary of the start of the search, meaning that the regex tries to match at that index but ^ won't match there. Subsequent calls to the search methods start at a new \"soft\" boundary which is the end of the previous match.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "match(int from, int anchor)",
+    "name": "match",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "anchor"
+      }
+    ],
+    "protocol": {
+      "member": "match(int from, int anchor)",
+      "comment": "Initiates a search for an anchored match to a Pattern within the given bounds. The groups are filled with default values and the match of the root of the state machine is called. The state machine will hold the state of the match as it proceeds in this matcher.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTextLength()",
+    "name": "getTextLength",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTextLength()",
+      "comment": "Returns the end index of the text.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSubSequence(int beginIndex, int endIndex)",
+    "name": "getSubSequence",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.CharSequence",
+      "name": "java.lang.CharSequence",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "beginIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getSubSequence(int beginIndex, int endIndex)",
+      "comment": "Generates a String from this Matcher's input in the specified range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "charAt(int i)",
+    "name": "charAt",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "char",
+      "name": "char",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "charAt(int i)",
+      "comment": "Returns this Matcher's input character at index i.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMatchedGroupIndex(java.lang.String name)",
+    "name": "getMatchedGroupIndex",
+    "containingClass": {
+      "qualifiedName": "java.util.regex.Matcher",
+      "name": "Matcher",
+      "isArray": false
+    },
+    "targetClass": "java.util.regex.Matcher",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getMatchedGroupIndex(java.lang.String name)",
+      "comment": "Returns the group index of the matched capturing group.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

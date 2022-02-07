@@ -1,0 +1,251 @@
+[
+  {
+    "signature": "java.util.logging.MemoryHandler()",
+    "name": "java.util.logging.MemoryHandler",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.logging.MemoryHandler()",
+      "comment": "Create a MemoryHandler and configure it based on LogManager configuration properties.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.logging.MemoryHandler(java.util.logging.Handler target, int size, java.util.logging.Level pushLevel)",
+    "name": "java.util.logging.MemoryHandler",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Handler",
+          "name": "Handler",
+          "isArray": false
+        },
+        "name": "target"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Level",
+          "name": "Level",
+          "isArray": false
+        },
+        "name": "pushLevel"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.logging.MemoryHandler(java.util.logging.Handler target, int size, java.util.logging.Level pushLevel)",
+      "comment": "Create a MemoryHandler.  The MemoryHandler is configured based on LogManager properties (or their default values) except that the given pushLevel argument and buffer size argument are used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "publish(java.util.logging.LogRecord record)",
+    "name": "publish",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "publish(java.util.logging.LogRecord record)",
+      "comment": "Store a LogRecord in an internal buffer.  If there is a Filter, its isLoggable method is called to check if the given log record is loggable. If not we return. Otherwise the given record is copied into an internal circular buffer. Then the record's level property is compared with the pushLevel. If the given level is greater than or equal to the pushLevel then push is called to write all buffered records to the target output Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "push()",
+    "name": "push",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "push()",
+      "comment": "Push any buffered output to the target Handler.  The buffer is then cleared.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flush()",
+      "comment": "Causes a flush on the target Handler.  Note that the current contents of the MemoryHandler buffer are not written out. That requires a \"push\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Close the Handler and free all associated resources. This will also close the target Handler. @exception SecurityException if a security manager exists and if the caller does not have method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPushLevel(java.util.logging.Level newLevel)",
+    "name": "setPushLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Level",
+          "name": "Level",
+          "isArray": false
+        },
+        "name": "newLevel"
+      }
+    ],
+    "protocol": {
+      "member": "setPushLevel(java.util.logging.Level newLevel)",
+      "comment": "Set the pushLevel. After a LogRecord is copied into our internal buffer, if its level is greater than or equal to the pushLevel, then push will be called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPushLevel()",
+    "name": "getPushLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Level",
+      "name": "java.util.logging.Level",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPushLevel()",
+      "comment": "Get the pushLevel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLoggable(java.util.logging.LogRecord record)",
+    "name": "isLoggable",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.MemoryHandler",
+      "name": "MemoryHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.MemoryHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "isLoggable(java.util.logging.LogRecord record)",
+      "comment": "Check if this Handler would actually log a given LogRecord into its internal buffer.  This method checks if the LogRecord has an appropriate level and whether it satisfies any Filter. However it does not check whether the LogRecord would result in a \"push\" of the buffer contents. It will return false if the LogRecord is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

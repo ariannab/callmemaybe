@@ -1,0 +1,1124 @@
+[
+  {
+    "signature": "java.util.BitSet()",
+    "name": "java.util.BitSet",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.BitSet()",
+      "comment": "Creates a new bit set. All bits are initially false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.BitSet(int nbits)",
+    "name": "java.util.BitSet",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nbits"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.BitSet(int nbits)",
+      "comment": "Creates a bit set whose initial size is large enough to explicitly represent bits with indices in the range 0 through nbits-1. All bits are initially false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(long[] longs)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "java.util.BitSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "longs"
+      }
+    ],
+    "protocol": {
+      "member": "valueOf(long[] longs)",
+      "comment": "Returns a new bit set containing all the bits in the given long array. More precisely, <br>method_0method_1 == ((longs[n/64] & (1L<<(n%64))) != 0) <br>for all n < 64 * longsmethod_5. This method is equivalent to method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(java.nio.LongBuffer lb)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "java.util.BitSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.LongBuffer",
+          "name": "LongBuffer",
+          "isArray": false
+        },
+        "name": "lb"
+      }
+    ],
+    "protocol": {
+      "member": "valueOf(java.nio.LongBuffer lb)",
+      "comment": "Returns a new bit set containing all the bits in the given long buffer between its position and limit. More precisely, <br>method_0method_1 == ((method_2+n/64) & (1L<<(n%64))) != 0) <br>for all n < 64 * method_3. The long buffer is not modified by this method, and no reference to the buffer is retained by the bit set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(byte[] bytes)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "java.util.BitSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "bytes"
+      }
+    ],
+    "protocol": {
+      "member": "valueOf(byte[] bytes)",
+      "comment": "Returns a new bit set containing all the bits in the given byte array. More precisely, <br>method_0method_1 == ((bytes[n/8] & (1<<(n%8))) != 0) <br>for all n < 8 * bytesmethod_5. This method is equivalent to method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "valueOf(java.nio.ByteBuffer bb)",
+    "name": "valueOf",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "java.util.BitSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.nio.ByteBuffer",
+          "name": "ByteBuffer",
+          "isArray": false
+        },
+        "name": "bb"
+      }
+    ],
+    "protocol": {
+      "member": "valueOf(java.nio.ByteBuffer bb)",
+      "comment": "Returns a new bit set containing all the bits in the given byte buffer between its position and limit. More precisely, <br>method_0method_1 == ((method_2+n/8) & (1<<(n%8))) != 0) <br>for all n < 8 * method_3. The byte buffer is not modified by this method, and no reference to the buffer is retained by the bit set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toByteArray()",
+    "name": "toByteArray",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toByteArray()",
+      "comment": "Returns a new byte array containing all the bits in this bit set. More precisely, if <br>byte[] bytes = method_0; <br>then bytesmethod_4 == (method_1+7)/8 and <br>method_2 == ((bytes[n/8] & (1<<(n%8))) != 0) <br>for all n < 8 * bytesmethod_4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toLongArray()",
+    "name": "toLongArray",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long[]",
+      "name": "long[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toLongArray()",
+      "comment": "Returns a new long array containing all the bits in this bit set. More precisely, if <br>long[] longs = method_0; <br>then longsmethod_4 == (method_1+63)/64 and <br>method_2 == ((longs[n/64] & (1L<<(n%64))) != 0) <br>for all n < 64 * longsmethod_4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flip(int bitIndex)",
+    "name": "flip",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bitIndex"
+      }
+    ],
+    "protocol": {
+      "member": "flip(int bitIndex)",
+      "comment": "Sets the bit at the specified index to the complement of its current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flip(int fromIndex, int toIndex)",
+    "name": "flip",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "protocol": {
+      "member": "flip(int fromIndex, int toIndex)",
+      "comment": "Sets each bit from the specified fromIndex (inclusive) to the specified toIndex (exclusive) to the complement of its current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int bitIndex)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bitIndex"
+      }
+    ],
+    "protocol": {
+      "member": "set(int bitIndex)",
+      "comment": "Sets the bit at the specified index to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int bitIndex, boolean value)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bitIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "set(int bitIndex, boolean value)",
+      "comment": "Sets the bit at the specified index to the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int fromIndex, int toIndex)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "protocol": {
+      "member": "set(int fromIndex, int toIndex)",
+      "comment": "Sets the bits from the specified fromIndex (inclusive) to the specified toIndex (exclusive) to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int fromIndex, int toIndex, boolean value)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "set(int fromIndex, int toIndex, boolean value)",
+      "comment": "Sets the bits from the specified fromIndex (inclusive) to the specified toIndex (exclusive) to the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear(int bitIndex)",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bitIndex"
+      }
+    ],
+    "protocol": {
+      "member": "clear(int bitIndex)",
+      "comment": "Sets the bit specified by the index to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear(int fromIndex, int toIndex)",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "protocol": {
+      "member": "clear(int fromIndex, int toIndex)",
+      "comment": "Sets the bits from the specified fromIndex (inclusive) to the specified toIndex (exclusive) to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Sets all of the bits in this BitSet to false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int bitIndex)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bitIndex"
+      }
+    ],
+    "protocol": {
+      "member": "get(int bitIndex)",
+      "comment": "Returns the value of the bit with the specified index. The value is true if the bit with the index bitIndex is currently set in this BitSet; otherwise, the result is false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int fromIndex, int toIndex)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "java.util.BitSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "protocol": {
+      "member": "get(int fromIndex, int toIndex)",
+      "comment": "Returns a new BitSet composed of bits from this BitSet from fromIndex (inclusive) to toIndex (exclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextSetBit(int fromIndex)",
+    "name": "nextSetBit",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "protocol": {
+      "member": "nextSetBit(int fromIndex)",
+      "comment": "Returns the index of the first bit that is set to true that occurs on or after the specified starting index. If no such bit exists then -1 is returned. To iterate over the true bits in a BitSet, use the following loop:  for (int i = method_0; i >= 0; i = method_1 { // operate on index i here }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextClearBit(int fromIndex)",
+    "name": "nextClearBit",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "protocol": {
+      "member": "nextClearBit(int fromIndex)",
+      "comment": "Returns the index of the first bit that is set to false that occurs on or after the specified starting index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "previousSetBit(int fromIndex)",
+    "name": "previousSetBit",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "protocol": {
+      "member": "previousSetBit(int fromIndex)",
+      "comment": "Returns the index of the nearest bit that is set to true that occurs on or before the specified starting index. If no such bit exists, or if -1 is given as the starting index, then -1 is returned. To iterate over the true bits in a BitSet, use the following loop:  for (int i = method_0; (i = method_1 >= 0; ) { // operate on index i here }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "previousClearBit(int fromIndex)",
+    "name": "previousClearBit",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      }
+    ],
+    "protocol": {
+      "member": "previousClearBit(int fromIndex)",
+      "comment": "Returns the index of the nearest bit that is set to false that occurs on or before the specified starting index. If no such bit exists, or if -1 is given as the starting index, then -1 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "length()",
+    "name": "length",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "length()",
+      "comment": "Returns the \"logical size\" of this BitSet}: the index of the highest set bit in the {@code BitSet plus one. Returns zero if the BitSet contains no set bits.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "Returns true if this BitSet contains no bits that are set to true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intersects(java.util.BitSet set)",
+    "name": "intersects",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.BitSet",
+          "name": "BitSet",
+          "isArray": false
+        },
+        "name": "set"
+      }
+    ],
+    "protocol": {
+      "member": "intersects(java.util.BitSet set)",
+      "comment": "Returns true if the specified BitSet has any bits set to true that are also set to true in this BitSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cardinality()",
+    "name": "cardinality",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cardinality()",
+      "comment": "Returns the number of bits set to true in this BitSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "and(java.util.BitSet set)",
+    "name": "and",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.BitSet",
+          "name": "BitSet",
+          "isArray": false
+        },
+        "name": "set"
+      }
+    ],
+    "protocol": {
+      "member": "and(java.util.BitSet set)",
+      "comment": "Performs a logical AND of this target bit set with the argument bit set. This bit set is modified so that each bit in it has the value true if and only if it both initially had the value true and the corresponding bit in the bit set argument also had the value true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "or(java.util.BitSet set)",
+    "name": "or",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.BitSet",
+          "name": "BitSet",
+          "isArray": false
+        },
+        "name": "set"
+      }
+    ],
+    "protocol": {
+      "member": "or(java.util.BitSet set)",
+      "comment": "Performs a logical OR of this bit set with the bit set argument. This bit set is modified so that a bit in it has the value true if and only if it either already had the value true or the corresponding bit in the bit set argument has the value true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "xor(java.util.BitSet set)",
+    "name": "xor",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.BitSet",
+          "name": "BitSet",
+          "isArray": false
+        },
+        "name": "set"
+      }
+    ],
+    "protocol": {
+      "member": "xor(java.util.BitSet set)",
+      "comment": "Performs a logical XOR of this bit set with the bit set argument. This bit set is modified so that a bit in it has the value true if and only if one of the following statements holds:  <li>The bit initially has the value true, and the corresponding bit in the argument has the value false. <li>The bit initially has the value false, and the corresponding bit in the argument has the value true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "andNot(java.util.BitSet set)",
+    "name": "andNot",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.BitSet",
+          "name": "BitSet",
+          "isArray": false
+        },
+        "name": "set"
+      }
+    ],
+    "protocol": {
+      "member": "andNot(java.util.BitSet set)",
+      "comment": "Clears all of the bits in this BitSet whose corresponding bit is set in the specified BitSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this bit set. The hash code depends only on which bits are set within this BitSet. The hash code is defined to be the result of the following calculation:  public int method_0 { long h = 1234; long[] words = method_1; for (int i = wordsmethod_2; --i >= 0; ) h ^= words[i] * (i + 1); return (int)((h >> 32) ^ h); } Note that the hash code changes if the set of bits is altered.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of bits of space actually in use by this BitSet to represent bit values. The maximum element in the set is the size - 1st element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Compares this object against the specified object. The result is true if and only if the argument is not null and is a Bitset object that has exactly the same set of bits set to true as this bit set. That is, for every nonnegative int index k, ((BitSet)obj).method_0 == this.method_0 must be true. The current sizes of the two bit sets are not compared.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Cloning this BitSet produces a new BitSet that is equal to it. The clone of the bit set is another bit set that has exactly the same bits set to true as this bit set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string representation of this bit set. For every index for which this BitSet contains a bit in the set state, the decimal representation of that index is included in the result. Such indices are listed in order from lowest to highest, separated by \",&nbsp;\" (a comma and a space) and surrounded by braces, resulting in the usual mathematical notation for a set of integers. Example:  BitSet drPepper = method_0; Now method_1 returns \"{@code {}}\".  method_2; Now method_1 returns \"{@code {2}}\".  method_4; method_5; Now method_1 returns \"{@code {2, 4, 10}}\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "stream()",
+    "name": "stream",
+    "containingClass": {
+      "qualifiedName": "java.util.BitSet",
+      "name": "BitSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.BitSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "stream()",
+      "comment": "Returns a stream of indices for which this BitSet contains a bit in the set state. The indices are returned in order, from lowest to highest. The size of the stream is the number of bits in the set state, equal to the value returned by the method_0 method. The bit set must remain constant during the execution of the terminal stream operation. Otherwise, the result of the terminal stream operation is undefined.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

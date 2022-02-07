@@ -1,0 +1,140 @@
+[
+  {
+    "signature": "java.util.spi.CalendarNameProvider()",
+    "name": "java.util.spi.CalendarNameProvider",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.CalendarNameProvider",
+      "name": "CalendarNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.CalendarNameProvider",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.spi.CalendarNameProvider()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayName(java.lang.String calendarType, int field, int value, int style, java.util.Locale locale)",
+    "name": "getDisplayName",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.CalendarNameProvider",
+      "name": "CalendarNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.CalendarNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "calendarType"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "style"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayName(java.lang.String calendarType, int field, int value, int style, java.util.Locale locale)",
+      "comment": "Returns the string representation (display name) of the calendar field value in the given style and locale. If no string representation is applicable, null is returned. field is a Calendar field index, such as method_1. The time zone fields, method_2 and method_3, are not supported by this method. null must be returned if any time zone fields are specified. value is the numeric representation of the field value. For example, if field is method_4, the valid values are method_5 to method_6 (inclusive). style gives the style of the string representation. It is one of method_7 (method_8 SHORT), method_8_STANDALONE, method_10 (method_11 LONG), method_11_STANDALONE, method_13, or method_14. For example, the following call will return \"Sunday\".  getDisplayName(\"gregory\", method_15, method_16, method_17, method_18);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDisplayNames(java.lang.String calendarType, int field, int style, java.util.Locale locale)",
+    "name": "getDisplayNames",
+    "containingClass": {
+      "qualifiedName": "java.util.spi.CalendarNameProvider",
+      "name": "CalendarNameProvider",
+      "isArray": false
+    },
+    "targetClass": "java.util.spi.CalendarNameProvider",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Map<java.lang.String, java.lang.Integer>",
+      "name": "java.util.Map<java.lang.String, java.lang.Integer>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "calendarType"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "style"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Locale",
+          "name": "Locale",
+          "isArray": false
+        },
+        "name": "locale"
+      }
+    ],
+    "protocol": {
+      "member": "getDisplayNames(java.lang.String calendarType, int field, int style, java.util.Locale locale)",
+      "comment": "Returns a Map containing all string representations (display names) of the Calendar field in the given style and locale and their corresponding field values. field is a Calendar field index, such as method_1. The time zone fields, method_2 and method_3, are not supported by this method. null must be returned if any time zone fields are specified. style gives the style of the string representation. It must be one of method_4, method_5 (method_6 SHORT), method_6_STANDALONE, method_8 (method_9 LONG), method_9_STANDALONE, method_11, or method_12. Note that narrow names may not be unique due to use of single characters, such as \"S\" for Sunday and Saturday, and that no narrow names are included in that case. For example, the following call will return a Map containing \"January\" to method_13, \"Jan\" to method_13, \"February\" to method_15, \"Feb\" to method_15, and so on.  method_0;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

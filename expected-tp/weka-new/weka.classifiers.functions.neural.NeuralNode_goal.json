@@ -1,0 +1,500 @@
+[
+  {
+    "signature": "weka.classifiers.functions.neural.NeuralNode(java.lang.String id, java.util.Random r, weka.classifiers.functions.neural.NeuralMethod m)",
+    "name": "weka.classifiers.functions.neural.NeuralNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "r"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.neural.NeuralMethod",
+          "name": "NeuralMethod",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.functions.neural.NeuralNode(java.lang.String id, java.util.Random r, weka.classifiers.functions.neural.NeuralMethod m)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMethod(weka.classifiers.functions.neural.NeuralMethod m)",
+    "name": "setMethod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.neural.NeuralMethod",
+          "name": "NeuralMethod",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "setMethod(weka.classifiers.functions.neural.NeuralMethod m)",
+      "comment": "Set how this node should operate (note that the neural method has no internal state, so the same object can be used by any number of nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMethod()",
+    "name": "getMethod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralMethod",
+      "name": "weka.classifiers.functions.neural.NeuralMethod",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMethod()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "outputValue(boolean calculate)",
+    "name": "outputValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "calculate"
+      }
+    ],
+    "protocol": {
+      "member": "outputValue(boolean calculate)",
+      "comment": "Call this to get the output value of this unit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "errorValue(boolean calculate)",
+    "name": "errorValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "calculate"
+      }
+    ],
+    "protocol": {
+      "member": "errorValue(boolean calculate)",
+      "comment": "Call this to get the error value of this unit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Call this to reset the value and error for this unit, ready for the next run. This will also call the reset function of all units that are connected as inputs to this one. This is also the time that the update for the listeners will be performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "saveWeights()",
+    "name": "saveWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "saveWeights()",
+      "comment": "Call this to have the connection save the current weights.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "restoreWeights()",
+    "name": "restoreWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "restoreWeights()",
+      "comment": "Call this to have the connection restore from the saved weights.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightValue(int n)",
+    "name": "weightValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "weightValue(int n)",
+      "comment": "Call this to get the weight value on a particular connection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWeights()",
+    "name": "getWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getWeights()",
+      "comment": "call this function to get the weights array. This will also allow the weights to be updated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChangeInWeights()",
+    "name": "getChangeInWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getChangeInWeights()",
+      "comment": "call this function to get the chnage in weights array. This will also allow the change in weights to be updated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateWeights(double l, double m)",
+    "name": "updateWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "l"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "updateWeights(double l, double m)",
+      "comment": "Call this function to update the weight values at this unit. After the weights have been updated at this unit, All the input connections will then be called from this to have their weights updated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "connectInput(weka.classifiers.functions.neural.NeuralConnection i, int n)",
+    "name": "connectInput",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.neural.NeuralConnection",
+          "name": "NeuralConnection",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "connectInput(weka.classifiers.functions.neural.NeuralConnection i, int n)",
+      "comment": "This will connect the specified unit to be an input to this unit.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allocateInputs()",
+    "name": "allocateInputs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "allocateInputs()",
+      "comment": "This will allocate more space for input connection information if the arrays for this have been filled up.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "disconnectInput(weka.classifiers.functions.neural.NeuralConnection i, int n)",
+    "name": "disconnectInput",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.neural.NeuralConnection",
+          "name": "NeuralConnection",
+          "isArray": false
+        },
+        "name": "i"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "disconnectInput(weka.classifiers.functions.neural.NeuralConnection i, int n)",
+      "comment": "This will disconnect the input with the specific connection number From this node (only on this end however).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAllInputs()",
+    "name": "removeAllInputs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeAllInputs()",
+      "comment": "This function will remove all the inputs to this unit. In doing so it will also terminate the connections at the other end.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.neural.NeuralNode",
+      "name": "NeuralNode",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.neural.NeuralNode",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

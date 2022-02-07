@@ -1,0 +1,385 @@
+[
+  {
+    "signature": "java.util.stream.SpinedBuffer(int initialCapacity)",
+    "name": "java.util.stream.SpinedBuffer",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.SpinedBuffer(int initialCapacity)",
+      "comment": "Constructs an empty list with the specified initial capacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.stream.SpinedBuffer()",
+    "name": "java.util.stream.SpinedBuffer",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.stream.SpinedBuffer()",
+      "comment": "Constructs an empty list with an initial capacity of sixteen.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "capacity()",
+    "name": "capacity",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "capacity()",
+      "comment": "Returns the current capacity of the buffer",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureCapacity(long targetSize)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "targetSize"
+      }
+    ],
+    "protocol": {
+      "member": "ensureCapacity(long targetSize)",
+      "comment": "Ensure that the buffer has at least capacity to hold the target size",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "increaseCapacity()",
+    "name": "increaseCapacity",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "increaseCapacity()",
+      "comment": "Force the buffer to increase its capacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(long index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "get(long index)",
+      "comment": "Retrieve the element at the specified index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInto(E[] array, int offset)",
+    "name": "copyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "protocol": {
+      "member": "copyInto(E[] array, int offset)",
+      "comment": "Copy the elements, starting at the specified offset, into the specified array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asArray(java.util.function.IntFunction<E[]> arrayFactory)",
+    "name": "asArray",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E[]",
+      "name": "E[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "arrayFactory"
+      }
+    ],
+    "protocol": {
+      "member": "asArray(java.util.function.IntFunction<E[]> arrayFactory)",
+      "comment": "Create a new array using the specified array factory, and copy the elements into it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.Consumer<? super E> consumer)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "consumer"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.Consumer<? super E> consumer)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accept(E e)",
+    "name": "accept",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "accept(E e)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.SpinedBuffer",
+      "name": "SpinedBuffer",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.SpinedBuffer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E>",
+      "name": "java.util.Spliterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "Return a Spliterator describing the contents of the buffer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

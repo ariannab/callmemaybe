@@ -1,0 +1,259 @@
+[
+  {
+    "signature": "java.util.AbstractSequentialList()",
+    "name": "java.util.AbstractSequentialList",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.AbstractSequentialList()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "get(int index)",
+      "comment": "Returns the element at the specified position in this list. This implementation first gets a list iterator pointing to the indexed element (with method_0). Then, it gets the element using method_1 and returns it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int index, E element)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "set(int index, E element)",
+      "comment": "Replaces the element at the specified position in this list with the specified element (optional operation). This implementation first gets a list iterator pointing to the indexed element (with method_0). Then, it gets the current element using method_1 and replaces it with method_2. Note that this implementation will throw an UnsupportedOperationException if the list iterator does not implement the set operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int index, E element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "add(int index, E element)",
+      "comment": "Inserts the specified element at the specified position in this list (optional operation). Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices). This implementation first gets a list iterator pointing to the indexed element (with method_0). Then, it inserts the specified element with method_1. Note that this implementation will throw an UnsupportedOperationException if the list iterator does not implement the add operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(int index)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "remove(int index)",
+      "comment": "Removes the element at the specified position in this list (optional operation). Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the list. This implementation first gets a list iterator pointing to the indexed element (with method_0). Then, it removes the element with method_1. Note that this implementation will throw an UnsupportedOperationException if the list iterator does not implement the remove operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(int index, java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "addAll(int index, java.util.Collection<? extends E> c)",
+      "comment": "Inserts all of the elements in the specified collection into this list at the specified position (optional operation). Shifts the element currently at that position (if any) and any subsequent elements to the right (increases their indices). The new elements will appear in this list in the order that they are returned by the specified collection's iterator. The behavior of this operation is undefined if the specified collection is modified while the operation is in progress. (Note that this will occur if the specified collection is this list, and it's nonempty.) This implementation gets an iterator over the specified collection and a list iterator over this list pointing to the indexed element (with method_0). Then, it iterates over the specified collection, inserting the elements obtained from the iterator into this list, one at a time, using method_1 followed by method_2 (to skip over the added element). Note that this implementation will throw an UnsupportedOperationException if the list iterator returned by the listIterator method does not implement the add operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator over the elements in this list (in proper sequence). This implementation merely returns a list iterator over the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listIterator(int index)",
+    "name": "listIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractSequentialList",
+      "name": "AbstractSequentialList",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractSequentialList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ListIterator<E>",
+      "name": "java.util.ListIterator<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "listIterator(int index)",
+      "comment": "Returns a list iterator over the elements in this list (in proper sequence).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

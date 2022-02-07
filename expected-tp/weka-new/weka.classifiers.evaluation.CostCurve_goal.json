@@ -1,0 +1,129 @@
+[
+  {
+    "signature": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+    "name": "getCurve",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.CostCurve",
+      "name": "CostCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.CostCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "predictions"
+      }
+    ],
+    "protocol": {
+      "member": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+      "comment": "Calculates the performance stats for the default class and return results as a set of Instances. The structure of these Instances is as follows:   <li><b>Probability Cost Function </b> <li><b>Normalized Expected Cost</b> <li><b>Threshold</b> contains the probability threshold that gives rise to the previous performance values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions, int classIndex)",
+    "name": "getCurve",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.CostCurve",
+      "name": "CostCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.CostCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "predictions"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getCurve(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions, int classIndex)",
+      "comment": "Calculates the performance stats for the desired class and return results as a set of Instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.CostCurve",
+      "name": "CostCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.CostCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.CostCurve",
+      "name": "CostCurve",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.CostCurve",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Tests the CostCurve generation from the command line. The classifier is currently hardcoded. Pipe in an arff file.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

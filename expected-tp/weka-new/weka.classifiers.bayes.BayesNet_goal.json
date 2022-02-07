@@ -1,0 +1,1644 @@
+[
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Generates the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumInstances()",
+    "name": "getNumInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumInstances()",
+      "comment": "Returns the number of instances the model was built from.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normalizeDataSet(weka.core.Instances instances)",
+    "name": "normalizeDataSet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "normalizeDataSet(weka.core.Instances instances)",
+      "comment": "ensure that all variables are nominal and that there are no missing values",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "normalizeInstance(weka.core.Instance instance)",
+    "name": "normalizeInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instance",
+      "name": "weka.core.Instance",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "normalizeInstance(weka.core.Instance instance)",
+      "comment": "ensure that all variables are nominal and that there are no missing values",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initStructure()",
+    "name": "initStructure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initStructure()",
+      "comment": "Init structure initializes the structure to an empty graph or a Naive Bayes graph (depending on the -N flag).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildStructure()",
+    "name": "buildStructure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "buildStructure()",
+      "comment": "buildStructure determines the network structure/graph of the network. The default behavior is creating a network where all nodes have the first node as its parent (imethod_0., a BayesNet that behaves like a naive Bayes classifier). This method can be overridden by derived classes to restrict the class of network structures that are acceptable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "estimateCPTs()",
+    "name": "estimateCPTs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "estimateCPTs()",
+      "comment": "estimateCPTs estimates the conditional probability tables for the Bayes Net using the network structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initCPTs()",
+    "name": "initCPTs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initCPTs()",
+      "comment": "initializes the conditional probabilities",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateClassifier(weka.core.Instance instance)",
+    "name": "updateClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "updateClassifier(weka.core.Instance instance)",
+      "comment": "Updates the classifier with the given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "countsForInstance(weka.core.Instance instance)",
+    "name": "countsForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "countsForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the counts for Dirichlet distribution for the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.    -D Do not use ADTree data structure   -B <BIF file> BIF file to compare with   -Q wekamethod_0method_1method_2method_3method_4 Search algorithm   -E wekamethod_0method_1method_2method_8method_9 Estimator algorithm  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partitionOptions(java.lang.String[] options)",
+    "name": "partitionOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "partitionOptions(java.lang.String[] options)",
+      "comment": "Returns the secondary set of options (if any) contained in the supplied options array. The secondary set is defined to be any options after the first \"--\" but before the \"-E\". These options are removed from the original options array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSearchAlgorithm(weka.classifiers.bayes.net.search.SearchAlgorithm newSearchAlgorithm)",
+    "name": "setSearchAlgorithm",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+          "name": "SearchAlgorithm",
+          "isArray": false
+        },
+        "name": "newSearchAlgorithm"
+      }
+    ],
+    "protocol": {
+      "member": "setSearchAlgorithm(weka.classifiers.bayes.net.search.SearchAlgorithm newSearchAlgorithm)",
+      "comment": "Set the SearchAlgorithm used in searching for network structures.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSearchAlgorithm()",
+    "name": "getSearchAlgorithm",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "name": "weka.classifiers.bayes.net.search.SearchAlgorithm",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSearchAlgorithm()",
+      "comment": "Get the SearchAlgorithm used as the search algorithm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEstimator(weka.classifiers.bayes.net.estimate.BayesNetEstimator newBayesNetEstimator)",
+    "name": "setEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.estimate.BayesNetEstimator",
+          "name": "BayesNetEstimator",
+          "isArray": false
+        },
+        "name": "newBayesNetEstimator"
+      }
+    ],
+    "protocol": {
+      "member": "setEstimator(weka.classifiers.bayes.net.estimate.BayesNetEstimator newBayesNetEstimator)",
+      "comment": "Set the Estimator Algorithm used in calculating the CPTs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEstimator()",
+    "name": "getEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.estimate.BayesNetEstimator",
+      "name": "weka.classifiers.bayes.net.estimate.BayesNetEstimator",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEstimator()",
+      "comment": "Get the BayesNetEstimator used for calculating the CPTs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseADTree(boolean bUseADTree)",
+    "name": "setUseADTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bUseADTree"
+      }
+    ],
+    "protocol": {
+      "member": "setUseADTree(boolean bUseADTree)",
+      "comment": "Set whether ADTree structure is used or not",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseADTree()",
+    "name": "getUseADTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseADTree()",
+      "comment": "Method declaration",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBIFFile(java.lang.String sBIFFile)",
+    "name": "setBIFFile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sBIFFile"
+      }
+    ],
+    "protocol": {
+      "member": "setBIFFile(java.lang.String sBIFFile)",
+      "comment": "Set name of network in BIF file to compare with",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBIFFile()",
+    "name": "getBIFFile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBIFFile()",
+      "comment": "Get name of network in BIF file to compare with",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a description of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphType()",
+    "name": "graphType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphType()",
+      "comment": "Returns the type of graph this classifier represents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "Returns a BayesNet graph in XMLBIF ver 0method_0 format.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBIFHeader()",
+    "name": "getBIFHeader",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBIFHeader()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toXMLBIF03()",
+    "name": "toXMLBIF03",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toXMLBIF03()",
+      "comment": "Returns a description of the classifier in XML BIF 0method_0 format. See http://www-2method_1method_2method_3/~fgcozman/Research/InterchangeFormat/ for details on XML BIF.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "XMLNormalize(java.lang.String sStr)",
+    "name": "XMLNormalize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sStr"
+      }
+    ],
+    "protocol": {
+      "member": "XMLNormalize(java.lang.String sStr)",
+      "comment": "XMLNormalize converts the five standard XML entities in a string gmethod_0. the string V&D's is returned as V&D&apos;s",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useADTreeTipText()",
+    "name": "useADTreeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useADTreeTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "searchAlgorithmTipText()",
+    "name": "searchAlgorithmTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "searchAlgorithmTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "estimatorTipText()",
+    "name": "estimatorTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "estimatorTipText()",
+      "comment": "This will return a string describing the BayesNetEstimator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "BIFFileTipText()",
+    "name": "BIFFileTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "BIFFileTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getName()",
+    "name": "getName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getName()",
+      "comment": "get name of the Bayes network",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNrOfNodes()",
+    "name": "getNrOfNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNrOfNodes()",
+      "comment": "get number of nodes in the Bayes network",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeName(int iNode)",
+    "name": "getNodeName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getNodeName(int iNode)",
+      "comment": "get name of a node in the Bayes network",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCardinality(int iNode)",
+    "name": "getCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getCardinality(int iNode)",
+      "comment": "get number of values a node can take",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeValue(int iNode, int iValue)",
+    "name": "getNodeValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iValue"
+      }
+    ],
+    "protocol": {
+      "member": "getNodeValue(int iNode, int iValue)",
+      "comment": "get name of a particular value of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNrOfParents(int iNode)",
+    "name": "getNrOfParents",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getNrOfParents(int iNode)",
+      "comment": "get number of parents of a node in the network structure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParent(int iNode, int iParent)",
+    "name": "getParent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iParent"
+      }
+    ],
+    "protocol": {
+      "member": "getParent(int iNode, int iParent)",
+      "comment": "get node index of a parent of a node in the network structure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParentSets()",
+    "name": "getParentSets",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.ParentSet[]",
+      "name": "weka.classifiers.bayes.net.ParentSet[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getParentSets()",
+      "comment": "Get full set of parent sets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDistributions()",
+    "name": "getDistributions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.estimators.Estimator[][]",
+      "name": "weka.estimators.Estimator[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDistributions()",
+      "comment": "Get full set of estimators.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParentCardinality(int iNode)",
+    "name": "getParentCardinality",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getParentCardinality(int iNode)",
+      "comment": "get number of values the collection of parents of a node can take",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getProbability(int iNode, int iParent, int iValue)",
+    "name": "getProbability",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iParent"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iValue"
+      }
+    ],
+    "protocol": {
+      "member": "getProbability(int iNode, int iParent, int iValue)",
+      "comment": "get particular probability of the conditional probability distribtion of a node given its parents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParentSet(int iNode)",
+    "name": "getParentSet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.ParentSet",
+      "name": "weka.classifiers.bayes.net.ParentSet",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getParentSet(int iNode)",
+      "comment": "get the parent set of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getADTree()",
+    "name": "getADTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.ADNode",
+      "name": "weka.classifiers.bayes.net.ADNode",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getADTree()",
+      "comment": "get ADTree strucrture containing efficient representation of counts.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the measure names. Additional measures must follow the naming convention of starting with \"measure\", eg. double method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureExtraArcs()",
+    "name": "measureExtraArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureExtraArcs()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureMissingArcs()",
+    "name": "measureMissingArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureMissingArcs()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureReversedArcs()",
+    "name": "measureReversedArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureReversedArcs()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureDivergence()",
+    "name": "measureDivergence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureDivergence()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureBayesScore()",
+    "name": "measureBayesScore",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureBayesScore()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureBDeuScore()",
+    "name": "measureBDeuScore",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureBDeuScore()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureMDLScore()",
+    "name": "measureMDLScore",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureMDLScore()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureAICScore()",
+    "name": "measureAICScore",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureAICScore()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureEntropyScore()",
+    "name": "measureEntropyScore",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureEntropyScore()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String measureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "measureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String measureName)",
+      "comment": "Returns the value of the named measure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.BayesNet",
+      "name": "BayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.BayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

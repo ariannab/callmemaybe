@@ -1,0 +1,900 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of Vote.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -P <path to serialized classifier> Full path to serialized classifier to include. May be specified multiple times to include multiple serialized classifiers. Note: it does not make sense to use pre-built classifiers in a cross-validation.   -R <AVG|PROD|MAJ|MIN|MAX|MED> The combination rule to use (default: AVG)   -print Print the individual models in the output   -S <num> Random number seed. (default 1)   -B <classifier specification> Full class name of classifier to include, followed by scheme options. May be specified multiple times. (default: \"wekamethod_0method_1method_2\")   -output-debug-info If set, classifier is run in debug mode and may output additional info to the console   -do-not-check-capabilities If set, classifier capabilities are not checked before classifier is built (use with caution).   Options specific to classifier wekamethod_0method_1method_2:   -output-debug-info If set, classifier is run in debug mode and may output additional info to the console   -do-not-check-capabilities If set, classifier capabilities are not checked before classifier is built (use with caution).  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Buildclassifier selects a classifier from the set of classifiers by minimising error on the training data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addPreBuiltClassifier(weka.classifiers.Classifier c)",
+    "name": "addPreBuiltClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "addPreBuiltClassifier(weka.classifiers.Classifier c)",
+      "comment": "Add a prebuilt classifier to the list for use in the ensemble",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removePreBuiltClassifier(weka.classifiers.Classifier c)",
+    "name": "removePreBuiltClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "removePreBuiltClassifier(weka.classifiers.Classifier c)",
+      "comment": "Remove a prebuilt classifier from the list to use in the ensemble",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance instance)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance instance)",
+      "comment": "Classifies the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstanceMedian(weka.core.Instance instance)",
+    "name": "classifyInstanceMedian",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstanceMedian(weka.core.Instance instance)",
+      "comment": "Classifies the given test instance, returning the median from all classifiers. Can assume that class is numeric.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Classifies a given instance using the selected combination rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstanceAverage(weka.core.Instance instance)",
+    "name": "distributionForInstanceAverage",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstanceAverage(weka.core.Instance instance)",
+      "comment": "Classifies a given instance using the Average of Probabilities combination rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstanceProduct(weka.core.Instance instance)",
+    "name": "distributionForInstanceProduct",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstanceProduct(weka.core.Instance instance)",
+      "comment": "Classifies a given instance using the Product of Probabilities combination rule. Can assume that class is nominal.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstanceMajorityVoting(weka.core.Instance instance)",
+    "name": "distributionForInstanceMajorityVoting",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstanceMajorityVoting(weka.core.Instance instance)",
+      "comment": "Classifies a given instance using the Majority Voting combination rule. Can assume that class is nominal.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstanceMax(weka.core.Instance instance)",
+    "name": "distributionForInstanceMax",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstanceMax(weka.core.Instance instance)",
+      "comment": "Classifies a given instance using the Maximum Probability combination rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstanceMin(weka.core.Instance instance)",
+    "name": "distributionForInstanceMin",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstanceMin(weka.core.Instance instance)",
+      "comment": "Classifies a given instance using the Minimum Probability combination rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "combinationRuleTipText()",
+    "name": "combinationRuleTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "combinationRuleTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCombinationRule()",
+    "name": "getCombinationRule",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCombinationRule()",
+      "comment": "Gets the combination rule used",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCombinationRule(weka.core.SelectedTag newRule)",
+    "name": "setCombinationRule",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "newRule"
+      }
+    ],
+    "protocol": {
+      "member": "setCombinationRule(weka.core.SelectedTag newRule)",
+      "comment": "Sets the combination rule to use. Values other than",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "preBuiltClassifiersTipText()",
+    "name": "preBuiltClassifiersTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "preBuiltClassifiersTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPreBuiltClassifiers(java.io.File[] preBuilt)",
+    "name": "setPreBuiltClassifiers",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.io.File;",
+          "name": "File[]",
+          "isArray": true
+        },
+        "name": "preBuilt"
+      }
+    ],
+    "protocol": {
+      "member": "setPreBuiltClassifiers(java.io.File[] preBuilt)",
+      "comment": "Set the paths to pre-built serialized classifiers to load and include in the ensemble",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPreBuiltClassifiers()",
+    "name": "getPreBuiltClassifiers",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.io.File[]",
+      "name": "java.io.File[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPreBuiltClassifiers()",
+      "comment": "Get the paths to pre-built serialized classifiers to load and include in the ensemble",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doNotPrintModelsTipText()",
+    "name": "doNotPrintModelsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doNotPrintModelsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDoNotPrintModels(boolean print)",
+    "name": "setDoNotPrintModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "print"
+      }
+    ],
+    "protocol": {
+      "member": "setDoNotPrintModels(boolean print)",
+      "comment": "Set whether to print the individual ensemble models in the output",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDoNotPrintModels()",
+    "name": "getDoNotPrintModels",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDoNotPrintModels()",
+      "comment": "Get whether to print the individual ensemble models in the output",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Output a representation of this classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEnvironment(weka.core.Environment env)",
+    "name": "setEnvironment",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Environment",
+          "name": "Environment",
+          "isArray": false
+        },
+        "name": "env"
+      }
+    ],
+    "protocol": {
+      "member": "setEnvironment(weka.core.Environment env)",
+      "comment": "Set environment variable values to substitute in the paths of serialized models to load",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "aggregate(weka.classifiers.Classifier toAggregate)",
+    "name": "aggregate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier",
+      "name": "weka.classifiers.Classifier",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "toAggregate"
+      }
+    ],
+    "protocol": {
+      "member": "aggregate(weka.classifiers.Classifier toAggregate)",
+      "comment": "Aggregate an object with this one",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finalizeAggregation()",
+    "name": "finalizeAggregation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finalizeAggregation()",
+      "comment": "Call to complete the aggregation process. Allows implementers to do any final processing based on how many objects were aggregated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Vote",
+      "name": "Vote",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Vote",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

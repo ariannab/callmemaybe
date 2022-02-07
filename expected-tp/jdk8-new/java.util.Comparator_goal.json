@@ -1,0 +1,575 @@
+[
+  {
+    "signature": "compare(T o1, T o2)",
+    "name": "compare",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o2"
+      }
+    ],
+    "protocol": {
+      "member": "compare(T o1, T o2)",
+      "comment": "Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second. In the foregoing description, the notation sgn(expression) designates the mathematical signum function, which is defined to return one of -1, 0, or 1 according to whether the value of expression is negative, zero or positive. The implementor must ensure that method_1 == -method_2 for all x and y. (This implies that method_3 must throw an exception if and only if method_4 throws an exception.) The implementor must also ensure that the relation is transitive: ((method_3>0) && (method_6>0)) implies method_7>0. Finally, the implementor must ensure that method_3==0 implies that sgn(method_7)==sgn(method_6) for all z. It is generally the case, but not strictly required that (method_3==0) == (method_12. Generally speaking, any comparator that violates this condition should clearly indicate this fact. The recommended language is \"Note: this comparator imposes orderings that are inconsistent with equals.\"",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Indicates whether some other object is &quot;equal to&quot; this comparator. This method must obey the general contract of method_0. Additionally, this method can return true only if the specified object is also a comparator and it imposes the same ordering as this comparator. Thus, method_1 implies that method_2==method_3 for every object reference o1 and o2. Note that it is always safe not to override method_4. However, overriding this method may, in some cases, improve performance by allowing programs to determine that two distinct comparators impose the same order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reversed()",
+    "name": "reversed",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reversed()",
+      "comment": "Returns a comparator that imposes the reverse ordering of this comparator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComparing(java.util.Comparator<? super T> other)",
+    "name": "thenComparing",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "thenComparing(java.util.Comparator<? super T> other)",
+      "comment": "Returns a lexicographic-order comparator with another comparator. If this Comparator considers two elements equal, imethod_3. method_0 == 0, other is used to determine the order. The returned comparator is serializable if the specified comparator is also serializable. @apiNote For example, to sort a collection of String based on the length and then case-insensitive natural ordering, the comparator can be composed using following code, Comparator<String> cmp = method_1 .method_2;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComparing(java.util.function.Function<? super T, ? extends U> keyExtractor, java.util.Comparator<? super U> keyComparator)",
+    "name": "thenComparing",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "keyComparator"
+      }
+    ],
+    "protocol": {
+      "member": "thenComparing(java.util.function.Function<? super T, ? extends U> keyExtractor, java.util.Comparator<? super U> keyComparator)",
+      "comment": "Returns a lexicographic-order comparator with a function that extracts a key to be compared with the given Comparator. @implSpec This default implementation behaves as if method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComparing(java.util.function.Function<? super T, ? extends U> keyExtractor)",
+    "name": "thenComparing",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "thenComparing(java.util.function.Function<? super T, ? extends U> keyExtractor)",
+      "comment": "Returns a lexicographic-order comparator with a function that extracts a Comparable sort key. @implSpec This default implementation behaves as if method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComparingInt(java.util.function.ToIntFunction<? super T> keyExtractor)",
+    "name": "thenComparingInt",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "thenComparingInt(java.util.function.ToIntFunction<? super T> keyExtractor)",
+      "comment": "Returns a lexicographic-order comparator with a function that extracts a int sort key. @implSpec This default implementation behaves as if method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComparingLong(java.util.function.ToLongFunction<? super T> keyExtractor)",
+    "name": "thenComparingLong",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "thenComparingLong(java.util.function.ToLongFunction<? super T> keyExtractor)",
+      "comment": "Returns a lexicographic-order comparator with a function that extracts a long sort key. @implSpec This default implementation behaves as if method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComparingDouble(java.util.function.ToDoubleFunction<? super T> keyExtractor)",
+    "name": "thenComparingDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "thenComparingDouble(java.util.function.ToDoubleFunction<? super T> keyExtractor)",
+      "comment": "Returns a lexicographic-order comparator with a function that extracts a double sort key. @implSpec This default implementation behaves as if method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reverseOrder()",
+    "name": "reverseOrder",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reverseOrder()",
+      "comment": "Returns a comparator that imposes the reverse of the natural ordering. The returned comparator is serializable and throws NullPointerException when comparing null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "naturalOrder()",
+    "name": "naturalOrder",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "naturalOrder()",
+      "comment": "Returns a comparator that compares Comparable objects in natural order. The returned comparator is serializable and throws NullPointerException when comparing null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nullsFirst(java.util.Comparator<? super T> comparator)",
+    "name": "nullsFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "protocol": {
+      "member": "nullsFirst(java.util.Comparator<? super T> comparator)",
+      "comment": "Returns a null-friendly comparator that considers null to be less than non-null. When both are null, they are considered equal. If both are non-null, the specified Comparator is used to determine the order. If the specified comparator is null, then the returned comparator considers all non-null values to be equal. The returned comparator is serializable if the specified comparator is serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nullsLast(java.util.Comparator<? super T> comparator)",
+    "name": "nullsLast",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "comparator"
+      }
+    ],
+    "protocol": {
+      "member": "nullsLast(java.util.Comparator<? super T> comparator)",
+      "comment": "Returns a null-friendly comparator that considers null to be greater than non-null. When both are null, they are considered equal. If both are non-null, the specified Comparator is used to determine the order. If the specified comparator is null, then the returned comparator considers all non-null values to be equal. The returned comparator is serializable if the specified comparator is serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparing(java.util.function.Function<? super T, ? extends U> keyExtractor, java.util.Comparator<? super U> keyComparator)",
+    "name": "comparing",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Comparator",
+          "name": "Comparator",
+          "isArray": false
+        },
+        "name": "keyComparator"
+      }
+    ],
+    "protocol": {
+      "member": "comparing(java.util.function.Function<? super T, ? extends U> keyExtractor, java.util.Comparator<? super U> keyComparator)",
+      "comment": "Accepts a function that extracts a sort key from a type T, and returns a Comparator<T> that compares by that sort key using the specified Comparator. The returned comparator is serializable if the specified function and comparator are both serializable. @apiNote For example, to obtain a Comparator that compares Person objects by their last name ignoring case differences, Comparator<Person> cmp = method_1( Person::getLastName, method_2);",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparing(java.util.function.Function<? super T, ? extends U> keyExtractor)",
+    "name": "comparing",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "comparing(java.util.function.Function<? super T, ? extends U> keyExtractor)",
+      "comment": "Accepts a function that extracts a javamethod_1method_2 Comparable sort key from a type T, and returns a Comparator<T> that compares by that sort key. The returned comparator is serializable if the specified function is also serializable. @apiNote For example, to obtain a Comparator that compares Person objects by their last name, Comparator<Person> byLastName = method_0;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparingInt(java.util.function.ToIntFunction<? super T> keyExtractor)",
+    "name": "comparingInt",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToIntFunction",
+          "name": "ToIntFunction",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "comparingInt(java.util.function.ToIntFunction<? super T> keyExtractor)",
+      "comment": "Accepts a function that extracts an int sort key from a type T, and returns a Comparator<T> that compares by that sort key. The returned comparator is serializable if the specified function is also serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparingLong(java.util.function.ToLongFunction<? super T> keyExtractor)",
+    "name": "comparingLong",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToLongFunction",
+          "name": "ToLongFunction",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "comparingLong(java.util.function.ToLongFunction<? super T> keyExtractor)",
+      "comment": "Accepts a function that extracts a long sort key from a type T, and returns a Comparator<T> that compares by that sort key. The returned comparator is serializable if the specified function is also serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "comparingDouble(java.util.function.ToDoubleFunction<? super T> keyExtractor)",
+    "name": "comparingDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.Comparator",
+      "name": "Comparator",
+      "isArray": false
+    },
+    "targetClass": "java.util.Comparator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Comparator<T>",
+      "name": "java.util.Comparator<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ToDoubleFunction",
+          "name": "ToDoubleFunction",
+          "isArray": false
+        },
+        "name": "keyExtractor"
+      }
+    ],
+    "protocol": {
+      "member": "comparingDouble(java.util.function.ToDoubleFunction<? super T> keyExtractor)",
+      "comment": "Accepts a function that extracts a double sort key from a type T, and returns a Comparator<T> that compares by that sort key. The returned comparator is serializable if the specified function is also serializable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

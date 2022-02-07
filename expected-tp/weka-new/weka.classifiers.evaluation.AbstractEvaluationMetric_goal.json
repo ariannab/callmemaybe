@@ -1,0 +1,236 @@
+[
+  {
+    "signature": "getPluginMetrics()",
+    "name": "getPluginMetrics",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<weka.classifiers.evaluation.AbstractEvaluationMetric>",
+      "name": "java.util.ArrayList<weka.classifiers.evaluation.AbstractEvaluationMetric>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPluginMetrics()",
+      "comment": "Gets a list of freshly instantiated concrete implementations of available plugin metrics or null if there are no plugin metrics available",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBaseEvaluation(weka.classifiers.evaluation.Evaluation eval)",
+    "name": "setBaseEvaluation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+          "name": "Evaluation",
+          "isArray": false
+        },
+        "name": "eval"
+      }
+    ],
+    "protocol": {
+      "member": "setBaseEvaluation(weka.classifiers.evaluation.Evaluation eval)",
+      "comment": "Set the base evaluation object to use. IMPORTANT: subclasses should treat this object as read-only.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "appliesToNominalClass()",
+    "name": "appliesToNominalClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "appliesToNominalClass()",
+      "comment": "Return true if this evaluation metric can be computed when the class is nominal",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "appliesToNumericClass()",
+    "name": "appliesToNumericClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "appliesToNumericClass()",
+      "comment": "Return true if this evaluation metric can be computed when the class is numeric",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetricName()",
+    "name": "getMetricName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMetricName()",
+      "comment": "Get the name of this metric",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetricDescription()",
+    "name": "getMetricDescription",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMetricDescription()",
+      "comment": "Get a short description of this metric (algorithm, forumulas etc.).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStatisticNames()",
+    "name": "getStatisticNames",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStatisticNames()",
+      "comment": "Get a list of the names of the statistics that this metrics computes. Emethod_0. an information theoretic evaluation measure might compute total number of bits as well as average bits/instance",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStatistic(java.lang.String statName)",
+    "name": "getStatistic",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "statName"
+      }
+    ],
+    "protocol": {
+      "member": "getStatistic(java.lang.String statName)",
+      "comment": "Get the value of the named statistic",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "statisticIsMaximisable(java.lang.String statName)",
+    "name": "statisticIsMaximisable",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+      "name": "AbstractEvaluationMetric",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.AbstractEvaluationMetric",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "statName"
+      }
+    ],
+    "protocol": {
+      "member": "statisticIsMaximisable(java.lang.String statName)",
+      "comment": "True if the optimum value of the named metric is a maximum value; false if the optimim value is a minimum value. Subclasses should override this method to suit their method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,442 @@
+[
+  {
+    "signature": "getOrDefault(java.lang.Object key, V defaultValue)",
+    "name": "getOrDefault",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "defaultValue"
+      }
+    ],
+    "protocol": {
+      "member": "getOrDefault(java.lang.Object key, V defaultValue)",
+      "comment": "{@inheritDoc} @implNote This implementation assumes that the ConcurrentMap cannot contain null values and method_0 returning null unambiguously means the key is absent. Implementations which support null values must override this default implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.BiConsumer<? super K, ? super V> action)",
+      "comment": "{@inheritDoc} @implSpec The default implementation is equivalent to, for this map}:  {@code for ((method_5<K, V> entry : method_0 method_1, method_2;  @implNote The default implementation assumes that IllegalStateException thrown by method_3 or method_4 indicates that the entry has been removed and cannot be processed. Operation continues for subsequent entries.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putIfAbsent(K key, V value)",
+    "name": "putIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putIfAbsent(K key, V value)",
+      "comment": "If the specified key is not already associated with a value, associate it with the given value. This is equivalent to  if (method_0 return method_1; else return method_2;  except that the action is performed atomically. @implNote This implementation intentionally re-abstracts the inappropriate default provided in Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key, java.lang.Object value)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key, java.lang.Object value)",
+      "comment": "Removes the entry for a key only if currently mapped to a given value. This is equivalent to  if (method_0 && method_1, value)) { method_2; return true;  else return false; } except that the action is performed atomically. @implNote This implementation intentionally re-abstracts the inappropriate default provided in Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V oldValue, V newValue)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "oldValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V oldValue, V newValue)",
+      "comment": "Replaces the entry for a key only if currently mapped to a given value. This is equivalent to  if (method_0 && method_1, oldValue)) { method_2; return true;  else return false; } except that the action is performed atomically. @implNote This implementation intentionally re-abstracts the inappropriate default provided in Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replace(K key, V value)",
+    "name": "replace",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "replace(K key, V value)",
+      "comment": "Replaces the entry for a key only if currently mapped to some value. This is equivalent to  if (method_0 { return method_1;  else return null; } except that the action is performed atomically. @implNote This implementation intentionally re-abstracts the inappropriate default provided in Map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+    "name": "replaceAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "function"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V> function)",
+      "comment": "{@inheritDoc} @implSpec The default implementation is equivalent to, for this map}:  {@code for ((method_5<K, V> entry : method_0 do { K k = method_1; V v = method_2;  method_3; } The default implementation may retry these steps when multiple threads attempt updates including potentially calling the function repeatedly for a given key. This implementation assumes that the ConcurrentMap cannot contain null values and method_4 returning null unambiguously means the key is absent. Implementations which support null values must override this default implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+    "name": "computeIfAbsent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "mappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfAbsent(K key, java.util.function.Function<? super K, ? extends V> mappingFunction)",
+      "comment": "{@inheritDoc} @implSpec The default implementation is equivalent to the following steps for this map, then returning the current value or null if now absent:  if (method_0 == null) { V newValue = method_1; if (newValue != null) return method_2;  } The default implementation may retry these steps when multiple threads attempt updates including potentially calling the mapping function multiple times. This implementation assumes that the ConcurrentMap cannot contain null values and method_3 returning null unambiguously means the key is absent. Implementations which support null values must override this default implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "computeIfPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "computeIfPresent(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "{@inheritDoc} @implSpec The default implementation is equivalent to performing the following steps for this map, then returning the current value or null if now absent. :  if (method_0 != null) { V oldValue = method_0; V newValue = method_2; if (newValue != null) method_3; else method_4;  } The default implementation may retry these steps when multiple threads attempt updates including potentially calling the remapping function multiple times. This implementation assumes that the ConcurrentMap cannot contain null values and method_5 returning null unambiguously means the key is absent. Implementations which support null values must override this default implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "compute(K key, java.util.function.BiFunction<? super K, ? super V, ? extends V> remappingFunction)",
+      "comment": "{@inheritDoc} @implSpec The default implementation is equivalent to performing the following steps for this map, then returning the current value or null if absent:  V oldValue = method_0; V newValue = method_1; if (oldValue != null ) { if (newValue != null) method_2; else method_3;  else { if (newValue != null) method_4; else return null; } } The default implementation may retry these steps when multiple threads attempt updates including potentially calling the remapping function multiple times. This implementation assumes that the ConcurrentMap cannot contain null values and method_5 returning null unambiguously means the key is absent. Implementations which support null values must override this default implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+    "name": "merge",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentMap",
+      "name": "ConcurrentMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "remappingFunction"
+      }
+    ],
+    "protocol": {
+      "member": "merge(K key, V value, java.util.function.BiFunction<? super V, ? super V, ? extends V> remappingFunction)",
+      "comment": "{@inheritDoc} @implSpec The default implementation is equivalent to performing the following steps for this map, then returning the current value or null if absent:  V oldValue = method_0; V newValue = (oldValue == null) ? value : method_1; if (newValue == null) method_2; else method_3;  The default implementation may retry these steps when multiple threads attempt updates including potentially calling the remapping function multiple times. This implementation assumes that the ConcurrentMap cannot contain null values and method_4 returning null unambiguously means the key is absent. Implementations which support null values must override this default implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

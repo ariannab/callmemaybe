@@ -1,0 +1,161 @@
+[
+  {
+    "signature": "getStream(java.lang.String name)",
+    "name": "getStream",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.NetStreamDecoder",
+      "name": "NetStreamDecoder",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.NetStreamDecoder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.stream.thread.ThreadProxyPipe",
+      "name": "org.graphstream.stream.thread.ThreadProxyPipe",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "getStream(java.lang.String name)",
+      "comment": "Gives the stream (a ThreadProxyPipe) identified with this name. If no pipe exists under this name, a new one is created and returned",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultStream()",
+    "name": "getDefaultStream",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.NetStreamDecoder",
+      "name": "NetStreamDecoder",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.NetStreamDecoder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.stream.thread.ThreadProxyPipe",
+      "name": "org.graphstream.stream.thread.ThreadProxyPipe",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDefaultStream()",
+      "comment": "Gives the default stream (a ThreadProxyPipe) identified with the name \"default\". It is created if it does not exist.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "register(java.lang.String name, org.graphstream.stream.thread.ThreadProxyPipe stream)",
+    "name": "register",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.NetStreamDecoder",
+      "name": "NetStreamDecoder",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.NetStreamDecoder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.stream.thread.ThreadProxyPipe",
+          "name": "ThreadProxyPipe",
+          "isArray": false
+        },
+        "name": "stream"
+      }
+    ],
+    "protocol": {
+      "member": "register(java.lang.String name, org.graphstream.stream.thread.ThreadProxyPipe stream)",
+      "comment": "Register a stream. All events with the given stream name will be directed to it. The user has to ensure the ThreadProxyPipe can be safely written to by the Receiver's thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decodeMessage(java.io.InputStream in)",
+    "name": "decodeMessage",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.NetStreamDecoder",
+      "name": "NetStreamDecoder",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.NetStreamDecoder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "protocol": {
+      "member": "decodeMessage(java.io.InputStream in)",
+      "comment": "Decode one message.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDebugOn(boolean on)",
+    "name": "setDebugOn",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.netstream.NetStreamDecoder",
+      "name": "NetStreamDecoder",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.netstream.NetStreamDecoder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "on"
+      }
+    ],
+    "protocol": {
+      "member": "setDebugOn(boolean on)",
+      "comment": "Enable or disable debugging.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

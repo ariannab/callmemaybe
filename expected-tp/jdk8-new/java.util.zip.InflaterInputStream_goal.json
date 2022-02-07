@@ -1,0 +1,357 @@
+[
+  {
+    "signature": "java.util.zip.InflaterInputStream(java.io.InputStream in, java.util.zip.Inflater inf, int size)",
+    "name": "java.util.zip.InflaterInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.zip.Inflater",
+          "name": "Inflater",
+          "isArray": false
+        },
+        "name": "inf"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.InflaterInputStream(java.io.InputStream in, java.util.zip.Inflater inf, int size)",
+      "comment": "Creates a new input stream with the specified decompressor and buffer size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.InflaterInputStream(java.io.InputStream in, java.util.zip.Inflater inf)",
+    "name": "java.util.zip.InflaterInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.zip.Inflater",
+          "name": "Inflater",
+          "isArray": false
+        },
+        "name": "inf"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.InflaterInputStream(java.io.InputStream in, java.util.zip.Inflater inf)",
+      "comment": "Creates a new input stream with the specified decompressor and a default buffer size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.InflaterInputStream(java.io.InputStream in)",
+    "name": "java.util.zip.InflaterInputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "in"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.InflaterInputStream(java.io.InputStream in)",
+      "comment": "Creates a new input stream with a default decompressor and buffer size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read()",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "read()",
+      "comment": "Reads a byte of uncompressed data. This method will block until enough input is available for decompression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "read(byte[] b, int off, int len)",
+    "name": "read",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "read(byte[] b, int off, int len)",
+      "comment": "Reads uncompressed data into an array of bytes. If len is not zero, the method will block until some input can be decompressed; otherwise, no bytes are read and 0 is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "available()",
+    "name": "available",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "available()",
+      "comment": "Returns 0 after EOF has been reached, otherwise always return 1.  Programs should not count on this method to return the actual number of bytes that could be read without blocking.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skip(long n)",
+    "name": "skip",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "skip(long n)",
+      "comment": "Skips specified number of bytes of uncompressed data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Closes this input stream and releases any system resources associated with the stream. @exception IOException if an I/O error has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fill()",
+    "name": "fill",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "fill()",
+      "comment": "Fills input buffer with more data to decompress. @exception IOException if an I/O error has occurred",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "markSupported()",
+    "name": "markSupported",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "markSupported()",
+      "comment": "Tests if this input stream supports the mark and reset methods. The markSupported method of InflaterInputStream returns false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mark(int readlimit)",
+    "name": "mark",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "readlimit"
+      }
+    ],
+    "protocol": {
+      "member": "mark(int readlimit)",
+      "comment": "Marks the current position in this input stream.  The mark method of InflaterInputStream does nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.InflaterInputStream",
+      "name": "InflaterInputStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.InflaterInputStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Repositions this stream to the position at the time the mark method was last called on this input stream.  The method reset for class InflaterInputStream does nothing except throw an IOException. @exception IOException if this method is invoked.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

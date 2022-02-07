@@ -1,0 +1,553 @@
+[
+  {
+    "signature": "cern.colt.list.MinMaxNumberList(long minimum, long maximum, int initialCapacity)",
+    "name": "cern.colt.list.MinMaxNumberList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "minimum"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "maximum"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "cern.colt.list.MinMaxNumberList(long minimum, long maximum, int initialCapacity)",
+      "comment": "Constructs an empty list with the specified initial capacity and the specified range of values allowed to be hold in this list. Legal values are in the range [minimum,maximum], all inclusive.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(long element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "add(long element)",
+      "comment": "Appends the specified element to the end of this list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAllOfFromTo(long[] elements, int from, int to)",
+    "name": "addAllOfFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "elements"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "addAllOfFromTo(long[] elements, int from, int to)",
+      "comment": "Appends the elements elements[from] (inclusive), ..., elements[to] (inclusive) to the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "bitsPerElement()",
+    "name": "bitsPerElement",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "bitsPerElement()",
+      "comment": "Returns the number of bits necessary to store a single element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "bitsPerElement(long minimum, long maximum)",
+    "name": "bitsPerElement",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "minimum"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "maximum"
+      }
+    ],
+    "protocol": {
+      "member": "bitsPerElement(long minimum, long maximum)",
+      "comment": "Returns the number of bits necessary to store values in the range [minimum,maximum].",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureCapacity(int minCapacity)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "ensureCapacity(int minCapacity)",
+      "comment": "Ensures that the receiver can hold at least the specified number of elements without needing to allocate new internal memory. If necessary, allocates new internal memory and increases the capacity of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQuick(int index)",
+    "name": "getQuick",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "getQuick(int index)",
+      "comment": "Returns the element at the specified position in the receiver; WARNING: Does not check preconditions. Provided with invalid parameters this method may return invalid elements without throwing any exception! You should only use this method when you are absolutely sure that the index is within bounds. Precondition (unchecked): index >= 0 && index < method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partFromTo(int from, int to, cern.colt.bitvector.BitVector qualificants, int qualificantsFrom, long[] part, int partFrom)",
+    "name": "partFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.bitvector.BitVector",
+          "name": "BitVector",
+          "isArray": false
+        },
+        "name": "qualificants"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "qualificantsFrom"
+      },
+      {
+        "type": {
+          "qualifiedName": "[J",
+          "name": "long[]",
+          "isArray": true
+        },
+        "name": "part"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "partFrom"
+      }
+    ],
+    "protocol": {
+      "member": "partFromTo(int from, int to, cern.colt.bitvector.BitVector qualificants, int qualificantsFrom, long[] part, int partFrom)",
+      "comment": "Copies all elements between index from (inclusive) and to (inclusive) into part, starting at index partFrom within part. Elements are only copied if a corresponding flag within qualificants is set. More precisely: for (; from<=to; from++, partFrom++, qualificantsFrom++) { if (qualificants==null || method_0 { part[partFrom] = method_1; } }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setQuick(int index, long element)",
+    "name": "setQuick",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "setQuick(int index, long element)",
+      "comment": "Replaces the element at the specified position in the receiver with the specified element; WARNING: Does not check preconditions. Provided with invalid parameters this method may access invalid indexes without throwing any exception! You should only use this method when you are absolutely sure that the index is within bounds. Precondition (unchecked): index >= 0 && index < method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSizeRaw(int newSize)",
+    "name": "setSizeRaw",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newSize"
+      }
+    ],
+    "protocol": {
+      "member": "setSizeRaw(int newSize)",
+      "comment": "Sets the size of the receiver without modifying it otherwise. This method should not release or allocate new memory but simply set some instance variable like size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUp(long minimum, long maximum, int initialCapacity)",
+    "name": "setUp",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "minimum"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "maximum"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "setUp(long minimum, long maximum, int initialCapacity)",
+      "comment": "Sets the receiver to an empty list with the specified initial capacity and the specified range of values allowed to be hold in this list. Legal values are in the range [minimum,maximum], all inclusive.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUpBitsPerEntry(long minimum, long maximum)",
+    "name": "setUpBitsPerEntry",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "minimum"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "maximum"
+      }
+    ],
+    "protocol": {
+      "member": "setUpBitsPerEntry(long minimum, long maximum)",
+      "comment": "This method was created in VisualAge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toBitVector()",
+    "name": "toBitVector",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "cern.colt.bitvector.BitVector",
+      "name": "cern.colt.bitvector.BitVector",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toBitVector()",
+      "comment": "Returns the receiver seen as bitvector. WARNING: The bitvector and the receiver share the backing bits. Modifying one of them will affect the other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trimToSize()",
+    "name": "trimToSize",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "trimToSize()",
+      "comment": "Trims the capacity of the receiver to be the receiver's current size. An application can use this operation to minimize the storage of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "xminimum()",
+    "name": "xminimum",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.MinMaxNumberList",
+      "name": "MinMaxNumberList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.MinMaxNumberList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "xminimum()",
+      "comment": "deprecated Returns the minimum element legal to the stored in the receiver. Remark: This does not mean that such a minimum element is currently contained in the receiver. @deprecated",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

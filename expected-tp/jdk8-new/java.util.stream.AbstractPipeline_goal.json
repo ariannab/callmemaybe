@@ -1,0 +1,1103 @@
+[
+  {
+    "signature": "java.util.stream.AbstractPipeline(java.util.function.Supplier<? extends java.util.Spliterator<?>> source, int sourceFlags, boolean parallel)",
+    "name": "java.util.stream.AbstractPipeline",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceFlags"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "parallel"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractPipeline(java.util.function.Supplier<? extends java.util.Spliterator<?>> source, int sourceFlags, boolean parallel)",
+      "comment": "Constructor for the head of a stream pipeline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.stream.AbstractPipeline(java.util.Spliterator<?> source, int sourceFlags, boolean parallel)",
+    "name": "java.util.stream.AbstractPipeline",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "sourceFlags"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "parallel"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractPipeline(java.util.Spliterator<?> source, int sourceFlags, boolean parallel)",
+      "comment": "Constructor for the head of a stream pipeline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.stream.AbstractPipeline(java.util.stream.AbstractPipeline<?, E_IN, ?> previousStage, int opFlags)",
+    "name": "java.util.stream.AbstractPipeline",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.AbstractPipeline",
+          "name": "AbstractPipeline",
+          "isArray": false
+        },
+        "name": "previousStage"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "opFlags"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractPipeline(java.util.stream.AbstractPipeline<?, E_IN, ?> previousStage, int opFlags)",
+      "comment": "Constructor for appending an intermediate operation stage onto an existing pipeline.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(java.util.stream.TerminalOp<E_OUT, R> terminalOp)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.TerminalOp",
+          "name": "TerminalOp",
+          "isArray": false
+        },
+        "name": "terminalOp"
+      }
+    ],
+    "protocol": {
+      "member": "evaluate(java.util.stream.TerminalOp<E_OUT, R> terminalOp)",
+      "comment": "Evaluate the pipeline with a terminal operation to produce a result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateToArrayNode(java.util.function.IntFunction<E_OUT[]> generator)",
+    "name": "evaluateToArrayNode",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<E_OUT>",
+      "name": "java.util.stream.Node<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateToArrayNode(java.util.function.IntFunction<E_OUT[]> generator)",
+      "comment": "Collect the elements output from the pipeline stage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sourceStageSpliterator()",
+    "name": "sourceStageSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E_OUT>",
+      "name": "java.util.Spliterator<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sourceStageSpliterator()",
+      "comment": "Gets the source stage spliterator if this pipeline stage is the source stage. The pipeline is consumed after this method is called and returns successfully.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sequential()",
+    "name": "sequential",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sequential()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parallel()",
+    "name": "parallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "parallel()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onClose(java.lang.Runnable closeHandler)",
+    "name": "onClose",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "closeHandler"
+      }
+    ],
+    "protocol": {
+      "member": "onClose(java.lang.Runnable closeHandler)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E_OUT>",
+      "name": "java.util.Spliterator<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isParallel()",
+    "name": "isParallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isParallel()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStreamFlags()",
+    "name": "getStreamFlags",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStreamFlags()",
+      "comment": "Returns the composition of stream flags of the stream source and all intermediate operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSourceShape()",
+    "name": "getSourceShape",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.StreamShape",
+      "name": "java.util.stream.StreamShape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSourceShape()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exactOutputSizeIfKnown(java.util.Spliterator<P_IN> spliterator)",
+    "name": "exactOutputSizeIfKnown",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "exactOutputSizeIfKnown(java.util.Spliterator<P_IN> spliterator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapAndCopyInto(S sink, java.util.Spliterator<P_IN> spliterator)",
+    "name": "wrapAndCopyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "S",
+      "name": "S",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "sink"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "wrapAndCopyInto(S sink, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInto(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+    "name": "copyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "wrappedSink"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "copyInto(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyIntoWithCancel(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+    "name": "copyIntoWithCancel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "wrappedSink"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "copyIntoWithCancel(java.util.stream.Sink<P_IN> wrappedSink, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStreamAndOpFlags()",
+    "name": "getStreamAndOpFlags",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStreamAndOpFlags()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isOrdered()",
+    "name": "isOrdered",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isOrdered()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapSink(java.util.stream.Sink<E_OUT> sink)",
+    "name": "wrapSink",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Sink<P_IN>",
+      "name": "java.util.stream.Sink<P_IN>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "sink"
+      }
+    ],
+    "protocol": {
+      "member": "wrapSink(java.util.stream.Sink<E_OUT> sink)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrapSpliterator(java.util.Spliterator<P_IN> sourceSpliterator)",
+    "name": "wrapSpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E_OUT>",
+      "name": "java.util.Spliterator<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "sourceSpliterator"
+      }
+    ],
+    "protocol": {
+      "member": "wrapSpliterator(java.util.Spliterator<P_IN> sourceSpliterator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluate(java.util.Spliterator<P_IN> spliterator, boolean flatten, java.util.function.IntFunction<E_OUT[]> generator)",
+    "name": "evaluate",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<E_OUT>",
+      "name": "java.util.stream.Node<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flatten"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "evaluate(java.util.Spliterator<P_IN> spliterator, boolean flatten, java.util.function.IntFunction<E_OUT[]> generator)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutputShape()",
+    "name": "getOutputShape",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.StreamShape",
+      "name": "java.util.stream.StreamShape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOutputShape()",
+      "comment": "Get the output shape of the pipeline. If the pipeline is the head, then it's output shape corresponds to the shape of the source. Otherwise, it's output shape corresponds to the output shape of the associated operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateToNode(java.util.stream.PipelineHelper<E_OUT> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree, java.util.function.IntFunction<E_OUT[]> generator)",
+    "name": "evaluateToNode",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<E_OUT>",
+      "name": "java.util.stream.Node<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "flattenTree"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateToNode(java.util.stream.PipelineHelper<E_OUT> helper, java.util.Spliterator<P_IN> spliterator, boolean flattenTree, java.util.function.IntFunction<E_OUT[]> generator)",
+      "comment": "Collect elements output from a pipeline into a Node that holds elements of this shape.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "wrap(java.util.stream.PipelineHelper<E_OUT> ph, java.util.function.Supplier<java.util.Spliterator<P_IN>> supplier, boolean isParallel)",
+    "name": "wrap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E_OUT>",
+      "name": "java.util.Spliterator<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "ph"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "isParallel"
+      }
+    ],
+    "protocol": {
+      "member": "wrap(java.util.stream.PipelineHelper<E_OUT> ph, java.util.function.Supplier<java.util.Spliterator<P_IN>> supplier, boolean isParallel)",
+      "comment": "Create a spliterator that wraps a source spliterator, compatible with this stream shape, and operations associated with a PipelineHelper.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lazySpliterator(java.util.function.Supplier<? extends java.util.Spliterator<E_OUT>> supplier)",
+    "name": "lazySpliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E_OUT>",
+      "name": "java.util.Spliterator<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      }
+    ],
+    "protocol": {
+      "member": "lazySpliterator(java.util.function.Supplier<? extends java.util.Spliterator<E_OUT>> supplier)",
+      "comment": "Create a lazy spliterator that wraps and obtains the supplied the spliterator when a method is invoked on the lazy spliterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachWithCancel(java.util.Spliterator<E_OUT> spliterator, java.util.stream.Sink<E_OUT> sink)",
+    "name": "forEachWithCancel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "sink"
+      }
+    ],
+    "protocol": {
+      "member": "forEachWithCancel(java.util.Spliterator<E_OUT> spliterator, java.util.stream.Sink<E_OUT> sink)",
+      "comment": "Traverse the elements of a spliterator compatible with this stream shape, pushing those elements into a sink. If the sink requests cancellation, no further elements will be pulled or pushed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeNodeBuilder(long exactSizeIfKnown, java.util.function.IntFunction<E_OUT[]> generator)",
+    "name": "makeNodeBuilder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node$Builder<E_OUT>",
+      "name": "java.util.stream.Node$Builder<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "exactSizeIfKnown"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "makeNodeBuilder(long exactSizeIfKnown, java.util.function.IntFunction<E_OUT[]> generator)",
+      "comment": "Make a node builder compatible with this stream shape.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "opIsStateful()",
+    "name": "opIsStateful",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "opIsStateful()",
+      "comment": "Returns whether this operation is stateful or not. If it is stateful, then the method method_0 must be overridden.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "opWrapSink(int flags, java.util.stream.Sink<E_OUT> sink)",
+    "name": "opWrapSink",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Sink<E_IN>",
+      "name": "java.util.stream.Sink<E_IN>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.Sink",
+          "name": "Sink",
+          "isArray": false
+        },
+        "name": "sink"
+      }
+    ],
+    "protocol": {
+      "member": "opWrapSink(int flags, java.util.stream.Sink<E_OUT> sink)",
+      "comment": "Accepts a Sink which will receive the results of this operation, and return a Sink which accepts elements of the input type of this operation and which performs the operation, passing the results to the provided Sink. @apiNote The implementation may use the flags parameter to optimize the sink wrapping. For example, if the input is already DISTINCT, the implementation for the method_0 method could just return the sink it was passed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "opEvaluateParallel(java.util.stream.PipelineHelper<E_OUT> helper, java.util.Spliterator<P_IN> spliterator, java.util.function.IntFunction<E_OUT[]> generator)",
+    "name": "opEvaluateParallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<E_OUT>",
+      "name": "java.util.stream.Node<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "opEvaluateParallel(java.util.stream.PipelineHelper<E_OUT> helper, java.util.Spliterator<P_IN> spliterator, java.util.function.IntFunction<E_OUT[]> generator)",
+      "comment": "Performs a parallel evaluation of the operation using the specified PipelineHelper which describes the upstream intermediate operations. Only called on stateful operations. If method_0 returns true then implementations must override the default implementation. @implSpec The default implementation always throw UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "opEvaluateParallelLazy(java.util.stream.PipelineHelper<E_OUT> helper, java.util.Spliterator<P_IN> spliterator)",
+    "name": "opEvaluateParallelLazy",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractPipeline",
+      "name": "AbstractPipeline",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractPipeline",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E_OUT>",
+      "name": "java.util.Spliterator<E_OUT>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "opEvaluateParallelLazy(java.util.stream.PipelineHelper<E_OUT> helper, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Returns a Spliterator describing a parallel evaluation of the operation, using the specified PipelineHelper which describes the upstream intermediate operations. Only called on stateful operations. It is not necessary (though acceptable) to do a full computation of the result here; it is preferable, if possible, to describe the result via a lazily evaluated spliterator. @implSpec The default implementation behaves as if: return method_0 new Object[i]).method_1;  and is suitable for implementations that cannot do better than a full synchronous evaluation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

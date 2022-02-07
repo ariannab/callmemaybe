@@ -1,0 +1,114 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.BoundedIterator(java.util.Iterator<? extends E> iterator, long offset, long max)",
+    "name": "org.apache.commons.collections4.iterators.BoundedIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.BoundedIterator",
+      "name": "BoundedIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.BoundedIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "offset"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "max"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.BoundedIterator(java.util.Iterator<? extends E> iterator, long offset, long max)",
+      "comment": "Decorates the specified iterator to return at most the given number of elements, skipping all elements until the iterator reaches the position at offset.  The iterator is immediately advanced until it reaches the position at offset, incurring method_0 time.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.BoundedIterator",
+      "name": "BoundedIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.BoundedIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.BoundedIterator",
+      "name": "BoundedIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.BoundedIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.BoundedIterator",
+      "name": "BoundedIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.BoundedIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "{@inheritDoc}  In case an offset other than 0 was specified, the underlying iterator will be advanced to this position upon creation. A call to method_0 will still result in an IllegalStateException if no explicit call to method_1 has been made prior to calling method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

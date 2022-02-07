@@ -1,0 +1,1111 @@
+[
+  {
+    "signature": "java.util.concurrent.ConcurrentLinkedDeque()",
+    "name": "java.util.concurrent.ConcurrentLinkedDeque",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentLinkedDeque()",
+      "comment": "Constructs an empty deque.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ConcurrentLinkedDeque(java.util.Collection<? extends E> c)",
+    "name": "java.util.concurrent.ConcurrentLinkedDeque",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ConcurrentLinkedDeque(java.util.Collection<? extends E> c)",
+      "comment": "Constructs a deque initially containing the elements of the given collection, added in traversal order of the collection's iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prevTerminator()",
+    "name": "prevTerminator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "name": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "prevTerminator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nextTerminator()",
+    "name": "nextTerminator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "name": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nextTerminator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unlink(java.util.concurrent.ConcurrentLinkedDeque$Node<E> x)",
+    "name": "unlink",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "unlink(java.util.concurrent.ConcurrentLinkedDeque$Node<E> x)",
+      "comment": "Unlinks non-null node x.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "succ(java.util.concurrent.ConcurrentLinkedDeque$Node<E> p)",
+    "name": "succ",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "name": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "succ(java.util.concurrent.ConcurrentLinkedDeque$Node<E> p)",
+      "comment": "Returns the successor of p, or the first node if pmethod_0 has been linked to self, which will only be true if traversing with a stale pointer that is now off the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pred(java.util.concurrent.ConcurrentLinkedDeque$Node<E> p)",
+    "name": "pred",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "name": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "pred(java.util.concurrent.ConcurrentLinkedDeque$Node<E> p)",
+      "comment": "Returns the predecessor of p, or the last node if pmethod_0 has been linked to self, which will only be true if traversing with a stale pointer that is now off the list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "first()",
+    "name": "first",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "name": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "first()",
+      "comment": "Returns the first node, the unique node p for which: pmethod_0 == null && pmethod_1 != p The returned node may or may not be logically deleted. Guarantees that head is set to the returned node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "last()",
+    "name": "last",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "name": "java.util.concurrent.ConcurrentLinkedDeque$Node<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "last()",
+      "comment": "Returns the last node, the unique node p for which: pmethod_0 == null && pmethod_1 != p The returned node may or may not be logically deleted. Guarantees that tail is set to the returned node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addFirst(E e)",
+    "name": "addFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "addFirst(E e)",
+      "comment": "Inserts the specified element at the front of this deque. As the deque is unbounded, this method will never throw IllegalStateException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addLast(E e)",
+    "name": "addLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "addLast(E e)",
+      "comment": "Inserts the specified element at the end of this deque. As the deque is unbounded, this method will never throw IllegalStateException. This method is equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offerFirst(E e)",
+    "name": "offerFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offerFirst(E e)",
+      "comment": "Inserts the specified element at the front of this deque. As the deque is unbounded, this method will never return false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offerLast(E e)",
+    "name": "offerLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offerLast(E e)",
+      "comment": "Inserts the specified element at the end of this deque. As the deque is unbounded, this method will never return false. This method is equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peekFirst()",
+    "name": "peekFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "peekFirst()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peekLast()",
+    "name": "peekLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "peekLast()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFirst()",
+    "name": "getFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFirst()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLast()",
+    "name": "getLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLast()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollFirst()",
+    "name": "pollFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pollFirst()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pollLast()",
+    "name": "pollLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pollLast()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeFirst()",
+    "name": "removeFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeFirst()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeLast()",
+    "name": "removeLast",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeLast()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e)",
+      "comment": "Inserts the specified element at the tail of this deque. As the deque is unbounded, this method will never return false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "add(E e)",
+      "comment": "Inserts the specified element at the tail of this deque. As the deque is unbounded, this method will never throw IllegalStateException or return false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll()",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "poll()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peek()",
+    "name": "peek",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "peek()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pop()",
+    "name": "pop",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pop()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "element()",
+    "name": "element",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "element()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "push(E e)",
+    "name": "push",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "push(E e)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeFirstOccurrence(java.lang.Object o)",
+    "name": "removeFirstOccurrence",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "removeFirstOccurrence(java.lang.Object o)",
+      "comment": "Removes the first element e such that method_0, if such an element exists in this deque. If the deque does not contain the element, it is unchanged.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeLastOccurrence(java.lang.Object o)",
+    "name": "removeLastOccurrence",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "removeLastOccurrence(java.lang.Object o)",
+      "comment": "Removes the last element e such that method_0, if such an element exists in this deque. If the deque does not contain the element, it is unchanged.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.Object o)",
+      "comment": "Returns true if this deque contains at least one element e such that method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "Returns true if this collection contains no elements.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of elements in this deque. If this deque contains more than method_0 elements, it returns method_0. Beware that, unlike in most collections, this method is NOT a constant-time operation. Because of the asynchronous nature of these deques, determining the current number of elements requires traversing them all to count them. Additionally, it is possible for the size to change during execution of this method, in which case the returned result will be inaccurate. Thus, this method is typically not very useful in concurrent applications.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object o)",
+      "comment": "Removes the first element e such that method_0, if such an element exists in this deque. If the deque does not contain the element, it is unchanged.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "addAll(java.util.Collection<? extends E> c)",
+      "comment": "Appends all of the elements in the specified collection to the end of this deque, in the order that they are returned by the specified collection's iterator. Attempts to addAll of a deque to itself result in IllegalArgumentException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the elements from this deque.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toArray()",
+      "comment": "Returns an array containing all of the elements in this deque, in proper sequence (from first to last element). The returned array will be \"safe\" in that no references to it are maintained by this deque. (In other words, this method must allocate a new array). The caller is thus free to modify the returned array. This method acts as bridge between array-based and collection-based APIs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(T[] a)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "protocol": {
+      "member": "toArray(T[] a)",
+      "comment": "Returns an array containing all of the elements in this deque, in proper sequence (from first to last element); the runtime type of the returned array is that of the specified array. If the deque fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this deque. If this deque fits in the specified array with room to spare (imethod_4., the array has more elements than this deque), the element in the array immediately following the end of the deque is set to null. Like the method_0 method, this method acts as bridge between array-based and collection-based APIs. Further, this method allows precise control over the runtime type of the output array, and may, under certain circumstances, be used to save allocation costs. Suppose x is a deque known to contain only strings. The following code can be used to dump the deque into a newly allocated array of String}:  {@code String[] y = method_1; Note that method_2 is identical in function to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator over the elements in this deque in proper sequence. The elements will be returned in order from first (head) to last (tail). The returned iterator is <i>weakly consistent</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendingIterator()",
+    "name": "descendingIterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendingIterator()",
+      "comment": "Returns an iterator over the elements in this deque in reverse sequential order. The elements will be returned in order from last (tail) to first (head). The returned iterator is <i>weakly consistent</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ConcurrentLinkedDeque",
+      "name": "ConcurrentLinkedDeque",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ConcurrentLinkedDeque",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E>",
+      "name": "java.util.Spliterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "Returns a Spliterator over the elements in this deque. The returned spliterator is <i>weakly consistent</i>. The Spliterator reports method_2, method_3, and method_4. @implNote The Spliterator implements trySplit to permit limited parallelism.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

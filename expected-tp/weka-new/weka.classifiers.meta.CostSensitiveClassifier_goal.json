@@ -1,0 +1,863 @@
+[
+  {
+    "signature": "weka.classifiers.meta.CostSensitiveClassifier()",
+    "name": "weka.classifiers.meta.CostSensitiveClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.CostSensitiveClassifier()",
+      "comment": "Default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -M Minimize expected misclassification cost. Default is to reweight training instances according to costs per class  -C <cost file name> File name of a cost matrix to use. If this is not supplied, a cost matrix will be loaded on demand. The name of the on-demand file is the relation name of the training data plus \"method_0\", and the path to the on-demand file is specified with the -N option.  -N <directory> Name of a directory to search for cost files when loading costs on demand (default current directory).  -cost-matrix <matrix> The cost matrix in Matlab single line format.  -S <num> Random number seed. (default 1)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_1method_2method_3)  Options specific to classifier wekamethod_1method_2method_3:   -D If set, classifier is run in debug mode and may output additional info to the console Options after -- are passed to the designated classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "costMatrixSourceTipText()",
+    "name": "costMatrixSourceTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "costMatrixSourceTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCostMatrixSource()",
+    "name": "getCostMatrixSource",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCostMatrixSource()",
+      "comment": "Gets the source location method of the cost matrix. Will be one of MATRIX_ON_DEMAND or MATRIX_SUPPLIED.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCostMatrixSource(weka.core.SelectedTag newMethod)",
+    "name": "setCostMatrixSource",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "newMethod"
+      }
+    ],
+    "protocol": {
+      "member": "setCostMatrixSource(weka.core.SelectedTag newMethod)",
+      "comment": "Sets the source location of the cost matrix. Values other than MATRIX_ON_DEMAND or MATRIX_SUPPLIED will be ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onDemandDirectoryTipText()",
+    "name": "onDemandDirectoryTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "onDemandDirectoryTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOnDemandDirectory()",
+    "name": "getOnDemandDirectory",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.io.File",
+      "name": "java.io.File",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOnDemandDirectory()",
+      "comment": "Returns the directory that will be searched for cost files when loading on demand.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOnDemandDirectory(java.io.File newDir)",
+    "name": "setOnDemandDirectory",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.File",
+          "name": "File",
+          "isArray": false
+        },
+        "name": "newDir"
+      }
+    ],
+    "protocol": {
+      "member": "setOnDemandDirectory(java.io.File newDir)",
+      "comment": "Sets the directory that will be searched for cost files when loading on demand.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minimizeExpectedCostTipText()",
+    "name": "minimizeExpectedCostTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "minimizeExpectedCostTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinimizeExpectedCost()",
+    "name": "getMinimizeExpectedCost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMinimizeExpectedCost()",
+      "comment": "Gets the value of MinimizeExpectedCost.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinimizeExpectedCost(boolean newMinimizeExpectedCost)",
+    "name": "setMinimizeExpectedCost",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newMinimizeExpectedCost"
+      }
+    ],
+    "protocol": {
+      "member": "setMinimizeExpectedCost(boolean newMinimizeExpectedCost)",
+      "comment": "Set the value of MinimizeExpectedCost.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getClassifierSpec()",
+    "name": "getClassifierSpec",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getClassifierSpec()",
+      "comment": "Gets the classifier specification string, which contains the class name of the classifier and any options to the classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "costMatrixTipText()",
+    "name": "costMatrixTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "costMatrixTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCostMatrix()",
+    "name": "getCostMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.CostMatrix",
+      "name": "weka.classifiers.CostMatrix",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCostMatrix()",
+      "comment": "Gets the misclassification cost matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCostMatrix(weka.classifiers.CostMatrix newCostMatrix)",
+    "name": "setCostMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.CostMatrix",
+          "name": "CostMatrix",
+          "isArray": false
+        },
+        "name": "newCostMatrix"
+      }
+    ],
+    "protocol": {
+      "member": "setCostMatrix(weka.classifiers.CostMatrix newCostMatrix)",
+      "comment": "Sets the misclassification cost matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Builds the model of the base learner.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Returns class probabilities. When minimum expected cost approach is chosen, returns probability one for class with the minimum expected misclassification cost. Otherwise it returns the probability distribution returned by the base classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "convertDistribution(double[] pred, weka.core.Instance instance)",
+    "name": "convertDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "pred"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "convertDistribution(double[] pred, weka.core.Instance instance)",
+      "comment": "Convert distribution using minimum expected cost approach. The incoming array is modified and returned!",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionsForInstances(weka.core.Instances insts)",
+    "name": "distributionsForInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "protocol": {
+      "member": "distributionsForInstances(weka.core.Instances insts)",
+      "comment": "Batch scoring method. Calls the appropriate method for the base learner if it implements BatchPredictor. Otherwise it simply calls the method_0 method repeatedly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "batchSizeTipText()",
+    "name": "batchSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "batchSizeTipText()",
+      "comment": "Tool tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBatchSize(java.lang.String size)",
+    "name": "setBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "protocol": {
+      "member": "setBatchSize(java.lang.String size)",
+      "comment": "Set the batch size to use. Gets passed through to the base learner if it implements BatchPrecitor. Otherwise it is just ignored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBatchSize()",
+    "name": "getBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBatchSize()",
+      "comment": "Gets the preferred batch size from the base learner if it implements BatchPredictor. Returns 1 as the preferred batch size otherwise.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "implementsMoreEfficientBatchPrediction()",
+    "name": "implementsMoreEfficientBatchPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "implementsMoreEfficientBatchPrediction()",
+      "comment": "Returns true if the base classifier implements BatchPredictor and is able to generate batch predictions efficiently",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphType()",
+    "name": "graphType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphType()",
+      "comment": "Returns the type of graph this classifier represents. @return the type of graph this classifier represents",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graph()",
+    "name": "graph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graph()",
+      "comment": "Returns graph describing the classifier (if possible).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Output a representation of this classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.CostSensitiveClassifier",
+      "name": "CostSensitiveClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.CostSensitiveClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

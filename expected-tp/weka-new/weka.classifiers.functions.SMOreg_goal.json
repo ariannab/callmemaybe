@@ -1,0 +1,704 @@
+[
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -C <double> The complexity constant C. (default 1)  -N Whether to 0=normalize/1=standardize/2=neither. (default 0=normalize)  -I <classname and parameters> Optimizer class used for solving quadratic optimization problem (default wekamethod_0method_1method_2method_3)  -K <classname and parameters> The Kernel to use. (default: wekamethod_0method_1method_2method_7)  Options specific to optimizer ('-I') wekamethod_0method_1method_2method_3:   -T <double> The tolerance parameter for checking the stopping criterion. (default 0method_12)  -V Use variant 1 of the algorithm when true, otherwise use variant 2. (default true)  -P <double> The epsilon for round-off error. (default 1method_13-12)  -L <double> The epsilon parameter in epsilon-insensitive loss function. (default 1method_13-3)  -W <double> The random number seed. (default 1)  Options specific to kernel ('-K') wekamethod_0method_1method_2method_7:   -D Enables debugging output (if available) to be printed. (default: off)  -no-checks Turns off all checks - use with caution! (default: checks on)  -C <num> The size of the cache (a prime number), 0 for full cache and -1 to turn it off. (default: 250007)  -E <num> The Exponent to use. (default: 1method_19)  -L Use lower-order terms. (default: no)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Method for building the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance instance)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance instance)",
+      "comment": "Classifies the given instance using the linear regression function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "regOptimizerTipText()",
+    "name": "regOptimizerTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "regOptimizerTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRegOptimizer(weka.classifiers.functions.supportVector.RegOptimizer regOptimizer)",
+    "name": "setRegOptimizer",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.supportVector.RegOptimizer",
+          "name": "RegOptimizer",
+          "isArray": false
+        },
+        "name": "regOptimizer"
+      }
+    ],
+    "protocol": {
+      "member": "setRegOptimizer(weka.classifiers.functions.supportVector.RegOptimizer regOptimizer)",
+      "comment": "sets the learning algorithm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRegOptimizer()",
+    "name": "getRegOptimizer",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.RegOptimizer",
+      "name": "weka.classifiers.functions.supportVector.RegOptimizer",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRegOptimizer()",
+      "comment": "returns the learning algorithm",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "kernelTipText()",
+    "name": "kernelTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "kernelTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setKernel(weka.classifiers.functions.supportVector.Kernel value)",
+    "name": "setKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.supportVector.Kernel",
+          "name": "Kernel",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setKernel(weka.classifiers.functions.supportVector.Kernel value)",
+      "comment": "sets the kernel to use",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getKernel()",
+    "name": "getKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Kernel",
+      "name": "weka.classifiers.functions.supportVector.Kernel",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getKernel()",
+      "comment": "Returns the kernel to use",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cTipText()",
+    "name": "cTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getC()",
+    "name": "getC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getC()",
+      "comment": "Get the value of C.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setC(double v)",
+    "name": "setC",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "v"
+      }
+    ],
+    "protocol": {
+      "member": "setC(double v)",
+      "comment": "Set the value of C.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "filterTypeTipText()",
+    "name": "filterTypeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "filterTypeTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFilterType()",
+    "name": "getFilterType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFilterType()",
+      "comment": "Gets how the training data will be transformed. Will be one of FILTER_NORMALIZE, FILTER_STANDARDIZE, FILTER_NONE.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFilterType(weka.core.SelectedTag newType)",
+    "name": "setFilterType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "newType"
+      }
+    ],
+    "protocol": {
+      "member": "setFilterType(weka.core.SelectedTag newType)",
+      "comment": "Sets how the training data will be transformed. Should be one of FILTER_NORMALIZE, FILTER_STANDARDIZE, FILTER_NONE.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Prints out the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the measure names. Additional measures must follow the naming convention of starting with \"measure\", eg. double method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String measureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "measureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String measureName)",
+      "comment": "Returns the value of the named measure",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureKernelEvaluations()",
+    "name": "measureKernelEvaluations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureKernelEvaluations()",
+      "comment": "number of kernel evaluations used in learing",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureCacheHits()",
+    "name": "measureCacheHits",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureCacheHits()",
+      "comment": "number of kernel cache hits used during learing",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.SMOreg",
+      "name": "SMOreg",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.SMOreg",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method for running this classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

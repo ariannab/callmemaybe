@@ -1,0 +1,309 @@
+[
+  {
+    "signature": "empty()",
+    "name": "empty",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "java.util.OptionalLong",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "empty()",
+      "comment": "Returns an empty OptionalLong instance. No value is present for this OptionalLong. @apiNote Though it may be tempting to do so, avoid testing if an object is empty by comparing with == against instances returned by method_0. There is no guarantee that it is a singleton. Instead, use method_1. @return an empty OptionalLong.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(long value)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "java.util.OptionalLong",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "of(long value)",
+      "comment": "Return an OptionalLong with the specified value present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAsLong()",
+    "name": "getAsLong",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAsLong()",
+      "comment": "If a value is present in this OptionalLong, returns the value, otherwise throws NoSuchElementException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPresent()",
+    "name": "isPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isPresent()",
+      "comment": "Return true if there is a value present, otherwise false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ifPresent(java.util.function.LongConsumer consumer)",
+    "name": "ifPresent",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongConsumer",
+          "name": "LongConsumer",
+          "isArray": false
+        },
+        "name": "consumer"
+      }
+    ],
+    "protocol": {
+      "member": "ifPresent(java.util.function.LongConsumer consumer)",
+      "comment": "Have the specified consumer accept the value if a value is present, otherwise do nothing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orElse(long other)",
+    "name": "orElse",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "orElse(long other)",
+      "comment": "Return the value if present, otherwise return other.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orElseGet(java.util.function.LongSupplier other)",
+    "name": "orElseGet",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.LongSupplier",
+          "name": "LongSupplier",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "orElseGet(java.util.function.LongSupplier other)",
+      "comment": "Return the value if present, otherwise invoke other and return the result of that invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "orElseThrow(java.util.function.Supplier<X> exceptionSupplier)",
+    "name": "orElseThrow",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "exceptionSupplier"
+      }
+    ],
+    "protocol": {
+      "member": "orElseThrow(java.util.function.Supplier<X> exceptionSupplier)",
+      "comment": "Return the contained value, if present, otherwise throw an exception to be created by the provided supplier. @apiNote A method reference to the exception constructor with an empty argument list can be used as the supplier. For example, IllegalStateException::new",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Indicates whether some other object is \"equal to\" this OptionalLong. The other object is considered equal if:  <li>it is also an OptionalLong and; <li>both instances have no value present or; <li>the present values are \"equal to\" each other via ==.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value of the present value, if any, or 0 (zero) if no value is present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.OptionalLong",
+      "name": "OptionalLong",
+      "isArray": false
+    },
+    "targetClass": "java.util.OptionalLong",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "{@inheritDoc} Returns a non-empty string representation of this object suitable for debugging. The exact presentation format is unspecified and may vary between implementations and versions. @implSpec If a value is present the result must include its string representation in the result. Empty and present instances must be unambiguously differentiable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

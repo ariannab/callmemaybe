@@ -1,0 +1,367 @@
+[
+  {
+    "signature": "set()",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "set()",
+      "comment": "Gets the bitmap associated with setting this characteristic.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Gets the bitmap associated with clearing this characteristic.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isStreamFlag()",
+    "name": "isStreamFlag",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isStreamFlag()",
+      "comment": "Determines if this flag is a stream-based flag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isKnown(int flags)",
+    "name": "isKnown",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "protocol": {
+      "member": "isKnown(int flags)",
+      "comment": "Checks if this flag is set on stream flags, injected on operation flags, and injected on combined stream and operation flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isCleared(int flags)",
+    "name": "isCleared",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "protocol": {
+      "member": "isCleared(int flags)",
+      "comment": "Checks if this flag is cleared on operation flags or combined stream and operation flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isPreserved(int flags)",
+    "name": "isPreserved",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "flags"
+      }
+    ],
+    "protocol": {
+      "member": "isPreserved(int flags)",
+      "comment": "Checks if this flag is preserved on combined stream and operation flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canSet(java.util.stream.StreamOpFlag$Type t)",
+    "name": "canSet",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.StreamOpFlag$Type",
+          "name": "Type",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "canSet(java.util.stream.StreamOpFlag$Type t)",
+      "comment": "Determines if this flag can be set for a flag type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "combineOpFlags(int newStreamOrOpFlags, int prevCombOpFlags)",
+    "name": "combineOpFlags",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newStreamOrOpFlags"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "prevCombOpFlags"
+      }
+    ],
+    "protocol": {
+      "member": "combineOpFlags(int newStreamOrOpFlags, int prevCombOpFlags)",
+      "comment": "Combines stream or operation flags with previously combined stream and operation flags to produce updated combined stream and operation flags.  A flag set on stream flags or injected on operation flags, and injected combined stream and operation flags, will be injected on the updated combined stream and operation flags.  A flag set on stream flags or injected on operation flags, and cleared on the combined stream and operation flags, will be cleared on the updated combined stream and operation flags.  A flag set on the stream flags or injected on operation flags, and preserved on the combined stream and operation flags, will be injected on the updated combined stream and operation flags.  A flag not set on the stream flags or cleared/preserved on operation flags, and injected on the combined stream and operation flags, will be injected on the updated combined stream and operation flags.  A flag not set on the stream flags or cleared/preserved on operation flags, and cleared on the combined stream and operation flags, will be cleared on the updated combined stream and operation flags.  A flag not set on the stream flags, and preserved on the combined stream and operation flags will be preserved on the updated combined stream and operation flags.  A flag cleared on operation flags, and preserved on the combined stream and operation flags will be cleared on the updated combined stream and operation flags.  A flag preserved on operation flags, and preserved on the combined stream and operation flags will be preserved on the updated combined stream and operation flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toStreamFlags(int combOpFlags)",
+    "name": "toStreamFlags",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "combOpFlags"
+      }
+    ],
+    "protocol": {
+      "member": "toStreamFlags(int combOpFlags)",
+      "comment": "Converts combined stream and operation flags to stream flags. Each flag injected on the combined stream and operation flags will be set on the stream flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toCharacteristics(int streamFlags)",
+    "name": "toCharacteristics",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "streamFlags"
+      }
+    ],
+    "protocol": {
+      "member": "toCharacteristics(int streamFlags)",
+      "comment": "Converts stream flags to a spliterator characteristic bit set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromCharacteristics(java.util.Spliterator<?> spliterator)",
+    "name": "fromCharacteristics",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "fromCharacteristics(java.util.Spliterator<?> spliterator)",
+      "comment": "Converts a spliterator characteristic bit set to stream flags. @implSpec If the spliterator is naturally SORTED (the associated Comparator is {@code null}) then the characteristic is converted to the method_0 flag, otherwise the characteristic is not converted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromCharacteristics(int characteristics)",
+    "name": "fromCharacteristics",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.StreamOpFlag",
+      "name": "StreamOpFlag",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.StreamOpFlag",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "fromCharacteristics(int characteristics)",
+      "comment": "Converts a spliterator characteristic bit set to stream flags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

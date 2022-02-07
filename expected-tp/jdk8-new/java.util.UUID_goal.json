@@ -1,0 +1,395 @@
+[
+  {
+    "signature": "java.util.UUID(long mostSigBits, long leastSigBits)",
+    "name": "java.util.UUID",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "mostSigBits"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "leastSigBits"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.UUID(long mostSigBits, long leastSigBits)",
+      "comment": "Constructs a new UUID using the specified data. mostSigBits is used for the most significant 64 bits of the UUID and leastSigBits becomes the least significant 64 bits of the UUID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "randomUUID()",
+    "name": "randomUUID",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.UUID",
+      "name": "java.util.UUID",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "randomUUID()",
+      "comment": "Static factory to retrieve a type 4 (pseudo randomly generated) UUID. The UUID is generated using a cryptographically strong pseudo random number generator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nameUUIDFromBytes(byte[] name)",
+    "name": "nameUUIDFromBytes",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.UUID",
+      "name": "java.util.UUID",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "nameUUIDFromBytes(byte[] name)",
+      "comment": "Static factory to retrieve a type 3 (name based) UUID based on the specified byte array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fromString(java.lang.String name)",
+    "name": "fromString",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.UUID",
+      "name": "java.util.UUID",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "fromString(java.lang.String name)",
+      "comment": "Creates a UUID from the string standard representation as described in the method_0 method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLeastSignificantBits()",
+    "name": "getLeastSignificantBits",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLeastSignificantBits()",
+      "comment": "Returns the least significant 64 bits of this UUID's 128 bit value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMostSignificantBits()",
+    "name": "getMostSignificantBits",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMostSignificantBits()",
+      "comment": "Returns the most significant 64 bits of this UUID's 128 bit value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "version()",
+    "name": "version",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "version()",
+      "comment": "The version number associated with this UUID. The version number describes how this UUID was generated. The version number has the following meaning:  <li>1 Time-based UUID <li>2 DCE security UUID <li>3 Name-based UUID <li>4 Randomly generated UUID",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "variant()",
+    "name": "variant",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "variant()",
+      "comment": "The variant number associated with this UUID. The variant number describes the layout of the UUID. The variant number has the following meaning:  <li>0 Reserved for NCS backward compatibility <li>2 <a href=\"http://wwwmethod_0method_1/rfc/rfc4122method_2\">IETF&nbsp;RFC&nbsp;4122</a> (Leach-Salz), used by this class <li>6 Reserved, Microsoft Corporation backward compatibility <li>7 Reserved for future definition",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "timestamp()",
+    "name": "timestamp",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "timestamp()",
+      "comment": "The timestamp value associated with this UUID.  The 60 bit timestamp value is constructed from the time_low, time_mid, and time_hi fields of this UUID. The resulting timestamp is measured in 100-nanosecond units since midnight, October 15, 1582 UTC.  The timestamp value is only meaningful in a time-based UUID, which has version type 1. If this UUID is not a time-based UUID then this method throws UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clockSequence()",
+    "name": "clockSequence",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clockSequence()",
+      "comment": "The clock sequence value associated with this UUID.  The 14 bit clock sequence value is constructed from the clock sequence field of this UUID. The clock sequence field is used to guarantee temporal uniqueness in a time-based UUID.  The clockSequence value is only meaningful in a time-based UUID, which has version type 1. If this UUID is not a time-based UUID then this method throws UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node()",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "node()",
+      "comment": "The node value associated with this UUID.  The 48 bit node value is constructed from the node field of this UUID. This field is intended to hold the IEEE 802 address of the machine that generated this UUID to guarantee spatial uniqueness.  The node value is only meaningful in a time-based UUID, which has version type 1. If this UUID is not a time-based UUID then this method throws UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a String object representing this UUID.  The UUID string representation is as described by this BNF: <pre> UUID = <time_low> \"-\" <time_mid> \"-\" <time_high_and_version> \"-\" <variant_and_sequence> \"-\" <node> time_low = 4*<hexOctet> time_mid = 2*<hexOctet> time_high_and_version = 2*<hexOctet> variant_and_sequence = 2*<hexOctet> node = 6*<hexOctet> hexOctet = <hexDigit><hexDigit> hexDigit = \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\" | \"a\" | \"b\" | \"c\" | \"d\" | \"e\" | \"f\" | \"A\" | \"B\" | \"C\" | \"D\" | \"E\" | \"F\" </pre>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns a hash code for this UUID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object obj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "obj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object obj)",
+      "comment": "Compares this object to the specified object. The result is true if and only if the argument is not null, is a UUID object, has the same variant, and contains the same value, bit for bit, as this UUID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareTo(java.util.UUID val)",
+    "name": "compareTo",
+    "containingClass": {
+      "qualifiedName": "java.util.UUID",
+      "name": "UUID",
+      "isArray": false
+    },
+    "targetClass": "java.util.UUID",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.UUID",
+          "name": "UUID",
+          "isArray": false
+        },
+        "name": "val"
+      }
+    ],
+    "protocol": {
+      "member": "compareTo(java.util.UUID val)",
+      "comment": "Compares this UUID with the specified UUID.  The first of two UUIDs is greater than the second if the most significant field in which the UUIDs differ is greater for the first UUID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "signature": "apply(T t)",
+    "name": "apply",
+    "containingClass": {
+      "qualifiedName": "java.util.function.Function",
+      "name": "Function",
+      "isArray": false
+    },
+    "targetClass": "java.util.function.Function",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "apply(T t)",
+      "comment": "Applies this function to the given argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compose(java.util.function.Function<? super V, ? extends T> before)",
+    "name": "compose",
+    "containingClass": {
+      "qualifiedName": "java.util.function.Function",
+      "name": "Function",
+      "isArray": false
+    },
+    "targetClass": "java.util.function.Function",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.Function<V, R>",
+      "name": "java.util.function.Function<V, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "before"
+      }
+    ],
+    "protocol": {
+      "member": "compose(java.util.function.Function<? super V, ? extends T> before)",
+      "comment": "Returns a composed function that first applies the before function to its input, and then applies this function to the result. If evaluation of either function throws an exception, it is relayed to the caller of the composed function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "andThen(java.util.function.Function<? super R, ? extends V> after)",
+    "name": "andThen",
+    "containingClass": {
+      "qualifiedName": "java.util.function.Function",
+      "name": "Function",
+      "isArray": false
+    },
+    "targetClass": "java.util.function.Function",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.Function<T, V>",
+      "name": "java.util.function.Function<T, V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "after"
+      }
+    ],
+    "protocol": {
+      "member": "andThen(java.util.function.Function<? super R, ? extends V> after)",
+      "comment": "Returns a composed function that first applies this function to its input, and then applies the after function to the result. If evaluation of either function throws an exception, it is relayed to the caller of the composed function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "identity()",
+    "name": "identity",
+    "containingClass": {
+      "qualifiedName": "java.util.function.Function",
+      "name": "Function",
+      "isArray": false
+    },
+    "targetClass": "java.util.function.Function",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.Function<T, T>",
+      "name": "java.util.function.Function<T, T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "identity()",
+      "comment": "Returns a function that always returns its input argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

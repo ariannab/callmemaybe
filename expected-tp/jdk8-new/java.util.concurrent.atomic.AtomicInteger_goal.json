@@ -1,0 +1,661 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.AtomicInteger(int initialValue)",
+    "name": "java.util.concurrent.atomic.AtomicInteger",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialValue"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.AtomicInteger(int initialValue)",
+      "comment": "Creates a new AtomicInteger with the given initial value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.atomic.AtomicInteger()",
+    "name": "java.util.concurrent.atomic.AtomicInteger",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.AtomicInteger()",
+      "comment": "Creates a new AtomicInteger with initial value 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get()",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "get()",
+      "comment": "Gets the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int newValue)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "set(int newValue)",
+      "comment": "Sets to the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lazySet(int newValue)",
+    "name": "lazySet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "lazySet(int newValue)",
+      "comment": "Eventually sets to the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndSet(int newValue)",
+    "name": "getAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newValue"
+      }
+    ],
+    "protocol": {
+      "member": "getAndSet(int newValue)",
+      "comment": "Atomically sets to the given value and returns the old value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareAndSet(int expect, int update)",
+    "name": "compareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expect"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "update"
+      }
+    ],
+    "protocol": {
+      "member": "compareAndSet(int expect, int update)",
+      "comment": "Atomically sets the value to the given updated value if the current value == the expected value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weakCompareAndSet(int expect, int update)",
+    "name": "weakCompareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expect"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "update"
+      }
+    ],
+    "protocol": {
+      "member": "weakCompareAndSet(int expect, int update)",
+      "comment": "Atomically sets the value to the given updated value if the current value == the expected value. May fail spuriously and does not provide ordering guarantees, so is only rarely an appropriate alternative to compareAndSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndIncrement()",
+    "name": "getAndIncrement",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAndIncrement()",
+      "comment": "Atomically increments by one the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndDecrement()",
+    "name": "getAndDecrement",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAndDecrement()",
+      "comment": "Atomically decrements by one the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndAdd(int delta)",
+    "name": "getAndAdd",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "delta"
+      }
+    ],
+    "protocol": {
+      "member": "getAndAdd(int delta)",
+      "comment": "Atomically adds the given value to the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incrementAndGet()",
+    "name": "incrementAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "incrementAndGet()",
+      "comment": "Atomically increments by one the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "decrementAndGet()",
+    "name": "decrementAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "decrementAndGet()",
+      "comment": "Atomically decrements by one the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAndGet(int delta)",
+    "name": "addAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "delta"
+      }
+    ],
+    "protocol": {
+      "member": "addAndGet(int delta)",
+      "comment": "Atomically adds the given value to the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndUpdate(java.util.function.IntUnaryOperator updateFunction)",
+    "name": "getAndUpdate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntUnaryOperator",
+          "name": "IntUnaryOperator",
+          "isArray": false
+        },
+        "name": "updateFunction"
+      }
+    ],
+    "protocol": {
+      "member": "getAndUpdate(java.util.function.IntUnaryOperator updateFunction)",
+      "comment": "Atomically updates the current value with the results of applying the given function, returning the previous value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateAndGet(java.util.function.IntUnaryOperator updateFunction)",
+    "name": "updateAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntUnaryOperator",
+          "name": "IntUnaryOperator",
+          "isArray": false
+        },
+        "name": "updateFunction"
+      }
+    ],
+    "protocol": {
+      "member": "updateAndGet(java.util.function.IntUnaryOperator updateFunction)",
+      "comment": "Atomically updates the current value with the results of applying the given function, returning the updated value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAndAccumulate(int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+    "name": "getAndAccumulate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "accumulatorFunction"
+      }
+    ],
+    "protocol": {
+      "member": "getAndAccumulate(int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+      "comment": "Atomically updates the current value with the results of applying the given function to the current and given values, returning the previous value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads. The function is applied with the current value as its first argument, and the given update as the second argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accumulateAndGet(int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+    "name": "accumulateAndGet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "accumulatorFunction"
+      }
+    ],
+    "protocol": {
+      "member": "accumulateAndGet(int x, java.util.function.IntBinaryOperator accumulatorFunction)",
+      "comment": "Atomically updates the current value with the results of applying the given function to the current and given values, returning the updated value. The function should be side-effect-free, since it may be re-applied when attempted updates fail due to contention among threads. The function is applied with the current value as its first argument, and the given update as the second argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the String representation of the current value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intValue()",
+    "name": "intValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "intValue()",
+      "comment": "Returns the value of this AtomicInteger as an int.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longValue()",
+    "name": "longValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "longValue()",
+      "comment": "Returns the value of this AtomicInteger as a long after a widening primitive conversion. @jls 5method_0method_1 Widening Primitive Conversions",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floatValue()",
+    "name": "floatValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "floatValue()",
+      "comment": "Returns the value of this AtomicInteger as a float after a widening primitive conversion. @jls 5method_0method_1 Widening Primitive Conversions",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubleValue()",
+    "name": "doubleValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicInteger",
+      "name": "AtomicInteger",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicInteger",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doubleValue()",
+      "comment": "Returns the value of this AtomicInteger as a double after a widening primitive conversion. @jls 5method_0method_1 Widening Primitive Conversions",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "signature": "lock()",
+    "name": "lock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "Lock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.Lock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lock()",
+      "comment": "Acquires the lock. If the lock is not available then the current thread becomes disabled for thread scheduling purposes and lies dormant until the lock has been acquired. Implementation Considerations A Lock implementation may be able to detect erroneous use of the lock, such as an invocation that would cause deadlock, and may throw an (unchecked) exception in such circumstances. The circumstances and the exception type must be documented by that Lock implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lockInterruptibly()",
+    "name": "lockInterruptibly",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "Lock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.Lock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lockInterruptibly()",
+      "comment": "Acquires the lock unless the current thread is method_0 interrupted. Acquires the lock if it is available and returns immediately. If the lock is not available then the current thread becomes disabled for thread scheduling purposes and lies dormant until one of two things happens:  <li>The lock is acquired by the current thread; or <li>Some other thread method_0 interrupts the current thread, and interruption of lock acquisition is supported.  If the current thread:  <li>has its interrupted status set on entry to this method; or <li>is method_0 interrupted while acquiring the lock, and interruption of lock acquisition is supported,  then InterruptedException is thrown and the current thread's interrupted status is cleared. Implementation Considerations The ability to interrupt a lock acquisition in some implementations may not be possible, and if possible may be an expensive operation. The programmer should be aware that this may be the case. An implementation should document when this is the case. An implementation can favor responding to an interrupt over normal method return. A Lock implementation may be able to detect erroneous use of the lock, such as an invocation that would cause deadlock, and may throw an (unchecked) exception in such circumstances. The circumstances and the exception type must be documented by that Lock implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryLock()",
+    "name": "tryLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "Lock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.Lock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryLock()",
+      "comment": "Acquires the lock only if it is free at the time of invocation. Acquires the lock if it is available and returns immediately with the value true. If the lock is not available then this method will return immediately with the value false. A typical usage idiom for this method would be:  Lock lock = ...; if (method_0 { try { // manipulate protected state  finally { method_1; } } else { // perform alternative actions }} This usage ensures that the lock is unlocked if it was acquired, and doesn't try to unlock if the lock was not acquired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryLock(long time, java.util.concurrent.TimeUnit unit)",
+    "name": "tryLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "Lock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.Lock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "tryLock(long time, java.util.concurrent.TimeUnit unit)",
+      "comment": "Acquires the lock if it is free within the given waiting time and the current thread has not been method_0 interrupted. If the lock is available this method returns immediately with the value true. If the lock is not available then the current thread becomes disabled for thread scheduling purposes and lies dormant until one of three things happens:  <li>The lock is acquired by the current thread; or <li>Some other thread method_0 interrupts the current thread, and interruption of lock acquisition is supported; or <li>The specified waiting time elapses  If the lock is acquired then the value true is returned. If the current thread:  <li>has its interrupted status set on entry to this method; or <li>is method_0 interrupted while acquiring the lock, and interruption of lock acquisition is supported,  then InterruptedException is thrown and the current thread's interrupted status is cleared. If the specified waiting time elapses then the value false is returned. If the time is less than or equal to zero, the method will not wait at all. Implementation Considerations The ability to interrupt a lock acquisition in some implementations may not be possible, and if possible may be an expensive operation. The programmer should be aware that this may be the case. An implementation should document when this is the case. An implementation can favor responding to an interrupt over normal method return, or reporting a timeout. A Lock implementation may be able to detect erroneous use of the lock, such as an invocation that would cause deadlock, and may throw an (unchecked) exception in such circumstances. The circumstances and the exception type must be documented by that Lock implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unlock()",
+    "name": "unlock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "Lock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.Lock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unlock()",
+      "comment": "Releases the lock. Implementation Considerations A Lock implementation will usually impose restrictions on which thread can release a lock (typically only the holder of the lock can release it) and may throw an (unchecked) exception if the restriction is violated. Any restrictions and the exception type must be documented by that Lock implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newCondition()",
+    "name": "newCondition",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "Lock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.Lock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.Condition",
+      "name": "java.util.concurrent.locks.Condition",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newCondition()",
+      "comment": "Returns a new Condition instance that is bound to this Lock instance. Before waiting on the condition the lock must be held by the current thread. A call to method_0 will atomically release the lock before waiting and re-acquire the lock before the wait returns. Implementation Considerations The exact operation of the Condition instance depends on the Lock implementation and must be documented by that implementation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

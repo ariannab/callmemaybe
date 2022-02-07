@@ -1,0 +1,795 @@
+[
+  {
+    "signature": "forName(java.lang.String classifierName, java.lang.String[] options)",
+    "name": "forName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier",
+      "name": "weka.classifiers.Classifier",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "classifierName"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "forName(java.lang.String classifierName, java.lang.String[] options)",
+      "comment": "Creates a new instance of a classifier given it's class name and (optional) arguments to pass to it's setOptions method. If the classifier implements OptionHandler and the options parameter is non-null, the classifier will have it's options set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeCopy(weka.classifiers.Classifier model)",
+    "name": "makeCopy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier",
+      "name": "weka.classifiers.Classifier",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "model"
+      }
+    ],
+    "protocol": {
+      "member": "makeCopy(weka.classifiers.Classifier model)",
+      "comment": "Creates a deep copy of the given classifier using serialization.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeCopies(weka.classifiers.Classifier model, int num)",
+    "name": "makeCopies",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.Classifier[]",
+      "name": "weka.classifiers.Classifier[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "model"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "num"
+      }
+    ],
+    "protocol": {
+      "member": "makeCopies(weka.classifiers.Classifier model, int num)",
+      "comment": "Creates a given number of deep copies of the given classifier using serialization.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runClassifier(weka.classifiers.Classifier classifier, java.lang.String[] options)",
+    "name": "runClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.Classifier",
+          "name": "Classifier",
+          "isArray": false
+        },
+        "name": "classifier"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "runClassifier(weka.classifiers.Classifier classifier, java.lang.String[] options)",
+      "comment": "runs the classifier instance with the given options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance instance)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance instance)",
+      "comment": "Classifies the given test instance. The instance has to belong to a dataset when it's being classified. Note that a classifier MUST implement either this or method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Predicts the class memberships for a given instance. If an instance is unclassified, the returned array elements must be all zero. If the class is numeric, the array must consist of only one element, which contains the predicted value. Note that a classifier MUST implement either this or method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options. Valid options are:  -D <br> If set, classifier is run in debug mode and may output additional info to the console.  -do-not-check-capabilities <br> If set, classifier capabilities are not checked before classifier is built (use with caution).  -num-decimal-laces <br> The number of decimal places for the output of numbers in the model.  -batch-size <br> The desired batch size for batch prediction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDebug()",
+    "name": "getDebug",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDebug()",
+      "comment": "Get whether debugging is turned on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDebug(boolean debug)",
+    "name": "setDebug",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "debug"
+      }
+    ],
+    "protocol": {
+      "member": "setDebug(boolean debug)",
+      "comment": "Set debugging mode.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "debugTipText()",
+    "name": "debugTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "debugTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDoNotCheckCapabilities()",
+    "name": "getDoNotCheckCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDoNotCheckCapabilities()",
+      "comment": "Get whether capabilities checking is turned off.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDoNotCheckCapabilities(boolean doNotCheckCapabilities)",
+    "name": "setDoNotCheckCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "doNotCheckCapabilities"
+      }
+    ],
+    "protocol": {
+      "member": "setDoNotCheckCapabilities(boolean doNotCheckCapabilities)",
+      "comment": "Set whether not to check capabilities.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doNotCheckCapabilitiesTipText()",
+    "name": "doNotCheckCapabilitiesTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doNotCheckCapabilitiesTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numDecimalPlacesTipText()",
+    "name": "numDecimalPlacesTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numDecimalPlacesTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumDecimalPlaces()",
+    "name": "getNumDecimalPlaces",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumDecimalPlaces()",
+      "comment": "Get the number of decimal places.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumDecimalPlaces(int num)",
+    "name": "setNumDecimalPlaces",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "num"
+      }
+    ],
+    "protocol": {
+      "member": "setNumDecimalPlaces(int num)",
+      "comment": "Set the number of decimal places.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "batchSizeTipText()",
+    "name": "batchSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "batchSizeTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBatchSize(java.lang.String size)",
+    "name": "setBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "size"
+      }
+    ],
+    "protocol": {
+      "member": "setBatchSize(java.lang.String size)",
+      "comment": "Set the preferred batch size for batch prediction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBatchSize()",
+    "name": "getBatchSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBatchSize()",
+      "comment": "Get the preferred batch size for batch prediction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "implementsMoreEfficientBatchPrediction()",
+    "name": "implementsMoreEfficientBatchPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "implementsMoreEfficientBatchPrediction()",
+      "comment": "Return true if this classifier can generate batch predictions in an efficient manner. Default implementation here returns false. Subclasses to override as appropriate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionsForInstances(weka.core.Instances batch)",
+    "name": "distributionsForInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "batch"
+      }
+    ],
+    "protocol": {
+      "member": "distributionsForInstances(weka.core.Instances batch)",
+      "comment": "Batch prediction method. This default implementation simply calls method_0 for each instance in the batch. If subclasses can produce batch predictions in a more efficient manner than this they should override this method and also return true from method_1",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns the Capabilities of this classifier. Maximally permissive capabilities are allowed by default. Derived classifiers should override this method and first disable all capabilities and then enable just those capabilities that make sense for the scheme.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "preExecution()",
+    "name": "preExecution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "preExecution()",
+      "comment": "Perform any setup stuff that might need to happen before commandline execution. Subclasses should override if they need to do something here",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "run(java.lang.Object toRun, java.lang.String[] options)",
+    "name": "run",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "toRun"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "run(java.lang.Object toRun, java.lang.String[] options)",
+      "comment": "Execute the supplied object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "postExecution()",
+    "name": "postExecution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.AbstractClassifier",
+      "name": "AbstractClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.AbstractClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "postExecution()",
+      "comment": "Perform any teardown stuff that might need to happen after execution. Subclasses should override if they need to do something here",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,515 @@
+[
+  {
+    "signature": "weka.classifiers.meta.RandomSubSpace()",
+    "name": "weka.classifiers.meta.RandomSubSpace",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.RandomSubSpace()",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -P Size of each subspace: < 1: percentage of the number of attributes >=1: absolute number of attributes   -S <num> Random number seed. (default 1)  -I <num> Number of iterations. (default 10)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_0method_1method_2)  Options specific to classifier wekamethod_0method_1method_2:   -M <minimum number of instances> Set minimum number of instances per leaf (default 2).  -V <minimum variance for split> Set minimum numeric class variance proportion of train variance for split (default 1e-3).  -N <number of folds> Number of folds for reduced error pruning (default 3).  -S <seed> Seed for random data shuffling (default 1).  -P No pruning.  -L Maximum tree depth (default -1, no maximum) Options after -- are passed to the designated classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subSpaceSizeTipText()",
+    "name": "subSpaceSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "subSpaceSizeTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSubSpaceSize()",
+    "name": "getSubSpaceSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSubSpaceSize()",
+      "comment": "Gets the size of each subSpace, as a percentage of the training set size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSubSpaceSize(double value)",
+    "name": "setSubSpaceSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setSubSpaceSize(double value)",
+      "comment": "Sets the size of each subSpace, as a percentage of the training set size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numberOfAttributes(int total, double fraction)",
+    "name": "numberOfAttributes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "total"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "fraction"
+      }
+    ],
+    "protocol": {
+      "member": "numberOfAttributes(int total, double fraction)",
+      "comment": "calculates the number of attributes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "randomSubSpace(java.lang.Integer[] indices, int subSpaceSize, int classIndex, java.util.Random random)",
+    "name": "randomSubSpace",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Integer;",
+          "name": "Integer[]",
+          "isArray": true
+        },
+        "name": "indices"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "subSpaceSize"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Random",
+          "name": "Random",
+          "isArray": false
+        },
+        "name": "random"
+      }
+    ],
+    "protocol": {
+      "member": "randomSubSpace(java.lang.Integer[] indices, int subSpaceSize, int classIndex, java.util.Random random)",
+      "comment": "generates an index string describing a random subspace, suitable for the Remove filter.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "builds the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTrainingSet(int iteration)",
+    "name": "getTrainingSet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iteration"
+      }
+    ],
+    "protocol": {
+      "member": "getTrainingSet(int iteration)",
+      "comment": "Returns a training set for a particular iteration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns description of the bagged classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RandomSubSpace",
+      "name": "RandomSubSpace",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RandomSubSpace",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

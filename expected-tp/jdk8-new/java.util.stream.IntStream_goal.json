@@ -1,0 +1,1286 @@
+[
+  {
+    "signature": "filter(java.util.function.IntPredicate predicate)",
+    "name": "filter",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntPredicate",
+          "name": "IntPredicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "filter(java.util.function.IntPredicate predicate)",
+      "comment": "Returns a stream consisting of the elements of this stream that match the given predicate. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "map(java.util.function.IntUnaryOperator mapper)",
+    "name": "map",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntUnaryOperator",
+          "name": "IntUnaryOperator",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "map(java.util.function.IntUnaryOperator mapper)",
+      "comment": "Returns a stream consisting of the results of applying the given function to the elements of this stream. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mapToObj(java.util.function.IntFunction<? extends U> mapper)",
+    "name": "mapToObj",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Stream<U>",
+      "name": "java.util.stream.Stream<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "mapToObj(java.util.function.IntFunction<? extends U> mapper)",
+      "comment": "Returns an object-valued Stream consisting of the results of applying the given function to the elements of this stream. This is an  intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mapToLong(java.util.function.IntToLongFunction mapper)",
+    "name": "mapToLong",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.LongStream",
+      "name": "java.util.stream.LongStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntToLongFunction",
+          "name": "IntToLongFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "mapToLong(java.util.function.IntToLongFunction mapper)",
+      "comment": "Returns a LongStream consisting of the results of applying the given function to the elements of this stream. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mapToDouble(java.util.function.IntToDoubleFunction mapper)",
+    "name": "mapToDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.DoubleStream",
+      "name": "java.util.stream.DoubleStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntToDoubleFunction",
+          "name": "IntToDoubleFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "mapToDouble(java.util.function.IntToDoubleFunction mapper)",
+      "comment": "Returns a DoubleStream consisting of the results of applying the given function to the elements of this stream. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flatMap(java.util.function.IntFunction<? extends java.util.stream.IntStream> mapper)",
+    "name": "flatMap",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "mapper"
+      }
+    ],
+    "protocol": {
+      "member": "flatMap(java.util.function.IntFunction<? extends java.util.stream.IntStream> mapper)",
+      "comment": "Returns a stream consisting of the results of replacing each element of this stream with the contents of a mapped stream produced by applying the provided mapping function to each element. Each mapped stream is javamethod_1.method_0 closed after its contents have been placed into this stream. (If a mapped stream is null an empty stream is used, instead.) This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distinct()",
+    "name": "distinct",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "distinct()",
+      "comment": "Returns a stream consisting of the distinct elements of this stream. This is a stateful intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sorted()",
+    "name": "sorted",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sorted()",
+      "comment": "Returns a stream consisting of the elements of this stream in sorted order. This is a stateful intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peek(java.util.function.IntConsumer action)",
+    "name": "peek",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntConsumer",
+          "name": "IntConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "peek(java.util.function.IntConsumer action)",
+      "comment": "Returns a stream consisting of the elements of this stream, additionally performing the provided action on each element as elements are consumed from the resulting stream. This is an intermediate operation. For parallel stream pipelines, the action may be called at whatever time and in whatever thread the element is made available by the upstream operation. If the action modifies shared state, it is responsible for providing the required synchronization. @apiNote This method exists mainly to support debugging, where you want to see the elements as they flow past a certain point in a pipeline: method_0 .method_1 .method_2 .method_3 .method_4 .method_5;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "limit(long maxSize)",
+    "name": "limit",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "maxSize"
+      }
+    ],
+    "protocol": {
+      "member": "limit(long maxSize)",
+      "comment": "Returns a stream consisting of the elements of this stream, truncated to be no longer than maxSize in length. This is a short-circuiting stateful intermediate operation. @apiNote While method_0 is generally a cheap operation on sequential stream pipelines, it can be quite expensive on ordered parallel pipelines, especially for large values of maxSize, since method_1 is constrained to return not just any n elements, but the first n elements in the encounter order. Using an unordered stream source (such as method_2) or removing the ordering constraint with method_3 may result in significant speedups of method_0 in parallel pipelines, if the semantics of your situation permit. If consistency with encounter order is required, and you are experiencing poor performance or memory utilization with method_0 in parallel pipelines, switching to sequential execution with method_6 may improve performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "skip(long n)",
+    "name": "skip",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "n"
+      }
+    ],
+    "protocol": {
+      "member": "skip(long n)",
+      "comment": "Returns a stream consisting of the remaining elements of this stream after discarding the first n elements of the stream. If this stream contains fewer than n elements then an empty stream will be returned. This is a stateful intermediate operation. @apiNote While method_0 is generally a cheap operation on sequential stream pipelines, it can be quite expensive on ordered parallel pipelines, especially for large values of n, since method_1 is constrained to skip not just any n elements, but the first n elements in the encounter order. Using an unordered stream source (such as method_2) or removing the ordering constraint with method_3 may result in significant speedups of method_0 in parallel pipelines, if the semantics of your situation permit. If consistency with encounter order is required, and you are experiencing poor performance or memory utilization with method_0 in parallel pipelines, switching to sequential execution with method_6 may improve performance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.IntConsumer action)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntConsumer",
+          "name": "IntConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.IntConsumer action)",
+      "comment": "Performs an action for each element of this stream. This is a terminal operation. For parallel stream pipelines, this operation does not guarantee to respect the encounter order of the stream, as doing so would sacrifice the benefit of parallelism. For any given element, the action may be performed at whatever time and in whatever thread the library chooses. If the action accesses shared state, it is responsible for providing the required synchronization.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEachOrdered(java.util.function.IntConsumer action)",
+    "name": "forEachOrdered",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntConsumer",
+          "name": "IntConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "forEachOrdered(java.util.function.IntConsumer action)",
+      "comment": "Performs an action for each element of this stream, guaranteeing that each element is processed in encounter order for streams that have a defined encounter order. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[]",
+      "name": "int[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toArray()",
+      "comment": "Returns an array containing the elements of this stream. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduce(int identity, java.util.function.IntBinaryOperator op)",
+    "name": "reduce",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "identity"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "op"
+      }
+    ],
+    "protocol": {
+      "member": "reduce(int identity, java.util.function.IntBinaryOperator op)",
+      "comment": "Performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value. This is equivalent to: int result = identity; for (int element : this stream) result = method_0 return result;  but is not constrained to execute sequentially. The identity value must be an identity for the accumulator function. This means that for all x, method_1 is equal to x. The accumulator function must be an associative function. This is a terminal operation. @apiNote Sum, min, max, and average are all special cases of reduction. Summing a stream of numbers can be expressed as: int sum = method_2 -> a+b);  or more compactly: int sum = method_3;  While this may seem a more roundabout way to perform an aggregation compared to simply mutating a running total in a loop, reduction operations parallelize more gracefully, without needing additional synchronization and with greatly reduced risk of data races.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reduce(java.util.function.IntBinaryOperator op)",
+    "name": "reduce",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalInt",
+      "name": "java.util.OptionalInt",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntBinaryOperator",
+          "name": "IntBinaryOperator",
+          "isArray": false
+        },
+        "name": "op"
+      }
+    ],
+    "protocol": {
+      "member": "reduce(java.util.function.IntBinaryOperator op)",
+      "comment": "Performs a reduction on the elements of this stream, using an associative accumulation function, and returns an OptionalInt describing the reduced value, if any. This is equivalent to: boolean foundAny = false; int result = null; for (int element : this stream) { if (!foundAny) { foundAny = true; result = element;  else result = method_0; } return foundAny ? method_1 : method_2; } but is not constrained to execute sequentially. The accumulator function must be an associative function. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collect(java.util.function.Supplier<R> supplier, java.util.function.ObjIntConsumer<R> accumulator, java.util.function.BiConsumer<R, R> combiner)",
+    "name": "collect",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.ObjIntConsumer",
+          "name": "ObjIntConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "combiner"
+      }
+    ],
+    "protocol": {
+      "member": "collect(java.util.function.Supplier<R> supplier, java.util.function.ObjIntConsumer<R> accumulator, java.util.function.BiConsumer<R, R> combiner)",
+      "comment": "Performs a mutable reduction operation on the elements of this stream. A mutable reduction is one in which the reduced value is a mutable result container, such as an ArrayList, and elements are incorporated by updating the state of the result rather than by replacing the result. This produces a result equivalent to: R result = method_0; for (int element : this stream) method_1; return result;  Like method_2, collect operations can be parallelized without requiring additional synchronization. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sum()",
+    "name": "sum",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sum()",
+      "comment": "Returns the sum of elements in this stream. This is a special case of a reduction and is equivalent to: return method_0;  This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "min()",
+    "name": "min",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalInt",
+      "name": "java.util.OptionalInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "min()",
+      "comment": "Returns an OptionalInt describing the minimum element of this stream, or an empty optional if this stream is empty. This is a special case of a reduction and is equivalent to: return method_0;  This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "max()",
+    "name": "max",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalInt",
+      "name": "java.util.OptionalInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "max()",
+      "comment": "Returns an OptionalInt describing the maximum element of this stream, or an empty optional if this stream is empty. This is a special case of a reduction and is equivalent to: return method_0;  This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "count()",
+    "name": "count",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "count()",
+      "comment": "Returns the count of elements in this stream. This is a special case of a reduction and is equivalent to: return method_0method_1;  This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "average()",
+    "name": "average",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalDouble",
+      "name": "java.util.OptionalDouble",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "average()",
+      "comment": "Returns an OptionalDouble describing the arithmetic mean of elements of this stream, or an empty optional if this stream is empty. This is a special case of a reduction. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "summaryStatistics()",
+    "name": "summaryStatistics",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.IntSummaryStatistics",
+      "name": "java.util.IntSummaryStatistics",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "summaryStatistics()",
+      "comment": "Returns an IntSummaryStatistics describing various summary data about the elements of this stream. This is a special case of a reduction. This is a terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "anyMatch(java.util.function.IntPredicate predicate)",
+    "name": "anyMatch",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntPredicate",
+          "name": "IntPredicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "anyMatch(java.util.function.IntPredicate predicate)",
+      "comment": "Returns whether any elements of this stream match the provided predicate. May not evaluate the predicate on all elements if not necessary for determining the result. If the stream is empty then false is returned and the predicate is not evaluated. This is a short-circuiting terminal operation. @apiNote This method evaluates the existential quantification of the predicate over the elements of the stream (for some x method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allMatch(java.util.function.IntPredicate predicate)",
+    "name": "allMatch",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntPredicate",
+          "name": "IntPredicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "allMatch(java.util.function.IntPredicate predicate)",
+      "comment": "Returns whether all elements of this stream match the provided predicate. May not evaluate the predicate on all elements if not necessary for determining the result. If the stream is empty then true is returned and the predicate is not evaluated. This is a short-circuiting terminal operation. @apiNote This method evaluates the universal quantification of the predicate over the elements of the stream (for all x method_0 If the stream is empty, the quantification is said to be vacuously satisfied and is always true (regardless of method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "noneMatch(java.util.function.IntPredicate predicate)",
+    "name": "noneMatch",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntPredicate",
+          "name": "IntPredicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "noneMatch(java.util.function.IntPredicate predicate)",
+      "comment": "Returns whether no elements of this stream match the provided predicate. May not evaluate the predicate on all elements if not necessary for determining the result. If the stream is empty then true is returned and the predicate is not evaluated. This is a short-circuiting terminal operation. @apiNote This method evaluates the universal quantification of the negated predicate over the elements of the stream (for all x ~method_0 If the stream is empty, the quantification is said to be vacuously satisfied and is always true, regardless of method_1",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findFirst()",
+    "name": "findFirst",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalInt",
+      "name": "java.util.OptionalInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "findFirst()",
+      "comment": "Returns an OptionalInt describing the first element of this stream, or an empty OptionalInt if the stream is empty. If the stream has no encounter order, then any element may be returned. This is a short-circuiting terminal operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findAny()",
+    "name": "findAny",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.OptionalInt",
+      "name": "java.util.OptionalInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "findAny()",
+      "comment": "Returns an OptionalInt describing some element of the stream, or an empty OptionalInt if the stream is empty. This is a short-circuiting terminal operation. The behavior of this operation is explicitly nondeterministic; it is free to select any element in the stream. This is to allow for maximal performance in parallel operations; the cost is that multiple invocations on the same source may not return the same result. (If a stable result is desired, use method_0 instead.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asLongStream()",
+    "name": "asLongStream",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.LongStream",
+      "name": "java.util.stream.LongStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asLongStream()",
+      "comment": "Returns a LongStream consisting of the elements of this stream, converted to long. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asDoubleStream()",
+    "name": "asDoubleStream",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.DoubleStream",
+      "name": "java.util.stream.DoubleStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asDoubleStream()",
+      "comment": "Returns a DoubleStream consisting of the elements of this stream, converted to double. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "boxed()",
+    "name": "boxed",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Stream<java.lang.Integer>",
+      "name": "java.util.stream.Stream<java.lang.Integer>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "boxed()",
+      "comment": "Returns a Stream consisting of the elements of this stream, each boxed to an Integer. This is an intermediate operation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sequential()",
+    "name": "sequential",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sequential()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parallel()",
+    "name": "parallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "parallel()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.PrimitiveIterator$OfInt",
+      "name": "java.util.PrimitiveIterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator$OfInt",
+      "name": "java.util.Spliterator$OfInt",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "builder()",
+    "name": "builder",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream$Builder",
+      "name": "java.util.stream.IntStream$Builder",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "builder()",
+      "comment": "Returns a builder for an IntStream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "empty()",
+    "name": "empty",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "empty()",
+      "comment": "Returns an empty sequential IntStream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(int t)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "t"
+      }
+    ],
+    "protocol": {
+      "member": "of(int t)",
+      "comment": "Returns a sequential IntStream containing a single element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(int... values)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "values"
+      }
+    ],
+    "protocol": {
+      "member": "of(int... values)",
+      "comment": "Returns a sequential ordered stream whose elements are the specified values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterate(int seed, java.util.function.IntUnaryOperator f)",
+    "name": "iterate",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "seed"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntUnaryOperator",
+          "name": "IntUnaryOperator",
+          "isArray": false
+        },
+        "name": "f"
+      }
+    ],
+    "protocol": {
+      "member": "iterate(int seed, java.util.function.IntUnaryOperator f)",
+      "comment": "Returns an infinite sequential ordered IntStream produced by iterative application of a function f to an initial element seed, producing a Stream consisting of seed, method_0, f(method_0), etc. The first element (position {@code 0}) in the IntStream will be the provided seed. For n > 0, the element at position n, will be the result of applying the function f to the element at position n - 1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generate(java.util.function.IntSupplier s)",
+    "name": "generate",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntSupplier",
+          "name": "IntSupplier",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "generate(java.util.function.IntSupplier s)",
+      "comment": "Returns an infinite sequential unordered stream where each element is generated by the provided IntSupplier. This is suitable for generating constant streams, streams of random elements, etc.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range(int startInclusive, int endExclusive)",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startInclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endExclusive"
+      }
+    ],
+    "protocol": {
+      "member": "range(int startInclusive, int endExclusive)",
+      "comment": "Returns a sequential ordered IntStream from startInclusive (inclusive) to endExclusive (exclusive) by an incremental step of 1. @apiNote An equivalent sequence of increasing values can be produced sequentially using a for loop as follows: for (int i = startInclusive; i < endExclusive ; i++) { ...  }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rangeClosed(int startInclusive, int endInclusive)",
+    "name": "rangeClosed",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startInclusive"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "endInclusive"
+      }
+    ],
+    "protocol": {
+      "member": "rangeClosed(int startInclusive, int endInclusive)",
+      "comment": "Returns a sequential ordered IntStream from startInclusive (inclusive) to endInclusive (inclusive) by an incremental step of 1. @apiNote An equivalent sequence of increasing values can be produced sequentially using a for loop as follows: for (int i = startInclusive; i <= endInclusive ; i++) { ...  }",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "concat(java.util.stream.IntStream a, java.util.stream.IntStream b)",
+    "name": "concat",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "IntStream",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.IntStream",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.IntStream",
+      "name": "java.util.stream.IntStream",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.IntStream",
+          "name": "IntStream",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.IntStream",
+          "name": "IntStream",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "concat(java.util.stream.IntStream a, java.util.stream.IntStream b)",
+      "comment": "Creates a lazily concatenated stream whose elements are all the elements of the first stream followed by all the elements of the second stream. The resulting stream is ordered if both of the input streams are ordered, and parallel if either of the input streams is parallel. When the resulting stream is closed, the close handlers for both input streams are invoked. @implNote Use caution when constructing streams from repeated concatenation. Accessing an element of a deeply concatenated stream can result in deep call chains, or even StackOverflowException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

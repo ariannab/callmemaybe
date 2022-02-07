@@ -1,0 +1,808 @@
+[
+  {
+    "signature": "weka.classifiers.bayes.net.BIFReader()",
+    "name": "weka.classifiers.bayes.net.BIFReader",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.BIFReader()",
+      "comment": "the default constructor",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "processFile(java.lang.String sFile)",
+    "name": "processFile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "weka.classifiers.bayes.net.BIFReader",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sFile"
+      }
+    ],
+    "protocol": {
+      "member": "processFile(java.lang.String sFile)",
+      "comment": "processFile reads a BIFXML file and initializes a Bayes Net",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "processString(java.lang.String sStr)",
+    "name": "processString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "weka.classifiers.bayes.net.BIFReader",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sStr"
+      }
+    ],
+    "protocol": {
+      "member": "processString(java.lang.String sStr)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFileName()",
+    "name": "getFileName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFileName()",
+      "comment": "returns the current filename",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildStructure(org.w3c.dom.Document doc)",
+    "name": "buildStructure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Document",
+          "name": "Document",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "buildStructure(org.w3c.dom.Document doc)",
+      "comment": "buildStructure parses the BIF document in the DOM tree contained in the doc parameter and specifies the the network structure and probability tables. It assumes that buildInstances has been called before",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "Sync(weka.classifiers.bayes.BayesNet other)",
+    "name": "Sync",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "Sync(weka.classifiers.bayes.BayesNet other)",
+      "comment": "synchronizes the node ordering of this Bayes network with those in the other network (if possible).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getContent(org.w3c.dom.Element node)",
+    "name": "getContent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "protocol": {
+      "member": "getContent(org.w3c.dom.Element node)",
+      "comment": "Returns all TEXT children of the given node in one string. Between the node values new lines are inserted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildInstances(org.w3c.dom.Document doc, java.lang.String sName)",
+    "name": "buildInstances",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Document",
+          "name": "Document",
+          "isArray": false
+        },
+        "name": "doc"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "buildInstances(org.w3c.dom.Document doc, java.lang.String sName)",
+      "comment": "buildInstances parses the BIF document and creates a Bayes Net with its nodes specified, but leaves the network structure and probability tables empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectAllNames(org.w3c.dom.Document doc)",
+    "name": "selectAllNames",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.w3c.dom.NodeList",
+      "name": "org.w3c.dom.NodeList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Document",
+          "name": "Document",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "selectAllNames(org.w3c.dom.Document doc)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectAllVariables(org.w3c.dom.Document doc)",
+    "name": "selectAllVariables",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.w3c.dom.NodeList",
+      "name": "org.w3c.dom.NodeList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Document",
+          "name": "Document",
+          "isArray": false
+        },
+        "name": "doc"
+      }
+    ],
+    "protocol": {
+      "member": "selectAllVariables(org.w3c.dom.Document doc)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefinition(org.w3c.dom.Document doc, java.lang.String sName)",
+    "name": "getDefinition",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.w3c.dom.Element",
+      "name": "org.w3c.dom.Element",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Document",
+          "name": "Document",
+          "isArray": false
+        },
+        "name": "doc"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "getDefinition(org.w3c.dom.Document doc, java.lang.String sName)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParentNodes(org.w3c.dom.Node definition)",
+    "name": "getParentNodes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<org.w3c.dom.Node>",
+      "name": "java.util.ArrayList<org.w3c.dom.Node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "definition"
+      }
+    ],
+    "protocol": {
+      "member": "getParentNodes(org.w3c.dom.Node definition)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTable(org.w3c.dom.Node definition)",
+    "name": "getTable",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "definition"
+      }
+    ],
+    "protocol": {
+      "member": "getTable(org.w3c.dom.Node definition)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectOutCome(org.w3c.dom.Node item)",
+    "name": "selectOutCome",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<org.w3c.dom.Node>",
+      "name": "java.util.ArrayList<org.w3c.dom.Node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "item"
+      }
+    ],
+    "protocol": {
+      "member": "selectOutCome(org.w3c.dom.Node item)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectName(org.w3c.dom.Node item)",
+    "name": "selectName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<org.w3c.dom.Node>",
+      "name": "java.util.ArrayList<org.w3c.dom.Node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "item"
+      }
+    ],
+    "protocol": {
+      "member": "selectName(org.w3c.dom.Node item)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectProperty(org.w3c.dom.Node item)",
+    "name": "selectProperty",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<org.w3c.dom.Node>",
+      "name": "java.util.ArrayList<org.w3c.dom.Node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "item"
+      }
+    ],
+    "protocol": {
+      "member": "selectProperty(org.w3c.dom.Node item)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectElements(org.w3c.dom.Node item, java.lang.String sElement)",
+    "name": "selectElements",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<org.w3c.dom.Node>",
+      "name": "java.util.ArrayList<org.w3c.dom.Node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "item"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sElement"
+      }
+    ],
+    "protocol": {
+      "member": "selectElements(org.w3c.dom.Node item, java.lang.String sElement)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "missingArcs(weka.classifiers.bayes.BayesNet other)",
+    "name": "missingArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "missingArcs(weka.classifiers.bayes.BayesNet other)",
+      "comment": "Count nr of arcs missing from other network compared to current network Note that an arc is not 'missing' if it is reversed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "extraArcs(weka.classifiers.bayes.BayesNet other)",
+    "name": "extraArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "extraArcs(weka.classifiers.bayes.BayesNet other)",
+      "comment": "Count nr of exta arcs from other network compared to current network Note that an arc is not 'extra' if it is reversed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "divergence(weka.classifiers.bayes.BayesNet other)",
+    "name": "divergence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "divergence(weka.classifiers.bayes.BayesNet other)",
+      "comment": "calculates the divergence between the probability distribution represented by this network and that of another, that is, \\sum_{x\\in X} method_0log method_0/method_2 where X is the set of values the nodes in the network can take, method_0 the probability of this network for configuration x method_2 the probability of the other network for configuration x",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reversedArcs(weka.classifiers.bayes.BayesNet other)",
+    "name": "reversedArcs",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "reversedArcs(weka.classifiers.bayes.BayesNet other)",
+      "comment": "Count nr of reversed arcs from other network compared to current network",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode(java.lang.String sNodeName)",
+    "name": "getNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sNodeName"
+      }
+    ],
+    "protocol": {
+      "member": "getNode(java.lang.String sNodeName)",
+      "comment": "getNode finds the index of the node with name sNodeName and throws an exception if no such node can be found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+      "name": "BIFReader",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.BIFReader",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Loads the file specified as first parameter and prints it to stdout.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

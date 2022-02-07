@@ -1,0 +1,583 @@
+[
+  {
+    "signature": "java.util.concurrent.DelayQueue()",
+    "name": "java.util.concurrent.DelayQueue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.DelayQueue()",
+      "comment": "Creates a new DelayQueue that is initially empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.DelayQueue(java.util.Collection<? extends E> c)",
+    "name": "java.util.concurrent.DelayQueue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.DelayQueue(java.util.Collection<? extends E> c)",
+      "comment": "Creates a DelayQueue initially containing the elements of the given collection of Delayed instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Delayed",
+          "name": "Delayed",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "add(E e)",
+      "comment": "Inserts the specified element into this delay queue.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Delayed",
+          "name": "Delayed",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e)",
+      "comment": "Inserts the specified element into this delay queue.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(E e)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Delayed",
+          "name": "Delayed",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "put(E e)",
+      "comment": "Inserts the specified element into this delay queue. As the queue is unbounded this method will never block.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Delayed",
+          "name": "Delayed",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Inserts the specified element into this delay queue. As the queue is unbounded this method will never block.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll()",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "poll()",
+      "comment": "Retrieves and removes the head of this queue, or returns null if this queue has no elements with an expired delay.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "take()",
+    "name": "take",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "take()",
+      "comment": "Retrieves and removes the head of this queue, waiting if necessary until an element with an expired delay is available on this queue.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Retrieves and removes the head of this queue, waiting if necessary until an element with an expired delay is available on this queue, or the specified wait time expires.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peek()",
+    "name": "peek",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "peek()",
+      "comment": "Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty. Unlike poll, if no expired elements are available in the queue, this method returns the element that will expire next, if one exists.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drainTo(java.util.Collection<? super E> c)",
+    "name": "drainTo",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "drainTo(java.util.Collection<? super E> c)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drainTo(java.util.Collection<? super E> c, int maxElements)",
+    "name": "drainTo",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxElements"
+      }
+    ],
+    "protocol": {
+      "member": "drainTo(java.util.Collection<? super E> c, int maxElements)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Atomically removes all of the elements from this delay queue. The queue will be empty after this call returns. Elements with an unexpired delay are not waited for; they are simply discarded from the queue.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.isEmpty()<-receiverObjectID.clear()"
+    }
+  },
+  {
+    "signature": "remainingCapacity()",
+    "name": "remainingCapacity",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remainingCapacity()",
+      "comment": "Always returns method_0 because a DelayQueue is not capacity constrained.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toArray()",
+      "comment": "Returns an array containing all of the elements in this queue. The returned array elements are in no particular order. The returned array will be \"safe\" in that no references to it are maintained by this queue. (In other words, this method must allocate a new array). The caller is thus free to modify the returned array. This method acts as bridge between array-based and collection-based APIs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(T[] a)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "protocol": {
+      "member": "toArray(T[] a)",
+      "comment": "Returns an array containing all of the elements in this queue; the runtime type of the returned array is that of the specified array. The returned array elements are in no particular order. If the queue fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this queue. If this queue fits in the specified array with room to spare (imethod_4., the array has more elements than this queue), the element in the array immediately following the end of the queue is set to null. Like the method_0 method, this method acts as bridge between array-based and collection-based APIs. Further, this method allows precise control over the runtime type of the output array, and may, under certain circumstances, be used to save allocation costs. The following code can be used to dump a delay queue into a newly allocated array of Delayed}:  {@code Delayed[] a = method_1; Note that method_2 is identical in function to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object o)",
+      "comment": "Removes a single instance of the specified element from this queue, if it is present, whether or not it has expired.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeEQ(java.lang.Object o)",
+    "name": "removeEQ",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "removeEQ(java.lang.Object o)",
+      "comment": "Identity-based version for use in method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.DelayQueue",
+      "name": "DelayQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.DelayQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator over all the elements (both expired and unexpired) in this queue. The iterator does not return the elements in any particular order. The returned iterator is <i>weakly consistent</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

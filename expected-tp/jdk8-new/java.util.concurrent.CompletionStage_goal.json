@@ -1,0 +1,1449 @@
+[
+  {
+    "signature": "thenApply(java.util.function.Function<? super T, ? extends U> fn)",
+    "name": "thenApply",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "thenApply(java.util.function.Function<? super T, ? extends U> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed with this stage's result as the argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenApplyAsync(java.util.function.Function<? super T, ? extends U> fn)",
+    "name": "thenApplyAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "thenApplyAsync(java.util.function.Function<? super T, ? extends U> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed using this stage's default asynchronous execution facility, with this stage's result as the argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenApplyAsync(java.util.function.Function<? super T, ? extends U> fn, java.util.concurrent.Executor executor)",
+    "name": "thenApplyAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "thenApplyAsync(java.util.function.Function<? super T, ? extends U> fn, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed using the supplied Executor, with this stage's result as the argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenAccept(java.util.function.Consumer<? super T> action)",
+    "name": "thenAccept",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "thenAccept(java.util.function.Consumer<? super T> action)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed with this stage's result as the argument to the supplied action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenAcceptAsync(java.util.function.Consumer<? super T> action)",
+    "name": "thenAcceptAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "thenAcceptAsync(java.util.function.Consumer<? super T> action)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed using this stage's default asynchronous execution facility, with this stage's result as the argument to the supplied action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenAcceptAsync(java.util.function.Consumer<? super T> action, java.util.concurrent.Executor executor)",
+    "name": "thenAcceptAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "thenAcceptAsync(java.util.function.Consumer<? super T> action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed using the supplied Executor, with this stage's result as the argument to the supplied action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenRun(java.lang.Runnable action)",
+    "name": "thenRun",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "thenRun(java.lang.Runnable action)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, executes the given action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenRunAsync(java.lang.Runnable action)",
+    "name": "thenRunAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "thenRunAsync(java.lang.Runnable action)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, executes the given action using this stage's default asynchronous execution facility. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenRunAsync(java.lang.Runnable action, java.util.concurrent.Executor executor)",
+    "name": "thenRunAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "thenRunAsync(java.lang.Runnable action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, executes the given action using the supplied Executor. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenCombine(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiFunction<? super T, ? super U, ? extends V> fn)",
+    "name": "thenCombine",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<V>",
+      "name": "java.util.concurrent.CompletionStage<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "thenCombine(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiFunction<? super T, ? super U, ? extends V> fn)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage both complete normally, is executed with the two results as arguments to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenCombineAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiFunction<? super T, ? super U, ? extends V> fn)",
+    "name": "thenCombineAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<V>",
+      "name": "java.util.concurrent.CompletionStage<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "thenCombineAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiFunction<? super T, ? super U, ? extends V> fn)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage complete normally, is executed using this stage's default asynchronous execution facility, with the two results as arguments to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenCombineAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiFunction<? super T, ? super U, ? extends V> fn, java.util.concurrent.Executor executor)",
+    "name": "thenCombineAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<V>",
+      "name": "java.util.concurrent.CompletionStage<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "thenCombineAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiFunction<? super T, ? super U, ? extends V> fn, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage complete normally, is executed using the supplied executor, with the two results as arguments to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenAcceptBoth(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiConsumer<? super T, ? super U> action)",
+    "name": "thenAcceptBoth",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "thenAcceptBoth(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiConsumer<? super T, ? super U> action)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage both complete normally, is executed with the two results as arguments to the supplied action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenAcceptBothAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiConsumer<? super T, ? super U> action)",
+    "name": "thenAcceptBothAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "thenAcceptBothAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiConsumer<? super T, ? super U> action)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage complete normally, is executed using this stage's default asynchronous execution facility, with the two results as arguments to the supplied action.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenAcceptBothAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiConsumer<? super T, ? super U> action, java.util.concurrent.Executor executor)",
+    "name": "thenAcceptBothAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "thenAcceptBothAsync(java.util.concurrent.CompletionStage<? extends U> other, java.util.function.BiConsumer<? super T, ? super U> action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage complete normally, is executed using the supplied executor, with the two results as arguments to the supplied function.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runAfterBoth(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+    "name": "runAfterBoth",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "runAfterBoth(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage both complete normally, executes the given action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runAfterBothAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+    "name": "runAfterBothAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "runAfterBothAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage complete normally, executes the given action using this stage's default asynchronous execution facility. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runAfterBothAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action, java.util.concurrent.Executor executor)",
+    "name": "runAfterBothAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "runAfterBothAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this and the other given stage complete normally, executes the given action using the supplied executor See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyToEither(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Function<? super T, U> fn)",
+    "name": "applyToEither",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "applyToEither(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Function<? super T, U> fn)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, is executed with the corresponding result as argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyToEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Function<? super T, U> fn)",
+    "name": "applyToEitherAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "applyToEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Function<? super T, U> fn)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, is executed using this stage's default asynchronous execution facility, with the corresponding result as argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyToEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Function<? super T, U> fn, java.util.concurrent.Executor executor)",
+    "name": "applyToEitherAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "applyToEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Function<? super T, U> fn, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, is executed using the supplied executor, with the corresponding result as argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "acceptEither(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Consumer<? super T> action)",
+    "name": "acceptEither",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "acceptEither(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Consumer<? super T> action)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, is executed with the corresponding result as argument to the supplied action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "acceptEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Consumer<? super T> action)",
+    "name": "acceptEitherAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "acceptEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Consumer<? super T> action)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, is executed using this stage's default asynchronous execution facility, with the corresponding result as argument to the supplied action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "acceptEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Consumer<? super T> action, java.util.concurrent.Executor executor)",
+    "name": "acceptEitherAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "acceptEitherAsync(java.util.concurrent.CompletionStage<? extends T> other, java.util.function.Consumer<? super T> action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, is executed using the supplied executor, with the corresponding result as argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runAfterEither(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+    "name": "runAfterEither",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "runAfterEither(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, executes the given action. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runAfterEitherAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+    "name": "runAfterEitherAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "runAfterEitherAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, executes the given action using this stage's default asynchronous execution facility. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runAfterEitherAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action, java.util.concurrent.Executor executor)",
+    "name": "runAfterEitherAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "name": "java.util.concurrent.CompletionStage<java.lang.Void>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.CompletionStage",
+          "name": "CompletionStage",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "runAfterEitherAsync(java.util.concurrent.CompletionStage<?> other, java.lang.Runnable action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when either this or the other given stage complete normally, executes the given action using supplied executor. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenCompose(java.util.function.Function<? super T, ? extends java.util.concurrent.CompletionStage<U>> fn)",
+    "name": "thenCompose",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "thenCompose(java.util.function.Function<? super T, ? extends java.util.concurrent.CompletionStage<U>> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed with this stage as the argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComposeAsync(java.util.function.Function<? super T, ? extends java.util.concurrent.CompletionStage<U>> fn)",
+    "name": "thenComposeAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "thenComposeAsync(java.util.function.Function<? super T, ? extends java.util.concurrent.CompletionStage<U>> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed using this stage's default asynchronous execution facility, with this stage as the argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "thenComposeAsync(java.util.function.Function<? super T, ? extends java.util.concurrent.CompletionStage<U>> fn, java.util.concurrent.Executor executor)",
+    "name": "thenComposeAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "thenComposeAsync(java.util.function.Function<? super T, ? extends java.util.concurrent.CompletionStage<U>> fn, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this stage completes normally, is executed using the supplied Executor, with this stage's result as the argument to the supplied function. See the CompletionStage documentation for rules covering exceptional completion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exceptionally(java.util.function.Function<java.lang.Throwable, ? extends T> fn)",
+    "name": "exceptionally",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<T>",
+      "name": "java.util.concurrent.CompletionStage<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "exceptionally(java.util.function.Function<java.lang.Throwable, ? extends T> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes exceptionally, is executed with this stage's exception as the argument to the supplied function. Otherwise, if this stage completes normally, then the returned stage also completes normally with the same value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "whenComplete(java.util.function.BiConsumer<? super T, ? super java.lang.Throwable> action)",
+    "name": "whenComplete",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<T>",
+      "name": "java.util.concurrent.CompletionStage<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "whenComplete(java.util.function.BiConsumer<? super T, ? super java.lang.Throwable> action)",
+      "comment": "Returns a new CompletionStage with the same result or exception as this stage, and when this stage completes, executes the given action with the result (or null if none) and the exception (or null if none) of this stage.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "whenCompleteAsync(java.util.function.BiConsumer<? super T, ? super java.lang.Throwable> action)",
+    "name": "whenCompleteAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<T>",
+      "name": "java.util.concurrent.CompletionStage<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "whenCompleteAsync(java.util.function.BiConsumer<? super T, ? super java.lang.Throwable> action)",
+      "comment": "Returns a new CompletionStage with the same result or exception as this stage, and when this stage completes, executes the given action executes the given action using this stage's default asynchronous execution facility, with the result (or null if none) and the exception (or null if none) of this stage as arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "whenCompleteAsync(java.util.function.BiConsumer<? super T, ? super java.lang.Throwable> action, java.util.concurrent.Executor executor)",
+    "name": "whenCompleteAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<T>",
+      "name": "java.util.concurrent.CompletionStage<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "action"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "whenCompleteAsync(java.util.function.BiConsumer<? super T, ? super java.lang.Throwable> action, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage with the same result or exception as this stage, and when this stage completes, executes using the supplied Executor, the given action with the result (or null if none) and the exception (or null if none) of this stage as arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "handle(java.util.function.BiFunction<? super T, java.lang.Throwable, ? extends U> fn)",
+    "name": "handle",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "handle(java.util.function.BiFunction<? super T, java.lang.Throwable, ? extends U> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes either normally or exceptionally, is executed with this stage's result and exception as arguments to the supplied function. The given function is invoked with the result (or null if none) and the exception (or null if none) of this stage when complete as arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "handleAsync(java.util.function.BiFunction<? super T, java.lang.Throwable, ? extends U> fn)",
+    "name": "handleAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "fn"
+      }
+    ],
+    "protocol": {
+      "member": "handleAsync(java.util.function.BiFunction<? super T, java.lang.Throwable, ? extends U> fn)",
+      "comment": "Returns a new CompletionStage that, when this stage completes either normally or exceptionally, is executed using this stage's default asynchronous execution facility, with this stage's result and exception as arguments to the supplied function. The given function is invoked with the result (or null if none) and the exception (or null if none) of this stage when complete as arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "handleAsync(java.util.function.BiFunction<? super T, java.lang.Throwable, ? extends U> fn, java.util.concurrent.Executor executor)",
+    "name": "handleAsync",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletionStage<U>",
+      "name": "java.util.concurrent.CompletionStage<U>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiFunction",
+          "name": "BiFunction",
+          "isArray": false
+        },
+        "name": "fn"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Executor",
+          "name": "Executor",
+          "isArray": false
+        },
+        "name": "executor"
+      }
+    ],
+    "protocol": {
+      "member": "handleAsync(java.util.function.BiFunction<? super T, java.lang.Throwable, ? extends U> fn, java.util.concurrent.Executor executor)",
+      "comment": "Returns a new CompletionStage that, when this stage completes either normally or exceptionally, is executed using the supplied executor, with this stage's result and exception as arguments to the supplied function. The given function is invoked with the result (or null if none) and the exception (or null if none) of this stage when complete as arguments.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toCompletableFuture()",
+    "name": "toCompletableFuture",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionStage",
+      "name": "CompletionStage",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionStage",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.CompletableFuture<T>",
+      "name": "java.util.concurrent.CompletableFuture<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toCompletableFuture()",
+      "comment": "Returns a CompletableFuture maintaining the same completion properties as this stage. If this stage is already a CompletableFuture, this method may return this stage itself. Otherwise, invocation of this method may be equivalent in effect to method_0, but returning an instance of type CompletableFuture. A CompletionStage implementation that does not choose to interoperate with others may throw UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "signature": "weka.classifiers.trees.j48.C45PruneableClassifierTree(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, boolean pruneTree, float cf, boolean raiseTree, boolean cleanup, boolean collapseTree)",
+    "name": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ModelSelection",
+          "name": "ModelSelection",
+          "isArray": false
+        },
+        "name": "toSelectLocModel"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "pruneTree"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "cf"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "raiseTree"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "cleanup"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "collapseTree"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.C45PruneableClassifierTree(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, boolean pruneTree, float cf, boolean raiseTree, boolean cleanup, boolean collapseTree)",
+      "comment": "Constructor for pruneable tree structure. Stores reference to associated training data at each node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Method for building a pruneable classifier tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "collapse()",
+    "name": "collapse",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "collapse()",
+      "comment": "Collapses a tree to a node if training error doesn't increase.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prune()",
+    "name": "prune",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "prune()",
+      "comment": "Prunes a tree using method_0's pruning procedure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNewTree(weka.core.Instances data)",
+    "name": "getNewTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.j48.ClassifierTree",
+      "name": "weka.classifiers.trees.j48.ClassifierTree",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "getNewTree(weka.core.Instances data)",
+      "comment": "Returns a newly created tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+      "name": "C45PruneableClassifierTree",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.C45PruneableClassifierTree",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

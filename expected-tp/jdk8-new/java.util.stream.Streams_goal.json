@@ -1,0 +1,82 @@
+[
+  {
+    "signature": "composeWithExceptions(java.lang.Runnable a, java.lang.Runnable b)",
+    "name": "composeWithExceptions",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Streams",
+      "name": "Streams",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Streams",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Runnable",
+      "name": "java.lang.Runnable",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "composeWithExceptions(java.lang.Runnable a, java.lang.Runnable b)",
+      "comment": "Given two Runnables, return a Runnable that executes both in sequence, even if the first throws an exception, and if both throw exceptions, add any exceptions thrown by the second as suppressed exceptions of the first.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "composedClose(java.util.stream.BaseStream<?, ?> a, java.util.stream.BaseStream<?, ?> b)",
+    "name": "composedClose",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Streams",
+      "name": "Streams",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Streams",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Runnable",
+      "name": "java.lang.Runnable",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.BaseStream",
+          "name": "BaseStream",
+          "isArray": false
+        },
+        "name": "a"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.BaseStream",
+          "name": "BaseStream",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "composedClose(java.util.stream.BaseStream<?, ?> a, java.util.stream.BaseStream<?, ?> b)",
+      "comment": "Given two streams, return a Runnable that executes both of their method_0 methods in sequence, even if the first throws an exception, and if both throw exceptions, add any exceptions thrown by the second as suppressed exceptions of the first.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,973 @@
+[
+  {
+    "signature": "cern.colt.list.IntArrayList()",
+    "name": "cern.colt.list.IntArrayList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "cern.colt.list.IntArrayList()",
+      "comment": "Constructs an empty list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cern.colt.list.IntArrayList(int[] elements)",
+    "name": "cern.colt.list.IntArrayList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "protocol": {
+      "member": "cern.colt.list.IntArrayList(int[] elements)",
+      "comment": "Constructs a list containing the specified elements. The initial size and capacity of the list is the length of the array. WARNING: For efficiency reasons and to keep memory usage low, the array is not copied. So if subsequently you modify the specified array directly via the [] operator, be sure you know what you're doing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cern.colt.list.IntArrayList(int initialCapacity)",
+    "name": "cern.colt.list.IntArrayList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "cern.colt.list.IntArrayList(int initialCapacity)",
+      "comment": "Constructs an empty list with the specified initial capacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int element)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "add(int element)",
+      "comment": "Appends the specified element to the end of this list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "beforeInsert(int index, int element)",
+    "name": "beforeInsert",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "beforeInsert(int index, int element)",
+      "comment": "Inserts the specified element before the specified position into the receiver. Shifts the element currently at that position (if any) and any subsequent elements to the right.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "binarySearchFromTo(int key, int from, int to)",
+    "name": "binarySearchFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "binarySearchFromTo(int key, int from, int to)",
+      "comment": "Searches the receiver for the specified value using the binary search algorithm. The receiver must must be sorted (as by the sort method) prior to making this call. If it is not sorted, the results are undefined: in particular, the call may enter an infinite loop. If the receiver contains multiple elements equal to the specified object, there is no guarantee which instance will be found.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a deep copy of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copy()",
+    "name": "copy",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "cern.colt.list.IntArrayList",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "copy()",
+      "comment": "Returns a deep copy of the receiver; uses method_0 and casts the result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "countSortFromTo(int from, int to, int min, int max)",
+    "name": "countSortFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "min"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "max"
+      }
+    ],
+    "protocol": {
+      "member": "countSortFromTo(int from, int to, int min, int max)",
+      "comment": "Sorts the specified range of the receiver into ascending numerical order. The sorting algorithm is a count sort. This algorithm offers guaranteed <dt>Performance: method_0 <dt>Space requirements: int[max-min+1] buffer. This algorithm is only applicable if max-min+1 is not large! But if applicable, it usually outperforms quicksort by a factor of 3-4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elements()",
+    "name": "elements",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[]",
+      "name": "int[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "elements()",
+      "comment": "Returns the elements currently stored, including invalid elements between size and capacity, if any. WARNING: For efficiency reasons and to keep memory usage low, the array is not copied. So if subsequently you modify the returned array directly via the [] operator, be sure you know what you're doing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "elements(int[] elements)",
+    "name": "elements",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "cern.colt.list.AbstractIntList",
+      "name": "cern.colt.list.AbstractIntList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "elements"
+      }
+    ],
+    "protocol": {
+      "member": "elements(int[] elements)",
+      "comment": "Sets the receiver's elements to be the specified array (not a copy of it). The size and capacity of the list is the length of the array. WARNING: For efficiency reasons and to keep memory usage low, the array is not copied. So if subsequently you modify the specified array directly via the [] operator, be sure you know what you're doing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ensureCapacity(int minCapacity)",
+    "name": "ensureCapacity",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minCapacity"
+      }
+    ],
+    "protocol": {
+      "member": "ensureCapacity(int minCapacity)",
+      "comment": "Ensures that the receiver can hold at least the specified number of elements without needing to allocate new internal memory. If necessary, allocates new internal memory and increases the capacity of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object otherObj)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "otherObj"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object otherObj)",
+      "comment": "Compares the specified Object with the receiver. Returns true if and only if the specified Object is also an ArrayList of the same type, both Lists have the same size, and all corresponding pairs of elements in the two Lists are identical. In other words, two Lists are defined to be equal if they contain the same elements in the same order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(cern.colt.function.IntProcedure procedure)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.function.IntProcedure",
+          "name": "IntProcedure",
+          "isArray": false
+        },
+        "name": "procedure"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(cern.colt.function.IntProcedure procedure)",
+      "comment": "Applies a procedure to each element of the receiver, if any. Starts at index 0, moving rightwards.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int index)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "get(int index)",
+      "comment": "Returns the element at the specified position in the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQuick(int index)",
+    "name": "getQuick",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "getQuick(int index)",
+      "comment": "Returns the element at the specified position in the receiver; WARNING: Does not check preconditions. Provided with invalid parameters this method may return invalid elements without throwing any exception! You should only use this method when you are absolutely sure that the index is within bounds. Precondition (unchecked): index >= 0 && index < method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "indexOfFromTo(int element, int from, int to)",
+    "name": "indexOfFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "indexOfFromTo(int element, int from, int to)",
+      "comment": "Returns the index of the first occurrence of the specified element. Returns -1 if the receiver does not contain this element. Searches between from, inclusive and to, inclusive. Tests for identity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastIndexOfFromTo(int element, int from, int to)",
+    "name": "lastIndexOfFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "lastIndexOfFromTo(int element, int from, int to)",
+      "comment": "Returns the index of the last occurrence of the specified element. Returns -1 if the receiver does not contain this element. Searches beginning at to, inclusive until from, inclusive. Tests for identity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "partFromTo(int from, int to)",
+    "name": "partFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "cern.colt.list.AbstractIntList",
+      "name": "cern.colt.list.AbstractIntList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "partFromTo(int from, int to)",
+      "comment": "Returns a new list of the part of the receiver between from, inclusive, and to, inclusive.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(cern.colt.list.AbstractIntList other)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.AbstractIntList",
+          "name": "AbstractIntList",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "removeAll(cern.colt.list.AbstractIntList other)",
+      "comment": "Removes from the receiver all elements that are contained in the specified list. Tests for identity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceFromToWithFrom(int from, int to, cern.colt.list.AbstractIntList other, int otherFrom)",
+    "name": "replaceFromToWithFrom",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.AbstractIntList",
+          "name": "AbstractIntList",
+          "isArray": false
+        },
+        "name": "other"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "otherFrom"
+      }
+    ],
+    "protocol": {
+      "member": "replaceFromToWithFrom(int from, int to, cern.colt.list.AbstractIntList other, int otherFrom)",
+      "comment": "Replaces a number of elements in the receiver with the same number of elements of another list. Replaces elements in the receiver, between from (inclusive) and to (inclusive), with elements of other, starting from otherFrom (inclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(cern.colt.list.AbstractIntList other)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "cern.colt.list.AbstractIntList",
+          "name": "AbstractIntList",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "retainAll(cern.colt.list.AbstractIntList other)",
+      "comment": "Retains (keeps) only the elements in the receiver that are contained in the specified other list. In other words, removes from the receiver all of its elements that are not contained in the specified other list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reverse()",
+    "name": "reverse",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reverse()",
+      "comment": "Reverses the elements of the receiver. Last becomes first, second last becomes second first, and so on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(int index, int element)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "set(int index, int element)",
+      "comment": "Replaces the element at the specified position in the receiver with the specified element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setQuick(int index, int element)",
+    "name": "setQuick",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "setQuick(int index, int element)",
+      "comment": "Replaces the element at the specified position in the receiver with the specified element; WARNING: Does not check preconditions. Provided with invalid parameters this method may access invalid indexes without throwing any exception! You should only use this method when you are absolutely sure that the index is within bounds. Precondition (unchecked): index >= 0 && index < method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shuffleFromTo(int from, int to)",
+    "name": "shuffleFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "shuffleFromTo(int from, int to)",
+      "comment": "Randomly permutes the part of the receiver between from (inclusive) and to (inclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sortFromTo(int from, int to)",
+    "name": "sortFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "sortFromTo(int from, int to)",
+      "comment": "Sorts the specified range of the receiver into ascending order. The sorting algorithm is dynamically chosen according to the characteristics of the data set. Currently quicksort and countsort are considered. Countsort is not always applicable, but if applicable, it usually outperforms quicksort by a factor of 3-4. Best case performance: method_0 <dt>Worst case performance: method_1 (a degenerated quicksort). <dt>Best case space requirements: 0 KB. <dt>Worst case space requirements: 40 KB.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trimToSize()",
+    "name": "trimToSize",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.IntArrayList",
+      "name": "IntArrayList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.IntArrayList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "trimToSize()",
+      "comment": "Trims the capacity of the receiver to be the receiver's current size. Releases any superfluous internal memory. An application can use this operation to minimize the storage of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

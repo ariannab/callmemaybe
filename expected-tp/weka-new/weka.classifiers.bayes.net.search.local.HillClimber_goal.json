@@ -1,0 +1,818 @@
+[
+  {
+    "signature": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "search determines the network structure/graph of the network with the Taby algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initCache(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "initCache",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "initCache(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "initCache initializes the cache",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isNotTabu(weka.classifiers.bayes.net.search.local.HillClimber$Operation oOperation)",
+    "name": "isNotTabu",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+          "name": "Operation",
+          "isArray": false
+        },
+        "name": "oOperation"
+      }
+    ],
+    "protocol": {
+      "member": "isNotTabu(weka.classifiers.bayes.net.search.local.HillClimber$Operation oOperation)",
+      "comment": "check whether the operation is not in the forbidden. For base hill climber, there are no restrictions on operations, so we always return true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptimalOperation(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "getOptimalOperation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "getOptimalOperation(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "getOptimalOperation finds the optimal operation that can be performed on the Bayes network that is not in the tabu list.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "performOperation(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oOperation)",
+    "name": "performOperation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+          "name": "Operation",
+          "isArray": false
+        },
+        "name": "oOperation"
+      }
+    ],
+    "protocol": {
+      "member": "performOperation(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oOperation)",
+      "comment": "performOperation applies an operation on the Bayes network and update the cache.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyArcAddition(weka.classifiers.bayes.BayesNet bayesNet, int iHead, int iTail, weka.core.Instances instances)",
+    "name": "applyArcAddition",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iHead"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iTail"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "applyArcAddition(weka.classifiers.bayes.BayesNet bayesNet, int iHead, int iTail, weka.core.Instances instances)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "applyArcDeletion(weka.classifiers.bayes.BayesNet bayesNet, int iHead, int iTail, weka.core.Instances instances)",
+    "name": "applyArcDeletion",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iHead"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iTail"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "applyArcDeletion(weka.classifiers.bayes.BayesNet bayesNet, int iHead, int iTail, weka.core.Instances instances)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findBestArcToAdd(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oBestOperation)",
+    "name": "findBestArcToAdd",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+          "name": "Operation",
+          "isArray": false
+        },
+        "name": "oBestOperation"
+      }
+    ],
+    "protocol": {
+      "member": "findBestArcToAdd(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oBestOperation)",
+      "comment": "find best (or least bad) arc addition operation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findBestArcToDelete(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oBestOperation)",
+    "name": "findBestArcToDelete",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+          "name": "Operation",
+          "isArray": false
+        },
+        "name": "oBestOperation"
+      }
+    ],
+    "protocol": {
+      "member": "findBestArcToDelete(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oBestOperation)",
+      "comment": "find best (or least bad) arc deletion operation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findBestArcToReverse(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oBestOperation)",
+    "name": "findBestArcToReverse",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+          "name": "Operation",
+          "isArray": false
+        },
+        "name": "oBestOperation"
+      }
+    ],
+    "protocol": {
+      "member": "findBestArcToReverse(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, weka.classifiers.bayes.net.search.local.HillClimber$Operation oBestOperation)",
+      "comment": "find best (or least bad) arc reversal operation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateCache(int iAttributeHead, int nNrOfAtts, weka.classifiers.bayes.net.ParentSet parentSet)",
+    "name": "updateCache",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iAttributeHead"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfAtts"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.ParentSet",
+          "name": "ParentSet",
+          "isArray": false
+        },
+        "name": "parentSet"
+      }
+    ],
+    "protocol": {
+      "member": "updateCache(int iAttributeHead, int nNrOfAtts, weka.classifiers.bayes.net.ParentSet parentSet)",
+      "comment": "update the cache due to change of parent set of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMaxNrOfParents(int nMaxNrOfParents)",
+    "name": "setMaxNrOfParents",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nMaxNrOfParents"
+      }
+    ],
+    "protocol": {
+      "member": "setMaxNrOfParents(int nMaxNrOfParents)",
+      "comment": "Sets the max number of parents",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxNrOfParents()",
+    "name": "getMaxNrOfParents",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMaxNrOfParents()",
+      "comment": "Gets the max number of parents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -P <nr of parents> Maximum number of parents   -R Use arc reversal operation. (default false)   -N Initial structure is empty (instead of Naive Bayes)   -mbc Applies a Markov Blanket correction to the network structure, after a network structure is learned. This ensures that all nodes in the network are part of the Markov blanket of the classifier node.   -S [BAYES|MDL|ENTROPY|AIC|CROSS_CLASSIC|CROSS_BAYES] Score type (BAYES, BDeu, MDL, ENTROPY and AIC)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInitAsNaiveBayes(boolean bInitAsNaiveBayes)",
+    "name": "setInitAsNaiveBayes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bInitAsNaiveBayes"
+      }
+    ],
+    "protocol": {
+      "member": "setInitAsNaiveBayes(boolean bInitAsNaiveBayes)",
+      "comment": "Sets whether to init as naive bayes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInitAsNaiveBayes()",
+    "name": "getInitAsNaiveBayes",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getInitAsNaiveBayes()",
+      "comment": "Gets whether to init as naive bayes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseArcReversal()",
+    "name": "getUseArcReversal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseArcReversal()",
+      "comment": "get use the arc reversal operation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseArcReversal(boolean bUseArcReversal)",
+    "name": "setUseArcReversal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bUseArcReversal"
+      }
+    ],
+    "protocol": {
+      "member": "setUseArcReversal(boolean bUseArcReversal)",
+      "comment": "set use the arc reversal operation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useArcReversalTipText()",
+    "name": "useArcReversalTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useArcReversalTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber",
+      "name": "HillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.HillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

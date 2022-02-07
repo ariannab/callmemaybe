@@ -1,0 +1,842 @@
+[
+  {
+    "signature": "weka.classifiers.meta.RegressionByDiscretization()",
+    "name": "weka.classifiers.meta.RegressionByDiscretization",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.RegressionByDiscretization()",
+      "comment": "Default constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances instances)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances instances)",
+      "comment": "Generates the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDensityEstimator(weka.core.Instance instance, boolean print)",
+    "name": "getDensityEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.estimators.UnivariateDensityEstimator",
+      "name": "weka.estimators.UnivariateDensityEstimator",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "print"
+      }
+    ],
+    "protocol": {
+      "member": "getDensityEstimator(weka.core.Instance instance, boolean print)",
+      "comment": "Get density estimator for given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "predictIntervals(weka.core.Instance instance, double confidenceLevel)",
+    "name": "predictIntervals",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "confidenceLevel"
+      }
+    ],
+    "protocol": {
+      "member": "predictIntervals(weka.core.Instance instance, double confidenceLevel)",
+      "comment": "Returns an N * 2 array, where N is the number of prediction intervals. In each row, the first element contains the lower boundary of the corresponding prediction interval and the second element the upper boundary.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "logDensity(weka.core.Instance instance, double value)",
+    "name": "logDensity",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "logDensity(weka.core.Instance instance, double value)",
+      "comment": "Returns natural logarithm of density estimate for given value based on given instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "classifyInstance(weka.core.Instance instance)",
+    "name": "classifyInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "classifyInstance(weka.core.Instance instance)",
+      "comment": "Returns a predicted class for the test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numBinsTipText()",
+    "name": "numBinsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numBinsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNumBins()",
+    "name": "getNumBins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNumBins()",
+      "comment": "Gets the number of bins numeric attributes will be divided into",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNumBins(int numBins)",
+    "name": "setNumBins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numBins"
+      }
+    ],
+    "protocol": {
+      "member": "setNumBins(int numBins)",
+      "comment": "Sets the number of bins to divide each selected numeric attribute into",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteEmptyBinsTipText()",
+    "name": "deleteEmptyBinsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "deleteEmptyBinsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDeleteEmptyBins()",
+    "name": "getDeleteEmptyBins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDeleteEmptyBins()",
+      "comment": "Gets whether empty bins are deleted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDeleteEmptyBins(boolean b)",
+    "name": "setDeleteEmptyBins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setDeleteEmptyBins(boolean b)",
+      "comment": "Sets whether to delete empty bins.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "minimizeAbsoluteErrorTipText()",
+    "name": "minimizeAbsoluteErrorTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "minimizeAbsoluteErrorTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMinimizeAbsoluteError()",
+    "name": "getMinimizeAbsoluteError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMinimizeAbsoluteError()",
+      "comment": "Gets whether to min. abs. error",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMinimizeAbsoluteError(boolean b)",
+    "name": "setMinimizeAbsoluteError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setMinimizeAbsoluteError(boolean b)",
+      "comment": "Sets whether to min. abs. error.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useEqualFrequencyTipText()",
+    "name": "useEqualFrequencyTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useEqualFrequencyTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseEqualFrequency()",
+    "name": "getUseEqualFrequency",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseEqualFrequency()",
+      "comment": "Get the value of UseEqualFrequency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseEqualFrequency(boolean newUseEqualFrequency)",
+    "name": "setUseEqualFrequency",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newUseEqualFrequency"
+      }
+    ],
+    "protocol": {
+      "member": "setUseEqualFrequency(boolean newUseEqualFrequency)",
+      "comment": "Set the value of UseEqualFrequency.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "estimatorTipText()",
+    "name": "estimatorTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "estimatorTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEstimator()",
+    "name": "getEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.estimators.UnivariateDensityEstimator",
+      "name": "weka.estimators.UnivariateDensityEstimator",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEstimator()",
+      "comment": "Get the estimator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEstimator(weka.estimators.UnivariateDensityEstimator estimator)",
+    "name": "setEstimator",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.estimators.UnivariateDensityEstimator",
+          "name": "UnivariateDensityEstimator",
+          "isArray": false
+        },
+        "name": "estimator"
+      }
+    ],
+    "protocol": {
+      "member": "setEstimator(weka.estimators.UnivariateDensityEstimator estimator)",
+      "comment": "Set the estimator",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a description of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.RegressionByDiscretization",
+      "name": "RegressionByDiscretization",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.RegressionByDiscretization",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

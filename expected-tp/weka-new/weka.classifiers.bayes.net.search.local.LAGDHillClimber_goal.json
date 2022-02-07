@@ -1,0 +1,569 @@
+[
+  {
+    "signature": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "search determines the network structure/graph of the network",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lookAheadInGoodDirectionsSearch(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int nrOfLookAheadSteps, int nrOfGoodOperations)",
+    "name": "lookAheadInGoodDirectionsSearch",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nrOfLookAheadSteps"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nrOfGoodOperations"
+      }
+    ],
+    "protocol": {
+      "member": "lookAheadInGoodDirectionsSearch(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int nrOfLookAheadSteps, int nrOfGoodOperations)",
+      "comment": "lookAheadInGoodDirectionsSearch determines the network structure/graph of the network with best score according to LAGD Hill Climbing",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAntiOperation(weka.classifiers.bayes.net.search.local.HillClimber$Operation oOperation)",
+    "name": "getAntiOperation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation",
+          "name": "Operation",
+          "isArray": false
+        },
+        "name": "oOperation"
+      }
+    ],
+    "protocol": {
+      "member": "getAntiOperation(weka.classifiers.bayes.net.search.local.HillClimber$Operation oOperation)",
+      "comment": "getAntiOperation determines the Operation, which is needed to cancel oOperation",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGoodOperations(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int nrOfGoodOperations)",
+    "name": "getGoodOperations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation[]",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nrOfGoodOperations"
+      }
+    ],
+    "protocol": {
+      "member": "getGoodOperations(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int nrOfGoodOperations)",
+      "comment": "getGoodOperations determines the nrOfGoodOperations best Operations, which are considered for the calculation of an optimal operationsequence",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptimalOperations(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int nrOfLookAheadSteps, int nrOfGoodOperations)",
+    "name": "getOptimalOperations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.HillClimber$Operation[]",
+      "name": "weka.classifiers.bayes.net.search.local.HillClimber$Operation[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nrOfLookAheadSteps"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nrOfGoodOperations"
+      }
+    ],
+    "protocol": {
+      "member": "getOptimalOperations(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances, int nrOfLookAheadSteps, int nrOfGoodOperations)",
+      "comment": "getOptimalOperations determines an optimal operationsequence in respect of the parameters nrOfLookAheadSteps and nrOfGoodOperations",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMaxNrOfParents(int nMaxNrOfParents)",
+    "name": "setMaxNrOfParents",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nMaxNrOfParents"
+      }
+    ],
+    "protocol": {
+      "member": "setMaxNrOfParents(int nMaxNrOfParents)",
+      "comment": "Sets the max number of parents",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxNrOfParents()",
+    "name": "getMaxNrOfParents",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMaxNrOfParents()",
+      "comment": "Gets the max number of parents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNrOfLookAheadSteps(int nNrOfLookAheadSteps)",
+    "name": "setNrOfLookAheadSteps",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfLookAheadSteps"
+      }
+    ],
+    "protocol": {
+      "member": "setNrOfLookAheadSteps(int nNrOfLookAheadSteps)",
+      "comment": "Sets the number of look-ahead steps",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNrOfLookAheadSteps()",
+    "name": "getNrOfLookAheadSteps",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNrOfLookAheadSteps()",
+      "comment": "Gets the number of look-ahead steps",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNrOfGoodOperations(int nNrOfGoodOperations)",
+    "name": "setNrOfGoodOperations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNrOfGoodOperations"
+      }
+    ],
+    "protocol": {
+      "member": "setNrOfGoodOperations(int nNrOfGoodOperations)",
+      "comment": "Sets the number of \"good operations\"",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNrOfGoodOperations()",
+    "name": "getNrOfGoodOperations",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNrOfGoodOperations()",
+      "comment": "Gets the number of \"good operations\"",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options. Valid options are:    -L <nr of look ahead steps> Look Ahead Depth   -G <nr of good operations> Nr of Good Operations   -P <nr of parents> Maximum number of parents   -R Use arc reversal operation. (default false)   -N Initial structure is empty (instead of Naive Bayes)   -mbc Applies a Markov Blanket correction to the network structure, after a network structure is learned. This ensures that all nodes in the network are part of the Markov blanket of the classifier node.   -S [BAYES|MDL|ENTROPY|AIC|CROSS_CLASSIC|CROSS_BAYES] Score type (BAYES, BDeu, MDL, ENTROPY and AIC)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nrOfLookAheadStepsTipText()",
+    "name": "nrOfLookAheadStepsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nrOfLookAheadStepsTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nrOfGoodOperationsTipText()",
+    "name": "nrOfGoodOperationsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nrOfGoodOperationsTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+      "name": "LAGDHillClimber",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.LAGDHillClimber",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

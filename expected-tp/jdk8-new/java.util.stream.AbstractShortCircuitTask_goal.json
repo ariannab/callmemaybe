@@ -1,0 +1,297 @@
+[
+  {
+    "signature": "java.util.stream.AbstractShortCircuitTask(java.util.stream.PipelineHelper<P_OUT> helper, java.util.Spliterator<P_IN> spliterator)",
+    "name": "java.util.stream.AbstractShortCircuitTask",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractShortCircuitTask(java.util.stream.PipelineHelper<P_OUT> helper, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Constructor for root tasks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.stream.AbstractShortCircuitTask(K parent, java.util.Spliterator<P_IN> spliterator)",
+    "name": "java.util.stream.AbstractShortCircuitTask",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+          "name": "AbstractShortCircuitTask",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.stream.AbstractShortCircuitTask(K parent, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Constructor for non-root nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEmptyResult()",
+    "name": "getEmptyResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEmptyResult()",
+      "comment": "Returns the value indicating the computation completed with no task finding a short-circuitable result. For example, for a \"find\" operation, this might be null or an empty Optional.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute()",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "compute()",
+      "comment": "Overrides AbstractTask version to include checks for early exits while splitting or computing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shortCircuit(R result)",
+    "name": "shortCircuit",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "result"
+      }
+    ],
+    "protocol": {
+      "member": "shortCircuit(R result)",
+      "comment": "Declares that a globally valid result has been found. If another task has not already found the answer, the result is installed in sharedResult. The method_0 method will check sharedResult before proceeding with computation, so this causes the computation to terminate early.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLocalResult(R localResult)",
+    "name": "setLocalResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "localResult"
+      }
+    ],
+    "protocol": {
+      "member": "setLocalResult(R localResult)",
+      "comment": "Sets a local result for this task. If this task is the root, set the shared result instead (if not already set).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRawResult()",
+    "name": "getRawResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRawResult()",
+      "comment": "Retrieves the local result for this task",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLocalResult()",
+    "name": "getLocalResult",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLocalResult()",
+      "comment": "Retrieves the local result for this task. If this task is the root, retrieves the shared result instead.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cancel()",
+    "name": "cancel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cancel()",
+      "comment": "Mark this task as canceled",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "taskCanceled()",
+    "name": "taskCanceled",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "taskCanceled()",
+      "comment": "Queries whether this task is canceled. A task is considered canceled if it or any of its parents have been canceled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cancelLaterNodes()",
+    "name": "cancelLaterNodes",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.AbstractShortCircuitTask",
+      "name": "AbstractShortCircuitTask",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.AbstractShortCircuitTask",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cancelLaterNodes()",
+      "comment": "Cancels all tasks which succeed this one in the encounter order. This includes canceling all the current task's right sibling, as well as the later right siblings of all its parents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

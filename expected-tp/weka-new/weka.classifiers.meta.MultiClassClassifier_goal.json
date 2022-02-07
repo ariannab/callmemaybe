@@ -1,0 +1,693 @@
+[
+  {
+    "signature": "weka.classifiers.meta.MultiClassClassifier()",
+    "name": "weka.classifiers.meta.MultiClassClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.MultiClassClassifier()",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances insts)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "insts"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances insts)",
+      "comment": "Builds the classifiers.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "individualPredictions(weka.core.Instance inst)",
+    "name": "individualPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "individualPredictions(weka.core.Instance inst)",
+      "comment": "Returns the individual predictions of the base classifiers for an instance. Used by StackedMultiClassClassifier. Returns the probability for the second \"class\" predicted by each base classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance inst)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance inst)",
+      "comment": "Returns the distribution for an instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Prints the classifiers.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -M <num> Sets the method to use. Valid values are 0 (1-against-all), 1 (random codes), 2 (exhaustive code), and 3 (1-against-1). (default 0)   -R <num> Sets the multiplier when using random codes. (default 2method_0)  -P Use pairwise coupling (only has an effect for 1-against1)  -L Use log loss decoding for random and exhaustive codes.  -S <num> Random number seed. (default 1)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_1method_2method_3)  Options specific to classifier wekamethod_1method_2method_3:   -D Turn on debugging output.  -R <ridge> Set the ridge in the log-likelihood.  -M <number> Set the maximum number of iterations (default -1, until convergence).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "logLossDecodingTipText()",
+    "name": "logLossDecodingTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "logLossDecodingTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLogLossDecoding()",
+    "name": "getLogLossDecoding",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLogLossDecoding()",
+      "comment": "Whether log loss decoding is used for random or exhaustive codes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLogLossDecoding(boolean newlogLossDecoding)",
+    "name": "setLogLossDecoding",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "newlogLossDecoding"
+      }
+    ],
+    "protocol": {
+      "member": "setLogLossDecoding(boolean newlogLossDecoding)",
+      "comment": "Sets whether log loss decoding is used for random or exhaustive codes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "randomWidthFactorTipText()",
+    "name": "randomWidthFactorTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "randomWidthFactorTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRandomWidthFactor()",
+    "name": "getRandomWidthFactor",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRandomWidthFactor()",
+      "comment": "Gets the multiplier when generating random codes. Will generate numClasses * m_RandomWidthFactor codes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRandomWidthFactor(double newRandomWidthFactor)",
+    "name": "setRandomWidthFactor",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "newRandomWidthFactor"
+      }
+    ],
+    "protocol": {
+      "member": "setRandomWidthFactor(double newRandomWidthFactor)",
+      "comment": "Sets the multiplier when generating random codes. Will generate numClasses * m_RandomWidthFactor codes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "methodTipText()",
+    "name": "methodTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "methodTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMethod()",
+    "name": "getMethod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.SelectedTag",
+      "name": "weka.core.SelectedTag",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMethod()",
+      "comment": "Gets the method used. Will be one of METHOD_1_AGAINST_ALL, METHOD_ERROR_RANDOM, METHOD_ERROR_EXHAUSTIVE, or METHOD_1_AGAINST_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMethod(weka.core.SelectedTag newMethod)",
+    "name": "setMethod",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.SelectedTag",
+          "name": "SelectedTag",
+          "isArray": false
+        },
+        "name": "newMethod"
+      }
+    ],
+    "protocol": {
+      "member": "setMethod(weka.core.SelectedTag newMethod)",
+      "comment": "Sets the method used. Will be one of METHOD_1_AGAINST_ALL, METHOD_ERROR_RANDOM, METHOD_ERROR_EXHAUSTIVE, or METHOD_1_AGAINST_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUsePairwiseCoupling(boolean p)",
+    "name": "setUsePairwiseCoupling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "p"
+      }
+    ],
+    "protocol": {
+      "member": "setUsePairwiseCoupling(boolean p)",
+      "comment": "Set whether to use pairwise coupling with 1-vs-1 classification to improve probability estimates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUsePairwiseCoupling()",
+    "name": "getUsePairwiseCoupling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUsePairwiseCoupling()",
+      "comment": "Gets whether to use pairwise coupling with 1-vs-1 classification to improve probability estimates.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "usePairwiseCouplingTipText()",
+    "name": "usePairwiseCouplingTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "usePairwiseCouplingTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pairwiseCoupling(double[][] n, double[][] r)",
+    "name": "pairwiseCoupling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "n"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "r"
+      }
+    ],
+    "protocol": {
+      "member": "pairwiseCoupling(double[][] n, double[][] r)",
+      "comment": "Implements pairwise coupling.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.MultiClassClassifier",
+      "name": "MultiClassClassifier",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.MultiClassClassifier",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

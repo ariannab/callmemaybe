@@ -1,0 +1,1052 @@
+[
+  {
+    "signature": "weka.classifiers.meta.Bagging()",
+    "name": "weka.classifiers.meta.Bagging",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.Bagging()",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -P Size of each bag, as a percentage of the training set size. (default 100)  -O Calculate the out of bag error.  -print Print the individual classifiers in the output  -store-out-of-bag-predictions Whether to store out of bag predictions in internal evaluation object.  -output-out-of-bag-complexity-statistics Whether to output complexity-based statistics when out-of-bag evaluation is performed.  -represent-copies-using-weights Represent copies of instances using weights rather than explicitly.  -S <num> Random number seed. (default 1)  -num-slots <num> Number of execution slots. (default 1 - imethod_0. no parallelism)  -I <num> Number of iterations. (default 10)  -D If set, classifier is run in debug mode and may output additional info to the console  -W Full name of base classifier. (default: wekamethod_1method_2method_3)  Options specific to classifier wekamethod_1method_2method_3:   -M <minimum number of instances> Set minimum number of instances per leaf (default 2).  -V <minimum variance for split> Set minimum numeric class variance proportion of train variance for split (default 1e-3).  -N <number of folds> Number of folds for reduced error pruning (default 3).  -S <seed> Seed for random data shuffling (default 1).  -P No pruning.  -L Maximum tree depth (default -1, no maximum)  -I Initial class value count (default 0)  -R Spread initial count over all class values (imethod_0. don't use 1 per value) Options after -- are passed to the designated classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "bagSizePercentTipText()",
+    "name": "bagSizePercentTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "bagSizePercentTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBagSizePercent()",
+    "name": "getBagSizePercent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBagSizePercent()",
+      "comment": "Gets the size of each bag, as a percentage of the training set size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBagSizePercent(int newBagSizePercent)",
+    "name": "setBagSizePercent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newBagSizePercent"
+      }
+    ],
+    "protocol": {
+      "member": "setBagSizePercent(int newBagSizePercent)",
+      "comment": "Sets the size of each bag, as a percentage of the training set size.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "representCopiesUsingWeightsTipText()",
+    "name": "representCopiesUsingWeightsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "representCopiesUsingWeightsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRepresentCopiesUsingWeights(boolean representUsingWeights)",
+    "name": "setRepresentCopiesUsingWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "representUsingWeights"
+      }
+    ],
+    "protocol": {
+      "member": "setRepresentCopiesUsingWeights(boolean representUsingWeights)",
+      "comment": "Set whether copies of instances are represented using weights rather than explicitly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRepresentCopiesUsingWeights()",
+    "name": "getRepresentCopiesUsingWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRepresentCopiesUsingWeights()",
+      "comment": "Get whether copies of instances are represented using weights rather than explicitly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "storeOutOfBagPredictionsTipText()",
+    "name": "storeOutOfBagPredictionsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "storeOutOfBagPredictionsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setStoreOutOfBagPredictions(boolean storeOutOfBag)",
+    "name": "setStoreOutOfBagPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "storeOutOfBag"
+      }
+    ],
+    "protocol": {
+      "member": "setStoreOutOfBagPredictions(boolean storeOutOfBag)",
+      "comment": "Set whether the out of bag predictions are stored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStoreOutOfBagPredictions()",
+    "name": "getStoreOutOfBagPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStoreOutOfBagPredictions()",
+      "comment": "Get whether the out of bag predictions are stored.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcOutOfBagTipText()",
+    "name": "calcOutOfBagTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "calcOutOfBagTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCalcOutOfBag(boolean calcOutOfBag)",
+    "name": "setCalcOutOfBag",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "calcOutOfBag"
+      }
+    ],
+    "protocol": {
+      "member": "setCalcOutOfBag(boolean calcOutOfBag)",
+      "comment": "Set whether the out of bag error is calculated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCalcOutOfBag()",
+    "name": "getCalcOutOfBag",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCalcOutOfBag()",
+      "comment": "Get whether the out of bag error is calculated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "outputOutOfBagComplexityStatisticsTipText()",
+    "name": "outputOutOfBagComplexityStatisticsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "outputOutOfBagComplexityStatisticsTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutputOutOfBagComplexityStatistics()",
+    "name": "getOutputOutOfBagComplexityStatistics",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOutputOutOfBagComplexityStatistics()",
+      "comment": "Gets whether complexity statistics are output when OOB estimation is performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOutputOutOfBagComplexityStatistics(boolean b)",
+    "name": "setOutputOutOfBagComplexityStatistics",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setOutputOutOfBagComplexityStatistics(boolean b)",
+      "comment": "Sets whether complexity statistics are output when OOB estimation is performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printClassifiersTipText()",
+    "name": "printClassifiersTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "printClassifiersTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPrintClassifiers(boolean print)",
+    "name": "setPrintClassifiers",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "print"
+      }
+    ],
+    "protocol": {
+      "member": "setPrintClassifiers(boolean print)",
+      "comment": "Set whether to print the individual ensemble classifiers in the output",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPrintClassifiers()",
+    "name": "getPrintClassifiers",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPrintClassifiers()",
+      "comment": "Get whether to print the individual ensemble classifiers in the output",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "measureOutOfBagError()",
+    "name": "measureOutOfBagError",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "measureOutOfBagError()",
+      "comment": "Gets the out of bag error that was calculated as the classifier was built. Returns error rate in classification case and mean absolute error in regression case.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enumerateMeasures()",
+    "name": "enumerateMeasures",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<java.lang.String>",
+      "name": "java.util.Enumeration<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enumerateMeasures()",
+      "comment": "Returns an enumeration of the additional measure names.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMeasure(java.lang.String additionalMeasureName)",
+    "name": "getMeasure",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "additionalMeasureName"
+      }
+    ],
+    "protocol": {
+      "member": "getMeasure(java.lang.String additionalMeasureName)",
+      "comment": "Returns the value of the named measure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTrainingSet(int iteration)",
+    "name": "getTrainingSet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iteration"
+      }
+    ],
+    "protocol": {
+      "member": "getTrainingSet(int iteration)",
+      "comment": "Returns a training set for a particular iteration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOutOfBagEvaluationObject()",
+    "name": "getOutOfBagEvaluationObject",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.evaluation.Evaluation",
+      "name": "weka.classifiers.evaluation.Evaluation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOutOfBagEvaluationObject()",
+      "comment": "Returns the out-of-bag evaluation object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Bagging method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns description of the bagged classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "generatePartition(weka.core.Instances data)",
+    "name": "generatePartition",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "generatePartition(weka.core.Instances data)",
+      "comment": "Builds the classifier to generate a partition.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMembershipValues(weka.core.Instance inst)",
+    "name": "getMembershipValues",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "inst"
+      }
+    ],
+    "protocol": {
+      "member": "getMembershipValues(weka.core.Instance inst)",
+      "comment": "Computes an array that indicates leaf membership",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numElements()",
+    "name": "numElements",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numElements()",
+      "comment": "Returns the number of elements in the partition.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "aggregate(weka.classifiers.meta.Bagging toAggregate)",
+    "name": "aggregate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "weka.classifiers.meta.Bagging",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.meta.Bagging",
+          "name": "Bagging",
+          "isArray": false
+        },
+        "name": "toAggregate"
+      }
+    ],
+    "protocol": {
+      "member": "aggregate(weka.classifiers.meta.Bagging toAggregate)",
+      "comment": "Aggregate an object with this one",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finalizeAggregation()",
+    "name": "finalizeAggregation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.Bagging",
+      "name": "Bagging",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.Bagging",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finalizeAggregation()",
+      "comment": "Call to complete the aggregation process. Allows implementers to do any final processing based on how many objects were aggregated.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

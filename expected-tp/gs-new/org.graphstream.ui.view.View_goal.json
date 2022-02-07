@@ -1,0 +1,703 @@
+[
+  {
+    "signature": "getId()",
+    "name": "getId",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getId()",
+      "comment": "Get the unique view id.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCamera()",
+    "name": "getCamera",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "org.graphstream.ui.view.Camera",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCamera()",
+      "comment": "Get a camera object to provide control commands on the view.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findNodeOrSpriteAt(double x, double y)",
+    "name": "findNodeOrSpriteAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement",
+      "name": "org.graphstream.ui.graphicGraph.GraphicElement",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "findNodeOrSpriteAt(double x, double y)",
+      "comment": "Search for the first node or sprite (in that order) that contains the point at coordinates (x, y).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allNodesOrSpritesIn(double x1, double y1, double x2, double y2)",
+    "name": "allNodesOrSpritesIn",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<org.graphstream.ui.graphicGraph.GraphicElement>",
+      "name": "java.util.Collection<org.graphstream.ui.graphicGraph.GraphicElement>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y2"
+      }
+    ],
+    "protocol": {
+      "member": "allNodesOrSpritesIn(double x1, double y1, double x2, double y2)",
+      "comment": "Search for all the nodes and sprites contained inside the rectangle (x1,y1)-(x2,y2).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "display(org.graphstream.ui.graphicGraph.GraphicGraph graph, boolean graphChanged)",
+    "name": "display",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicGraph",
+          "name": "GraphicGraph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "graphChanged"
+      }
+    ],
+    "protocol": {
+      "member": "display(org.graphstream.ui.graphicGraph.GraphicGraph graph, boolean graphChanged)",
+      "comment": "Redisplay or update the view contents. Called by the Viewer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close(org.graphstream.ui.graphicGraph.GraphicGraph graph)",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicGraph",
+          "name": "GraphicGraph",
+          "isArray": false
+        },
+        "name": "graph"
+      }
+    ],
+    "protocol": {
+      "member": "close(org.graphstream.ui.graphicGraph.GraphicGraph graph)",
+      "comment": "Close definitively this view. Called by the Viewer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "beginSelectionAt(double x1, double y1)",
+    "name": "beginSelectionAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y1"
+      }
+    ],
+    "protocol": {
+      "member": "beginSelectionAt(double x1, double y1)",
+      "comment": "Called by the mouse manager to specify where a node and sprite selection started.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectionGrowsAt(double x, double y)",
+    "name": "selectionGrowsAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "selectionGrowsAt(double x, double y)",
+      "comment": "The selection already started grows toward position (x, y).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endSelectionAt(double x2, double y2)",
+    "name": "endSelectionAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y2"
+      }
+    ],
+    "protocol": {
+      "member": "endSelectionAt(double x2, double y2)",
+      "comment": "Called by the mouse manager to specify where a node and spite selection stopped.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "freezeElement(org.graphstream.ui.graphicGraph.GraphicElement element, boolean frozen)",
+    "name": "freezeElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement",
+          "name": "GraphicElement",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "frozen"
+      }
+    ],
+    "protocol": {
+      "member": "freezeElement(org.graphstream.ui.graphicGraph.GraphicElement element, boolean frozen)",
+      "comment": "Freeze an element so that the optional layout cannot move it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "moveElementAtPx(org.graphstream.ui.graphicGraph.GraphicElement element, double x, double y)",
+    "name": "moveElementAtPx",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement",
+          "name": "GraphicElement",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "moveElementAtPx(org.graphstream.ui.graphicGraph.GraphicElement element, double x, double y)",
+      "comment": "Force an element to move at the given location in pixels.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMouseManager(org.graphstream.ui.view.util.MouseManager manager)",
+    "name": "setMouseManager",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.view.util.MouseManager",
+          "name": "MouseManager",
+          "isArray": false
+        },
+        "name": "manager"
+      }
+    ],
+    "protocol": {
+      "member": "setMouseManager(org.graphstream.ui.view.util.MouseManager manager)",
+      "comment": "Change the manager for mouse events on this view. If the value for the new manager is null, a default manager is installed. The orgmethod_1method_2method_3.method_0 method must not yet have been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setShortcutManager(org.graphstream.ui.view.util.ShortcutManager manager)",
+    "name": "setShortcutManager",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.view.util.ShortcutManager",
+          "name": "ShortcutManager",
+          "isArray": false
+        },
+        "name": "manager"
+      }
+    ],
+    "protocol": {
+      "member": "setShortcutManager(org.graphstream.ui.view.util.ShortcutManager manager)",
+      "comment": "Change the manager for key and shortcuts events on this view. If the value for the new manager is null, a default manager is installed. The orgmethod_1method_2method_3.method_0 method must not yet have been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "requestFocus()",
+    "name": "requestFocus",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "requestFocus()",
+      "comment": "Request ui focus.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addKeyListener(java.awt.event.KeyListener l)",
+    "name": "addKeyListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.KeyListener",
+          "name": "KeyListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "addKeyListener(java.awt.event.KeyListener l)",
+      "comment": "Add key ui listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeKeyListener(java.awt.event.KeyListener l)",
+    "name": "removeKeyListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.KeyListener",
+          "name": "KeyListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "removeKeyListener(java.awt.event.KeyListener l)",
+      "comment": "Remove key ui listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addMouseListener(java.awt.event.MouseListener l)",
+    "name": "addMouseListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.MouseListener",
+          "name": "MouseListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "addMouseListener(java.awt.event.MouseListener l)",
+      "comment": "Add mouse ui listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeMouseListener(java.awt.event.MouseListener l)",
+    "name": "removeMouseListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.MouseListener",
+          "name": "MouseListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "removeMouseListener(java.awt.event.MouseListener l)",
+      "comment": "Remove mouse ui listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addMouseMotionListener(java.awt.event.MouseMotionListener l)",
+    "name": "addMouseMotionListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.MouseMotionListener",
+          "name": "MouseMotionListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "addMouseMotionListener(java.awt.event.MouseMotionListener l)",
+      "comment": "Add mouse motion ui listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeMouseMotionListener(java.awt.event.MouseMotionListener l)",
+    "name": "removeMouseMotionListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "View",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.View",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.MouseMotionListener",
+          "name": "MouseMotionListener",
+          "isArray": false
+        },
+        "name": "l"
+      }
+    ],
+    "protocol": {
+      "member": "removeMouseMotionListener(java.awt.event.MouseMotionListener l)",
+      "comment": "Remove mouse motion ui listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

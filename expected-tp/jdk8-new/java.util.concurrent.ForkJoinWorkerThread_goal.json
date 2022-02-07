@@ -1,0 +1,242 @@
+[
+  {
+    "signature": "java.util.concurrent.ForkJoinWorkerThread(java.util.concurrent.ForkJoinPool pool)",
+    "name": "java.util.concurrent.ForkJoinWorkerThread",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ForkJoinPool",
+          "name": "ForkJoinPool",
+          "isArray": false
+        },
+        "name": "pool"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ForkJoinWorkerThread(java.util.concurrent.ForkJoinPool pool)",
+      "comment": "Creates a ForkJoinWorkerThread operating in the given pool.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ForkJoinWorkerThread(java.util.concurrent.ForkJoinPool pool, java.lang.ThreadGroup threadGroup, java.security.AccessControlContext acc)",
+    "name": "java.util.concurrent.ForkJoinWorkerThread",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.ForkJoinPool",
+          "name": "ForkJoinPool",
+          "isArray": false
+        },
+        "name": "pool"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.ThreadGroup",
+          "name": "ThreadGroup",
+          "isArray": false
+        },
+        "name": "threadGroup"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.security.AccessControlContext",
+          "name": "AccessControlContext",
+          "isArray": false
+        },
+        "name": "acc"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ForkJoinWorkerThread(java.util.concurrent.ForkJoinPool pool, java.lang.ThreadGroup threadGroup, java.security.AccessControlContext acc)",
+      "comment": "Version for InnocuousForkJoinWorkerThread",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPool()",
+    "name": "getPool",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.ForkJoinPool",
+      "name": "java.util.concurrent.ForkJoinPool",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPool()",
+      "comment": "Returns the pool hosting this thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPoolIndex()",
+    "name": "getPoolIndex",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPoolIndex()",
+      "comment": "Returns the unique index number of this thread in its pool. The returned value ranges from zero to the maximum number of threads (minus one) that may exist in the pool, and does not change during the lifetime of the thread. This method may be useful for applications that track status or collect results per-worker-thread rather than per-task.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onStart()",
+    "name": "onStart",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "onStart()",
+      "comment": "Initializes internal state after construction but before processing any tasks. If you override this method, you must invoke method_0 at the beginning of the method. Initialization requires care: Most fields must have legal default values, to ensure that attempted accesses from other threads work correctly even before this thread starts processing tasks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "onTermination(java.lang.Throwable exception)",
+    "name": "onTermination",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Throwable",
+          "name": "Throwable",
+          "isArray": false
+        },
+        "name": "exception"
+      }
+    ],
+    "protocol": {
+      "member": "onTermination(java.lang.Throwable exception)",
+      "comment": "Performs cleanup associated with termination of this worker thread. If you override this method, you must invoke supermethod_0 at the end of the overridden method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "run()",
+    "name": "run",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "run()",
+      "comment": "This method is required to be public, but should never be called explicitly. It performs the main run loop to execute ForkJoinTasks.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "eraseThreadLocals()",
+    "name": "eraseThreadLocals",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "eraseThreadLocals()",
+      "comment": "Erases ThreadLocals by nulling out Thread maps",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "afterTopLevelExec()",
+    "name": "afterTopLevelExec",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ForkJoinWorkerThread",
+      "name": "ForkJoinWorkerThread",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ForkJoinWorkerThread",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "afterTopLevelExec()",
+      "comment": "Non-public hook method for InnocuousForkJoinWorkerThread",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

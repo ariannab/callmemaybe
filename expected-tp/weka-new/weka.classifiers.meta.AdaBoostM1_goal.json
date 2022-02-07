@@ -1,0 +1,678 @@
+[
+  {
+    "signature": "weka.classifiers.meta.AdaBoostM1()",
+    "name": "weka.classifiers.meta.AdaBoostM1",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.meta.AdaBoostM1()",
+      "comment": "Constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "Returns a string describing classifier",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTechnicalInformation()",
+    "name": "getTechnicalInformation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.TechnicalInformation",
+      "name": "weka.core.TechnicalInformation",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTechnicalInformation()",
+      "comment": "Returns an instance of a TechnicalInformation object, containing detailed information about the technical background of this class, emethod_0., paper reference or book this class is based on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "defaultClassifierString()",
+    "name": "defaultClassifierString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "defaultClassifierString()",
+      "comment": "String describing default classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectWeightQuantile(weka.core.Instances data, double quantile)",
+    "name": "selectWeightQuantile",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "quantile"
+      }
+    ],
+    "protocol": {
+      "member": "selectWeightQuantile(weka.core.Instances data, double quantile)",
+      "comment": "Select only instances with weights that contribute to the specified quantile of the weight distribution",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -P <num> Percentage of weight mass to base training on. (default 100, reduce to around 90 speed up)   -Q Use resampling for boosting.   -S <num> Random number seed. (default 1)   -I <num> Number of iterations. (default 10)   -D If set, classifier is run in debug mode and may output additional info to the console   -W Full name of base classifier. (default: wekamethod_0method_1method_2)   Options specific to classifier wekamethod_0method_1method_2:   -D If set, classifier is run in debug mode and may output additional info to the console  <!-- options-end --> Options after -- are passed to the designated classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the Classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightThresholdTipText()",
+    "name": "weightThresholdTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightThresholdTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeightThreshold(int threshold)",
+    "name": "setWeightThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "threshold"
+      }
+    ],
+    "protocol": {
+      "member": "setWeightThreshold(int threshold)",
+      "comment": "Set weight threshold",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getWeightThreshold()",
+    "name": "getWeightThreshold",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getWeightThreshold()",
+      "comment": "Get the degree of weight thresholding",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useResamplingTipText()",
+    "name": "useResamplingTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useResamplingTipText()",
+      "comment": "Returns the tip text for this property",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseResampling(boolean r)",
+    "name": "setUseResampling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "r"
+      }
+    ],
+    "protocol": {
+      "member": "setUseResampling(boolean r)",
+      "comment": "Set resampling mode",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseResampling()",
+    "name": "getUseResampling",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseResampling()",
+      "comment": "Get whether resampling is turned on",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCapabilities()",
+    "name": "getCapabilities",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Capabilities",
+      "name": "weka.core.Capabilities",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCapabilities()",
+      "comment": "Returns default capabilities of the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "Method used to build the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initializeClassifier(weka.core.Instances data)",
+    "name": "initializeClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "initializeClassifier(weka.core.Instances data)",
+      "comment": "Initialize the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Perform the next boosting iteration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "done()",
+    "name": "done",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "done()",
+      "comment": "Clean up after boosting.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setWeights(weka.core.Instances training, double reweight)",
+    "name": "setWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "training"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "reweight"
+      }
+    ],
+    "protocol": {
+      "member": "setWeights(weka.core.Instances training, double reweight)",
+      "comment": "Sets the weights for the next iteration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "distributionForInstance(weka.core.Instance instance)",
+    "name": "distributionForInstance",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "distributionForInstance(weka.core.Instance instance)",
+      "comment": "Calculates the class membership probabilities for the given test instance.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toSource(java.lang.String className)",
+    "name": "toSource",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "className"
+      }
+    ],
+    "protocol": {
+      "member": "toSource(java.lang.String className)",
+      "comment": "Returns the boosted model as Java source code.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns description of the boosted classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] argv)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.meta.AdaBoostM1",
+      "name": "AdaBoostM1",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.meta.AdaBoostM1",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "argv"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] argv)",
+      "comment": "Main method for testing this class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

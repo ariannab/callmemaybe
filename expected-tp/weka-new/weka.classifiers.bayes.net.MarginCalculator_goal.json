@@ -1,0 +1,735 @@
+[
+  {
+    "signature": "getNode(java.lang.String sNodeName)",
+    "name": "getNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sNodeName"
+      }
+    ],
+    "protocol": {
+      "member": "getNode(java.lang.String sNodeName)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toXMLBIF03()",
+    "name": "toXMLBIF03",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toXMLBIF03()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcMargins(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "calcMargins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "calcMargins(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "Calc marginal distributions of nodes in Bayesian network Note that a connected network is assumed. Unconnected networks may give unexpected results.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "calcFullMargins(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "calcFullMargins",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "calcFullMargins(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "process(boolean[][] bAdjacencyMatrix, weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "process",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "bAdjacencyMatrix"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "process(boolean[][] bAdjacencyMatrix, weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initialize(weka.classifiers.bayes.net.MarginCalculator$JunctionTreeNode[] jtNodes, int[] order, java.util.Set<java.lang.Integer>[] cliques, java.util.Set<java.lang.Integer>[] separators, int[] parentCliques)",
+    "name": "initialize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Lweka.classifiers.bayes.net.MarginCalculator$JunctionTreeNode;",
+          "name": "JunctionTreeNode[]",
+          "isArray": true
+        },
+        "name": "jtNodes"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "cliques"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "separators"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "parentCliques"
+      }
+    ],
+    "protocol": {
+      "member": "initialize(weka.classifiers.bayes.net.MarginCalculator$JunctionTreeNode[] jtNodes, int[] order, java.util.Set<java.lang.Integer>[] cliques, java.util.Set<java.lang.Integer>[] separators, int[] parentCliques)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getJunctionTree(java.util.Set<java.lang.Integer>[] cliques, java.util.Set<java.lang.Integer>[] separators, int[] parentCliques, int[] order, weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "getJunctionTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator$JunctionTreeNode[]",
+      "name": "weka.classifiers.bayes.net.MarginCalculator$JunctionTreeNode[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "cliques"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "separators"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "parentCliques"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "getJunctionTree(java.util.Set<java.lang.Integer>[] cliques, java.util.Set<java.lang.Integer>[] separators, int[] parentCliques, int[] order, weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCPT(int[] nodeSet, int nNodes, int[] values, int[] order, weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "getCPT",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "nodeSet"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNodes"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "values"
+      },
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "getCPT(int[] nodeSet, int nNodes, int[] values, int[] order, weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCliqueTree(int[] order, java.util.Set<java.lang.Integer>[] cliques, java.util.Set<java.lang.Integer>[] separators)",
+    "name": "getCliqueTree",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[]",
+      "name": "int[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "cliques"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "separators"
+      }
+    ],
+    "protocol": {
+      "member": "getCliqueTree(int[] order, java.util.Set<java.lang.Integer>[] cliques, java.util.Set<java.lang.Integer>[] separators)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSeparators(int[] order, java.util.Set<java.lang.Integer>[] cliques)",
+    "name": "getSeparators",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.lang.Integer>[]",
+      "name": "java.util.Set<java.lang.Integer>[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Set;",
+          "name": "Set[]",
+          "isArray": true
+        },
+        "name": "cliques"
+      }
+    ],
+    "protocol": {
+      "member": "getSeparators(int[] order, java.util.Set<java.lang.Integer>[] cliques)",
+      "comment": "calculate separator sets in clique tree",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCliques(int[] order, boolean[][] bAdjacencyMatrix)",
+    "name": "getCliques",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.lang.Integer>[]",
+      "name": "java.util.Set<java.lang.Integer>[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "bAdjacencyMatrix"
+      }
+    ],
+    "protocol": {
+      "member": "getCliques(int[] order, boolean[][] bAdjacencyMatrix)",
+      "comment": "get cliques in a decomposable graph represented by an adjacency matrix",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "moralize(weka.classifiers.bayes.BayesNet bayesNet)",
+    "name": "moralize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[][]",
+      "name": "boolean[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      }
+    ],
+    "protocol": {
+      "member": "moralize(weka.classifiers.bayes.BayesNet bayesNet)",
+      "comment": "moralize DAG and calculate adjacency matrix representation for a Bayes Network, effecively converting the directed acyclic graph to an undirected graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "fillIn(int[] order, boolean[][] bAdjacencyMatrix)",
+    "name": "fillIn",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[][]",
+      "name": "boolean[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "order"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "bAdjacencyMatrix"
+      }
+    ],
+    "protocol": {
+      "member": "fillIn(int[] order, boolean[][] bAdjacencyMatrix)",
+      "comment": "Apply Tarjan and Yannakakis (1984) fill in algorithm for graph triangulation. In reverse order, insert edges between any non-adjacent neighbors that are lower numbered in the ordering. Side effect: input matrix is used as output",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMaxCardOrder(boolean[][] bAdjacencyMatrix)",
+    "name": "getMaxCardOrder",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int[]",
+      "name": "int[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[Z",
+          "name": "boolean[][]",
+          "isArray": true
+        },
+        "name": "bAdjacencyMatrix"
+      }
+    ],
+    "protocol": {
+      "member": "getMaxCardOrder(boolean[][] bAdjacencyMatrix)",
+      "comment": "calculate maximum cardinality ordering; start with first node add node that has most neighbors already ordered till all nodes are in the ordering This implementation does not assume the graph is connected",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEvidence(int nNode, int iValue)",
+    "name": "setEvidence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iValue"
+      }
+    ],
+    "protocol": {
+      "member": "setEvidence(int nNode, int iValue)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMargin(int iNode)",
+    "name": "getMargin",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getMargin(int iNode)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.MarginCalculator",
+      "name": "MarginCalculator",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.MarginCalculator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

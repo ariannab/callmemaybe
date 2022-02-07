@@ -1,0 +1,525 @@
+[
+  {
+    "signature": "getLayoutAlgorithmName()",
+    "name": "getLayoutAlgorithmName",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLayoutAlgorithmName()",
+      "comment": "Name of the layout algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeMovedCount()",
+    "name": "getNodeMovedCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNodeMovedCount()",
+      "comment": "How many nodes moved during the last step?. When this method returns zero, the layout stabilized.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStabilization()",
+    "name": "getStabilization",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStabilization()",
+      "comment": "Estimate of how close to stabilization the layout algorithm is.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStabilizationLimit()",
+    "name": "getStabilizationLimit",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStabilizationLimit()",
+      "comment": "Above which value a correct stabilization is achieved?",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLowPoint()",
+    "name": "getLowPoint",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.geom.Point3",
+      "name": "org.graphstream.ui.geom.Point3",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLowPoint()",
+      "comment": "Smallest point in space of the layout bounding box.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getHiPoint()",
+    "name": "getHiPoint",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.geom.Point3",
+      "name": "org.graphstream.ui.geom.Point3",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getHiPoint()",
+      "comment": "Largest point in space of the layout bounding box.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSteps()",
+    "name": "getSteps",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSteps()",
+      "comment": "Number of calls made to method_0 so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLastStepTime()",
+    "name": "getLastStepTime",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLastStepTime()",
+      "comment": "Time in nanoseconds used by the last call to method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getQuality()",
+    "name": "getQuality",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getQuality()",
+      "comment": "The current layout algorithm quality. A number between 0 and 1 with 1 the highest (but probably slowest) quality.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getForce()",
+    "name": "getForce",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getForce()",
+      "comment": "The current layout force.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Clears the whole nodes and edges structures",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setForce(double value)",
+    "name": "setForce",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setForce(double value)",
+      "comment": "The general \"speed\" of the algorithm. For some algorithm this will have no effect. For most \"dynamic\" algorithms, this change the way iterations toward stabilization are done.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setStabilizationLimit(double value)",
+    "name": "setStabilizationLimit",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setStabilizationLimit(double value)",
+      "comment": "Change the stabilization limit for this layout algorithm.  The stabilization is a number between 0 and 1 that indicates how close to stabilization (no nodes need to move) the layout is. The value 1 means the layout is fully stabilized. Naturally this is often only an indication only, for some algorithms, it is difficult to determine if the layout is correct or acceptable enough. You can get the actual stabilization limit using method_0. You can get the actual stabilization using method_1.   Be careful, most layout classes do not use the stabilization limit, this number is mostly used the process that control the layout, like the LayoutRunner for example. The stabilization limit is only an indication with a default set for each layout algorithm. However this default can be changed using this method, or by storing on the graph an attribute \"layoutmethod_4-limit\" (or \"layoutmethod_5-limit\").   The convention is that the value 0 means that the process controlling the layout will not stop the layout (will therefore not consider the stabilization limit). In other words the layout will compute endlessly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setQuality(double qualityLevel)",
+    "name": "setQuality",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "qualityLevel"
+      }
+    ],
+    "protocol": {
+      "member": "setQuality(double qualityLevel)",
+      "comment": "Set the overall quality level, a number between 0 and 1 with 1 the highest quality available, but often with a slower computation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSendNodeInfos(boolean send)",
+    "name": "setSendNodeInfos",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "send"
+      }
+    ],
+    "protocol": {
+      "member": "setSendNodeInfos(boolean send)",
+      "comment": "If true, node informations messages are sent for every node. This is mainly for debugging and slows down the process a lot. The contents of the node information is specific to the algorithm, and sent via a specific \"layoutmethod_0\" attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shake()",
+    "name": "shake",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "shake()",
+      "comment": "Add a random vector whose length is 10% of the size of the graph to all node positions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "moveNode(java.lang.String id, double x, double y, double z)",
+    "name": "moveNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "z"
+      }
+    ],
+    "protocol": {
+      "member": "moveNode(java.lang.String id, double x, double y, double z)",
+      "comment": "Move a node by force to a new location. It is preferable to first freeze the node before moving it by force, and then un-freeze it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "freezeNode(java.lang.String id, boolean frozen)",
+    "name": "freezeNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "frozen"
+      }
+    ],
+    "protocol": {
+      "member": "freezeNode(java.lang.String id, boolean frozen)",
+      "comment": "Freeze or un-freeze a node. The freezed node position will not be changed by the algorithm until un-freezed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compute()",
+    "name": "compute",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.Layout",
+      "name": "Layout",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.Layout",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "compute()",
+      "comment": "Method to call repeatedly to compute the layout.  This method implements the layout algorithm proper. It must be called in a loop, until the layout stabilizes. You can know if the layout is stable by using the method_0 method that returns the number of node that have moved during the last call to method_1   The listener is called by this method, therefore each call to method_2 will also trigger layout events, allowing to reproduce the layout process graphically for example. You can insert the listener only when the layout stabilized, and then call method_2 anew if you do not want to observe the layout process.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

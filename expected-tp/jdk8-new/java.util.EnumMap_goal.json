@@ -1,0 +1,476 @@
+[
+  {
+    "signature": "java.util.EnumMap(java.lang.Class<K> keyType)",
+    "name": "java.util.EnumMap",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "keyType"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.EnumMap(java.lang.Class<K> keyType)",
+      "comment": "Creates an empty enum map with the specified key type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.EnumMap(java.util.EnumMap<K, ? extends V> m)",
+    "name": "java.util.EnumMap",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.EnumMap",
+          "name": "EnumMap",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.EnumMap(java.util.EnumMap<K, ? extends V> m)",
+      "comment": "Creates an enum map with the same key type as the specified enum map, initially containing the same mappings (if any).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.EnumMap(java.util.Map<K, ? extends V> m)",
+    "name": "java.util.EnumMap",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.EnumMap(java.util.Map<K, ? extends V> m)",
+      "comment": "Creates an enum map initialized from the specified map. If the specified map is an EnumMap instance, this constructor behaves identically to method_0. Otherwise, the specified map must contain at least one mapping (in order to determine the new enum map's key type).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of key-value mappings in this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsValue(java.lang.Object value)",
+    "name": "containsValue",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "containsValue(java.lang.Object value)",
+      "comment": "Returns true if this map maps one or more keys to the specified value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsKey(java.lang.Object key)",
+    "name": "containsKey",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "containsKey(java.lang.Object key)",
+      "comment": "Returns true if this map contains a mapping for the specified key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.Object key)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.Object key)",
+      "comment": "Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. More formally, if this map contains a mapping from a key k to a value v such that (key == k), then this method returns v; otherwise it returns null. (There can be at most one such mapping.) A return value of null does not necessarily indicate that the map contains no mapping for the key; it's also possible that the map explicitly maps the key to null. The method_0 containsKey operation may be used to distinguish these two cases.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(K key, V value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(K key, V value)",
+      "comment": "Associates the specified value with the specified key in this map. If the map previously contained a mapping for this key, the old value is replaced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object key)",
+      "comment": "Removes the mapping for this key from this map if present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putAll(java.util.Map<? extends K, ? extends V> m)",
+    "name": "putAll",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "m"
+      }
+    ],
+    "protocol": {
+      "member": "putAll(java.util.Map<? extends K, ? extends V> m)",
+      "comment": "Copies all of the mappings from the specified map to this map. These mappings will replace any mappings that this map had for any of the keys currently in the specified map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all mappings from this map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keySet()",
+    "name": "keySet",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<K>",
+      "name": "java.util.Set<K>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keySet()",
+      "comment": "Returns a Set view of the keys contained in this map. The returned set obeys the general contract outlined in method_0. The set's iterator will return the keys in their natural order (the order in which the enum constants are declared).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "values()",
+    "name": "values",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<V>",
+      "name": "java.util.Collection<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "values()",
+      "comment": "Returns a Collection view of the values contained in this map. The returned collection obeys the general contract outlined in method_0. The collection's iterator will return the values in the order their corresponding keys appear in map, which is their natural order (the order in which the enum constants are declared).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entrySet()",
+    "name": "entrySet",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "name": "java.util.Set<java.util.Map$Entry<K, V>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entrySet()",
+      "comment": "Returns a Set view of the mappings contained in this map. The returned set obeys the general contract outlined in method_0. The set's iterator will return the mappings in the order their keys appear in map, which is their natural order (the order in which the enum constants are declared).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "equals(java.lang.Object o)",
+    "name": "equals",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "equals(java.lang.Object o)",
+      "comment": "Compares the specified object with this map for equality. Returns true if the given object is also a map and the two maps represent the same mappings, as specified in the method_0 contract.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hashCode()",
+    "name": "hashCode",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hashCode()",
+      "comment": "Returns the hash code value for this map. The hash code of a map is defined to be the sum of the hash codes of each entry in the map.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumMap",
+      "name": "EnumMap",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumMap",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumMap<K, V>",
+      "name": "java.util.EnumMap<K, V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a shallow copy of this enum map. (The values themselves are not cloned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

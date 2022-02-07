@@ -1,0 +1,738 @@
+[
+  {
+    "signature": "java.util.concurrent.locks.StampedLock()",
+    "name": "java.util.concurrent.locks.StampedLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.locks.StampedLock()",
+      "comment": "Creates a new lock, initially in unlocked state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeLock()",
+    "name": "writeLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "writeLock()",
+      "comment": "Exclusively acquires the lock, blocking if necessary until available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryWriteLock()",
+    "name": "tryWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryWriteLock()",
+      "comment": "Exclusively acquires the lock if it is immediately available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryWriteLock(long time, java.util.concurrent.TimeUnit unit)",
+    "name": "tryWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "tryWriteLock(long time, java.util.concurrent.TimeUnit unit)",
+      "comment": "Exclusively acquires the lock if it is available within the given time and the current thread has not been interrupted. Behavior under timeout and interruption matches that specified for method method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeLockInterruptibly()",
+    "name": "writeLockInterruptibly",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "writeLockInterruptibly()",
+      "comment": "Exclusively acquires the lock, blocking if necessary until available or the current thread is interrupted. Behavior under interruption matches that specified for method method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readLock()",
+    "name": "readLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "readLock()",
+      "comment": "Non-exclusively acquires the lock, blocking if necessary until available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryReadLock()",
+    "name": "tryReadLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryReadLock()",
+      "comment": "Non-exclusively acquires the lock if it is immediately available.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryReadLock(long time, java.util.concurrent.TimeUnit unit)",
+    "name": "tryReadLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "time"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "tryReadLock(long time, java.util.concurrent.TimeUnit unit)",
+      "comment": "Non-exclusively acquires the lock if it is available within the given time and the current thread has not been interrupted. Behavior under timeout and interruption matches that specified for method method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "readLockInterruptibly()",
+    "name": "readLockInterruptibly",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "readLockInterruptibly()",
+      "comment": "Non-exclusively acquires the lock, blocking if necessary until available or the current thread is interrupted. Behavior under interruption matches that specified for method method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryOptimisticRead()",
+    "name": "tryOptimisticRead",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryOptimisticRead()",
+      "comment": "Returns a stamp that can later be validated, or zero if exclusively locked.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "validate(long stamp)",
+    "name": "validate",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "validate(long stamp)",
+      "comment": "Returns true if the lock has not been exclusively acquired since issuance of the given stamp. Always returns false if the stamp is zero. Always returns true if the stamp represents a currently held lock. Invoking this method with a value not obtained from method_0 or a locking method for this lock has no defined effect or result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unlockWrite(long stamp)",
+    "name": "unlockWrite",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "unlockWrite(long stamp)",
+      "comment": "If the lock state matches the given stamp, releases the exclusive lock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unlockRead(long stamp)",
+    "name": "unlockRead",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "unlockRead(long stamp)",
+      "comment": "If the lock state matches the given stamp, releases the non-exclusive lock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unlock(long stamp)",
+    "name": "unlock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "unlock(long stamp)",
+      "comment": "If the lock state matches the given stamp, releases the corresponding mode of the lock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryConvertToWriteLock(long stamp)",
+    "name": "tryConvertToWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "tryConvertToWriteLock(long stamp)",
+      "comment": "If the lock state matches the given stamp, performs one of the following actions. If the stamp represents holding a write lock, returns it. Or, if a read lock, if the write lock is available, releases the read lock and returns a write stamp. Or, if an optimistic read, returns a write stamp only if immediately available. This method returns zero in all other cases.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryConvertToReadLock(long stamp)",
+    "name": "tryConvertToReadLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "tryConvertToReadLock(long stamp)",
+      "comment": "If the lock state matches the given stamp, performs one of the following actions. If the stamp represents holding a write lock, releases it and obtains a read lock. Or, if a read lock, returns it. Or, if an optimistic read, acquires a read lock and returns a read stamp only if immediately available. This method returns zero in all other cases.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryConvertToOptimisticRead(long stamp)",
+    "name": "tryConvertToOptimisticRead",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "stamp"
+      }
+    ],
+    "protocol": {
+      "member": "tryConvertToOptimisticRead(long stamp)",
+      "comment": "If the lock state matches the given stamp then, if the stamp represents holding a lock, releases it and returns an observation stamp. Or, if an optimistic read, returns it if validated. This method returns zero in all other cases, and so may be useful as a form of \"tryUnlock\".",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryUnlockWrite()",
+    "name": "tryUnlockWrite",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryUnlockWrite()",
+      "comment": "Releases the write lock if it is held, without requiring a stamp value. This method may be useful for recovery after errors.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "tryUnlockRead()",
+    "name": "tryUnlockRead",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "tryUnlockRead()",
+      "comment": "Releases one hold of the read lock if it is held, without requiring a stamp value. This method may be useful for recovery after errors.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isWriteLocked()",
+    "name": "isWriteLocked",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isWriteLocked()",
+      "comment": "Returns true if the lock is currently held exclusively.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isReadLocked()",
+    "name": "isReadLocked",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isReadLocked()",
+      "comment": "Returns true if the lock is currently held non-exclusively.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReadLockCount()",
+    "name": "getReadLockCount",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getReadLockCount()",
+      "comment": "Queries the number of read locks held for this lock. This method is designed for use in monitoring system state, not for synchronization control.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string identifying this lock, as well as its lock state. The state, in brackets, includes the String \"Unlocked\" or the String \"Write-locked\" or the String \"Read-locks:\" followed by the current number of read-locks held.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asReadLock()",
+    "name": "asReadLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "java.util.concurrent.locks.Lock",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asReadLock()",
+      "comment": "Returns a plain Lock view of this StampedLock in which the method_1 method is mapped to method_2, and similarly for other methods. The returned Lock does not support a Condition; method method_0 throws UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asWriteLock()",
+    "name": "asWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.Lock",
+      "name": "java.util.concurrent.locks.Lock",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asWriteLock()",
+      "comment": "Returns a plain Lock view of this StampedLock in which the method_1 method is mapped to method_2, and similarly for other methods. The returned Lock does not support a Condition; method method_0 throws UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asReadWriteLock()",
+    "name": "asReadWriteLock",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.locks.ReadWriteLock",
+      "name": "java.util.concurrent.locks.ReadWriteLock",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "asReadWriteLock()",
+      "comment": "Returns a ReadWriteLock view of this StampedLock in which the method_0 method is mapped to method_1, and method_2 to method_3.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unstampedUnlockWrite()",
+    "name": "unstampedUnlockWrite",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unstampedUnlockWrite()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "unstampedUnlockRead()",
+    "name": "unstampedUnlockRead",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.locks.StampedLock",
+      "name": "StampedLock",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.locks.StampedLock",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "unstampedUnlockRead()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

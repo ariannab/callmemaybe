@@ -1,0 +1,586 @@
+[
+  {
+    "signature": "java.util.zip.Inflater(boolean nowrap)",
+    "name": "java.util.zip.Inflater",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nowrap"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.zip.Inflater(boolean nowrap)",
+      "comment": "Creates a new decompressor. If the parameter 'nowrap' is true then the ZLIB header and checksum fields will not be used. This provides compatibility with the compression format used by both GZIP and PKZIP.  Note: When using the 'nowrap' option it is also necessary to provide an extra \"dummy\" byte as input. This is required by the ZLIB native library in order to support certain optimizations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.zip.Inflater()",
+    "name": "java.util.zip.Inflater",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.zip.Inflater()",
+      "comment": "Creates a new decompressor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInput(byte[] b, int off, int len)",
+    "name": "setInput",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "setInput(byte[] b, int off, int len)",
+      "comment": "Sets input data for decompression. Should be called whenever method_0 returns true indicating that more input data is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setInput(byte[] b)",
+    "name": "setInput",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setInput(byte[] b)",
+      "comment": "Sets input data for decompression. Should be called whenever method_0 returns true indicating that more input data is required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDictionary(byte[] b, int off, int len)",
+    "name": "setDictionary",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "setDictionary(byte[] b, int off, int len)",
+      "comment": "Sets the preset dictionary to the given array of bytes. Should be called when method_0 returns 0 and method_1 returns true indicating that a preset dictionary is required. The method method_2 can be used to get the Adler-32 value of the dictionary needed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDictionary(byte[] b)",
+    "name": "setDictionary",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "setDictionary(byte[] b)",
+      "comment": "Sets the preset dictionary to the given array of bytes. Should be called when method_0 returns 0 and method_1 returns true indicating that a preset dictionary is required. The method method_2 can be used to get the Adler-32 value of the dictionary needed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRemaining()",
+    "name": "getRemaining",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRemaining()",
+      "comment": "Returns the total number of bytes remaining in the input buffer. This can be used to find out what bytes still remain in the input buffer after decompression has finished.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "needsInput()",
+    "name": "needsInput",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "needsInput()",
+      "comment": "Returns true if no data remains in the input buffer. This can be used to determine if method_0 should be called in order to provide more input.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "needsDictionary()",
+    "name": "needsDictionary",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "needsDictionary()",
+      "comment": "Returns true if a preset dictionary is needed for decompression.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finished()",
+    "name": "finished",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finished()",
+      "comment": "Returns true if the end of the compressed data stream has been reached.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inflate(byte[] b, int off, int len)",
+    "name": "inflate",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "off"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "len"
+      }
+    ],
+    "protocol": {
+      "member": "inflate(byte[] b, int off, int len)",
+      "comment": "Uncompresses bytes into specified buffer. Returns actual number of bytes uncompressed. A return value of 0 indicates that method_0 or method_1 should be called in order to determine if more input data or a preset dictionary is required. In the latter case, method_2 can be used to get the Adler-32 value of the dictionary required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "inflate(byte[] b)",
+    "name": "inflate",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "b"
+      }
+    ],
+    "protocol": {
+      "member": "inflate(byte[] b)",
+      "comment": "Uncompresses bytes into specified buffer. Returns actual number of bytes uncompressed. A return value of 0 indicates that method_0 or method_1 should be called in order to determine if more input data or a preset dictionary is required. In the latter case, method_2 can be used to get the Adler-32 value of the dictionary required.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAdler()",
+    "name": "getAdler",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAdler()",
+      "comment": "Returns the ADLER-32 value of the uncompressed data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTotalIn()",
+    "name": "getTotalIn",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTotalIn()",
+      "comment": "Returns the total number of compressed bytes input so far. Since the number of bytes may be greater than method_1, the method_0 method is now the preferred means of obtaining this information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytesRead()",
+    "name": "getBytesRead",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBytesRead()",
+      "comment": "Returns the total number of compressed bytes input so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTotalOut()",
+    "name": "getTotalOut",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getTotalOut()",
+      "comment": "Returns the total number of uncompressed bytes output so far. Since the number of bytes may be greater than method_1, the method_0 method is now the preferred means of obtaining this information.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBytesWritten()",
+    "name": "getBytesWritten",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getBytesWritten()",
+      "comment": "Returns the total number of uncompressed bytes output so far.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets inflater so that a new set of input data can be processed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end()",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "end()",
+      "comment": "Closes the decompressor and discards any unprocessed input. This method should be called when the decompressor is no longer being used, but will also be called automatically by the method_0 method. Once this method is called, the behavior of the Inflater object is undefined.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.end()->!receiverObjectID"
+    }
+  },
+  {
+    "signature": "finalize()",
+    "name": "finalize",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finalize()",
+      "comment": "Closes the decompressor when garbage is collected.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "ended()",
+    "name": "ended",
+    "containingClass": {
+      "qualifiedName": "java.util.zip.Inflater",
+      "name": "Inflater",
+      "isArray": false
+    },
+    "targetClass": "java.util.zip.Inflater",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "ended()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

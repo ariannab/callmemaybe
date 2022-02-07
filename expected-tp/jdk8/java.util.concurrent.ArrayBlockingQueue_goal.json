@@ -1,0 +1,785 @@
+[
+  {
+    "signature": "java.util.concurrent.ArrayBlockingQueue(int capacity)",
+    "name": "java.util.concurrent.ArrayBlockingQueue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ArrayBlockingQueue(int capacity)",
+      "comment": "Creates an ArrayBlockingQueue with the given (fixed) capacity and default access policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ArrayBlockingQueue(int capacity, boolean fair)",
+    "name": "java.util.concurrent.ArrayBlockingQueue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fair"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ArrayBlockingQueue(int capacity, boolean fair)",
+      "comment": "Creates an ArrayBlockingQueue with the given (fixed) capacity and the specified access policy.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.concurrent.ArrayBlockingQueue(int capacity, boolean fair, java.util.Collection<? extends E> c)",
+    "name": "java.util.concurrent.ArrayBlockingQueue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "capacity"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "fair"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.ArrayBlockingQueue(int capacity, boolean fair, java.util.Collection<? extends E> c)",
+      "comment": "Creates an ArrayBlockingQueue with the given (fixed) capacity, the specified access policy and initially containing the elements of the given collection, added in traversal order of the collection's iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dec(int i)",
+    "name": "dec",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "dec(int i)",
+      "comment": "Circularly decrement i.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "itemAt(int i)",
+    "name": "itemAt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "itemAt(int i)",
+      "comment": "Returns item at index i.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAt(int removeIndex)",
+    "name": "removeAt",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "removeIndex"
+      }
+    ],
+    "protocol": {
+      "member": "removeAt(int removeIndex)",
+      "comment": "Deletes item at array index removeIndex. Utility for method_0 and iteratormethod_1. Call only when holding lock.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "add(E e)",
+      "comment": "Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity, returning true upon success and throwing an IllegalStateException if this queue is full.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e)",
+      "comment": "Inserts the specified element at the tail of this queue if it is possible to do so immediately without exceeding the queue's capacity, returning true upon success and false if this queue is full. This method is generally preferable to method method_0, which can fail to insert an element only by throwing an exception.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(E e)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "put(E e)",
+      "comment": "Inserts the specified element at the tail of this queue, waiting for space to become available if the queue is full.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "offer",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "offer(E e, long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Inserts the specified element at the tail of this queue, waiting up to the specified wait time for space to become available if the queue is full.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll()",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "poll()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "take()",
+    "name": "take",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "take()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "peek()",
+    "name": "peek",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "peek()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the number of elements in this queue.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remainingCapacity()",
+    "name": "remainingCapacity",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remainingCapacity()",
+      "comment": "Returns the number of additional elements that this queue can ideally (in the absence of memory or resource constraints) accept without blocking. This is always equal to the initial capacity of this queue less the current size of this queue. Note that you cannot always tell if an attempt to insert an element will succeed by inspecting remainingCapacity because it may be the case that another thread is about to insert or remove an element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object o)",
+      "comment": "Removes a single instance of the specified element from this queue, if it is present. More formally, removes an element e such that method_0, if this queue contains one or more such elements. Returns true if this queue contained the specified element (or equivalently, if this queue changed as a result of the call). Removal of interior elements in circular array based queues is an intrinsically slow and disruptive operation, so should be undertaken only in exceptional circumstances, ideally only when the queue is known not to be accessible by other threads.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.Object o)",
+      "comment": "Returns true if this queue contains the specified element. More formally, returns true if and only if this queue contains at least one element e such that method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toArray()",
+      "comment": "Returns an array containing all of the elements in this queue, in proper sequence. The returned array will be \"safe\" in that no references to it are maintained by this queue. (In other words, this method must allocate a new array). The caller is thus free to modify the returned array. This method acts as bridge between array-based and collection-based APIs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(T[] a)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "protocol": {
+      "member": "toArray(T[] a)",
+      "comment": "Returns an array containing all of the elements in this queue, in proper sequence; the runtime type of the returned array is that of the specified array. If the queue fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this queue. If this queue fits in the specified array with room to spare (imethod_4., the array has more elements than this queue), the element in the array immediately following the end of the queue is set to null. Like the method_0 method, this method acts as bridge between array-based and collection-based APIs. Further, this method allows precise control over the runtime type of the output array, and may, under certain circumstances, be used to save allocation costs. Suppose x is a queue known to contain only strings. The following code can be used to dump the queue into a newly allocated array of String}:  {@code String[] y = method_1; Note that method_2 is identical in function to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Atomically removes all of the elements from this queue. The queue will be empty after this call returns.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.isEmpty()<-receiverObjectID.clear()"
+    }
+  },
+  {
+    "signature": "drainTo(java.util.Collection<? super E> c)",
+    "name": "drainTo",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "drainTo(java.util.Collection<? super E> c)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "drainTo(java.util.Collection<? super E> c, int maxElements)",
+    "name": "drainTo",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "maxElements"
+      }
+    ],
+    "protocol": {
+      "member": "drainTo(java.util.Collection<? super E> c, int maxElements)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator over the elements in this queue in proper sequence. The elements will be returned in order from first (head) to last (tail). The returned iterator is <i>weakly consistent</i>.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.ArrayBlockingQueue",
+      "name": "ArrayBlockingQueue",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.ArrayBlockingQueue",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<E>",
+      "name": "java.util.Spliterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "Returns a Spliterator over the elements in this queue. The returned spliterator is <i>weakly consistent</i>. The Spliterator reports method_2, method_3, and method_4. @implNote The Spliterator implements trySplit to permit limited parallelism.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

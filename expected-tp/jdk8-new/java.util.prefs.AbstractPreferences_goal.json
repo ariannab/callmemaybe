@@ -1,0 +1,1513 @@
+[
+  {
+    "signature": "java.util.prefs.AbstractPreferences(java.util.prefs.AbstractPreferences parent, java.lang.String name)",
+    "name": "java.util.prefs.AbstractPreferences",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.AbstractPreferences",
+          "name": "AbstractPreferences",
+          "isArray": false
+        },
+        "name": "parent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.prefs.AbstractPreferences(java.util.prefs.AbstractPreferences parent, java.lang.String name)",
+      "comment": "Creates a preference node with the specified parent and the specified name relative to its parent.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(java.lang.String key, java.lang.String value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(java.lang.String key, java.lang.String value)",
+      "comment": "Implements the put method as per the specification in method_0. This implementation checks that the key and value are legal, obtains this preference node's lock, checks that the node has not been removed, invokes method_1, and if there are any preference change listeners, enqueues a notification event for processing by the event dispatch thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.String key, java.lang.String def)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.String key, java.lang.String def)",
+      "comment": "Implements the get method as per the specification in method_0. This implementation first checks to see if key is null throwing a NullPointerException if this is the case. Then it obtains this preference node's lock, checks that the node has not been removed, invokes method_1, and returns the result, unless the getSpi invocation returns null or throws an exception, in which case this invocation returns def.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.String key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.String key)",
+      "comment": "Implements the method_0 method as per the specification in Preferencesmethod_0. This implementation obtains this preference node's lock, checks that the node has not been removed, invokes method_2 and if there are any preference change listeners, enqueues a notification event for processing by the event dispatch thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Implements the clear method as per the specification in method_0. This implementation obtains this preference node's lock, invokes method_1 to obtain an array of keys, and iterates over the array invoking method_2 on each key.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putInt(java.lang.String key, int value)",
+    "name": "putInt",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putInt(java.lang.String key, int value)",
+      "comment": "Implements the putInt method as per the specification in method_0. This implementation translates value to a string with method_1 and invokes method_2 on the result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInt(java.lang.String key, int def)",
+    "name": "getInt",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getInt(java.lang.String key, int def)",
+      "comment": "Implements the getInt method as per the specification in method_0. This implementation invokes method_1 method_2. If the return value is non-null, the implementation attempts to translate it to an int with method_3. If the attempt succeeds, the return value is returned by this method. Otherwise, def is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putLong(java.lang.String key, long value)",
+    "name": "putLong",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putLong(java.lang.String key, long value)",
+      "comment": "Implements the putLong method as per the specification in method_0. This implementation translates value to a string with method_1 and invokes method_2 on the result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLong(java.lang.String key, long def)",
+    "name": "getLong",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getLong(java.lang.String key, long def)",
+      "comment": "Implements the getLong method as per the specification in method_0. This implementation invokes method_1 method_2. If the return value is non-null, the implementation attempts to translate it to a long with method_3. If the attempt succeeds, the return value is returned by this method. Otherwise, def is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putBoolean(java.lang.String key, boolean value)",
+    "name": "putBoolean",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putBoolean(java.lang.String key, boolean value)",
+      "comment": "Implements the putBoolean method as per the specification in method_0. This implementation translates value to a string with method_1 and invokes method_2 on the result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBoolean(java.lang.String key, boolean def)",
+    "name": "getBoolean",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getBoolean(java.lang.String key, boolean def)",
+      "comment": "Implements the getBoolean method as per the specification in method_0. This implementation invokes method_1 method_2. If the return value is non-null, it is compared with \"true\" using method_3. If the comparison returns true, this invocation returns true. Otherwise, the original return value is compared with \"false\", again using method_3. If the comparison returns true, this invocation returns false. Otherwise, this invocation returns def.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putFloat(java.lang.String key, float value)",
+    "name": "putFloat",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putFloat(java.lang.String key, float value)",
+      "comment": "Implements the putFloat method as per the specification in method_0. This implementation translates value to a string with method_1 and invokes method_2 on the result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFloat(java.lang.String key, float def)",
+    "name": "getFloat",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getFloat(java.lang.String key, float def)",
+      "comment": "Implements the getFloat method as per the specification in method_0. This implementation invokes method_1 method_2. If the return value is non-null, the implementation attempts to translate it to an float with method_3. If the attempt succeeds, the return value is returned by this method. Otherwise, def is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putDouble(java.lang.String key, double value)",
+    "name": "putDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putDouble(java.lang.String key, double value)",
+      "comment": "Implements the putDouble method as per the specification in method_0. This implementation translates value to a string with method_1 and invokes method_2 on the result.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDouble(java.lang.String key, double def)",
+    "name": "getDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getDouble(java.lang.String key, double def)",
+      "comment": "Implements the getDouble method as per the specification in method_0. This implementation invokes method_1 method_2. If the return value is non-null, the implementation attempts to translate it to an double with method_3. If the attempt succeeds, the return value is returned by this method. Otherwise, def is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putByteArray(java.lang.String key, byte[] value)",
+    "name": "putByteArray",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putByteArray(java.lang.String key, byte[] value)",
+      "comment": "Implements the putByteArray method as per the specification in method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getByteArray(java.lang.String key, byte[] def)",
+    "name": "getByteArray",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getByteArray(java.lang.String key, byte[] def)",
+      "comment": "Implements the getByteArray method as per the specification in method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keys()",
+    "name": "keys",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keys()",
+      "comment": "Implements the keys method as per the specification in method_0. This implementation obtains this preference node's lock, checks that the node has not been removed and invokes method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "childrenNames()",
+    "name": "childrenNames",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "childrenNames()",
+      "comment": "Implements the children method as per the specification in method_0. This implementation obtains this preference node's lock, checks that the node has not been removed, constructs a TreeSet initialized to the names of children already cached (the children in this node's \"child-cache\"), invokes method_1, and adds all of the returned child-names into the set. The elements of the tree set are dumped into a String array using the toArray method, and this array is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "cachedChildren()",
+    "name": "cachedChildren",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences[]",
+      "name": "java.util.prefs.AbstractPreferences[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "cachedChildren()",
+      "comment": "Returns all known unremoved children of this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parent()",
+    "name": "parent",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "parent()",
+      "comment": "Implements the parent method as per the specification in method_0. This implementation obtains this preference node's lock, checks that the node has not been removed and returns the parent value that was passed to this node's constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(java.lang.String path)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "path"
+      }
+    ],
+    "protocol": {
+      "member": "node(java.lang.String path)",
+      "comment": "Implements the node method as per the specification in method_0. This implementation obtains this preference node's lock and checks that the node has not been removed. If path is \"\", this node is returned; if path is \"/\", this node's root is returned. If the first character in path is not '/', the implementation breaks path into tokens and recursively traverses the path from this node to the named node, \"consuming\" a name and a slash from path at each step of the traversal. At each step, the current node is locked and the node's child-cache is checked for the named node. If it is not found, the name is checked to make sure its length does not exceed MAX_NAME_LENGTH. Then the method_1 method is invoked, and the result stored in this node's child-cache. If the newly created Preferences object's method_4 field is true and there are any node change listeners, a notification event is enqueued for processing by the event dispatch thread. When there are no more tokens, the last value found in the child-cache or returned by childSpi is returned by this method. If during the traversal, two \"/\" tokens occur consecutively, or the final token is \"/\" (rather than a name), an appropriate IllegalArgumentException is thrown.  If the first character of path is '/' (indicating an absolute path name) this preference node's lock is dropped prior to breaking path into tokens, and this method recursively traverses the path starting from the root (rather than starting from this node). The traversal is otherwise identical to the one described for relative path names. Dropping the lock on this node prior to commencing the traversal at the root node is essential to avoid the possibility of deadlock, as per the method_5 locking invariant.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nodeExists(java.lang.String path)",
+    "name": "nodeExists",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "path"
+      }
+    ],
+    "protocol": {
+      "member": "nodeExists(java.lang.String path)",
+      "comment": "Implements the nodeExists method as per the specification in method_0. This implementation is very similar to method_1, except that method_2 is used instead of method_3.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeNode()",
+    "name": "removeNode",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeNode()",
+      "comment": "Implements the method_0 method as per the specification in Preferencesmethod_0. This implementation checks to see that this node is the root; if so, it throws an appropriate exception. Then, it locks this node's parent, and calls a recursive helper method that traverses the subtree rooted at this node. The recursive method locks the node on which it was called, checks that it has not already been removed, and then ensures that all of its children are cached: The method_2 method is invoked and each returned child name is checked for containment in the child-cache. If a child is not already cached, the method_3 method is invoked to create a Preferences instance for it, and this instance is put into the child-cache. Then the helper method calls itself recursively on each node contained in its child-cache. Next, it invokes method_4, marks itself as removed, and removes itself from its parent's child-cache. Finally, if there are any node change listeners, it enqueues a notification event for processing by the event dispatch thread. Note that the helper method is always invoked with all ancestors up to the \"closest non-removed ancestor\" locked.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "name()",
+    "name": "name",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "name()",
+      "comment": "Implements the name method as per the specification in method_0. This implementation merely returns the name that was passed to this node's constructor.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "absolutePath()",
+    "name": "absolutePath",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "absolutePath()",
+      "comment": "Implements the absolutePath method as per the specification in method_0. This implementation merely returns the absolute path name that was computed at the time that this node was constructed (based on the name that was passed to this node's constructor, and the names that were passed to this node's ancestors' constructors).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUserNode()",
+    "name": "isUserNode",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isUserNode()",
+      "comment": "Implements the isUserNode method as per the specification in method_0. This implementation compares this node's root node (which is stored in a private field) with the value returned by method_1. If the two object references are identical, this method returns true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addPreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+    "name": "addPreferenceChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.PreferenceChangeListener",
+          "name": "PreferenceChangeListener",
+          "isArray": false
+        },
+        "name": "pcl"
+      }
+    ],
+    "protocol": {
+      "member": "addPreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removePreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+    "name": "removePreferenceChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.PreferenceChangeListener",
+          "name": "PreferenceChangeListener",
+          "isArray": false
+        },
+        "name": "pcl"
+      }
+    ],
+    "protocol": {
+      "member": "removePreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+    "name": "addNodeChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.NodeChangeListener",
+          "name": "NodeChangeListener",
+          "isArray": false
+        },
+        "name": "ncl"
+      }
+    ],
+    "protocol": {
+      "member": "addNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+    "name": "removeNodeChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.NodeChangeListener",
+          "name": "NodeChangeListener",
+          "isArray": false
+        },
+        "name": "ncl"
+      }
+    ],
+    "protocol": {
+      "member": "removeNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putSpi(java.lang.String key, java.lang.String value)",
+    "name": "putSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putSpi(java.lang.String key, java.lang.String value)",
+      "comment": "Put the given key-value association into this preference node. It is guaranteed that key and value are non-null and of legal length. Also, it is guaranteed that this node has not been removed. (The implementor needn't check for any of these things.) This method is invoked with the lock on this node held.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSpi(java.lang.String key)",
+    "name": "getSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "getSpi(java.lang.String key)",
+      "comment": "Return the value associated with the specified key at this preference node, or null if there is no association for this key, or the association cannot be determined at this time. It is guaranteed that key is non-null. Also, it is guaranteed that this node has not been removed. (The implementor needn't check for either of these things.)  Generally speaking, this method should not throw an exception under any circumstances. If, however, if it does throw an exception, the exception will be intercepted and treated as a null return value. This method is invoked with the lock on this node held.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeSpi(java.lang.String key)",
+    "name": "removeSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "removeSpi(java.lang.String key)",
+      "comment": "Remove the association (if any) for the specified key at this preference node. It is guaranteed that key is non-null. Also, it is guaranteed that this node has not been removed. (The implementor needn't check for either of these things.) This method is invoked with the lock on this node held.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeNodeSpi()",
+    "name": "removeNodeSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeNodeSpi()",
+      "comment": "Removes this preference node, invalidating it and any preferences that it contains. The named child will have no descendants at the time this invocation is made (imethod_3., the method_0 method invokes this method repeatedly in a bottom-up fashion, removing each of a node's descendants before removing the node itself). This method is invoked with the lock held on this node and its parent (and all ancestors that are being removed as a result of a single invocation to method_0). The removal of a node needn't become persistent until the flush method is invoked on this node (or an ancestor). If this node throws a BackingStoreException, the exception will propagate out beyond the enclosing method_2 invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keysSpi()",
+    "name": "keysSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keysSpi()",
+      "comment": "Returns all of the keys that have an associated value in this preference node. (The returned array will be of size zero if this node has no preferences.) It is guaranteed that this node has not been removed. This method is invoked with the lock on this node held. If this node throws a BackingStoreException, the exception will propagate out beyond the enclosing method_0 invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "childrenNamesSpi()",
+    "name": "childrenNamesSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "childrenNamesSpi()",
+      "comment": "Returns the names of the children of this preference node. (The returned array will be of size zero if this node has no children.) This method need not return the names of any nodes already cached, but may do so without harm. This method is invoked with the lock on this node held. If this node throws a BackingStoreException, the exception will propagate out beyond the enclosing method_0 invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChild(java.lang.String nodeName)",
+    "name": "getChild",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "java.util.prefs.AbstractPreferences",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "nodeName"
+      }
+    ],
+    "protocol": {
+      "member": "getChild(java.lang.String nodeName)",
+      "comment": "Returns the named child if it exists, or null if it does not. It is guaranteed that nodeName is non-null, non-empty, does not contain the slash character ('/'), and is no longer than method_2 characters. Also, it is guaranteed that this node has not been removed. (The implementor needn't check for any of these things if he chooses to override this method.) Finally, it is guaranteed that the named node has not been returned by a previous invocation of this method or method_3 after the last time that it was removed. In other words, a cached value will always be used in preference to invoking this method. (The implementor needn't maintain his own cache of previously returned children if he chooses to override this method.) This implementation obtains this preference node's lock, invokes method_0 to get an array of the names of this node's children, and iterates over the array comparing the name of each child with the specified node name. If a child node has the correct name, the method_1 method is invoked and the resulting node is returned. If the iteration completes without finding the specified name, null is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "childSpi(java.lang.String name)",
+    "name": "childSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "java.util.prefs.AbstractPreferences",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "childSpi(java.lang.String name)",
+      "comment": "Returns the named child of this preference node, creating it if it does not already exist. It is guaranteed that name is non-null, non-empty, does not contain the slash character ('/'), and is no longer than method_1 characters. Also, it is guaranteed that this node has not been removed. (The implementor needn't check for any of these things.) Finally, it is guaranteed that the named node has not been returned by a previous invocation of this method or method_0 after the last time that it was removed. In other words, a cached value will always be used in preference to invoking this method. Subclasses need not maintain their own cache of previously returned children. The implementer must ensure that the returned node has not been removed. If a like-named child of this node was previously removed, the implementer must return a newly constructed AbstractPreferences node; once removed, an AbstractPreferences node cannot be \"resuscitated.\" If this method causes a node to be created, this node is not guaranteed to be persistent until the flush method is invoked on this node or one of its ancestors (or descendants). This method is invoked with the lock on this node held.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the absolute path name of this preferences node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sync()",
+    "name": "sync",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sync()",
+      "comment": "Implements the sync method as per the specification in method_0. This implementation calls a recursive helper method that locks this node, invokes method_1 on it, unlocks this node, and recursively invokes this method on each \"cached child.\" A cached child is a child of this node that has been created in this VM and not subsequently removed. In effect, this method does a depth first traversal of the \"cached subtree\" rooted at this node, calling method_1 on each node in the subTree while only that node is locked. Note that method_1 is invoked top-down.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "syncSpi()",
+    "name": "syncSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "syncSpi()",
+      "comment": "This method is invoked with this node locked. The contract of this method is to synchronize any cached preferences stored at this node with any stored in the backing store. (It is perfectly possible that this node does not exist on the backing store, either because it has been deleted by another VM, or because it has not yet been created.) Note that this method should not synchronize the preferences in any subnodes of this node. If the backing store naturally syncs an entire subtree at once, the implementer is encouraged to override method_0, rather than merely overriding this method. If this node throws a BackingStoreException, the exception will propagate out beyond the enclosing method_0 invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flush()",
+      "comment": "Implements the flush method as per the specification in method_0. This implementation calls a recursive helper method that locks this node, invokes method_1 on it, unlocks this node, and recursively invokes this method on each \"cached child.\" A cached child is a child of this node that has been created in this VM and not subsequently removed. In effect, this method does a depth first traversal of the \"cached subtree\" rooted at this node, calling method_1 on each node in the subTree while only that node is locked. Note that method_1 is invoked top-down.  If this method is invoked on a node that has been removed with the method_4 method, method_1 is invoked on this node, but not on others.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flushSpi()",
+    "name": "flushSpi",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flushSpi()",
+      "comment": "This method is invoked with this node locked. The contract of this method is to force any cached changes in the contents of this preference node to the backing store, guaranteeing their persistence. (It is perfectly possible that this node does not exist on the backing store, either because it has been deleted by another VM, or because it has not yet been created.) Note that this method should not flush the preferences in any subnodes of this node. If the backing store naturally flushes an entire subtree at once, the implementer is encouraged to override method_0, rather than merely overriding this method. If this node throws a BackingStoreException, the exception will propagate out beyond the enclosing method_0 invocation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isRemoved()",
+    "name": "isRemoved",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isRemoved()",
+      "comment": "Returns true iff this node (or an ancestor) has been removed with the method_0 method. This method locks this node prior to returning the contents of the private field used to track this state.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prefListeners()",
+    "name": "prefListeners",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.PreferenceChangeListener[]",
+      "name": "java.util.prefs.PreferenceChangeListener[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "prefListeners()",
+      "comment": "Return this node's preference/node change listeners. Even though we're using a copy-on-write lists, we use synchronized accessors to ensure information transmission from the writing thread to the reading thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nodeListeners()",
+    "name": "nodeListeners",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.NodeChangeListener[]",
+      "name": "java.util.prefs.NodeChangeListener[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nodeListeners()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exportNode(java.io.OutputStream os)",
+    "name": "exportNode",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "os"
+      }
+    ],
+    "protocol": {
+      "member": "exportNode(java.io.OutputStream os)",
+      "comment": "Implements the exportNode method as per the specification in method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exportSubtree(java.io.OutputStream os)",
+    "name": "exportSubtree",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.AbstractPreferences",
+      "name": "AbstractPreferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.AbstractPreferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "os"
+      }
+    ],
+    "protocol": {
+      "member": "exportSubtree(java.io.OutputStream os)",
+      "comment": "Implements the exportSubtree method as per the specification in method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

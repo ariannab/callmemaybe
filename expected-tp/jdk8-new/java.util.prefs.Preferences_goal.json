@@ -1,0 +1,1263 @@
+[
+  {
+    "signature": "java.util.prefs.Preferences()",
+    "name": "java.util.prefs.Preferences",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.prefs.Preferences()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "userNodeForPackage(java.lang.Class<?> c)",
+    "name": "userNodeForPackage",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "userNodeForPackage(java.lang.Class<?> c)",
+      "comment": "Returns the preference node from the calling user's preference tree that is associated (by convention) with the specified class's package. The convention is as follows: the absolute path name of the node is the fully qualified package name, preceded by a slash ('/'), and with each period ('.') replaced by a slash. For example the absolute path name of the node associated with the class commethod_1method_2method_3 is /com/acme/widget. This convention does not apply to the unnamed package, whose associated preference node is <unnamed>. This node is not intended for long term use, but for convenience in the early development of programs that do not yet belong to a package, and for \"throwaway\" programs. Valuable data should not be stored at this node as it is shared by all programs that use it. A class Foo wishing to access preferences pertaining to its package can obtain a preference node as follows:  static Preferences prefs = method_0;  This idiom obviates the need for using a string to describe the preferences node and decreases the likelihood of a run-time failure. (If the class name is misspelled, it will typically result in a compile-time error.) Invoking this method will result in the creation of the returned node and its ancestors if they do not already exist. If the returned node did not exist prior to this call, this node and any ancestors that were created by this call are not guaranteed to become permanent until the flush method is called on the returned node (or one of its ancestors or descendants).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "systemNodeForPackage(java.lang.Class<?> c)",
+    "name": "systemNodeForPackage",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "systemNodeForPackage(java.lang.Class<?> c)",
+      "comment": "Returns the preference node from the system preference tree that is associated (by convention) with the specified class's package. The convention is as follows: the absolute path name of the node is the fully qualified package name, preceded by a slash ('/'), and with each period ('.') replaced by a slash. For example the absolute path name of the node associated with the class commethod_1method_2method_3 is /com/acme/widget. This convention does not apply to the unnamed package, whose associated preference node is <unnamed>. This node is not intended for long term use, but for convenience in the early development of programs that do not yet belong to a package, and for \"throwaway\" programs. Valuable data should not be stored at this node as it is shared by all programs that use it. A class Foo wishing to access preferences pertaining to its package can obtain a preference node as follows:  static Preferences prefs = method_0;  This idiom obviates the need for using a string to describe the preferences node and decreases the likelihood of a run-time failure. (If the class name is misspelled, it will typically result in a compile-time error.) Invoking this method will result in the creation of the returned node and its ancestors if they do not already exist. If the returned node did not exist prior to this call, this node and any ancestors that were created by this call are not guaranteed to become permanent until the flush method is called on the returned node (or one of its ancestors or descendants).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "userRoot()",
+    "name": "userRoot",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "userRoot()",
+      "comment": "Returns the root preference node for the calling user.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "systemRoot()",
+    "name": "systemRoot",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "systemRoot()",
+      "comment": "Returns the root preference node for the system.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "put(java.lang.String key, java.lang.String value)",
+    "name": "put",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "put(java.lang.String key, java.lang.String value)",
+      "comment": "Associates the specified value with the specified key in this preference node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(java.lang.String key, java.lang.String def)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "get(java.lang.String key, java.lang.String def)",
+      "comment": "Returns the value associated with the specified key in this preference node. Returns the specified default if there is no value associated with the key, or the backing store is inaccessible. Some implementations may store default values in their backing stores. If there is no value associated with the specified key but there is such a stored default, it is returned in preference to the specified default.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.String key)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.String key)",
+      "comment": "Removes the value associated with the specified key in this preference node, if any. If this implementation supports stored defaults, and there is such a default for the specified preference, the stored default will be \"exposed\" by this call, in the sense that it will be returned by a succeeding call to get.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all of the preferences (key-value associations) in this preference node. This call has no effect on any descendants of this node. If this implementation supports stored defaults, and this node in the preferences hierarchy contains any such defaults, the stored defaults will be \"exposed\" by this call, in the sense that they will be returned by succeeding calls to get.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putInt(java.lang.String key, int value)",
+    "name": "putInt",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putInt(java.lang.String key, int value)",
+      "comment": "Associates a string representing the specified int value with the specified key in this preference node. The associated string is the one that would be returned if the int value were passed to method_0. This method is intended for use in conjunction with method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getInt(java.lang.String key, int def)",
+    "name": "getInt",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getInt(java.lang.String key, int def)",
+      "comment": "Returns the int value represented by the string associated with the specified key in this preference node. The string is converted to an integer as by method_0. Returns the specified default if there is no value associated with the key, the backing store is inaccessible, or if method_1 would throw a NumberFormatException if the associated value were passed. This method is intended for use in conjunction with method_4. If the implementation supports stored defaults and such a default exists, is accessible, and could be converted to an int with method_3, this int is returned in preference to the specified default.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putLong(java.lang.String key, long value)",
+    "name": "putLong",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putLong(java.lang.String key, long value)",
+      "comment": "Associates a string representing the specified long value with the specified key in this preference node. The associated string is the one that would be returned if the long value were passed to method_0. This method is intended for use in conjunction with method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLong(java.lang.String key, long def)",
+    "name": "getLong",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getLong(java.lang.String key, long def)",
+      "comment": "Returns the long value represented by the string associated with the specified key in this preference node. The string is converted to a long as by method_0. Returns the specified default if there is no value associated with the key, the backing store is inaccessible, or if method_1 would throw a NumberFormatException if the associated value were passed. This method is intended for use in conjunction with method_4. If the implementation supports stored defaults and such a default exists, is accessible, and could be converted to a long with method_3, this long is returned in preference to the specified default.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putBoolean(java.lang.String key, boolean value)",
+    "name": "putBoolean",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putBoolean(java.lang.String key, boolean value)",
+      "comment": "Associates a string representing the specified boolean value with the specified key in this preference node. The associated string is \"true\" if the value is true, and \"false\" if it is false. This method is intended for use in conjunction with method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getBoolean(java.lang.String key, boolean def)",
+    "name": "getBoolean",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getBoolean(java.lang.String key, boolean def)",
+      "comment": "Returns the boolean value represented by the string associated with the specified key in this preference node. Valid strings are \"true\", which represents true, and \"false\", which represents false. Case is ignored, so, for example, \"TRUE\" and \"False\" are also valid. This method is intended for use in conjunction with method_0. Returns the specified default if there is no value associated with the key, the backing store is inaccessible, or if the associated value is something other than \"true\" or \"false\", ignoring case. If the implementation supports stored defaults and such a default exists and is accessible, it is used in preference to the specified default, unless the stored default is something other than \"true\" or \"false\", ignoring case, in which case the specified default is used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putFloat(java.lang.String key, float value)",
+    "name": "putFloat",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putFloat(java.lang.String key, float value)",
+      "comment": "Associates a string representing the specified float value with the specified key in this preference node. The associated string is the one that would be returned if the float value were passed to method_0. This method is intended for use in conjunction with method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFloat(java.lang.String key, float def)",
+    "name": "getFloat",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "float",
+          "name": "float",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getFloat(java.lang.String key, float def)",
+      "comment": "Returns the float value represented by the string associated with the specified key in this preference node. The string is converted to an integer as by method_0. Returns the specified default if there is no value associated with the key, the backing store is inaccessible, or if method_1 would throw a NumberFormatException if the associated value were passed. This method is intended for use in conjunction with method_4. If the implementation supports stored defaults and such a default exists, is accessible, and could be converted to a float with method_3, this float is returned in preference to the specified default.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putDouble(java.lang.String key, double value)",
+    "name": "putDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putDouble(java.lang.String key, double value)",
+      "comment": "Associates a string representing the specified double value with the specified key in this preference node. The associated string is the one that would be returned if the double value were passed to method_0. This method is intended for use in conjunction with method_2.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDouble(java.lang.String key, double def)",
+    "name": "getDouble",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getDouble(java.lang.String key, double def)",
+      "comment": "Returns the double value represented by the string associated with the specified key in this preference node. The string is converted to an integer as by method_0. Returns the specified default if there is no value associated with the key, the backing store is inaccessible, or if method_1 would throw a NumberFormatException if the associated value were passed. This method is intended for use in conjunction with method_4. If the implementation supports stored defaults and such a default exists, is accessible, and could be converted to a double with method_3, this double is returned in preference to the specified default.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "putByteArray(java.lang.String key, byte[] value)",
+    "name": "putByteArray",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "putByteArray(java.lang.String key, byte[] value)",
+      "comment": "Associates a string representing the specified byte array with the specified key in this preference node. The associated string is the Base64 encoding of the byte array, as defined in RFC 2045, Section 6method_3, with one minor change: the string will consist solely of characters from the Base64 Alphabet; it will not contain any newline characters. Note that the maximum length of the byte array is limited to three quarters of MAX_VALUE_LENGTH so that the length of the Base64 encoded String does not exceed MAX_VALUE_LENGTH. This method is intended for use in conjunction with method_4.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getByteArray(java.lang.String key, byte[] def)",
+    "name": "getByteArray",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "byte[]",
+      "name": "byte[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "key"
+      },
+      {
+        "type": {
+          "qualifiedName": "[B",
+          "name": "byte[]",
+          "isArray": true
+        },
+        "name": "def"
+      }
+    ],
+    "protocol": {
+      "member": "getByteArray(java.lang.String key, byte[] def)",
+      "comment": "Returns the byte array value represented by the string associated with the specified key in this preference node. Valid strings are Base64 encoded binary data, as defined in RFC 2045, Section 6method_3, with one minor change: the string must consist solely of characters from the Base64 Alphabet; no newline characters or extraneous characters are permitted. This method is intended for use in conjunction with method_4. Returns the specified default if there is no value associated with the key, the backing store is inaccessible, or if the associated value is not a valid Base64 encoded byte array (as defined above). If the implementation supports stored defaults and such a default exists and is accessible, it is used in preference to the specified default, unless the stored default is not a valid Base64 encoded byte array (as defined above), in which case the specified default is used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "keys()",
+    "name": "keys",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "keys()",
+      "comment": "Returns all of the keys that have an associated value in this preference node. (The returned array will be of size zero if this node has no preferences.) If the implementation supports stored defaults and there are any such defaults at this node that have not been overridden, by explicit preferences, the defaults are returned in the array in addition to any explicit preferences.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "childrenNames()",
+    "name": "childrenNames",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "childrenNames()",
+      "comment": "Returns the names of the children of this preference node, relative to this node. (The returned array will be of size zero if this node has no children.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "parent()",
+    "name": "parent",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "parent()",
+      "comment": "Returns the parent of this preference node, or null if this is the root.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "node(java.lang.String pathName)",
+    "name": "node",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "java.util.prefs.Preferences",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "pathName"
+      }
+    ],
+    "protocol": {
+      "member": "node(java.lang.String pathName)",
+      "comment": "Returns the named preference node in the same tree as this node, creating it and any of its ancestors if they do not already exist. Accepts a relative or absolute path name. Relative path names (which do not begin with the slash character ('/')) are interpreted relative to this preference node. If the returned node did not exist prior to this call, this node and any ancestors that were created by this call are not guaranteed to become permanent until the flush method is called on the returned node (or one of its ancestors or descendants).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nodeExists(java.lang.String pathName)",
+    "name": "nodeExists",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "pathName"
+      }
+    ],
+    "protocol": {
+      "member": "nodeExists(java.lang.String pathName)",
+      "comment": "Returns true if the named preference node exists in the same tree as this node. Relative path names (which do not begin with the slash character ('/')) are interpreted relative to this preference node. If this node (or an ancestor) has already been removed with the method_0 method, it is legal to invoke this method, but only with the path name \"\"; the invocation will return false. Thus, the idiom method_1 may be used to test whether p has been removed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeNode()",
+    "name": "removeNode",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeNode()",
+      "comment": "Removes this preference node and all of its descendants, invalidating any preferences contained in the removed nodes. Once a node has been removed, attempting any method other than method_0, method_1, method_2, method_3 or method_5 on the corresponding Preferences instance will fail with an IllegalStateException. (The methods defined on Object can still be invoked on a node after it has been removed; they will not throw IllegalStateException.) The removal is not guaranteed to be persistent until the flush method is called on this node (or an ancestor). If this implementation supports stored defaults, removing a node exposes any stored defaults at or below this node. Thus, a subsequent call to nodeExists on this node's path name may return true, and a subsequent call to node on this path name may return a (different) Preferences instance representing a non-empty collection of preferences and/or children.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "name()",
+    "name": "name",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "name()",
+      "comment": "Returns this preference node's name, relative to its parent.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "absolutePath()",
+    "name": "absolutePath",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "absolutePath()",
+      "comment": "Returns this preference node's absolute path name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isUserNode()",
+    "name": "isUserNode",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isUserNode()",
+      "comment": "Returns true if this preference node is in the user preference tree, false if it's in the system preference tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string representation of this preferences node, as if computed by the expression:(method_0 ? \"User\" : \"System\") + \" Preference Node: \" + method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flush()",
+      "comment": "Forces any changes in the contents of this preference node and its descendants to the persistent store. Once this method returns successfully, it is safe to assume that all changes made in the subtree rooted at this node prior to the method invocation have become permanent. Implementations are free to flush changes into the persistent store at any time. They do not need to wait for this method to be called. When a flush occurs on a newly created node, it is made persistent, as are any ancestors (and descendants) that have yet to be made persistent. Note however that any preference value changes in ancestors are not guaranteed to be made persistent.  If this method is invoked on a node that has been removed with the method_0 method, method_1 is invoked on this node, but not on others.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sync()",
+    "name": "sync",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sync()",
+      "comment": "Ensures that future reads from this preference node and its descendants reflect any changes that were committed to the persistent store (from any VM) prior to the sync invocation. As a side-effect, forces any changes in the contents of this preference node and its descendants to the persistent store, as if the flush method had been invoked on this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addPreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+    "name": "addPreferenceChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.PreferenceChangeListener",
+          "name": "PreferenceChangeListener",
+          "isArray": false
+        },
+        "name": "pcl"
+      }
+    ],
+    "protocol": {
+      "member": "addPreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+      "comment": "Registers the specified listener to receive preference change events for this preference node. A preference change event is generated when a preference is added to this node, removed from this node, or when the value associated with a preference is changed. (Preference change events are not generated by the method_0 method, which generates a node change event. Preference change events are generated by the clear method.) Events are only guaranteed for changes made within the same JVM as the registered listener, though some implementations may generate events for changes made outside this JVM. Events may be generated before the changes have been made persistent. Events are not generated when preferences are modified in descendants of this node; a caller desiring such events must register with each descendant.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removePreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+    "name": "removePreferenceChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.PreferenceChangeListener",
+          "name": "PreferenceChangeListener",
+          "isArray": false
+        },
+        "name": "pcl"
+      }
+    ],
+    "protocol": {
+      "member": "removePreferenceChangeListener(java.util.prefs.PreferenceChangeListener pcl)",
+      "comment": "Removes the specified preference change listener, so it no longer receives preference change events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+    "name": "addNodeChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.NodeChangeListener",
+          "name": "NodeChangeListener",
+          "isArray": false
+        },
+        "name": "ncl"
+      }
+    ],
+    "protocol": {
+      "member": "addNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+      "comment": "Registers the specified listener to receive node change events for this node. A node change event is generated when a child node is added to or removed from this node. (A single method_0 invocation results in multiple node change events, one for every node in the subtree rooted at the removed node.) Events are only guaranteed for changes made within the same JVM as the registered listener, though some implementations may generate events for changes made outside this JVM. Events may be generated before the changes have become permanent. Events are not generated when indirect descendants of this node are added or removed; a caller desiring such events must register with each descendant. Few guarantees can be made regarding node creation. Because nodes are created implicitly upon access, it may not be feasible for an implementation to determine whether a child node existed in the backing store prior to access (for example, because the backing store is unreachable or cached information is out of date). Under these circumstances, implementations are neither required to generate node change events nor prohibited from doing so.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+    "name": "removeNodeChangeListener",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.prefs.NodeChangeListener",
+          "name": "NodeChangeListener",
+          "isArray": false
+        },
+        "name": "ncl"
+      }
+    ],
+    "protocol": {
+      "member": "removeNodeChangeListener(java.util.prefs.NodeChangeListener ncl)",
+      "comment": "Removes the specified NodeChangeListener, so it no longer receives change events.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exportNode(java.io.OutputStream os)",
+    "name": "exportNode",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "os"
+      }
+    ],
+    "protocol": {
+      "member": "exportNode(java.io.OutputStream os)",
+      "comment": "Emits on the specified output stream an XML document representing all of the preferences contained in this node (but not its descendants). This XML document is, in effect, an offline backup of the node. The XML document will have the following DOCTYPE declaration: <!DOCTYPE preferences SYSTEM \"http://javamethod_0method_1/dtd/preferencesmethod_2\">  The UTF-8 character encoding will be used. This method is an exception to the general rule that the results of concurrently executing multiple methods in this class yields results equivalent to some serial execution. If the preferences at this node are modified concurrently with an invocation of this method, the exported preferences comprise a \"fuzzy snapshot\" of the preferences contained in the node; some of the concurrent modifications may be reflected in the exported data while others may not.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "exportSubtree(java.io.OutputStream os)",
+    "name": "exportSubtree",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "os"
+      }
+    ],
+    "protocol": {
+      "member": "exportSubtree(java.io.OutputStream os)",
+      "comment": "Emits an XML document representing all of the preferences contained in this node and all of its descendants. This XML document is, in effect, an offline backup of the subtree rooted at the node. The XML document will have the following DOCTYPE declaration: <!DOCTYPE preferences SYSTEM \"http://javamethod_0method_1/dtd/preferencesmethod_2\">  The UTF-8 character encoding will be used. This method is an exception to the general rule that the results of concurrently executing multiple methods in this class yields results equivalent to some serial execution. If the preferences or nodes in the subtree rooted at this node are modified concurrently with an invocation of this method, the exported preferences comprise a \"fuzzy snapshot\" of the subtree; some of the concurrent modifications may be reflected in the exported data while others may not.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "importPreferences(java.io.InputStream is)",
+    "name": "importPreferences",
+    "containingClass": {
+      "qualifiedName": "java.util.prefs.Preferences",
+      "name": "Preferences",
+      "isArray": false
+    },
+    "targetClass": "java.util.prefs.Preferences",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.InputStream",
+          "name": "InputStream",
+          "isArray": false
+        },
+        "name": "is"
+      }
+    ],
+    "protocol": {
+      "member": "importPreferences(java.io.InputStream is)",
+      "comment": "Imports all of the preferences represented by the XML document on the specified input stream. The document may represent user preferences or system preferences. If it represents user preferences, the preferences will be imported into the calling user's preference tree (even if they originally came from a different user's preference tree). If any of the preferences described by the document inhabit preference nodes that do not exist, the nodes will be created. The XML document must have the following DOCTYPE declaration: <!DOCTYPE preferences SYSTEM \"http://javamethod_4method_5/dtd/preferencesmethod_6\">  (This method is designed for use in conjunction with method_0 and method_1. This method is an exception to the general rule that the results of concurrently executing multiple methods in this class yields results equivalent to some serial execution. The method behaves as if implemented on top of the other public methods in this class, notably method_2 and method_3.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

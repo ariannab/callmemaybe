@@ -1,0 +1,1900 @@
+[
+  {
+    "signature": "org.graphstream.ui.graphicGraph.StyleGroupSet(org.graphstream.ui.graphicGraph.stylesheet.StyleSheet stylesheet)",
+    "name": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.StyleSheet",
+          "name": "StyleSheet",
+          "isArray": false
+        },
+        "name": "stylesheet"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.graphicGraph.StyleGroupSet(org.graphstream.ui.graphicGraph.stylesheet.StyleSheet stylesheet)",
+      "comment": "New empty style group set, using the given style sheet to create style groups. The group set installs itself as a listener of the style sheet. So in order to completely stop using such a group, you must call method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGroupCount()",
+    "name": "getGroupCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGroupCount()",
+      "comment": "Number of groups.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGroup(java.lang.String groupId)",
+    "name": "getGroup",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "groupId"
+      }
+    ],
+    "protocol": {
+      "member": "getGroup(java.lang.String groupId)",
+      "comment": "Return a group by its unique identifier. The way group identifier are constructed reflects their contents.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGroupIterator()",
+    "name": "getGroupIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends org.graphstream.ui.graphicGraph.StyleGroup>",
+      "name": "java.util.Iterator<? extends org.graphstream.ui.graphicGraph.StyleGroup>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGroupIterator()",
+      "comment": "Iterator on the set of groups in no particular order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "groups()",
+    "name": "groups",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.ui.graphicGraph.StyleGroup>",
+      "name": "java.lang.Iterable<? extends org.graphstream.ui.graphicGraph.StyleGroup>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "groups()",
+      "comment": "Iterable set of groups elements, in no particular order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZIterator()",
+    "name": "getZIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<java.util.HashSet<org.graphstream.ui.graphicGraph.StyleGroup>>",
+      "name": "java.util.Iterator<java.util.HashSet<org.graphstream.ui.graphicGraph.StyleGroup>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getZIterator()",
+      "comment": "Iterator on the Z index.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "zIndex()",
+    "name": "zIndex",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<java.util.HashSet<org.graphstream.ui.graphicGraph.StyleGroup>>",
+      "name": "java.lang.Iterable<java.util.HashSet<org.graphstream.ui.graphicGraph.StyleGroup>>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "zIndex()",
+      "comment": "Iterable set of \"subsets of groups\" sorted by Z level. Each subset of groups is at the same Z level.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowIterator()",
+    "name": "getShadowIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<org.graphstream.ui.graphicGraph.StyleGroup>",
+      "name": "java.util.Iterator<org.graphstream.ui.graphicGraph.StyleGroup>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowIterator()",
+      "comment": "Iterator on the style groups that cast a shadow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shadows()",
+    "name": "shadows",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<org.graphstream.ui.graphicGraph.StyleGroup>",
+      "name": "java.lang.Iterable<org.graphstream.ui.graphicGraph.StyleGroup>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "shadows()",
+      "comment": "Iterable set of groups that cast shadow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsNode(java.lang.String id)",
+    "name": "containsNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "containsNode(java.lang.String id)",
+      "comment": "True if the set contains and styles the node whose identifier is given.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsEdge(java.lang.String id)",
+    "name": "containsEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "containsEdge(java.lang.String id)",
+      "comment": "True if the set contains and styles the edge whose identifier is given.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsSprite(java.lang.String id)",
+    "name": "containsSprite",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "containsSprite(java.lang.String id)",
+      "comment": "True if the set contains and styles the sprite whose identifier is given.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsGraph(java.lang.String id)",
+    "name": "containsGraph",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "containsGraph(java.lang.String id)",
+      "comment": "True if the set contains and styles the graph whose identifier is given.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElement(java.lang.String id, java.util.Map<java.lang.String, java.lang.String> elt2grp)",
+    "name": "getElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Element",
+      "name": "org.graphstream.graph.Element",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "elt2grp"
+      }
+    ],
+    "protocol": {
+      "member": "getElement(java.lang.String id, java.util.Map<java.lang.String, java.lang.String> elt2grp)",
+      "comment": "Get an element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode(java.lang.String id)",
+    "name": "getNode",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Node",
+      "name": "org.graphstream.graph.Node",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getNode(java.lang.String id)",
+      "comment": "Get a node element knowing its identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdge(java.lang.String id)",
+    "name": "getEdge",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Edge",
+      "name": "org.graphstream.graph.Edge",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getEdge(java.lang.String id)",
+      "comment": "Get an edge element knowing its identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSprite(java.lang.String id)",
+    "name": "getSprite",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicSprite",
+      "name": "org.graphstream.ui.graphicGraph.GraphicSprite",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getSprite(java.lang.String id)",
+      "comment": "Get a sprite element knowing its identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGraph(java.lang.String id)",
+    "name": "getGraph",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.graph.Graph",
+      "name": "org.graphstream.graph.Graph",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getGraph(java.lang.String id)",
+      "comment": "Get a graph element knowing its identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeCount()",
+    "name": "getNodeCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNodeCount()",
+      "comment": "The number of nodes referenced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeCount()",
+    "name": "getEdgeCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEdgeCount()",
+      "comment": "The number of edges referenced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSpriteCount()",
+    "name": "getSpriteCount",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSpriteCount()",
+      "comment": "The number of sprites referenced.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNodeIterator()",
+    "name": "getNodeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends org.graphstream.graph.Node>",
+      "name": "java.util.Iterator<? extends org.graphstream.graph.Node>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getNodeIterator()",
+      "comment": "Iterator on the set of nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGraphIterator()",
+    "name": "getGraphIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends org.graphstream.graph.Graph>",
+      "name": "java.util.Iterator<? extends org.graphstream.graph.Graph>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGraphIterator()",
+      "comment": "Iterator on the set of graphs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nodes()",
+    "name": "nodes",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.graph.Node>",
+      "name": "java.lang.Iterable<? extends org.graphstream.graph.Node>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "nodes()",
+      "comment": "Iterable set of nodes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "graphs()",
+    "name": "graphs",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.graph.Graph>",
+      "name": "java.lang.Iterable<? extends org.graphstream.graph.Graph>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "graphs()",
+      "comment": "Iterable set of graphs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEdgeIterator()",
+    "name": "getEdgeIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends org.graphstream.graph.Edge>",
+      "name": "java.util.Iterator<? extends org.graphstream.graph.Edge>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEdgeIterator()",
+      "comment": "Iterator on the set of edges.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "edges()",
+    "name": "edges",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.graph.Edge>",
+      "name": "java.lang.Iterable<? extends org.graphstream.graph.Edge>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "edges()",
+      "comment": "Iterable set of edges.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSpriteIterator()",
+    "name": "getSpriteIterator",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends org.graphstream.ui.graphicGraph.GraphicSprite>",
+      "name": "java.util.Iterator<? extends org.graphstream.ui.graphicGraph.GraphicSprite>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSpriteIterator()",
+      "comment": "Iterator on the set of sprite.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sprites()",
+    "name": "sprites",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Iterable<? extends org.graphstream.ui.graphicGraph.GraphicSprite>",
+      "name": "java.lang.Iterable<? extends org.graphstream.ui.graphicGraph.GraphicSprite>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sprites()",
+      "comment": "Iterable set of sprites.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getElementGroup(org.graphstream.graph.Element element)",
+    "name": "getElementGroup",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "getElementGroup(org.graphstream.graph.Element element)",
+      "comment": "Retrieve the group identifier of an element knowing the element identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStyleForElement(org.graphstream.graph.Element element)",
+    "name": "getStyleForElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "getStyleForElement(org.graphstream.graph.Element element)",
+      "comment": "Get the style of an element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStyleFor(org.graphstream.graph.Node node)",
+    "name": "getStyleFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "protocol": {
+      "member": "getStyleFor(org.graphstream.graph.Node node)",
+      "comment": "Get the style of a given node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStyleFor(org.graphstream.graph.Edge edge)",
+    "name": "getStyleFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Edge",
+          "name": "Edge",
+          "isArray": false
+        },
+        "name": "edge"
+      }
+    ],
+    "protocol": {
+      "member": "getStyleFor(org.graphstream.graph.Edge edge)",
+      "comment": "Get the style of a given edge.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStyleFor(org.graphstream.ui.graphicGraph.GraphicSprite sprite)",
+    "name": "getStyleFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicSprite",
+          "name": "GraphicSprite",
+          "isArray": false
+        },
+        "name": "sprite"
+      }
+    ],
+    "protocol": {
+      "member": "getStyleFor(org.graphstream.ui.graphicGraph.GraphicSprite sprite)",
+      "comment": "Get the style of a given sprite.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStyleFor(org.graphstream.graph.Graph graph)",
+    "name": "getStyleFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      }
+    ],
+    "protocol": {
+      "member": "getStyleFor(org.graphstream.graph.Graph graph)",
+      "comment": "Get the style of a given graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "areEmptyGroupRemoved()",
+    "name": "areEmptyGroupRemoved",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "areEmptyGroupRemoved()",
+      "comment": "True if groups are removed when becoming empty. This setting allows to keep empty group when the set of elements is quite dynamic. This allows to avoid recreting groups when an element appears and disappears regularly.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getZIndex()",
+    "name": "getZIndex",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet$ZIndex",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroupSet$ZIndex",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getZIndex()",
+      "comment": "The Z index object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShadowSet()",
+    "name": "getShadowSet",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet$ShadowSet",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroupSet$ShadowSet",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShadowSet()",
+      "comment": "The set of style groups that cast a shadow.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release()",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "release()",
+      "comment": "Release any dependency to the style sheet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Empties this style group set. The style sheet is listener is not removed, use method_0 to do that.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRemoveEmptyGroups(boolean on)",
+    "name": "setRemoveEmptyGroups",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "on"
+      }
+    ],
+    "protocol": {
+      "member": "setRemoveEmptyGroups(boolean on)",
+      "comment": "Remove or keep groups that becomes empty, if true the groups are removed. If this setting was set to false, and is now true, the group set is purged of the empty groups.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addGroup(java.lang.String id, java.util.ArrayList<org.graphstream.ui.graphicGraph.stylesheet.Rule> rules, org.graphstream.graph.Element firstElement)",
+    "name": "addGroup",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "rules"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "firstElement"
+      }
+    ],
+    "protocol": {
+      "member": "addGroup(java.lang.String id, java.util.ArrayList<org.graphstream.ui.graphicGraph.stylesheet.Rule> rules, org.graphstream.graph.Element firstElement)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeGroup(org.graphstream.ui.graphicGraph.StyleGroup group)",
+    "name": "removeGroup",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+          "name": "StyleGroup",
+          "isArray": false
+        },
+        "name": "group"
+      }
+    ],
+    "protocol": {
+      "member": "removeGroup(org.graphstream.ui.graphicGraph.StyleGroup group)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addElement(org.graphstream.graph.Element element)",
+    "name": "addElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "addElement(org.graphstream.graph.Element element)",
+      "comment": "Add an element and bind it to its style group. The group is created if needed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addElement_(org.graphstream.graph.Element element)",
+    "name": "addElement_",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "name": "org.graphstream.ui.graphicGraph.StyleGroup",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "addElement_(org.graphstream.graph.Element element)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeElement(org.graphstream.graph.Element element)",
+    "name": "removeElement",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "removeElement(org.graphstream.graph.Element element)",
+      "comment": "Remove an element from the group set. If the group becomes empty after the element removal, depending on the setting of method_0, the group is deleted or kept. Keeping groups allows to handle faster elements that constantly appear and disappear.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkElementStyleGroup(org.graphstream.graph.Element element)",
+    "name": "checkElementStyleGroup",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "checkElementStyleGroup(org.graphstream.graph.Element element)",
+      "comment": "Check if an element need to change from a style group to another.  When an element can have potentially changed style due to some of its attributes (uimethod_2 for example), instead of removing it then reading it, use this method to move the element from its current style group to a potentially different style group.   Explanation of this method : checking the style of an element may be done by removing it (method_0) and then re-adding it ( method_1). This must be done by the element since it knows when to check this. However you cannot only remove and add, since the style group inside which the element is can have events occurring on it, and these events must be passed from its old style to its new style. This method does all this information passing.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addElementToReverseSearch(org.graphstream.graph.Element element, java.lang.String groupId)",
+    "name": "addElementToReverseSearch",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "groupId"
+      }
+    ],
+    "protocol": {
+      "member": "addElementToReverseSearch(org.graphstream.graph.Element element, java.lang.String groupId)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeElementFromReverseSearch(org.graphstream.graph.Element element)",
+    "name": "removeElementFromReverseSearch",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "removeElementFromReverseSearch(org.graphstream.graph.Element element)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pushEvent(java.lang.String event)",
+    "name": "pushEvent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "pushEvent(java.lang.String event)",
+      "comment": "Push a global event on the event stack. Events trigger the replacement of a style by an alternative style (or meta-class) when possible. If an event is on the event stack, each time a style has an alternative corresponding to the event, the alternative is used instead of the style.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pushEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+    "name": "pushEventFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "pushEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+      "comment": "Push an event specifically for a given element. This is normally done automatically by the graphic element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "popEvent(java.lang.String event)",
+    "name": "popEvent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "popEvent(java.lang.String event)",
+      "comment": "Pop a global event from the event set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "popEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+    "name": "popEventFor",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "event"
+      }
+    ],
+    "protocol": {
+      "member": "popEventFor(org.graphstream.graph.Element element, java.lang.String event)",
+      "comment": "Pop an event specifically for a given element. This is normally done automatically by the graphic element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pushElementAsDynamic(org.graphstream.graph.Element element)",
+    "name": "pushElementAsDynamic",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "pushElementAsDynamic(org.graphstream.graph.Element element)",
+      "comment": "Specify the given element has dynamic style attribute values. This is normally done automatically by the graphic element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "popElementAsDynamic(org.graphstream.graph.Element element)",
+    "name": "popElementAsDynamic",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "popElementAsDynamic(org.graphstream.graph.Element element)",
+      "comment": "Remove the given element from the subset of elements having dynamic style attribute values. This is normally done automatically by the graphic element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addListener(org.graphstream.ui.graphicGraph.StyleGroupListener listener)",
+    "name": "addListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupListener",
+          "name": "StyleGroupListener",
+          "isArray": false
+        },
+        "name": "listener"
+      }
+    ],
+    "protocol": {
+      "member": "addListener(org.graphstream.ui.graphicGraph.StyleGroupListener listener)",
+      "comment": "Add a listener for element style changes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeListener(org.graphstream.ui.graphicGraph.StyleGroupListener listener)",
+    "name": "removeListener",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupListener",
+          "name": "StyleGroupListener",
+          "isArray": false
+        },
+        "name": "listener"
+      }
+    ],
+    "protocol": {
+      "member": "removeListener(org.graphstream.ui.graphicGraph.StyleGroupListener listener)",
+      "comment": "Remove a style change listener.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "styleAdded(org.graphstream.ui.graphicGraph.stylesheet.Rule oldRule, org.graphstream.ui.graphicGraph.stylesheet.Rule newRule)",
+    "name": "styleAdded",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "oldRule"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "newRule"
+      }
+    ],
+    "protocol": {
+      "member": "styleAdded(org.graphstream.ui.graphicGraph.stylesheet.Rule oldRule, org.graphstream.ui.graphicGraph.stylesheet.Rule newRule)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "styleSheetCleared()",
+    "name": "styleSheetCleared",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "styleSheetCleared()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkZIndexAndShadow(org.graphstream.ui.graphicGraph.stylesheet.Rule oldRule, org.graphstream.ui.graphicGraph.stylesheet.Rule newRule)",
+    "name": "checkZIndexAndShadow",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "oldRule"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "newRule"
+      }
+    ],
+    "protocol": {
+      "member": "checkZIndexAndShadow(org.graphstream.ui.graphicGraph.stylesheet.Rule oldRule, org.graphstream.ui.graphicGraph.stylesheet.Rule newRule)",
+      "comment": "Check each group that may have changed, for example to rebuild the Z index and the shadow set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkForNewStyle(org.graphstream.ui.graphicGraph.stylesheet.Rule newRule)",
+    "name": "checkForNewStyle",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "newRule"
+      }
+    ],
+    "protocol": {
+      "member": "checkForNewStyle(org.graphstream.ui.graphicGraph.stylesheet.Rule newRule)",
+      "comment": "We try to avoid at most to affect anew styles to elements and to recreate groups, which is time consuming. Two cases :  <li>The style is an specific (id) style. In this case a new group may be added. <ul> <li>check an element matches the style and in this case create the group by adding the element.</li> <li>else do nothing.</li> </ul> </li> <li>The style is a kind or class style. <ul> <li>check all the groups in the kind of the style (graph, node, edge, sprite) and only in this kind (since other will never be affected).</li> <li>remove all groups of this kind.</li> <li>add all elements of this kind anew to recreate the group.</li> </ul> </li>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkForNewIdStyle(org.graphstream.ui.graphicGraph.stylesheet.Rule newRule, java.util.Map<java.lang.String, java.lang.String> elt2grp)",
+    "name": "checkForNewIdStyle",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "newRule"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "elt2grp"
+      }
+    ],
+    "protocol": {
+      "member": "checkForNewIdStyle(org.graphstream.ui.graphicGraph.stylesheet.Rule newRule, java.util.Map<java.lang.String, java.lang.String> elt2grp)",
+      "comment": "Check for a new specific style (applies only to one element).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkForNewStyle(org.graphstream.ui.graphicGraph.stylesheet.Rule newRule, java.util.Map<java.lang.String, java.lang.String> elt2grp)",
+    "name": "checkForNewStyle",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.stylesheet.Rule",
+          "name": "Rule",
+          "isArray": false
+        },
+        "name": "newRule"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Map",
+          "name": "Map",
+          "isArray": false
+        },
+        "name": "elt2grp"
+      }
+    ],
+    "protocol": {
+      "member": "checkForNewStyle(org.graphstream.ui.graphicGraph.stylesheet.Rule newRule, java.util.Map<java.lang.String, java.lang.String> elt2grp)",
+      "comment": "Check for a new kind or class style in a given name space (node, edge, sprite, graph).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+      "name": "StyleGroupSet",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.graphicGraph.StyleGroupSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

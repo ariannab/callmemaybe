@@ -1,0 +1,355 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.AtomicStampedReference(V initialRef, int initialStamp)",
+    "name": "java.util.concurrent.atomic.AtomicStampedReference",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "initialRef"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "initialStamp"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.AtomicStampedReference(V initialRef, int initialStamp)",
+      "comment": "Creates a new AtomicStampedReference with the given initial values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getReference()",
+    "name": "getReference",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getReference()",
+      "comment": "Returns the current value of the reference.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getStamp()",
+    "name": "getStamp",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getStamp()",
+      "comment": "Returns the current value of the stamp.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "get(int[] stampHolder)",
+    "name": "get",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "V",
+      "name": "V",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[I",
+          "name": "int[]",
+          "isArray": true
+        },
+        "name": "stampHolder"
+      }
+    ],
+    "protocol": {
+      "member": "get(int[] stampHolder)",
+      "comment": "Returns the current values of both the reference and the stamp. Typical usage is int[1] holder; ref = method_0; .",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weakCompareAndSet(V expectedReference, V newReference, int expectedStamp, int newStamp)",
+    "name": "weakCompareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "expectedReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expectedStamp"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newStamp"
+      }
+    ],
+    "protocol": {
+      "member": "weakCompareAndSet(V expectedReference, V newReference, int expectedStamp, int newStamp)",
+      "comment": "Atomically sets the value of both the reference and stamp to the given update values if the current reference is == to the expected reference and the current stamp is equal to the expected stamp. May fail spuriously and does not provide ordering guarantees, so is only rarely an appropriate alternative to compareAndSet.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "compareAndSet(V expectedReference, V newReference, int expectedStamp, int newStamp)",
+    "name": "compareAndSet",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "expectedReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "expectedStamp"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newStamp"
+      }
+    ],
+    "protocol": {
+      "member": "compareAndSet(V expectedReference, V newReference, int expectedStamp, int newStamp)",
+      "comment": "Atomically sets the value of both the reference and stamp to the given update values if the current reference is == to the expected reference and the current stamp is equal to the expected stamp.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "set(V newReference, int newStamp)",
+    "name": "set",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "newReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newStamp"
+      }
+    ],
+    "protocol": {
+      "member": "set(V newReference, int newStamp)",
+      "comment": "Unconditionally sets the value of both the reference and stamp.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "attemptStamp(V expectedReference, int newStamp)",
+    "name": "attemptStamp",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "expectedReference"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newStamp"
+      }
+    ],
+    "protocol": {
+      "member": "attemptStamp(V expectedReference, int newStamp)",
+      "comment": "Atomically sets the value of the stamp to the given update value if the current reference is == to the expected reference. Any given invocation of this operation may fail (return {@code false}) spuriously, but repeated invocation when the current value holds the expected value and no other thread is also attempting to set the value will eventually succeed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "objectFieldOffset(sun.misc.Unsafe UNSAFE, java.lang.String field, java.lang.Class<?> klazz)",
+    "name": "objectFieldOffset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.AtomicStampedReference",
+      "name": "AtomicStampedReference",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.AtomicStampedReference",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "sun.misc.Unsafe",
+          "name": "Unsafe",
+          "isArray": false
+        },
+        "name": "UNSAFE"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "field"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "klazz"
+      }
+    ],
+    "protocol": {
+      "member": "objectFieldOffset(sun.misc.Unsafe UNSAFE, java.lang.String field, java.lang.Class<?> klazz)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

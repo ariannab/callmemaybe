@@ -1,0 +1,405 @@
+[
+  {
+    "signature": "weka.classifiers.evaluation.ConfusionMatrix(java.lang.String[] classNames)",
+    "name": "weka.classifiers.evaluation.ConfusionMatrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "classNames"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.evaluation.ConfusionMatrix(java.lang.String[] classNames)",
+      "comment": "Creates the confusion matrix with the given class names.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeWeighted(weka.classifiers.CostMatrix costs)",
+    "name": "makeWeighted",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "weka.classifiers.evaluation.ConfusionMatrix",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.CostMatrix",
+          "name": "CostMatrix",
+          "isArray": false
+        },
+        "name": "costs"
+      }
+    ],
+    "protocol": {
+      "member": "makeWeighted(weka.classifiers.CostMatrix costs)",
+      "comment": "Makes a copy of this ConfusionMatrix after applying the supplied CostMatrix to the cells. The resulting ConfusionMatrix can be used to get cost-weighted statistics.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Creates and returns a clone of this object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Gets the number of classes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "className(int index)",
+    "name": "className",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "className(int index)",
+      "comment": "Gets the name of one of the classes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addPrediction(weka.classifiers.evaluation.NominalPrediction pred)",
+    "name": "addPrediction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.evaluation.NominalPrediction",
+          "name": "NominalPrediction",
+          "isArray": false
+        },
+        "name": "pred"
+      }
+    ],
+    "protocol": {
+      "member": "addPrediction(weka.classifiers.evaluation.NominalPrediction pred)",
+      "comment": "Includes a prediction in the confusion matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addPredictions(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+    "name": "addPredictions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "predictions"
+      }
+    ],
+    "protocol": {
+      "member": "addPredictions(java.util.ArrayList<weka.classifiers.evaluation.Prediction> predictions)",
+      "comment": "Includes a whole bunch of predictions in the confusion matrix.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getTwoClassStats(int classIndex)",
+    "name": "getTwoClassStats",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.evaluation.TwoClassStats",
+      "name": "weka.classifiers.evaluation.TwoClassStats",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "getTwoClassStats(int classIndex)",
+      "comment": "Gets the performance with respect to one of the classes as a TwoClassStats object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "correct()",
+    "name": "correct",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "correct()",
+      "comment": "Gets the number of correct classifications (that is, for which a correct prediction was made). (Actually the sum of the weights of these classifications)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "incorrect()",
+    "name": "incorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "incorrect()",
+      "comment": "Gets the number of incorrect classifications (that is, for which an incorrect prediction was made). (Actually the sum of the weights of these classifications)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "total()",
+    "name": "total",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "total()",
+      "comment": "Gets the number of predictions that were made (actually the sum of the weights of predictions where the class value was known).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "errorRate()",
+    "name": "errorRate",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "errorRate()",
+      "comment": "Returns the estimated error rate.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Calls method_0 with a default title.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString(java.lang.String title)",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "title"
+      }
+    ],
+    "protocol": {
+      "member": "toString(java.lang.String title)",
+      "comment": "Outputs the performance statistics as a classification confusion matrix. For each class value, shows the distribution of predicted class values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.evaluation.ConfusionMatrix",
+      "name": "ConfusionMatrix",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.evaluation.ConfusionMatrix",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

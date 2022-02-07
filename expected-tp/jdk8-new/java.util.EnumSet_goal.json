@@ -1,0 +1,681 @@
+[
+  {
+    "signature": "java.util.EnumSet(java.lang.Class<E> elementType, java.lang.Enum<?>[] universe)",
+    "name": "java.util.EnumSet",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "elementType"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Enum;",
+          "name": "Enum[]",
+          "isArray": true
+        },
+        "name": "universe"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.EnumSet(java.lang.Class<E> elementType, java.lang.Enum<?>[] universe)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "noneOf(java.lang.Class<E> elementType)",
+    "name": "noneOf",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "elementType"
+      }
+    ],
+    "protocol": {
+      "member": "noneOf(java.lang.Class<E> elementType)",
+      "comment": "Creates an empty enum set with the specified element type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allOf(java.lang.Class<E> elementType)",
+    "name": "allOf",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Class",
+          "name": "Class",
+          "isArray": false
+        },
+        "name": "elementType"
+      }
+    ],
+    "protocol": {
+      "member": "allOf(java.lang.Class<E> elementType)",
+      "comment": "Creates an enum set containing all of the elements in the specified element type.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll()",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "addAll()",
+      "comment": "Adds all of the elements from the appropriate enum type to this enum set, which is empty prior to the call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyOf(java.util.EnumSet<E> s)",
+    "name": "copyOf",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.EnumSet",
+          "name": "EnumSet",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "copyOf(java.util.EnumSet<E> s)",
+      "comment": "Creates an enum set with the same element type as the specified enum set, initially containing the same elements (if any).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyOf(java.util.Collection<E> c)",
+    "name": "copyOf",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "copyOf(java.util.Collection<E> c)",
+      "comment": "Creates an enum set initialized from the specified collection. If the specified collection is an EnumSet instance, this static factory method behaves identically to method_0. Otherwise, the specified collection must contain at least one element (in order to determine the new enum set's element type).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "complementOf(java.util.EnumSet<E> s)",
+    "name": "complementOf",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.EnumSet",
+          "name": "EnumSet",
+          "isArray": false
+        },
+        "name": "s"
+      }
+    ],
+    "protocol": {
+      "member": "complementOf(java.util.EnumSet<E> s)",
+      "comment": "Creates an enum set with the same element type as the specified enum set, initially containing all the elements of this type that are not contained in the specified set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E e)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "of(E e)",
+      "comment": "Creates an enum set initially containing the specified element. Overloadings of this method exist to initialize an enum set with one through five elements. A sixth overloading is provided that uses the varargs feature. This overloading may be used to create an enum set initially containing an arbitrary number of elements, but is likely to run slower than the overloadings that do not use varargs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E e1, E e2)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e2"
+      }
+    ],
+    "protocol": {
+      "member": "of(E e1, E e2)",
+      "comment": "Creates an enum set initially containing the specified elements. Overloadings of this method exist to initialize an enum set with one through five elements. A sixth overloading is provided that uses the varargs feature. This overloading may be used to create an enum set initially containing an arbitrary number of elements, but is likely to run slower than the overloadings that do not use varargs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E e1, E e2, E e3)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e3"
+      }
+    ],
+    "protocol": {
+      "member": "of(E e1, E e2, E e3)",
+      "comment": "Creates an enum set initially containing the specified elements. Overloadings of this method exist to initialize an enum set with one through five elements. A sixth overloading is provided that uses the varargs feature. This overloading may be used to create an enum set initially containing an arbitrary number of elements, but is likely to run slower than the overloadings that do not use varargs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E e1, E e2, E e3, E e4)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e4"
+      }
+    ],
+    "protocol": {
+      "member": "of(E e1, E e2, E e3, E e4)",
+      "comment": "Creates an enum set initially containing the specified elements. Overloadings of this method exist to initialize an enum set with one through five elements. A sixth overloading is provided that uses the varargs feature. This overloading may be used to create an enum set initially containing an arbitrary number of elements, but is likely to run slower than the overloadings that do not use varargs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E e1, E e2, E e3, E e4, E e5)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e1"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e2"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e3"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e4"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e5"
+      }
+    ],
+    "protocol": {
+      "member": "of(E e1, E e2, E e3, E e4, E e5)",
+      "comment": "Creates an enum set initially containing the specified elements. Overloadings of this method exist to initialize an enum set with one through five elements. A sixth overloading is provided that uses the varargs feature. This overloading may be used to create an enum set initially containing an arbitrary number of elements, but is likely to run slower than the overloadings that do not use varargs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(E first, E... rest)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Enum;",
+          "name": "Enum[]",
+          "isArray": true
+        },
+        "name": "rest"
+      }
+    ],
+    "protocol": {
+      "member": "of(E first, E... rest)",
+      "comment": "Creates an enum set initially containing the specified elements. This factory, whose parameter list uses the varargs feature, may be used to create an enum set initially containing an arbitrary number of elements, but it is likely to run slower than the overloadings that do not use varargs.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "range(E from, E to)",
+    "name": "range",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "range(E from, E to)",
+      "comment": "Creates an enum set initially containing all of the elements in the range defined by the two specified endpoints. The returned set will contain the endpoints themselves, which may be identical but must not be out of order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addRange(E from, E to)",
+    "name": "addRange",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "addRange(E from, E to)",
+      "comment": "Adds the specified range to this enum set, which is empty prior to the call.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.EnumSet<E>",
+      "name": "java.util.EnumSet<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Returns a copy of this set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "complement()",
+    "name": "complement",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "complement()",
+      "comment": "Complements the contents of this enum set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "typeCheck(E e)",
+    "name": "typeCheck",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Enum",
+          "name": "Enum",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "typeCheck(E e)",
+      "comment": "Throws an exception if e is not of the correct type for this enum set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeReplace()",
+    "name": "writeReplace",
+    "containingClass": {
+      "qualifiedName": "java.util.EnumSet",
+      "name": "EnumSet",
+      "isArray": false
+    },
+    "targetClass": "java.util.EnumSet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "writeReplace()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

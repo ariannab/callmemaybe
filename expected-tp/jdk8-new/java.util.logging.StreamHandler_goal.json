@@ -1,0 +1,229 @@
+[
+  {
+    "signature": "java.util.logging.StreamHandler()",
+    "name": "java.util.logging.StreamHandler",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.logging.StreamHandler()",
+      "comment": "Create a StreamHandler, with no current output stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.logging.StreamHandler(java.io.OutputStream out, java.util.logging.Formatter formatter)",
+    "name": "java.util.logging.StreamHandler",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "out"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Formatter",
+          "name": "Formatter",
+          "isArray": false
+        },
+        "name": "formatter"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.logging.StreamHandler(java.io.OutputStream out, java.util.logging.Formatter formatter)",
+      "comment": "Create a StreamHandler with a given Formatter and output stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOutputStream(java.io.OutputStream out)",
+    "name": "setOutputStream",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "out"
+      }
+    ],
+    "protocol": {
+      "member": "setOutputStream(java.io.OutputStream out)",
+      "comment": "Change the output stream. <P> If there is a current output stream then the Formatter's tail string is written and the stream is flushed and closed. Then the output stream is replaced with the new output stream.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEncoding(java.lang.String encoding)",
+    "name": "setEncoding",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encoding"
+      }
+    ],
+    "protocol": {
+      "member": "setEncoding(java.lang.String encoding)",
+      "comment": "Set (or change) the character encoding used by this Handler.  The encoding should be set before any LogRecords are written to the Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "publish(java.util.logging.LogRecord record)",
+    "name": "publish",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "publish(java.util.logging.LogRecord record)",
+      "comment": "Format and publish a LogRecord.  The StreamHandler first checks if there is an OutputStream and if the given LogRecord has at least the required log level. If not it silently returns. If so, it calls any associated Filter to check if the record should be published. If so, it calls its Formatter to format the record and then writes the result to the current output stream.  If this is the first LogRecord to be written to a given OutputStream, the Formatter's \"head\" string is written to the stream before the LogRecord is written.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLoggable(java.util.logging.LogRecord record)",
+    "name": "isLoggable",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "isLoggable(java.util.logging.LogRecord record)",
+      "comment": "Check if this Handler would actually log a given LogRecord.  This method checks if the LogRecord has an appropriate level and whether it satisfies any Filter. It will also return false if no output stream has been assigned yet or the LogRecord is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flush()",
+      "comment": "Flush any buffered messages.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.StreamHandler",
+      "name": "StreamHandler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.StreamHandler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Close the current output stream.  The Formatter's \"tail\" string is written to the stream before it is closed. In addition, if the Formatter's \"head\" string has not yet been written to the stream, it will be written before the \"tail\" string. @exception SecurityException if a security manager exists and if the caller does not have method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

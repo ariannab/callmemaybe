@@ -1,0 +1,1414 @@
+[
+  {
+    "signature": "weka.classifiers.trees.j48.Distribution(int numBags, int numClasses)",
+    "name": "weka.classifiers.trees.j48.Distribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numBags"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.Distribution(int numBags, int numClasses)",
+      "comment": "Creates and initializes a new distribution.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.j48.Distribution(double[][] table)",
+    "name": "weka.classifiers.trees.j48.Distribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "table"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.Distribution(double[][] table)",
+      "comment": "Creates and initializes a new distribution using the given array. WARNING: it just copies a reference to this array.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.j48.Distribution(weka.core.Instances source)",
+    "name": "weka.classifiers.trees.j48.Distribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.Distribution(weka.core.Instances source)",
+      "comment": "Creates a distribution with only one bag according to instances in source. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.j48.Distribution(weka.core.Instances source, weka.classifiers.trees.j48.ClassifierSplitModel modelToUse)",
+    "name": "weka.classifiers.trees.j48.Distribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ClassifierSplitModel",
+          "name": "ClassifierSplitModel",
+          "isArray": false
+        },
+        "name": "modelToUse"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.Distribution(weka.core.Instances source, weka.classifiers.trees.j48.ClassifierSplitModel modelToUse)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.j48.Distribution(weka.classifiers.trees.j48.Distribution toMerge)",
+    "name": "weka.classifiers.trees.j48.Distribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+          "name": "Distribution",
+          "isArray": false
+        },
+        "name": "toMerge"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.Distribution(weka.classifiers.trees.j48.Distribution toMerge)",
+      "comment": "Creates distribution with only one bag by merging all bags of given distribution.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.trees.j48.Distribution(weka.classifiers.trees.j48.Distribution toMerge, int index)",
+    "name": "weka.classifiers.trees.j48.Distribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+          "name": "Distribution",
+          "isArray": false
+        },
+        "name": "toMerge"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.j48.Distribution(weka.classifiers.trees.j48.Distribution toMerge, int index)",
+      "comment": "Creates distribution with two bags by merging all bags apart of the indicated one.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "actualNumBags()",
+    "name": "actualNumBags",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "actualNumBags()",
+      "comment": "Returns number of non-empty bags of distribution.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "actualNumClasses()",
+    "name": "actualNumClasses",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "actualNumClasses()",
+      "comment": "Returns number of classes actually occuring in distribution.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "actualNumClasses(int bagIndex)",
+    "name": "actualNumClasses",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      }
+    ],
+    "protocol": {
+      "member": "actualNumClasses(int bagIndex)",
+      "comment": "Returns number of classes actually occuring in given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int bagIndex, weka.core.Instance instance)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "add(int bagIndex, weka.core.Instance instance)",
+      "comment": "Adds given instance to given bag. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sub(int bagIndex, weka.core.Instance instance)",
+    "name": "sub",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "sub(int bagIndex, weka.core.Instance instance)",
+      "comment": "Subtracts given instance from given bag. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(int bagIndex, double[] counts)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "counts"
+      }
+    ],
+    "protocol": {
+      "member": "add(int bagIndex, double[] counts)",
+      "comment": "Adds counts to given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addInstWithUnknown(weka.core.Instances source, int attIndex)",
+    "name": "addInstWithUnknown",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "protocol": {
+      "member": "addInstWithUnknown(weka.core.Instances source, int attIndex)",
+      "comment": "Adds all instances with unknown values for given attribute, weighted according to frequency of instances in each bag. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addRange(int bagIndex, weka.core.Instances source, int startIndex, int lastPlusOne)",
+    "name": "addRange",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lastPlusOne"
+      }
+    ],
+    "protocol": {
+      "member": "addRange(int bagIndex, weka.core.Instances source, int startIndex, int lastPlusOne)",
+      "comment": "Adds all instances in given range to given bag. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addWeights(weka.core.Instance instance, double[] weights)",
+    "name": "addWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "weights"
+      }
+    ],
+    "protocol": {
+      "member": "addWeights(weka.core.Instance instance, double[] weights)",
+      "comment": "Adds given instance to all bags weighting it according to given weights. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "check(double minNoObj)",
+    "name": "check",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "minNoObj"
+      }
+    ],
+    "protocol": {
+      "member": "check(double minNoObj)",
+      "comment": "Checks if at least two bags contain a minimum number of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clone()",
+    "name": "clone",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object",
+      "name": "java.lang.Object",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clone()",
+      "comment": "Clones distribution (Deep copy of distribution).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "del(int bagIndex, weka.core.Instance instance)",
+    "name": "del",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "del(int bagIndex, weka.core.Instance instance)",
+      "comment": "Deletes given instance from given bag. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "delRange(int bagIndex, weka.core.Instances source, int startIndex, int lastPlusOne)",
+    "name": "delRange",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lastPlusOne"
+      }
+    ],
+    "protocol": {
+      "member": "delRange(int bagIndex, weka.core.Instances source, int startIndex, int lastPlusOne)",
+      "comment": "Deletes all instances in given range from given bag. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "dumpDistribution()",
+    "name": "dumpDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "dumpDistribution()",
+      "comment": "Prints distribution.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "initialize()",
+    "name": "initialize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "initialize()",
+      "comment": "Sets all counts to zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "matrix()",
+    "name": "matrix",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "matrix()",
+      "comment": "Returns matrix with distribution of class values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxBag()",
+    "name": "maxBag",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxBag()",
+      "comment": "Returns index of bag containing maximum number of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxClass()",
+    "name": "maxClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "maxClass()",
+      "comment": "Returns class with highest frequency over all bags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "maxClass(int index)",
+    "name": "maxClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "maxClass(int index)",
+      "comment": "Returns class with highest frequency for given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numBags()",
+    "name": "numBags",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numBags()",
+      "comment": "Returns number of bags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numClasses()",
+    "name": "numClasses",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numClasses()",
+      "comment": "Returns number of classes.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numCorrect()",
+    "name": "numCorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numCorrect()",
+      "comment": "Returns method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numCorrect(int index)",
+    "name": "numCorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "numCorrect(int index)",
+      "comment": "Returns method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numIncorrect()",
+    "name": "numIncorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "numIncorrect()",
+      "comment": "Returns total-method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "numIncorrect(int index)",
+    "name": "numIncorrect",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "numIncorrect(int index)",
+      "comment": "Returns method_0-method_1",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "perClassPerBag(int bagIndex, int classIndex)",
+    "name": "perClassPerBag",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "perClassPerBag(int bagIndex, int classIndex)",
+      "comment": "Returns number of (possibly fractional) instances of given class in given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "perBag(int bagIndex)",
+    "name": "perBag",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "bagIndex"
+      }
+    ],
+    "protocol": {
+      "member": "perBag(int bagIndex)",
+      "comment": "Returns number of (possibly fractional) instances in given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "perClass(int classIndex)",
+    "name": "perClass",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "perClass(int classIndex)",
+      "comment": "Returns number of (possibly fractional) instances of given class.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "laplaceProb(int classIndex)",
+    "name": "laplaceProb",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "laplaceProb(int classIndex)",
+      "comment": "Returns relative frequency of class over all bags with Laplace correction.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "laplaceProb(int classIndex, int intIndex)",
+    "name": "laplaceProb",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "intIndex"
+      }
+    ],
+    "protocol": {
+      "member": "laplaceProb(int classIndex, int intIndex)",
+      "comment": "Returns relative frequency of class for given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prob(int classIndex)",
+    "name": "prob",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "prob(int classIndex)",
+      "comment": "Returns relative frequency of class over all bags.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "prob(int classIndex, int intIndex)",
+    "name": "prob",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "intIndex"
+      }
+    ],
+    "protocol": {
+      "member": "prob(int classIndex, int intIndex)",
+      "comment": "Returns relative frequency of class for given bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "subtract(weka.classifiers.trees.j48.Distribution toSubstract)",
+    "name": "subtract",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "weka.classifiers.trees.j48.Distribution",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+          "name": "Distribution",
+          "isArray": false
+        },
+        "name": "toSubstract"
+      }
+    ],
+    "protocol": {
+      "member": "subtract(weka.classifiers.trees.j48.Distribution toSubstract)",
+      "comment": "Subtracts the given distribution from this one. The results has only one bag.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "total()",
+    "name": "total",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "total()",
+      "comment": "Returns total number of (possibly fractional) instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shift(int from, int to, weka.core.Instance instance)",
+    "name": "shift",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "shift(int from, int to, weka.core.Instance instance)",
+      "comment": "Shifts given instance from one bag to another one. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shiftRange(int from, int to, weka.core.Instances source, int startIndex, int lastPlusOne)",
+    "name": "shiftRange",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "startIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "lastPlusOne"
+      }
+    ],
+    "protocol": {
+      "member": "shiftRange(int from, int to, weka.core.Instances source, int startIndex, int lastPlusOne)",
+      "comment": "Shifts all instances in given range from one bag to another one. @exception Exception if something goes wrong",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.j48.Distribution",
+      "name": "Distribution",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.j48.Distribution",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

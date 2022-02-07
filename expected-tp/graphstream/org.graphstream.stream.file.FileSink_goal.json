@@ -1,0 +1,264 @@
+[
+  {
+    "signature": "writeAll(org.graphstream.graph.Graph graph, java.lang.String fileName)",
+    "name": "writeAll",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fileName"
+      }
+    ],
+    "protocol": {
+      "member": "writeAll(org.graphstream.graph.Graph graph, java.lang.String fileName)",
+      "comment": "Write the current graph state in one big non-interruptible operation. This operation is a \"snapshot\" of the graph, it will never convey the dynamics of the graph. To ensure you store the graph \"as it evolves in time\" you must use the #method_0 or #method_1 as soon as the graph appears (or any source of graph event, any descendant of Source will do).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeAll(org.graphstream.graph.Graph graph, java.io.OutputStream stream)",
+    "name": "writeAll",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "stream"
+      }
+    ],
+    "protocol": {
+      "member": "writeAll(org.graphstream.graph.Graph graph, java.io.OutputStream stream)",
+      "comment": "Write the current graph state in one big non-interruptible operation. This operation is a \"snapshot\" of the graph, it will never convey the dynamics of the graph. To ensure you store the graph \"as it evolves in time\" you must use the #method_0 or #method_1 or #method_2 as soon as the graph appears (or any source of graph event, any descendant of Source will do).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "writeAll(org.graphstream.graph.Graph graph, java.io.Writer writer)",
+    "name": "writeAll",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.io.Writer",
+          "name": "Writer",
+          "isArray": false
+        },
+        "name": "writer"
+      }
+    ],
+    "protocol": {
+      "member": "writeAll(org.graphstream.graph.Graph graph, java.io.Writer writer)",
+      "comment": "Write the current graph state in one big non-interruptible operation. This operation is a \"snapshot\" of the graph, it will never convey the dynamics of the graph. To ensure you store the graph \"as it evolves in time\" you must use the #method_0 or #method_1 or #method_2 as soon as the graph appears (or any source of graph event, any descendant of Source will do).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "begin(java.lang.String fileName)",
+    "name": "begin",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "fileName"
+      }
+    ],
+    "protocol": {
+      "member": "begin(java.lang.String fileName)",
+      "comment": "Begin the output of the given stream of graph events. The graph events can come from any input (implementation of Source or you can directly use the methods inherited from Sink. Once the writing is started using method_0, you must close it using #method_1 when done to ensure data is correctly stored in the file.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "begin(java.io.OutputStream stream)",
+    "name": "begin",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.OutputStream",
+          "name": "OutputStream",
+          "isArray": false
+        },
+        "name": "stream"
+      }
+    ],
+    "protocol": {
+      "member": "begin(java.io.OutputStream stream)",
+      "comment": "Begin the output of the given stream of graph events. The graph events can come from any input (implementation of Source or you can directly use the methods inherited from Sink. Once the writing is started using method_0, you must close it using #method_1 when done to ensure data is correctly stored in the file.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "begin(java.io.Writer writer)",
+    "name": "begin",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.io.Writer",
+          "name": "Writer",
+          "isArray": false
+        },
+        "name": "writer"
+      }
+    ],
+    "protocol": {
+      "member": "begin(java.io.Writer writer)",
+      "comment": "Begin the output of the given stream of graph events. The graph events can come from any input (implementation of Source or you can directly use the methods inherited from Sink. Once the writing is started using method_0, you must close it using #method_1 when done to ensure data is correctly stored in the file.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flush()",
+      "comment": "Ensure all data sent to the output are correctly written.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "end()",
+    "name": "end",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.stream.file.FileSink",
+      "name": "FileSink",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.stream.file.FileSink",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "end()",
+      "comment": "End the writing process started with #method_0 or #method_1.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "signature": "inputShape()",
+    "name": "inputShape",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.TerminalOp",
+      "name": "TerminalOp",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.TerminalOp",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.StreamShape",
+      "name": "java.util.stream.StreamShape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "inputShape()",
+      "comment": "Gets the shape of the input type of this operation. @implSpec The default returns method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOpFlags()",
+    "name": "getOpFlags",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.TerminalOp",
+      "name": "TerminalOp",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.TerminalOp",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOpFlags()",
+      "comment": "Gets the stream flags of the operation. Terminal operations may set a limited subset of the stream flags defined in StreamOpFlag, and these flags are combined with the previously combined stream and intermediate operation flags for the pipeline. @implSpec The default implementation returns zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateParallel(java.util.stream.PipelineHelper<E_IN> helper, java.util.Spliterator<P_IN> spliterator)",
+    "name": "evaluateParallel",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.TerminalOp",
+      "name": "TerminalOp",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.TerminalOp",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateParallel(java.util.stream.PipelineHelper<E_IN> helper, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Performs a parallel evaluation of the operation using the specified PipelineHelper, which describes the upstream intermediate operations. @implSpec The default performs a sequential evaluation of the operation using the specified PipelineHelper.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "evaluateSequential(java.util.stream.PipelineHelper<E_IN> helper, java.util.Spliterator<P_IN> spliterator)",
+    "name": "evaluateSequential",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.TerminalOp",
+      "name": "TerminalOp",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.TerminalOp",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "R",
+      "name": "R",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.stream.PipelineHelper",
+          "name": "PipelineHelper",
+          "isArray": false
+        },
+        "name": "helper"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Spliterator",
+          "name": "Spliterator",
+          "isArray": false
+        },
+        "name": "spliterator"
+      }
+    ],
+    "protocol": {
+      "member": "evaluateSequential(java.util.stream.PipelineHelper<E_IN> helper, java.util.Spliterator<P_IN> spliterator)",
+      "comment": "Performs a sequential evaluation of the operation using the specified PipelineHelper, which describes the upstream intermediate operations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

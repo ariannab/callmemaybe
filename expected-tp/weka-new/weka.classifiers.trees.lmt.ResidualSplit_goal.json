@@ -1,0 +1,426 @@
+[
+  {
+    "signature": "weka.classifiers.trees.lmt.ResidualSplit(int attIndex)",
+    "name": "weka.classifiers.trees.lmt.ResidualSplit",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "attIndex"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.trees.lmt.ResidualSplit(int attIndex)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data, double[][] dataZs, double[][] dataWs)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataZs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataWs"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data, double[][] dataZs, double[][] dataWs)",
+      "comment": "Builds the split. Needs the Z/W values of LogitBoost for the set of instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSplitPoint()",
+    "name": "getSplitPoint",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSplitPoint()",
+      "comment": "Selects split point for numeric attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entropyGain()",
+    "name": "entropyGain",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "entropyGain()",
+      "comment": "Computes entropy gain for current split.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "entropy(double[][] dataZs, double[][] dataWs)",
+    "name": "entropy",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataZs"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "dataWs"
+      }
+    ],
+    "protocol": {
+      "member": "entropy(double[][] dataZs, double[][] dataWs)",
+      "comment": "Helper function to compute entropy from Z/W values.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkModel(int minNumInstances)",
+    "name": "checkModel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minNumInstances"
+      }
+    ],
+    "protocol": {
+      "member": "checkModel(int minNumInstances)",
+      "comment": "Checks if there are at least 2 subsets that contain >= minNumInstances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "leftSide(weka.core.Instances data)",
+    "name": "leftSide",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "leftSide(weka.core.Instances data)",
+      "comment": "Returns name of splitting attribute (left side of condition).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "rightSide(int index, weka.core.Instances data)",
+    "name": "rightSide",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "rightSide(int index, weka.core.Instances data)",
+      "comment": "Prints the condition satisfied by instances in a subset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "whichSubset(weka.core.Instance instance)",
+    "name": "whichSubset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "whichSubset(weka.core.Instance instance)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildClassifier(weka.core.Instances data)",
+    "name": "buildClassifier",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "buildClassifier(weka.core.Instances data)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weights(weka.core.Instance instance)",
+    "name": "weights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instance",
+          "name": "Instance",
+          "isArray": false
+        },
+        "name": "instance"
+      }
+    ],
+    "protocol": {
+      "member": "weights(weka.core.Instance instance)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sourceExpression(int index, weka.core.Instances data)",
+    "name": "sourceExpression",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "data"
+      }
+    ],
+    "protocol": {
+      "member": "sourceExpression(int index, weka.core.Instances data)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.trees.lmt.ResidualSplit",
+      "name": "ResidualSplit",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.trees.lmt.ResidualSplit",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "signature": "org.graphstream.ui.layout.LayoutRunner(org.graphstream.stream.Source source, org.graphstream.ui.layout.Layout layout)",
+    "name": "org.graphstream.ui.layout.LayoutRunner",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.stream.Source",
+          "name": "Source",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.layout.Layout",
+          "name": "Layout",
+          "isArray": false
+        },
+        "name": "layout"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.layout.LayoutRunner(org.graphstream.stream.Source source, org.graphstream.ui.layout.Layout layout)",
+      "comment": "New layout runner that listens at the given source and compute a layout on its graph structure in a distinct thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.graphstream.ui.layout.LayoutRunner(org.graphstream.stream.Source source, org.graphstream.ui.layout.Layout layout, boolean start)",
+    "name": "org.graphstream.ui.layout.LayoutRunner",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.stream.Source",
+          "name": "Source",
+          "isArray": false
+        },
+        "name": "source"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.layout.Layout",
+          "name": "Layout",
+          "isArray": false
+        },
+        "name": "layout"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "start"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.layout.LayoutRunner(org.graphstream.stream.Source source, org.graphstream.ui.layout.Layout layout, boolean start)",
+      "comment": "New layout runner that listen at the given source and compute a layout on its graph structure in a distinct thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.graphstream.ui.layout.LayoutRunner(org.graphstream.graph.Graph graph, org.graphstream.ui.layout.Layout layout, boolean start, boolean replay)",
+    "name": "org.graphstream.ui.layout.LayoutRunner",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.layout.Layout",
+          "name": "Layout",
+          "isArray": false
+        },
+        "name": "layout"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "start"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "replay"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.layout.LayoutRunner(org.graphstream.graph.Graph graph, org.graphstream.ui.layout.Layout layout, boolean start, boolean replay)",
+      "comment": "New layout runner that listen at the given graph and compute a layout on its graph structure in a distinct thread. A pipe is still created to listen at the graph. This means that the graph is never directly used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newLayoutPipe()",
+    "name": "newLayoutPipe",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.stream.ProxyPipe",
+      "name": "org.graphstream.stream.ProxyPipe",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newLayoutPipe()",
+      "comment": "Pipe out whose input is connected to the layout algorithm. You can safely connect as a sink to it to receive events of the layout from a distinct thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "run()",
+    "name": "run",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "run()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "release()",
+    "name": "release",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "release()",
+      "comment": "Release any link to the source of events and stop the layout proces. The thread will end after this method has been called.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "nap(long ms)",
+    "name": "nap",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "ms"
+      }
+    ],
+    "protocol": {
+      "member": "nap(long ms)",
+      "comment": "Sleep for the given period of time in milliseconds.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNaps(long longNap, long shortNap)",
+    "name": "setNaps",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.layout.LayoutRunner",
+      "name": "LayoutRunner",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.layout.LayoutRunner",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "longNap"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "shortNap"
+      }
+    ],
+    "protocol": {
+      "member": "setNaps(long longNap, long shortNap)",
+      "comment": "Configure the time to wait between each layout invocation. The long nap configures the time to wait when the last layout invocation indicated the layout was stabilized, the short nap is used in the other case.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

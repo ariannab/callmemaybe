@@ -1,0 +1,278 @@
+[
+  {
+    "signature": "spliterator()",
+    "name": "spliterator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Spliterator<T>",
+      "name": "java.util.Spliterator<T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "spliterator()",
+      "comment": "Returns a Spliterator describing the elements contained in this Node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "forEach(java.util.function.Consumer<? super T> consumer)",
+    "name": "forEach",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Consumer",
+          "name": "Consumer",
+          "isArray": false
+        },
+        "name": "consumer"
+      }
+    ],
+    "protocol": {
+      "member": "forEach(java.util.function.Consumer<? super T> consumer)",
+      "comment": "Traverses the elements of this node, and invoke the provided Consumer with each element. Elements are provided in encounter order if the source for the Node has a defined encounter order.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChildCount()",
+    "name": "getChildCount",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getChildCount()",
+      "comment": "Returns the number of child nodes of this node. @implSpec The default implementation returns zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChild(int i)",
+    "name": "getChild",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "i"
+      }
+    ],
+    "protocol": {
+      "member": "getChild(int i)",
+      "comment": "Retrieves the child Node at a given index. @implSpec The default implementation always throws IndexOutOfBoundsException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "truncate(long from, long to, java.util.function.IntFunction<T[]> generator)",
+    "name": "truncate",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Node<T>",
+      "name": "java.util.stream.Node<T>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "truncate(long from, long to, java.util.function.IntFunction<T[]> generator)",
+      "comment": "Return a node describing a subsequence of the elements of this node, starting at the given inclusive start offset and ending at the given exclusive end offset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "asArray(java.util.function.IntFunction<T[]> generator)",
+    "name": "asArray",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.IntFunction",
+          "name": "IntFunction",
+          "isArray": false
+        },
+        "name": "generator"
+      }
+    ],
+    "protocol": {
+      "member": "asArray(java.util.function.IntFunction<T[]> generator)",
+      "comment": "Provides an array view of the contents of this node. Depending on the underlying implementation, this may return a reference to an internal array rather than a copy. Since the returned array may be shared, the returned array should not be modified. The generator function may be consulted to create the array if a new array needs to be created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyInto(T[] array, int offset)",
+    "name": "copyInto",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "array"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "offset"
+      }
+    ],
+    "protocol": {
+      "member": "copyInto(T[] array, int offset)",
+      "comment": "Copies the content of this Node into an array, starting at a given offset into the array. It is the caller's responsibility to ensure there is sufficient room in the array, otherwise unspecified behaviour will occur if the array length is less than the number of elements contained in this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getShape()",
+    "name": "getShape",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.stream.StreamShape",
+      "name": "java.util.stream.StreamShape",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getShape()",
+      "comment": "Gets the StreamShape associated with this Node. @implSpec The default in Node returns method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "count()",
+    "name": "count",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Node",
+      "name": "Node",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Node",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "count()",
+      "comment": "Returns the number of elements contained in this node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

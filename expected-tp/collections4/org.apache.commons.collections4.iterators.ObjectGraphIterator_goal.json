@@ -1,0 +1,220 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.ObjectGraphIterator(E root, org.apache.commons.collections4.Transformer<? super E, ? extends E> transformer)",
+    "name": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "root"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.collections4.Transformer",
+          "name": "Transformer",
+          "isArray": false
+        },
+        "name": "transformer"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.ObjectGraphIterator(E root, org.apache.commons.collections4.Transformer<? super E, ? extends E> transformer)",
+      "comment": "Constructs an ObjectGraphIterator using a root object and transformer.  The root object can be an iterator, in which case it will be immediately looped around.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.ObjectGraphIterator(java.util.Iterator<? extends E> rootIterator)",
+    "name": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "rootIterator"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.ObjectGraphIterator(java.util.Iterator<? extends E> rootIterator)",
+      "comment": "Constructs a ObjectGraphIterator that will handle an iterator of iterators.  This constructor exists for convenience to emphasise that this class can be used to iterate over nested iterators. That is to say that the iterator passed in here contains other iterators, which may in turn contain further iterators.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateCurrentIterator()",
+    "name": "updateCurrentIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "updateCurrentIterator()",
+      "comment": "Loops around the iterators to find the next value to return.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findNext(E value)",
+    "name": "findNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "findNext(E value)",
+      "comment": "Finds the next object in the iteration given any start object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findNextByIterator(java.util.Iterator<? extends E> iterator)",
+    "name": "findNextByIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "findNextByIterator(java.util.Iterator<? extends E> iterator)",
+      "comment": "Finds the next object in the iteration given an iterator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "Checks whether there are any more elements in the iteration to obtain.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Gets the next element of the iteration.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+      "name": "ObjectGraphIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.ObjectGraphIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "Removes from the underlying collection the last element returned.  This method calls method_0 on the underlying Iterator and it may throw an UnsupportedOperationException if the underlying Iterator does not support this method.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

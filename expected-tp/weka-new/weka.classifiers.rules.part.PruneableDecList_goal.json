@@ -1,0 +1,219 @@
+[
+  {
+    "signature": "weka.classifiers.rules.part.PruneableDecList(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, int minNum)",
+    "name": "weka.classifiers.rules.part.PruneableDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.PruneableDecList",
+      "name": "PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.PruneableDecList",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.trees.j48.ModelSelection",
+          "name": "ModelSelection",
+          "isArray": false
+        },
+        "name": "toSelectLocModel"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "minNum"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.rules.part.PruneableDecList(weka.classifiers.trees.j48.ModelSelection toSelectLocModel, int minNum)",
+      "comment": "Constructor for pruneable partial tree structure.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildRule(weka.core.Instances train, weka.core.Instances test)",
+    "name": "buildRule",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.PruneableDecList",
+      "name": "PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      }
+    ],
+    "protocol": {
+      "member": "buildRule(weka.core.Instances train, weka.core.Instances test)",
+      "comment": "Method for building a pruned partial tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "buildDecList(weka.core.Instances train, weka.core.Instances test, boolean leaf)",
+    "name": "buildDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.PruneableDecList",
+      "name": "PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "leaf"
+      }
+    ],
+    "protocol": {
+      "member": "buildDecList(weka.core.Instances train, weka.core.Instances test, boolean leaf)",
+      "comment": "Builds the partial tree with hold out set",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNewDecList(weka.core.Instances train, weka.core.Instances test, boolean leaf)",
+    "name": "getNewDecList",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.PruneableDecList",
+      "name": "PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.rules.part.ClassifierDecList",
+      "name": "weka.classifiers.rules.part.ClassifierDecList",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "train"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "test"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "leaf"
+      }
+    ],
+    "protocol": {
+      "member": "getNewDecList(weka.core.Instances train, weka.core.Instances test, boolean leaf)",
+      "comment": "Returns a newly created tree.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "pruneEnd()",
+    "name": "pruneEnd",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.PruneableDecList",
+      "name": "PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "pruneEnd()",
+      "comment": "Prunes the end of the rule.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.rules.part.PruneableDecList",
+      "name": "PruneableDecList",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.rules.part.PruneableDecList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "signature": "java.util.Observable()",
+    "name": "java.util.Observable",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.Observable()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addObserver(java.util.Observer o)",
+    "name": "addObserver",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Observer",
+          "name": "Observer",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "addObserver(java.util.Observer o)",
+      "comment": "Adds an observer to the set of observers for this object, provided that it is not the same as some observer already in the set. The order in which notifications will be delivered to multiple observers is not specified. See the class comment.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteObserver(java.util.Observer o)",
+    "name": "deleteObserver",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Observer",
+          "name": "Observer",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "deleteObserver(java.util.Observer o)",
+      "comment": "Deletes an observer from the set of observers of this object. Passing null to this method will have no effect.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "notifyObservers()",
+    "name": "notifyObservers",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "notifyObservers()",
+      "comment": "If this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed.  Each observer has its update method called with two arguments: this observable object and null. In other words, this method is equivalent to: <tt> method_0</tt>",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "notifyObservers(java.lang.Object arg)",
+    "name": "notifyObservers",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "arg"
+      }
+    ],
+    "protocol": {
+      "member": "notifyObservers(java.lang.Object arg)",
+      "comment": "If this object has changed, as indicated by the hasChanged method, then notify all of its observers and then call the clearChanged method to indicate that this object has no longer changed.  Each observer has its update method called with two arguments: this observable object and the arg argument.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteObservers()",
+    "name": "deleteObservers",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "deleteObservers()",
+      "comment": "Clears the observer list so that this object no longer has any observers.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setChanged()",
+    "name": "setChanged",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "setChanged()",
+      "comment": "Marks this Observable object as having been changed; the hasChanged method will now return true.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clearChanged()",
+    "name": "clearChanged",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clearChanged()",
+      "comment": "Indicates that this object has no longer changed, or that it has already notified all of its observers of its most recent change, so that the hasChanged method will now return false. This method is called automatically by the notifyObservers methods.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasChanged()",
+    "name": "hasChanged",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasChanged()",
+      "comment": "Tests if this object has changed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "countObservers()",
+    "name": "countObservers",
+    "containingClass": {
+      "qualifiedName": "java.util.Observable",
+      "name": "Observable",
+      "isArray": false
+    },
+    "targetClass": "java.util.Observable",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "countObservers()",
+      "comment": "Returns the number of observers of this Observable object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,685 @@
+[
+  {
+    "signature": "cern.colt.list.AbstractList()",
+    "name": "cern.colt.list.AbstractList",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "cern.colt.list.AbstractList()",
+      "comment": "Makes this class non instantiable, but still let's others inherit from it.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAllOf(java.util.Collection collection)",
+    "name": "addAllOf",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "collection"
+      }
+    ],
+    "protocol": {
+      "member": "addAllOf(java.util.Collection collection)",
+      "comment": "Appends all of the elements of the specified Collection to the receiver. @exception ClassCastException if an element in the collection is not of the same parameter type of the receiver.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "beforeInsertAllOf(int index, java.util.Collection collection)",
+    "name": "beforeInsertAllOf",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "collection"
+      }
+    ],
+    "protocol": {
+      "member": "beforeInsertAllOf(int index, java.util.Collection collection)",
+      "comment": "Shifts the element currently at that position (if any) and any subsequent elements to the right (increases their indices).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "beforeInsertDummies(int index, int length)",
+    "name": "beforeInsertDummies",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "length"
+      }
+    ],
+    "protocol": {
+      "member": "beforeInsertDummies(int index, int length)",
+      "comment": "Inserts length dummy elements before the specified position into the receiver. Shifts the element currently at that position (if any) and any subsequent elements to the right. <b>This method must set the new size to be method_0+length.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkRange(int index, int theSize)",
+    "name": "checkRange",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "theSize"
+      }
+    ],
+    "protocol": {
+      "member": "checkRange(int index, int theSize)",
+      "comment": "Checks if the given index is in range.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkRangeFromTo(int from, int to, int theSize)",
+    "name": "checkRangeFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "theSize"
+      }
+    ],
+    "protocol": {
+      "member": "checkRangeFromTo(int from, int to, int theSize)",
+      "comment": "Checks if the given range is within the contained array's bounds.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "Removes all elements from the receiver. The receiver will be empty after this call returns, but keep its current capacity.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeSort()",
+    "name": "mergeSort",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "mergeSort()",
+      "comment": "Sorts the receiver into ascending order. This sort is guaranteed to be stable: equal elements will not be reordered as a result of the sort. The sorting algorithm is a modified mergesort (in which the merge is omitted if the highest element in the low sublist is less than the lowest element in the high sublist). This algorithm offers guaranteed n*method_0 performance, and can approach linear performance on nearly sorted lists. You should never call this method unless you are sure that this particular sorting algorithm is the right one for your data set. It is generally better to call method_1 or method_2 instead, because those methods automatically choose the best sorting algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "mergeSortFromTo(int from, int to)",
+    "name": "mergeSortFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "mergeSortFromTo(int from, int to)",
+      "comment": "Sorts the receiver into ascending order. This sort is guaranteed to be stable: equal elements will not be reordered as a result of the sort. The sorting algorithm is a modified mergesort (in which the merge is omitted if the highest element in the low sublist is less than the lowest element in the high sublist). This algorithm offers guaranteed n*method_0 performance, and can approach linear performance on nearly sorted lists. You should never call this method unless you are sure that this particular sorting algorithm is the right one for your data set. It is generally better to call method_1 or method_2 instead, because those methods automatically choose the best sorting algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "quickSort()",
+    "name": "quickSort",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "quickSort()",
+      "comment": "Sorts the receiver into ascending order. The sorting algorithm is a tuned quicksort, adapted from Jon L. Bentley and M. Douglas McIlroy's \"Engineering a Sort Function\", Software-Practice and Experience, Vol. method_0 P. 1249-1265 (November 1993). This algorithm offers n*method_1 performance on many data sets that cause other quicksorts to degrade to quadratic performance. You should never call this method unless you are sure that this particular sorting algorithm is the right one for your data set. It is generally better to call method_2 or method_3 instead, because those methods automatically choose the best sorting algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "quickSortFromTo(int from, int to)",
+    "name": "quickSortFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "quickSortFromTo(int from, int to)",
+      "comment": "Sorts the specified range of the receiver into ascending order. The sorting algorithm is a tuned quicksort, adapted from Jon L. Bentley and M. Douglas McIlroy's \"Engineering a Sort Function\", Software-Practice and Experience, Vol. method_0 P. 1249-1265 (November 1993). This algorithm offers n*method_1 performance on many data sets that cause other quicksorts to degrade to quadratic performance. You should never call this method unless you are sure that this particular sorting algorithm is the right one for your data set. It is generally better to call method_2 or method_3 instead, because those methods automatically choose the best sorting algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(int index)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "index"
+      }
+    ],
+    "protocol": {
+      "member": "remove(int index)",
+      "comment": "Removes the element at the specified position from the receiver. Shifts any subsequent elements to the left.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeFromTo(int fromIndex, int toIndex)",
+    "name": "removeFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "fromIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "toIndex"
+      }
+    ],
+    "protocol": {
+      "member": "removeFromTo(int fromIndex, int toIndex)",
+      "comment": "Removes from the receiver all elements whose index is between from, inclusive and to, inclusive. Shifts any succeeding elements to the left (reduces their index). This call shortens the list by (to - from + 1) elements.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceFromWith(int from, java.util.Collection other)",
+    "name": "replaceFromWith",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "replaceFromWith(int from, java.util.Collection other)",
+      "comment": "Replaces the part of the receiver starting at from (inclusive) with all the elements of the specified collection. Does not alter the size of the receiver. Replaces exactly method_0-from, method_1 elements.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reverse()",
+    "name": "reverse",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reverse()",
+      "comment": "Reverses the elements of the receiver. Last becomes first, second last becomes second first, and so on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSize(int newSize)",
+    "name": "setSize",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "newSize"
+      }
+    ],
+    "protocol": {
+      "member": "setSize(int newSize)",
+      "comment": "Sets the size of the receiver. If the new size is greater than the current size, new null or zero items are added to the end of the receiver. If the new size is less than the current size, all components at index newSize and greater are discarded. This method does not release any superfluos internal memory. Use method trimToSize to release superfluos internal memory.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shuffle()",
+    "name": "shuffle",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "shuffle()",
+      "comment": "Randomly permutes the receiver. After invocation, all elements will be at random positions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "shuffleFromTo(int from, int to)",
+    "name": "shuffleFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "shuffleFromTo(int from, int to)",
+      "comment": "Randomly permutes the receiver between from (inclusive) and to (inclusive).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sort()",
+    "name": "sort",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sort()",
+      "comment": "Sorts the receiver into ascending order. The sorting algorithm is dynamically chosen according to the characteristics of the data set. This implementation simply calls method_0. Override method_0 if you can determine which sort is most appropriate for the given data set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sortFromTo(int from, int to)",
+    "name": "sortFromTo",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "from"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "to"
+      }
+    ],
+    "protocol": {
+      "member": "sortFromTo(int from, int to)",
+      "comment": "Sorts the specified range of the receiver into ascending order. The sorting algorithm is dynamically chosen according to the characteristics of the data set. This default implementation simply calls quickSort. Override this method if you can determine which sort is most appropriate for the given data set.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "trimToSize()",
+    "name": "trimToSize",
+    "containingClass": {
+      "qualifiedName": "cern.colt.list.AbstractList",
+      "name": "AbstractList",
+      "isArray": false
+    },
+    "targetClass": "cern.colt.list.AbstractList",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "trimToSize()",
+      "comment": "Trims the capacity of the receiver to be the receiver's current size. Releases any superfluos internal memory. An application can use this operation to minimize the storage of the receiver.  This default implementation does nothing. Override this method in space efficient implementations.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

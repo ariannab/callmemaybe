@@ -1,0 +1,160 @@
+[
+  {
+    "signature": "submit(java.util.concurrent.Callable<V> task)",
+    "name": "submit",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionService",
+      "name": "CompletionService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<V>",
+      "name": "java.util.concurrent.Future<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.Callable",
+          "name": "Callable",
+          "isArray": false
+        },
+        "name": "task"
+      }
+    ],
+    "protocol": {
+      "member": "submit(java.util.concurrent.Callable<V> task)",
+      "comment": "Submits a value-returning task for execution and returns a Future representing the pending results of the task. Upon completion, this task may be taken or polled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "submit(java.lang.Runnable task, V result)",
+    "name": "submit",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionService",
+      "name": "CompletionService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<V>",
+      "name": "java.util.concurrent.Future<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Runnable",
+          "name": "Runnable",
+          "isArray": false
+        },
+        "name": "task"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "result"
+      }
+    ],
+    "protocol": {
+      "member": "submit(java.lang.Runnable task, V result)",
+      "comment": "Submits a Runnable task for execution and returns a Future representing that task. Upon completion, this task may be taken or polled.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "take()",
+    "name": "take",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionService",
+      "name": "CompletionService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<V>",
+      "name": "java.util.concurrent.Future<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "take()",
+      "comment": "Retrieves and removes the Future representing the next completed task, waiting if none are yet present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll()",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionService",
+      "name": "CompletionService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<V>",
+      "name": "java.util.concurrent.Future<V>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "poll()",
+      "comment": "Retrieves and removes the Future representing the next completed task, or null if none are present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+    "name": "poll",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.CompletionService",
+      "name": "CompletionService",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.CompletionService",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.concurrent.Future<V>",
+      "name": "java.util.concurrent.Future<V>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "long",
+          "name": "long",
+          "isArray": false
+        },
+        "name": "timeout"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.concurrent.TimeUnit",
+          "name": "TimeUnit",
+          "isArray": false
+        },
+        "name": "unit"
+      }
+    ],
+    "protocol": {
+      "member": "poll(long timeout, java.util.concurrent.TimeUnit unit)",
+      "comment": "Retrieves and removes the Future representing the next completed task, waiting if necessary up to the specified wait time if none are yet present.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

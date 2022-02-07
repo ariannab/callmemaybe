@@ -1,0 +1,129 @@
+[
+  {
+    "signature": "getLoggerNames()",
+    "name": "getLoggerNames",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LoggingMXBean",
+      "name": "LoggingMXBean",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LoggingMXBean",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.List<java.lang.String>",
+      "name": "java.util.List<java.lang.String>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLoggerNames()",
+      "comment": "Returns the list of currently registered logger names. This method calls method_0 and returns a list of the logger names.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLoggerLevel(java.lang.String loggerName)",
+    "name": "getLoggerLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LoggingMXBean",
+      "name": "LoggingMXBean",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LoggingMXBean",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "loggerName"
+      }
+    ],
+    "protocol": {
+      "member": "getLoggerLevel(java.lang.String loggerName)",
+      "comment": "Gets the name of the log level associated with the specified logger. If the specified logger does not exist, null is returned. This method first finds the logger of the given name and then returns the name of the log level by calling:  method_2 method_0.method_4 method_1;   If the Level of the specified logger is null, which means that this logger's effective level is inherited from its parent, an empty string will be returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLoggerLevel(java.lang.String loggerName, java.lang.String levelName)",
+    "name": "setLoggerLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LoggingMXBean",
+      "name": "LoggingMXBean",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LoggingMXBean",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "loggerName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "levelName"
+      }
+    ],
+    "protocol": {
+      "member": "setLoggerLevel(java.lang.String loggerName, java.lang.String levelName)",
+      "comment": "Sets the specified logger to the specified new level. If the levelName is not null, the level of the specified logger is set to the parsed Level matching the levelName. If the levelName is null, the level of the specified logger is set to null and the effective level of the logger is inherited from its nearest ancestor with a specific (non-null) level value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getParentLoggerName(java.lang.String loggerName)",
+    "name": "getParentLoggerName",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.LoggingMXBean",
+      "name": "LoggingMXBean",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.LoggingMXBean",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "loggerName"
+      }
+    ],
+    "protocol": {
+      "member": "getParentLoggerName(java.lang.String loggerName)",
+      "comment": "Returns the name of the parent for the specified logger. If the specified logger does not exist, null is returned. If the specified logger is the root Logger in the namespace, the result will be an empty string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

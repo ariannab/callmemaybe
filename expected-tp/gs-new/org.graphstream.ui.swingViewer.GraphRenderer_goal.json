@@ -1,0 +1,528 @@
+[
+  {
+    "signature": "open(org.graphstream.ui.graphicGraph.GraphicGraph graph, java.awt.Container drawingSurface)",
+    "name": "open",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicGraph",
+          "name": "GraphicGraph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.awt.Container",
+          "name": "Container",
+          "isArray": false
+        },
+        "name": "drawingSurface"
+      }
+    ],
+    "protocol": {
+      "member": "open(org.graphstream.ui.graphicGraph.GraphicGraph graph, java.awt.Container drawingSurface)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCamera()",
+    "name": "getCamera",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "org.graphstream.ui.view.Camera",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCamera()",
+      "comment": "Get a camera object to provide control commands on the view.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "findNodeOrSpriteAt(double x, double y)",
+    "name": "findNodeOrSpriteAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement",
+      "name": "org.graphstream.ui.graphicGraph.GraphicElement",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "findNodeOrSpriteAt(double x, double y)",
+      "comment": "Search for the first node or sprite (in that order) that contains the point at coordinates (x, y).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "allNodesOrSpritesIn(double x1, double y1, double x2, double y2)",
+    "name": "allNodesOrSpritesIn",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Collection<org.graphstream.ui.graphicGraph.GraphicElement>",
+      "name": "java.util.Collection<org.graphstream.ui.graphicGraph.GraphicElement>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y2"
+      }
+    ],
+    "protocol": {
+      "member": "allNodesOrSpritesIn(double x1, double y1, double x2, double y2)",
+      "comment": "Search for all the nodes and sprites contained inside the rectangle (x1,y1)-(x2,y2).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "render(java.awt.Graphics2D g, int x, int y, int width, int height)",
+    "name": "render",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.Graphics2D",
+          "name": "Graphics2D",
+          "isArray": false
+        },
+        "name": "g"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "width"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "height"
+      }
+    ],
+    "protocol": {
+      "member": "render(java.awt.Graphics2D g, int x, int y, int width, int height)",
+      "comment": "Redisplay or update the graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "beginSelectionAt(double x1, double y1)",
+    "name": "beginSelectionAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x1"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y1"
+      }
+    ],
+    "protocol": {
+      "member": "beginSelectionAt(double x1, double y1)",
+      "comment": "Called by the mouse manager to specify where a node and sprite selection started.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectionGrowsAt(double x, double y)",
+    "name": "selectionGrowsAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "selectionGrowsAt(double x, double y)",
+      "comment": "The selection already started grows toward position (x, y).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "endSelectionAt(double x2, double y2)",
+    "name": "endSelectionAt",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x2"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y2"
+      }
+    ],
+    "protocol": {
+      "member": "endSelectionAt(double x2, double y2)",
+      "comment": "Called by the mouse manager to specify where a node and spite selection stopped.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "moveElementAtPx(org.graphstream.ui.graphicGraph.GraphicElement element, double x, double y)",
+    "name": "moveElementAtPx",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement",
+          "name": "GraphicElement",
+          "isArray": false
+        },
+        "name": "element"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "moveElementAtPx(org.graphstream.ui.graphicGraph.GraphicElement element, double x, double y)",
+      "comment": "Force an element to move at the given location in pixels.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "screenshot(java.lang.String filename, int width, int height)",
+    "name": "screenshot",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "filename"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "width"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "height"
+      }
+    ],
+    "protocol": {
+      "member": "screenshot(java.lang.String filename, int width, int height)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBackLayerRenderer(org.graphstream.ui.swingViewer.LayerRenderer renderer)",
+    "name": "setBackLayerRenderer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.swingViewer.LayerRenderer",
+          "name": "LayerRenderer",
+          "isArray": false
+        },
+        "name": "renderer"
+      }
+    ],
+    "protocol": {
+      "member": "setBackLayerRenderer(org.graphstream.ui.swingViewer.LayerRenderer renderer)",
+      "comment": "Set a layer renderer that will be called each time the graph needs to be redrawn before the graph is rendered. Pass \"null\" to remove the layer renderer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setForeLayoutRenderer(org.graphstream.ui.swingViewer.LayerRenderer renderer)",
+    "name": "setForeLayoutRenderer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "GraphRenderer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.swingViewer.GraphRenderer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.swingViewer.LayerRenderer",
+          "name": "LayerRenderer",
+          "isArray": false
+        },
+        "name": "renderer"
+      }
+    ],
+    "protocol": {
+      "member": "setForeLayoutRenderer(org.graphstream.ui.swingViewer.LayerRenderer renderer)",
+      "comment": "Set a layer renderer that will be called each time the graph needs to be redrawn after the graph is rendered. Pass \"null\" to remove the layer renderer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

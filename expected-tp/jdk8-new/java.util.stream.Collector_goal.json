@@ -1,0 +1,237 @@
+[
+  {
+    "signature": "supplier()",
+    "name": "supplier",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.Supplier<A>",
+      "name": "java.util.function.Supplier<A>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "supplier()",
+      "comment": "A function that creates and returns a new mutable result container.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "accumulator()",
+    "name": "accumulator",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.BiConsumer<A, T>",
+      "name": "java.util.function.BiConsumer<A, T>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "accumulator()",
+      "comment": "A function that folds a value into a mutable result container.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "combiner()",
+    "name": "combiner",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.BinaryOperator<A>",
+      "name": "java.util.function.BinaryOperator<A>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "combiner()",
+      "comment": "A function that accepts two partial results and merges them. The combiner function may fold state from one argument into the other and return that, or may return a new result container.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "finisher()",
+    "name": "finisher",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.function.Function<A, R>",
+      "name": "java.util.function.Function<A, R>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "finisher()",
+      "comment": "Perform the final transformation from the intermediate accumulation type A to the final result type R. If the characteristic IDENTITY_TRANSFORM is set, this function may be presumed to be an identity transform with an unchecked cast from A to R.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "characteristics()",
+    "name": "characteristics",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Set<java.util.stream.Collector$Characteristics>",
+      "name": "java.util.Set<java.util.stream.Collector$Characteristics>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "characteristics()",
+      "comment": "Returns a Set of method_0 indicating the characteristics of this Collector. This set should be immutable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(java.util.function.Supplier<R> supplier, java.util.function.BiConsumer<R, T> accumulator, java.util.function.BinaryOperator<R> combiner, java.util.stream.Collector$Characteristics... characteristics)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, R, R>",
+      "name": "java.util.stream.Collector<T, R, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "combiner"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.stream.Collector$Characteristics;",
+          "name": "Characteristics[]",
+          "isArray": true
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "of(java.util.function.Supplier<R> supplier, java.util.function.BiConsumer<R, T> accumulator, java.util.function.BinaryOperator<R> combiner, java.util.stream.Collector$Characteristics... characteristics)",
+      "comment": "Returns a new Collector described by the given supplier, accumulator, and combiner functions. The resulting Collector has the method_0method_1 characteristic.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "of(java.util.function.Supplier<A> supplier, java.util.function.BiConsumer<A, T> accumulator, java.util.function.BinaryOperator<A> combiner, java.util.function.Function<A, R> finisher, java.util.stream.Collector$Characteristics... characteristics)",
+    "name": "of",
+    "containingClass": {
+      "qualifiedName": "java.util.stream.Collector",
+      "name": "Collector",
+      "isArray": false
+    },
+    "targetClass": "java.util.stream.Collector",
+    "isVarArgs": true,
+    "returnType": {
+      "qualifiedName": "java.util.stream.Collector<T, A, R>",
+      "name": "java.util.stream.Collector<T, A, R>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Supplier",
+          "name": "Supplier",
+          "isArray": false
+        },
+        "name": "supplier"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BiConsumer",
+          "name": "BiConsumer",
+          "isArray": false
+        },
+        "name": "accumulator"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.BinaryOperator",
+          "name": "BinaryOperator",
+          "isArray": false
+        },
+        "name": "combiner"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.function.Function",
+          "name": "Function",
+          "isArray": false
+        },
+        "name": "finisher"
+      },
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.stream.Collector$Characteristics;",
+          "name": "Characteristics[]",
+          "isArray": true
+        },
+        "name": "characteristics"
+      }
+    ],
+    "protocol": {
+      "member": "of(java.util.function.Supplier<A> supplier, java.util.function.BiConsumer<A, T> accumulator, java.util.function.BinaryOperator<A> combiner, java.util.function.Function<A, R> finisher, java.util.stream.Collector$Characteristics... characteristics)",
+      "comment": "Returns a new Collector described by the given supplier, accumulator, combiner, and finisher functions.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

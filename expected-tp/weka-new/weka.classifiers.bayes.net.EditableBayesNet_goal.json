@@ -1,0 +1,2203 @@
+[
+  {
+    "signature": "weka.classifiers.bayes.net.EditableBayesNet()",
+    "name": "weka.classifiers.bayes.net.EditableBayesNet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.EditableBayesNet()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.bayes.net.EditableBayesNet(weka.core.Instances instances)",
+    "name": "weka.classifiers.bayes.net.EditableBayesNet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.EditableBayesNet(weka.core.Instances instances)",
+      "comment": "constructor, creates empty network with nodes based on the attributes in a data set",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.bayes.net.EditableBayesNet(weka.classifiers.bayes.net.BIFReader other)",
+    "name": "weka.classifiers.bayes.net.EditableBayesNet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.BIFReader",
+          "name": "BIFReader",
+          "isArray": false
+        },
+        "name": "other"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.EditableBayesNet(weka.classifiers.bayes.net.BIFReader other)",
+      "comment": "constructor, copies Bayesian network structure from a Bayesian network encapsulated in a BIFReader",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weka.classifiers.bayes.net.EditableBayesNet(boolean bSetInstances)",
+    "name": "weka.classifiers.bayes.net.EditableBayesNet",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bSetInstances"
+      }
+    ],
+    "protocol": {
+      "member": "weka.classifiers.bayes.net.EditableBayesNet(boolean bSetInstances)",
+      "comment": "constructor that potentially initializes instances as well",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setData(weka.core.Instances instances)",
+    "name": "setData",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "setData(weka.core.Instances instances)",
+      "comment": "Assuming a network structure is defined and we want to learn from data, the data set must be put if correct order first and possibly discretized/missing values filled in before proceeding to CPT learning.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode2(java.lang.String sNodeName)",
+    "name": "getNode2",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sNodeName"
+      }
+    ],
+    "protocol": {
+      "member": "getNode2(java.lang.String sNodeName)",
+      "comment": "returns index of node with given name, or -1 if no such node exists",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getNode(java.lang.String sNodeName)",
+    "name": "getNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sNodeName"
+      }
+    ],
+    "protocol": {
+      "member": "getNode(java.lang.String sNodeName)",
+      "comment": "returns index of node with given name. Throws exception if no such node exists",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addNode(java.lang.String sName, int nCardinality)",
+    "name": "addNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCardinality"
+      }
+    ],
+    "protocol": {
+      "member": "addNode(java.lang.String sName, int nCardinality)",
+      "comment": "Add new node to the network, initializing instances, parentsets, distributions. Used for manual manipulation of the Bayesian network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addNode(java.lang.String sName, int nCardinality, int nPosX, int nPosY)",
+    "name": "addNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nCardinality"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nPosX"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nPosY"
+      }
+    ],
+    "protocol": {
+      "member": "addNode(java.lang.String sName, int nCardinality, int nPosX, int nPosY)",
+      "comment": "Add node to network at a given position, initializing instances, parentsets, distributions. Used for manual manipulation of the Bayesian network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteNode(java.lang.String sName)",
+    "name": "deleteNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "deleteNode(java.lang.String sName)",
+      "comment": "Delete node from the network, updating instances, parentsets, distributions Conditional distributions are condensed by taking the values for the target node to be its first value. Used for manual manipulation of the Bayesian network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteNode(int nTargetNode)",
+    "name": "deleteNode",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      }
+    ],
+    "protocol": {
+      "member": "deleteNode(int nTargetNode)",
+      "comment": "Delete node from the network, updating instances, parentsets, distributions Conditional distributions are condensed by taking the values for the target node to be its first value. Used for manual manipulation of the Bayesian network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteSelection(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "deleteSelection",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "deleteSelection(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "Delete nodes with indexes in selection from the network, updating instances, parentsets, distributions Conditional distributions are condensed by taking the values for the target node to be its first value. Used for manual manipulation of the Bayesian network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "selectElements(org.w3c.dom.Node item, java.lang.String sElement)",
+    "name": "selectElements",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<org.w3c.dom.Node>",
+      "name": "java.util.ArrayList<org.w3c.dom.Node>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Node",
+          "name": "Node",
+          "isArray": false
+        },
+        "name": "item"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sElement"
+      }
+    ],
+    "protocol": {
+      "member": "selectElements(org.w3c.dom.Node item, java.lang.String sElement)",
+      "comment": "XML helper function for selecting elements under a node with a given name",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getContent(org.w3c.dom.Element node)",
+    "name": "getContent",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Element",
+          "name": "Element",
+          "isArray": false
+        },
+        "name": "node"
+      }
+    ],
+    "protocol": {
+      "member": "getContent(org.w3c.dom.Element node)",
+      "comment": "XML helper function. Returns all TEXT children of the given node in one string. Between the node values new lines are inserted.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefinition(org.w3c.dom.Document doc, java.lang.String sName)",
+    "name": "getDefinition",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.w3c.dom.Element",
+      "name": "org.w3c.dom.Element",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.w3c.dom.Document",
+          "name": "Document",
+          "isArray": false
+        },
+        "name": "doc"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "getDefinition(org.w3c.dom.Document doc, java.lang.String sName)",
+      "comment": "XML helper function that returns DEFINITION element from a XMLBIF document for a node with a given name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paste(java.lang.String sXML)",
+    "name": "paste",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sXML"
+      }
+    ],
+    "protocol": {
+      "member": "paste(java.lang.String sXML)",
+      "comment": "Apply paste operation with XMLBIF fragment. This adds nodes in the XMLBIF fragment to the network, together with its parents. First, paste in test mode to verify no problems occur, then execute paste operation. If a problem occurs (emethod_0. parent does not exist) then a exception is thrown.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "paste(java.lang.String sXML, int mode)",
+    "name": "paste",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sXML"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "mode"
+      }
+    ],
+    "protocol": {
+      "member": "paste(java.lang.String sXML, int mode)",
+      "comment": "Apply paste operation with XMLBIF fragment. Depending on the paste mode, the nodes are actually added to the network or it is just tested that the nodes can be added to the network.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addArc(java.lang.String sParent, java.lang.String sChild)",
+    "name": "addArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sParent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sChild"
+      }
+    ],
+    "protocol": {
+      "member": "addArc(java.lang.String sParent, java.lang.String sChild)",
+      "comment": "Add arc between two nodes Distributions are updated by duplication for every value of the parent node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addArc(int nParent, int nChild)",
+    "name": "addArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nParent"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nChild"
+      }
+    ],
+    "protocol": {
+      "member": "addArc(int nParent, int nChild)",
+      "comment": "Add arc between two nodes Distributions are updated by duplication for every value of the parent node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addArc(java.lang.String sParent, java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "addArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sParent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "addArc(java.lang.String sParent, java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "Add arc between parent node and each of the nodes in a given list. Distributions are updated as above.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteArc(java.lang.String sParent, java.lang.String sChild)",
+    "name": "deleteArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sParent"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sChild"
+      }
+    ],
+    "protocol": {
+      "member": "deleteArc(java.lang.String sParent, java.lang.String sChild)",
+      "comment": "Delete arc between two nodes. Distributions are updated by condensing for the parent node taking its first value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "deleteArc(int nParent, int nChild)",
+    "name": "deleteArc",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nParent"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nChild"
+      }
+    ],
+    "protocol": {
+      "member": "deleteArc(int nParent, int nChild)",
+      "comment": "Delete arc between two nodes. Distributions are updated by condensing for the parent node taking its first value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDistribution(java.lang.String sName, double[][] P)",
+    "name": "setDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "P"
+      }
+    ],
+    "protocol": {
+      "member": "setDistribution(java.lang.String sName, double[][] P)",
+      "comment": "specify distribution of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDistribution(int nTargetNode, double[][] P)",
+    "name": "setDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "[[D",
+          "name": "double[][]",
+          "isArray": true
+        },
+        "name": "P"
+      }
+    ],
+    "protocol": {
+      "member": "setDistribution(int nTargetNode, double[][] P)",
+      "comment": "specify distribution of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDistribution(java.lang.String sName)",
+    "name": "getDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "getDistribution(java.lang.String sName)",
+      "comment": "returns distribution of a node in matrix form with matrix representing distribution with P[i][j] = method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDistribution(int nTargetNode)",
+    "name": "getDistribution",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[][]",
+      "name": "double[][]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      }
+    ],
+    "protocol": {
+      "member": "getDistribution(int nTargetNode)",
+      "comment": "returns distribution of a node in matrix form with matrix representing distribution with P[i][j] = method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValues(java.lang.String sName)",
+    "name": "getValues",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "getValues(java.lang.String sName)",
+      "comment": "returns array of values of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValues(int nTargetNode)",
+    "name": "getValues",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      }
+    ],
+    "protocol": {
+      "member": "getValues(int nTargetNode)",
+      "comment": "returns array of values of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getValueName(int nTargetNode, int iValue)",
+    "name": "getValueName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iValue"
+      }
+    ],
+    "protocol": {
+      "member": "getValueName(int nTargetNode, int iValue)",
+      "comment": "returns value of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setNodeName(int nTargetNode, java.lang.String sName)",
+    "name": "setNodeName",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      }
+    ],
+    "protocol": {
+      "member": "setNodeName(int nTargetNode, java.lang.String sName)",
+      "comment": "change the name of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "renameNodeValue(int nTargetNode, java.lang.String sValue, java.lang.String sNewValue)",
+    "name": "renameNodeValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sValue"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sNewValue"
+      }
+    ],
+    "protocol": {
+      "member": "renameNodeValue(int nTargetNode, java.lang.String sValue, java.lang.String sNewValue)",
+      "comment": "change the name of a value of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addNodeValue(int nTargetNode, java.lang.String sNewValue)",
+    "name": "addNodeValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sNewValue"
+      }
+    ],
+    "protocol": {
+      "member": "addNodeValue(int nTargetNode, java.lang.String sNewValue)",
+      "comment": "Add node value to a node. Distributions for the node assign zero probability to the new value. Child nodes duplicate CPT conditioned on the new value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "delNodeValue(int nTargetNode, java.lang.String sValue)",
+    "name": "delNodeValue",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sValue"
+      }
+    ],
+    "protocol": {
+      "member": "delNodeValue(int nTargetNode, java.lang.String sValue)",
+      "comment": "Delete node value from a node. Distributions for the node are scaled up proportional to existing distribution (or made uniform if zero probability is assigned to remainder of values). .* Child nodes delete CPTs conditioned on the new value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPosition(int iNode, int nX, int nY)",
+    "name": "setPosition",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nX"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nY"
+      }
+    ],
+    "protocol": {
+      "member": "setPosition(int iNode, int nX, int nY)",
+      "comment": "set position of node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPosition(int nNode, int nX, int nY, java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "setPosition",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nX"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nY"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "setPosition(int nNode, int nX, int nY, java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "Set position of node. Move set of nodes with the same displacement as a specified node.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "layoutGraph(java.util.ArrayList<java.lang.Integer> nPosX, java.util.ArrayList<java.lang.Integer> nPosY)",
+    "name": "layoutGraph",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nPosX"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nPosY"
+      }
+    ],
+    "protocol": {
+      "member": "layoutGraph(java.util.ArrayList<java.lang.Integer> nPosX, java.util.ArrayList<java.lang.Integer> nPosY)",
+      "comment": "set positions of all nodes",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPositionX(int iNode)",
+    "name": "getPositionX",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getPositionX(int iNode)",
+      "comment": "get x position of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPositionY(int iNode)",
+    "name": "getPositionY",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getPositionY(int iNode)",
+      "comment": "get y position of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "alignLeft(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "alignLeft",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "alignLeft(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "align set of nodes with the left most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "alignRight(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "alignRight",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "alignRight(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "align set of nodes with the right most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "alignTop(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "alignTop",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "alignTop(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "align set of nodes with the top most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "alignBottom(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "alignBottom",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "alignBottom(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "align set of nodes with the bottom most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "centerHorizontal(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "centerHorizontal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "centerHorizontal(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "center set of nodes half way between left and right most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "centerVertical(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "centerVertical",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "centerVertical(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "center set of nodes half way between top and bottom most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spaceHorizontal(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "spaceHorizontal",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "spaceHorizontal(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "space out set of nodes evenly between left and right most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "spaceVertical(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "spaceVertical",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "spaceVertical(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "space out set of nodes evenly between top and bottom most node in the list",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replaceAtt(int nTargetNode, java.lang.String sName, java.util.ArrayList<java.lang.String> values)",
+    "name": "replaceAtt",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "sName"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "values"
+      }
+    ],
+    "protocol": {
+      "member": "replaceAtt(int nTargetNode, java.lang.String sName, java.util.ArrayList<java.lang.String> values)",
+      "comment": "replace attribute with specified name and values",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMargin(int iNode)",
+    "name": "getMargin",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double[]",
+      "name": "double[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getMargin(int iNode)",
+      "comment": "return marginal distibution for a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setMargin(int iNode, double[] fMarginP)",
+    "name": "setMargin",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "[D",
+          "name": "double[]",
+          "isArray": true
+        },
+        "name": "fMarginP"
+      }
+    ],
+    "protocol": {
+      "member": "setMargin(int iNode, double[] fMarginP)",
+      "comment": "set marginal distibution for a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getEvidence(int iNode)",
+    "name": "getEvidence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      }
+    ],
+    "protocol": {
+      "member": "getEvidence(int iNode)",
+      "comment": "get evidence state of a node. -1 represents no evidence set, otherwise the index of a value of the node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEvidence(int iNode, int iValue)",
+    "name": "setEvidence",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iNode"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iValue"
+      }
+    ],
+    "protocol": {
+      "member": "setEvidence(int iNode, int iValue)",
+      "comment": "set evidence state of a node. -1 represents no evidence set, otherwise the index of a value of the node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getChildren(int nTargetNode)",
+    "name": "getChildren",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.ArrayList<java.lang.Integer>",
+      "name": "java.util.ArrayList<java.lang.Integer>",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nTargetNode"
+      }
+    ],
+    "protocol": {
+      "member": "getChildren(int nTargetNode)",
+      "comment": "return list of children of a node",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toXMLBIF03()",
+    "name": "toXMLBIF03",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toXMLBIF03()",
+      "comment": "returns network in XMLBIF format",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toXMLBIF03(java.util.ArrayList<java.lang.Integer> nodes)",
+    "name": "toXMLBIF03",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "nodes"
+      }
+    ],
+    "protocol": {
+      "member": "toXMLBIF03(java.util.ArrayList<java.lang.Integer> nodes)",
+      "comment": "return fragment of network in XMLBIF format",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canUndo()",
+    "name": "canUndo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "canUndo()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canRedo()",
+    "name": "canRedo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "canRedo()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isChanged()",
+    "name": "isChanged",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isChanged()",
+      "comment": "return true when current state differs from the state the network was last saved",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isSaved()",
+    "name": "isSaved",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isSaved()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "lastActionMsg()",
+    "name": "lastActionMsg",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "lastActionMsg()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "undo()",
+    "name": "undo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "undo()",
+      "comment": "undo the last edit action performed on the network. returns message representing the action performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "redo()",
+    "name": "redo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "redo()",
+      "comment": "redo the last edit action performed on the network. returns message representing the action performed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addUndoAction(weka.classifiers.bayes.net.EditableBayesNet$UndoAction action)",
+    "name": "addUndoAction",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet$UndoAction",
+          "name": "UndoAction",
+          "isArray": false
+        },
+        "name": "action"
+      }
+    ],
+    "protocol": {
+      "member": "addUndoAction(weka.classifiers.bayes.net.EditableBayesNet$UndoAction action)",
+      "comment": "add undo action to the undo stack.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clearUndoStack()",
+    "name": "clearUndoStack",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clearUndoStack()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.EditableBayesNet",
+      "name": "EditableBayesNet",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.EditableBayesNet",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

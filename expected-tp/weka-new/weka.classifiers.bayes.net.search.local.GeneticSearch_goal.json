@@ -1,0 +1,752 @@
+[
+  {
+    "signature": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+    "name": "search",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "bayesNet"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.core.Instances",
+          "name": "Instances",
+          "isArray": false
+        },
+        "name": "instances"
+      }
+    ],
+    "protocol": {
+      "member": "search(weka.classifiers.bayes.BayesNet bayesNet, weka.core.Instances instances)",
+      "comment": "search determines the network structure/graph of the network with a genetic search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "copyParentSets(weka.classifiers.bayes.BayesNet dest, weka.classifiers.bayes.BayesNet source)",
+    "name": "copyParentSets",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "dest"
+      },
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.bayes.BayesNet",
+          "name": "BayesNet",
+          "isArray": false
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "copyParentSets(weka.classifiers.bayes.BayesNet dest, weka.classifiers.bayes.BayesNet source)",
+      "comment": "copyParentSets copies parent sets of source to dest BayesNet",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRuns()",
+    "name": "getRuns",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRuns()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setRuns(int nRuns)",
+    "name": "setRuns",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nRuns"
+      }
+    ],
+    "protocol": {
+      "member": "setRuns(int nRuns)",
+      "comment": "Sets the number of runs",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -L <integer> Population size   -A <integer> Descendant population size   -U <integer> Number of runs   -M Use mutation. (default true)   -C Use cross-over. (default true)   -O Use tournament selection (true) or maximum subpopulatin (false). (default false)   -R <seed> Random number seed   -mbc Applies a Markov Blanket correction to the network structure, after a network structure is learned. This ensures that all nodes in the network are part of the Markov blanket of the classifier node.   -S [BAYES|MDL|ENTROPY|AIC|CROSS_CLASSIC|CROSS_BAYES] Score type (BAYES, BDeu, MDL, ENTROPY and AIC)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the search algorithm.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseCrossOver()",
+    "name": "getUseCrossOver",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseCrossOver()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseMutation()",
+    "name": "getUseMutation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseMutation()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDescendantPopulationSize()",
+    "name": "getDescendantPopulationSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDescendantPopulationSize()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPopulationSize()",
+    "name": "getPopulationSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPopulationSize()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseCrossOver(boolean bUseCrossOver)",
+    "name": "setUseCrossOver",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bUseCrossOver"
+      }
+    ],
+    "protocol": {
+      "member": "setUseCrossOver(boolean bUseCrossOver)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseMutation(boolean bUseMutation)",
+    "name": "setUseMutation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bUseMutation"
+      }
+    ],
+    "protocol": {
+      "member": "setUseMutation(boolean bUseMutation)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getUseTournamentSelection()",
+    "name": "getUseTournamentSelection",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getUseTournamentSelection()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setUseTournamentSelection(boolean bUseTournamentSelection)",
+    "name": "setUseTournamentSelection",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "bUseTournamentSelection"
+      }
+    ],
+    "protocol": {
+      "member": "setUseTournamentSelection(boolean bUseTournamentSelection)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setDescendantPopulationSize(int iDescendantPopulationSize)",
+    "name": "setDescendantPopulationSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iDescendantPopulationSize"
+      }
+    ],
+    "protocol": {
+      "member": "setDescendantPopulationSize(int iDescendantPopulationSize)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPopulationSize(int iPopulationSize)",
+    "name": "setPopulationSize",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "iPopulationSize"
+      }
+    ],
+    "protocol": {
+      "member": "setPopulationSize(int iPopulationSize)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getSeed()",
+    "name": "getSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getSeed()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setSeed(int nSeed)",
+    "name": "setSeed",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "nSeed"
+      }
+    ],
+    "protocol": {
+      "member": "setSeed(int nSeed)",
+      "comment": "Sets the random number seed",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "globalInfo()",
+    "name": "globalInfo",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "globalInfo()",
+      "comment": "This will return a string describing the classifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runsTipText()",
+    "name": "runsTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "runsTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "seedTipText()",
+    "name": "seedTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "seedTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "populationSizeTipText()",
+    "name": "populationSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "populationSizeTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "descendantPopulationSizeTipText()",
+    "name": "descendantPopulationSizeTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "descendantPopulationSizeTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useMutationTipText()",
+    "name": "useMutationTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useMutationTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useCrossOverTipText()",
+    "name": "useCrossOverTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useCrossOverTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "useTournamentSelectionTipText()",
+    "name": "useTournamentSelectionTipText",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "useTournamentSelectionTipText()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+      "name": "GeneticSearch",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.bayes.net.search.local.GeneticSearch",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,414 @@
+[
+  {
+    "signature": "java.util.AbstractCollection()",
+    "name": "java.util.AbstractCollection",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.AbstractCollection()",
+      "comment": "Sole constructor. (For invocation by subclass constructors, typically implicit.)",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "iterator()",
+    "name": "iterator",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<E>",
+      "name": "java.util.Iterator<E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "iterator()",
+      "comment": "Returns an iterator over the elements contained in this collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isEmpty()",
+    "name": "isEmpty",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isEmpty()",
+      "comment": "{@inheritDoc} This implementation returns method_0 == 0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "contains(java.lang.Object o)",
+    "name": "contains",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "contains(java.lang.Object o)",
+      "comment": "{@inheritDoc} This implementation iterates over the elements in the collection, checking each element in turn for equality with the specified element.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray()",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.Object[]",
+      "name": "java.lang.Object[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toArray()",
+      "comment": "{@inheritDoc} This implementation returns an array containing all the elements returned by this collection's iterator, in the same order, stored in consecutive elements of the array, starting with index 0. The length of the returned array is equal to the number of elements returned by the iterator, even if the size of this collection changes during iteration, as might happen if the collection permits concurrent modification during iteration. The size method is called only as an optimization hint; the correct result is returned even if the iterator returns a different number of elements. This method is equivalent to:  List<E> list = new ArrayList<E>(method_0; for (E e : this) method_1; return method_2;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toArray(T[] a)",
+    "name": "toArray",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "T[]",
+      "name": "T[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.Object;",
+          "name": "Object[]",
+          "isArray": true
+        },
+        "name": "a"
+      }
+    ],
+    "protocol": {
+      "member": "toArray(T[] a)",
+      "comment": "{@inheritDoc} This implementation returns an array containing all the elements returned by this collection's iterator in the same order, stored in consecutive elements of the array, starting with index 0. If the number of elements returned by the iterator is too large to fit into the specified array, then the elements are returned in a newly allocated array with length equal to the number of elements returned by the iterator, even if the size of this collection changes during iteration, as might happen if the collection permits concurrent modification during iteration. The size method is called only as an optimization hint; the correct result is returned even if the iterator returns a different number of elements. This method is equivalent to:  List<E> list = new ArrayList<E>(method_0; for (E e : this) method_1; return method_2;",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(E e)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "add(E e)",
+      "comment": "{@inheritDoc} This implementation always throws an UnsupportedOperationException.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove(java.lang.Object o)",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.Object",
+          "name": "Object",
+          "isArray": false
+        },
+        "name": "o"
+      }
+    ],
+    "protocol": {
+      "member": "remove(java.lang.Object o)",
+      "comment": "{@inheritDoc} This implementation iterates over the collection looking for the specified element. If it finds the element, it removes the element from the collection using the iterator's remove method. Note that this implementation throws an UnsupportedOperationException if the iterator returned by this collection's iterator method does not implement the remove method and this collection contains the specified object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "containsAll(java.util.Collection<?> c)",
+    "name": "containsAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "containsAll(java.util.Collection<?> c)",
+      "comment": "{@inheritDoc} This implementation iterates over the specified collection, checking each element returned by the iterator in turn to see if it's contained in this collection. If all elements are so contained true is returned, otherwise false.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addAll(java.util.Collection<? extends E> c)",
+    "name": "addAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "addAll(java.util.Collection<? extends E> c)",
+      "comment": "{@inheritDoc} This implementation iterates over the specified collection, and adds each object returned by the iterator to this collection, in turn. Note that this implementation will throw an UnsupportedOperationException unless add is overridden (assuming the specified collection is non-empty).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeAll(java.util.Collection<?> c)",
+    "name": "removeAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "removeAll(java.util.Collection<?> c)",
+      "comment": "{@inheritDoc} This implementation iterates over this collection, checking each element returned by the iterator in turn to see if it's contained in the specified collection. If it's so contained, it's removed from this collection with the iterator's remove method. Note that this implementation will throw an UnsupportedOperationException if the iterator returned by the iterator method does not implement the remove method and this collection contains one or more elements in common with the specified collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "retainAll(java.util.Collection<?> c)",
+    "name": "retainAll",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "c"
+      }
+    ],
+    "protocol": {
+      "member": "retainAll(java.util.Collection<?> c)",
+      "comment": "{@inheritDoc} This implementation iterates over this collection, checking each element returned by the iterator in turn to see if it's contained in the specified collection. If it's not so contained, it's removed from this collection with the iterator's remove method. Note that this implementation will throw an UnsupportedOperationException if the iterator returned by the iterator method does not implement the remove method and this collection contains one or more elements not present in the specified collection.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "clear()",
+    "name": "clear",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "clear()",
+      "comment": "{@inheritDoc} This implementation iterates over this collection, removing each element using the method_0 operation. Most implementations will probably choose to override this method for efficiency. Note that this implementation will throw an UnsupportedOperationException if the iterator returned by this collection's iterator method does not implement the remove method and this collection is non-empty.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.AbstractCollection",
+      "name": "AbstractCollection",
+      "isArray": false
+    },
+    "targetClass": "java.util.AbstractCollection",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns a string representation of this collection. The string representation consists of a list of the collection's elements in the order they are returned by its iterator, enclosed in square brackets (\"[]\"). Adjacent elements are separated by the characters \", \" (comma and space). Elements are converted to strings as by method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

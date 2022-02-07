@@ -1,0 +1,768 @@
+[
+  {
+    "signature": "org.graphstream.ui.view.Viewer(org.graphstream.stream.ProxyPipe source)",
+    "name": "org.graphstream.ui.view.Viewer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.stream.ProxyPipe",
+          "name": "ProxyPipe",
+          "isArray": false
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.view.Viewer(org.graphstream.stream.ProxyPipe source)",
+      "comment": "The graph or source of graph events is in another thread or on another machine, but the pipe already exists. The graphic graph displayed by this viewer is created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.graphstream.ui.view.Viewer(org.graphstream.ui.graphicGraph.GraphicGraph graph)",
+    "name": "org.graphstream.ui.view.Viewer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicGraph",
+          "name": "GraphicGraph",
+          "isArray": false
+        },
+        "name": "graph"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.view.Viewer(org.graphstream.ui.graphicGraph.GraphicGraph graph)",
+      "comment": "We draw a pre-existing graphic graph. The graphic graph is maintained by its creator.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.graphstream.ui.view.Viewer(org.graphstream.graph.Graph graph, org.graphstream.ui.view.Viewer$ThreadingModel threadingModel)",
+    "name": "org.graphstream.ui.view.Viewer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.view.Viewer$ThreadingModel",
+          "name": "ThreadingModel",
+          "isArray": false
+        },
+        "name": "threadingModel"
+      }
+    ],
+    "protocol": {
+      "member": "org.graphstream.ui.view.Viewer(org.graphstream.graph.Graph graph, org.graphstream.ui.view.Viewer$ThreadingModel threadingModel)",
+      "comment": "New viewer on an existing graph. The viewer always run in the Swing thread, therefore, you must specify how it will take graph events from the graph you give. If the graph you give will be accessed only from the Swing thread use method_0. If the graph you use is accessed in another thread use method_1. This last scheme is more powerful since it allows to run algorithms on the graph in parallel with the viewer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newGGId()",
+    "name": "newGGId",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newGGId()",
+      "comment": "Create a new unique identifier for a graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "init(org.graphstream.ui.graphicGraph.GraphicGraph graph, org.graphstream.stream.ProxyPipe ppipe, org.graphstream.stream.Source source)",
+    "name": "init",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicGraph",
+          "name": "GraphicGraph",
+          "isArray": false
+        },
+        "name": "graph"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.stream.ProxyPipe",
+          "name": "ProxyPipe",
+          "isArray": false
+        },
+        "name": "ppipe"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.stream.Source",
+          "name": "Source",
+          "isArray": false
+        },
+        "name": "source"
+      }
+    ],
+    "protocol": {
+      "member": "init(org.graphstream.ui.graphicGraph.GraphicGraph graph, org.graphstream.stream.ProxyPipe ppipe, org.graphstream.stream.Source source)",
+      "comment": "Initialise the viewer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Close definitively this viewer and all its views.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newGraphRenderer()",
+    "name": "newGraphRenderer",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "name": "org.graphstream.ui.swingViewer.GraphRenderer",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newGraphRenderer()",
+      "comment": "Create a new instance of the default graph renderer. The default graph renderer class is given by the \"orgmethod_0method_1method_2\" system property. If the class indicated by this property is not usable (not in the class path, not of the correct type, etc.) or if the property is not present a SwingBasicGraphRenderer is returned.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCloseFramePolicy()",
+    "name": "getCloseFramePolicy",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer$CloseFramePolicy",
+      "name": "org.graphstream.ui.view.Viewer$CloseFramePolicy",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCloseFramePolicy()",
+      "comment": "What to do when a frame is closed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newThreadProxyOnGraphicGraph()",
+    "name": "newThreadProxyOnGraphicGraph",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.stream.ProxyPipe",
+      "name": "org.graphstream.stream.ProxyPipe",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newThreadProxyOnGraphicGraph()",
+      "comment": "New proxy pipe on events coming from the viewer through a thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "newViewerPipe()",
+    "name": "newViewerPipe",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.view.ViewerPipe",
+      "name": "org.graphstream.ui.view.ViewerPipe",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "newViewerPipe()",
+      "comment": "New viewer pipe on the events coming from the viewer through a thread.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGraphicGraph()",
+    "name": "getGraphicGraph",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicGraph",
+      "name": "org.graphstream.ui.graphicGraph.GraphicGraph",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGraphicGraph()",
+      "comment": "The underlying graphic graph. Caution : Use the returned graph only in the Swing thread !!",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getView(java.lang.String id)",
+    "name": "getView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "org.graphstream.ui.view.View",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "getView(java.lang.String id)",
+      "comment": "The view that correspond to the given identifier.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getDefaultView()",
+    "name": "getDefaultView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.ViewPanel",
+      "name": "org.graphstream.ui.swingViewer.ViewPanel",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getDefaultView()",
+      "comment": "The default view. This is a shortcut to a call to method_0 with method_2 as parameter.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addDefaultView(boolean openInAFrame)",
+    "name": "addDefaultView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.ViewPanel",
+      "name": "org.graphstream.ui.swingViewer.ViewPanel",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "openInAFrame"
+      }
+    ],
+    "protocol": {
+      "member": "addDefaultView(boolean openInAFrame)",
+      "comment": "Build the default graph view and insert it. The view identifier is method_0. You can request the view to be open in its own frame.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addView(org.graphstream.ui.view.View view)",
+    "name": "addView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.view.View",
+      "name": "org.graphstream.ui.view.View",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.view.View",
+          "name": "View",
+          "isArray": false
+        },
+        "name": "view"
+      }
+    ],
+    "protocol": {
+      "member": "addView(org.graphstream.ui.view.View view)",
+      "comment": "Add a view using its identifier. If there was already a view with this identifier, it is closed and returned (if different of the one added).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addView(java.lang.String id, org.graphstream.ui.swingViewer.GraphRenderer renderer)",
+    "name": "addView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.ViewPanel",
+      "name": "org.graphstream.ui.swingViewer.ViewPanel",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+          "name": "GraphRenderer",
+          "isArray": false
+        },
+        "name": "renderer"
+      }
+    ],
+    "protocol": {
+      "member": "addView(java.lang.String id, org.graphstream.ui.swingViewer.GraphRenderer renderer)",
+      "comment": "Add a new default view with a specific renderer. If a view with the same id exists, it is removed and closed. By default the view is open in a frame.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addView(java.lang.String id, org.graphstream.ui.swingViewer.GraphRenderer renderer, boolean openInAFrame)",
+    "name": "addView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.ViewPanel",
+      "name": "org.graphstream.ui.swingViewer.ViewPanel",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.swingViewer.GraphRenderer",
+          "name": "GraphRenderer",
+          "isArray": false
+        },
+        "name": "renderer"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "openInAFrame"
+      }
+    ],
+    "protocol": {
+      "member": "addView(java.lang.String id, org.graphstream.ui.swingViewer.GraphRenderer renderer, boolean openInAFrame)",
+      "comment": "Same as method_0 but allows to specify that the view uses a frame or not.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeView(java.lang.String id)",
+    "name": "removeView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "id"
+      }
+    ],
+    "protocol": {
+      "member": "removeView(java.lang.String id)",
+      "comment": "Remove a view. The view is not closed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "actionPerformed(java.awt.event.ActionEvent e)",
+    "name": "actionPerformed",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.awt.event.ActionEvent",
+          "name": "ActionEvent",
+          "isArray": false
+        },
+        "name": "e"
+      }
+    ],
+    "protocol": {
+      "member": "actionPerformed(java.awt.event.ActionEvent e)",
+      "comment": "Called on a regular basis by the timer. Checks if some events occurred from the graph pipe or from the layout pipe, and if the graph changed, triggers a repaint. Never call this method, it is called by a Swing Timer automatically.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "computeGraphMetrics()",
+    "name": "computeGraphMetrics",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "computeGraphMetrics()",
+      "comment": "Compute the overall bounds of the graphic graph according to the nodes and sprites positions. We can only compute the graph bounds from the nodes and sprites centres since the node and graph bounds may in certain circumstances be computed according to the graph bounds. The bounds are stored in the graph metrics.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setCloseFramePolicy(org.graphstream.ui.view.Viewer$CloseFramePolicy policy)",
+    "name": "setCloseFramePolicy",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.view.Viewer$CloseFramePolicy",
+          "name": "CloseFramePolicy",
+          "isArray": false
+        },
+        "name": "policy"
+      }
+    ],
+    "protocol": {
+      "member": "setCloseFramePolicy(org.graphstream.ui.view.Viewer$CloseFramePolicy policy)",
+      "comment": "What to do when the frame containing one or more views is closed.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enableXYZfeedback(boolean on)",
+    "name": "enableXYZfeedback",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "on"
+      }
+    ],
+    "protocol": {
+      "member": "enableXYZfeedback(boolean on)",
+      "comment": "Enable or disable the \"xyz\" attribute change when a node is moved in the views. By default the \"xyz\" attribute is changed. By default, each time a node of the graphic graph is moved, its \"xyz\" attribute is reset to follow the node position. This is useful only if someone listen at the graphic graph or use the graphic graph directly. But this operation is quite costly. Therefore by default if this viewer runs in its own thread, and the main graph is in another thread, xyz attribute change will be disabled until a listener is added. When the viewer is created to be used only in the swing thread, this feature is always on.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enableAutoLayout()",
+    "name": "enableAutoLayout",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "enableAutoLayout()",
+      "comment": "Launch an automatic layout process that will position nodes in the background.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "enableAutoLayout(org.graphstream.ui.layout.Layout layoutAlgorithm)",
+    "name": "enableAutoLayout",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.layout.Layout",
+          "name": "Layout",
+          "isArray": false
+        },
+        "name": "layoutAlgorithm"
+      }
+    ],
+    "protocol": {
+      "member": "enableAutoLayout(org.graphstream.ui.layout.Layout layoutAlgorithm)",
+      "comment": "Launch an automatic layout process that will position nodes in the background.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "disableAutoLayout()",
+    "name": "disableAutoLayout",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "disableAutoLayout()",
+      "comment": "Disable the running automatic layout process, if any.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "replayGraph(org.graphstream.graph.Graph graph)",
+    "name": "replayGraph",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Viewer",
+      "name": "Viewer",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Viewer",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.graph.Graph",
+          "name": "Graph",
+          "isArray": false
+        },
+        "name": "graph"
+      }
+    ],
+    "protocol": {
+      "member": "replayGraph(org.graphstream.graph.Graph graph)",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

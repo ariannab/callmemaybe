@@ -1,0 +1,236 @@
+[
+  {
+    "signature": "java.util.concurrent.atomic.DoubleAdder()",
+    "name": "java.util.concurrent.atomic.DoubleAdder",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.concurrent.atomic.DoubleAdder()",
+      "comment": "Creates a new adder with initial sum of zero.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "add(double x)",
+    "name": "add",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      }
+    ],
+    "protocol": {
+      "member": "add(double x)",
+      "comment": "Adds the given value.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sum()",
+    "name": "sum",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sum()",
+      "comment": "Returns the current sum. The returned value is NOT an atomic snapshot; invocation in the absence of concurrent updates returns an accurate result, but concurrent updates that occur while the sum is being calculated might not be incorporated. Also, because floating-point arithmetic is not strictly associative, the returned result need not be identical to the value that would be obtained in a sequential series of updates to a single variable.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets variables maintaining the sum to zero. This method may be a useful alternative to creating a new adder, but is only effective if there are no concurrent updates. Because this method is intrinsically racy, it should only be used when it is known that no threads are concurrently updating.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "sumThenReset()",
+    "name": "sumThenReset",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "sumThenReset()",
+      "comment": "Equivalent in effect to method_0 followed by method_1. This method may apply for example during quiescent points between multithreaded computations. If there are updates concurrent with this method, the returned value is not guaranteed to be the final value occurring before the reset.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "toString()",
+    "name": "toString",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "toString()",
+      "comment": "Returns the String representation of the method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doubleValue()",
+    "name": "doubleValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doubleValue()",
+      "comment": "Equivalent to method_0.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "longValue()",
+    "name": "longValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "long",
+      "name": "long",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "longValue()",
+      "comment": "Returns the method_0 as a long after a narrowing primitive conversion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "intValue()",
+    "name": "intValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "intValue()",
+      "comment": "Returns the method_0 as an int after a narrowing primitive conversion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "floatValue()",
+    "name": "floatValue",
+    "containingClass": {
+      "qualifiedName": "java.util.concurrent.atomic.DoubleAdder",
+      "name": "DoubleAdder",
+      "isArray": false
+    },
+    "targetClass": "java.util.concurrent.atomic.DoubleAdder",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "float",
+      "name": "float",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "floatValue()",
+      "comment": "Returns the method_0 as a float after a narrowing primitive conversion.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

@@ -1,0 +1,1601 @@
+[
+  {
+    "signature": "listOptions()",
+    "name": "listOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Enumeration<weka.core.Option>",
+      "name": "java.util.Enumeration<weka.core.Option>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "listOptions()",
+      "comment": "Returns an enumeration describing the available options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setOptions(java.lang.String[] options)",
+    "name": "setOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "options"
+      }
+    ],
+    "protocol": {
+      "member": "setOptions(java.lang.String[] options)",
+      "comment": "Parses a given list of options.   -D Turn on debugging output.   -S Silent mode - prints nothing to stdout.   -N <num> The number of instances in the datasets (default 20).   -nominal <num> The number of nominal attributes (default 2).   -nominal-values <num> The number of values for nominal attributes (default 1).   -numeric <num> The number of numeric attributes (default 1).   -string <num> The number of string attributes (default 1).   -date <num> The number of date attributes (default 1).   -relational <num> The number of relational attributes (default 1).   -num-instances-relational <num> The number of instances in relational/bag attributes (default 10).   -words <comma-separated-list> The words to use in string attributes.   -word-separators <chars> The word separators to use in string attributes.   -W Full name of the kernel analysed. eg: wekamethod_0method_1method_2method_3 (default wekamethod_0method_1method_2method_3)   Options specific to kernel wekamethod_0method_1method_2method_3:   -D Enables debugging output (if available) to be printed. (default: off)   -no-checks Turns off all checks - use with caution! (default: checks on)   -C <num> The size of the cache (a prime number), 0 for full cache and -1 to turn it off. (default: 250007)   -G <num> The Gamma parameter. (default: 0method_12)  <!-- options-end -->",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getOptions()",
+    "name": "getOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String[]",
+      "name": "java.lang.String[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getOptions()",
+      "comment": "Gets the current settings of the CheckKernel.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "doTests()",
+    "name": "doTests",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "doTests()",
+      "comment": "Begin the tests, reporting results to method_0",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setKernel(weka.classifiers.functions.supportVector.Kernel value)",
+    "name": "setKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "weka.classifiers.functions.supportVector.Kernel",
+          "name": "Kernel",
+          "isArray": false
+        },
+        "name": "value"
+      }
+    ],
+    "protocol": {
+      "member": "setKernel(weka.classifiers.functions.supportVector.Kernel value)",
+      "comment": "Set the lernel to test.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getKernel()",
+    "name": "getKernel",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.Kernel",
+      "name": "weka.classifiers.functions.supportVector.Kernel",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getKernel()",
+      "comment": "Get the kernel being tested",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "testsPerClassType(int classType, boolean weighted, boolean multiInstance)",
+    "name": "testsPerClassType",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "weighted"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      }
+    ],
+    "protocol": {
+      "member": "testsPerClassType(int classType, boolean weighted, boolean multiInstance)",
+      "comment": "Run a battery of tests for a given class attribute type",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canTakeOptions()",
+    "name": "canTakeOptions",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "canTakeOptions()",
+      "comment": "Checks whether the scheme can take command line options.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "weightedInstancesHandler()",
+    "name": "weightedInstancesHandler",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "weightedInstancesHandler()",
+      "comment": "Checks whether the scheme says it can handle instance weights.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "multiInstanceHandler()",
+    "name": "multiInstanceHandler",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "multiInstanceHandler()",
+      "comment": "Checks whether the scheme handles multi-instance data.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "declaresSerialVersionUID()",
+    "name": "declaresSerialVersionUID",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "declaresSerialVersionUID()",
+      "comment": "tests for a serialVersionUID. Fails in case the scheme doesn't declare a UID.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canPredict(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+    "name": "canPredict",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      }
+    ],
+    "protocol": {
+      "member": "canPredict(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+      "comment": "Checks basic prediction of the scheme, for simple non-troublesome datasets.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canHandleNClasses(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int numClasses)",
+    "name": "canHandleNClasses",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      }
+    ],
+    "protocol": {
+      "member": "canHandleNClasses(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int numClasses)",
+      "comment": "Checks whether nominal schemes can handle more than two classes. If a scheme is only designed for two-class problems it should throw an appropriate exception for multi-class problems.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canHandleClassAsNthAttribute(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, int classIndex)",
+    "name": "canHandleClassAsNthAttribute",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      }
+    ],
+    "protocol": {
+      "member": "canHandleClassAsNthAttribute(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, int classIndex)",
+      "comment": "Checks whether the scheme can handle class attributes as Nth attribute.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canHandleZeroTraining(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+    "name": "canHandleZeroTraining",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      }
+    ],
+    "protocol": {
+      "member": "canHandleZeroTraining(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+      "comment": "Checks whether the scheme can handle zero training instances.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "correctBuildInitialisation(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+    "name": "correctBuildInitialisation",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      }
+    ],
+    "protocol": {
+      "member": "correctBuildInitialisation(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+      "comment": "Checks whether the scheme correctly initialises models when buildKernel is called. This test calls buildKernel with one training dataset. buildKernel is then called on a training set with different structure, and then again with the original training set. If the equals method of the KernelEvaluation class returns false, this is noted as incorrect build initialisation.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "canHandleMissing(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, boolean predictorMissing, boolean classMissing, int missingLevel)",
+    "name": "canHandleMissing",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "predictorMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "classMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "missingLevel"
+      }
+    ],
+    "protocol": {
+      "member": "canHandleMissing(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, boolean predictorMissing, boolean classMissing, int missingLevel)",
+      "comment": "Checks basic missing value handling of the scheme. If the missing values cause an exception to be thrown by the scheme, this will be recorded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "instanceWeights(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+    "name": "instanceWeights",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      }
+    ],
+    "protocol": {
+      "member": "instanceWeights(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+      "comment": "Checks whether the kernel can handle instance weights. This test compares the kernel performance on two datasets that are identical except for the training weights. If the results change, then the kernel must be using the weights. It may be possible to get a false positive from this test if the weight changes aren't significant enough to induce a change in kernel performance (but the weights are chosen to minimize the likelihood of this).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "datasetIntegrity(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, boolean predictorMissing, boolean classMissing)",
+    "name": "datasetIntegrity",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "predictorMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "classMissing"
+      }
+    ],
+    "protocol": {
+      "member": "datasetIntegrity(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, boolean predictorMissing, boolean classMissing)",
+      "comment": "Checks whether the scheme alters the training dataset during building. If the scheme needs to modify the data it should take a copy of the training data. Currently checks for changes to header structure, number of instances, order of instances, instance weights.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runBasicTest(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, int missingLevel, boolean predictorMissing, boolean classMissing, int numTrain, int numClasses, java.util.ArrayList<java.lang.String> accepts)",
+    "name": "runBasicTest",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "missingLevel"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "predictorMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "classMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numTrain"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "accepts"
+      }
+    ],
+    "protocol": {
+      "member": "runBasicTest(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, int missingLevel, boolean predictorMissing, boolean classMissing, int numTrain, int numClasses, java.util.ArrayList<java.lang.String> accepts)",
+      "comment": "Runs a text on the datasets with the given characteristics.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "runBasicTest(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, int classIndex, int missingLevel, boolean predictorMissing, boolean classMissing, int numTrain, int numClasses, java.util.ArrayList<java.lang.String> accepts)",
+    "name": "runBasicTest",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean[]",
+      "name": "boolean[]",
+      "isArray": true
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "missingLevel"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "predictorMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "classMissing"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numTrain"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.ArrayList",
+          "name": "ArrayList",
+          "isArray": false
+        },
+        "name": "accepts"
+      }
+    ],
+    "protocol": {
+      "member": "runBasicTest(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType, int classIndex, int missingLevel, boolean predictorMissing, boolean classMissing, int numTrain, int numClasses, java.util.ArrayList<java.lang.String> accepts)",
+      "comment": "Runs a text on the datasets with the given characteristics.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeTestDataset(int seed, int numInstances, int numNominal, int numNumeric, int numString, int numDate, int numRelational, int numClasses, int classType, boolean multiInstance)",
+    "name": "makeTestDataset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "seed"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numInstances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numNominal"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numNumeric"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numString"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numDate"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numRelational"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      }
+    ],
+    "protocol": {
+      "member": "makeTestDataset(int seed, int numInstances, int numNominal, int numNumeric, int numString, int numDate, int numRelational, int numClasses, int classType, boolean multiInstance)",
+      "comment": "Make a simple set of instances, which can later be modified for use in specific tests.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "makeTestDataset(int seed, int numInstances, int numNominal, int numNumeric, int numString, int numDate, int numRelational, int numClasses, int classType, int classIndex, boolean multiInstance)",
+    "name": "makeTestDataset",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "weka.core.Instances",
+      "name": "weka.core.Instances",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "seed"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numInstances"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numNominal"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numNumeric"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numString"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numDate"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numRelational"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "numClasses"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classIndex"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      }
+    ],
+    "protocol": {
+      "member": "makeTestDataset(int seed, int numInstances, int numNominal, int numNumeric, int numString, int numDate, int numRelational, int numClasses, int classType, int classIndex, boolean multiInstance)",
+      "comment": "Make a simple set of instances with variable position of the class attribute, which can later be modified for use in specific tests.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "printAttributeSummary(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+    "name": "printAttributeSummary",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "nominalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "numericPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "stringPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "datePredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "relationalPredictor"
+      },
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "multiInstance"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "classType"
+      }
+    ],
+    "protocol": {
+      "member": "printAttributeSummary(boolean nominalPredictor, boolean numericPredictor, boolean stringPredictor, boolean datePredictor, boolean relationalPredictor, boolean multiInstance, int classType)",
+      "comment": "Print out a short summary string for the dataset characteristics",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getRevision()",
+    "name": "getRevision",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getRevision()",
+      "comment": "Returns the revision string.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "main(java.lang.String[] args)",
+    "name": "main",
+    "containingClass": {
+      "qualifiedName": "weka.classifiers.functions.supportVector.CheckKernel",
+      "name": "CheckKernel",
+      "isArray": false
+    },
+    "targetClass": "weka.classifiers.functions.supportVector.CheckKernel",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.lang.String;",
+          "name": "String[]",
+          "isArray": true
+        },
+        "name": "args"
+      }
+    ],
+    "protocol": {
+      "member": "main(java.lang.String[] args)",
+      "comment": "Test method for this class",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

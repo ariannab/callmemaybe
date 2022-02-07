@@ -1,0 +1,476 @@
+[
+  {
+    "signature": "java.util.logging.Handler()",
+    "name": "java.util.logging.Handler",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "java.util.logging.Handler()",
+      "comment": "Default constructor. The resulting Handler has a log level of method_0, no Formatter, and no Filter. A default ErrorManager instance is installed as the ErrorManager.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "publish(java.util.logging.LogRecord record)",
+    "name": "publish",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "publish(java.util.logging.LogRecord record)",
+      "comment": "Publish a LogRecord.  The logging request was made initially to a Logger object, which initialized the LogRecord and forwarded it here.  The Handler is responsible for formatting the message, when and if necessary. The formatting should include localization.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "flush()",
+    "name": "flush",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "flush()",
+      "comment": "Flush any buffered output.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "close()",
+    "name": "close",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "close()",
+      "comment": "Close the Handler and free all associated resources.  The close method will perform a flush and then close the Handler. After close has been called this Handler should no longer be used. Method calls may either be silently ignored or may throw runtime exceptions. @exception SecurityException if a security manager exists and if the caller does not have method_0.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.close()->!receiverObjectID"
+    }
+  },
+  {
+    "signature": "setFormatter(java.util.logging.Formatter newFormatter)",
+    "name": "setFormatter",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Formatter",
+          "name": "Formatter",
+          "isArray": false
+        },
+        "name": "newFormatter"
+      }
+    ],
+    "protocol": {
+      "member": "setFormatter(java.util.logging.Formatter newFormatter)",
+      "comment": "Set a Formatter. This Formatter will be used to format LogRecords for this Handler.  Some Handlers may not use Formatters, in which case the Formatter will be remembered, but not used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFormatter()",
+    "name": "getFormatter",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Formatter",
+      "name": "java.util.logging.Formatter",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFormatter()",
+      "comment": "Return the Formatter for this Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setEncoding(java.lang.String encoding)",
+    "name": "setEncoding",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "encoding"
+      }
+    ],
+    "protocol": {
+      "member": "setEncoding(java.lang.String encoding)",
+      "comment": "Set the character encoding used by this Handler.  The encoding should be set before any LogRecords are written to the Handler.",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.setEncoding(args[0])->receiverObjectID.publish(LogRecord)"
+    }
+  },
+  {
+    "signature": "getEncoding()",
+    "name": "getEncoding",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.lang.String",
+      "name": "java.lang.String",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getEncoding()",
+      "comment": "Return the character encoding for this Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setFilter(java.util.logging.Filter newFilter)",
+    "name": "setFilter",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Filter",
+          "name": "Filter",
+          "isArray": false
+        },
+        "name": "newFilter"
+      }
+    ],
+    "protocol": {
+      "member": "setFilter(java.util.logging.Filter newFilter)",
+      "comment": "Set a Filter to control output on this Handler. <P> For each call of publish the Handler will call this Filter (if it is non-null) to check if the LogRecord should be published or discarded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getFilter()",
+    "name": "getFilter",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Filter",
+      "name": "java.util.logging.Filter",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getFilter()",
+      "comment": "Get the current Filter for this Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setErrorManager(java.util.logging.ErrorManager em)",
+    "name": "setErrorManager",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.ErrorManager",
+          "name": "ErrorManager",
+          "isArray": false
+        },
+        "name": "em"
+      }
+    ],
+    "protocol": {
+      "member": "setErrorManager(java.util.logging.ErrorManager em)",
+      "comment": "Define an ErrorManager for this Handler.  The ErrorManager's \"error\" method will be invoked if any errors occur while using this Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getErrorManager()",
+    "name": "getErrorManager",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.ErrorManager",
+      "name": "java.util.logging.ErrorManager",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getErrorManager()",
+      "comment": "Retrieves the ErrorManager for this Handler.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "reportError(java.lang.String msg, java.lang.Exception ex, int code)",
+    "name": "reportError",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "msg"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.lang.Exception",
+          "name": "Exception",
+          "isArray": false
+        },
+        "name": "ex"
+      },
+      {
+        "type": {
+          "qualifiedName": "int",
+          "name": "int",
+          "isArray": false
+        },
+        "name": "code"
+      }
+    ],
+    "protocol": {
+      "member": "reportError(java.lang.String msg, java.lang.Exception ex, int code)",
+      "comment": "Protected convenience method to report an error to this Handler's ErrorManager. Note that this method retrieves and uses the ErrorManager without doing a security check. It can therefore be used in environments where the caller may be non-privileged.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setLevel(java.util.logging.Level newLevel)",
+    "name": "setLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.Level",
+          "name": "Level",
+          "isArray": false
+        },
+        "name": "newLevel"
+      }
+    ],
+    "protocol": {
+      "member": "setLevel(java.util.logging.Level newLevel)",
+      "comment": "Set the log level specifying which message levels will be logged by this Handler. Message levels lower than this value will be discarded.  The intention is to allow developers to turn on voluminous logging, but to limit the messages that are sent to certain Handlers.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getLevel()",
+    "name": "getLevel",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.logging.Level",
+      "name": "java.util.logging.Level",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getLevel()",
+      "comment": "Get the log level specifying which messages will be logged by this Handler. Message levels lower than this level will be discarded.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLoggable(java.util.logging.LogRecord record)",
+    "name": "isLoggable",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.logging.LogRecord",
+          "name": "LogRecord",
+          "isArray": false
+        },
+        "name": "record"
+      }
+    ],
+    "protocol": {
+      "member": "isLoggable(java.util.logging.LogRecord record)",
+      "comment": "Check if this Handler would actually log a given LogRecord.  This method checks if the LogRecord has an appropriate Level and whether it satisfies any Filter. It also may make other Handler specific checks that might prevent a handler from logging the LogRecord. It will return false if the LogRecord is null.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "checkPermission()",
+    "name": "checkPermission",
+    "containingClass": {
+      "qualifiedName": "java.util.logging.Handler",
+      "name": "Handler",
+      "isArray": false
+    },
+    "targetClass": "java.util.logging.Handler",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "checkPermission()",
+      "comment": "",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

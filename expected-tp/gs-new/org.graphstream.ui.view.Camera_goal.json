@@ -1,0 +1,555 @@
+[
+  {
+    "signature": "getViewCenter()",
+    "name": "getViewCenter",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.geom.Point3",
+      "name": "org.graphstream.ui.geom.Point3",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getViewCenter()",
+      "comment": "The view centre (a point in graph units).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setViewCenter(double x, double y, double z)",
+    "name": "setViewCenter",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "z"
+      }
+    ],
+    "protocol": {
+      "member": "setViewCenter(double x, double y, double z)",
+      "comment": "Change the view centre.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getViewPercent()",
+    "name": "getViewPercent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getViewPercent()",
+      "comment": "The portion of the graph visible.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setViewPercent(double percent)",
+    "name": "setViewPercent",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "percent"
+      }
+    ],
+    "protocol": {
+      "member": "setViewPercent(double percent)",
+      "comment": "Zoom the view.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getViewRotation()",
+    "name": "getViewRotation",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getViewRotation()",
+      "comment": "The current rotation angle.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setViewRotation(double theta)",
+    "name": "setViewRotation",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "theta"
+      }
+    ],
+    "protocol": {
+      "member": "setViewRotation(double theta)",
+      "comment": "Rotate the view around its centre point by a given theta angles (in degrees).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getGraphDimension()",
+    "name": "getGraphDimension",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "double",
+      "name": "double",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getGraphDimension()",
+      "comment": "A number in GU that gives the approximate graph size (often the diagonal of the graph). This allows to compute displacements in the graph as percent of its overall size. For example this can be used to move the view centre.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "removeGraphViewport()",
+    "name": "removeGraphViewport",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "removeGraphViewport()",
+      "comment": "Remove the specified graph view port.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setGraphViewport(double minx, double miny, double maxx, double maxy)",
+    "name": "setGraphViewport",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "minx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "miny"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "maxx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "maxy"
+      }
+    ],
+    "protocol": {
+      "member": "setGraphViewport(double minx, double miny, double maxx, double maxy)",
+      "comment": "Specify exactly the minimum and maximum points in GU that are visible (more points may be visible due to aspect-ratio constraints).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "resetView()",
+    "name": "resetView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "resetView()",
+      "comment": "Reset the view to the automatic mode.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setBounds(double minx, double miny, double minz, double maxx, double maxy, double maxz)",
+    "name": "setBounds",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "minx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "miny"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "minz"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "maxx"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "maxy"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "maxz"
+      }
+    ],
+    "protocol": {
+      "member": "setBounds(double minx, double miny, double minz, double maxx, double maxy, double maxz)",
+      "comment": "Set the bounds of the graphic graph in GU. Called by the Viewer.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getMetrics()",
+    "name": "getMetrics",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.swingViewer.util.GraphMetrics",
+      "name": "org.graphstream.ui.swingViewer.util.GraphMetrics",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getMetrics()",
+      "comment": "Get the orgmethod_0method_1method_2method_3method_4 object linked to this Camera. It can be used to convert pixels to graphic units and vice versa.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setAutoFitView(boolean on)",
+    "name": "setAutoFitView",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "boolean",
+          "name": "boolean",
+          "isArray": false
+        },
+        "name": "on"
+      }
+    ],
+    "protocol": {
+      "member": "setAutoFitView(boolean on)",
+      "comment": "Enable or disable automatic adjustment of the view to see the entire graph.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transformGuToPx(double x, double y, double z)",
+    "name": "transformGuToPx",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.geom.Point3",
+      "name": "org.graphstream.ui.geom.Point3",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "z"
+      }
+    ],
+    "protocol": {
+      "member": "transformGuToPx(double x, double y, double z)",
+      "comment": "Transform a point in graph units into pixels.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "transformPxToGu(double x, double y)",
+    "name": "transformPxToGu",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.graphstream.ui.geom.Point3",
+      "name": "org.graphstream.ui.geom.Point3",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "x"
+      },
+      {
+        "type": {
+          "qualifiedName": "double",
+          "name": "double",
+          "isArray": false
+        },
+        "name": "y"
+      }
+    ],
+    "protocol": {
+      "member": "transformPxToGu(double x, double y)",
+      "comment": "Return the given point in pixels converted in graph units (GU) using the inverse transformation of the current projection matrix. The inverse matrix is computed only once each time a new projection matrix is created.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isVisible(org.graphstream.ui.graphicGraph.GraphicElement element)",
+    "name": "isVisible",
+    "containingClass": {
+      "qualifiedName": "org.graphstream.ui.view.Camera",
+      "name": "Camera",
+      "isArray": false
+    },
+    "targetClass": "org.graphstream.ui.view.Camera",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.graphstream.ui.graphicGraph.GraphicElement",
+          "name": "GraphicElement",
+          "isArray": false
+        },
+        "name": "element"
+      }
+    ],
+    "protocol": {
+      "member": "isVisible(org.graphstream.ui.graphicGraph.GraphicElement element)",
+      "comment": "True if the element would be visible on screen. The method used is to transform the center of the element (which is always in graph units) using the camera actual transformation to put it in pixel units. Then to look in the style sheet the size of the element and to test if its enclosing rectangle intersects the view port. For edges, its two nodes are used.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

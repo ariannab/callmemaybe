@@ -1,0 +1,152 @@
+[
+  {
+    "signature": "java.util.jar.JarEntry(java.lang.String name)",
+    "name": "java.util.jar.JarEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "JarEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarEntry",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.lang.String",
+          "name": "String",
+          "isArray": false
+        },
+        "name": "name"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.jar.JarEntry(java.lang.String name)",
+      "comment": "Creates a new JarEntry for the specified JAR file entry name.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.jar.JarEntry(java.util.zip.ZipEntry ze)",
+    "name": "java.util.jar.JarEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "JarEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarEntry",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.zip.ZipEntry",
+          "name": "ZipEntry",
+          "isArray": false
+        },
+        "name": "ze"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.jar.JarEntry(java.util.zip.ZipEntry ze)",
+      "comment": "Creates a new JarEntry with fields taken from the specified ZipEntry object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "java.util.jar.JarEntry(java.util.jar.JarEntry je)",
+    "name": "java.util.jar.JarEntry",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "JarEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarEntry",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.jar.JarEntry",
+          "name": "JarEntry",
+          "isArray": false
+        },
+        "name": "je"
+      }
+    ],
+    "protocol": {
+      "member": "java.util.jar.JarEntry(java.util.jar.JarEntry je)",
+      "comment": "Creates a new JarEntry with fields taken from the specified JarEntry object.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getAttributes()",
+    "name": "getAttributes",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "JarEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.jar.Attributes",
+      "name": "java.util.jar.Attributes",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getAttributes()",
+      "comment": "Returns the Manifest Attributes for this entry, or null if none.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCertificates()",
+    "name": "getCertificates",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "JarEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.cert.Certificate[]",
+      "name": "java.security.cert.Certificate[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCertificates()",
+      "comment": "Returns the Certificate objects for this entry, or null if none. This method can only be called once the JarEntry has been completely verified by reading from the entry input stream until the end of the stream has been reached. Otherwise, this method will return null. The returned certificate array comprises all the signer certificates that were used to verify this entry. Each signer certificate is followed by its supporting certificate chain (which may be empty). Each signer certificate and its supporting certificate chain are ordered bottom-to-top (imethod_0., with the signer certificate first and the (root) certificate authority last).",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getCodeSigners()",
+    "name": "getCodeSigners",
+    "containingClass": {
+      "qualifiedName": "java.util.jar.JarEntry",
+      "name": "JarEntry",
+      "isArray": false
+    },
+    "targetClass": "java.util.jar.JarEntry",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.security.CodeSigner[]",
+      "name": "java.security.CodeSigner[]",
+      "isArray": true
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getCodeSigners()",
+      "comment": "Returns the CodeSigner objects for this entry, or null if none. This method can only be called once the JarEntry has been completely verified by reading from the entry input stream until the end of the stream has been reached. Otherwise, this method will return null. The returned array comprises all the code signers that have signed this entry.",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]
