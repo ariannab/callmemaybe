@@ -457,6 +457,14 @@ public final class CommentContent {
     return signaturesInComment;
   }
 
+  public String getOriginalText() {
+    return originalText;
+  }
+
+  public void setOriginalText(String originalText) {
+    this.originalText = originalText;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;

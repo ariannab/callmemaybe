@@ -98,7 +98,7 @@ public class JsonOutput {
     }
     this.protocol =
             new ProtocolOutput(
-                    member.getFreeText().getComment().getText(),
+                    member.getFreeText().getComment().getOriginalText(),
                     member.getSignature(),
                     member.getFreeText().getKind().toString(),
                     oracle.toString());
