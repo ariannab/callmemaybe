@@ -1,8 +1,6 @@
 package org.callmemaybe.extractor;
 
-import org.callmemaybe.translator.CodeElement;
-import org.callmemaybe.translator.Proposition;
-import org.callmemaybe.translator.PropositionSeries;
+import org.callmemaybe.output.util.CMMToRandoop;
 import org.callmemaybe.translator.TemporalPropSeries;
 import org.callmemaybe.translator.TemporalProposition;
 import org.callmemaybe.translator.TemporalProtocol;
@@ -11,6 +9,9 @@ import org.callmemaybe.translator.TemporalRule;
 import java.util.List;
 
 public class TemporalMatch {
+
+    /** {@code DocumentedExecutable} this protocol refers to. */
+    DocumentedExecutable documentedOperation;
 
     /**
      * The underlying protocol with members and arrows.
@@ -34,7 +35,8 @@ public class TemporalMatch {
 
     boolean isIndeedMatch;
 
-    public TemporalMatch(List<TemporalPropSeries> propositionSeries) {
+    public TemporalMatch(DocumentedExecutable excMember, List<TemporalPropSeries> propositionSeries) {
+        this.documentedOperation = excMember;
         this.temporalPropSeries = propositionSeries;
     }
 
@@ -124,7 +126,38 @@ public class TemporalMatch {
     }
 
     public void buildOracle() {
-        this.oracle = rawProtocol.getFirstMember() + rawProtocol.getArrow() + rawProtocol.getSecondMember();
+        this.oracle = rawProtocol.getMemberOnTheLeft() + rawProtocol.getArrow() + rawProtocol.getMemberOnTheRight();
+    }
+
+    public CMMToRandoop toMachineReadableOutput(){
+        // FIXME Simplification; how to translate depends by where is the doc. op.
+        // FIXME (is it first or sec member? And what does first and sec mean w.r.t.
+        // FIXME arrows anyway, is it left or right lol)
+        String arrow = this.rawProtocol.getArrow();
+        String memberOnTheLeft = this.rawProtocol.getMemberOnTheLeft();
+        String memberOnTheRight = this.rawProtocol.getMemberOnTheRight();
+        String docOperationName = this.documentedOperation.getName();
+        DocumentedExecutable member = this.documentedOperation;
+
+        if(arrow.equals(TemporalRule.LEFT_ARROW)) {
+            if(memberOnTheLeft.contains(docOperationName)) {
+                // A <- B where A has the documented protocol. The doc. protocol must follow B.
+                return new CMMToRandoop(member, docOperationName, "", memberOnTheRight);
+            }else if(memberOnTheRight.contains(docOperationName)){
+                // A <- B where B has the documented protocol. The doc. protocol. must precede A.
+                return new CMMToRandoop(member, docOperationName, memberOnTheLeft, "");
+            }
+        }else if(arrow.equals(TemporalRule.RIGHT_ARROW)) {
+            if(memberOnTheLeft.contains(docOperationName)) {
+                // A -> B where A has the documented protocol. The doc. protocol must precede B.
+                return new CMMToRandoop(member, docOperationName, memberOnTheRight, "");
+            }else if(memberOnTheRight.contains(docOperationName)){
+                // A -> B where B has the documented protocol. The doc. protocol must follow A.
+                return new CMMToRandoop(member, docOperationName, "", memberOnTheLeft);
+
+            }
+        }
+        return null;
     }
 
     public List<TemporalPropSeries> getTemporalPropSeries() {
@@ -134,4 +167,6 @@ public class TemporalMatch {
     public void setTemporalPropSeries(List<TemporalPropSeries> temporalPropSeries) {
         this.temporalPropSeries = temporalPropSeries;
     }
+
+
 }

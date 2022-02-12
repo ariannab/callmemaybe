@@ -105,6 +105,13 @@ public enum Configuration {
   private File conditionTranslatorOutput;
 
   @Parameter(
+          names = "--randoop-CMM-output",
+          description = "File path to export CMM protocols in JSON format for Randoop to read",
+          converter = FileConverter.class)
+
+  private File randoopCMMOutput;
+
+  @Parameter(
       names = "--distance-threshold",
       description =
           "Distance threshold: only code elements with edit distance less than this threshold"
@@ -270,6 +277,13 @@ public enum Configuration {
   public File getConditionTranslatorInput() {
     return conditionTranslatorInput;
   }
+
+
+
+  public File getRandoopCMMOutput() {
+    return randoopCMMOutput;
+  }
+
 
   /**
    * Returns the output file for the condition translator or null if this file is not specified.

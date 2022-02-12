@@ -19,6 +19,7 @@ import org.callmemaybe.extractor.ReturnTag;
 import org.callmemaybe.extractor.TempProtocolMatcher;
 import org.callmemaybe.extractor.TemporalMatch;
 import org.callmemaybe.extractor.ThrowsTag;
+import org.callmemaybe.output.util.CMMToRandoop;
 import org.callmemaybe.translator.preprocess.PreprocessorFactory;
 import org.callmemaybe.translator.spec.Assertion;
 import org.callmemaybe.translator.spec.Body;
@@ -180,6 +181,17 @@ public class CommentTranslator {
         return methodsSpecs;
     }
 
+    public static Map<DocumentedExecutable, List<TemporalMatch>> translateTemporalMatchesFor(DocumentedType documentedType){
+        List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
+        TempProtocolMatcher tempProtocolMatcher = new TempProtocolMatcher();
+        Map<DocumentedExecutable, List<TemporalMatch>> methodsSpecs = new LinkedHashMap<>();
+        for (DocumentedExecutable member : members) {
+            List<TemporalMatch> temporalMatches = CommentTranslator.translateTP(tempProtocolMatcher, member);
+            methodsSpecs.put(member, temporalMatches);
+        }
+        return methodsSpecs;
+    }
+
     public static Map<DocumentedExecutable, ProtocolSpecification> mapExecutablesToProtocolSpecs(
             DocumentedType documentedType) {
         Map<DocumentedExecutable, ProtocolSpecification> methodsSpecs = new LinkedHashMap<>();
@@ -201,6 +213,25 @@ public class CommentTranslator {
 
             opSpec.addSpecifications(protocolSpecifications);
             methodsSpecs.put(member, opSpec);
+        }
+
+        return methodsSpecs;
+    }
+
+    public static Map<DocumentedExecutable, CMMToRandoop> mapExecutablesToCMMRandoopOutput(
+            DocumentedType documentedType) {
+        Map<DocumentedExecutable, CMMToRandoop> methodsSpecs = new LinkedHashMap<>();
+        List<DocumentedExecutable> members = documentedType.getDocumentedExecutables();
+        TempProtocolMatcher tempProtocolMatcher = new TempProtocolMatcher();
+        for (DocumentedExecutable member : members) {
+            List<TemporalMatch> temporalMatches = CommentTranslator.translateTP(tempProtocolMatcher, member);
+            // FIXME Quick&Dirty: assume it's only one. Ofc it may happen we have multiple protocols for
+            // FIXME the same method. For sure, it's not the most common.
+            if(!temporalMatches.isEmpty()) {
+                TemporalMatch theOnlyMatchICareAbout = temporalMatches.get(0);
+                CMMToRandoop output = theOnlyMatchICareAbout.toMachineReadableOutput();
+                methodsSpecs.put(member, output);
+            }
         }
 
         return methodsSpecs;

@@ -1,34 +1,42 @@
 package org.callmemaybe.translator;
 
+import org.callmemaybe.extractor.DocumentedExecutable;
+
 public class TemporalProtocol{
-    String firstMember;
-    String secondMember;
+    /** Signature on the left of the arrow. */
+    String memberOnTheLeft;
+
+    /** Signature on the right of the arrow. */
+    String memberOnTheRight;
+
+    /** The arrow, as a String, which either corresponds to {@code TemporalRule.LEFT_ARROW}
+     * or {@code TemporalRule.RIGHT_ARROW} */
     String arrow;
 
-    public TemporalProtocol(String firstMember, String secondMember, String arrow) {
-        this.firstMember = firstMember;
-        this.secondMember = secondMember;
+    public TemporalProtocol(String memberOnTheLeft, String memberOnTheRight, String arrow) {
+        this.memberOnTheLeft = memberOnTheLeft;
+        this.memberOnTheRight = memberOnTheRight;
         this.arrow = arrow;
     }
-
 
     public TemporalProtocol() {
 
     }
 
     public boolean isNoProtocol(){
-        return firstMember.isEmpty() && secondMember.isEmpty() && arrow.isEmpty();
+        return memberOnTheLeft.isEmpty() && memberOnTheRight.isEmpty() && arrow.isEmpty();
     }
 
-    public String getFirstMember() {
-        return firstMember;
+    public String getMemberOnTheLeft() {
+        return memberOnTheLeft;
     }
 
-    public String getSecondMember() {
-        return secondMember;
+    public String getMemberOnTheRight() {
+        return memberOnTheRight;
     }
 
     public String getArrow() {
         return arrow;
     }
+
 }

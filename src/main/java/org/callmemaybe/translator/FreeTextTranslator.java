@@ -158,8 +158,8 @@ public class FreeTextTranslator {
             // only made of identifiers (simple names), that will be translated into real
             // code names only in the last phase. FIXME maybe not what we need tho
             temporalMatch.setRawProtocol(TemporalRule.buildRawProtocol(temporalMatch));
-            if (temporalMatch.getRawProtocol().getFirstMember() != null &&
-                    temporalMatch.getRawProtocol().getSecondMember() != null) {
+            if (temporalMatch.getRawProtocol().getMemberOnTheLeft() != null &&
+                    temporalMatch.getRawProtocol().getMemberOnTheRight() != null) {
                 // We have a complete raw protocol: translate into code
                 // TODO Ignoring it for now, come back to it later.
 //                translateRawProtocol(excMember, temporalMatch);
@@ -482,10 +482,10 @@ public class FreeTextTranslator {
         codeElements.add(documentedMethod);
 
         // Match first member of the protocol.
-        Set<CodeElement<?>> firstMemberMatches = matcher.subjectMatch(rawProtocol.getFirstMember(), codeElements);
+        Set<CodeElement<?>> firstMemberMatches = matcher.subjectMatch(rawProtocol.getMemberOnTheLeft(), codeElements);
 
         // Match second member of the protocol.
-        Set<CodeElement<?>> secMemberMatches = matcher.subjectMatch(rawProtocol.getSecondMember(), codeElements);
+        Set<CodeElement<?>> secMemberMatches = matcher.subjectMatch(rawProtocol.getMemberOnTheRight(), codeElements);
 
         if (!firstMemberMatches.iterator().hasNext() || !secMemberMatches.iterator().hasNext()) {
             // TODO check if this is the best way to flag a failed match

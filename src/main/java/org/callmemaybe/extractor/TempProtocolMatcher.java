@@ -71,7 +71,7 @@ public class TempProtocolMatcher {
     public TemporalMatch findProtocolInComment(CommentContent commentContent, DocumentedExecutable excMember) {
 //        List<SemanticGraph> semanticGraphs = Parser.extractSemanticGraphs(commentContent, excMember);
         List<TemporalPropSeries> propositionSeries = Parser.parseTemporal(commentContent, excMember);
-        TemporalMatch temporalMatch = new TemporalMatch(propositionSeries);
+        TemporalMatch temporalMatch = new TemporalMatch(excMember, propositionSeries);
 
         for (TemporalPropSeries p : propositionSeries) {
             if(p.getTemporalPropositions().size() == 2) {
