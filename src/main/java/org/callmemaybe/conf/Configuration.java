@@ -105,10 +105,9 @@ public enum Configuration {
   private File conditionTranslatorOutput;
 
   @Parameter(
-          names = "--randoop-CMM-output",
-          description = "File path to export CMM protocols in JSON format for Randoop to read",
-          converter = FileConverter.class)
-
+      names = "--randoop-CMM-output",
+      description = "File path to export CMM protocols in JSON format for Randoop to read",
+      converter = FileConverter.class)
   private File randoopCMMOutput;
 
   @Parameter(
@@ -192,11 +191,10 @@ public enum Configuration {
       arity = 1)
   private boolean generateCrossOracles = false;
 
-
   @Parameter(
-          names = "--temp-protocols",
-          description = "Enable/disable the generation of temporal protocols",
-          arity = 1)
+      names = "--temp-protocols",
+      description = "Enable/disable the generation of temporal protocols",
+      arity = 1)
   private boolean generateTempProtocols = false;
 
   /**
@@ -278,12 +276,9 @@ public enum Configuration {
     return conditionTranslatorInput;
   }
 
-
-
   public File getRandoopCMMOutput() {
     return randoopCMMOutput;
   }
-
 
   /**
    * Returns the output file for the condition translator or null if this file is not specified.
@@ -351,11 +346,11 @@ public enum Configuration {
   }
 
   /**
-   * Returns the expected output file to compare CallMeMaybe's output against, or null if no such file is
-   * specified.
+   * Returns the expected output file to compare CallMeMaybe's output against, or null if no such
+   * file is specified.
    *
-   * @return the expected output file to compare CallMeMaybe's output against, or null if no such file is
-   *     specified
+   * @return the expected output file to compare CallMeMaybe's output against, or null if no such
+   *     file is specified
    */
   public File getExpectedOutput() {
     return expectedOutput;
@@ -371,8 +366,8 @@ public enum Configuration {
   }
 
   /**
-   * Returns whether to use @tComment translation algorithm instead of the standard CallMeMaybe condition
-   * translator.
+   * Returns whether to use @tComment translation algorithm instead of the standard CallMeMaybe
+   * condition translator.
    *
    * @return true if @tComment has to be used, false otherwise
    */
@@ -381,7 +376,8 @@ public enum Configuration {
   }
 
   /**
-   * Returns the file where to export CallMeMaybe generated specifications as Randoop specifications.
+   * Returns the file where to export CallMeMaybe generated specifications as Randoop
+   * specifications.
    *
    * @return the file where to export CallMeMaybe generated specifications as Randoop specifications
    */
@@ -390,8 +386,8 @@ public enum Configuration {
   }
 
   /**
-   * Returns whether CallMeMaybe uses semantic matching when translating conditions. If false, classic
-   * syntactic matching is used.
+   * Returns whether CallMeMaybe uses semantic matching when translating conditions. If false,
+   * classic syntactic matching is used.
    *
    * @return true if semantic matching is used during translation, false otherwise
    */
