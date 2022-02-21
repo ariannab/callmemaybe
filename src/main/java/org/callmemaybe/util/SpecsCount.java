@@ -14,9 +14,9 @@ import org.callmemaybe.output.util.ReturnTagOutput;
 import org.callmemaybe.output.util.TagOutput;
 
 /**
- * Given a goal JSON file as produced by CallMeMaybe, this program prints the number of specifications
- * contained in the file. Notice that this program ignores inherited specs and specs of private
- * methods.
+ * Given a goal JSON file as produced by CallMeMaybe, this program prints the number of
+ * specifications contained in the file. Notice that this program ignores inherited specs and specs
+ * of private methods.
  *
  * <p>The output format of this program is the following (n is a non-negative integer): PRE n POST n
  * EXC n

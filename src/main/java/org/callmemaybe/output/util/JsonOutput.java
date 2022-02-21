@@ -68,8 +68,7 @@ public class JsonOutput {
             oracle.toString());
   }
 
-  private void createProtocols(
-          DocumentedExecutable member, ProtocolSpecification specification) {
+  private void createProtocols(DocumentedExecutable member, ProtocolSpecification specification) {
     StringBuilder oracle = new StringBuilder();
     int i = 0;
     boolean moreThanOne = false;
@@ -97,11 +96,11 @@ public class JsonOutput {
       }
     }
     this.protocol =
-            new ProtocolOutput(
-                    member.getFreeText().getComment().getOriginalText(),
-                    member.getSignature(),
-                    member.getFreeText().getKind().toString(),
-                    oracle.toString());
+        new ProtocolOutput(
+            member.getFreeText().getComment().getOriginalText(),
+            member.getSignature(),
+            member.getFreeText().getKind().toString(),
+            oracle.toString());
   }
 
   public JsonOutput(DocumentedExecutable member, OperationSpecification specification) {
@@ -118,15 +117,16 @@ public class JsonOutput {
 
     String returnTypeName = member.getExecutable().getAnnotatedReturnType().getType().getTypeName();
     this.returnType =
-        new org.callmemaybe.output.util.Type(returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
+        new org.callmemaybe.output.util.Type(
+            returnTypeName, returnTypeName, returnTypeName.endsWith("]"));
 
     createParameters(member);
 
     if (specification instanceof EqOperationSpecification) {
       createEquivalences(member, (EqOperationSpecification) specification);
-    } else if(specification instanceof  ProtocolSpecification){
+    } else if (specification instanceof ProtocolSpecification) {
       createProtocols(member, (ProtocolSpecification) specification);
-    }else {
+    } else {
       createParamTags(member, specification.getPreconditions());
       createThrowsTags(member, specification.getThrowsConditions());
       createReturnTags(member, specification.getPostconditions());
@@ -209,41 +209,68 @@ public class JsonOutput {
     if (this == o) return true;
     if (!(o instanceof JsonOutput)) return false;
     JsonOutput that = (JsonOutput) o;
-    return isVarArgs == that.isVarArgs &&
-            Objects.equals(signature, that.signature) &&
-            Objects.equals(name, that.name) &&
-            Objects.equals(containingClass, that.containingClass) &&
-            Objects.equals(targetClass, that.targetClass) &&
-            Objects.equals(returnType, that.returnType) &&
-            Objects.equals(parameters, that.parameters) &&
-            Objects.equals(paramTags, that.paramTags) &&
-            Objects.equals(returnTag, that.returnTag) &&
-            Objects.equals(throwsTags, that.throwsTags) &&
-            Objects.equals(equivalence, that.equivalence) &&
-            Objects.equals(protocol, that.protocol);
+    return isVarArgs == that.isVarArgs
+        && Objects.equals(signature, that.signature)
+        && Objects.equals(name, that.name)
+        && Objects.equals(containingClass, that.containingClass)
+        && Objects.equals(targetClass, that.targetClass)
+        && Objects.equals(returnType, that.returnType)
+        && Objects.equals(parameters, that.parameters)
+        && Objects.equals(paramTags, that.paramTags)
+        && Objects.equals(returnTag, that.returnTag)
+        && Objects.equals(throwsTags, that.throwsTags)
+        && Objects.equals(equivalence, that.equivalence)
+        && Objects.equals(protocol, that.protocol);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(signature, name, containingClass, targetClass, isVarArgs, returnType, parameters, paramTags, returnTag, throwsTags, equivalence, protocol);
+    return Objects.hash(
+        signature,
+        name,
+        containingClass,
+        targetClass,
+        isVarArgs,
+        returnType,
+        parameters,
+        paramTags,
+        returnTag,
+        throwsTags,
+        equivalence,
+        protocol);
   }
 
   @Override
   public String toString() {
-    return "JsonOutput{" +
-            "signature='" + signature + '\'' +
-            ", name='" + name + '\'' +
-            ", containingClass=" + containingClass +
-            ", targetClass='" + targetClass + '\'' +
-            ", isVarArgs=" + isVarArgs +
-            ", returnType=" + returnType +
-            ", parameters=" + parameters +
-            ", paramTags=" + paramTags +
-            ", returnTag=" + returnTag +
-            ", throwsTags=" + throwsTags +
-            ", equivalence=" + equivalence +
-            ", protocol=" + protocol +
-            '}';
+    return "JsonOutput{"
+        + "signature='"
+        + signature
+        + '\''
+        + ", name='"
+        + name
+        + '\''
+        + ", containingClass="
+        + containingClass
+        + ", targetClass='"
+        + targetClass
+        + '\''
+        + ", isVarArgs="
+        + isVarArgs
+        + ", returnType="
+        + returnType
+        + ", parameters="
+        + parameters
+        + ", paramTags="
+        + paramTags
+        + ", returnTag="
+        + returnTag
+        + ", throwsTags="
+        + throwsTags
+        + ", equivalence="
+        + equivalence
+        + ", protocol="
+        + protocol
+        + '}';
   }
 
   public static class JsonOutputComparator implements Comparator<JsonOutput> {

@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.mdkt.compiler.CompilationException;
-import org.mdkt.compiler.InMemoryJavaCompiler;
 import org.callmemaybe.conf.Configuration;
 import org.callmemaybe.extractor.CodeSnippet;
 import org.callmemaybe.extractor.DocumentedExecutable;
@@ -18,6 +16,8 @@ import org.callmemaybe.extractor.DocumentedParameter;
 import org.callmemaybe.extractor.EquivalentMatch;
 import org.callmemaybe.extractor.JavadocExtractor;
 import org.callmemaybe.translator.FreeTextTranslator;
+import org.mdkt.compiler.CompilationException;
+import org.mdkt.compiler.InMemoryJavaCompiler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import randoop.condition.specification.Guard;
@@ -468,8 +468,8 @@ public class ComplianceChecks {
   }
 
   /**
-   * Substitutes in the condition the actual arguments names, since CallMeMaybe-generated conditions refer
-   * to the nth argument with the {@code args[n]} notation.
+   * Substitutes in the condition the actual arguments names, since CallMeMaybe-generated conditions
+   * refer to the nth argument with the {@code args[n]} notation.
    *
    * @param sourceCodeBuilder {@code SourceCodeBuilder} object that wraps the source code
    * @param method documented executable the guard belongs to

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
 import org.callmemaybe.CallMeMaybe;
 import org.callmemaybe.extractor.JavadocComment;
 import org.callmemaybe.output.util.EquivalenceOutput;
@@ -14,9 +13,9 @@ import org.callmemaybe.output.util.ReturnTagOutput;
 import org.callmemaybe.output.util.TagOutput;
 
 /**
- * Represents CallMeMaybe precision/recall for a given Java element (for example, it can be a class or a
- * method). The Java element is only referred by its name and is used only to output the collected
- * statistics.
+ * Represents CallMeMaybe precision/recall for a given Java element (for example, it can be a class
+ * or a method). The Java element is only referred by its name and is used only to output the
+ * collected statistics.
  */
 public class Stats {
 
@@ -592,10 +591,7 @@ public class Stats {
   }
 
   private static StringBuilder collectTPStats(
-          Stats stats,
-          ProtocolOutput actualTag,
-          ProtocolOutput expectedTag,
-          JavadocComment.Kind kind) {
+      Stats stats, ProtocolOutput actualTag, ProtocolOutput expectedTag, JavadocComment.Kind kind) {
 
     final StringBuilder outputMessage = new StringBuilder();
     //    final TagOutput[] actualTagsArray = actualTags.toArray(new TagOutput[actualTags.size()]);
@@ -634,18 +630,18 @@ public class Stats {
         }
       }
       outputMessage
-              .append(kind)
-              .append("condition ")
-              .append("for method: ")
-              .append(actualTag.getMember().substring(0, actualTag.getMember().indexOf(")") + 1))
-              .append("\n")
-              .append("CommentContent: ")
-              .append(actualTag.getComment())
-              .append("\n\tExpected condition: ")
-              .append(expectedTag.getCondition())
-              .append("\n\tActual condition: ")
-              .append(actualTag.getCondition())
-              .append("\n");
+          .append(kind)
+          .append("condition ")
+          .append("for method: ")
+          .append(actualTag.getMember().substring(0, actualTag.getMember().indexOf(")") + 1))
+          .append("\n")
+          .append("CommentContent: ")
+          .append(actualTag.getComment())
+          .append("\n\tExpected condition: ")
+          .append(expectedTag.getCondition())
+          .append("\n\tActual condition: ")
+          .append(actualTag.getCondition())
+          .append("\n");
     }
     //    }
     return outputMessage;
@@ -699,8 +695,6 @@ public class Stats {
     return stats;
   }
 
-
-
   /**
    * Compares the given {@code actualMethodList} with {@code expectedMethodList}. This method is
    * used to generate statistics (precision and recall) of CallMeMaybe for each method in {@code
@@ -716,14 +710,14 @@ public class Stats {
    *     not of the same size
    */
   public static Stats getTPStats(
-          String targetClass,
-          List<JsonOutput> actualMethodList,
-          List<JsonOutput> expectedMethodList,
-          StringBuilder output) {
+      String targetClass,
+      List<JsonOutput> actualMethodList,
+      List<JsonOutput> expectedMethodList,
+      StringBuilder output) {
 
     if (actualMethodList.size() != expectedMethodList.size()) {
       throw new IllegalArgumentException(
-              "Actual and expected method list should be of the same size.");
+          "Actual and expected method list should be of the same size.");
     }
 
     Collections.sort(actualMethodList, new JsonOutput.JsonOutputComparator());
@@ -740,11 +734,8 @@ public class Stats {
       expectedMethodReturnTag.add(expectedMethod.protocol);
 
       output.append(
-              collectTPStats(
-                      stats,
-                      actualMethod.protocol,
-                      expectedMethod.protocol,
-                      JavadocComment.Kind.FREETEXT));
+          collectTPStats(
+              stats, actualMethod.protocol, expectedMethod.protocol, JavadocComment.Kind.FREETEXT));
     }
     return stats;
   }

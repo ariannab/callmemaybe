@@ -6,30 +6,23 @@ import org.callmemaybe.output.util.CMMToRandoop;
 import org.callmemaybe.output.util.CMMToRandoopSerializer;
 
 public class CMMGsonInstance {
-    /**
-     * The Gson object instance.
-     */
-    private static final Gson gson =
-            new GsonBuilder()
-                    .registerTypeAdapter(CMMToRandoop.class, new CMMToRandoopSerializer())
-                    .disableHtmlEscaping()
-                    .setPrettyPrinting()
-                    .create();
+  /** The Gson object instance. */
+  private static final Gson gson =
+      new GsonBuilder()
+          .registerTypeAdapter(CMMToRandoop.class, new CMMToRandoopSerializer())
+          .disableHtmlEscaping()
+          .setPrettyPrinting()
+          .create();
 
-    /**
-     * Disables construction of this class.
-     */
-    private CMMGsonInstance() {
-    }
+  /** Disables construction of this class. */
+  private CMMGsonInstance() {}
 
-    /**
-     * Returns the Gson instance held by this class.
-     *
-     * @return the Gson instance held by this class
-     */
-    public static Gson gson() {
-        return gson;
-    }
-
-}
+  /**
+   * Returns the Gson instance held by this class.
+   *
+   * @return the Gson instance held by this class
+   */
+  public static Gson gson() {
+    return gson;
+  }
 }

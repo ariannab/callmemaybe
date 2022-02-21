@@ -48,7 +48,8 @@ public class Reflection {
     }
 
     // The order here is important. We have to first look in the paths specified by the user and
-    // then in the default class path. The default classpath contains the dependencies of CallMeMaybe
+    // then in the default class path. The default classpath contains the dependencies of
+    // CallMeMaybe
     // that could clash with the system under analysis.
     final List<URL> urls = Configuration.INSTANCE.classDirs;
     final URLClassLoader loader = new URLClassLoader(urls.toArray(new URL[urls.size()]), null);
