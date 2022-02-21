@@ -16,12 +16,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.callmemaybe.conf.ClassDirsConverter;
 import org.callmemaybe.conf.Configuration;
 import org.callmemaybe.testlib.ToradocuJavaCompiler;
 import org.callmemaybe.util.Reflection;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 /**
  * Tests {@code JavadocExtractor} on the example class example.AClass in src/test/resources/example.

@@ -17,11 +17,10 @@ public class AccuracyJDK8 extends AbstractPrecisionRecallTestSuite {
     testTP("java.lang.Thread", 1, 1);
   }
 
-
-//  @Test
-//  public void testScanner() {
-//    testTP("java.util.Scanner", 1, 1);
-//  }
+  //  @Test
+  //  public void testScanner() {
+  //    testTP("java.util.Scanner", 1, 1);
+  //  }
 
   @Test
   public void testArrays() {
@@ -108,7 +107,6 @@ public class AccuracyJDK8 extends AbstractPrecisionRecallTestSuite {
     test("java.util.zip.Deflater", 0, 0);
   }
 
-
   @Test
   public void testConcurrent_LinkedBlockingQueue() {
     test("java.util.concurrent.LinkedBlockingQueue", 1, 1);
@@ -178,6 +176,4 @@ public class AccuracyJDK8 extends AbstractPrecisionRecallTestSuite {
   public void testLogging_StreamHandler() {
     test("java.util.logging.StreamHandler", 1, 0);
   }
-
-
 }

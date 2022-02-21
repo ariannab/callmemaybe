@@ -1,7 +1,7 @@
 package org.callmemaybe.accuracy.equivalences.dataset;
 
-import org.junit.Test;
 import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
+import org.junit.Test;
 
 public class AccuracyJDK8NoSBES extends AbstractPrecisionRecallTestSuite {
   private static final String JDK_8_SRC = "src/test/resources/src/jdk8-sources/src/share/classes";

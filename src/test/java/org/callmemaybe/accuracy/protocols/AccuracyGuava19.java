@@ -23,15 +23,13 @@ public class AccuracyGuava19 extends AbstractPrecisionRecallTestSuite {
     test("com.google.common.collect.TreeRangeMap", 1, 1);
   }
 
-//  @Test
-//  public void testCollect_ImmutableRangeSet() {
-//    test("com.google.common.collect.ImmutableRangeSet", 1, 1);
-//  }
+  //  @Test
+  //  public void testCollect_ImmutableRangeSet() {
+  //    test("com.google.common.collect.ImmutableRangeSet", 1, 1);
+  //  }
 
   @Test
   public void testCollect_SortedLists() {
     test("com.google.common.collect.SortedLists", 1, 0);
   }
-
-
 }

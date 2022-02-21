@@ -3,15 +3,13 @@ package org.callmemaybe.accuracy.protocols;
 import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
 import org.junit.Test;
 
-
 public class AccuracyCommonsCollections4 extends AbstractPrecisionRecallTestSuite {
 
   private static final String COMMONSCOLLECTIONS_4_SRC =
       "src/test/resources/src/commons-collections4-4.1-src/src/main/java/";
   private static final String COMMONSCOLLECTIONS_4_BIN =
       "src/test/resources/bin/commons-collections4-4.1.jar";
-  private static final String COMMONSCOLLECTIONS_4_GOAL_DIR =
-      "expected-tp/collections4";
+  private static final String COMMONSCOLLECTIONS_4_GOAL_DIR = "expected-tp/collections4";
 
   public AccuracyCommonsCollections4() {
     super(COMMONSCOLLECTIONS_4_SRC, COMMONSCOLLECTIONS_4_BIN, COMMONSCOLLECTIONS_4_GOAL_DIR);
@@ -66,8 +64,4 @@ public class AccuracyCommonsCollections4 extends AbstractPrecisionRecallTestSuit
   public void testIterators_FilterListIterator() {
     test("org.apache.commons.collections4.iterators.FilterListIterator", 1, 1);
   }
-
-
-
-
 }

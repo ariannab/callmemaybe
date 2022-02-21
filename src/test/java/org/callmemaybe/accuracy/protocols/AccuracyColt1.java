@@ -57,6 +57,4 @@ public class AccuracyColt1 extends AbstractPrecisionRecallTestSuite {
   public void testList_AbstractIntList() {
     test("cern.colt.list.AbstractIntList", 1, 1);
   }
-
-
 }

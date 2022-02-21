@@ -1,7 +1,7 @@
 package org.callmemaybe.accuracy.equivalences.dataset.executions;
 
-import org.junit.Test;
 import org.callmemaybe.CallMeMaybe;
+import org.junit.Test;
 
 public class Executions {
   @Test

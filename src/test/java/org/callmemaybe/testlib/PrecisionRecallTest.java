@@ -13,13 +13,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-
 import org.callmemaybe.CallMeMaybe;
 import org.callmemaybe.output.util.JsonOutput;
 import org.callmemaybe.util.GsonInstance;
 import org.callmemaybe.util.Stats;
 
-/** PrecisionRecallTest contains static methods to perform a precision recall test using CallMeMaybe. */
+/**
+ * PrecisionRecallTest contains static methods to perform a precision recall test using CallMeMaybe.
+ */
 class PrecisionRecallTest {
 
   /**

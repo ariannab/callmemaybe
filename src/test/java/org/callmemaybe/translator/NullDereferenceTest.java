@@ -16,11 +16,11 @@ import java.util.Arrays;
 import java.util.List;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.callmemaybe.CallMeMaybe;
 import org.callmemaybe.output.util.JsonOutput;
 import org.callmemaybe.util.GsonInstance;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class NullDereferenceTest {
   private static final Path resourcesPath = Paths.get("src", "test", "resources");

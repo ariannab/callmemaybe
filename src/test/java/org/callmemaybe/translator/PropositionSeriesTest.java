@@ -7,9 +7,9 @@ import static org.junit.Assert.assertTrue;
 import edu.stanford.nlp.ling.IndexedWord;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Test;
 import org.callmemaybe.extractor.CommentContent;
 import org.callmemaybe.extractor.DocumentedExecutable;
+import org.junit.Test;
 
 public class PropositionSeriesTest {
 

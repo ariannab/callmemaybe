@@ -1,7 +1,7 @@
 package org.callmemaybe.accuracy.equivalences.dataset;
 
-import org.junit.Test;
 import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
+import org.junit.Test;
 
 public class AccuracyHibernate5 extends AbstractPrecisionRecallTestSuite {
   private static final String HIBERNATE_5_SRC =

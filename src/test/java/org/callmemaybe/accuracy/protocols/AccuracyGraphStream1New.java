@@ -1,12 +1,14 @@
-//package org.callmemaybe.accuracy.protocols;
+// package org.callmemaybe.accuracy.protocols;
 //
-//import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
-//import org.junit.Test;
+// import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
+// import org.junit.Test;
 //
-//public class AccuracyGraphStream1New extends AbstractPrecisionRecallTestSuite {
+// public class AccuracyGraphStream1New extends AbstractPrecisionRecallTestSuite {
 //
-//    private static final String GS_1_SRC = "/Users/arianna/toradocu/src/test/resources/gs-core-1.3-sources/";
-//    private static final String GS_1_BIN = "/Users/arianna/toradocu/src/test/resources/bin/gs-core-1.3.jar";
+//    private static final String GS_1_SRC =
+// "/Users/arianna/toradocu/src/test/resources/gs-core-1.3-sources/";
+//    private static final String GS_1_BIN =
+// "/Users/arianna/toradocu/src/test/resources/bin/gs-core-1.3.jar";
 //    private static final String GS_1_DIR = "expected-tp/gs-new";
 //
 //    public AccuracyGraphStream1New() {
@@ -450,4 +452,4 @@
 //    }
 //
 //
-//}
+// }

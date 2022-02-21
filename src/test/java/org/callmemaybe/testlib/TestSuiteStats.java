@@ -47,14 +47,14 @@ class TestSuiteStats {
 
   double getOverallRecall(JavadocComment.Kind kind) {
     return testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
-            / ((testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
+        / ((testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
             + testStats.stream().mapToDouble(Stats::getWrongEqTranslations).sum()
             + testStats.stream().mapToDouble(Stats::getMissingEqTranslations).sum()));
   }
 
   double getOverallPrecision(JavadocComment.Kind kind) {
     return testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
-            / (testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
+        / (testStats.stream().mapToDouble(Stats::getCorrectEqTranslations).sum()
             + testStats.stream().mapToDouble(Stats::getWrongEqTranslations).sum()
             + testStats.stream().mapToDouble(Stats::getUnexpectedEqTranslations).sum());
   }
@@ -67,14 +67,19 @@ class TestSuiteStats {
     return testStats.stream().mapToInt(Stats::numberOfConditions).sum();
   }
 
-  int getTotalCorrectTranslation() { return testStats.stream().mapToInt(Stats::getCorrectEqTranslations).sum(); }
+  int getTotalCorrectTranslation() {
+    return testStats.stream().mapToInt(Stats::getCorrectEqTranslations).sum();
+  }
 
+  int getTotalMissingTranslation() {
+    return testStats.stream().mapToInt(Stats::getMissingEqTranslations).sum();
+  }
 
-  int getTotalMissingTranslation() { return testStats.stream().mapToInt(Stats::getMissingEqTranslations).sum(); }
+  int getTotalWrongTranslation() {
+    return testStats.stream().mapToInt(Stats::getWrongEqTranslations).sum();
+  }
 
-
-  int getTotalWrongTranslation() { return testStats.stream().mapToInt(Stats::getWrongEqTranslations).sum(); }
-
-
-  int getTotalUnexpectedTranslation() { return testStats.stream().mapToInt(Stats::getUnexpectedEqTranslations).sum(); }
+  int getTotalUnexpectedTranslation() {
+    return testStats.stream().mapToInt(Stats::getUnexpectedEqTranslations).sum();
+  }
 }

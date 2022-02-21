@@ -1,7 +1,7 @@
 package org.callmemaybe.accuracy.equivalences.sbes14;
 
-import org.junit.Test;
 import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
+import org.junit.Test;
 
 public class AccuracyGraphStream1 extends AbstractPrecisionRecallTestSuite {
 

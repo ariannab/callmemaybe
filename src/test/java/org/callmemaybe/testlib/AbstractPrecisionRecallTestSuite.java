@@ -5,11 +5,11 @@ import static org.junit.Assert.assertThat;
 
 import java.io.File;
 import java.io.IOException;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.callmemaybe.CallMeMaybe;
 import org.callmemaybe.extractor.JavadocComment;
 import org.callmemaybe.util.Stats;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 
 /**
  * Represents an abstract test suite that uses precision and recall to measure relevance.
@@ -45,8 +45,8 @@ public abstract class AbstractPrecisionRecallTestSuite {
   private final String goalOutputDirPath;
 
   /**
-   * Constructs and initializes a precision recall test suite that will test CallMeMaybe using the files in
-   * the given directories.
+   * Constructs and initializes a precision recall test suite that will test CallMeMaybe using the
+   * files in the given directories.
    *
    * @param sourceDirPath the path to the sources of the library to test
    * @param binDirPath the path to the binaries of the library to test
@@ -69,7 +69,8 @@ public abstract class AbstractPrecisionRecallTestSuite {
   @AfterClass
   public static void tearDown() {
 
-    System.out.println("Classifier classified: " + CallMeMaybe.configuration.ALL_SENTENCES + " sentences");
+    System.out.println(
+        "Classifier classified: " + CallMeMaybe.configuration.ALL_SENTENCES + " sentences");
 
     System.out.println(
         "=== Test Suite ==="
@@ -193,16 +194,16 @@ public abstract class AbstractPrecisionRecallTestSuite {
    */
   protected void testTP(String targetClass, double tpPrecision, double tpRecall) {
     final Stats stats =
-            PrecisionRecallTest.computeEqPrecisionAndRecall(
-                    targetClass, sourceDirPath, binDirPath, goalOutputDirPath);
+        PrecisionRecallTest.computeEqPrecisionAndRecall(
+            targetClass, sourceDirPath, binDirPath, goalOutputDirPath);
     testSuiteStats.addStats(stats);
     assertThat(
-            "Free text (temp protocol) precision is different than expected",
-            stats.getPrecision(JavadocComment.Kind.FREETEXT),
-            closeTo(tpPrecision, PRECISION));
+        "Free text (temp protocol) precision is different than expected",
+        stats.getPrecision(JavadocComment.Kind.FREETEXT),
+        closeTo(tpPrecision, PRECISION));
     assertThat(
-            "Free text (temp protocol) recall is different than expected",
-            stats.getRecall(JavadocComment.Kind.FREETEXT),
-            closeTo(tpRecall, PRECISION));
+        "Free text (temp protocol) recall is different than expected",
+        stats.getRecall(JavadocComment.Kind.FREETEXT),
+        closeTo(tpRecall, PRECISION));
   }
 }

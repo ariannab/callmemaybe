@@ -1,7 +1,7 @@
 package org.callmemaybe.accuracy.equivalences.util;
 
-import org.junit.Test;
 import org.callmemaybe.CallMeMaybe;
+import org.junit.Test;
 
 public class GoalFileGenerator {
   @Test

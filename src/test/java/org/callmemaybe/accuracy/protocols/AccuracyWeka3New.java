@@ -1,12 +1,14 @@
-//package org.callmemaybe.accuracy.protocols;
+// package org.callmemaybe.accuracy.protocols;
 //
-//import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
-//import org.junit.Test;
+// import org.callmemaybe.testlib.AbstractPrecisionRecallTestSuite;
+// import org.junit.Test;
 //
-//public class AccuracyWeka3New extends AbstractPrecisionRecallTestSuite {
+// public class AccuracyWeka3New extends AbstractPrecisionRecallTestSuite {
 //
-//    private static final String WEKA_3_SRC = "/Users/arianna/toradocu/src/test/resources/weka-stable-3.8.0-sources";
-//    private static final String WEKA_3_BIN = "/Users/arianna/toradocu/src/test/resources/bin/weka-stable-3.8.0.jar";
+//    private static final String WEKA_3_SRC =
+// "/Users/arianna/toradocu/src/test/resources/weka-stable-3.8.0-sources";
+//    private static final String WEKA_3_BIN =
+// "/Users/arianna/toradocu/src/test/resources/bin/weka-stable-3.8.0.jar";
 //    private static final String WEKA_3_DIR = "expected-tp/weka-new";
 //
 //    public AccuracyWeka3New() {
@@ -1249,4 +1251,4 @@
 //    }
 //
 //
-//}
+// }
