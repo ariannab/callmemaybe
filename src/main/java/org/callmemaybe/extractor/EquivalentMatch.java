@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.callmemaybe.translator.CodeElement;
 
 // FIXME turn this into:
@@ -18,7 +17,8 @@ EqSpecification extends Specification {
  */
 public class EquivalentMatch {
 
-  // Filling the args of a  signature mentioned in a comment is non-trivial (e.g., it may need a matching against
+  // Filling the args of a  signature mentioned in a comment is non-trivial (e.g., it may need a
+  // matching against
   // available code elements, or, it could have hard-coded values, etc.). Here we hold all the
   // options we have to fill the signature correctly.
   private final DocSignatureParameters docSignatureParameters = new DocSignatureParameters();
@@ -87,8 +87,6 @@ public class EquivalentMatch {
       this.classesInSignatures.put(methodSignature, className);
     }
   }
-
-
 
   private void extractSimpleNames() {
     this.simpleName = new ArrayList<>();

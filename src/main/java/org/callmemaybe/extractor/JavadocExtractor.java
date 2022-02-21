@@ -37,9 +37,9 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.function.Predicate;
 import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.jetbrains.annotations.NotNull;
 import org.callmemaybe.conf.Configuration;
 import org.callmemaybe.util.Reflection;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -149,7 +149,8 @@ public final class JavadocExtractor {
 
       FreeText freeText =
           new FreeText(
-              org.callmemaybe.extractor.JavadocComment.Kind.FREETEXT, new CommentContent(parsedFreeText));
+              org.callmemaybe.extractor.JavadocComment.Kind.FREETEXT,
+              new CommentContent(parsedFreeText));
 
       documentedExecutables.add(
           new DocumentedExecutable(
