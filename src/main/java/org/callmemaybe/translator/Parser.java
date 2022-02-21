@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.callmemaybe.extractor.CommentContent;
 import org.callmemaybe.extractor.DocumentedExecutable;
@@ -58,7 +57,8 @@ public class Parser {
    * @param comment the comment object
    * @param method the DocumentedExecutable
    */
-  public static List<SemanticGraph> extractSemanticGraphs(CommentContent comment, DocumentedExecutable method) {
+  public static List<SemanticGraph> extractSemanticGraphs(
+      CommentContent comment, DocumentedExecutable method) {
     // Check if cache contains a valid answer.
     MethodComment key = new MethodComment(comment, method);
     if (graphsCache.containsKey(key)) {
@@ -106,33 +106,48 @@ public class Parser {
   }
 
   /**
-   *
    * @param comment
    * @param method
    * @return
    */
-  public static List<TemporalPropSeries> parseTemporal(CommentContent comment,
-                                                       DocumentedExecutable method) {
+  public static List<TemporalPropSeries> parseTemporal(
+      CommentContent comment, DocumentedExecutable method) {
 
-    if(method.getName().contains("binary")){
+    //    if(method.getName().contains("binary")){
+    //      System.out.println("DEBUG");
+    //    }
+    //
+    //    if(comment.getText().contains("is started")){
+    //      System.out.println("DEBUG");
+    //    }
+    //
+    //    if(comment.getText().contains("will not function")){
+    //      System.out.println("DEBUG");
+    //    }
+    //
+    //    if(comment.getText().contains("should only be called")){
+    //      System.out.println("DEBUG");
+    //    }
+    //
+    //    if(comment.getText().contains("Once")){
+    //      System.out.println("DEBUG");
+    //    }
+    //
+    //    if(comment.getText().contains("be sorted")){
+    //      System.out.println("DEBUG");
+    //    }
+    if (comment.getText().contains("will be empty")) {
       System.out.println("DEBUG");
     }
 
-    if(comment.getText().contains("is started")){
-      System.out.println("DEBUG");
-    }
-
-    if(comment.getText().contains("will not function")){
-      System.out.println("DEBUG");
-    }
-//    manageSignaturesAsPlaceholders();
+    //    manageSignaturesAsPlaceholders();
 
     List<TemporalPropSeries> result = new ArrayList<>();
     List<SemanticGraph> semanticGraphs = extractSemanticGraphs(comment, method);
     for (SemanticGraph semanticGraph : semanticGraphs) {
       result.add(new SentenceParser(semanticGraph).getTemporalPropositionSeries());
     }
-//    return removePlaceholders(result);
+    //    return removePlaceholders(result);
     // FIXME what about placeholders
     return result;
   }
@@ -265,8 +280,6 @@ public class Parser {
 
     return new CommentContent(placeholderText, comment.getWordsMarkedAsCode());
   }
-
-
 
   /**
    * Returns a new list of {@code PropositionSeries} in which any placeholder text has been replaced

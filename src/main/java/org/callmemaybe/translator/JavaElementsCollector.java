@@ -17,12 +17,12 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import org.jetbrains.annotations.NotNull;
 import org.callmemaybe.conf.Configuration;
 import org.callmemaybe.extractor.CommentContent;
 import org.callmemaybe.extractor.DocumentedExecutable;
 import org.callmemaybe.extractor.DocumentedParameter;
 import org.callmemaybe.extractor.ParamTag;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Collects all the Java elements that can be used for the condition translation. Java elements are
@@ -59,13 +59,14 @@ public class JavaElementsCollector {
 
   /**
    * Collects all the Java code elements that can be used for the condition translation. The code
-   * elements are collected using reflection starting from the given method. Differs from
-   * simple #collect because it doesn't exclude methods not invokable via executable's params.
+   * elements are collected using reflection starting from the given method. Differs from simple
+   * #collect because it doesn't exclude methods not invokable via executable's params.
    *
    * @param documentedExecutable the method from which to start to collect the code elements
    * @return the collected code elements
    */
-  public static Set<CodeElement<?>> collectIgnoringScope(DocumentedExecutable documentedExecutable) {
+  public static Set<CodeElement<?>> collectIgnoringScope(
+      DocumentedExecutable documentedExecutable) {
     Set<CodeElement<?>> collectedElements = new LinkedHashSet<>();
     final Class<?> containingClass = documentedExecutable.getDeclaringClass();
 
@@ -114,8 +115,7 @@ public class JavaElementsCollector {
   }
 
   @NotNull
-  public static CodeElement<?> getCodeElementFromRawMethod(
-          Executable executable, String receiver) {
+  public static CodeElement<?> getCodeElementFromRawMethod(Executable executable, String receiver) {
     CodeElement<?> codeElement = null;
 
     if (executable instanceof Method) {

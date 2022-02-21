@@ -90,11 +90,11 @@ public class POSTagger {
       } else if (wordString.startsWith("method_")) {
         // Method signatures placeholder
         taggedSentence.add(new TaggedWord(wordString, "NN"));
-      }else if (wordString.equals("returns")) {
+      } else if (wordString.equals("returns")) {
         // A call "returns" refers to verb "to return", but is tagged as NNS by default
         taggedSentence.add(new TaggedWord(wordString, "VBZ"));
-      }else{
-          taggedSentence.add(taggedWord);
+      } else {
+        taggedSentence.add(taggedWord);
       }
     }
     return taggedSentence;

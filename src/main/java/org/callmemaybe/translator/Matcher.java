@@ -19,15 +19,14 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import org.callmemaybe.extractor.DocSignatureParameters;
-import org.jetbrains.annotations.NotNull;
 import org.callmemaybe.conf.Configuration;
+import org.callmemaybe.extractor.DocSignatureParameters;
 import org.callmemaybe.extractor.DocumentedExecutable;
 import org.callmemaybe.extractor.DocumentedParameter;
 import org.callmemaybe.extractor.EquivalentMatch;
 import org.callmemaybe.translator.semantic.SemanticMatcher;
 import org.callmemaybe.util.Reflection;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * The {@code Matcher} class translates subjects and predicates in Javadoc comments to Java
@@ -342,10 +341,10 @@ public class Matcher {
    * @return the best matching code element according to the edit distance, null if none found
    */
   Match syntacticMatch(
-          String predicate,
-          Set<CodeElement<?>> codeElements,
-          DocumentedExecutable method,
-          String subject) {
+      String predicate,
+      Set<CodeElement<?>> codeElements,
+      DocumentedExecutable method,
+      String subject) {
     List<CodeElement<?>> sortedMethodList;
     sortedMethodList = new ArrayList<>(filterMatchingCodeElements(predicate, codeElements));
 
@@ -366,12 +365,12 @@ public class Matcher {
   /**
    * Search the best match between the {@code predicate} and the list of possibly matching sorted
    * {@code CodeElement}s. This is especially to find the best method match in case of {@code
-   * MethodCodeElement}, by comparing the arguments needed.
-   * The original (e.g., Jdoctor's) implementation changed a little after realizing that, in the face
-   * of many good candidates with different numbers of args required, the candidates requiring exactly the
-   * same number of parameters was deemed as the best one. However, any match requiring a number <= (not ==)
-   * is equally good for all we know. This method to pick among equally valid candidates could still be improved
-   * with many heuristics indeed, for now it is what it is.
+   * MethodCodeElement}, by comparing the arguments needed. The original (e.g., Jdoctor's)
+   * implementation changed a little after realizing that, in the face of many good candidates with
+   * different numbers of args required, the candidates requiring exactly the same number of
+   * parameters was deemed as the best one. However, any match requiring a number <= (not ==) is
+   * equally good for all we know. This method to pick among equally valid candidates could still be
+   * improved with many heuristics indeed, for now it is what it is.
    *
    * @param method the {@code DocumentedExecutable} the predicate is referring to
    * @param sortedCodeElements sorted list of matching method {@code CodeElement}s
@@ -403,13 +402,13 @@ public class Matcher {
         for (java.lang.reflect.Parameter myMethodParam : myMethodArgs) {
           Type myParamType = myMethodParam.getParameterizedType();
           if (otherMethodParams.contains(myParamType.getTypeName())
-                  || isGenericType(myParamType.getTypeName(), otherMethodParams)
-                  || isAssignableToAny(myParamType, otherMethodArgs)) {
+              || isGenericType(myParamType.getTypeName(), otherMethodParams)
+              || isAssignableToAny(myParamType, otherMethodArgs)) {
             paramForMatch.add("args[" + pcount + "]");
             if (!receiver.equals("args[" + pcount + "]")) {
               firstCodeMatch = currentMatch;
               foundArgMatch = true;
-              if(pcount <= otherMethodParams.size()) {
+              if (pcount <= otherMethodParams.size()) {
                 // We could fill all the matching method args with ours, let's assume we're good
                 break;
               }
@@ -419,18 +418,18 @@ public class Matcher {
           pcount++;
         }
       }
-//      if (foundArgMatch) {
-//        break;
-//      }
+      //      if (foundArgMatch) {
+      //        break;
+      //      }
 
       if (foundArgMatch && paramForMatch.size() == otherMethodArgs.length) {
         String exp = firstCodeMatch.getJavaExpression();
         if (firstCodeMatch instanceof MethodCodeElement) {
           match =
-                  new Match(
-                          exp.substring(0, exp.indexOf("(") + 1),
-                          ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                          firstCodeMatch);
+              new Match(
+                  exp.substring(0, exp.indexOf("(") + 1),
+                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                  firstCodeMatch);
         } else {
           match = new Match(exp.substring(0, exp.indexOf("(") + 1), null, firstCodeMatch);
         }
@@ -443,10 +442,9 @@ public class Matcher {
         // special arguments such as null?
         match = manageSpecialPatterns(predicate, receiver, sortedCodeElements, myMethodArgs);
       }
-      if (match != null && foundArgMatch){
+      if (match != null && foundArgMatch) {
         break;
       }
-
     }
 
     if (match == null && !foundArgMatch) {
@@ -482,8 +480,9 @@ public class Matcher {
   }
 
   /**
-   * This is a revised version of {@code bestArgsTypeMatch} receiving an EquivalentMatch (i.e., Memo's).
-   * Basically, it receives already a signature to filled with args, and finds the right fill for it specifically.
+   * This is a revised version of {@code bestArgsTypeMatch} receiving an EquivalentMatch (i.e.,
+   * Memo's). Basically, it receives already a signature to filled with args, and finds the right
+   * fill for it specifically.
    *
    * @param methodSignature the signature to be filled with correct args
    * @param equivalentMethod equivalent method to be matched
@@ -499,10 +498,10 @@ public class Matcher {
 
     Match match =
         matchAccordingToArgs(
-                methodSignature,
-                equivalentMethod.getDocSignatureParameters(),
-                method,
-                sortedCodeElements);
+            methodSignature,
+            equivalentMethod.getDocSignatureParameters(),
+            method,
+            sortedCodeElements);
 
     return match;
   }
@@ -586,17 +585,26 @@ public class Matcher {
                 .stream()
                 .filter(
                     x ->
-                        x instanceof MethodCodeElement
-                            && ((MethodCodeElement) x).getArgs() == null);
+                        (x instanceof MethodCodeElement
+                                && ((MethodCodeElement) x).getArgs() == null)
+                            || x instanceof ConstructorCodeElement);
 
         first = noArgsCandidates.findFirst();
         if (first.isPresent()) {
           firstCodeMatch = first.get();
-          match =
-              new Match(
-                  firstCodeMatch.getJavaExpression(),
-                  ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
-                  firstCodeMatch);
+          if (firstCodeMatch instanceof ConstructorCodeElement) {
+            match =
+                new Match(
+                    firstCodeMatch.getJavaExpression(),
+                    ((ConstructorCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                    firstCodeMatch);
+          } else {
+            match =
+                new Match(
+                    firstCodeMatch.getJavaExpression(),
+                    ((MethodCodeElement) firstCodeMatch).getNullDereferenceCheck(),
+                    firstCodeMatch);
+          }
         }
         return match;
       }
@@ -834,7 +842,8 @@ public class Matcher {
   }
 
   private String extractArrayType(Class<?> type) {
-    // A few hints here: https://docs.oracle.com/javase/tutorial/reflect/special/arrayComponents.html
+    // A few hints here:
+    // https://docs.oracle.com/javase/tutorial/reflect/special/arrayComponents.html
     String name = type.getName();
     String returnName = "";
     if (name.equals("[B")) {

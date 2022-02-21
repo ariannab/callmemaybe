@@ -1,10 +1,10 @@
 package org.callmemaybe.translator;
 
 /**
- * The {@code Match} class bounds a matching expression computed by CallMeMaybe with its null-dereference
- * check expression. The base expression is the match computed as-is. When an expression involves
- * invocations that may cause null dereference during the final assertion execution,the expression
- * must be preceded by the null dereference check.
+ * The {@code Match} class bounds a matching expression computed by CallMeMaybe with its
+ * null-dereference check expression. The base expression is the match computed as-is. When an
+ * expression involves invocations that may cause null dereference during the final assertion
+ * execution,the expression must be preceded by the null dereference check.
  *
  * <p>Example: consider the comment "@param c, an empty collections". The base expression that
  * matches the comment is {@code c.isEmpty} and it needs to be preceded by the check {@code c!=null}

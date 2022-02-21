@@ -17,11 +17,9 @@ import java.util.Optional;
 import java.util.Queue;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 /**
  * {@code SentenceParser} parses the {@code edu.stanford.nlp.semgraph.SemanticGraph} of a sentence
@@ -157,7 +155,7 @@ public class SentenceParser {
     // Proposition series that will be built and returned.
     TemporalPropSeries propositionSeries = new TemporalPropSeries(semanticGraph);
 
-    if(temporalRelations.isEmpty()){
+    if (temporalRelations.isEmpty()) {
       return propositionSeries;
     }
 
@@ -181,33 +179,34 @@ public class SentenceParser {
       // Stores the subject and associated words, such as any modifiers that come before it.
       // Words (but the subject) appear in the list in the same order as they appear in the
       // sentence. Subject is always the last word in the list.
-      if(subjectIsDeveloper(subjectWord)){
+      if (subjectIsDeveloper(subjectWord)) {
         Pair<IndexedWord, List<IndexedWord>> alternativeSubj = getACodeSubject(predicateWords);
-        if(alternativeSubj != null){
+        if (alternativeSubj != null) {
           subjectWord = alternativeSubj.getKey();
           predicateWords = alternativeSubj.getValue();
-          for(IndexedWord pred : predicateWords){
+          for (IndexedWord pred : predicateWords) {
             collectPropSeriesVerbs(pred, propositionSeries);
           }
         }
-//        else{
-//          continue;
-//        }
+        //        else{
+        //          continue;
+        //        }
       }
-//      Subject subject = getSubject(subjectWord);
+      //      Subject subject = getSubject(subjectWord);
       Subject subject = getTemporalSubject(subjectWord);
 
       List<IndexedWord> subjectWords = subject.getSubjectWords();
       // Create a Proposition from the subject and predicate words.
 
       String predicateWordsAsString =
-              predicateWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
+          predicateWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
 
+      TemporalProposition proposition =
+          new TemporalProposition(subject, predicateWordsAsString, negative);
 
-      TemporalProposition proposition = new TemporalProposition(subject, predicateWordsAsString, negative);
-
-//      Optional<IndexedWord> verb = predicateWords.stream().filter(x -> x.indexedWord.matches("VB.*")).findFirst();
-//      verb.ifPresent(indexedWord -> proposition.setIndexedWord(indexedWord.word()));
+      //      Optional<IndexedWord> verb = predicateWords.stream().filter(x ->
+      // x.indexedWord.matches("VB.*")).findFirst();
+      //      verb.ifPresent(indexedWord -> proposition.setIndexedWord(indexedWord.word()));
       // FIXME instead of the above, retrieve the IndexedWord that is not Copula
 
       // Add the Proposition and associated words to the propositionMap.
@@ -228,7 +227,7 @@ public class SentenceParser {
       collectPropSeriesVerbs(tempRelation.getGovernor(), propositionSeries);
       collectPropSeriesVerbs(tempRelation.getDependent(), propositionSeries);
 
-      if(!complementRelations.isEmpty()) {
+      if (!complementRelations.isEmpty()) {
         // Direct object becomes subject of temporal proposition.
         for (SemanticGraphEdge complementRel : complementRelations) {
           if (complementRel.getGovernor().equals(dependentWord)) {
@@ -245,19 +244,18 @@ public class SentenceParser {
       // Check if the gov. should be negated.
       boolean negative = predicateIsNegative(tempRelation.getGovernor());
 
-
       // Stores the dependent and associated words, such as any modifiers that come before it.
       // Words (but the dependent) appear in the list in the same order as they appear in the
       // sentence. Dep. is always the last word in the list.
       Subject dependent = getTemporalSubject(dependentWord);
-//      Subject dependent = getSubject(dependentWord);
-
+      //      Subject dependent = getSubject(dependentWord);
 
       // Create a Proposition from the subject and predicate words.
       String predicateWordsAsString =
-              governorWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
+          governorWords.stream().map(IndexedWord::word).collect(Collectors.joining(" "));
 
-      TemporalProposition proposition = new TemporalProposition(dependent, predicateWordsAsString, negative);
+      TemporalProposition proposition =
+          new TemporalProposition(dependent, predicateWordsAsString, negative);
 
       // Add the Proposition and associated words to the propositionMap.
       List<IndexedWord> depWords = dependent.getSubjectWords();
@@ -268,76 +266,87 @@ public class SentenceParser {
 
     // Identify propositions associated with each temp. rel. and add them to the propositionSeries.
     for (SemanticGraphEdge tempRelation : temporalRelations) {
-        IndexedWord tempRelGovernor = tempRelation.getGovernor();
-        IndexedWord tempRelDependent = tempRelation.getDependent();
-        TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
-        TemporalProposition p1 = null, p2 = null;
+      IndexedWord tempRelGovernor = tempRelation.getGovernor();
+      IndexedWord tempRelDependent = tempRelation.getDependent();
+      TemporalRule.TemporalRelation temporalSpecific = getTemporalSpecific(tempRelation);
+      TemporalProposition p1 = null, p2 = null;
 
-        for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
-          if (p1== null && entry.getKey().contains(tempRelGovernor) && p1!=entry.getValue() && p2!=entry.getValue()) {
-            p1 = entry.getValue();
-          }
-          if (p2==null && entry.getKey().contains(tempRelDependent) && p2!=entry.getValue() && p1!=entry.getValue()) {
-            p2 = entry.getValue();
-          }
-          if (p1 != null && p2 != null) {
-            break;
-          }
+      for (Entry<List<IndexedWord>, TemporalProposition> entry : propositionMap.entrySet()) {
+        if (p1 == null
+            && entry.getKey().contains(tempRelGovernor)
+            && p1 != entry.getValue()
+            && p2 != entry.getValue()) {
+          p1 = entry.getValue();
         }
-
+        if (p2 == null
+            && entry.getKey().contains(tempRelDependent)
+            && p2 != entry.getValue()
+            && p1 != entry.getValue()) {
+          p2 = entry.getValue();
+        }
         if (p1 != null && p2 != null) {
-          if (propositionSeries.isEmpty()) {
-            propositionSeries.add(p1);
-          }
-          if (temporalSpecific != null) {
-            propositionSeries.add(temporalSpecific, p2);
-          }
+          break;
         }
       }
+
+      if (p1 != null && p2 != null) {
+        if (propositionSeries.isEmpty()) {
+          propositionSeries.add(p1);
+        }
+        if (temporalSpecific != null) {
+          propositionSeries.add(temporalSpecific, p2);
+        }
+      }
+    }
 
     return propositionSeries;
   }
 
-  private List<IndexedWord> addTemporalPredicates(IndexedWord governor,
-                                                  List<IndexedWord> predicateWords) {
+  private List<IndexedWord> addTemporalPredicates(
+      IndexedWord governor, List<IndexedWord> predicateWords) {
 
     Optional<SemanticGraphEdge> tempEdge =
-            temporalRelations.stream().filter(e -> e.getDependent().equals(governor)).findFirst();
+        temporalRelations.stream().filter(e -> e.getDependent().equals(governor)).findFirst();
     if (!tempEdge.isPresent()) {
       return predicateWords;
     }
 
-    if(!predicateWords.contains(tempEdge.get().getDependent()) &&
-            !predicateWords.contains(tempEdge.get().getGovernor())) {
+    if (!predicateWords.contains(tempEdge.get().getDependent())
+        && !predicateWords.contains(tempEdge.get().getGovernor())) {
       IndexedWord aux = tempEdge.get().getDependent();
       predicateWords.add(aux);
-//    predicateWords.add(governor);
+      //    predicateWords.add(governor);
     }
     return predicateWords;
   }
 
   private Pair<IndexedWord, List<IndexedWord>> getACodeSubject(List<IndexedWord> predicateWords) {
-    Optional<IndexedWord> methodReady = predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
-    if(methodReady.isPresent()){
+    Optional<IndexedWord> methodReady =
+        predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
+    if (methodReady.isPresent()) {
       predicateWords.remove(methodReady.get());
       return new Pair<>(methodReady.get(), predicateWords);
     }
 
     IndexedWord methodFound = null;
-    if(!complementRelations.isEmpty()) {
+    if (!complementRelations.isEmpty()) {
       // Direct object becomes subject of temporal proposition.
       for (SemanticGraphEdge complementRel : complementRelations) {
         if (predicateWords.contains(complementRel.getGovernor())) {
           IndexedWord somePred = complementRel.getDependent();
-          Optional<SemanticGraphEdge> winningEdge = complementRelations.stream()
-                  .filter(x -> x.getGovernor().equals(somePred) &&
-                  x.getDependent().word().contains("method_"))
+          Optional<SemanticGraphEdge> winningEdge =
+              complementRelations
+                  .stream()
+                  .filter(
+                      x ->
+                          x.getGovernor().equals(somePred)
+                              && x.getDependent().word().contains("method_"))
                   .findFirst();
 
-          if(winningEdge.isPresent()){
+          if (winningEdge.isPresent()) {
             methodFound = winningEdge.get().getDependent();
             // Clear and update correct predicate.
-//            predicateWords = new ArrayList<>();
+            //            predicateWords = new ArrayList<>();
             predicateWords.add(winningEdge.get().getGovernor());
             return new Pair<>(methodFound, predicateWords);
           }
@@ -352,11 +361,10 @@ public class SentenceParser {
     return subjectWord.tag().equals("PRP") && subjectWord.word().equalsIgnoreCase("you");
   }
 
-  private void collectPropSeriesVerbs(IndexedWord governor,
-                                      TemporalPropSeries propositionSeries) {
+  private void collectPropSeriesVerbs(IndexedWord governor, TemporalPropSeries propositionSeries) {
     // Copula verbs
     Optional<SemanticGraphEdge> copEdge =
-            copulaRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
+        copulaRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
     if (copEdge.isPresent()) {
       // Predicate is of copula form.
       IndexedWord dep = copEdge.get().getDependent();
@@ -366,53 +374,54 @@ public class SentenceParser {
 
     // Auxiliary verbs
     Optional<SemanticGraphEdge> auxEdge =
-            auxRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
+        auxRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
     if (auxEdge.isPresent()) {
-//      IndexedWord aux = auxEdge.get().getDependent();
-//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
+      //      IndexedWord aux = auxEdge.get().getDependent();
+      //    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
       propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.AUX));
     }
 
-    // Complementary verbs. Tricky ones: e.g., for dobj such as "making call", you want to retain "call"
+    // Complementary verbs. Tricky ones: e.g., for dobj such as "making call", you want to retain
+    // "call"
     // and not just "make"
     Optional<SemanticGraphEdge> complementEdge =
-            complementRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
+        complementRelations.stream().filter(e -> e.getGovernor().equals(governor)).findFirst();
     if (complementEdge.isPresent()) {
       propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.NON_COPULA));
       IndexedWord complement = complementEdge.get().getDependent();
       propositionSeries.verbsDB.add(new Verb(complement, Verb.GrammaticalKind.NON_COPULA));
 
-//      Optional<SemanticGraphEdge> numModifierEdge =
-//              numModifierRelations.stream().filter(e -> e.getGovernor().equals(complement)).findFirst();
-//      if (numModifierEdge.isPresent()) {
-//        IndexedWord dep = numModifierEdge.get().getDependent();
-//      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.NON_COPULA));
-//      }
+      //      Optional<SemanticGraphEdge> numModifierEdge =
+      //              numModifierRelations.stream().filter(e ->
+      // e.getGovernor().equals(complement)).findFirst();
+      //      if (numModifierEdge.isPresent()) {
+      //        IndexedWord dep = numModifierEdge.get().getDependent();
+      //      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.NON_COPULA));
+      //      }
     }
 
     // Passive
     Optional<SemanticGraphEdge> auxpassEdge =
-            getRelationsFromGraph("auxpass")
-                    .stream()
-                    .filter(e -> e.getGovernor().equals(governor))
-                    .findFirst();
+        getRelationsFromGraph("auxpass")
+            .stream()
+            .filter(e -> e.getGovernor().equals(governor))
+            .findFirst();
     if (auxpassEdge.isPresent()) {
       IndexedWord dep = auxpassEdge.get().getDependent();
       // TODO for now try ignoring dependents (is, will... + real verb)
-//    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.PASSIVE));
+      //    TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.PASSIVE));
       propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.PASSIVE));
     }
 
     // Verbs in temporal rel.
     Optional<SemanticGraphEdge> tempEdge =
-            temporalRelations.stream().filter(e -> e.getDependent().equals(governor)).findFirst();
+        temporalRelations.stream().filter(e -> e.getDependent().equals(governor)).findFirst();
     if (tempEdge.isPresent() && governor.tag().contains("VB")) {
-//      IndexedWord aux = auxEdge.get().getDependent();
-//    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
+      //      IndexedWord aux = auxEdge.get().getDependent();
+      //    TemporalPropSeries.verbsDB.add(new Verb(aux, Verb.GrammaticalKind.AUX));
       propositionSeries.verbsDB.add(new Verb(governor, Verb.GrammaticalKind.TEMP));
     }
   }
-
 
   /**
    * Returns the type of conjunction associated with a conjunction relation.
@@ -438,25 +447,25 @@ public class SentenceParser {
   }
 
   /**
-   *
    * @param temporalRelation
    * @return
    */
   private TemporalRule.TemporalRelation getTemporalSpecific(SemanticGraphEdge temporalRelation) {
     String conjunctionRelationSpecific = temporalRelation.getRelation().getSpecific();
-    if(conjunctionRelationSpecific!=null) {
+    if (conjunctionRelationSpecific != null) {
 
       // FIXME We are not passing advmod here anymore. Look for it here. If the specific of
       // FIXME advcl is not temporal but there is a advmod as specified below, there's hope!
-      List<String> enumNames = Stream.of(TemporalRule.TemporalRelation.values())
+      List<String> enumNames =
+          Stream.of(TemporalRule.TemporalRelation.values())
               .map(Enum::name)
               .collect(Collectors.toList());
 
       if (!enumNames.contains(conjunctionRelationSpecific)) {
         List<SemanticGraphEdge> advmodEdges = getRelationsFromGraph("advmod");
         for (SemanticGraphEdge e : advmodEdges) {
-          if (temporalRelation.getDependent().equals(e.getGovernor()) &&
-                  e.getDependent().tag().equals("RB")) {
+          if (temporalRelation.getDependent().equals(e.getGovernor())
+              && e.getDependent().tag().equals("RB")) {
             conjunctionRelationSpecific = e.getDependent().word();
             break;
           }
@@ -575,14 +584,14 @@ public class SentenceParser {
     }
     predicateWords.add(governor);
     IndexedWord complement = complementEdge.get().getDependent();
-//    TemporalPropSeries.verbsDB.add(new Verb(complement, Verb.GrammaticalKind.NON_COPULA));
+    //    TemporalPropSeries.verbsDB.add(new Verb(complement, Verb.GrammaticalKind.NON_COPULA));
     predicateWords.add(complement);
 
     Optional<SemanticGraphEdge> numModifierEdge =
         numModifierRelations.stream().filter(e -> e.getGovernor().equals(complement)).findFirst();
     if (numModifierEdge.isPresent()) {
       IndexedWord dep = numModifierEdge.get().getDependent();
-//      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.NON_COPULA));
+      //      TemporalPropSeries.verbsDB.add(new Verb(dep, Verb.GrammaticalKind.NON_COPULA));
       predicateWords.add(dep);
     }
 
@@ -733,20 +742,20 @@ public class SentenceParser {
     // "entry set".
     List<IndexedWord> containerWords = new ArrayList<>();
     IndexedWord container =
-            getRelationsFromGraph("nmod:in")
-                    .stream()
-                    .filter(e -> e.getGovernor().equals(subjectWord))
-                    .map(SemanticGraphEdge::getDependent)
-                    .findFirst()
-                    .orElse(null);
+        getRelationsFromGraph("nmod:in")
+            .stream()
+            .filter(e -> e.getGovernor().equals(subjectWord))
+            .map(SemanticGraphEdge::getDependent)
+            .findFirst()
+            .orElse(null);
     if (container != null) {
       containerWords.add(container);
     }
 
     boolean isPassive =
-            getRelationsFromGraph("nsubjpass")
-                    .stream()
-                    .anyMatch(e -> e.getTarget().equals(subjectWord));
+        getRelationsFromGraph("nsubjpass")
+            .stream()
+            .anyMatch(e -> e.getTarget().equals(subjectWord));
 
     List<IndexedWord> tempSubjectWords = extractTemporalObjects(subjectWord);
     return new Subject(tempSubjectWords, containerWords, isPassive);
@@ -802,13 +811,14 @@ public class SentenceParser {
   }
 
   /**
-   * Mimics the above but slightly different logic.  FIXME double check this works
+   * Mimics the above but slightly different logic. FIXME double check this works
+   *
    * @param relationIdentifiers
    * @return
    */
   private List<SemanticGraphEdge> getTemporalRelationsFromGraph(String... relationIdentifiers) {
     final List<String> identifiers =
-            Collections.unmodifiableList(Arrays.asList(relationIdentifiers));
+        Collections.unmodifiableList(Arrays.asList(relationIdentifiers));
     final List<SemanticGraphEdge> foundRelations = new ArrayList<>();
 
     for (SemanticGraphEdge edge : semanticGraph.edgeIterable()) {
@@ -816,10 +826,10 @@ public class SentenceParser {
       String identifier = grammaticalRelation.getShortName();
 
       // FIXME do we care about this *now*?
-//      final String specific = grammaticalRelation.getSpecific();
-//      if (specific != null) {
-//        identifier += ":" + specific;
-//      }
+      //      final String specific = grammaticalRelation.getSpecific();
+      //      if (specific != null) {
+      //        identifier += ":" + specific;
+      //      }
 
       if (identifiers.contains(identifier)) {
         foundRelations.add(edge);
@@ -905,24 +915,24 @@ public class SentenceParser {
 
   private List<IndexedWord> getTemporalChildren(IndexedWord node) {
     List<String> relationIdentifiers =
-            Arrays.asList("compound", "amod", "det", "nmod:poss", "nmod:of", "dobj");
+        Arrays.asList("compound", "amod", "det", "nmod:poss", "nmod:of", "dobj");
     List<String> stopwords = Arrays.asList("a", "an", "the");
 
     return semanticGraph
-            .getOutEdgesSorted(node)
-            .stream()
-            .filter(
-                    edge -> {
-                      GrammaticalRelation grammaticalRelation = edge.getRelation();
-                      String identifier = grammaticalRelation.getShortName();
-                      final String specific = grammaticalRelation.getSpecific();
-                      if (specific != null) {
-                        identifier += ":" + specific;
-                      }
-                      return relationIdentifiers.contains(identifier);
-                    })
-            .map(SemanticGraphEdge::getTarget)
-            .filter(word -> !stopwords.contains(word.word().toLowerCase()))
-            .collect(Collectors.toList());
+        .getOutEdgesSorted(node)
+        .stream()
+        .filter(
+            edge -> {
+              GrammaticalRelation grammaticalRelation = edge.getRelation();
+              String identifier = grammaticalRelation.getShortName();
+              final String specific = grammaticalRelation.getSpecific();
+              if (specific != null) {
+                identifier += ":" + specific;
+              }
+              return relationIdentifiers.contains(identifier);
+            })
+        .map(SemanticGraphEdge::getTarget)
+        .filter(word -> !stopwords.contains(word.word().toLowerCase()))
+        .collect(Collectors.toList());
   }
 }

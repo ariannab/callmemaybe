@@ -204,10 +204,10 @@ public class BasicTranslator {
    *     the body (LOOP_OK)
    */
   static String findMatchingCodeElements(
-          Proposition p,
-          Set<CodeElement<?>> subjectMatches,
-          DocumentedExecutable method,
-          Set<CodeElement<?>> matchingCodeElements) {
+      Proposition p,
+      Set<CodeElement<?>> subjectMatches,
+      DocumentedExecutable method,
+      Set<CodeElement<?>> matchingCodeElements) {
     Matcher matcher = new Matcher();
     final String container = p.getSubject().getContainer();
     if (container.isEmpty()) {
