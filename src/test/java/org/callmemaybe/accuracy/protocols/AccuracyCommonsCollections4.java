@@ -62,6 +62,6 @@ public class AccuracyCommonsCollections4 extends AbstractPrecisionRecallTestSuit
 
   @Test
   public void testIterators_FilterListIterator() {
-    test("org.apache.commons.collections4.iterators.FilterListIterator", 1, 1);
+    test("org.apache.commons.collections4.iterators.FilterListIterator", 1, 0.666);
   }
 }
