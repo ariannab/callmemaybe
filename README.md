@@ -1,4 +1,5 @@
 # CallMeMaybe
+[![DOI](https://zenodo.org/badge/420109135.svg)](https://zenodo.org/badge/latestdoi/420109135)
 
 CallMeMaybe uses natural language processing to analyze Javadoc comments to identify temporal properties. This information can guide a test case
 generator towards executing sequences of method calls that respect the temporal properties.
