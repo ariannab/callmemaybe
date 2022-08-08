@@ -1,0 +1,261 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.FilterIterator()",
+    "name": "org.apache.commons.collections4.iterators.FilterIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.FilterIterator()",
+      "comment": "Constructs a new <code>FilterIterator</code> that will not function until {@link #setIterator(Iterator) setIterator} is invoked. ",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.org.apache.commons.collections4.iterators.FilterIterator()->org.apache.commons.collections4.iterators.FilterIterator.setIterator(java.util.Iterator<? extends E>)"
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.FilterIterator(java.util.Iterator<? extends E> iterator)",
+    "name": "org.apache.commons.collections4.iterators.FilterIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.FilterIterator(java.util.Iterator<? extends E> iterator)",
+      "comment": "Constructs a new <code>FilterIterator</code> that will not function until {@link #setPredicate(Predicate) setPredicate} is invoked. ",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.org.apache.commons.collections4.iterators.FilterIterator(args[0])->org.apache.commons.collections4.iterators.FilterIterator.setPredicate(org.apache.commons.collections4.Predicate<? super E>)"
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.FilterIterator(java.util.Iterator<? extends E> iterator, org.apache.commons.collections4.Predicate<? super E> predicate)",
+    "name": "org.apache.commons.collections4.iterators.FilterIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      },
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.collections4.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.FilterIterator(java.util.Iterator<? extends E> iterator, org.apache.commons.collections4.Predicate<? super E> predicate)",
+      "comment": "Constructs a new <code>FilterIterator</code> that will use the given iterator and predicate. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "Returns true if the underlying iterator contains an object that matches the predicate. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Returns the next object that matches the predicate. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "Removes from the underlying collection of the base iterator the last element returned by this iterator. This method can only be called if <code>next()</code> was called, but not after <code>hasNext()</code>, because the <code>hasNext()</code> call changes the base iterator. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getIterator()",
+    "name": "getIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "java.util.Iterator<? extends E>",
+      "name": "java.util.Iterator<? extends E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getIterator()",
+      "comment": "Gets the iterator this iterator is using. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setIterator(java.util.Iterator<? extends E> iterator)",
+    "name": "setIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "setIterator(java.util.Iterator<? extends E> iterator)",
+      "comment": "Sets the iterator for this iterator to use. If iteration has started, this effectively resets the iterator. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "getPredicate()",
+    "name": "getPredicate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "org.apache.commons.collections4.Predicate<? super E>",
+      "name": "org.apache.commons.collections4.Predicate<? super E>",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "getPredicate()",
+      "comment": "Gets the predicate this iterator is using. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "setPredicate(org.apache.commons.collections4.Predicate<? super E> predicate)",
+    "name": "setPredicate",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.FilterIterator",
+      "name": "FilterIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.FilterIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "org.apache.commons.collections4.Predicate",
+          "name": "Predicate",
+          "isArray": false
+        },
+        "name": "predicate"
+      }
+    ],
+    "protocol": {
+      "member": "setPredicate(org.apache.commons.collections4.Predicate<? super E> predicate)",
+      "comment": "Sets the predicate this the iterator to use. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

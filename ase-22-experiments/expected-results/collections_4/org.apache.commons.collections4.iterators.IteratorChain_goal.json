@@ -1,0 +1,306 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.IteratorChain()",
+    "name": "org.apache.commons.collections4.iterators.IteratorChain",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "parameters": [],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.IteratorChain()",
+      "comment": "Construct an IteratorChain with no Iterators. <p> You will normally use {@link #addIterator(Iterator)} to add some iterators after using this constructor. ",
+      "kind": "FreeText",
+      "condition": "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator<? extends E>)<-receiverObjectID.org.apache.commons.collections4.iterators.IteratorChain()"
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Iterator<? extends E> iterator)",
+    "name": "org.apache.commons.collections4.iterators.IteratorChain",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Iterator<? extends E> iterator)",
+      "comment": "Construct an IteratorChain with a single Iterator. <p> This method takes one iterator. The newly constructed iterator will iterate through that iterator. Thus calling this constructor on its own will have no effect other than decorating the input iterator. <p> You will normally use {@link #addIterator(Iterator)} to add some more iterators after using this constructor. ",
+      "kind": "FreeText",
+      "condition": "org.apache.commons.collections4.iterators.IteratorChain.addIterator(java.util.Iterator<? extends E>)<-receiverObjectID.org.apache.commons.collections4.iterators.IteratorChain(args[0])"
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Iterator<? extends E> first, java.util.Iterator<? extends E> second)",
+    "name": "org.apache.commons.collections4.iterators.IteratorChain",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "first"
+      },
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "second"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Iterator<? extends E> first, java.util.Iterator<? extends E> second)",
+      "comment": "Constructs a new <code>IteratorChain</code> over the two given iterators. <p> This method takes two iterators. The newly constructed iterator will iterate through each one of the input iterators in turn. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Iterator<? extends E>... iteratorChain)",
+    "name": "org.apache.commons.collections4.iterators.IteratorChain",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": true,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "[Ljava.util.Iterator;",
+          "name": "Iterator[]",
+          "isArray": true
+        },
+        "name": "iteratorChain"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Iterator<? extends E>... iteratorChain)",
+      "comment": "Constructs a new <code>IteratorChain</code> over the array of iterators. <p> This method takes an array of iterators. The newly constructed iterator will iterate through each one of the input iterators in turn. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Collection<java.util.Iterator<? extends E>> iteratorChain)",
+    "name": "org.apache.commons.collections4.iterators.IteratorChain",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "iteratorChain"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.IteratorChain(java.util.Collection<java.util.Iterator<? extends E>> iteratorChain)",
+      "comment": "Constructs a new <code>IteratorChain</code> over the collection of iterators. <p> This method takes a collection of iterators. The newly constructed iterator will iterate through each one of the input iterators in turn. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "addIterator(java.util.Iterator<? extends E> iterator)",
+    "name": "addIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Iterator",
+          "name": "Iterator",
+          "isArray": false
+        },
+        "name": "iterator"
+      }
+    ],
+    "protocol": {
+      "member": "addIterator(java.util.Iterator<? extends E> iterator)",
+      "comment": "Add an Iterator to the end of the chain ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Returns the remaining number of Iterators in the current IteratorChain. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "isLocked()",
+    "name": "isLocked",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "isLocked()",
+      "comment": "Determine if modifications can still be made to the IteratorChain. IteratorChains cannot be modified once they have executed a method from the Iterator interface. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "updateCurrentIterator()",
+    "name": "updateCurrentIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "updateCurrentIterator()",
+      "comment": "Updates the current iterator field to ensure that the current Iterator is not exhausted ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "Return true if any Iterator in the IteratorChain has a remaining element. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Returns the next Object of the current Iterator ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.IteratorChain",
+      "name": "IteratorChain",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.IteratorChain",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "Removes from the underlying collection the last element returned by the Iterator. As with next() and hasNext(), this method calls remove() on the underlying Iterator. Therefore, this method may throw an UnsupportedOperationException if the underlying Iterator does not support this method. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]

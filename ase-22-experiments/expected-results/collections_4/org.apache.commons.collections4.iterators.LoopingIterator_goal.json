@@ -1,0 +1,144 @@
+[
+  {
+    "signature": "org.apache.commons.collections4.iterators.LoopingIterator(java.util.Collection<? extends E> coll)",
+    "name": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingIterator",
+      "name": "LoopingIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "isVarArgs": false,
+    "parameters": [
+      {
+        "type": {
+          "qualifiedName": "java.util.Collection",
+          "name": "Collection",
+          "isArray": false
+        },
+        "name": "coll"
+      }
+    ],
+    "protocol": {
+      "member": "org.apache.commons.collections4.iterators.LoopingIterator(java.util.Collection<? extends E> coll)",
+      "comment": "Constructor that wraps a collection. <p> There is no way to reset an Iterator instance without recreating it from the original source, so the Collection must be passed in. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "hasNext()",
+    "name": "hasNext",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingIterator",
+      "name": "LoopingIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "boolean",
+      "name": "boolean",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "hasNext()",
+      "comment": "Has the iterator any more elements. <p> Returns false only if the collection originally had zero elements, or all the elements have been {@link #remove removed}. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "next()",
+    "name": "next",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingIterator",
+      "name": "LoopingIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "E",
+      "name": "E",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "next()",
+      "comment": "Returns the next object in the collection. <p> If at the end of the collection, return the first element. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "remove()",
+    "name": "remove",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingIterator",
+      "name": "LoopingIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "remove()",
+      "comment": "Removes the previously retrieved item from the underlying collection. <p> This feature is only supported if the underlying collection's {@link Collection#iterator iterator} method returns an implementation that supports it. <p> This method can only be called after at least one {@link #next} method call. After a removal, the remove method may not be called again until another next has been performed. If the {@link #reset} is called, then remove may not be called until {@link #next} is called again. ",
+      "kind": "FreeText",
+      "condition": "receiverObjectID.remove()<-receiverObjectID.next()"
+    }
+  },
+  {
+    "signature": "reset()",
+    "name": "reset",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingIterator",
+      "name": "LoopingIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "void",
+      "name": "void",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "reset()",
+      "comment": "Resets the iterator back to the start of the collection. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  },
+  {
+    "signature": "size()",
+    "name": "size",
+    "containingClass": {
+      "qualifiedName": "org.apache.commons.collections4.iterators.LoopingIterator",
+      "name": "LoopingIterator",
+      "isArray": false
+    },
+    "targetClass": "org.apache.commons.collections4.iterators.LoopingIterator",
+    "isVarArgs": false,
+    "returnType": {
+      "qualifiedName": "int",
+      "name": "int",
+      "isArray": false
+    },
+    "parameters": [],
+    "protocol": {
+      "member": "size()",
+      "comment": "Gets the size of the collection underlying the iterator. ",
+      "kind": "FreeText",
+      "condition": ""
+    }
+  }
+]
