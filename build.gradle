@@ -32,44 +32,12 @@ task downloadRandoop(type: Download) {
   overwrite false
 }
 
-task downloadGlove(type: Download) {
-  src 'http://star-rep.inf.usi.ch/alberto/glove/raw/master/glove-binary.zip'
-  dest 'src/main/resources/glove-binary.zip'
-  onlyIfNewer true
-  overwrite false
-}
-
-task unzipGlove(dependsOn: downloadGlove, type: Copy) {
-  def zipFile = file('src/main/resources/glove-binary.zip')
-  def outputDir = file('src/main/resources')
-  from zipTree(zipFile)
-  into outputDir
-  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
-task downloadGloveModels(type: Download) {
-  src 'http://star-rep.inf.usi.ch/alberto/glove/raw/master/glove-models.zip'
-  dest 'src/main/resources/glove-models.zip'
-  onlyIfNewer true
-  overwrite false
-}
-
-task unzipGloveModels(dependsOn: downloadGloveModels, type: Copy) {
-  def zipFile = file('src/main/resources/glove-models.zip')
-  def outputDir = file('src/main/resources')
-  from zipTree(zipFile)
-  into outputDir
-  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
-processResources.dependsOn(unzipGlove, unzipGloveModels)
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 version = '1.0'
 jar {
   manifest {
-    attributes 'Implementation-Title': 'MeMo', 'Implementation-Version': version
+    attributes 'Implementation-Title': 'CallMeMaybe', 'Implementation-Version': version
   }
 }
 
@@ -105,154 +73,10 @@ test {
   }
 }
 
-task issta18(type: Test) {
-  include 'org/callmemaybe/accuracy/paper/*'
-  enableAssertions = false
-  ignoreFailures = true
-}
 
-task accuracyEQComplete(type: Test) {
-  include 'org/callmemaybe/accuracy/equivalences/'
+task accuracy(type: Test) {
+  include 'org/callmemaybe/accuracy/protocols/'
   enableAssertions = false
-}
-
-task accuracyEQ(type: Test) {
-  include 'org/callmemaybe/accuracy/equivalences/dataset/'
-  enableAssertions = false
-}
-
-task accuracyEQSB15(type: Test) {
-  include 'org/callmemaybe/accuracy/equivalences/sbes15/'
-  enableAssertions = false
-}
-
-task accuracyEQSB14(type: Test) {
-  include 'org/callmemaybe/accuracy/equivalences/sbes14/'
-  enableAssertions = false
-}
-
-task copyIssta2018GoalFiles(type: Copy) {
-  def basePath = 'src/test/resources/goal-output'
-  from(basePath) {
-    include "commons-collections4-4.1/org.apache.commons.collections4.ArrayStack_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.bag.CollectionBag_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.bag.SynchronizedBag_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.BagUtils_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.ClosureUtils_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.CollectionUtils_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.comparators.FixedOrderComparator_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.FactoryUtils_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.FluentIterable_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.functors.AllPredicate_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.functors.AndPredicate_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.functors.AnyPredicate_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.functors.IfClosure_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.keyvalue.DefaultMapEntry_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.map.HashedMap_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.map.LazyMap_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.map.LRUMap_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.PredicateUtils_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.QueueUtils_goal.json"
-    include "commons-collections4-4.1/org.apache.commons.collections4.trie.KeyAnalyzer_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.differentiation.DerivativeStructure_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.function.Gaussian_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.function.Logistic_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.function.StepFunction_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.FunctionUtils_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.integration.IterativeLegendreGaussIntegrator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.integration.SimpsonIntegrator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.interpolation.BivariateGridInterpolator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.interpolation.DividedDifferenceInterpolator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.interpolation.LinearInterpolator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.interpolation.LoessInterpolator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.polynomials.PolynomialFunctionNewtonForm_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.solvers.BracketingNthOrderBrentSolver_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.analysis.solvers.UnivariateSolverUtils_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.complex.Complex_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.distribution.LogisticDistribution_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.fitting.SimpleCurveFitter_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.fraction.BigFraction_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.fraction.Fraction_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.genetics.BinaryMutation_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.genetics.CycleCrossover_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.genetics.RandomKey_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.euclidean.oned.Interval_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.euclidean.threed.FieldRotation_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.euclidean.threed.Line_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.euclidean.threed.SubLine_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.euclidean.threed.Vector3D_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.partitioning.Region_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.spherical.twod.S2Point_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.geometry.Vector_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.linear.PreconditionedIterativeLinearSolver_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.linear.RealVector_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.linear.SymmLQ_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.ode.ContinuousOutputModel_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.ode.nonstiff.AdaptiveStepsizeIntegrator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.ode.nonstiff.EmbeddedRungeKuttaFieldIntegrator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.optimization.direct.AbstractSimplex_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.optimization.SimpleValueChecker_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.optimization.univariate.UnivariateMultiStartOptimizer_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.primes.Primes_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.random.BitsStreamGenerator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.random.HaltonSequenceGenerator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.random.RandomAdaptor_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.random.RandomDataGenerator_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.stat.clustering.DBSCANClusterer_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.stat.descriptive.rank.PSquarePercentile_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.stat.descriptive.summary.Sum_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.stat.descriptive.SummaryStatistics_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.util.FastMath_goal.json"
-    include "commons-math3-3.6.1/org.apache.commons.math3.util.KthSelector_goal.json"
-    include "gs-core-1.3/org.graphstream.graph.implementations.MultiGraph_goal.json"
-    include "gs-core-1.3/org.graphstream.graph.implementations.SingleGraph_goal.json"
-    include "gs-core-1.3/org.graphstream.graph.Path_goal.json"
-    include "gs-core-1.3/org.graphstream.ui.graphicGraph.GraphicElement_goal.json"
-    include "gs-core-1.3/org.graphstream.ui.swingViewer.util.GraphMetrics_goal.json"
-    include "gs-core-1.3/org.graphstream.util.Environment_goal.json"
-    include "gs-core-1.3/org.graphstream.util.set.FixedArrayList_goal.json"
-    include "guava-19.0/com.google.common.base.CharMatcher_goal.json"
-    include "guava-19.0/com.google.common.base.Converter_goal.json"
-    include "guava-19.0/com.google.common.base.MoreObjects_goal.json"
-    include "guava-19.0/com.google.common.base.Splitter_goal.json"
-    include "guava-19.0/com.google.common.base.Strings_goal.json"
-    include "guava-19.0/com.google.common.base.Throwables_goal.json"
-    include "guava-19.0/com.google.common.base.Verify_goal.json"
-    include "guava-19.0/com.google.common.cache.CacheLoader_goal.json"
-    include "guava-19.0/com.google.common.collect.ArrayListMultimap_goal.json"
-    include "guava-19.0/com.google.common.collect.ConcurrentHashMultiset_goal.json"
-    include "guava-19.0/com.google.common.collect.ImmutableSortedMap_goal.json"
-    include "guava-19.0/com.google.common.collect.ImmutableSortedMapFauxverideShim_goal.json"
-    include "guava-19.0/com.google.common.collect.Iterators_goal.json"
-    include "guava-19.0/com.google.common.escape.UnicodeEscaper_goal.json"
-    include "guava-19.0/com.google.common.hash.BloomFilter_goal.json"
-    include "guava-19.0/com.google.common.primitives.Doubles_goal.json"
-    include "guava-19.0/com.google.common.primitives.Floats_goal.json"
-    include "guava-19.0/com.google.common.primitives.Shorts_goal.json"
-    include "guava-19.0/com.google.common.util.concurrent.AtomicDoubleArray_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.alg.AbstractPathElementList_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.alg.cycle.PatonCycleBase_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.alg.KShortestPaths_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.generate.CompleteGraphGenerator_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.generate.EmptyGraphGenerator_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.generate.LinearGraphGenerator_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.graph.AbstractGraph_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.graph.GraphDelegator_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.Graph_goal.json"
-    include "jgrapht-core-0.9.2/org.jgrapht.Graphs_goal.json"
-    include "plume-lib-1.1.0/plume.ArraysMDE_goal.json"
-    include "plume-lib-1.1.0/plume.EntryReader.json"
-    include "plume-lib-1.1.0/plume.EntryReader\$FlnReader_goal.json"
-    include "plume-lib-1.1.0/plume.FuzzyFloat_goal.json"
-    include "plume-lib-1.1.0/plume.MathMDE_goal.json"
-    include "plume-lib-1.1.0/plume.RegexUtil_goal.json"
-    include "plume-lib-1.1.0/plume.TimeLimitProcess_goal.json"
-    include "plume-lib-1.1.0/plume.UtilMDE_goal.json"
-    include "plume-lib-1.1.0/plume.WeakHasherMap_goal.json"
-    include "plume-lib-1.1.0/plume.WeakIdentityHashMap_goal.json"
-  }
-  into "$basePath/issta_2018"
 }
 
 /* Pass Java system properties from the command line to test tasks. */
@@ -317,6 +141,8 @@ dependencies {
   testCompile 'org.hamcrest:java-hamcrest:2.0.0.0'
 }
 
+compileJava.dependsOn(downloadRandoop)
+
 // The following configuration excludes sfl4j->log4j binding that is added by de.jungblut.common
 // dependency.
 configurations.all {
@@ -329,7 +155,7 @@ task wrapper(type: Wrapper) {
 
 import de.undercouch.gradle.tasks.download.Download
 
-/* Downloads binaries of the systems used to measure Toradocu's precision and recall. */
+/* Downloads binaries of the systems used to measure accuracy */
 task downloadBinaries(type: Download) {
   src ([
     // commons-collections
@@ -375,7 +201,7 @@ task extractBinaries(type: Exec, dependsOn: 'downloadBinaries') {
   commandLine "bash", "-c", "tar xzf plume-lib-1.1.0.tar.gz --strip-components=2 plume-lib-1.1.0/java/plume.jar && mv plume.jar plume-lib-1.1.0.jar"
 }
 
-/* Downloads sources of the systems used to measure Toradocu's precision and recall. */
+/* Downloads sources of the systems used to measure accuracy */
 task downloadSources(type: Download) {
   src ([
     'https://archive.apache.org/dist/commons/collections/source/commons-collections4-4.1-src.zip',
@@ -389,15 +215,15 @@ task downloadSources(type: Download) {
     'https://repo1.maven.org/maven2/org/elasticsearch/elasticsearch/6.1.1/elasticsearch-6.1.1-sources.jar',
     'https://repo1.maven.org/maven2/com/google/gwt/gwt-user/2.5.1/gwt-user-2.5.1-sources.jar',
     'https://star-rep.inf.usi.ch/arianna_blasi/jdk8-resources/raw/master/jdk8-sources.zip',
-    'https://github.com/kzn/colt/archive/refs/heads/master.zip'
-    // 'https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.2.1/lucene-core-7.2.1-sources.jar',
+    'https://github.com/kzn/colt/archive/refs/heads/master.zip',
+    'https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/7.2.1/lucene-core-7.2.1-sources.jar',
   ])
   dest 'src/test/resources/src'
   onlyIfNewer true
   overwrite false
 }
 
-/* Extracts source archives of the systems used to measure Toradocu's precision and recall. */
+/* Extracts source archives of the systems used to measure accuracy */
 task extractSources(dependsOn: downloadSources) {
   doLast {
     file('src/test/resources/src').listFiles().findAll {
@@ -438,8 +264,7 @@ task removeTestOutputDirs(type: Delete) {
   delete 'build/test-results', 'aspects'
 }
 
-test.dependsOn removeTestOutputDirs, cleanSource, extractBinaries
-issta18.dependsOn copyIssta2018GoalFiles, removeTestOutputDirs, cleanSource, extractBinaries
+test.dependsOn removeTestOutputDirs, cleanSource, extractSources, extractBinaries
 
 /* Make Emacs TAGS table */
 task tags(type: Exec) {
@@ -468,7 +293,7 @@ shadowJar {
   // default: "${baseName}-${version}-${classifier}.${extension}",
   // where ${baseName} is the name of the directory into which the callmemaybe
   // repository is cloned.
-  archiveName = "MeMo-${version}-${classifier}.${extension}"
+  archiveName = "CallMeMaybe-${version}-${classifier}.${extension}"
   zip64 true
 }
 

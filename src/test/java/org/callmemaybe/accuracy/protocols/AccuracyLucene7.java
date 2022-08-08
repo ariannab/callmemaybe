@@ -6,9 +6,9 @@ import org.junit.Test;
 public class AccuracyLucene7 extends AbstractPrecisionRecallTestSuite {
 
   private static final String LUCENE_7_SRC =
-      "/Users/arianna/comment-clones/javadoclones/src/resources/src/lucene-core-7.2.1-sources/";
+      "src/test/resources/src/lucene-core-7.2.1-sources/";
   private static final String LUCENE_7_BIN =
-      "/Users/arianna/comment-clones/javadoclones/src/resources/bin/lucene-core-7.2.1.jar";
+      "src/test/resources/src/lucene-core-7.2.1.jar";
   private static final String LUCENE_7_DIR = "expected-tp/lucene";
 
   public AccuracyLucene7() {
