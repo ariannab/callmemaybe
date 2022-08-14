@@ -5,10 +5,8 @@ import org.junit.Test;
 
 public class AccuracyWeka3 extends AbstractPrecisionRecallTestSuite {
 
-  private static final String WEKA_3_SRC =
-      "src/test/resources/src/weka-stable-3.8.0-sources";
-  private static final String WEKA_3_BIN =
-      "src/test/resources/src/weka-stable-3.8.0.jar";
+  private static final String WEKA_3_SRC = "src/test/resources/src/weka-stable-3.8.0-sources";
+  private static final String WEKA_3_BIN = "src/test/resources/bin/weka-stable-3.8.0.jar";
   private static final String WEKA_3_DIR = "expected-tp/weka";
 
   public AccuracyWeka3() {
