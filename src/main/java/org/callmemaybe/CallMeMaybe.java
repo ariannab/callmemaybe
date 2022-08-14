@@ -153,8 +153,8 @@ public class CallMeMaybe {
       if (configuration.mustGenerateTPs()) {
         temporalProtocols = CommentTranslator.mapExecutablesToProtocolSpecs(documentedType);
 
-        //        randoopProtocols =
-        // CommentTranslator.mapExecutablesToCMMRandoopOutput(documentedType);
+        randoopProtocols =
+         CommentTranslator.mapExecutablesToCMMRandoopOutput(documentedType);
       } else {
         specifications = CommentTranslator.createSpecifications(members);
       }
