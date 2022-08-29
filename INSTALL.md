@@ -39,8 +39,25 @@ Our [release](https://github.com/ariannab/callmemaybe/releases/tag/ASE22) alread
 
 Under [this folder](https://github.com/ariannab/callmemaybe/tree/master/ase-22-experiments) we provide how the expected results should look like. To reproduce them:
 
-- open a terminal in `ase-22-experiments`
-- launch `repro.sh` (NOTE: it uses `curl` to download our release, if this doesn't work for your OS, please download CMM and Randoop executable from our release manually and move them to the generated `libs` folder)
+- open a terminal in `ase-22-experiments/repro`
+- launch `./repro.sh` (NOTE: it uses `curl` to download our release, if this doesn't work for your OS, please download CMM and Randoop executable from our release manually and move them to the generated `libs` folder)
+- move into the individual projects subdirs (`jdk8` and `collections4`) and launch the respective `./feed-randoop-with-cmm` scripts to reproduce all experiments
+
+### How to inspect the results output
+You find all the CMM comments inside Randoop tests: for a given class of either project, look into `specs-dir-<classname>/randoop-tests`. 
+
+When exceptions are confirmed in Regression Tests: 
+```
+// Expected exception.
+/* And violated CMM Protocol confirms this too: [...]
+```
+When errors are deemed as false positives in Error Test:
+```
+/* during test generation this statement threw an exception of type java.lang.NullPointerException in error
+but CMM Protocol violated too: [...]
+```
+
+You easily gep them all for example launching `grep -i "cmm" *`.
 
 
 
