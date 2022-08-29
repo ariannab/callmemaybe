@@ -9,6 +9,7 @@ Once you know the location of your Java 8 installation, it is useful to set the 
 export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.<some-version-here>.jdk/Contents/Home/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8<some-version-here>.jdk/Contents/Home/
 ```
+*Note: follow Translation Accuracy first and then Randoop+CMM experiments, as the latter uses resources retrieved in the former*
 
 ## Translation Accuracy (RQ1)
 
@@ -36,6 +37,12 @@ This is an example of output for class `java.util.HashSet`:
 ## Randoop+CMM experiments (RQ2)
 Our [release](https://github.com/ariannab/callmemaybe/releases/tag/ASE22) already contains our modified version on Randoop. You can look up its sources  [under this branch](https://github.com/ariannab/randoop/tree/cmm-checks).
 
-Under [this folder](https://github.com/ariannab/callmemaybe/tree/master/ase-22-experiments) we provide how the expected results should look like. To reproduce them, you must launch the .sh (bash) scripts for both projects. Please adjust the paths (project sources and such) as it is convenient for you.
+Under [this folder](https://github.com/ariannab/callmemaybe/tree/master/ase-22-experiments) we provide how the expected results should look like. To reproduce them:
 
-Notice that there is an additional script, `get_evaluation_project_subjects.bash`, to download all of our CallMeMaybe subjects in case you were not able to run gradle (for CMM+Randoop, you only need commons collections and the JDK).
+- open a terminal in `ase-22-experiments`
+- launch `repro.sh` (NOTE: it uses `curl` to download our release, if this doesn't work for your OS, please download CMM and Randoop executable from our release manually and move them to the generated `libs` folder)
+
+
+
+
+*Notice that there is an additional script, `get_evaluation_project_subjects.bash`, to download all of our CallMeMaybe subjects in case you were not able to run gradle (for CMM+Randoop, you only need commons collections and the JDK).*
