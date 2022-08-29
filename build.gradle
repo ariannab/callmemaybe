@@ -87,12 +87,12 @@ tasks.withType(Test) {
 }
 
 /* Create Javadoc documentation as part of build task. */
-build.dependsOn javadoc
-javadoc {
-  options.encoding = 'UTF-8'
-  exclude 'org/callmemaybe/generator/**'
-  exclude 'org/callmemaybe/util/old/**'
-}
+// build.dependsOn javadoc
+// javadoc {
+//   options.encoding = 'UTF-8'
+//   exclude 'org/callmemaybe/generator/**'
+//   exclude 'org/callmemaybe/util/old/**'
+// }
 
 /* Disable unneeded tasks. */
 startScripts.enabled = false
