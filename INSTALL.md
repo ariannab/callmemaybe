@@ -1,3 +1,15 @@
+
+### Prerequisites
+We use gradle to compile the sources, build the executables, and run the accuracy results. We require a Java 8 release in order to run anything for CallMeMaybe involving gradle (e.g., <a href=https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html> here</a>). The commands specified in this README have been tested on macOS.
+
+Once you know the location of your Java 8 installation, it is useful to set the environment variables in the same terminal where you will run the subsequent commands. This is an example for macOS:
+
+```
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.<some-version-here>.jdk/Contents/Home/bin:$PATH
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8<some-version-here>.jdk/Contents/Home/
+```
+
 ### Translation Accuracy (RQ1)
 
 To verify the accuracy results performances on our dataset, clone this repo and launch `../gradlew accuracy`, which will show the translations produced on our ground truth. For each method of each class, CallMeMaybe may produce exactly the translation written in the file (`Correct`), a non-empty translation that differs from the expected one (`Wrong`), an empty translation when condition is not empty (`Missing`), or a non-empty translation when no condition was expected (`Spurious`).
