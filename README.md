@@ -9,10 +9,19 @@ generator towards executing sequences of method calls that respect the temporal 
 You find the first official release [here](https://github.com/ariannab/callmemaybe/releases/tag/ASE22). It includes both the CallMeMaybe executable and the randoop executable.
 
 ### Prerequisites
-We use gradle to compile the sources, build the executables, and run the accuracy results. However, we witnessed some inconsistent behaviour with Gradle and Java 9+. Until a workaround for such issues is not found, you are advised to get a Java 8 release before running anything for CallMeMaybe involving gradle (e.g., <a href=https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html> here</a>)
+We use gradle to compile the sources, build the executables, and run the accuracy results. We require a Java 8 release in order to run anything for CallMeMaybe involving gradle (e.g., <a href=https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html> here</a>). The commands specified in this README have been teste on macOS.
+
+Once you know the location of your Java 8 installation, it is useful to set the environment variables in the same terminal where you will run the subsequent commands. This is an example for macOS:
+
+```
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.<some-version-here>.jdk/Contents/Home/bin:$PATH
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8<some-version-here>.jdk/Contents/Home/
+```
+
 
 ### Translations
-Under <a href=https://github.com/ariannab/callmemaybe/tree/master/expected-tp>this folder</a> you find our ground truth for the temporal constraints/call protocols. You may check the files for each project class manually. The format looks like:  
+Under <a href=https://github.com/ariannab/callmemaybe/tree/master/expected-tp>this folder</a> you find our ground truth for the temporal constraints (the one used for **RQ1** in the paper). You may check the files for each project class manually. The format looks like:  
 ```
 expected-tp/<project-identifier>/<fully-qualified-class-name>_goal.json
 ```
