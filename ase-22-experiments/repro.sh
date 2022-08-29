@@ -21,8 +21,8 @@ cd repro
 echo -e "\nInto repro/, setting up libs folder with our release executables..."
 mkdir libs
 cd libs
-# curl -LO -o CallMeMaybe-1.0-all.jar ${cmmRelease}
-# curl -LO -o randoop-all-4.3.0.jar ${randoopRelease}
+curl -LO -o CallMeMaybe-1.0-all.jar ${cmmRelease}
+curl -LO -o randoop-all-4.3.0.jar ${randoopRelease}
 cd ..
 
 echo -e "\nInto repro/, setting up JDK and Collections folder..."
