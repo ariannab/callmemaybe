@@ -20,7 +20,11 @@ To verify the accuracy results performances on our dataset, be sure to follow th
 
 This whole process may take up to 15 minutes as it will download all the relevant resources, build the same executable you find as release, and already execute the accuracy results (which are in the form of tests). Another way to reproduce only the results, although without skipping `build` as we need the resources, is to launch `./gradlew accuracy -i`.
 
-You should already see in the standard output of the terminal the results produced on our ground truth. Alternatively, gradle should show you a link where to inspect its test reports in a browser. Finally, an equivalent alternative to get these results is to clone this repo and open the project in a IDE (such as IntelliJ or Eclipse), and run all the test under folder `java/org/callmemaybe/accuracy/protocols`.
+### How to inspect the results output
+
+- You should already see in the standard output of the terminal the results produced on our ground truth. 
+- Alternatively, gradle should show you a link where to inspect its test reports in a browser, something like: `file:///Users/<user-name>/<cmm-repo-name>/build/reports/tests/test/packages/org.callmemaybe.accuracy.protocols.html`. 
+- Finally, an equivalent alternative to get these results is to clone this repo and open the project in a IDE (such as IntelliJ or Eclipse), and run all the test under folder `java/org/callmemaybe/accuracy/protocols`.
 
 ### How to interpret the results output
 For each method of each class, CallMeMaybe may produce exactly the translation expected in the ground truth file (`Correct`), a non-empty translation that differs from the expected one (`Wrong`), an empty translation when the expected condition is not empty (`Missing`), or a non-empty translation when no condition was expected at all (`Spurious`). 
