@@ -6,7 +6,7 @@ generator towards executing sequences of method calls that respect the temporal 
 
 ### Releases
 
-You find the first official release [here](https://github.com/ariannab/callmemaybe/releases/tag/ASE22). It includes both the CallMeMaybe executable and the randoop executable.
+You find the latest official release [here](https://github.com/ariannab/callmemaybe/releases/tag/ASE-artifact-rebuttal). It includes both the CallMeMaybe executable and the randoop executable.
 
 ### Translations
 Under <a href=https://github.com/ariannab/callmemaybe/tree/master/expected-tp>this folder</a> you find our ground truth for the temporal constraints (the one used for **RQ1** in the paper). You may check the files for each project class manually. The format looks like:  
