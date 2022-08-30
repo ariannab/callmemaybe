@@ -40,7 +40,7 @@ while read classFile <&3; do
     java -jar ../libs/$cmmJar --target-class $targetClass  --source-dir $srcFolder --class-dir $jarFile --disable-semantics true --condition-translator-output $targetClass"_goal.json" --temp-protocols true --randoop-CMM-output $targetClass"_cmmRandoop.json"
 
 
-    mkdir "$specsDir-$specsDirName/$randpTestDir"
+    mkdir -p "$specsDir-$specsDirName/$randpTestDir"
 
     # Randoop tests, fed with CMM specs. They are outputted in randoop-tests. --time-limit default is 100.
     java -classpath ../libs/$randoopJar:../libs/$jarFile randoop.main.Main gentests --randomseed=$1 --testclass=$targetClass --junit-output-dir=./$specsDir-$specsDirName/$randpTestDir/ --use-jdk-specifications=false --cmm-temporal-specs=$targetClass"_cmmRandoop.json"
