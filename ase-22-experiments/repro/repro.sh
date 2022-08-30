@@ -8,9 +8,8 @@ jarFileJdk="jdk8-2.9.0.jar"
 srcFolderColl="jdk8-sources/src/share/classes"
 jarFileColl="jdk8-2.9.0.jar"
 
-cmmRelease="https://github.com/ariannab/callmemaybe/releases/download/ASE22-final/CallMeMaybe-1.0-all.jar"
-randoopRelease="https://github.com/ariannab/callmemaybe/releases/download/ASE22-final/randoop-all-4.3.0.jar"
-
+randoopRelease="https://github.com/ariannab/callmemaybe/releases/download/ASE22-MD-files/randoop-all-4.3.0.jar"
+cmmBuildByGradle="../../../build/libs/CallMeMaybe-1.0-all.jar"
 resourcesBaseDir="../../../src/test/resources"
 
 echo "Setting up repro/ folder."
@@ -18,7 +17,8 @@ echo "Setting up repro/ folder."
 echo -e "\nSetting up libs folder with our release executables..."
 mkdir libs
 cd libs
-curl -LO -o CallMeMaybe-1.0-all.jar ${cmmRelease}
+# curl -LO -o CallMeMaybe-1.0-all.jar ${cmmRelease}
+cp ${cmmBuildByGradle} .
 curl -LO -o randoop-all-4.3.0.jar ${randoopRelease}
 cd ..
 
