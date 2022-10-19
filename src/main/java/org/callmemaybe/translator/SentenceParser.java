@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.Queue;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import javafx.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -325,7 +325,7 @@ public class SentenceParser {
         predicateWords.stream().filter(x -> x.word().contains("method_")).findFirst();
     if (methodReady.isPresent()) {
       predicateWords.remove(methodReady.get());
-      return new Pair<>(methodReady.get(), predicateWords);
+      return Pair.of(methodReady.get(), predicateWords);
     }
 
     IndexedWord methodFound = null;
@@ -348,7 +348,7 @@ public class SentenceParser {
             // Clear and update correct predicate.
             //            predicateWords = new ArrayList<>();
             predicateWords.add(winningEdge.get().getGovernor());
-            return new Pair<>(methodFound, predicateWords);
+            return Pair.of(methodFound, predicateWords);
           }
         }
       }
